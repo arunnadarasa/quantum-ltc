@@ -27,6 +27,7 @@ Interactive 8-Layer Knowledge Graph Explorer: **https://arunnadarasa.github.io/q
 ## External Cloud Links
 
 - **Samskrift Cloud Live Paper View:** https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3
+- **Hugging Face Interactive Space (Live Mirror):** https://huggingface.co/spaces/socialprescribing/quantum-ltc (`https://socialprescribing-quantum-ltc.static.hf.space/index.html`)
 - **Hugging Face Model Hub (`QLTCMLM`):** https://huggingface.co/socialprescribing/quantum-ltc-qltcmlm
 
 ## Statutory NHS DCB0129 Demarcation
