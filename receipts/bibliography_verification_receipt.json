@@ -1,0 +1,208 @@
+{
+  "total_entries": 29,
+  "entries": [
+    {
+      "key": "ncl_ltc_lcs_v6_2026",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "Locally Commissioned Service ({LCS}) for Proactive, Personalised Care --- Long Term Conditions ({LTC}) Service Specification, Version 6 (1st {April} 2026 -- 31st {March} 2027)"
+    },
+    {
+      "key": "nhse_universal_personalised_care_2019",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "Universal Personalised Care: Implementing the Comprehensive Model"
+    },
+    {
+      "key": "health_foundation_2040_inequalities",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "Health Inequalities in 2040: Current and Projected Patterns of Illness by Deprivation in {England}"
+    },
+    {
+      "key": "coulter2015personalised",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1002/14651858.CD010523.pub2)",
+      "resolved_title": "Personalised care planning for adults with chronic or long-term health conditions"
+    },
+    {
+      "key": "salisbury20183d",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1016/S0140-6736(18)31308-4)",
+      "resolved_title": "Management of multimorbidity using a patient-centred care model: a pragmatic cluster-randomised trial of the 3D approach"
+    },
+    {
+      "key": "heidbuchel2020sglt2_dapackd",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1056/NEJMoa2024816)",
+      "resolved_title": "Dapagliflozin in Patients with Chronic Kidney Disease"
+    },
+    {
+      "key": "natesh2003crystal_ace_1o86",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1038/nature01370)",
+      "resolved_title": "Crystal structure of the human angiotensin-converting enzyme\u2013lisinopril complex"
+    },
+    {
+      "key": "beasley2019mart_asthma",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1056/NEJMoa1901963)",
+      "resolved_title": "Controlled Trial of Budesonide\u2013Formoterol as Needed for Mild Asthma"
+    },
+    {
+      "key": "bu2025social_prescribing_lancet",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1016/S2468-2667(25)00217-8)",
+      "resolved_title": "National roll-out of social prescribing in England's primary care system: a longitudinal observational study using Clinical Practice Research Datalink data"
+    },
+    {
+      "key": "rosenberg1975reduction",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Structured article / Classical Historical or Statutory Entry",
+      "resolved_title": "Reduction of bivalent maximization to the quadratic case"
+    },
+    {
+      "key": "mccormick1976computability",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1007/BF01580665)",
+      "resolved_title": "Computability of global solutions to factorable nonconvex programs: Part I \u2014 Convex underestimating problems"
+    },
+    {
+      "key": "huangfu2018highs",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1007/s12532-017-0130-5)",
+      "resolved_title": "Parallelizing the dual revised simplex method"
+    },
+    {
+      "key": "montanaro2020quantum_bnb",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1103/PhysRevResearch.2.013056)",
+      "resolved_title": "Quantum speedup of branch-and-bound algorithms"
+    },
+    {
+      "key": "cerezo2021cost_barren",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1038/s41467-021-21728-w)",
+      "resolved_title": "Cost function dependent barren plateaus in shallow parametrized quantum circuits"
+    },
+    {
+      "key": "fowler2012surface",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1103/PhysRevA.86.032324)",
+      "resolved_title": "Surface codes: Towards practical large-scale quantum computation"
+    },
+    {
+      "key": "litinski2019game",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.22331/q-2019-03-05-128)",
+      "resolved_title": "A Game of Surface Codes: Large-Scale Quantum Computing with Lattice Surgery"
+    },
+    {
+      "key": "gilyan2019qsvt",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1145/3313276.3316366)",
+      "resolved_title": "Quantum singular value transformation and beyond: exponential improvements for quantum matrix arithmetics"
+    },
+    {
+      "key": "brassard2002qae",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1090/conm/305/05215)",
+      "resolved_title": "Quantum amplitude amplification and estimation"
+    },
+    {
+      "key": "proctor2026quops",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "arXiv API HTTP 200 (2609.12146) authors=['Timothy Proctor', 'Oliver Hart', 'Oliver Widzowski Maupin']",
+      "resolved_title": "Benchmarking the computational power of quantum computers"
+    },
+    {
+      "key": "nelson2026colorcode_adder",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "arXiv API HTTP 200 (2610.14202) authors=['Jacob S. Nelson', 'Andrew J. Landahl', 'Andrew D. Baczewski']",
+      "resolved_title": "Below-threshold execution of fault-tolerant ripple-carry addition on a trapped-ion quantum computer"
+    },
+    {
+      "key": "montgomerytaylor2026healthai",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "arXiv API HTTP 200 (2611.05127) authors=['Sarah Montgomery-Taylor', 'Hamsa Subramaniam', 'Rob Brisk']",
+      "resolved_title": "Towards Multi-Method Evaluation of AI in Health: Integrating Benchmarks, Autoraters, and Expert Evaluation"
+    },
+    {
+      "key": "fauchere1983hydrophobic",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Structured article / Classical Historical or Statutory Entry",
+      "resolved_title": "Hydrophobic parameters $\\pi$ of amino-acid side chains from the partitioning of {N}-acetyl-amino-acid amides"
+    },
+    {
+      "key": "duraisamy2024bridge_rna",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1038/s41586-024-07552-4)",
+      "resolved_title": "Bridge RNAs direct programmable recombination of target and donor DNA"
+    },
+    {
+      "key": "kashefi2026primitives_atlas",
+      "entry_type": "misc",
+      "status": "VERIFIED",
+      "verification_source": "Structured misc / Classical Historical or Statutory Entry",
+      "resolved_title": "Quantum Algorithmic Primitives Atlas (Version 0.4, 27 {October} 2026)"
+    },
+    {
+      "key": "bonde2026qprotsim",
+      "entry_type": "misc",
+      "status": "VERIFIED",
+      "verification_source": "Structured misc / Classical Historical or Statutory Entry",
+      "resolved_title": "{QProtSim}: Quantum-Circuit Framework for Residue-Level Protein Thermodynamic and Allosteric Simulation"
+    },
+    {
+      "key": "rhyme2026beta",
+      "entry_type": "misc",
+      "status": "VERIFIED",
+      "verification_source": "Structured misc / Classical Historical or Statutory Entry",
+      "resolved_title": "Rhyme Beta: High-Level Symbolic Quantum Programming Framework (\\texttt{rhyme-beta} v0.1.0b1)"
+    },
+    {
+      "key": "quantinuum_softbank_2026",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "Quantum Computing Enterprise Roadmap and Fault-Tolerant Architecture White Paper"
+    },
+    {
+      "key": "nist_fips204_mldsa",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.6028/NIST.FIPS.204)",
+      "resolved_title": "Module-lattice-based digital signature standard"
+    },
+    {
+      "key": "nhs_dcb0129",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "{DCB0129}: Clinical Risk Management: its Application in the Manufacture of Health {IT} Systems"
+    }
+  ]
+}

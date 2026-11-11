@@ -1,0 +1,475 @@
+{
+  "schema_version": "1.0.0-quantum-ltc-modal-roadmap-rhyme-qml",
+  "timestamp_utc": "2026-11-11T18:32:21.000654+00:00",
+  "modal_cloud_wall_seconds": 105.82,
+  "rhyme_symbolic_ltc_suite": {
+    "framework": "Rhyme Quantum Tech (`rhyme-beta` dist-0.1.0b1, https://github.com/rhymeqtech-early-access/rhyme-beta)",
+    "execution_environment": "Modal Cloud Linux x86_64 Python 3.14",
+    "epistemic_note": "Symbolic quantum programming & phase-cancellation semantics verification on classical statevector runtime.",
+    "shots_per_experiment": 1024,
+    "total_runtime_ms": 152.62,
+    "experiments": [
+      {
+        "name": "NCL 4-Stage House-of-Care Phase Superposition",
+        "counts": {
+          "STAGE1_CHECK_AND_TEST": 250,
+          "STAGE2_MDT_DESKTOP_REVIEW": 262,
+          "STAGE3_PCSP_COACHING_DISCUSSION": 248,
+          "STAGE4_CONTINUITY_FOLLOWUP": 264
+        },
+        "chi2_uniformity": 0.7812,
+        "uniformity_pass": true,
+        "runtime_ms": 10.98
+      },
+      {
+        "name": "Destructive Interference of Triple-Whammy AKI & High-GWP SABA Hazards (Compiler Semantics)",
+        "counts": {
+          "TRIPLE_WHAMMY_AKI_NSAID": 0,
+          "HIGH_GWP_SABA_MONOTHERAPY": 0,
+          "RENOPROTECTIVE_ACEI_SGLT2I_SMR": 501,
+          "NETZERO_SABA_FREE_MART_DPI": 523
+        },
+        "hazard_leakage_shots": 0,
+        "safe_netzero_shots": 1024,
+        "extinction_fidelity": 1.0,
+        "pass": true,
+        "runtime_ms": 22.71
+      },
+      {
+        "name": "Entangled Stage-3 PCSP <-> Stage-4 Clinician Continuity Dyad",
+        "joint_counts": {
+          "CYP_ASTHMA_EXACERBATION -> TIER2_48H_AND_6WK_CONTINUITY": 514,
+          "RESISTANT_HYPERTENSION_CKD -> PHARMACIST_BP23_TITRATION_CONTINUITY": 510
+        },
+        "bell_correlation_fidelity": 1.0,
+        "pass": true,
+        "runtime_ms": 61.36
+      },
+      {
+        "name": "Quantum Parallel NCL LTC Re-Stratification Oracle via bfunc()",
+        "superposition_size": 8,
+        "tier_counts": {
+          "MODERATE_RISK_ANNUAL_YOC": 266,
+          "HIGH_COMPLEX_MDT_DESKTOP_REVIEW": 239,
+          "LOW_RISK_SELF_CARE": 108,
+          "HIGH_RISK_PROACTIVE_TITRATION": 264,
+          "URGENT_48H_POST_ATTACK_REVIEW": 147
+        },
+        "oracle_consistency_violations": 0,
+        "oracle_consistency_fidelity": 1.0,
+        "pass": true,
+        "runtime_ms": 57.57
+      }
+    ],
+    "all_passed": true
+  },
+  "matched_depth_2x2_barren_plateau_and_quops": [
+    {
+      "n_qubits": 4,
+      "hilbert_dim": 16,
+      "shallow_L2_unstructured_grad_var": 0.0786293,
+      "shallow_L2_frobenius_grad_var": 0.1303532,
+      "shallow_L2_matched_ratio_frob_vs_unstr": 1.658,
+      "linear_L2n_depth": 8,
+      "linear_L2n_unstructured_grad_var": 0.0313121,
+      "linear_L2n_frobenius_grad_var": 0.0623145,
+      "linear_L2n_matched_ratio_frob_vs_unstr": 1.99,
+      "quops_volumetric_Q_L2": 8,
+      "quops_volumetric_Q_L2n": 32,
+      "helios_process_fidelity_L2": 0.99044,
+      "helios_process_fidelity_L2n": 0.96231,
+      "worker_runtime_seconds": 0.714
+    },
+    {
+      "n_qubits": 6,
+      "hilbert_dim": 64,
+      "shallow_L2_unstructured_grad_var": 0.0875819,
+      "shallow_L2_frobenius_grad_var": 0.1350309,
+      "shallow_L2_matched_ratio_frob_vs_unstr": 1.542,
+      "linear_L2n_depth": 12,
+      "linear_L2n_unstructured_grad_var": 0.0074528,
+      "linear_L2n_frobenius_grad_var": 0.0312736,
+      "linear_L2n_matched_ratio_frob_vs_unstr": 4.196,
+      "quops_volumetric_Q_L2": 12,
+      "quops_volumetric_Q_L2n": 72,
+      "helios_process_fidelity_L2": 0.98569,
+      "helios_process_fidelity_L2n": 0.91718,
+      "worker_runtime_seconds": 3.487
+    },
+    {
+      "n_qubits": 8,
+      "hilbert_dim": 256,
+      "shallow_L2_unstructured_grad_var": 0.1110388,
+      "shallow_L2_frobenius_grad_var": 0.1265836,
+      "shallow_L2_matched_ratio_frob_vs_unstr": 1.14,
+      "linear_L2n_depth": 16,
+      "linear_L2n_unstructured_grad_var": 0.0029006,
+      "linear_L2n_frobenius_grad_var": 0.0092526,
+      "linear_L2n_matched_ratio_frob_vs_unstr": 3.19,
+      "quops_volumetric_Q_L2": 16,
+      "quops_volumetric_Q_L2n": 128,
+      "helios_process_fidelity_L2": 0.98097,
+      "helios_process_fidelity_L2n": 0.85754,
+      "worker_runtime_seconds": 18.365
+    },
+    {
+      "n_qubits": 10,
+      "hilbert_dim": 1024,
+      "shallow_L2_unstructured_grad_var": 0.0932379,
+      "shallow_L2_frobenius_grad_var": 0.1357291,
+      "shallow_L2_matched_ratio_frob_vs_unstr": 1.456,
+      "linear_L2n_depth": 20,
+      "linear_L2n_unstructured_grad_var": 0.0009287,
+      "linear_L2n_frobenius_grad_var": 0.0044744,
+      "linear_L2n_matched_ratio_frob_vs_unstr": 4.818,
+      "quops_volumetric_Q_L2": 20,
+      "quops_volumetric_Q_L2n": 200,
+      "helios_process_fidelity_L2": 0.97627,
+      "helios_process_fidelity_L2n": 0.78651,
+      "worker_runtime_seconds": 84.621
+    }
+  ],
+  "qltcmlm_training_and_classical_ablations": {
+    "cohort_size": 2400,
+    "train_size": 1800,
+    "test_size": 600,
+    "feature_names": [
+      "f0_systolic_bp_excess",
+      "f1_glycaemic_hepatic_load",
+      "f2_renal_uacr_egfr_decline",
+      "f3_airway_saba_exacerbation",
+      "f4_polypharmacy_nsaid_clash",
+      "f5_imd_core20_deprivation",
+      "f6_interpreter_access_barrier",
+      "f7_winter_admissions_history"
+    ],
+    "risk_tiers": [
+      "Low_Risk_Self_Care",
+      "Moderate_Risk_Annual_YoC",
+      "High_Risk_Proactive_Recall",
+      "High_Risk_Complex_MDT"
+    ],
+    "care_bundles": [
+      "Bundle0_BP23_ACEi_HomeTelemon",
+      "Bundle1_Cardiorenal_SGLT2i_PCSP",
+      "Bundle2_Respiratory_MART_48h_NetZero",
+      "Bundle3_Complex_MDT_SMR_VCSE_Equity"
+    ],
+    "nonlinear_cohort_design": "75% of latent risk variance arises from cubic 3-body organ-drug-social interactions (e.g., BP*Renal*NSAID triple-whammy and Airway*Winter*IMD Quintile 1), breaking linear separability so LogisticRegression fails (~36-52%) while non-linear quantum & GBDT/MLP succeed.",
+    "qltcmlm_vqc": {
+      "model_name": "QLTCMLM-VQC (4-Qubit, 3-Layer Frobenius Data-Reuploading)",
+      "parameter_breakdown": {
+        "n_qubits": 4,
+        "n_reuploading_layers": 3,
+        "quantum_variational_parameters": 72,
+        "risk_readout_head_parameters": 64,
+        "bundle_readout_head_parameters": 64,
+        "total_trainable_parameters": 200
+      },
+      "final_multitask_ce_loss": 0.85652,
+      "risk_test_accuracy": 0.5417,
+      "risk_test_macro_f1": 0.5187,
+      "bundle_test_accuracy": 0.755,
+      "bundle_test_macro_f1": 0.7263
+    },
+    "qltcmlm_qkernel": {
+      "model_name": "QLTCMLM-QKernel (4-Qubit Fidelity Gram Matrix |<psi(x)|psi(x')>|^2 + SVM)",
+      "train_subset": 700,
+      "test_subset": 300,
+      "risk_test_accuracy": 0.3333,
+      "bundle_test_accuracy": 0.5367
+    },
+    "classical_ablations": [
+      {
+        "model": "LogisticRegression (Linear Hyperplane)",
+        "risk_test_accuracy": 0.305,
+        "risk_test_macro_f1": 0.2879,
+        "bundle_test_accuracy": 0.685,
+        "bundle_test_macro_f1": 0.6335
+      },
+      {
+        "model": "RBF-SVM (Classical Kernel C=4.0)",
+        "risk_test_accuracy": 0.6767,
+        "risk_test_macro_f1": 0.6795,
+        "bundle_test_accuracy": 0.85,
+        "bundle_test_macro_f1": 0.8392
+      },
+      {
+        "model": "MLPClassifier (2-Layer 32x16 ReLU)",
+        "risk_test_accuracy": 0.635,
+        "risk_test_macro_f1": 0.6363,
+        "bundle_test_accuracy": 0.8017,
+        "bundle_test_macro_f1": 0.7812
+      },
+      {
+        "model": "HistGradientBoosting (GBDT Baseline)",
+        "risk_test_accuracy": 0.5367,
+        "risk_test_macro_f1": 0.5351,
+        "bundle_test_accuracy": 0.8183,
+        "bundle_test_macro_f1": 0.8003
+      }
+    ],
+    "modal_training_runtime_seconds": 60.124,
+    "huggingface_deployment": {
+      "deployed": true,
+      "repo_id": "socialprescribing/quantum-ltc-qltcmlm",
+      "url": "https://huggingface.co/socialprescribing/quantum-ltc-qltcmlm",
+      "weights_sha256": "d4693ce7a59cc7fcb44fdb9e0c6e3c8d05914d6bf07c1e534e1b2d48e70df0d7"
+    }
+  },
+  "logical_qubit_4_era_roadmap": {
+    "eras": [
+      {
+        "era_id": "ERA_I_NISQ_CLASSICAL_HYBRID",
+        "title": "Era I: Classical-Exact & NISQ Co-Design Readiness",
+        "logical_qubits_range": "0 logical (1-20 physical / cloud emulators)",
+        "logical_qubits_midpoint": 0,
+        "physical_qubits_est": "1-98 physical trapped-ion / superconducting",
+        "qec_code_regime": "Uncorrected NISQ + SPAM/ZNE/affine calibration ladders",
+        "target_ncl_ltc_workloads": [
+          "NCL PCN Call-and-Recall scheduling (Month-of-Birth smoothing vs Pre-Winter High-Risk + Complex MDT capacity, Interpreter weighting & IMD Core20 equity)",
+          "8-variable 3-body Cardiometabolic-Renal-Respiratory Regimen & Net-Zero SABA-free MART HUBO",
+          "4-qubit Frobenius QLTCMLM feature kernel & 8-rung mid-circuit recall calibration"
+        ],
+        "dominant_solver_status": "Classical Exact Dominates (HiGHS MILP < 5 ms; 2^8 exhaustive < 0.5 ms)",
+        "honest_demarcation": "Zero runtime quantum advantage claimed. Value today is formalizing multi-constraint NHS LTC tensions into auditable QUBO/HUBO/Lindblad specifications with verified classical floors."
+      },
+      {
+        "era_id": "ERA_II_ERROR_DETECTED_LOGICAL",
+        "title": "Era II: Early Error-Detected Logical Execution",
+        "logical_qubits_range": "3-24 error-detected logical qubits",
+        "logical_qubits_midpoint": 12,
+        "physical_qubits_est": "32-192 physical trapped-ion qubits (Helios / Sol class)",
+        "qec_code_regime": "Distance-2 [[8,3,2]] & [[4,2,2]] color codes + syndrome post-selection / Knill teleportation",
+        "target_ncl_ltc_workloads": [
+          "Shallow mid-circuit measurement & reset (MCMR) non-Markovian longitudinal care pathways (CYP Asthma 48h + 6-week review & Hypertension Outcome #23 titration)",
+          "Compressed p <= 3 LR-QAOA & SU(2)-equivariant organ-crosstalk variational benchmarks",
+          "Below-threshold fault-tolerant ripple-carry oracle primitives (cf. Nelson et al., arXiv:2610.14202)"
+        ],
+        "dominant_solver_status": "Classical Tensor-Network / MPS & HiGHS Still Faster in Wall-Clock",
+        "honest_demarcation": "Distance-2 [[8,3,2]] post-selection suppresses 1st-order errors to O(p_phys^2) but incurs exponential shot survival decay p_acc ~ (1 - r_det)^V, bounding circuit volume before active QEC."
+      },
+      {
+        "era_id": "ERA_III_EARLY_ACTIVE_FTQC_CROSSOVER",
+        "title": "Era III: Active QEC Crossover for Open-System & Metalloenzyme Twins",
+        "logical_qubits_range": "24-72 active fault-tolerant logical qubits",
+        "logical_qubits_midpoint": 48,
+        "physical_qubits_est": "2,500-8,500 physical qubits (d = 5..9 surface / color codes + magic-state factory)",
+        "qec_code_regime": "Active multi-round syndrome decoding (d = 7..9) with T-gate magic-state cultivation/distillation",
+        "target_ncl_ltc_workloads": [
+          "18-24 spin strongly coupled non-Markovian Cardiorenal-Hepatic-Pulmonary-Circadian Lindbladian digital twins (exceeding 4^20 ~ 1.1e12 Liouvillian dimension)",
+          "Active-space metalloenzyme quantum chemistry (N* ~ 48 spin-orbitals) for Human ACE Zn2+ catalytic pocket (PDB 1O86) & SGLT2/GLP1R allosteric selectivity"
+        ],
+        "dominant_solver_status": "First Genuine Simulation Memory/Accuracy Crossover (Classical O(4^n) Krylov Wall)",
+        "honest_demarcation": "Simulation crossover arrives BEFORE combinatorial optimization crossover: open-system Lindbladians and strongly correlated Zn2+/Fe-S active spaces cross classical exact/MPS memory bounds near 40-64 logical qubits."
+      },
+      {
+        "era_id": "ERA_IV_SCALED_FTQC_ADVANTAGE",
+        "title": "Era IV: Asymptotic Fault-Tolerant Quantum Advantage at ICS Scale",
+        "logical_qubits_range": "100-1,000+ fault-tolerant logical qubits",
+        "logical_qubits_midpoint": 256,
+        "physical_qubits_est": "20,000-250,000+ modular QCCD / photonic-interconnected physical qubits (d = 11..17)",
+        "qec_code_regime": "Modular active QEC (d >= 11) with parallel magic-state factories & block-encoded QSVT",
+        "target_ncl_ltc_workloads": [
+          "QSVT / block-encoded multi-organ Lindbladian evolution with additive O(tau + log(1/eps)) query complexity",
+          "Coherent Quantum Amplitude Estimation O(1/eps) for rare polypharmacy adverse-event CVaR tail risk across 9 LTCs",
+          "Quadratic-speedup Quantum Branch-and-Bound (Montanaro 2020) on dense frustrated k >= 4 ICS-wide multimorbidity-genomic hypergraphs where classical treewidth explodes"
+        ],
+        "dominant_solver_status": "Fault-Tolerant Quantum Advantage (Subject to QEC Decoding Throughput & Classical Dequantisation Checks)",
+        "honest_demarcation": "Even at 1,000 logical qubits, quantum outputs remain strictly advisory decision-support inputs under NHS DCB0129/DCB0160 human clinical governance."
+      }
+    ],
+    "empirical_highs_milp_sparse_vs_frustrated_k4": [
+      {
+        "n_binary_vars": 8,
+        "sparse_qubo_mccormick_vars": 24,
+        "sparse_qubo_highs_ms": 10.016,
+        "frustrated_k4_quartic_terms": 70,
+        "frustrated_k4_mccormick_constraints": 350,
+        "frustrated_k4_highs_ms": 147.271,
+        "runtime_blowup_ratio_k4_vs_sparse": 14.7,
+        "highs_status": 0,
+        "timed_out_at_2_5s": false,
+        "remaining_mip_gap": 0.0
+      },
+      {
+        "n_binary_vars": 10,
+        "sparse_qubo_mccormick_vars": 30,
+        "sparse_qubo_highs_ms": 5.917,
+        "frustrated_k4_quartic_terms": 210,
+        "frustrated_k4_mccormick_constraints": 1050,
+        "frustrated_k4_highs_ms": 1920.292,
+        "runtime_blowup_ratio_k4_vs_sparse": 324.55,
+        "highs_status": 0,
+        "timed_out_at_2_5s": false,
+        "remaining_mip_gap": 0.0
+      },
+      {
+        "n_binary_vars": 12,
+        "sparse_qubo_mccormick_vars": 36,
+        "sparse_qubo_highs_ms": 6.753,
+        "frustrated_k4_quartic_terms": 495,
+        "frustrated_k4_mccormick_constraints": 2475,
+        "frustrated_k4_highs_ms": 2509.818,
+        "runtime_blowup_ratio_k4_vs_sparse": 371.64,
+        "highs_status": 1,
+        "timed_out_at_2_5s": true,
+        "remaining_mip_gap": 16.6419
+      },
+      {
+        "n_binary_vars": 14,
+        "sparse_qubo_mccormick_vars": 42,
+        "sparse_qubo_highs_ms": 6.348,
+        "frustrated_k4_quartic_terms": 1001,
+        "frustrated_k4_mccormick_constraints": 5005,
+        "frustrated_k4_highs_ms": 2516.898,
+        "runtime_blowup_ratio_k4_vs_sparse": 396.49,
+        "highs_status": 1,
+        "timed_out_at_2_5s": true,
+        "remaining_mip_gap": 29.8518
+      },
+      {
+        "n_binary_vars": 16,
+        "sparse_qubo_mccormick_vars": 48,
+        "sparse_qubo_highs_ms": 6.256,
+        "frustrated_k4_quartic_terms": 1820,
+        "frustrated_k4_mccormick_constraints": 9100,
+        "frustrated_k4_highs_ms": 2549.445,
+        "runtime_blowup_ratio_k4_vs_sparse": 407.52,
+        "highs_status": 1,
+        "timed_out_at_2_5s": true,
+        "remaining_mip_gap": 99.9128
+      }
+    ],
+    "era_ii_color_code_832_postselection_bounds": [
+      {
+        "n_blocks": 1,
+        "logical_qubits": 3,
+        "physical_qubits_total": 10,
+        "logical_depth": 6,
+        "physical_2q_error_rate": 0.0012,
+        "fault_locations": 48,
+        "postselection_acceptance_prob": 0.943995,
+        "sampling_overhead_factor": 1.0593,
+        "postselected_logical_infidelity_est": 0.00024192
+      },
+      {
+        "n_blocks": 2,
+        "logical_qubits": 6,
+        "physical_qubits_total": 20,
+        "logical_depth": 10,
+        "physical_2q_error_rate": 0.0012,
+        "fault_locations": 160,
+        "postselection_acceptance_prob": 0.825212,
+        "sampling_overhead_factor": 1.2118,
+        "postselected_logical_infidelity_est": 0.0008064
+      },
+      {
+        "n_blocks": 4,
+        "logical_qubits": 12,
+        "physical_qubits_total": 40,
+        "logical_depth": 16,
+        "physical_2q_error_rate": 0.0012,
+        "fault_locations": 512,
+        "postselection_acceptance_prob": 0.540766,
+        "sampling_overhead_factor": 1.8492,
+        "postselected_logical_infidelity_est": 0.00258048
+      },
+      {
+        "n_blocks": 8,
+        "logical_qubits": 24,
+        "physical_qubits_total": 80,
+        "logical_depth": 24,
+        "physical_2q_error_rate": 0.0012,
+        "fault_locations": 1536,
+        "postselection_acceptance_prob": 0.158135,
+        "sampling_overhead_factor": 6.3237,
+        "postselected_logical_infidelity_est": 0.00774144
+      }
+    ],
+    "era_iii_liouvillian_memory_crossover_table": [
+      {
+        "n_organ_spins": 4,
+        "liouvillian_hilbert_schmidt_dim": 256,
+        "classical_krylov_m30_ram_gb": 0.000114,
+        "ftqc_logical_qubits_required": 14,
+        "ftqc_code_distance_d": 9,
+        "ftqc_physical_qubits_required": 5346,
+        "classical_memory_tractable_under_1tb": true
+      },
+      {
+        "n_organ_spins": 8,
+        "liouvillian_hilbert_schmidt_dim": 65536,
+        "classical_krylov_m30_ram_gb": 0.029297,
+        "ftqc_logical_qubits_required": 22,
+        "ftqc_code_distance_d": 9,
+        "ftqc_physical_qubits_required": 7290,
+        "classical_memory_tractable_under_1tb": true
+      },
+      {
+        "n_organ_spins": 12,
+        "liouvillian_hilbert_schmidt_dim": 16777216,
+        "classical_krylov_m30_ram_gb": 7.5,
+        "ftqc_logical_qubits_required": 30,
+        "ftqc_code_distance_d": 9,
+        "ftqc_physical_qubits_required": 9234,
+        "classical_memory_tractable_under_1tb": true
+      },
+      {
+        "n_organ_spins": 16,
+        "liouvillian_hilbert_schmidt_dim": 4294967296,
+        "classical_krylov_m30_ram_gb": 1920.0,
+        "ftqc_logical_qubits_required": 38,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 16698,
+        "classical_memory_tractable_under_1tb": false
+      },
+      {
+        "n_organ_spins": 18,
+        "liouvillian_hilbert_schmidt_dim": 68719476736,
+        "classical_krylov_m30_ram_gb": 30720.0,
+        "ftqc_logical_qubits_required": 42,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 18150,
+        "classical_memory_tractable_under_1tb": false
+      },
+      {
+        "n_organ_spins": 20,
+        "liouvillian_hilbert_schmidt_dim": 1099511627776,
+        "classical_krylov_m30_ram_gb": 491520.0,
+        "ftqc_logical_qubits_required": 46,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 19602,
+        "classical_memory_tractable_under_1tb": false
+      },
+      {
+        "n_organ_spins": 24,
+        "liouvillian_hilbert_schmidt_dim": 281474976710656,
+        "classical_krylov_m30_ram_gb": 125829120.0,
+        "ftqc_logical_qubits_required": 54,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 22506,
+        "classical_memory_tractable_under_1tb": false
+      }
+    ],
+    "era_iii_human_ace_zn2_active_space_ftqc_estimate": {
+      "logical_data_qubits": 52,
+      "t_gate_count": 480000,
+      "code_distance_d": 13,
+      "physical_qubits_per_logical_tile": 338,
+      "total_physical_qubits_with_routing_and_factory": 30420,
+      "total_qec_syndrome_cycles": 3354000,
+      "estimated_qpu_wall_clock_seconds": 503.1
+    },
+    "era_iv_ics_multiorgan_qsvt_ftqc_estimate": {
+      "logical_data_qubits": 128,
+      "t_gate_count": 3200000,
+      "code_distance_d": 15,
+      "physical_qubits_per_logical_tile": 450,
+      "total_physical_qubits_with_routing_and_factory": 91800,
+      "total_qec_syndrome_cycles": 25275000,
+      "estimated_qpu_wall_clock_seconds": 3791.25
+    }
+  },
+  "receipt_sha256": "cb1fec7c385d787b78321672dc5dc15092312d940cb24ae243ffe614979752d5"
+}

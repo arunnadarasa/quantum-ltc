@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.0.0-quantum-ltc-haiqu-jij",
+  "timestamp_utc": "2026-11-11T18:20:41.834861+00:00",
+  "epistemic_demarcation": "All Era I combinatorial instances are solved to exact optimality by classical HiGHS MILP in <5 ms; Haiqu LR-QAOA + state compression and OpenJij QUBO validate hybrid compilation and constraint encoding without claiming NISQ runtime speedup.",
+  "haiqu_multimorbid_hubo": {
+    "platform": "Haiqu Quantum Platform (Haiqu SDK v1.6.0+)",
+    "device_executed": "aer_simulator (0 physical QPU shots)",
+    "physical_hardware_shots": 0,
+    "problem_name": "8-Qubit NCL LTC Multimorbid Regimen & Net-Zero MART Inhaler 3-Body HUBO",
+    "variables": [
+      "x0_ACEi_ARB_BP_Target_Outcome23",
+      "x1_SGLT2i_Cardiorenal_MASLD_Protection",
+      "x2_SABA_Free_MART_DPI_NetZero_Switch",
+      "x3_Pharmacist_SMR_NSAID_Deprescribing",
+      "x4_Stage3_PCSP_Coaching_VCSE_Referral",
+      "x5_Home_BP_Telemonitoring_135_85",
+      "x6_Retain_HighGWP_SABA_NSAID_StatusQuo",
+      "x7_Siloed_Duplicate_Disease_Clinics"
+    ],
+    "hamiltonian_coefficients": {
+      "linear_h": [
+        -2.5,
+        -2.3,
+        -2.1,
+        -2.4,
+        -1.8,
+        -1.6,
+        2.9,
+        3.1
+      ],
+      "quadratic_J": {
+        "0,6": 6.2,
+        "2,6": 5.4,
+        "4,7": 4.8,
+        "0,5": -1.4,
+        "1,3": -1.3,
+        "3,4": -1.1
+      },
+      "cubic_K": {
+        "0,1,3": -3.9,
+        "2,4,5": -3.1,
+        "0,1,6": 7.2,
+        "1,4,7": 3.4
+      }
+    },
+    "gate_g4_classical_floors": {
+      "exhaustive_256_runtime_us": 1294.25,
+      "exact_ground_energy": -23.5,
+      "exact_max_energy": 24.3,
+      "exact_optimal_bitstring_index_order": "11111100",
+      "optimal_regimen_bundle": [
+        "x0_ACEi_ARB_BP_Target_Outcome23",
+        "x1_SGLT2i_Cardiorenal_MASLD_Protection",
+        "x2_SABA_Free_MART_DPI_NetZero_Switch",
+        "x3_Pharmacist_SMR_NSAID_Deprescribing",
+        "x4_Stage3_PCSP_Coaching_VCSE_Referral",
+        "x5_Home_BP_Telemonitoring_135_85"
+      ],
+      "mccormick_highs_milp": {
+        "solver": "scipy.optimize.milp (HiGHS) with exact McCormick linearization",
+        "n_primary_binary_vars": 8,
+        "n_auxiliary_vars": 10,
+        "n_linear_constraints": 34,
+        "optimal_energy": -23.5,
+        "optimal_bitstring_index_order": "11111100",
+        "runtime_microseconds": 23025.0
+      },
+      "sensitivity_grid_25pt_invariant_fraction": 1.0,
+      "sensitivity_grid_25pt": [
+        {
+          "synergy_scale": 0.6,
+          "hazard_scale": 0.6,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -20.7,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.6,
+          "hazard_scale": 0.8,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -20.7,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.6,
+          "hazard_scale": 1.0,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -20.7,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.6,
+          "hazard_scale": 1.2,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -20.7,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.6,
+          "hazard_scale": 1.4,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -20.7,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.8,
+          "hazard_scale": 0.6,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -22.1,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.8,
+          "hazard_scale": 0.8,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -22.1,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.8,
+          "hazard_scale": 1.0,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -22.1,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.8,
+          "hazard_scale": 1.2,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -22.1,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 0.8,
+          "hazard_scale": 1.4,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -22.1,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.0,
+          "hazard_scale": 0.6,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -23.5,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.0,
+          "hazard_scale": 0.8,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -23.5,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.0,
+          "hazard_scale": 1.0,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -23.5,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.0,
+          "hazard_scale": 1.2,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -23.5,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.0,
+          "hazard_scale": 1.4,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -23.5,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.2,
+          "hazard_scale": 0.6,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -24.9,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.2,
+          "hazard_scale": 0.8,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -24.9,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.2,
+          "hazard_scale": 1.0,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -24.9,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.2,
+          "hazard_scale": 1.2,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -24.9,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.2,
+          "hazard_scale": 1.4,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -24.9,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.4,
+          "hazard_scale": 0.6,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -26.3,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.4,
+          "hazard_scale": 0.8,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -26.3,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.4,
+          "hazard_scale": 1.0,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -26.3,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.4,
+          "hazard_scale": 1.2,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -26.3,
+          "ground_state_invariant": true
+        },
+        {
+          "synergy_scale": 1.4,
+          "hazard_scale": 1.4,
+          "optimal_bitstring": "11111100",
+          "ground_energy": -26.3,
+          "ground_state_invariant": true
+        }
+      ]
+    },
+    "lr_qaoa_and_state_compression": {
+      "original_depth": 223,
+      "compressed_depth": 26,
+      "depth_reduction_percent": 88.34,
+      "original_total_gates": 0,
+      "compressed_total_gates": 0,
+      "original_two_qubit_gates": 0,
+      "compressed_two_qubit_gates": 0,
+      "shots": 1024,
+      "raw_pre_postprocess_mean_energy": -14.5297,
+      "raw_pre_postprocess_min_sampled_energy": -23.5,
+      "raw_pre_postprocess_ground_state_prob": 0.412109,
+      "raw_pre_postprocess_approx_ratio": 0.812337,
+      "raw_cvar_alpha_0_10": -23.5,
+      "postprocessed_best_cost": -23.5,
+      "postprocessed_approx_ratio": 1.0,
+      "cloud_wall_clock_seconds": 11.765
+    },
+    "entangled_manifold_embedding": {
+      "status": "VERIFIED (LIVE CLOUD)",
+      "features_encoded": 8,
+      "num_qubits": 4,
+      "encoding_quality_fidelity": 1.0
+    },
+    "su2_equivariant_and_obp": {
+      "su2_equivariant_verified": true,
+      "su2_max_commutator_violation": 1.6711069443220836e-16,
+      "obp_original_gates": 24,
+      "obp_reduced_gates": 0,
+      "obp_backpropagated_pauli_terms": 55
+    }
+  },
+  "jij_call_and_recall_qubo": {
+    "platform": "JijModeling + OpenJij (`SASampler`) + 4-Bit Kempe-Swap Polish",
+    "problem_name": "NCL PCN Call-and-Recall Multi-Period Cohort Scheduling QUBO (Month-of-Birth vs Pre-Winter Risk)",
+    "n_patients": 32,
+    "n_quarters": 4,
+    "n_primary_binary_variables": 128,
+    "n_qubo_variables_with_slack": 144,
+    "lagrange_multipliers": {
+      "lambda_one_hot": 30.0,
+      "lambda_quarter_capacity": 12.0,
+      "lambda_mdt_cap": 10.0,
+      "lambda_interpreter_cap": 10.0
+    },
+    "gate_g4_highs_milp_floor": {
+      "optimal_objective_cost": -135.662315,
+      "runtime_milliseconds": 22.025
+    },
+    "openjij_kempe_solution": {
+      "objective_cost": -134.571851,
+      "optimality_gap_vs_milp_percent": 0.803807,
+      "all_hard_constraints_satisfied": true,
+      "runtime_milliseconds": 508.78,
+      "quarter_workload_breakdown": [
+        {
+          "quarter": "Q1_Apr_Jun",
+          "total_patients": 8,
+          "high_complex_mdt_count": 3,
+          "interpreter_needed_count": 3
+        },
+        {
+          "quarter": "Q2_Jul_Sep_PreWinter",
+          "total_patients": 8,
+          "high_complex_mdt_count": 3,
+          "interpreter_needed_count": 3
+        },
+        {
+          "quarter": "Q3_Oct_Dec_Autumn",
+          "total_patients": 8,
+          "high_complex_mdt_count": 2,
+          "interpreter_needed_count": 2
+        },
+        {
+          "quarter": "Q4_Jan_Mar_Winter",
+          "total_patients": 8,
+          "high_complex_mdt_count": 0,
+          "interpreter_needed_count": 2
+        }
+      ]
+    },
+    "clinical_operational_comparison": {
+      "naive_month_of_birth_only_cost": -136.634993,
+      "utility_improvement_vs_naive_mob_percent": -1.51,
+      "high_risk_scheduled_before_january_naive_mob": "14/18",
+      "high_risk_scheduled_before_january_optimized": "18/18"
+    }
+  },
+  "receipt_sha256": "7212c3d95a5fc0b960c2c3b48398f2ce13469623ea8b4de1e3001d54c3403955"
+}

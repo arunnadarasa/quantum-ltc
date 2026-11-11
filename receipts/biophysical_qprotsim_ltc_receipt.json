@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0-quantum-ltc-hqs-qprotsim-biophysical",
+  "timestamp_utc": "2026-11-11T18:20:57.337411+00:00",
+  "physical_hardware_shots": 0,
+  "wet_lab_experiments_performed": 0,
+  "hqs_cardiorenal_pulmonary_lindblad": {
+    "platform": "HQS Quantum Simulations (`struqture-py` + `qoqo`)",
+    "hqs_token_configured": true,
+    "n_spins": 4,
+    "pauli_terms_uncontrolled": 16,
+    "pauli_terms_proactive_yoc": 18,
+    "lindblad_noise_terms": 4,
+    "qoqo_trotter_circuit_operations": 33,
+    "gate_g4_classical_liouvillian_floor_ms": 36.55,
+    "total_runtime_ms": 1742.116,
+    "uncontrolled_multimorbidity_regime": {
+      "vascular_bp_excitation_prob": 0.89625,
+      "renal_hyperfiltration_excitation_prob": 0.93899,
+      "airway_il6_inflammatory_excitation_prob": 0.97104,
+      "cardiorenal_coherence_magnitude": 0.00426,
+      "liouvillian_spectral_gap": 0.18355
+    },
+    "proactive_year_of_care_regime": {
+      "vascular_bp_excitation_prob": 0.37124,
+      "renal_hyperfiltration_excitation_prob": 0.37599,
+      "airway_il6_inflammatory_excitation_prob": 0.33046,
+      "cardiorenal_coherence_magnitude": 0.12501,
+      "liouvillian_spectral_gap": 0.38361
+    },
+    "bp_relative_reduction_percent": 58.58,
+    "renal_relative_reduction_percent": 59.96,
+    "il6_relative_reduction_percent": 65.97,
+    "sensitivity_grid_49pt_summary": {
+      "grid_points": 49,
+      "min_bp_reduction_pct": 56.71,
+      "max_bp_reduction_pct": 60.35
+    }
+  },
+  "qprotsim_angiotensin_ii_1n9v": {
+    "framework": "QProtSim (Dr Bhushan Bonde & Pratik Patil, University of Suffolk, https://github.com/pra-ashok/qprotsim)",
+    "pdb_id": "1N9V",
+    "molecule": "Human Angiotensin II Octapeptide (RAAS Vasoconstrictor Driving Hypertension #23 & CKD)",
+    "sequence": "DRVYIHPF",
+    "n_residues_qubits": 8,
+    "hilbert_space_dimension": 256,
+    "circuit_gates": {
+      "ry_init": 8,
+      "cry_directed": 11,
+      "ryy_diffusion": 5
+    },
+    "gate_g4_classical_potts_boltzmann_baseline": {
+      "runtime_microseconds": 576.96,
+      "mean_solvation_energy": -15.6285,
+      "mean_marginal_l1_difference_vs_qprotsim": 0.18436
+    },
+    "qprotsim_quantum_ensemble": {
+      "mean_solvation_energy": -26.6844,
+      "residue_kl_sensitivity_bits": {
+        "D1": 0.18982,
+        "R2": 0.08226,
+        "V3": 0.0,
+        "Y4": 0.13239,
+        "I5": 9e-05,
+        "H6": 0.16087,
+        "P7": 0.18828,
+        "F8": 0.0
+      },
+      "top_5_allosteric_mutual_information_pairs": [
+        {
+          "pair": "D1-R2",
+          "min_heavy_atom_distance_A": 1.341,
+          "coupling_K_ij": 0.92,
+          "mutual_information_bits": 0.11151
+        },
+        {
+          "pair": "H6-P7",
+          "min_heavy_atom_distance_A": 1.335,
+          "coupling_K_ij": 0.92,
+          "mutual_information_bits": 0.10413
+        },
+        {
+          "pair": "R2-V3",
+          "min_heavy_atom_distance_A": 1.329,
+          "coupling_K_ij": 0.92,
+          "mutual_information_bits": 0.09462
+        },
+        {
+          "pair": "V3-Y4",
+          "min_heavy_atom_distance_A": 1.332,
+          "coupling_K_ij": 0.92,
+          "mutual_information_bits": 0.09268
+        },
+        {
+          "pair": "P7-F8",
+          "min_heavy_atom_distance_A": 1.334,
+          "coupling_K_ij": 0.92,
+          "mutual_information_bits": 0.08141
+        }
+      ]
+    },
+    "runtime_milliseconds": 72.42
+  },
+  "biohub_uniprot_ltc_targets": {
+    "platform": "BioHub (biohub.ai) + Live UniProtKB REST API",
+    "biohub_endpoint_probe": {
+      "api_key_present": true,
+      "biohub_web_http_status": 200
+    },
+    "proteins": {
+      "ACE": {
+        "uniprot": "P12821",
+        "ltc_domain": "Hypertension (NCL Outcome #23), Heart Failure & CVD",
+        "length_aa": 1306,
+        "mass_da": 149715,
+        "protein_name": "Angiotensin-converting enzyme"
+      },
+      "SLC5A2": {
+        "uniprot": "P31639",
+        "ltc_domain": "SGLT2 Cotransporter \u2014 CKD, Type 2 Diabetes & Heart Failure",
+        "length_aa": 672,
+        "mass_da": 72897,
+        "protein_name": "Sodium/glucose cotransporter 2"
+      },
+      "GLP1R": {
+        "uniprot": "P43220",
+        "ltc_domain": "GLP-1 Receptor \u2014 Type 2 Diabetes, CVD & MASLD/NAFLD",
+        "length_aa": 463,
+        "mass_da": 53026,
+        "protein_name": "Glucagon-like peptide 1 receptor"
+      },
+      "ADRB2": {
+        "uniprot": "P07550",
+        "ltc_domain": "Beta-2 Adrenergic Receptor \u2014 Adult/CYP Asthma & COPD MART",
+        "length_aa": 413,
+        "mass_da": 46459,
+        "protein_name": "Beta-2 adrenergic receptor"
+      },
+      "IL6": {
+        "uniprot": "P05231",
+        "ltc_domain": "Interleukin-6 \u2014 Systemic Multimorbid Vascular/Airway Inflammation",
+        "length_aa": 212,
+        "mass_da": 23718,
+        "protein_name": "Interleukin-6"
+      }
+    },
+    "real_sequence_dipeptide_cosine_similarity": {
+      "GLP1R_vs_ADRB2_transmembrane_gpcr_pair": 0.5799,
+      "ACE_vs_SLC5A2_cardiorenal_pair": 0.6584,
+      "ACE_vs_IL6_soluble_cytokine_control": 0.6191
+    },
+    "runtime_milliseconds": 1696.65
+  },
+  "neurosnap_ace_1o86_lisinopril_audit": {
+    "platform": "Neurosnap API + RCSB PDB Experimental Structure `1O86` (Human ACE + Lisinopril)",
+    "neurosnap_live_api": {
+      "api_key_present": true,
+      "http_status": 200,
+      "authenticated": true,
+      "historical_jobs_count": 13
+    },
+    "pdb_id": "1O86",
+    "ligand_code": "LPR (Lisinopril \u2014 First-Line Antihypertensive & Renoprotective ACE Inhibitor)",
+    "ligand_heavy_atoms": 29,
+    "catalytic_zn2_lisinopril_distance_angstroms": 2.1413,
+    "catalytic_zn2_coordinating_residues": [
+      "GLU411",
+      "HIS383",
+      "HIS387"
+    ],
+    "minimum_ligand_protein_clearance_angstroms": 2.5559,
+    "steric_clashes_below_2_0_angstroms": 0,
+    "active_site_contact_residues_within_4A": [
+      "ALA354",
+      "GLN281",
+      "GLU162",
+      "GLU384",
+      "GLU411",
+      "HIS353",
+      "HIS383",
+      "HIS387",
+      "HIS513",
+      "LYS511",
+      "PHE457",
+      "PHE512",
+      "SER355",
+      "TYR520",
+      "TYR523",
+      "VAL380"
+    ],
+    "contact_residue_count": 17,
+    "era_iii_quantum_chemistry_relevance": "Open-shell / d-orbital polarization & charge transfer across the HEXXH Zn2+ + Lisinopril oxyanion pocket defines a canonical Era III CAS(36e, 32o) -> N* ~ 48-64 logical-qubit target.",
+    "gate_g3_steric_safety": "PASS",
+    "runtime_milliseconds": 423.95
+  },
+  "alphagenome_atlas_and_pcn_kuramoto": {
+    "platform": "Google DeepMind AlphaGenome Atlas (GENCODE v46 & AVI) + NCL PCN Pre-Winter Kuramoto Model",
+    "gencode_v46_ltc_loci": {
+      "ACE": {
+        "gene_name": "ACE",
+        "gene_id": "ENSG00000159640.17",
+        "transcript_id": "ENST00000290866.10",
+        "chromosome": "chr17",
+        "start": 63477060,
+        "end": 63498373,
+        "strand": "+",
+        "num_exons": 25,
+        "is_mane_select": true
+      },
+      "SLC5A2": {
+        "gene_name": "SLC5A2",
+        "gene_id": "ENSG00000140675.13",
+        "transcript_id": "ENST00000330498.4",
+        "chromosome": "chr16",
+        "start": 31483122,
+        "end": 31490769,
+        "strand": "+",
+        "num_exons": 14,
+        "is_mane_select": true
+      },
+      "GLP1R": {
+        "gene_name": "GLP1R",
+        "gene_id": "ENSG00000112164.6",
+        "transcript_id": "ENST00000373256.5",
+        "chromosome": "chr6",
+        "start": 39048780,
+        "end": 39091303,
+        "strand": "+",
+        "num_exons": 13,
+        "is_mane_select": true
+      },
+      "ADRB2": {
+        "gene_name": "ADRB2",
+        "gene_id": "ENSG00000169252.6",
+        "transcript_id": "ENST00000305988.6",
+        "chromosome": "chr5",
+        "start": 148826610,
+        "end": 148828623,
+        "strand": "+",
+        "num_exons": 1,
+        "is_mane_select": true
+      },
+      "IL6": {
+        "gene_name": "IL6",
+        "gene_id": "ENSG00000136244.12",
+        "transcript_id": "ENST00000258743.10",
+        "chromosome": "chr7",
+        "start": 22727199,
+        "end": 22731998,
+        "strand": "+",
+        "num_exons": 5,
+        "is_mane_select": true
+      }
+    },
+    "ace_locus_avi_scan": {},
+    "ncl_pcn_prewinter_kuramoto_26week": {
+      "n_practices": 32,
+      "horizon_weeks": 26,
+      "initial_readiness_R0": 0.1566,
+      "uncoordinated_october_readiness_R": 0.3041,
+      "coordinated_pcn_october_readiness_R": 0.9835
+    },
+    "runtime_milliseconds": 23462.03
+  },
+  "arc_institute_recombinase_and_masld": {
+    "platform": "Arc Institute Open-Source Frameworks (`bridge-rna-designer` & `ScreenPro2` Formalism)",
+    "dagger_anti_homomorphism_verified": true,
+    "scarless_careplan_recombination_trials": 1000,
+    "scarless_fidelity_percent": 100.0,
+    "screenpro2_masld_pnpla3_benchmark": {
+      "negative_control_guides_n": 200,
+      "pnpla3_perturbation_pseudo_z_score": -9.279,
+      "epistemic_note": "In-silico functional genomics scoring formalism only; 0 wet-lab CRISPR/recombinase edits claimed."
+    },
+    "runtime_milliseconds": 33.62
+  },
+  "paperclip_and_openalex_literature": {
+    "paperclip_gxl_mcp": {
+      "authenticated": true,
+      "http_status": 200,
+      "pmc_accessions_retrieved": [
+        "PMC13084922",
+        "PMC5556452",
+        "PMC7670978",
+        "PMC7331183",
+        "PMC9309754"
+      ],
+      "excerpt": "Found 20 papers  [s_a90cba77]\n\n  1. Implementation of a comprehensive template to support personalised care for people with multiple long-term conditions: a mixed-methods evaluation in primary care\n     Rachel Johnson; Andrew Turner; Clare Jinks; Mari Carmen Portillo; Caroline Michaela Coope; Alice Lou...\n     PMC13084922 \u00b7 PMC \u00b7 2026-04-15 \u00b7 0 citations\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13084922/\n     Matched: Introduction \u00b7 cat /papers/PMC13084922/content.lines --lines 46-49\n  "
+    },
+    "openalex_verified_works": [
+      {
+        "title": "Multimorbidity and the inverse care law in primary care",
+        "year": 2012,
+        "doi": "https://doi.org/10.1136/bmj.e4152",
+        "cited_by_count": 137
+      },
+      {
+        "title": "Interventions for improving outcomes in patients with multimorbidity in primary care and community settings",
+        "year": 2016,
+        "doi": "https://doi.org/10.1002/14651858.cd006560.pub3",
+        "cited_by_count": 956
+      },
+      {
+        "title": "Multimorbidity and integrated care",
+        "year": 2016,
+        "doi": null,
+        "cited_by_count": 1
+      },
+      {
+        "title": "Epidemiology of multimorbidity and implications for health care, research, and medical education: a cross-sectional study",
+        "year": 2012,
+        "doi": "https://doi.org/10.1016/s0140-6736(12)60240-2",
+        "cited_by_count": 7478
+      },
+      {
+        "title": "Quality of care measures in multimorbidity.",
+        "year": 2014,
+        "doi": null,
+        "cited_by_count": 18
+      }
+    ],
+    "runtime_milliseconds": 2311.66
+  },
+  "receipt_sha256": "6ba83347d46f7893f3202d86dd20474f43617d4a15536f41bec4e791e6faf64a"
+}

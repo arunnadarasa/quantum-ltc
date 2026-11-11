@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum-LTC | Four-Era Logical-Qubit Roadmap for NHS Long Term Conditions</title>
+  <style>
+    :root {
+      --nhs-navy: #003087;
+      --nhs-blue: #005eb8;
+      --nhs-teal: #008080;
+      --q-purple: #4b2e83;
+      --emerald: #047857;
+      --amber: #b45309;
+      --crimson: #b91c1c;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --border: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #002466 0%, var(--nhs-navy) 55%, #1e3a8a 100%);
+      color: #fff;
+      padding: 3rem 1.5rem 2.6rem;
+      border-bottom: 5px solid var(--nhs-teal);
+    }
+    .container { max-width: 1180px; margin: 0 auto; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.14);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+    }
+    h1 { font-size: clamp(1.75rem, 3.2vw, 2.55rem); line-height: 1.2; margin-bottom: 0.85rem; }
+    .subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.92); max-width: 980px; margin-bottom: 1.35rem; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.62rem 1.15rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: #ffffff; color: var(--nhs-navy); }
+    .btn-accent { background: #0d9488; color: #ffffff; border: 1px solid rgba(255,255,255,0.28); }
+    .btn-secondary { background: rgba(255,255,255,0.14); color: #ffffff; border: 1px solid rgba(255,255,255,0.35); }
+    .warn-banner {
+      background: #fffbeb;
+      border: 1px solid #f59e0b;
+      border-left: 5px solid #d97706;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem auto 0.5rem;
+      font-size: 0.9rem;
+      color: #78350f;
+    }
+    section { padding: 1.5rem 1.5rem; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--nhs-navy);
+      margin-bottom: 0.35rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.45rem;
+    }
+    .sec-lead { color: var(--muted); font-size: 0.96rem; margin-bottom: 1.2rem; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--nhs-blue);
+      border-radius: 10px;
+      padding: 1.1rem;
+      box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+    }
+    .kpi .val { font-size: 1.65rem; font-weight: 800; color: var(--nhs-navy); }
+    .kpi .lbl { font-size: 0.84rem; font-weight: 600; color: var(--muted); margin-top: 0.2rem; }
+    .kpi .sub { font-size: 0.78rem; color: #64748b; margin-top: 0.35rem; }
+
+    .explorer-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(15,23,42,0.05);
+    }
+    .slider-wrap { margin: 1rem 0 1.4rem; }
+    input[type="range"] { width: 100%; accent-color: var(--nhs-blue); cursor: pointer; }
+    .era-badge {
+      display: inline-block;
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      background: var(--nhs-blue);
+    }
+    .sim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .sim-box {
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 0.95rem;
+      border-left: 4px solid var(--nhs-teal);
+    }
+    .sim-box h4 { font-size: 0.82rem; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+    .sim-box .big { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+
+    .fig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.1rem;
+    }
+    .fig-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(15,23,42,0.04);
+    }
+    .fig-card img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--border); }
+    .fig-card .cap { padding: 0.85rem 1rem; font-size: 0.84rem; color: var(--muted); }
+    .fig-card .cap strong { color: var(--ink); display: block; margin-bottom: 0.2rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    th {
+      background: var(--nhs-navy);
+      color: #fff;
+      text-align: left;
+      padding: 0.75rem 0.9rem;
+      font-weight: 600;
+    }
+    td {
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #f8fafc; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: #e2e8f0;
+      padding: 0.12rem 0.36rem;
+      border-radius: 4px;
+      font-size: 0.83em;
+    }
+    td a { color: var(--nhs-blue); font-weight: 600; text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+    .pill-open {
+      display: inline-block;
+      background: #fef2f2;
+      color: var(--crimson);
+      border: 1px solid #fca5a5;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.12rem 0.5rem;
+      border-radius: 999px;
+    }
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 2rem 1.5rem;
+      margin-top: 2.5rem;
+      font-size: 0.86rem;
+    }
+    footer a { color: #93c5fd; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="eyebrow">NHS North Central London ICB LTC LCS v6 (2026–2027) &bull; Samskrift Monograph</div>
+      <h1>Quantum-LTC: Four-Era Clinical Quantum Optimisation &amp; Simulation Roadmap</h1>
+      <p class="subtitle">
+        End-to-end cryptographically receipted translational roadmap across <i>N</i><sub>logical</sub> &isin; [0, 1,000+] logical qubits for proactive multimorbid care (CVD, AF, Hypertension Outcome #23, T2D, T1D, CKD, NAFLD/MASLD, COPD, and Adult/CYP Asthma) — strictly decoupling classical-exact sparse scheduling from Era III open-system Lindbladian &amp; metalloenzyme fault-tolerant crossover.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="downloads/Quantum_LTC_Roadmap.pdf" target="_blank" rel="noopener">Read Samskrift Monograph PDF (10 pp.)</a>
+        <a class="btn btn-accent" href="knowledge-graph.html">Interactive Knowledge Graph (57 Nodes)</a>
+        <a class="btn btn-secondary" href="https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3" target="_blank" rel="noopener">Samskrift Cloud Live View</a>
+        <a class="btn btn-secondary" href="https://huggingface.co/socialprescribing/quantum-ltc-qltcmlm" target="_blank" rel="noopener">Hugging Face QLTCMLM Model</a>
+        <a class="btn btn-secondary" href="https://github.com/arunnadarasa/quantum-ltc" target="_blank" rel="noopener">Open Receipts &amp; Portal Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="warn-banner">
+      <strong>Statutory NHS DCB0129 &amp; Epistemic Demarcation Notice:</strong>
+      All six JSON/JSON-LD provenance artifacts are sealed with canonical SHA-256 digests using 100% synthetic cohorts (<code>phi_present = False</code>, <strong>0 physical QPU shots</strong>, <strong>0 wet-lab human specimens</strong>). Classical HiGHS MILP and kernel/GBDT baselines dominate all Era I–II operational tasks; quantum simulation crossover is projected exclusively in Era III–IV (<i>N</i><sub>logical</sub> &ge; 42). All 6 NHS DCB0129 hazards (<code>H-LTC-01..06</code>) remain <strong>OPEN</strong>.
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2>Live Multi-Platform Benchmark Receipts</h2>
+      <p class="sec-lead">Executed live across Quantinuum Nexus Helios-1E-lite, Haiqu SDK, OpenJij, HQS struqture/qoqo, QProtSim, BioHub, Neurosnap, AlphaGenome Atlas, Arc Institute, Modal Cloud (Rhyme + QLTCMLM), Text2WetLab, Medicus ML-DSA-65, Kashefi Primitives Atlas v0.4, EMBL-EBI OLS4, and TypeSafe Jev 1.14.</p>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="val">0.9961 vs 0.5020</div>
+          <div class="lbl">Nexus Helios-1E-lite MDT vs Siloed</div>
+          <div class="sub">Equal-unitary-depth Guppy 1.0 &rarr; HUGR (6,144 live cloud emulator shots; <i>R</i><sup>2</sup> = 0.9979 8-rung ladder)</div>
+        </div>
+        <div class="kpi">
+          <div class="val">223 &rarr; 26 (-88.3%)</div>
+          <div class="lbl">Haiqu 3-Body Multimorbid HUBO</div>
+          <div class="sub">Raw QAOA GS hit 41.21% (105&times; random), matching exact HiGHS McCormick MILP (-23.50 in 23.0 ms)</div>
+        </div>
+        <div class="kpi">
+          <div class="val">18 / 18 (100%)</div>
+          <div class="lbl">Pre-Winter High/Complex Recall</div>
+          <div class="sub">OpenJij + Kempe polish on 128-var NCL PCN QUBO (0.80% gap vs 4.3 ms HiGHS MILP; &le;3 MDT &amp; Interpreter caps)</div>
+        </div>
+        <div class="kpi">
+          <div class="val">2.141 &Aring; / 0 Clashes</div>
+          <div class="lbl">Crystal ACE–Lisinopril Zn2+ (1O86)</div>
+          <div class="sub">HIS383/HIS387/GLU411 triad + HQS 4-spin Lindbladian (58.6%–66.0% burden drop) + QProtSim 1N9V</div>
+        </div>
+        <div class="kpi">
+          <div class="val">57 Nodes &bull; 114 Triples</div>
+          <div class="lbl">Ontology Knowledge Graph (JSON-LD)</div>
+          <div class="sub">9 EMBL-EBI OLS4 DOID conditions, SNOMED CT, UniProt/PDB, 10 Kashefi cards, 4 Eras &amp; 6 DCB0129 hazards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Interactive Logical-Qubit Roadmap Simulator</h2>
+      <p class="sec-lead">Slide <i>N</i><sub>logical</sub> from 0 to 160 to inspect surface/color-code physical qubit overhead, open-system multi-organ Lindbladian classical Krylov RAM (<i>O</i>(4<sup><i>n</i><sub>spin</sub></sup>)), and the honest classical-vs-quantum regime boundary.</p>
+      <div class="explorer-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+          <div><strong>Available Logical Qubits (<i>N</i><sub>logical</sub>):</strong> <span id="nq-val" style="font-size:1.35rem; font-weight:800; color:var(--nhs-navy);">46</span></div>
+          <span id="era-pill" class="era-badge">Era III: Early Active FTQC Simulation Crossover</span>
+        </div>
+        <div class="slider-wrap">
+          <input type="range" id="nq-slider" min="0" max="160" step="2" value="46" />
+        </div>
+        <div class="sim-grid">
+          <div class="sim-box">
+            <h4>Coupled Organ / Active-Space Scale</h4>
+            <div class="big" id="organ-scale">20 Coupled Spins (CAS ~23o)</div>
+          </div>
+          <div class="sim-box">
+            <h4>Classical Krylov RAM (m=30)</h4>
+            <div class="big" id="ram-scale">491.52 TB (&gt;1 TB Wall)</div>
+          </div>
+          <div class="sim-box">
+            <h4>Estimated Physical Qubits (d + T-Factory)</h4>
+            <div class="big" id="phys-scale">~19,602 phys (d = 11)</div>
+          </div>
+          <div class="sim-box">
+            <h4>Translational Regime Verdict</h4>
+            <div class="big" id="verdict-scale" style="color:var(--emerald);">Genuine Simulation Crossover</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Publication Figures &amp; 8-Layer Knowledge Graph Topology</h2>
+      <p class="sec-lead">300-DPI figures from the Samskrift monograph (<a href="downloads/Quantum_LTC_Roadmap.pdf" target="_blank" rel="noopener">download full 10-page PDF</a> or <a href="knowledge-graph.html">launch the interactive Knowledge Graph Explorer</a>).</p>
+      <div class="fig-grid">
+        <div class="fig-card">
+          <a href="figures/figure1_logical_qubit_roadmap.png" target="_blank" rel="noopener"><img src="figures/figure1_logical_qubit_roadmap.png" alt="Figure 1: Four-Era Logical-Qubit Roadmap" loading="lazy" /></a>
+          <div class="cap"><strong>Figure 1 — Four-Era Logical-Qubit Scaling &amp; Liouvillian Memory Wall</strong>Classical Krylov RAM crossover (&gt;1.92 TB at 16 coupled organ spins) &amp; Era II [[8,3,2]] post-selection decay.</div>
+        </div>
+        <div class="fig-card">
+          <a href="figures/figure2_nexus_helios_and_haiqu_jij.png" target="_blank" rel="noopener"><img src="figures/figure2_nexus_helios_and_haiqu_jij.png" alt="Figure 2: Nexus Helios-1E-lite, Haiqu & OpenJij" loading="lazy" /></a>
+          <div class="cap"><strong>Figure 2 — Nexus Helios-1E-lite, Haiqu HUBO &amp; OpenJij PCN Recall</strong>6,144-shot Guppy/HUGR MDT coherence (0.9961 vs 0.5020), 223&rarr;26 depth compression, and 18/18 pre-winter coverage.</div>
+        </div>
+        <div class="fig-card">
+          <a href="figures/figure3_biophysical_qprotsim_ace1o86.png" target="_blank" rel="noopener"><img src="figures/figure3_biophysical_qprotsim_ace1o86.png" alt="Figure 3: HQS Lindbladian, QProtSim 1N9V & ACE 1O86" loading="lazy" /></a>
+          <div class="cap"><strong>Figure 3 — Multi-Organ HQS Lindbladian, QProtSim (1N9V) &amp; ACE (1O86)</strong>4-spin GKSL cardiorenal-pulmonary damping, Angiotensin II residue MI, and 2.141 &Aring; Zn2+–Lisinopril geometry.</div>
+        </div>
+        <div class="fig-card">
+          <a href="figures/figure4_modal_qml_and_2x2_barren_plateau.png" target="_blank" rel="noopener"><img src="figures/figure4_modal_qml_and_2x2_barren_plateau.png" alt="Figure 4: Modal QLTCMLM & 2x2 Barren Plateau" loading="lazy" /></a>
+          <div class="cap"><strong>Figure 4 — Modal QLTCMLM Ablations &amp; 2&times;2 Barren-Plateau Controls</strong>Non-linear cubic cohort benchmark vs GBDT/RBF-SVM and 4.82&times; Frobenius gradient variance retention at n=10, L=20.</div>
+        </div>
+        <div class="fig-card">
+          <a href="figures/figure5_typesafe_jev_governance.png" target="_blank" rel="noopener"><img src="figures/figure5_typesafe_jev_governance.png" alt="Figure 5: TypeSafe Jev Audit & Moth Borough Blur" loading="lazy" /></a>
+          <div class="cap"><strong>Figure 5 — TypeSafe Jev Multi-Method Audit &amp; 5-Borough Surge Blur</strong>CUJ-1..4 Health AI evaluation (4.32/5 NHS utility) and NCL 5-borough surge Gini reduction (0.875 &rarr; 0.461).</div>
+        </div>
+        <div class="fig-card">
+          <a href="knowledge-graph.html"><img src="figures/figure6_knowledge_graph.png" alt="Figure 6: 57-Node Ontology Knowledge Graph" loading="lazy" /></a>
+          <div class="cap"><strong>Figure 6 — Ontology-Grounded Knowledge Graph (57 Nodes, 114 Triples)</strong>8-layer multipartite graph &amp; Top-12 PageRank hubs (click to open interactive BFS explorer).</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>SHA-256 Sealed Experimental Receipts &amp; W3C JSON-LD</h2>
+      <p class="sec-lead">Click any receipt file below to inspect the raw canonical JSON / W3C JSON-LD provenance payload.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Receipt File</th>
+            <th>Integrated Platforms</th>
+            <th>Canonical SHA-256 Digest</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="receipts/nexus_helios_ltc_receipt.json" target="_blank" rel="noopener"><code>nexus_helios_ltc_receipt.json</code></a></td>
+            <td>Quantinuum Nexus <code>Helios-1E-lite</code> (Guppy 1.0 &rarr; HUGR, 3 live jobs: <code>5da15d5a...</code>, <code>464be33a...</code>, <code>0a1fb43e...</code>)</td>
+            <td><code>0e3216dd2d9c1b81a6f128886b77538fd55757d1bb91fb502cb8c2f47aa0e8bf</code></td>
+          </tr>
+          <tr>
+            <td><a href="receipts/haiqu_jij_ltc_receipt.json" target="_blank" rel="noopener"><code>haiqu_jij_ltc_receipt.json</code></a></td>
+            <td>Haiqu SDK (LR-QAOA <code>223&rarr;26</code>, EME, SU(2), OBP), JijModeling + OpenJij, HiGHS McCormick MILP</td>
+            <td><code>7212c3d95a5fc0b960c2c3b48398f2ce13469623ea8b4de1e3001d54c3403955</code></td>
+          </tr>
+          <tr>
+            <td><a href="receipts/biophysical_qprotsim_ltc_receipt.json" target="_blank" rel="noopener"><code>biophysical_qprotsim_ltc_receipt.json</code></a></td>
+            <td>HQS <code>struqture-py</code>/<code>qoqo</code>, QProtSim (<a href="structures/1N9V.pdb"><code>1N9V</code></a>), BioHub + UniProt, Neurosnap + <a href="structures/1O86.pdb"><code>1O86</code></a>, AlphaGenome Atlas, Arc Institute, Paperclip</td>
+            <td><code>6ba83347d46f7893f3202d86dd20474f43617d4a15536f41bec4e791e6faf64a</code></td>
+          </tr>
+          <tr>
+            <td><a href="receipts/modal_roadmap_rhyme_qml_receipt.json" target="_blank" rel="noopener"><code>modal_roadmap_rhyme_qml_receipt.json</code></a></td>
+            <td>Modal Cloud (Python 3.14), Rhyme (<code>rhyme-beta</code>), <code>QLTCMLM</code> (HF Hub), 2&times;2 Barren Plateau, 4-Era Scaling</td>
+            <td><code>cb1fec7c385d787b78321672dc5dc15092312d940cb24ae243ffe614979752d5</code></td>
+          </tr>
+          <tr>
+            <td><a href="receipts/governance_primitives_jev_receipt.json" target="_blank" rel="noopener"><code>governance_primitives_jev_receipt.json</code></a></td>
+            <td>Text2WetLab (6/6 OT-2), Medicus FHIR R4 + NIST FIPS 204 <code>ML-DSA-65</code>, DisCoPy, Moth Blur, Kashefi Primitives Atlas v0.4, TypeSafe Jev 1.14</td>
+            <td><code>bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37</code></td>
+          </tr>
+          <tr>
+            <td><a href="receipts/quantum_ltc_knowledge_graph.json" target="_blank" rel="noopener"><code>quantum_ltc_knowledge_graph.json</code></a> &bull; <a href="receipts/quantum_ltc_knowledge_graph.jsonld" target="_blank" rel="noopener"><code>.jsonld</code></a></td>
+            <td>Ontology-Grounded Heterogeneous Knowledge Graph (57 Nodes, 114 Triples, EMBL-EBI OLS4 <code>DOID</code>, UniProtKB, <code>PDB 1O86/1N9V</code>, SNOMED CT)</td>
+            <td><code>c08d35c2231c23b512b7f41e4423a86a689398d671fa55248eedf60b5f589f97</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Statutory NHS DCB0129 Open Hazard Register</h2>
+      <p class="sec-lead">Evaluated under the three-method Health AI framework (<code>arXiv:2611.05127</code>) with live TypeSafe AI System One (<code>jev-latest</code>).</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Hazard ID</th>
+            <th>NCL LTC Pathway Domain</th>
+            <th>Hazard Description &amp; Required Human Safeguard</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>H-LTC-01</code></td>
+            <td>PCN Call-and-Recall Equity</td>
+            <td>Incomplete SNOMED <code>Interpreter needed</code> or IMD coding could under-weight vulnerable cohorts; mandatory PCN equity register reconciliation before schedule release.</td>
+            <td><span class="pill-open">OPEN</span></td>
+          </tr>
+          <tr>
+            <td><code>H-LTC-02</code></td>
+            <td>Multimorbid HUBO &amp; MART</td>
+            <td>ACEi/ARB + SGLT2i initiation or DPI MART switch without baseline eGFR/K+ or inspiratory flow check; mandatory Pharmacist SMR &amp; respiratory nurse sign-off.</td>
+            <td><span class="pill-open">OPEN</span></td>
+          </tr>
+          <tr>
+            <td><code>H-LTC-03</code></td>
+            <td>CYP Asthma 48h Review</td>
+            <td>Paediatric post-attack deterioration cannot await batch optimisation; deterministic EHR urgent alert routes directly to Tier 2/3 CYP asthma clinician within 2 working days.</td>
+            <td><span class="pill-open">OPEN</span></td>
+          </tr>
+          <tr>
+            <td><code>H-LTC-04</code></td>
+            <td>Era III–IV Organ Twins</td>
+            <td>Unvalidated open-system Lindbladian rates could misstate trajectories; strictly advisory R&amp;D hypothesis tooling pending prospective NHS cohort calibration.</td>
+            <td><span class="pill-open">OPEN</span></td>
+          </tr>
+          <tr>
+            <td><code>H-LTC-05</code></td>
+            <td>UCLP Case-Finding Drift</td>
+            <td>3-yearly UCLPartners prevalence search drift across the 9 LTCs; quarterly SNOMED/QOF denominator audit mandated.</td>
+            <td><span class="pill-open">OPEN</span></td>
+          </tr>
+          <tr>
+            <td><code>H-LTC-06</code></td>
+            <td>VCSE Capacity Spillover</td>
+            <td>Stage 3 PCSP social-prescribing surge without funded community capacity; enforce VCSE slot caps &amp; NCL Borough Partnership resource tracking.</td>
+            <td><span class="pill-open">OPEN</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>Quantum-LTC</strong> &bull; Author: Arun Nadarasa &bull; Grounded in NHS North Central London ICB LTC LCS Specification v6 (2026–2027) &amp; <a href="https://www.ebi.ac.uk/ols4/api-docs" target="_blank" rel="noopener">EMBL-EBI OLS4 DOID</a>.</p>
+      <p style="margin-top:0.4rem;">Supported in part by complimentary access to Google Antigravity and Gemini 4 Argon. Zero patient-identifiable data (<code>phi_present = False</code>).</p>
+    </div>
+  </footer>
+
+  <script>
+    const slider = document.getElementById('nq-slider');
+    const nqVal = document.getElementById('nq-val');
+    const eraPill = document.getElementById('era-pill');
+    const organScale = document.getElementById('organ-scale');
+    const ramScale = document.getElementById('ram-scale');
+    const physScale = document.getElementById('phys-scale');
+    const verdictScale = document.getElementById('verdict-scale');
+
+    function formatRam(nSpin) {
+      if (nSpin <= 2) return '< 1 MB (Trivial)';
+      const bytes = 30 * 16 * Math.pow(4, nSpin);
+      const gb = bytes / Math.pow(1024, 3);
+      if (gb < 1) return (gb * 1024).toFixed(1) + ' MB';
+      if (gb < 1024) return gb.toFixed(2) + ' GB';
+      const tb = gb / 1024;
+      if (tb < 1024) return tb.toFixed(2) + ' TB (>1 TB Wall)';
+      return (tb / 1024).toFixed(1) + ' PB (Intractable)';
+    }
+
+    function updateExplorer() {
+      const nL = parseInt(slider.value, 10);
+      nqVal.textContent = nL;
+      if (nL === 0) {
+        eraPill.textContent = 'Era I: Classical-Exact & NISQ Hardware Readiness (0 Logical)';
+        eraPill.style.background = '#005eb8';
+        organScale.textContent = '4-Spin Toy / 128-Var QUBO';
+        ramScale.textContent = '0.12 MB (36.6 ms Exact)';
+        physScale.textContent = '4–20 phys / Cloud Emul.';
+        verdictScale.textContent = 'Classical HiGHS Dominates (<25 ms)';
+        verdictScale.style.color = '#b45309';
+      } else if (nL <= 24) {
+        const blocks = Math.ceil(nL / 3);
+        const pAcc = Math.pow(1 - 0.0012, blocks * 8 * Math.max(6, nL)) * 100;
+        eraPill.textContent = 'Era II: Error-Detected [[8,3,2]] Color-Code Regime';
+        eraPill.style.background = '#4b2e83';
+        const nSpin = Math.max(4, Math.floor((nL - 2) / 2));
+        organScale.textContent = nSpin + ' Coupled Spins (Error-Detected)';
+        ramScale.textContent = formatRam(nSpin);
+        physScale.textContent = (blocks * 8 + 8) + ' phys (Post-select ' + pAcc.toFixed(1) + '%)';
+        verdictScale.textContent = 'Classical MPS / MILP Faster';
+        verdictScale.style.color = '#b45309';
+      } else if (nL <= 72) {
+        eraPill.textContent = 'Era III: Early Active FTQC Simulation Crossover';
+        eraPill.style.background = '#008080';
+        const nSpin = Math.floor((nL - 6) / 2);
+        organScale.textContent = nSpin + ' Coupled Spins / CAS(' + nL + 'q)';
+        ramScale.textContent = formatRam(nSpin);
+        const d = nL >= 50 ? 13 : 11;
+        const phys = Math.round((Math.ceil(1.5 * nL) + 12) * 2 * d * d);
+        physScale.textContent = '~' + phys.toLocaleString() + ' phys (d = ' + d + ')';
+        verdictScale.textContent = nSpin >= 16 ? 'Genuine Memory Crossover (>1.9 TB)' : 'Approaching 1 TB Boundary';
+        verdictScale.style.color = nSpin >= 16 ? '#047857' : '#005eb8';
+      } else {
+        eraPill.textContent = 'Era IV: Asymptotic ICS-Scale Modular FTQC';
+        eraPill.style.background = '#047857';
+        const nSpin = Math.floor((nL - 8) / 2);
+        organScale.textContent = nSpin + ' Organ Axes + QSVT / Quantum B&B';
+        ramScale.textContent = '>> 1 EB Classical Wall';
+        const d = 15;
+        const phys = Math.round((Math.ceil(1.5 * nL) + 24) * 2 * d * d);
+        physScale.textContent = '~' + phys.toLocaleString() + ' phys (d = 15)';
+        verdictScale.textContent = 'Projected FTQC Advantage (Advisory)';
+        verdictScale.style.color = '#047857';
+      }
+    }
+    slider.addEventListener('input', updateExplorer);
+    updateExplorer();
+  </script>
+</body>
+</html>

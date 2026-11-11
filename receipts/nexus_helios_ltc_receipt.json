@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0.0-quantum-ltc-nexus-helios-1e-lite",
+  "timestamp_utc": "2026-11-11T18:15:47.711970+00:00",
+  "nexus_portal_url": "https://nexus.quantinuum.com/jobs",
+  "project_name": "Quantum-LTC-NCL",
+  "project_id": "69eb4683-8de0-4dc9-bd22-ce6d98cafc7f",
+  "backend": "Helios-1E-lite",
+  "error_model": "QSystemErrorModel(alpha)",
+  "physical_hardware_shots": 0,
+  "emulator_shots_total": 6144,
+  "epistemic_demarcation": "Executed live on Quantinuum Nexus cloud emulator `Helios-1E-lite` with realistic alpha QSystem noise model; 0 physical trapped-ion QPU shots claimed.",
+  "gate_g4_classical_baselines": {
+    "density_matrix_floor_runtime_us": 982.42,
+    "exact_coherent_mdt_p00": 1.0,
+    "exact_siloed_collapse_p00": 0.5,
+    "sensitivity_grid_25pt": [
+      {
+        "theta_y_halfturns": 0.15,
+        "theta_z_halfturns": 0.1,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.15,
+        "theta_z_halfturns": 0.2,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.15,
+        "theta_z_halfturns": 0.28,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.15,
+        "theta_z_halfturns": 0.4,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.15,
+        "theta_z_halfturns": 0.55,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.25,
+        "theta_z_halfturns": 0.1,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.25,
+        "theta_z_halfturns": 0.2,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.25,
+        "theta_z_halfturns": 0.28,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.25,
+        "theta_z_halfturns": 0.4,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.25,
+        "theta_z_halfturns": 0.55,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.38,
+        "theta_z_halfturns": 0.1,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.38,
+        "theta_z_halfturns": 0.2,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.38,
+        "theta_z_halfturns": 0.28,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.38,
+        "theta_z_halfturns": 0.4,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.38,
+        "theta_z_halfturns": 0.55,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.5,
+        "theta_z_halfturns": 0.1,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.5,
+        "theta_z_halfturns": 0.2,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.5,
+        "theta_z_halfturns": 0.28,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.5,
+        "theta_z_halfturns": 0.4,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.5,
+        "theta_z_halfturns": 0.55,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.65,
+        "theta_z_halfturns": 0.1,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.65,
+        "theta_z_halfturns": 0.2,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.65,
+        "theta_z_halfturns": 0.28,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.65,
+        "theta_z_halfturns": 0.4,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      },
+      {
+        "theta_y_halfturns": 0.65,
+        "theta_z_halfturns": 0.55,
+        "coherent_mdt_p00": 1.0,
+        "siloed_collapse_p00": 0.5,
+        "coherence_advantage_delta_p00": 0.5
+      }
+    ],
+    "analytical_non_markovian_recall_curve": [
+      {
+        "contacts_per_year": 0,
+        "net_clinical_engagement_contrast": 0.10069
+      },
+      {
+        "contacts_per_year": 1,
+        "net_clinical_engagement_contrast": 0.10069
+      },
+      {
+        "contacts_per_year": 2,
+        "net_clinical_engagement_contrast": 0.31732
+      },
+      {
+        "contacts_per_year": 3,
+        "net_clinical_engagement_contrast": 0.4551
+      },
+      {
+        "contacts_per_year": 4,
+        "net_clinical_engagement_contrast": 0.53259
+      },
+      {
+        "contacts_per_year": 5,
+        "net_clinical_engagement_contrast": 0.57345
+      },
+      {
+        "contacts_per_year": 6,
+        "net_clinical_engagement_contrast": 0.59122
+      },
+      {
+        "contacts_per_year": 7,
+        "net_clinical_engagement_contrast": 0.59383
+      },
+      {
+        "contacts_per_year": 8,
+        "net_clinical_engagement_contrast": 0.5862
+      },
+      {
+        "contacts_per_year": 9,
+        "net_clinical_engagement_contrast": 0.57156
+      },
+      {
+        "contacts_per_year": 10,
+        "net_clinical_engagement_contrast": 0.55212
+      },
+      {
+        "contacts_per_year": 11,
+        "net_clinical_engagement_contrast": 0.52945
+      },
+      {
+        "contacts_per_year": 12,
+        "net_clinical_engagement_contrast": 0.50468
+      }
+    ]
+  },
+  "jobs": {
+    "house_of_care_mdt_vs_siloed": {
+      "job_name": "quantum-ltc-house-of-care-mdt-20261111_181521",
+      "job_id": "5da15d5a-c48e-4a11-9bb3-6c0d8854131c",
+      "hugr_ref_id": "b1f4f4b2-49a4-4d9f-bd7b-12f54dacfbab",
+      "hugr_bytes": 7456,
+      "n_qubits": 4,
+      "shots": 2048,
+      "equal_unitary_gate_structure": true,
+      "coherent_mdt_p00": 0.996094,
+      "coherent_mdt_shannon_bits": 0.042365,
+      "siloed_collapse_p00": 0.501953,
+      "siloed_collapse_shannon_bits": 1.027815,
+      "delta_p00_coherence_gain": 0.494141
+    },
+    "recall_cadence_8rungs": {
+      "job_name": "quantum-ltc-recall-8rungs-20261111_181521",
+      "job_id": "464be33a-6ca0-4d6d-af99-2d7eba06ce8a",
+      "hugr_ref_id": "06eb38ab-7e8c-4344-98b5-1ba373726c87",
+      "hugr_bytes": 7566,
+      "n_qubits": 1,
+      "shots": 2048,
+      "affine_calibration_r2": 0.99788,
+      "affine_slope": 0.976145,
+      "affine_intercept": -0.011439,
+      "blinded_qc_annual_mob_target": 0.42,
+      "blinded_qc_annual_mob_calibrated": 0.372727,
+      "proactive_prewinter_cyp48h_target": 0.742,
+      "proactive_prewinter_cyp48h_calibrated": 0.71495,
+      "exact_null_twin_calibrated": 0.00572,
+      "raw_contrasts": [
+        -0.495117,
+        -0.266602,
+        0.02832,
+        0.285156,
+        0.506836,
+        0.393555,
+        0.744141,
+        0.017578
+      ],
+      "calibrated_contrasts": [
+        -0.494746,
+        -0.271681,
+        0.016206,
+        0.266915,
+        0.483306,
+        0.372727,
+        0.71495,
+        0.00572
+      ],
+      "rung_labels": [
+        "Cal_Std_1_Neg50",
+        "Cal_Std_2_Neg25",
+        "Cal_Std_3_Zero",
+        "Cal_Std_4_Pos25",
+        "Cal_Std_5_Pos50",
+        "Blinded_QC_Annual_MoB",
+        "Proactive_PreWinter_CYP48h",
+        "Exact_Null_Twin"
+      ]
+    },
+    "qltcmlm_4q_frobenius_vqc": {
+      "job_name": "quantum-ltc-qltcmlm-4q-vqc-20261111_181521",
+      "job_id": "0a1fb43e-4998-4700-b9ec-4f6b0b73e677",
+      "hugr_ref_id": "5794a537-b0e0-4be7-83ad-bffc0f71fadf",
+      "hugr_bytes": 6734,
+      "n_qubits": 4,
+      "shots": 2048,
+      "total_variation_distance_vs_ideal": 0.028698,
+      "classical_distribution_bhattacharyya_fidelity": 0.99898,
+      "bitstring_counts": {
+        "0000": 298,
+        "0001": 229,
+        "0010": 112,
+        "0011": 202,
+        "0100": 37,
+        "0101": 187,
+        "0110": 23,
+        "0111": 127,
+        "1000": 132,
+        "1001": 40,
+        "1010": 149,
+        "1011": 24,
+        "1100": 134,
+        "1101": 222,
+        "1110": 20,
+        "1111": 112
+      }
+    }
+  },
+  "receipt_sha256": "0e3216dd2d9c1b81a6f128886b77538fd55757d1bb91fb502cb8c2f47aa0e8bf"
+}
