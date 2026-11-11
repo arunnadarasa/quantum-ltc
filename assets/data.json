@@ -1,0 +1,2046 @@
+{
+  "crossover": [
+    {
+      "n_organ_spins": 4,
+      "liouvillian_hilbert_schmidt_dim": 256,
+      "classical_krylov_m30_ram_gb": 0.000114,
+      "classical_krylov_m30_ram_gib": 0.000114,
+      "classical_krylov_m30_ram_tib": 0.0,
+      "mcwf_single_statevector_mib": 0.000244,
+      "mcwf_krylov_m30_mib": 0.007324,
+      "mcwf_trajectories_for_eps_1e3": 1000000,
+      "mpdo_bounded_chi64_mib": 1.0,
+      "mpdo_volume_law_ram_gib": 6.1e-05,
+      "ftqc_logical_qubits_required": 14,
+      "ftqc_t_gates_assumed": 14400,
+      "ftqc_code_distance_d": 9,
+      "ftqc_physical_qubits_required": 5346,
+      "classical_memory_tractable_under_1tb": true
+    },
+    {
+      "n_organ_spins": 8,
+      "liouvillian_hilbert_schmidt_dim": 65536,
+      "classical_krylov_m30_ram_gb": 0.029297,
+      "classical_krylov_m30_ram_gib": 0.029297,
+      "classical_krylov_m30_ram_tib": 2.9e-05,
+      "mcwf_single_statevector_mib": 0.003906,
+      "mcwf_krylov_m30_mib": 0.117188,
+      "mcwf_trajectories_for_eps_1e3": 1000000,
+      "mpdo_bounded_chi64_mib": 2.0,
+      "mpdo_volume_law_ram_gib": 0.03125,
+      "ftqc_logical_qubits_required": 22,
+      "ftqc_t_gates_assumed": 28800,
+      "ftqc_code_distance_d": 9,
+      "ftqc_physical_qubits_required": 7290,
+      "classical_memory_tractable_under_1tb": true
+    },
+    {
+      "n_organ_spins": 12,
+      "liouvillian_hilbert_schmidt_dim": 16777216,
+      "classical_krylov_m30_ram_gb": 7.5,
+      "classical_krylov_m30_ram_gib": 7.5,
+      "classical_krylov_m30_ram_tib": 0.007324,
+      "mcwf_single_statevector_mib": 0.0625,
+      "mcwf_krylov_m30_mib": 1.875,
+      "mcwf_trajectories_for_eps_1e3": 1000000,
+      "mpdo_bounded_chi64_mib": 3.0,
+      "mpdo_volume_law_ram_gib": 12.0,
+      "ftqc_logical_qubits_required": 30,
+      "ftqc_t_gates_assumed": 43200,
+      "ftqc_code_distance_d": 9,
+      "ftqc_physical_qubits_required": 9234,
+      "classical_memory_tractable_under_1tb": true
+    },
+    {
+      "n_organ_spins": 16,
+      "liouvillian_hilbert_schmidt_dim": 4294967296,
+      "classical_krylov_m30_ram_gb": 1920.0,
+      "classical_krylov_m30_ram_gib": 1920.0,
+      "classical_krylov_m30_ram_tib": 1.875,
+      "mcwf_single_statevector_mib": 1.0,
+      "mcwf_krylov_m30_mib": 30.0,
+      "mcwf_trajectories_for_eps_1e3": 1000000,
+      "mpdo_bounded_chi64_mib": 4.0,
+      "mpdo_volume_law_ram_gib": 4096.0,
+      "ftqc_logical_qubits_required": 38,
+      "ftqc_t_gates_assumed": 57600,
+      "ftqc_code_distance_d": 11,
+      "ftqc_physical_qubits_required": 16698,
+      "classical_memory_tractable_under_1tb": false
+    },
+    {
+      "n_organ_spins": 18,
+      "liouvillian_hilbert_schmidt_dim": 68719476736,
+      "classical_krylov_m30_ram_gb": 30720.0,
+      "classical_krylov_m30_ram_gib": 30720.0,
+      "classical_krylov_m30_ram_tib": 30.0,
+      "mcwf_single_statevector_mib": 4.0,
+      "mcwf_krylov_m30_mib": 120.0,
+      "mcwf_trajectories_for_eps_1e3": 1000000,
+      "mpdo_bounded_chi64_mib": 4.5,
+      "mpdo_volume_law_ram_gib": 73728.0,
+      "ftqc_logical_qubits_required": 42,
+      "ftqc_t_gates_assumed": 64800,
+      "ftqc_code_distance_d": 11,
+      "ftqc_physical_qubits_required": 18150,
+      "classical_memory_tractable_under_1tb": false
+    },
+    {
+      "n_organ_spins": 20,
+      "liouvillian_hilbert_schmidt_dim": 1099511627776,
+      "classical_krylov_m30_ram_gb": 491520.0,
+      "classical_krylov_m30_ram_gib": 491520.0,
+      "classical_krylov_m30_ram_tib": 480.0,
+      "mcwf_single_statevector_mib": 16.0,
+      "mcwf_krylov_m30_mib": 480.0,
+      "mcwf_trajectories_for_eps_1e3": 1000000,
+      "mpdo_bounded_chi64_mib": 5.0,
+      "mpdo_volume_law_ram_gib": 1310720.0,
+      "ftqc_logical_qubits_required": 46,
+      "ftqc_t_gates_assumed": 72000,
+      "ftqc_code_distance_d": 11,
+      "ftqc_physical_qubits_required": 19602,
+      "classical_memory_tractable_under_1tb": false
+    },
+    {
+      "n_organ_spins": 24,
+      "liouvillian_hilbert_schmidt_dim": 281474976710656,
+      "classical_krylov_m30_ram_gb": 125829120.0,
+      "classical_krylov_m30_ram_gib": 125829120.0,
+      "classical_krylov_m30_ram_tib": 122880.0,
+      "mcwf_single_statevector_mib": 256.0,
+      "mcwf_krylov_m30_mib": 7680.0,
+      "mcwf_trajectories_for_eps_1e3": 1000000,
+      "mpdo_bounded_chi64_mib": 6.0,
+      "mpdo_volume_law_ram_gib": 402653184.0,
+      "ftqc_logical_qubits_required": 54,
+      "ftqc_t_gates_assumed": 86400,
+      "ftqc_code_distance_d": 11,
+      "ftqc_physical_qubits_required": 22506,
+      "classical_memory_tractable_under_1tb": false
+    }
+  ],
+  "nexus_ladder": [
+    {
+      "label": "Cal Std 1 Neg50",
+      "raw": -0.4951,
+      "calibrated": -0.4947
+    },
+    {
+      "label": "Cal Std 2 Neg25",
+      "raw": -0.2666,
+      "calibrated": -0.2717
+    },
+    {
+      "label": "Cal Std 3 Zero",
+      "raw": 0.0283,
+      "calibrated": 0.0162
+    },
+    {
+      "label": "Cal Std 4 Pos25",
+      "raw": 0.2852,
+      "calibrated": 0.2669
+    },
+    {
+      "label": "Cal Std 5 Pos50",
+      "raw": 0.5068,
+      "calibrated": 0.4833
+    },
+    {
+      "label": "Blinded QC Annual MoB",
+      "raw": 0.3936,
+      "calibrated": 0.3727
+    },
+    {
+      "label": "Proactive PreWinter CYP48h",
+      "raw": 0.7441,
+      "calibrated": 0.7149
+    },
+    {
+      "label": "Exact Null Twin",
+      "raw": 0.0176,
+      "calibrated": 0.0057
+    }
+  ],
+  "lindblad_regimes": [
+    {
+      "short": "Regime A: Uncontrolled",
+      "bp": 0.8962,
+      "glyc": 0.9433,
+      "renal": 0.939,
+      "il6": 0.971,
+      "gap": 0.1835
+    },
+    {
+      "short": "Regime B: \u03a9_pro Only",
+      "bp": 0.7934,
+      "glyc": 0.7055,
+      "renal": 0.8262,
+      "il6": 0.7787,
+      "gap": 0.1809
+    },
+    {
+      "short": "Regime C: Coexisting Bath",
+      "bp": 0.4605,
+      "glyc": 0.3777,
+      "renal": 0.4639,
+      "il6": 0.5004,
+      "gap": 0.6935
+    },
+    {
+      "short": "Regime C (g_ij=0)",
+      "bp": 0.4684,
+      "glyc": 0.2356,
+      "renal": 0.4812,
+      "il6": 0.5174,
+      "gap": 0.2225
+    },
+    {
+      "short": "Regime D: Polarity Flip",
+      "bp": 0.3712,
+      "glyc": 0.3656,
+      "renal": 0.376,
+      "il6": 0.3305,
+      "gap": 0.3836
+    }
+  ],
+  "qltcmlm_models": [
+    {
+      "label": "4q\nReservoir",
+      "full_name": "QLTCMLM-Reservoir (Fixed 72Q + Trained 128C)",
+      "risk_pct": 40.8,
+      "risk_sd": 1.19,
+      "bundle_pct": 57.73,
+      "bundle_sd": 5.6
+    },
+    {
+      "label": "4q\nQKernel",
+      "full_name": "QLTCMLM-QKernel (4q Fidelity Gram SVM)",
+      "risk_pct": 41.97,
+      "risk_sd": 2.48,
+      "bundle_pct": 56.67,
+      "bundle_sd": 0.82
+    },
+    {
+      "label": "4q\nVQC",
+      "full_name": "QLTCMLM-VQC (Trained 72Q + 128C)",
+      "risk_pct": 53.23,
+      "risk_sd": 1.57,
+      "bundle_pct": 75.53,
+      "bundle_sd": 0.48
+    },
+    {
+      "label": "Linear\nLogReg",
+      "full_name": "LogisticRegression (Linear, 72 params)",
+      "risk_pct": 31.7,
+      "risk_sd": 1.63,
+      "bundle_pct": 67.93,
+      "bundle_sd": 0.7
+    },
+    {
+      "label": "G4\nGBDT",
+      "full_name": "HistGradientBoosting (GBDT)",
+      "risk_pct": 51.87,
+      "risk_sd": 2.01,
+      "bundle_pct": 81.97,
+      "bundle_sd": 0.57
+    },
+    {
+      "label": "G4\nMLP",
+      "full_name": "MLPClassifier (32x16 ReLU)",
+      "risk_pct": 60.07,
+      "risk_sd": 3.86,
+      "bundle_pct": 82.37,
+      "bundle_sd": 1.66
+    },
+    {
+      "label": "G4\nRBF-SVM",
+      "full_name": "RBF-SVM (C=4.0)",
+      "risk_pct": 64.17,
+      "risk_sd": 2.35,
+      "bundle_pct": 84.97,
+      "bundle_sd": 0.36
+    },
+    {
+      "label": "Cubic\nPoly-LR",
+      "full_name": "Cubic Poly-LogReg (Degree-3, 1,320 params)",
+      "risk_pct": 66.2,
+      "risk_sd": 1.82,
+      "bundle_pct": 87.43,
+      "bundle_sd": 0.76
+    }
+  ],
+  "jev_cujs": [
+    {
+      "short_label": "CUJ-1: Pre-Winter Equity Recall",
+      "safety": 3.02,
+      "usefulness": 4.32,
+      "accuracy": 3.84,
+      "auto_prob": 0.0
+    },
+    {
+      "short_label": "CUJ-2: Multimorbid MART HUBO",
+      "safety": 3.7,
+      "usefulness": 3.72,
+      "accuracy": 3.58,
+      "auto_prob": 0.0
+    },
+    {
+      "short_label": "CUJ-3: CYP 48h & MDT Coherence",
+      "safety": 3.04,
+      "usefulness": 2.58,
+      "accuracy": 2.06,
+      "auto_prob": 0.0
+    },
+    {
+      "short_label": "CUJ-4: Era III\u2013IV FTQC Twins",
+      "safety": 2.71,
+      "usefulness": 1.73,
+      "accuracy": 3.9,
+      "auto_prob": 0.0
+    }
+  ],
+  "atlas_contracts": [
+    {
+      "id": "P08",
+      "category": "procedural",
+      "name": "Adiabatic state preparation and annealing",
+      "paper": "Farhi, Goldstone, Gutmann, Sipser (2000)",
+      "era": "Era I (0 Logical Qubits \u2014 Classical/Annealing Ready Today)",
+      "ltc_use_html": "OpenJij + JijModeling 128-Var NCL PCN Call-and-Recall QUBO",
+      "caveat": "HiGHS MILP solves sparse 128-var scheduling exactly in <5 ms; QUBO provides clean multi-constraint penalty compilation."
+    },
+    {
+      "id": "A01d",
+      "category": "architectural",
+      "name": "Alternating-operator ansatz",
+      "paper": "Farhi, Goldstone, Gutmann (2014)",
+      "era": "Era I -> Era II (Compressed LR-QAOA on 3-Body Regimen HUBO)",
+      "ltc_use_html": "Haiqu SDK 8-Qubit Multimorbid + Net-Zero MART 3-Body HUBO (88.3% depth compression)",
+      "caveat": "McCormick MILP dominates small sparse HUBOs; QAOA crossover requires dense frustrated k>=4 hypergraphs beyond treewidth bounds."
+    },
+    {
+      "id": "P09",
+      "category": "procedural",
+      "name": "Loading classical data: QRAM, state preparation from classical data, block encoding of dense matrices",
+      "paper": "Giovannetti, Lloyd, Maccone (2007)",
+      "era": "Era I -> Era II (Data Loading)",
+      "ltc_use_html": "Haiqu Entangled Manifold Embedding (EME) of 8-Feature NCL LTC Profile",
+      "caveat": "O(n)-depth approximate state preparation avoiding O(2^n) generic state-loading bottleneck."
+    },
+    {
+      "id": "P13",
+      "category": "procedural",
+      "name": "Expectation and overlap estimation",
+      "paper": "Aharonov, Jones, Landau (2005)",
+      "era": "Era II (3-24 Error-Detected Logical Qubits)",
+      "ltc_use_html": "Guppy 1.0 -> HUGR `Helios-1E-lite` Coherent House-of-Care MDT vs Siloed Collapse",
+      "caveat": "Hadamard/Bell overlap test verifying coherent pathway correlation vs mid-circuit projective collapse."
+    },
+    {
+      "id": "P20",
+      "category": "procedural",
+      "name": "Transformation of an unknown unitary or channel (inversion, conjugation, transposition; quantum combs)",
+      "paper": "Quintino, Dong, Shimbo, Soeda, Murao (2019)",
+      "era": "Era II (Sequential Mid-Circuit Comb Channels)",
+      "ltc_use_html": "8-Rung Self-Calibrating MCMR Recall & CYP Asthma 48h/6wk Cadence Ladder",
+      "caveat": "Models non-Markovian longitudinal memory across multi-step `project_z` interventions."
+    },
+    {
+      "id": "A01g",
+      "category": "architectural",
+      "name": "Equivariant and geometric ansatz",
+      "paper": "Larocca et al. (2022)",
+      "era": "Era II -> Era III (Symmetry-Protected Variational Subspaces)",
+      "ltc_use_html": "Haiqu SU(2)-Equivariant Ansatz & Modal 2x2 Matched-Depth Frobenius Circuits",
+      "caveat": "Restricts dynamical Lie algebra dimension; note polynomial Lie algebras can also admit classical g-sim!"
+    },
+    {
+      "id": "A01h",
+      "category": "architectural",
+      "name": "Quantum graph neural networks",
+      "paper": "Verdon et al. (2019)",
+      "era": "Era II -> Era III (Biomolecular Contact-Graph Sampling)",
+      "ltc_use_html": "QProtSim on Crystal `PDB 1N9V` Human Angiotensin II (`DRVYIHPF`)",
+      "caveat": "Benchmarked directly against Gate G4 exact 256-state classical Potts/Boltzmann ensemble."
+    },
+    {
+      "id": "P22",
+      "category": "procedural",
+      "name": "Open-system (Lindbladian) simulation",
+      "paper": "Bacon, Childs, Chuang, Kempe, Leung, Zhou (2001)",
+      "era": "Era III (24-72 Active Logical Qubits \u2014 First Simulation Crossover!)",
+      "ltc_use_html": "HQS `struqture-py` + `qoqo` Cardiorenal-Metabolic-Pulmonary Open-System Lindbladian",
+      "caveat": "Classical Krylov Liouvillian hits O(4^{n_spin}) RAM wall (>1 TB at n_spin >= 19-20); dilated FTQC scales polynomially in n_spin."
+    },
+    {
+      "id": "X03",
+      "category": "composite",
+      "name": "Quantum subspace and Krylov diagonalisation template",
+      "paper": "McClean, Schwartz, Carter, de Jong (2017)",
+      "era": "Era III (48-64 Active Logical Qubits \u2014 Metalloenzyme Chemistry)",
+      "ltc_use_html": "Active-Space Quantum Subspace / Phase Estimation for `PDB 1O86` Human ACE Zn2+ + Lisinopril",
+      "caveat": "Targets strongly polarized HEXXH Zn2+ d-shell + oxyanion charge transfer where classical CCSD(T)/DMRG accuracy degrades."
+    },
+    {
+      "id": "P04",
+      "category": "procedural",
+      "name": "Quantum walk search",
+      "paper": "Ambainis (2003)",
+      "era": "Era IV (100-1,000+ Fault-Tolerant Logical Qubits)",
+      "ltc_use_html": "Coherent Quantum Amplitude Estimation & QSVT for Rare Polypharmacy CVaR Tail Risk",
+      "caveat": "Quadratic O(1/eps) speedup over classical O(1/eps^2) Monte Carlo for rare multi-drug AKI/arrhythmia tail events."
+    }
+  ],
+  "receipts_summary": [
+    {
+      "file": "nexus_helios_ltc_receipt.json",
+      "sha256": "0e3216dd2d9c1b81a6f128886b77538fd55757d1bb91fb502cb8c2f47aa0e8bf",
+      "platforms": "Quantinuum Nexus <code>Helios-1E-lite</code> (Guppy 1.0 \u2192 HUGR, Jobs <code>5da15d5a</code>, <code>464be33a</code>, <code>0a1fb43e</code>)",
+      "metrics": "6,144 cloud emulator shots; MDT <code>0.9961 \u00b1 0.0014</code> vs Siloed <code>0.5020 \u00b1 0.0110</code>; 8-rung R\u00b2 = <code>0.9979</code>",
+      "floor": "Exact 16-dim statevector"
+    },
+    {
+      "file": "haiqu_jij_ltc_receipt.json",
+      "sha256": "7212c3d95a5fc0b960c2c3b48398f2ce13469623ea8b4de1e3001d54c3403955",
+      "platforms": "Haiqu SDK (LR-QAOA, EME, SU(2), OBP), JijModeling + OpenJij, SciPy HiGHS MILP",
+      "metrics": "HUBO depth <code>223 \u2192 26 (-88.3%)</code>, raw GS hit <code>41.21%</code>; OpenJij+Kempe <code>18/18</code> pre-winter (<code>0.80%</code> gap)",
+      "floor": "HiGHS MILP 4.3\u201323.0 ms"
+    },
+    {
+      "file": "biophysical_qprotsim_ltc_receipt.json",
+      "sha256": "6ba83347d46f7893f3202d86dd20474f43617d4a15536f41bec4e791e6faf64a",
+      "platforms": "HQS <code>struqture-py</code>/<code>qoqo</code>, QProtSim (<code>1N9V</code>), BioHub, Neurosnap (<code>1O86</code>), AlphaGenome, Arc",
+      "metrics": "Crystal ACE\u2013Lisinopril <code>Zn2+ 2.141 \u00c5</code> (0 clashes); Ang II Tyr4\u2013Phe8 MI; Kuramoto R <code>0.214 \u2192 0.946</code>",
+      "floor": "Exact 256-dim Krylov / Potts"
+    },
+    {
+      "file": "modal_roadmap_rhyme_qml_receipt.json",
+      "sha256": "cb1fec7c385d787b78321672dc5dc15092312d940cb24ae243ffe614979752d5",
+      "platforms": "Modal Cloud (Python 3.14), Rhyme (<code>rhyme-beta</code>), <code>QLTCMLM</code> (HF Hub), 2\u00d72 Barren Plateau",
+      "metrics": "Frobenius <code>4.82\u00d7</code> gradient variance at n=10, L=20; 4-Era scaling across <code>N_logical \u2208 [0, 1000+]</code>",
+      "floor": "RBF-SVM / GBDT / Poly-LR"
+    },
+    {
+      "file": "governance_primitives_jev_receipt.json",
+      "sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37",
+      "platforms": "Text2WetLab (6/6 OT-2), Medicus FHIR R4 + <code>ML-DSA-65</code>, DisCoPy, Moth Blur, Kashefi Atlas v0.4, TypeSafe Jev 1.14",
+      "metrics": "CUJ-1 NHS utility <code>4.32/5</code>, <code>0.00</code> auto-deploy; NCL 5-borough surge Gini <code>0.8750 \u2192 0.4613</code>",
+      "floor": "NHS DCB0129 & DCB0160"
+    },
+    {
+      "file": "deep_review_remediation_receipt.json",
+      "sha256": "a6b3854e9e3bdce25c1771a460b7b65956494c1c7ac3a9c723d47bd42d9b8cac",
+      "platforms": "MCWF/MPDO Binary Baselines, Haiqu Cloud Controls, OpenJij Pre-Polish, 4-Regime HQS, 5-Seed QLTCMLM, Lie <code>g-sim</code>",
+      "metrics": "Krylov <code>1.875 TiB</code> vs MCWF/MPDO; Regime C <code>-50.6%</code> renal (<code>\u0394L=0.693</code>); <code>64L/68L</code> <code>1O86</code>; <code>dim(g)=12/66/255</code>",
+      "floor": "Cubic Poly-LR 66.2% / 87.4%"
+    },
+    {
+      "file": "quantum_ltc_knowledge_graph.json",
+      "sha256": "9b4e62e08dfe095909614aab2752c76c99df0df699377d0756c618d3a825c505",
+      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), SNOMED CT, UniProtKB, RCSB PDB, W3C JSON-LD 1.1",
+      "metrics": "<code>57</code> nodes, <code>114</code> directed semantic triples across 8 ontology layers (1 connected component)",
+      "floor": "Live OLS4 REST verified"
+    }
+  ],
+  "knowledge_graph": {
+    "receipt_sha256": "9b4e62e08dfe095909614aab2752c76c99df0df699377d0756c618d3a825c505",
+    "categories": [
+      {
+        "id": "NCL_LTC_Condition",
+        "short": "NCL 9 LTCs (DOID)",
+        "color": "#38d6c4"
+      },
+      {
+        "id": "HouseOfCare_Stage",
+        "short": "House of Care",
+        "color": "#60a5fa"
+      },
+      {
+        "id": "Intervention",
+        "short": "Regimen & Net-Zero",
+        "color": "#34d399"
+      },
+      {
+        "id": "Molecular_Target",
+        "short": "Biophysical / PDB",
+        "color": "#f4ae42"
+      },
+      {
+        "id": "Quantum_Primitive",
+        "short": "Kashefi Atlas",
+        "color": "#a78bfa"
+      },
+      {
+        "id": "Logical_Era",
+        "short": "Logical Era I\u2013IV",
+        "color": "#e879f9"
+      },
+      {
+        "id": "Platform_Receipt",
+        "short": "Platform Receipt",
+        "color": "#2dd4bf"
+      },
+      {
+        "id": "DCB0129_Hazard",
+        "short": "DCB0129/0160 Hazard",
+        "color": "#f06a3b"
+      }
+    ],
+    "topology_metrics": {
+      "category_counts": {
+        "NCL_LTC_Condition": 9,
+        "HouseOfCare_Stage": 5,
+        "Intervention": 6,
+        "Molecular_Target": 8,
+        "Quantum_Primitive": 10,
+        "Logical_Era": 4,
+        "Platform_Receipt": 9,
+        "DCB0129_Hazard": 6
+      }
+    },
+    "nodes": [
+      {
+        "id": "ltc_cvd",
+        "label": "Cardiovascular Disease (CVD)",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:1287 (http://purl.obolibrary.org/obo/DOID_1287)",
+        "metric": "CHD, stroke/TIA, PAD, and heart failure across NCL's 5 boroughs. [ncl_lcs_v6_scope: Core 9 LTCs \u00b7 default_tier: High / Complex]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 5,
+        "total_degree": 5,
+        "pagerank": 0.010186,
+        "betweenness_centrality": 0.0333,
+        "closeness_centrality": 0.3972
+      },
+      {
+        "id": "ltc_af",
+        "label": "Atrial Fibrillation (AF)",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:0060224 (http://purl.obolibrary.org/obo/DOID_0060224)",
+        "metric": "Supraventricular tachyarrhythmia requiring stroke prevention & rate/rhythm review. [ncl_lcs_v6_scope: Core 9 LTCs \u00b7 default_tier: Moderate / High]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 3,
+        "total_degree": 3,
+        "pagerank": 0.0072,
+        "betweenness_centrality": 0.0058,
+        "closeness_centrality": 0.3415
+      },
+      {
+        "id": "ltc_htn",
+        "label": "Hypertension (Outcome #23)",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:10763 (http://purl.obolibrary.org/obo/DOID_10763)",
+        "metric": "Anchored by NCL PCN Outcome #23 (<140/90 clinic, <135/85 home for age <80; <150/90 for >=80). [target_bp_under80: 140/90 mmHg \u00b7 target_bp_home: 135/85 mmHg]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 5,
+        "total_degree": 5,
+        "pagerank": 0.010805,
+        "betweenness_centrality": 0.0756,
+        "closeness_centrality": 0.3836
+      },
+      {
+        "id": "ltc_t2d",
+        "label": "Type 2 Diabetes Mellitus",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:9352 (http://purl.obolibrary.org/obo/DOID_9352)",
+        "metric": "Cardiometabolic insulin resistance managed via HbA1c, uACR, SGLT2i, and GLP-1RA. [biomarkers: HbA1c, eGFR, uACR]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 4,
+        "total_degree": 4,
+        "pagerank": 0.010345,
+        "betweenness_centrality": 0.0188,
+        "closeness_centrality": 0.3457
+      },
+      {
+        "id": "ltc_t1d",
+        "label": "Type 1 Diabetes (High+Complex)",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:9744 (http://purl.obolibrary.org/obo/DOID_9744)",
+        "metric": "Mandated High Risk + Complex stratification in NCL LTC LCS v6 with specialist MDT link. [mandated_stratum: High Risk + Complex]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 4,
+        "total_degree": 4,
+        "pagerank": 0.008663,
+        "betweenness_centrality": 0.0113,
+        "closeness_centrality": 0.3709
+      },
+      {
+        "id": "ltc_ckd",
+        "label": "Chronic Kidney Disease (CKD)",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:784 (http://purl.obolibrary.org/obo/DOID_784)",
+        "metric": "Progressive nephron loss tracked by uACR & eGFR; early SGLT2i/ACEi averts high-carbon dialysis. [biomarkers: uACR, eGFR \u00b7 green_plan_priority: Prevent dialysis]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 5,
+        "total_degree": 5,
+        "pagerank": 0.010304,
+        "betweenness_centrality": 0.0329,
+        "closeness_centrality": 0.3972
+      },
+      {
+        "id": "ltc_masld",
+        "label": "NAFLD / MASLD",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:0080208 (http://purl.obolibrary.org/obo/DOID_0080208)",
+        "metric": "Metabolic dysfunction-associated steatotic liver disease staged via LFTs & FIB-4. [biomarkers: FIB-4, ALT/AST \u00b7 genetic_modifier: PNPLA3]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 4,
+        "total_degree": 4,
+        "pagerank": 0.013459,
+        "betweenness_centrality": 0.0454,
+        "closeness_centrality": 0.3275
+      },
+      {
+        "id": "ltc_copd",
+        "label": "COPD",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:3083 (http://purl.obolibrary.org/obo/DOID_3083)",
+        "metric": "Chronic airflow limitation requiring winter exacerbation prevention & low-GWP inhaler review. [seasonality: Pre-winter Q2/Q3 priority]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 4,
+        "total_degree": 4,
+        "pagerank": 0.010477,
+        "betweenness_centrality": 0.0176,
+        "closeness_centrality": 0.3436
+      },
+      {
+        "id": "ltc_asthma",
+        "label": "Adult & CYP Asthma (0\u201317y)",
+        "category": "NCL_LTC_Condition",
+        "tier": "Layer 1 \u00b7 Era: All",
+        "external_id": "DOID:2841 (http://purl.obolibrary.org/obo/DOID_2841)",
+        "metric": "Mandates 48-hour post-attack review (2 working days) & 6-week full review by Tier 2/3 clinicians + SABA-free MART. [post_attack_sla: 48 hours (2 working days) \u00b7 followup_sla: 6 weeks]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 6,
+        "total_degree": 7,
+        "pagerank": 0.017742,
+        "betweenness_centrality": 0.0932,
+        "closeness_centrality": 0.3944
+      },
+      {
+        "id": "stage_call_recall",
+        "label": "UCLP Case-Finding & Pre-Winter Call/Recall",
+        "category": "HouseOfCare_Stage",
+        "tier": "Layer 2 \u00b7 Era: All",
+        "external_id": "NCL-LCS-v6:Page5 ()",
+        "metric": "3-yearly UCLPartners searches + scheduling tension between Month-of-Birth smoothing and Pre-Winter High/Complex priority. [pre_winter_high_risk_achieved: 18/18 (100%) \u00b7 quarterly_clinic_cap: 8/8/8/8]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 10,
+        "out_degree": 2,
+        "total_degree": 12,
+        "pagerank": 0.028353,
+        "betweenness_centrality": 0.1364,
+        "closeness_centrality": 0.4179
+      },
+      {
+        "id": "stage_1_check_test",
+        "label": "Stage 1: Check & Test + Interpreter Access",
+        "category": "HouseOfCare_Stage",
+        "tier": "Layer 2 \u00b7 Era: All",
+        "external_id": "SNOMED:315594003 ()",
+        "metric": "Single 30-min phlebotomy/uACR/BP/foot check + SNOMED 315594003 Interpreter needed access + OT-2 assay automation. [ot2_verification: 6/6 PASS (Text2WetLab) \u00b7 interpreter_cap_per_q: <=3]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 11,
+        "out_degree": 3,
+        "total_degree": 14,
+        "pagerank": 0.036962,
+        "betweenness_centrality": 0.1933,
+        "closeness_centrality": 0.4375
+      },
+      {
+        "id": "stage_2_mdt_review",
+        "label": "Stage 2: Re-Stratification & MDT Desktop Review",
+        "category": "HouseOfCare_Stage",
+        "tier": "Layer 2 \u00b7 Era: All",
+        "external_id": "NCL-LCS-v6:Stage2 ()",
+        "metric": "Clinical Pharmacist SMR & multidisciplinary desktop triage for High and High+Complex multimorbid patients. [mdt_coherent_p00: 0.9961 \u00b7 siloed_collapse_p00: 0.502]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 5,
+        "out_degree": 3,
+        "total_degree": 8,
+        "pagerank": 0.021827,
+        "betweenness_centrality": 0.1229,
+        "closeness_centrality": 0.4118
+      },
+      {
+        "id": "stage_3_pcsp",
+        "label": "Stage 3: PCSP Coaching, VCSE & Net-Zero Switch",
+        "category": "HouseOfCare_Stage",
+        "tier": "Layer 2 \u00b7 Era: All",
+        "external_id": "NCL-LCS-v6:Stage3 ()",
+        "metric": "30-min Coaching-for-Health co-producing Personalised Care & Support Plan, VCSE social prescribing, and DPI MART switch. [admission_reduction_up_to: 38% \u00b7 gp_contact_reduction_up_to: 18%]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 5,
+        "out_degree": 2,
+        "total_degree": 7,
+        "pagerank": 0.029038,
+        "betweenness_centrality": 0.0994,
+        "closeness_centrality": 0.3709
+      },
+      {
+        "id": "stage_4_continuity",
+        "label": "Stage 4: Continuity, collaboRATE & Core20 Equity",
+        "category": "HouseOfCare_Stage",
+        "tier": "Layer 2 \u00b7 Era: All",
+        "external_id": "NCL-LCS-v6:Stage4 ()",
+        "metric": "Clinician-continuity review, >=25 collaboRATE responses, and 1.45x IMD Quintile 1 / minority-ethnic PCN Weighted Payment. [equity_multiplier: 1.45 \u00b7 five_borough_gini_after: 0.4609]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "pagerank": 0.021732,
+        "betweenness_centrality": 0.047,
+        "closeness_centrality": 0.3394
+      },
+      {
+        "id": "mol_ace",
+        "label": "Human ACE (P12821)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "UniProt:P12821 (https://www.uniprot.org/uniprotkb/P12821)",
+        "metric": "Angiotensin-converting enzyme (1,306 aa; GENCODE v46 chr17:63477061-63498370); central RAAS blood-pressure regulator. [length_aa: 1306 \u00b7 locus: chr17:63477061-63498370]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 5,
+        "out_degree": 1,
+        "total_degree": 6,
+        "pagerank": 0.016598,
+        "betweenness_centrality": 0.0683,
+        "closeness_centrality": 0.35
+      },
+      {
+        "id": "mol_pdb_1o86",
+        "label": "Crystal ACE\u2013Lisinopril Zn2+ (PDB 1O86)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "PDB:1O86 (https://www.rcsb.org/structure/1O86)",
+        "metric": "2.0 \u00c5 X-ray structure of human C-domain ACE bound to lisinopril; Zn2+ coordinated by HIS383, HIS387, GLU411 at 2.141 \u00c5. [zn_lpr_distance_A: 2.1413 \u00b7 steric_clashes_under_2A: 0 \u00b7 era_iii_cas: CAS(36e,26o) -> 52 data + 12 ancilla = 64L]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "pagerank": 0.01441,
+        "betweenness_centrality": 0.0321,
+        "closeness_centrality": 0.2963
+      },
+      {
+        "id": "mol_slc5a2",
+        "label": "SLC5A2 / SGLT2 (P31639)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "UniProt:P31639 (https://www.uniprot.org/uniprotkb/P31639)",
+        "metric": "Renal proximal tubule sodium/glucose cotransporter 2 (672 aa; chr16); cardiorenal-metabolic protection target. [length_aa: 672 \u00b7 cosine_sim_to_ace: 0.6584]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 4,
+        "out_degree": 1,
+        "total_degree": 5,
+        "pagerank": 0.014908,
+        "betweenness_centrality": 0.0394,
+        "closeness_centrality": 0.3478
+      },
+      {
+        "id": "mol_glp1r",
+        "label": "GLP1R (P43220)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "UniProt:P43220 (https://www.uniprot.org/uniprotkb/P43220)",
+        "metric": "Glucagon-like peptide 1 receptor (463 aa; chr6); glycaemic, weight, CVD, and hepatic steatosis axis. [length_aa: 463 \u00b7 cosine_sim_to_adrb2: 0.5799]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 3,
+        "out_degree": 0,
+        "total_degree": 3,
+        "pagerank": 0.011248,
+        "betweenness_centrality": 0.0093,
+        "closeness_centrality": 0.2917
+      },
+      {
+        "id": "mol_adrb2",
+        "label": "ADRB2 (P07550)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "UniProt:P07550 (https://www.uniprot.org/uniprotkb/P07550)",
+        "metric": "Beta-2 adrenergic receptor (413 aa; chr5); bronchodilation target in formoterol/budesonide MART. [length_aa: 413]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 3,
+        "out_degree": 0,
+        "total_degree": 3,
+        "pagerank": 0.010145,
+        "betweenness_centrality": 0.0049,
+        "closeness_centrality": 0.3128
+      },
+      {
+        "id": "mol_il6",
+        "label": "IL6 Cytokine (P05231)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "UniProt:P05231 (https://www.uniprot.org/uniprotkb/P05231)",
+        "metric": "Interleukin-6 (212 aa; chr7); systemic multimorbid vascular and airway inflammatory coupling mediator. [length_aa: 212 \u00b7 lindblad_burden_drop_pct: 65.96]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 4,
+        "out_degree": 1,
+        "total_degree": 5,
+        "pagerank": 0.01486,
+        "betweenness_centrality": 0.0437,
+        "closeness_centrality": 0.366
+      },
+      {
+        "id": "mol_angii_1n9v",
+        "label": "Angiotensin II Octapeptide (PDB 1N9V)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "PDB:1N9V (https://www.rcsb.org/structure/1N9V)",
+        "metric": "Experimental NMR structure of human vasoconstrictor DRVYIHPF (8 residues = 8 QProtSim qubits; D1-R2 MI 0.1115 bits). [sequence: DRVYIHPF \u00b7 top_mi_pair_bits: 0.11151]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.008521,
+        "betweenness_centrality": 0.0194,
+        "closeness_centrality": 0.3256
+      },
+      {
+        "id": "mol_pnpla3",
+        "label": "PNPLA3 Hepatic Locus",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "HGNC:15822 (https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:15822)",
+        "metric": "Genetic modifier of MASLD/NAFLD steatosis evaluated via Arc Institute ScreenPro2 formalism (z = -9.23). [screenpro2_z_score: -9.23]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "pagerank": 0.005701,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2478
+      },
+      {
+        "id": "tx_acei_lisinopril",
+        "label": "ACEi/ARB Titration (Lisinopril)",
+        "category": "Intervention",
+        "tier": "Layer 4 \u00b7 Era: All",
+        "external_id": "HUBO:x0 ()",
+        "metric": "First-line RAAS inhibition targeting NCL Outcome #23 (<140/90 mmHg) and heart-failure/CKD nephroprotection. [linear_bias_h0: -2.5 \u00b7 bp_burden_reduction_pct: 58.58]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 2,
+        "out_degree": 3,
+        "total_degree": 5,
+        "pagerank": 0.013771,
+        "betweenness_centrality": 0.0587,
+        "closeness_centrality": 0.3218
+      },
+      {
+        "id": "tx_sglt2i",
+        "label": "SGLT2i Cardiorenal Protection",
+        "category": "Intervention",
+        "tier": "Layer 4 \u00b7 Era: All",
+        "external_id": "HUBO:x1 ()",
+        "metric": "Dapagliflozin/empagliflozin slowing CKD eGFR decline, HF hospitalisation, T2D, and MASLD progression. [linear_bias_h1: -2.3 \u00b7 renal_burden_reduction_pct: 59.96]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 2,
+        "out_degree": 3,
+        "total_degree": 5,
+        "pagerank": 0.013915,
+        "betweenness_centrality": 0.0432,
+        "closeness_centrality": 0.3353
+      },
+      {
+        "id": "tx_mart_dpi",
+        "label": "SABA-Free Dry-Powder MART Switch",
+        "category": "Intervention",
+        "tier": "Layer 4 \u00b7 Era: All",
+        "external_id": "HUBO:x2 ()",
+        "metric": "NCL Green Plan Net-Zero transition from high-GWP propellant SABA to dry-powder ICS/formoterol MART. [linear_bias_h2: -2.1 \u00b7 saba_clash_J26: 5.4]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 4,
+        "total_degree": 5,
+        "pagerank": 0.014155,
+        "betweenness_centrality": 0.0531,
+        "closeness_centrality": 0.3567
+      },
+      {
+        "id": "tx_pharmacist_smr",
+        "label": "Pharmacist NSAID Deprescribing SMR",
+        "category": "Intervention",
+        "tier": "Layer 4 \u00b7 Era: All",
+        "external_id": "HUBO:x3 ()",
+        "metric": "Structured Medication Review eliminating nephrotoxic ACEi+SGLT2i+NSAID acute kidney injury triple-whammy (+7.2 penalty). [cubic_synergy_K013: -3.9 \u00b7 triple_whammy_penalty_K016: 7.2]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 4,
+        "total_degree": 4,
+        "pagerank": 0.0081,
+        "betweenness_centrality": 0.0316,
+        "closeness_centrality": 0.3544
+      },
+      {
+        "id": "tx_home_bp",
+        "label": "Home BP Telemonitoring (<135/85)",
+        "category": "Intervention",
+        "tier": "Layer 4 \u00b7 Era: All",
+        "external_id": "HUBO:x5 ()",
+        "metric": "Validated home blood-pressure monitoring supporting Outcome #23 titration without duplicate GP visits. [linear_bias_h5: -1.6 \u00b7 synergy_J05: -1.4]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 1,
+        "total_degree": 1,
+        "pagerank": 0.003683,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2445
+      },
+      {
+        "id": "tx_vcse_sp",
+        "label": "VCSE Social Prescribing & Coaching",
+        "category": "Intervention",
+        "tier": "Layer 4 \u00b7 Era: All",
+        "external_id": "HUBO:x4 ()",
+        "metric": "Stage 3 Link Worker referral addressing housing, fuel poverty, isolation, and lifestyle determinants. [linear_bias_h4: -1.8 \u00b7 synergy_J34: -1.1]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "pagerank": 0.008731,
+        "betweenness_centrality": 0.0108,
+        "closeness_centrality": 0.2872
+      },
+      {
+        "id": "prim_p08",
+        "label": "Atlas P08: Adiabatic state preparation and annealing",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era I",
+        "external_id": "Kashefi:P08 (https://elhamkashefi.github.io/primitives-atlas/#P08)",
+        "metric": "OpenJij + JijModeling 128-Var NCL PCN Call-and-Recall QUBO \u2014 Contract: HiGHS MILP solves sparse 128-var scheduling exactly in <5 ms; QUBO provides clean multi-constraint penalty compilation. [kind: procedural \u00b7 defining_paper: Farhi, Goldstone, Gutmann, Sipser (2000)]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.020332,
+        "betweenness_centrality": 0.0428,
+        "closeness_centrality": 0.3415
+      },
+      {
+        "id": "prim_a01d",
+        "label": "Atlas A01d: Alternating-operator ansatz",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era I",
+        "external_id": "Kashefi:A01d (https://elhamkashefi.github.io/primitives-atlas/#A01d)",
+        "metric": "Haiqu SDK 8-Qubit Multimorbid + Net-Zero MART 3-Body HUBO (88.3% depth compression) \u2014 Contract: McCormick MILP dominates small sparse HUBOs; QAOA crossover requires dense frustrated k>=4 hypergraphs beyond treewidth bounds. [kind: architectural \u00b7 defining_paper: Farhi, Goldstone, Gutmann (2014)]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 4,
+        "out_degree": 2,
+        "total_degree": 6,
+        "pagerank": 0.0246,
+        "betweenness_centrality": 0.07,
+        "closeness_centrality": 0.359
+      },
+      {
+        "id": "prim_p09",
+        "label": "Atlas P09: Loading classical data: QRAM, state prepar",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era I",
+        "external_id": "Kashefi:P09 (https://elhamkashefi.github.io/primitives-atlas/#P09)",
+        "metric": "Haiqu Entangled Manifold Embedding (EME) of 8-Feature NCL LTC Profile \u2014 Contract: O(n)-depth approximate state preparation avoiding O(2^n) generic state-loading bottleneck. [kind: procedural \u00b7 defining_paper: Giovannetti, Lloyd, Maccone (2007)]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.018949,
+        "betweenness_centrality": 0.0247,
+        "closeness_centrality": 0.3457
+      },
+      {
+        "id": "prim_p13",
+        "label": "Atlas P13: Expectation and overlap estimation",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era II",
+        "external_id": "Kashefi:P13 (https://elhamkashefi.github.io/primitives-atlas/#P13)",
+        "metric": "Guppy 1.0 -> HUGR `Helios-1E-lite` Coherent House-of-Care MDT vs Siloed Collapse \u2014 Contract: Hadamard/Bell overlap test verifying coherent pathway correlation vs mid-circuit projective collapse. [kind: procedural \u00b7 defining_paper: Aharonov, Jones, Landau (2005)]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.01802,
+        "betweenness_centrality": 0.0164,
+        "closeness_centrality": 0.3394
+      },
+      {
+        "id": "prim_p20",
+        "label": "Atlas P20: Transformation of an unknown unitary or ch",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era II",
+        "external_id": "Kashefi:P20 (https://elhamkashefi.github.io/primitives-atlas/#P20)",
+        "metric": "8-Rung Self-Calibrating MCMR Recall & CYP Asthma 48h/6wk Cadence Ladder \u2014 Contract: Models non-Markovian longitudinal memory across multi-step `project_z` interventions. [kind: procedural \u00b7 defining_paper: Quintino, Dong, Shimbo, Soeda, Murao (2019)]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.016576,
+        "betweenness_centrality": 0.0255,
+        "closeness_centrality": 0.3353
+      },
+      {
+        "id": "prim_a01g",
+        "label": "Atlas A01g: Equivariant and geometric ansatz",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era II",
+        "external_id": "Kashefi:A01g (https://elhamkashefi.github.io/primitives-atlas/#A01g)",
+        "metric": "Haiqu SU(2)-Equivariant Ansatz & Modal 2x2 Matched-Depth Frobenius Circuits \u2014 Contract: Restricts dynamical Lie algebra dimension; note polynomial Lie algebras can also admit classical g-sim! [kind: architectural \u00b7 defining_paper: Larocca et al. (2022)]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 3,
+        "total_degree": 4,
+        "pagerank": 0.026535,
+        "betweenness_centrality": 0.0468,
+        "closeness_centrality": 0.3478
+      },
+      {
+        "id": "prim_a01h",
+        "label": "Atlas A01h: Quantum graph neural networks",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era II",
+        "external_id": "Kashefi:A01h (https://elhamkashefi.github.io/primitives-atlas/#A01h)",
+        "metric": "QProtSim on Crystal `PDB 1N9V` Human Angiotensin II (`DRVYIHPF`) \u2014 Contract: Benchmarked directly against Gate G4 exact 256-state classical Potts/Boltzmann ensemble. [kind: architectural \u00b7 defining_paper: Verdon et al. (2019)]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.018983,
+        "betweenness_centrality": 0.0206,
+        "closeness_centrality": 0.3027
+      },
+      {
+        "id": "prim_p22",
+        "label": "Atlas P22: Open-system (Lindbladian) simulation",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era III",
+        "external_id": "Kashefi:P22 (https://elhamkashefi.github.io/primitives-atlas/#P22)",
+        "metric": "HQS `struqture-py` + `qoqo` Cardiorenal-Metabolic-Pulmonary Open-System Lindbladian \u2014 Contract: Classical Krylov Liouvillian hits O(4^{n_spin}) RAM wall (>1 TB at n_spin >= 19-20); dilated FTQC scales polynomially in n_spin. [kind: procedural \u00b7 defining_paper: Bacon, Childs, Chuang, Kempe, Leung, Zhou (2001)]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "pagerank": 0.028945,
+        "betweenness_centrality": 0.0578,
+        "closeness_centrality": 0.3314
+      },
+      {
+        "id": "prim_x03",
+        "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era III",
+        "external_id": "Kashefi:X03 (https://elhamkashefi.github.io/primitives-atlas/#X03)",
+        "metric": "Active-Space Quantum Subspace / Phase Estimation for `PDB 1O86` Human ACE Zn2+ + Lisinopril \u2014 Contract: Targets strongly polarized HEXXH Zn2+ d-shell + oxyanion charge transfer where classical CCSD(T)/DMRG accuracy degrades. [kind: composite \u00b7 defining_paper: McClean, Schwartz, Carter, de Jong (2017)]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.028188,
+        "betweenness_centrality": 0.0486,
+        "closeness_centrality": 0.2843
+      },
+      {
+        "id": "prim_p04",
+        "label": "Atlas P04: Quantum walk search",
+        "category": "Quantum_Primitive",
+        "tier": "Layer 5 \u00b7 Era: Era IV",
+        "external_id": "Kashefi:P04 (https://elhamkashefi.github.io/primitives-atlas/#P04)",
+        "metric": "Coherent Quantum Amplitude Estimation & QSVT for Rare Polypharmacy CVaR Tail Risk \u2014 Contract: Quadratic O(1/eps) speedup over classical O(1/eps^2) Monte Carlo for rare multi-drug AKI/arrhythmia tail events. [kind: procedural \u00b7 defining_paper: Ambainis (2003)]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.03101,
+        "betweenness_centrality": 0.022,
+        "closeness_centrality": 0.2872
+      },
+      {
+        "id": "era_i",
+        "label": "Era I: Classical-Exact & NISQ (0L)",
+        "category": "Logical_Era",
+        "tier": "Layer 6 \u00b7 Era: Era I",
+        "external_id": "Roadmap:Era-I ()",
+        "metric": "0 logical qubits (1\u201320 phys / cloud emulators). Classical HiGHS MILP (<25 ms) & RBF-SVM/GBDT dominate operational tasks. [logical_qubits: 0 \u00b7 physical_qubits: 1-98 \u00b7 verdict: Classical Dominates]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 3,
+        "out_degree": 1,
+        "total_degree": 4,
+        "pagerank": 0.028243,
+        "betweenness_centrality": 0.0568,
+        "closeness_centrality": 0.3567
+      },
+      {
+        "id": "era_ii",
+        "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
+        "category": "Logical_Era",
+        "tier": "Layer 6 \u00b7 Era: Era II",
+        "external_id": "Roadmap:Era-II ()",
+        "metric": "Distance-2 [[8,3,2]] color codes + post-selection (yield 94.4% at 3L -> 15.8% at 24L, d=24); shallow MCMR & LR-QAOA. [logical_qubits: 3-24 \u00b7 physical_qubits: 10-192 \u00b7 postselect_24L: 15.81%]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 5,
+        "out_degree": 1,
+        "total_degree": 6,
+        "pagerank": 0.048478,
+        "betweenness_centrality": 0.0912,
+        "closeness_centrality": 0.3522
+      },
+      {
+        "id": "era_iii",
+        "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
+        "category": "Logical_Era",
+        "tier": "Layer 6 \u00b7 Era: Era III",
+        "external_id": "Roadmap:Era-III ()",
+        "metric": "Active QEC (d=9\u201313 + T-factory, 5.3k\u201330.5k phys). First simulation crossover: n>=16 organ Lindbladians (>1.92 TB RAM) & ACE CAS(36e,26o) (52L). [logical_qubits: 24-72 \u00b7 physical_qubits: 5,300-30,500 \u00b7 krylov_ram_20spin: 491.52 TB]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 4,
+        "out_degree": 1,
+        "total_degree": 5,
+        "pagerank": 0.058761,
+        "betweenness_centrality": 0.0957,
+        "closeness_centrality": 0.3353
+      },
+      {
+        "id": "era_iv",
+        "label": "Era IV: Asymptotic ICS-Scale FTQC (100\u20131,000+L)",
+        "category": "Logical_Era",
+        "tier": "Layer 6 \u00b7 Era: Era IV",
+        "external_id": "Roadmap:Era-IV ()",
+        "metric": "Modular QCCD (90k\u2013250k+ phys, d=15\u201317). Block-encoded QSVT organ twins, O(1/eps) QAE polypharmacy CVaR & Quantum B&B on k>=4 hypergraphs. [logical_qubits: 100-1000+ \u00b7 physical_qubits: 90,000-250,000+ \u00b7 governance: NHS DCB0129 Advisory]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 3,
+        "out_degree": 0,
+        "total_degree": 3,
+        "pagerank": 0.04366,
+        "betweenness_centrality": 0.0172,
+        "closeness_centrality": 0.2872
+      },
+      {
+        "id": "plat_nexus_helios",
+        "label": "Quantinuum Nexus Helios-1E-lite",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era II",
+        "external_id": "SHA256:0e3216dd2d9c ()",
+        "metric": "Live Guppy 1.0 -> HUGR execution across 3 jobs (6,144 emulator shots, 0 physical QPU shots): MDT P(00)=0.9961, 8-rung R^2=0.9979, VQC fid=0.9990. [emulator_shots: 6144 \u00b7 physical_qpu_shots: 0 \u00b7 receipt_sha256: 0e3216dd2d9c1b81a6f128886b77538fd55757d1bb91fb502cb8c2f47aa0e8bf]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 3,
+        "out_degree": 0,
+        "total_degree": 3,
+        "pagerank": 0.022014,
+        "betweenness_centrality": 0.0032,
+        "closeness_centrality": 0.2772
+      },
+      {
+        "id": "plat_haiqu",
+        "label": "Haiqu SDK (LR-QAOA + EME + SU2 + OBP)",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era I",
+        "external_id": "SHA256:7212c3d95a5f ()",
+        "metric": "Compresses 8-qubit 3-body multimorbid HUBO depth 223->26 (-88.34%); raw GS hit 41.21% (105x random), CVaR_0.10 = -23.50. [depth_reduction_pct: 88.34 \u00b7 raw_gs_prob: 0.4121 \u00b7 receipt_sha256: 7212c3d95a5fc0b960c2c3b48398f2ce13469623ea8b4de1e3001d54c3403955]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "pagerank": 0.01615,
+        "betweenness_centrality": 0.0028,
+        "closeness_centrality": 0.2947
+      },
+      {
+        "id": "plat_jij_highs",
+        "label": "JijModeling / OpenJij + HiGHS MILP",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era I",
+        "external_id": "SHA256:7212c3d95a5f ()",
+        "metric": "128-var (144 w/ slack) NCL Call/Recall QUBO achieving 18/18 pre-winter High/Complex coverage within 0.80% of 4.33 ms HiGHS MILP. [pre_winter_recall: 18/18 \u00b7 gap_vs_highs_pct: 0.8038 \u00b7 receipt_sha256: 7212c3d95a5fc0b960c2c3b48398f2ce13469623ea8b4de1e3001d54c3403955]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "pagerank": 0.010212,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2557
+      },
+      {
+        "id": "plat_hqs_qprotsim",
+        "label": "HQS struqture/qoqo & QProtSim",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era III",
+        "external_id": "SHA256:6ba83347d46f ()",
+        "metric": "4-spin cardiorenal-pulmonary Lindbladian (33 qoqo ops) & University of Suffolk QProtSim 8-qubit solvation on Angiotensin II (1N9V). [qoqo_ops: 33 \u00b7 qprotsim_qubits: 8 \u00b7 receipt_sha256: 6ba83347d46f7893f3202d86dd20474f43617d4a15536f41bec4e791e6faf64a]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "pagerank": 0.019171,
+        "betweenness_centrality": 0.0043,
+        "closeness_centrality": 0.2745
+      },
+      {
+        "id": "plat_multiomics",
+        "label": "BioHub + Neurosnap + AlphaGenome + Arc + Paperclip",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era III",
+        "external_id": "SHA256:6ba83347d46f ()",
+        "metric": "Live multi-omics & structural grounding: 5 UniProt targets, PDB 1O86 audit, 5 GENCODE v46 loci + AVI scan, 100% scarless bridge-RNA, 5 PMCIDs. [uniprot_targets: 5 \u00b7 pmc_articles: 5 \u00b7 receipt_sha256: 6ba83347d46f7893f3202d86dd20474f43617d4a15536f41bec4e791e6faf64a]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "pagerank": 0.01314,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2222
+      },
+      {
+        "id": "plat_modal_rhyme_hf",
+        "label": "Modal Cloud + Rhyme + Hugging Face Hub",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era II",
+        "external_id": "SHA256:cb1fec7c385d ()",
+        "metric": "Serverless Python 3.14 worker running rhyme-beta (4/4 pass), 200-param QLTCMLM cubic cohort ablations, and 2x2 barren-plateau sweep. [qltcmlm_risk_acc: 54.17% \u00b7 frobenius_var_ratio_n10: 4.82 \u00b7 receipt_sha256: cb1fec7c385d787b78321672dc5dc15092312d940cb24ae243ffe614979752d5]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "pagerank": 0.021241,
+        "betweenness_centrality": 0.0054,
+        "closeness_centrality": 0.2718
+      },
+      {
+        "id": "plat_text2wetlab",
+        "label": "Text2WetLab Opentrons OT-2 Verifier",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era I",
+        "external_id": "SHA256:bd60742f9f91 ()",
+        "metric": "6/6 deterministic AST, deck-slot collision, pipette, tip-balance & volume verification of Stage 1 uACR/HbA1c protocol (0 human samples). [checks_passed: 6/6 \u00b7 wet_lab_specimens: 0 \u00b7 receipt_sha256: bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "pagerank": 0.007777,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.306
+      },
+      {
+        "id": "plat_medicus_discopy_moth",
+        "label": "Medicus FHIR ML-DSA-65 + DisCoPy + Moth",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era I",
+        "external_id": "SHA256:bd60742f9f91 ()",
+        "metric": "NIST FIPS 204 ML-DSA-65 FHIR R4 bundle signature (33.91 ms), DisCoPy snake identity (2.22e-16), and Moth 5-borough surge blur (Gini 0.8750->0.4609). [mldsa65_sign_ms: 33.91 \u00b7 gini_before: 0.875 \u00b7 gini_after: 0.4609 \u00b7 receipt_sha256: bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "pagerank": 0.015702,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2902
+      },
+      {
+        "id": "plat_typesafe_jev",
+        "label": "TypeSafe AI System One (jev-latest / Jev 1.14)",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: All",
+        "external_id": "SHA256:bd60742f9f91 ()",
+        "metric": "Live typed multi-method Health AI autorater (arXiv:2611.05127): CUJ-1 74.53% (4.32/5 NHS utility), CUJ-2 73.33%, CUJ-3 51.20%, CUJ-4 55.60%. [cuj1_composite_pct: 74.53 \u00b7 cuj4_rigor_0_5: 3.9 \u00b7 receipt_sha256: bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 0,
+        "out_degree": 8,
+        "total_degree": 8,
+        "pagerank": 0.013685,
+        "betweenness_centrality": 0.0746,
+        "closeness_centrality": 0.3353
+      },
+      {
+        "id": "haz_h_ltc_01",
+        "label": "H-LTC-01: Incomplete SNOMED 'Interpreter nee (OPEN)",
+        "category": "DCB0129_Hazard",
+        "tier": "Layer 8 \u00b7 Era: All",
+        "external_id": "DCB0129-0160:H-LTC-01 ()",
+        "metric": "Incomplete SNOMED 'Interpreter needed' or IMD equity coding causing recall exclusion \u2014 Statutory DCB0160 (Primary Local EHR/PCN) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0160 (Primary Local EHR/PCN) + DCB0129]",
+        "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "pagerank": 0.00574,
+        "betweenness_centrality": 0.0162,
+        "closeness_centrality": 0.3294
+      },
+      {
+        "id": "haz_h_ltc_02",
+        "label": "H-LTC-02: ACEi/ARB + SGLT2i + diuretic/NSAID (OPEN)",
+        "category": "DCB0129_Hazard",
+        "tier": "Layer 8 \u00b7 Era: All",
+        "external_id": "DCB0129-0160:H-LTC-02 ()",
+        "metric": "ACEi/ARB + SGLT2i + diuretic/NSAID AKI or improper DPI inhaler technique without human SMR \u2014 Statutory DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off)]",
+        "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "pagerank": 0.007519,
+        "betweenness_centrality": 0.0249,
+        "closeness_centrality": 0.3164
+      },
+      {
+        "id": "haz_h_ltc_03",
+        "label": "H-LTC-03: Acute CYP asthma post-attack deter (OPEN)",
+        "category": "DCB0129_Hazard",
+        "tier": "Layer 8 \u00b7 Era: All",
+        "external_id": "DCB0129-0160:H-LTC-03 ()",
+        "metric": "Acute CYP asthma post-attack deterioration requiring immediate Tier 2/3 clinical escalation \u2014 Statutory DCB0160 (Primary Urgent Tier 2/3 Triage) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0160 (Primary Urgent Tier 2/3 Triage) + DCB0129]",
+        "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "pagerank": 0.004913,
+        "betweenness_centrality": 0.0061,
+        "closeness_centrality": 0.3111
+      },
+      {
+        "id": "haz_h_ltc_04",
+        "label": "H-LTC-04: Conflation of cloud emulator / bio (OPEN)",
+        "category": "DCB0129_Hazard",
+        "tier": "Layer 8 \u00b7 Era: All",
+        "external_id": "DCB0129-0160:H-LTC-04 ()",
+        "metric": "Conflation of cloud emulator / biophysical toy models with validated RCT clinical efficacy \u2014 Statutory DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate)]",
+        "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "pagerank": 0.023797,
+        "betweenness_centrality": 0.0332,
+        "closeness_centrality": 0.306
+      },
+      {
+        "id": "haz_h_ltc_05",
+        "label": "H-LTC-05: Secondary-care discharge or UCLP p (OPEN)",
+        "category": "DCB0129_Hazard",
+        "tier": "Layer 8 \u00b7 Era: All",
+        "external_id": "DCB0129-0160:H-LTC-05 ()",
+        "metric": "Secondary-care discharge or UCLP prevalence-search drift across the 9 LTC registers \u2014 Statutory DCB0160 (Primary Local UCLP/QOF Register Audit) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0160 (Primary Local UCLP/QOF Register Audit) + DCB0129]",
+        "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "pagerank": 0.005879,
+        "betweenness_centrality": 0.0192,
+        "closeness_centrality": 0.3415
+      },
+      {
+        "id": "haz_h_ltc_06",
+        "label": "H-LTC-06: VCSE social prescribing referral o (OPEN)",
+        "category": "DCB0129_Hazard",
+        "tier": "Layer 8 \u00b7 Era: All",
+        "external_id": "DCB0129-0160:H-LTC-06 ()",
+        "metric": "VCSE social prescribing referral overload without NCL Borough Partnership resource transfer \u2014 Statutory DCB0160 (Primary NCL Borough VCSE Commissioning) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0160 (Primary NCL Borough VCSE Commissioning) + DCB0129]",
+        "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "pagerank": 0.005941,
+        "betweenness_centrality": 0.0064,
+        "closeness_centrality": 0.2667
+      }
+    ],
+    "edges": [
+      {
+        "source": "ltc_cvd",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_cvd",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_af",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_af",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_t2d",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_t2d",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_t1d",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_t1d",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_ckd",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_ckd",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_masld",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_masld",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_copd",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_copd",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "stage_call_recall",
+        "relation": "ENROLLED_IN_PATHWAY",
+        "weight": "UCLP 3-yearly search & risk-stratified PCN recall"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "stage_1_check_test",
+        "relation": "REQUIRES_BIOMARKER_PANEL",
+        "weight": "Single 30-min Stage 1 Check-and-Test appointment"
+      },
+      {
+        "source": "ltc_t1d",
+        "target": "stage_2_mdt_review",
+        "relation": "MANDATES_HIGH_COMPLEX_MDT",
+        "weight": "NCL LCS v6 mandates High Risk + Complex tier for all Type 1 Diabetes"
+      },
+      {
+        "source": "ltc_cvd",
+        "target": "stage_2_mdt_review",
+        "relation": "TRIAGED_BY_MDT",
+        "weight": "Cardiorenal-metabolic polypharmacy SMR"
+      },
+      {
+        "source": "ltc_ckd",
+        "target": "stage_2_mdt_review",
+        "relation": "TRIAGED_BY_MDT",
+        "weight": "eGFR/uACR nephroprotection & NSAID deprescribing"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "stage_3_pcsp",
+        "relation": "MANDATES_48H_6WK_REVIEW",
+        "weight": "CYP/Adult post-attack 48h & 6-week Tier 2/3 clinician review + MART PCSP"
+      },
+      {
+        "source": "ltc_copd",
+        "target": "stage_3_pcsp",
+        "relation": "CO_PRODUCES_GREEN_PCSP",
+        "weight": "Pre-winter exacerbation plan & low-GWP inhaler review"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "stage_4_continuity",
+        "relation": "ANCHORS_PCN_OUTCOME_23",
+        "weight": "NCL PCN Outcome #23 BP target across all 5 boroughs"
+      },
+      {
+        "source": "stage_call_recall",
+        "target": "stage_1_check_test",
+        "relation": "TRANSITIONS_TO",
+        "weight": "Scheduled recall slot triggers Stage 1 Check & Test"
+      },
+      {
+        "source": "stage_1_check_test",
+        "target": "stage_2_mdt_review",
+        "relation": "FEEDS_RESULTS_TO",
+        "weight": "Biomarker & uACR results drive Stage 2 risk re-stratification"
+      },
+      {
+        "source": "stage_2_mdt_review",
+        "target": "stage_3_pcsp",
+        "relation": "SYNTHESISES_INTO",
+        "weight": "Coherent SWAP/phase MDT synthesis prepares Stage 3 PCSP"
+      },
+      {
+        "source": "stage_3_pcsp",
+        "target": "stage_4_continuity",
+        "relation": "SUSTAINED_BY",
+        "weight": "Entangled clinician continuity & Core20 equity weighting"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "mol_ace",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "RAAS vasoconstriction drives arterial blood pressure"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "mol_angii_1n9v",
+        "relation": "DRIVEN_BY_PEPTIDE",
+        "weight": "Angiotensin II octapeptide effector"
+      },
+      {
+        "source": "ltc_cvd",
+        "target": "mol_ace",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Afterload & ventricular remodelling via ACE"
+      },
+      {
+        "source": "ltc_cvd",
+        "target": "mol_il6",
+        "relation": "INFLAMED_BY_MEDIATOR",
+        "weight": "Vascular atherothrombotic IL-6 signalling"
+      },
+      {
+        "source": "ltc_af",
+        "target": "mol_il6",
+        "relation": "INFLAMED_BY_MEDIATOR",
+        "weight": "Atrial fibrotic inflammatory remodelling"
+      },
+      {
+        "source": "ltc_ckd",
+        "target": "mol_slc5a2",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Tubuloglomerular feedback & hyperfiltration via SGLT2"
+      },
+      {
+        "source": "ltc_ckd",
+        "target": "mol_ace",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Efferent arteriolar pressure modulation"
+      },
+      {
+        "source": "ltc_t2d",
+        "target": "mol_slc5a2",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Renal glucose reabsorption"
+      },
+      {
+        "source": "ltc_t2d",
+        "target": "mol_glp1r",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Incretin insulinotropic & weight axis"
+      },
+      {
+        "source": "ltc_t1d",
+        "target": "mol_slc5a2",
+        "relation": "COMORBID_RENAL_AXIS",
+        "weight": "Diabetic kidney risk monitoring"
+      },
+      {
+        "source": "ltc_masld",
+        "target": "mol_glp1r",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Hepatic de-novo lipogenesis & steatosis reduction"
+      },
+      {
+        "source": "ltc_masld",
+        "target": "mol_pnpla3",
+        "relation": "MODIFIED_BY_LOCUS",
+        "weight": "PNPLA3 genetic susceptibility in MASLD"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "mol_adrb2",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Airway smooth-muscle bronchodilation"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "mol_il6",
+        "relation": "INFLAMED_BY_MEDIATOR",
+        "weight": "Airway & systemic cytokine cross-talk"
+      },
+      {
+        "source": "ltc_copd",
+        "target": "mol_adrb2",
+        "relation": "REGULATED_BY_TARGET",
+        "weight": "Long-acting beta-2 bronchodilation"
+      },
+      {
+        "source": "mol_ace",
+        "target": "mol_pdb_1o86",
+        "relation": "RESOLVED_IN_CRYSTAL",
+        "weight": "2.0 \u00c5 X-ray crystal structure of human ACE + Lisinopril"
+      },
+      {
+        "source": "mol_angii_1n9v",
+        "target": "mol_ace",
+        "relation": "CLEAVED_FROM_ANG_I_BY",
+        "weight": "ACE C-domain catalytic Zn2+ cleaves Ang I to Ang II"
+      },
+      {
+        "source": "tx_acei_lisinopril",
+        "target": "mol_pdb_1o86",
+        "relation": "COORDINATES_CATALYTIC_ZN2",
+        "weight": "Lisinopril carboxyalkyl oxygen binds Zn2+ at 2.141 \u00c5 (0 clashes <2.0 \u00c5)"
+      },
+      {
+        "source": "tx_acei_lisinopril",
+        "target": "mol_ace",
+        "relation": "INHIBITS_TARGET",
+        "weight": "Blocks Ang II generation to achieve Outcome #23 BP"
+      },
+      {
+        "source": "tx_sglt2i",
+        "target": "mol_slc5a2",
+        "relation": "INHIBITS_TARGET",
+        "weight": "Restores tubuloglomerular feedback (-59.96% simulated renal burden)"
+      },
+      {
+        "source": "tx_sglt2i",
+        "target": "mol_glp1r",
+        "relation": "SYNERGISES_METABOLICALLY",
+        "weight": "Cardiorenal-hepatic metabolic protection"
+      },
+      {
+        "source": "tx_mart_dpi",
+        "target": "mol_adrb2",
+        "relation": "MODULATES_TARGET",
+        "weight": "Formoterol rapid-onset bronchodilation + ICS anti-inflammatory"
+      },
+      {
+        "source": "tx_mart_dpi",
+        "target": "mol_il6",
+        "relation": "DAMPENS_INFLAMMATION",
+        "weight": "Suppresses airway exacerbation cascade (-65.96% simulated burden)"
+      },
+      {
+        "source": "tx_pharmacist_smr",
+        "target": "tx_acei_lisinopril",
+        "relation": "PROTECTS_AGAINST_AKI_WITH",
+        "weight": "Cubic HUBO synergy K_013 = -3.9 averting +7.2 NSAID triple-whammy"
+      },
+      {
+        "source": "tx_pharmacist_smr",
+        "target": "tx_sglt2i",
+        "relation": "PROTECTS_AGAINST_AKI_WITH",
+        "weight": "Safe cardiorenal co-prescription under eGFR check"
+      },
+      {
+        "source": "tx_home_bp",
+        "target": "tx_acei_lisinopril",
+        "relation": "GUIDES_TITRATION_OF",
+        "weight": "Pairwise HUBO synergy J_05 = -1.4 for home BP <135/85"
+      },
+      {
+        "source": "tx_vcse_sp",
+        "target": "stage_3_pcsp",
+        "relation": "DELIVERED_IN_STAGE",
+        "weight": "Co-produced Stage 3 social prescribing referral"
+      },
+      {
+        "source": "tx_mart_dpi",
+        "target": "stage_3_pcsp",
+        "relation": "DELIVERED_IN_STAGE",
+        "weight": "NCL Green Plan Net-Zero inhaler switch during PCSP"
+      },
+      {
+        "source": "tx_pharmacist_smr",
+        "target": "stage_2_mdt_review",
+        "relation": "EXECUTED_DURING",
+        "weight": "Clinical Pharmacist Stage 2 desktop SMR"
+      },
+      {
+        "source": "stage_call_recall",
+        "target": "prim_p08",
+        "relation": "FORMULATES_QUBO",
+        "weight": "128-var (144 w/ slack) PCN quarterly Call-and-Recall QUBO"
+      },
+      {
+        "source": "tx_acei_lisinopril",
+        "target": "prim_a01d",
+        "relation": "CO_OPTIMISED_IN_HUBO",
+        "weight": "8-var 3-body multimorbid & Net-Zero MART HUBO"
+      },
+      {
+        "source": "tx_sglt2i",
+        "target": "prim_a01d",
+        "relation": "CO_OPTIMISED_IN_HUBO",
+        "weight": "Cardiorenal cubic synergy term in LR-QAOA HUBO"
+      },
+      {
+        "source": "tx_mart_dpi",
+        "target": "prim_a01d",
+        "relation": "CO_OPTIMISED_IN_HUBO",
+        "weight": "Net-Zero DPI MART cubic synergy K_245 = -3.1"
+      },
+      {
+        "source": "tx_pharmacist_smr",
+        "target": "prim_a01d",
+        "relation": "CO_OPTIMISED_IN_HUBO",
+        "weight": "Anti-triple-whammy cubic term K_013 = -3.9"
+      },
+      {
+        "source": "stage_1_check_test",
+        "target": "prim_p09",
+        "relation": "ENCODED_VIA_EME",
+        "weight": "8-feature multimorbid biomarker vector loaded into 4 qubits"
+      },
+      {
+        "source": "stage_2_mdt_review",
+        "target": "prim_p13",
+        "relation": "BENCHMARKED_BY_OVERLAP",
+        "weight": "Equal-unitary-depth coherent MDT vs premature siloed collapse"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "prim_p20",
+        "relation": "MODELLED_BY_MCMR_COMB",
+        "weight": "8-rung mid-circuit recall & CYP 48h/6wk calibration ladder"
+      },
+      {
+        "source": "stage_2_mdt_review",
+        "target": "prim_a01g",
+        "relation": "CLASSIFIED_BY_VQC",
+        "weight": "200-param Frobenius QLTCMLM & SU(2)-equivariant ansatz"
+      },
+      {
+        "source": "mol_angii_1n9v",
+        "target": "prim_a01h",
+        "relation": "SIMULATED_BY_CONTACT_CIRCUIT",
+        "weight": "QProtSim 8-qubit CRY/RYY residue contact circuit on 1N9V"
+      },
+      {
+        "source": "mol_il6",
+        "target": "prim_p22",
+        "relation": "PROPAGATED_IN_LINDBLADIAN",
+        "weight": "4-spin -> 20-spin open-system cardiorenal-pulmonary GKSL master equation"
+      },
+      {
+        "source": "mol_slc5a2",
+        "target": "prim_p22",
+        "relation": "PROPAGATED_IN_LINDBLADIAN",
+        "weight": "Renal hyperfiltration spin coupled in HQS struqture/qoqo"
+      },
+      {
+        "source": "mol_pdb_1o86",
+        "target": "prim_x03",
+        "relation": "TARGETS_ACTIVE_SPACE_QPE",
+        "weight": "CAS(36e,26o) (52 logical qubits) Zn2+ d-shell + oxyanion pocket"
+      },
+      {
+        "source": "stage_4_continuity",
+        "target": "prim_p04",
+        "relation": "SCALES_TO_ICS_TAIL_RISK",
+        "weight": "Coherent QAE O(1/eps) polypharmacy CVaR & k>=4 Quantum B&B"
+      },
+      {
+        "source": "prim_p08",
+        "target": "era_i",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_p08",
+        "target": "plat_jij_highs",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_a01d",
+        "target": "era_i",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_a01d",
+        "target": "plat_haiqu",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_p09",
+        "target": "era_i",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_p09",
+        "target": "plat_haiqu",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_p13",
+        "target": "era_ii",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_p13",
+        "target": "plat_nexus_helios",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_p20",
+        "target": "era_ii",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_p20",
+        "target": "plat_nexus_helios",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_a01g",
+        "target": "era_ii",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_a01g",
+        "target": "plat_modal_rhyme_hf",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_a01h",
+        "target": "era_ii",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_a01h",
+        "target": "plat_hqs_qprotsim",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_p22",
+        "target": "era_iii",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_p22",
+        "target": "plat_hqs_qprotsim",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_x03",
+        "target": "era_iii",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_x03",
+        "target": "plat_multiomics",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "prim_p04",
+        "target": "era_iv",
+        "relation": "MAPS_TO_LOGICAL_ERA",
+        "weight": "Hardware logical-qubit scaling regime"
+      },
+      {
+        "source": "prim_p04",
+        "target": "plat_modal_rhyme_hf",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Verified by canonical SHA-256 platform receipt"
+      },
+      {
+        "source": "era_i",
+        "target": "era_ii",
+        "relation": "SCALES_WITH_QEC_TO",
+        "weight": "Uncorrected NISQ -> [[8,3,2]] error-detected post-selection"
+      },
+      {
+        "source": "era_ii",
+        "target": "era_iii",
+        "relation": "SCALES_WITH_QEC_TO",
+        "weight": "Post-selection yield floor (15.8% at 24L) -> active d=9..13 QEC + T-factory"
+      },
+      {
+        "source": "era_iii",
+        "target": "era_iv",
+        "relation": "SCALES_WITH_QEC_TO",
+        "weight": "Single-organ/active-space FTQC -> modular 100-1000+L photonic QCCD"
+      },
+      {
+        "source": "stage_1_check_test",
+        "target": "plat_text2wetlab",
+        "relation": "ROBOTICALLY_VERIFIED_BY",
+        "weight": "Opentrons OT-2 uACR/HbA1c protocol passed 6/6 checks"
+      },
+      {
+        "source": "stage_3_pcsp",
+        "target": "plat_medicus_discopy_moth",
+        "relation": "SIGNED_IN_PQC_FHIR_BY",
+        "weight": "NIST FIPS 204 ML-DSA-65 signed FHIR R4 Bundle (33.91 ms)"
+      },
+      {
+        "source": "stage_4_continuity",
+        "target": "plat_medicus_discopy_moth",
+        "relation": "DIFFUSED_ACROSS_BOROUGHS_BY",
+        "weight": "Moth 4-qubit unitary blur lowers 5-borough surge Gini 0.875 -> 0.461"
+      },
+      {
+        "source": "prim_a01g",
+        "target": "plat_nexus_helios",
+        "relation": "VERIFIED_ON_TRAPPED_ION",
+        "weight": "4q Frobenius QLTCMLM HUGR job 0a1fb43e... (fidelity 0.9990)"
+      },
+      {
+        "source": "haz_h_ltc_01",
+        "target": "stage_call_recall",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Requires SNOMED Interpreter & IMD Core20 register audit before recall release"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_01",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      },
+      {
+        "source": "haz_h_ltc_02",
+        "target": "tx_sglt2i",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Mandates baseline eGFR/K+ & Pharmacist SMR sign-off"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_02",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      },
+      {
+        "source": "haz_h_ltc_02",
+        "target": "tx_mart_dpi",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Mandates inspiratory flow & inhaler-technique check before DPI switch"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_02",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      },
+      {
+        "source": "haz_h_ltc_03",
+        "target": "ltc_asthma",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "48h CYP post-attack review bypasses batch solvers via urgent Tier 2/3 alert"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_03",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      },
+      {
+        "source": "haz_h_ltc_04",
+        "target": "era_iii",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Simulated Lindbladian/CAS outputs strictly advisory pending NHS cohort calibration"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_04",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      },
+      {
+        "source": "haz_h_ltc_04",
+        "target": "era_iv",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Even at 1000+ logical qubits, mandatory GP/Pharmacist human sign-off applies"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_04",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      },
+      {
+        "source": "haz_h_ltc_05",
+        "target": "stage_1_check_test",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Quarterly UCLP/QOF denominator audit across all 9 LTCs"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_05",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      },
+      {
+        "source": "haz_h_ltc_06",
+        "target": "tx_vcse_sp",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Enforces VCSE slot caps & NCL Borough Partnership resource tracking"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "haz_h_ltc_06",
+        "relation": "AUDITS_OPEN_HAZARD",
+        "weight": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)"
+      }
+    ]
+  }
+}
