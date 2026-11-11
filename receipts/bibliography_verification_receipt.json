@@ -1,5 +1,5 @@
 {
-  "total_entries": 29,
+  "total_entries": 36,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -203,6 +203,55 @@
       "status": "VERIFIED",
       "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
       "resolved_title": "{DCB0129}: Clinical Risk Management: its Application in the Manufacture of Health {IT} Systems"
+    },
+    {
+      "key": "nhs_dcb0160",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "{DCB0160}: Clinical Risk Management: its Application in the Deployment and Use of Health {IT} Systems"
+    },
+    {
+      "key": "dalibard1992wavefunction",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1103/PhysRevLett.68.580)",
+      "resolved_title": "Wave-function approach to dissipative processes in quantum optics"
+    },
+    {
+      "key": "verstraete2004mpdo",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1103/PhysRevLett.93.207204)",
+      "resolved_title": "Matrix Product Density Operators: Simulation of Finite-Temperature and Dissipative Systems"
+    },
+    {
+      "key": "clegg2016efi",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1093/ageing/afw039)",
+      "resolved_title": "Development and validation of an electronic frailty index using routine primary care electronic health record data"
+    },
+    {
+      "key": "payne2020cambridge",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1503/cmaj.190757)",
+      "resolved_title": "Development and validation of the Cambridge Multimorbidity Score"
+    },
+    {
+      "key": "montanez2025lrqaoa",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1038/s41534-025-01082-1)",
+      "resolved_title": "Toward a linear-ramp QAOA protocol: evidence of a scaling advantage in solving some combinatorial optimization problems"
+    },
+    {
+      "key": "goh2025gsim",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1103/3y65-f5w6)",
+      "resolved_title": "Lie-algebraic classical simulations for quantum computing"
     }
   ]
 }

@@ -1,0 +1,749 @@
+{
+  "schema_version": "1.0.0-quantum-ltc-deep-review-remediation",
+  "timestamp_utc": "2026-11-11T21:14:20.544259+00:00",
+  "total_runtime_seconds": 259.526,
+  "physical_hardware_shots": 0,
+  "wet_lab_experiments_performed": 0,
+  "phi_present": false,
+  "nexus_shot_and_placement_audit": {
+    "nexus_job_id_verified": "5da15d5a-c48e-4a11-9bb3-6c0d8854131c",
+    "fetched_from_live_nexus_api": true,
+    "shots": 2048,
+    "coherent_mdt_4state_counts": {
+      "00": 2040,
+      "01": 1,
+      "10": 3,
+      "11": 4
+    },
+    "coherent_mdt_p00": 0.996094,
+    "coherent_mdt_p00_se_1sigma": 0.001378,
+    "coherent_mdt_shannon_4state_bits": 0.042365,
+    "siloed_collapse_4state_counts": {
+      "00": 1028,
+      "01": 1,
+      "10": 1014,
+      "11": 5
+    },
+    "siloed_collapse_p00": 0.501953,
+    "siloed_collapse_p00_se_1sigma": 0.011048,
+    "siloed_collapse_shannon_4state_bits": 1.027815,
+    "post_swap_project_z_exact_probs": {
+      "00": 0.5,
+      "01": 0.0,
+      "10": 0.5,
+      "11": 0.0,
+      "explanation": "SWAP(q2,q3) transfers the Z-diagonal branch |b> onto q2 and Ry(theta_y)|b> onto q3; project_z(q2) collapses Bell coherence while preserving the pure branch Ry(theta_y)|b> on q3, which Ry(-theta_y) on q3 inverts identically back to |b>, mapping CX(q2,q3); H(q2) to 0.5*|00><00| + 0.5*|10><10| across all (theta_y, theta_z)."
+    },
+    "hypothetical_pre_swap_project_z_p00_at_038pi": 0.5,
+    "recall_8rungs_angles_and_1sigma_se": [
+      {
+        "rung_label": "Cal_Std_1_Neg50",
+        "target_contrast": -0.5,
+        "ry_half_turns": 0.666667,
+        "raw_contrast": -0.495117,
+        "raw_se_1sigma": 0.0192,
+        "calibrated_contrast": -0.494746,
+        "calibrated_se_1sigma": 0.01967
+      },
+      {
+        "rung_label": "Cal_Std_2_Neg25",
+        "target_contrast": -0.25,
+        "ry_half_turns": 0.580431,
+        "raw_contrast": -0.266602,
+        "raw_se_1sigma": 0.0213,
+        "calibrated_contrast": -0.271681,
+        "calibrated_se_1sigma": 0.02182
+      },
+      {
+        "rung_label": "Cal_Std_3_Zero",
+        "target_contrast": 0.0,
+        "ry_half_turns": 0.5,
+        "raw_contrast": 0.02832,
+        "raw_se_1sigma": 0.02209,
+        "calibrated_contrast": 0.016206,
+        "calibrated_se_1sigma": 0.02263
+      },
+      {
+        "rung_label": "Cal_Std_4_Pos25",
+        "target_contrast": 0.25,
+        "ry_half_turns": 0.419569,
+        "raw_contrast": 0.285156,
+        "raw_se_1sigma": 0.02118,
+        "calibrated_contrast": 0.266915,
+        "calibrated_se_1sigma": 0.0217
+      },
+      {
+        "rung_label": "Cal_Std_5_Pos50",
+        "target_contrast": 0.5,
+        "ry_half_turns": 0.333333,
+        "raw_contrast": 0.506836,
+        "raw_se_1sigma": 0.01905,
+        "calibrated_contrast": 0.483306,
+        "calibrated_se_1sigma": 0.01951
+      },
+      {
+        "rung_label": "Blinded_QC_Annual_MoB",
+        "target_contrast": 0.42,
+        "ry_half_turns": 0.36203,
+        "raw_contrast": 0.393555,
+        "raw_se_1sigma": 0.02031,
+        "calibrated_contrast": 0.372727,
+        "calibrated_se_1sigma": 0.02081
+      },
+      {
+        "rung_label": "Proactive_PreWinter_CYP48h",
+        "target_contrast": 0.742,
+        "ry_half_turns": 0.233877,
+        "raw_contrast": 0.744141,
+        "raw_se_1sigma": 0.01476,
+        "calibrated_contrast": 0.71495,
+        "calibrated_se_1sigma": 0.01512
+      },
+      {
+        "rung_label": "Exact_Null_Twin",
+        "target_contrast": 0.0,
+        "ry_half_turns": 0.5,
+        "raw_contrast": 0.017578,
+        "raw_se_1sigma": 0.02209,
+        "calibrated_contrast": 0.00572,
+        "calibrated_se_1sigma": 0.02263
+      }
+    ]
+  },
+  "haiqu_hubo_controls": {
+    "sealed_receipt_422_of_1024_se_1sigma": 0.015382,
+    "landscape_1hamming_local_minima": [
+      {
+        "bitstring_index_order": "11111100",
+        "energy": -23.5
+      }
+    ],
+    "single_random_bitstring_5pass_1bitflip_gs_prob": 0.855469,
+    "single_random_bitstring_5pass_mean_final_energy": -22.5535,
+    "haiqu_cloud_uncompressed_vs_compressed_audit": {
+      "executed_live_haiqu_cloud": true,
+      "lr_qaoa_layers_p": 10,
+      "lr_qaoa_ramp_delta": 0.5,
+      "uncompressed_core_metrics": {
+        "qubits": 8,
+        "num_qubits_active": 8,
+        "num_parameters": 0,
+        "depth": 223,
+        "depth_2q": 172,
+        "gates_1q": 208,
+        "gates_2q": 300,
+        "other_gates": 0,
+        "gates_total": 508,
+        "other_ops": 9,
+        "instructions_total": 517
+      },
+      "compressed_core_metrics": {
+        "qubits": 8,
+        "num_qubits_active": 8,
+        "num_parameters": 0,
+        "depth": 26,
+        "depth_2q": 8,
+        "gates_1q": 128,
+        "gates_2q": 28,
+        "other_gates": 0,
+        "gates_total": 156,
+        "other_ops": 8,
+        "instructions_total": 164
+      },
+      "compression_quality_noiseless": 0.958113,
+      "compression_info": {
+        "compression_quality": 0.9581126375607121,
+        "success": true,
+        "compression_status": "Fine-tuned",
+        "compression_time": 3.7428865369874984,
+        "compression_percent": 93.63636363636364,
+        "approximation_level": 2
+      },
+      "uncompressed_aer_1024": {
+        "shots": 1024,
+        "ground_state_hits": 377,
+        "ground_state_prob": 0.368164,
+        "ground_state_prob_se_1sigma": 0.015072,
+        "mean_energy": -13.7477,
+        "mean_energy_se_1sigma": 0.295,
+        "approx_ratio": 0.795976
+      },
+      "compressed_aer_1024": {
+        "shots": 1024,
+        "ground_state_hits": 396,
+        "ground_state_prob": 0.386719,
+        "ground_state_prob_se_1sigma": 0.015219,
+        "mean_energy": -14.2092,
+        "mean_energy_se_1sigma": 0.2919,
+        "approx_ratio": 0.805631
+      },
+      "uniform_random_1024_haiqu_postprocess": {
+        "best_postprocessed_energy": -23.5,
+        "fraction_of_shots_reaching_ground_state": 1.0
+      }
+    }
+  },
+  "openjij_pre_polish_and_cost_audit": {
+    "n_reads": 160,
+    "num_sweeps": 2500,
+    "cost_matrix_bounds": {
+      "min_entry_C_pq": -6.203898,
+      "max_entry_C_pq": -1.094413,
+      "max_abs_C_pq": 6.203898,
+      "max_within_patient_quarter_shift_delta_C": 4.657965,
+      "minimum_lagrange_penalty_lambda": 10.0,
+      "penalty_strictly_dominates_quarter_shift": true,
+      "penalty_strictly_dominates_unassigned_gain": true
+    },
+    "raw_pre_polish_openjij_sa": {
+      "standalone_sa_runtime_ms": 417.81,
+      "one_hot_satisfied_reads": "160/160 (100.00%)",
+      "quarter_8_8_8_8_cap_satisfied_reads": "160/160 (100.00%)",
+      "mdt_le3_cap_satisfied_reads": "160/160 (100.00%)",
+      "interpreter_le3_cap_satisfied_reads": "160/160 (100.00%)",
+      "all_hard_constraints_feasible_reads": 160,
+      "all_hard_constraints_feasible_rate_pct": 100.0,
+      "raw_best_qubo_energy": -113.848754,
+      "raw_mean_qubo_energy": -113.848754,
+      "raw_best_strictly_feasible_linear_cost": -113.848754,
+      "raw_mean_strictly_feasible_linear_cost": -113.848754,
+      "raw_best_feasible_gap_vs_milp_pct": 16.0793
+    },
+    "verified_highs_milp_floor": {
+      "optimal_linear_cost": -135.662315,
+      "runtime_ms": 32.794
+    }
+  },
+  "lindblad_decoupled_and_mcwf_audit": {
+    "parameter_tuple_explicit": {
+      "omega_z_coefficients_half_omega": [
+        0.42,
+        0.36,
+        0.4,
+        0.46
+      ],
+      "spin_frequencies_omega": [
+        0.84,
+        0.72,
+        0.8,
+        0.92
+      ],
+      "xy_edges_and_couplings": [
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "g_ij": 0.44
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "g_ij": 0.34
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "g_ij": 0.28
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "g_ij": 0.26
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "g_ij": 0.24
+        }
+      ],
+      "omega_drive_uncontrolled": [
+        0.05,
+        0.0,
+        0.05,
+        0.0
+      ],
+      "omega_drive_proactive": [
+        0.58,
+        0.46,
+        0.6,
+        0.52
+      ],
+      "uncontrolled_dephasing_Z_rates": {
+        "q0": 0.38,
+        "q1": 0.0,
+        "q2": 0.38,
+        "q3": 0.0
+      },
+      "uncontrolled_stress_pumping_sigma_plus_rates": [
+        0.36,
+        0.0,
+        0.34,
+        0.39
+      ],
+      "uncontrolled_endogenous_sigma_minus_rates": [
+        0.08,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "proactive_dephasing_Z_rates": {
+        "q0": 0.11,
+        "q1": 0.0,
+        "q2": 0.11,
+        "q3": 0.0
+      },
+      "proactive_therapeutic_sigma_minus_rates": [
+        0.38,
+        0.34,
+        0.4,
+        0.36
+      ],
+      "initial_state": "|1111> (all 4 organ axes initially decompensated)",
+      "evaluation_horizon_T": 8.0
+    },
+    "decoupled_ablation_regimes": [
+      {
+        "regime": "A_Baseline_Uncontrolled_OmegaUnc_StressBath",
+        "bp_exc_T8": 0.89625,
+        "glyc_exc_T8": 0.94329,
+        "renal_exc_T8": 0.93899,
+        "il6_exc_T8": 0.97104,
+        "cardiorenal_coherence_T8": 0.00426,
+        "bp_exc_steady_state_inf": 0.88871,
+        "renal_exc_steady_state_inf": 0.93021,
+        "il6_exc_steady_state_inf": 0.96437,
+        "max_entry_diff_T8_vs_inf": 0.027204,
+        "spectral_gap": 0.18355
+      },
+      {
+        "regime": "B_CoherentDriveOnly_OmegaPro_FixedStressBath",
+        "bp_exc_T8": 0.79345,
+        "glyc_exc_T8": 0.70548,
+        "renal_exc_T8": 0.82622,
+        "il6_exc_T8": 0.77874,
+        "cardiorenal_coherence_T8": 0.0062,
+        "bp_exc_steady_state_inf": 0.77765,
+        "renal_exc_steady_state_inf": 0.80831,
+        "il6_exc_steady_state_inf": 0.77104,
+        "max_entry_diff_T8_vs_inf": 0.024377,
+        "spectral_gap": 0.18088
+      },
+      {
+        "regime": "C_Coexisting_StressBath_Plus_CounterDamping_OmegaPro",
+        "bp_exc_T8": 0.46045,
+        "glyc_exc_T8": 0.37774,
+        "renal_exc_T8": 0.46393,
+        "il6_exc_T8": 0.50042,
+        "cardiorenal_coherence_T8": 0.00711,
+        "bp_exc_steady_state_inf": 0.46023,
+        "renal_exc_steady_state_inf": 0.46372,
+        "il6_exc_steady_state_inf": 0.49892,
+        "max_entry_diff_T8_vs_inf": 0.000476,
+        "spectral_gap": 0.69349
+      },
+      {
+        "regime": "C_NoXY_Control_CoexistingBath_ZeroOrganXY",
+        "bp_exc_T8": 0.46839,
+        "glyc_exc_T8": 0.23556,
+        "renal_exc_T8": 0.48119,
+        "il6_exc_T8": 0.51745,
+        "cardiorenal_coherence_T8": 0.00084,
+        "bp_exc_steady_state_inf": 0.46833,
+        "renal_exc_steady_state_inf": 0.48112,
+        "il6_exc_steady_state_inf": 0.51292,
+        "max_entry_diff_T8_vs_inf": 0.019252,
+        "spectral_gap": 0.22255
+      },
+      {
+        "regime": "D_FullRestorativeSwitch_OmegaPro_DampingOnly_v1",
+        "bp_exc_T8": 0.37124,
+        "glyc_exc_T8": 0.3656,
+        "renal_exc_T8": 0.37599,
+        "il6_exc_T8": 0.33046,
+        "cardiorenal_coherence_T8": 0.12501,
+        "bp_exc_steady_state_inf": 0.37118,
+        "renal_exc_steady_state_inf": 0.37655,
+        "il6_exc_steady_state_inf": 0.32216,
+        "max_entry_diff_T8_vs_inf": 0.007822,
+        "spectral_gap": 0.38361
+      }
+    ],
+    "mcwf_dalibard_1992_convergence": {
+      "time_step_dt": 0.02,
+      "horizon_T": 4.0,
+      "runtime_2048_trajectories_ms": 1349.04,
+      "convergence_table": [
+        {
+          "n_trajectories": 64,
+          "mcwf_bp_estimate": 0.53484,
+          "exact_liouvillian_bp": 0.47506,
+          "abs_error": 0.05977,
+          "empirical_se_1sigma": 0.03204
+        },
+        {
+          "n_trajectories": 256,
+          "mcwf_bp_estimate": 0.4864,
+          "exact_liouvillian_bp": 0.47506,
+          "abs_error": 0.01133,
+          "empirical_se_1sigma": 0.0176
+        },
+        {
+          "n_trajectories": 1024,
+          "mcwf_bp_estimate": 0.48022,
+          "exact_liouvillian_bp": 0.47506,
+          "abs_error": 0.00515,
+          "empirical_se_1sigma": 0.0086
+        },
+        {
+          "n_trajectories": 2048,
+          "mcwf_bp_estimate": 0.47765,
+          "exact_liouvillian_bp": 0.47506,
+          "abs_error": 0.00259,
+          "empirical_se_1sigma": 0.00607
+        }
+      ]
+    },
+    "crossover_table_strict_binary_gib_tib": [
+      {
+        "n_organ_spins": 4,
+        "liouvillian_hilbert_schmidt_dim": 256,
+        "classical_krylov_m30_ram_gb": 0.000114,
+        "classical_krylov_m30_ram_gib": 0.000114,
+        "classical_krylov_m30_ram_tib": 0.0,
+        "mcwf_single_statevector_mib": 0.000244,
+        "mcwf_krylov_m30_mib": 0.007324,
+        "mcwf_trajectories_for_eps_1e3": 1000000,
+        "mpdo_bounded_chi64_mib": 1.0,
+        "mpdo_volume_law_ram_gib": 6.1e-05,
+        "ftqc_logical_qubits_required": 14,
+        "ftqc_t_gates_assumed": 14400,
+        "ftqc_code_distance_d": 9,
+        "ftqc_physical_qubits_required": 5346,
+        "classical_memory_tractable_under_1tb": true
+      },
+      {
+        "n_organ_spins": 8,
+        "liouvillian_hilbert_schmidt_dim": 65536,
+        "classical_krylov_m30_ram_gb": 0.029297,
+        "classical_krylov_m30_ram_gib": 0.029297,
+        "classical_krylov_m30_ram_tib": 2.9e-05,
+        "mcwf_single_statevector_mib": 0.003906,
+        "mcwf_krylov_m30_mib": 0.117188,
+        "mcwf_trajectories_for_eps_1e3": 1000000,
+        "mpdo_bounded_chi64_mib": 2.0,
+        "mpdo_volume_law_ram_gib": 0.03125,
+        "ftqc_logical_qubits_required": 22,
+        "ftqc_t_gates_assumed": 28800,
+        "ftqc_code_distance_d": 9,
+        "ftqc_physical_qubits_required": 7290,
+        "classical_memory_tractable_under_1tb": true
+      },
+      {
+        "n_organ_spins": 12,
+        "liouvillian_hilbert_schmidt_dim": 16777216,
+        "classical_krylov_m30_ram_gb": 7.5,
+        "classical_krylov_m30_ram_gib": 7.5,
+        "classical_krylov_m30_ram_tib": 0.007324,
+        "mcwf_single_statevector_mib": 0.0625,
+        "mcwf_krylov_m30_mib": 1.875,
+        "mcwf_trajectories_for_eps_1e3": 1000000,
+        "mpdo_bounded_chi64_mib": 3.0,
+        "mpdo_volume_law_ram_gib": 12.0,
+        "ftqc_logical_qubits_required": 30,
+        "ftqc_t_gates_assumed": 43200,
+        "ftqc_code_distance_d": 9,
+        "ftqc_physical_qubits_required": 9234,
+        "classical_memory_tractable_under_1tb": true
+      },
+      {
+        "n_organ_spins": 16,
+        "liouvillian_hilbert_schmidt_dim": 4294967296,
+        "classical_krylov_m30_ram_gb": 1920.0,
+        "classical_krylov_m30_ram_gib": 1920.0,
+        "classical_krylov_m30_ram_tib": 1.875,
+        "mcwf_single_statevector_mib": 1.0,
+        "mcwf_krylov_m30_mib": 30.0,
+        "mcwf_trajectories_for_eps_1e3": 1000000,
+        "mpdo_bounded_chi64_mib": 4.0,
+        "mpdo_volume_law_ram_gib": 4096.0,
+        "ftqc_logical_qubits_required": 38,
+        "ftqc_t_gates_assumed": 57600,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 16698,
+        "classical_memory_tractable_under_1tb": false
+      },
+      {
+        "n_organ_spins": 18,
+        "liouvillian_hilbert_schmidt_dim": 68719476736,
+        "classical_krylov_m30_ram_gb": 30720.0,
+        "classical_krylov_m30_ram_gib": 30720.0,
+        "classical_krylov_m30_ram_tib": 30.0,
+        "mcwf_single_statevector_mib": 4.0,
+        "mcwf_krylov_m30_mib": 120.0,
+        "mcwf_trajectories_for_eps_1e3": 1000000,
+        "mpdo_bounded_chi64_mib": 4.5,
+        "mpdo_volume_law_ram_gib": 73728.0,
+        "ftqc_logical_qubits_required": 42,
+        "ftqc_t_gates_assumed": 64800,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 18150,
+        "classical_memory_tractable_under_1tb": false
+      },
+      {
+        "n_organ_spins": 20,
+        "liouvillian_hilbert_schmidt_dim": 1099511627776,
+        "classical_krylov_m30_ram_gb": 491520.0,
+        "classical_krylov_m30_ram_gib": 491520.0,
+        "classical_krylov_m30_ram_tib": 480.0,
+        "mcwf_single_statevector_mib": 16.0,
+        "mcwf_krylov_m30_mib": 480.0,
+        "mcwf_trajectories_for_eps_1e3": 1000000,
+        "mpdo_bounded_chi64_mib": 5.0,
+        "mpdo_volume_law_ram_gib": 1310720.0,
+        "ftqc_logical_qubits_required": 46,
+        "ftqc_t_gates_assumed": 72000,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 19602,
+        "classical_memory_tractable_under_1tb": false
+      },
+      {
+        "n_organ_spins": 24,
+        "liouvillian_hilbert_schmidt_dim": 281474976710656,
+        "classical_krylov_m30_ram_gb": 125829120.0,
+        "classical_krylov_m30_ram_gib": 125829120.0,
+        "classical_krylov_m30_ram_tib": 122880.0,
+        "mcwf_single_statevector_mib": 256.0,
+        "mcwf_krylov_m30_mib": 7680.0,
+        "mcwf_trajectories_for_eps_1e3": 1000000,
+        "mpdo_bounded_chi64_mib": 6.0,
+        "mpdo_volume_law_ram_gib": 402653184.0,
+        "ftqc_logical_qubits_required": 54,
+        "ftqc_t_gates_assumed": 86400,
+        "ftqc_code_distance_d": 11,
+        "ftqc_physical_qubits_required": 22506,
+        "classical_memory_tractable_under_1tb": false
+      }
+    ]
+  },
+  "pdb_1o86_ancilla_complete_ftqc": {
+    "active_space": "CAS(36e, 26o) -> 52 Jordan-Wigner spin-orbital data qubits",
+    "orbital_fragment_partition": [
+      {
+        "fragment": "Catalytic Zn2+ ion (3d^10 4s^0 4p^0 + 4d radial correlation)",
+        "electrons": 10,
+        "spatial_orbitals": 9
+      },
+      {
+        "fragment": "Coordinating HIS383 & HIS387 imidazole sigma/pi donor pairs",
+        "electrons": 8,
+        "spatial_orbitals": 6
+      },
+      {
+        "fragment": "Coordinating GLU411 & catalytic GLU384 carboxylate O lone pairs/pi*",
+        "electrons": 8,
+        "spatial_orbitals": 5
+      },
+      {
+        "fragment": "Lisinopril carboxyalkyl zinc-binding group + displaced H2O/OH- nucleophile",
+        "electrons": 10,
+        "spatial_orbitals": 6
+      }
+    ],
+    "total_electrons_check": 36,
+    "total_spatial_orbitals_check": 26,
+    "data_only_52L_floor_v1": {
+      "logical_data_qubits": 52,
+      "t_gate_count": 480000,
+      "code_distance_d": 13,
+      "physical_qubits_per_logical_tile": 338,
+      "total_physical_qubits_with_routing_and_factory": 30420,
+      "total_qec_syndrome_cycles": 3354000,
+      "estimated_qpu_wall_clock_seconds": 503.1
+    },
+    "ancilla_complete_trotter_screening_64L": {
+      "ancilla_breakdown": "8 phase-estimation/block-encoding prepare-select ancillas + 4 rotation-synthesis ancillas = 12 ancillas (64 total logical qubits)",
+      "algorithm": "Fixed-step second-order Trotterized QPE (relaxed screening precision epsilon ~ 5 mHa, 150 us surface-code cycle)",
+      "logical_data_qubits": 64,
+      "t_gate_count": 480000,
+      "code_distance_d": 13,
+      "physical_qubits_per_logical_tile": 338,
+      "total_physical_qubits_with_routing_and_factory": 36504,
+      "total_qec_syndrome_cycles": 3354000,
+      "estimated_qpu_wall_clock_seconds": 503.1
+    },
+    "ancilla_complete_chemical_accuracy_df_qpe_68L": {
+      "ancilla_breakdown": "52 spin-orbital data qubits + 16 double-factorized LCU/QROM/QPE ancillas = 68 total logical qubits",
+      "algorithm": "Double-factorized qubitized QPE at chemical accuracy epsilon = 1.0 mHa (2.4e7 T gates, 150 us cycle)",
+      "logical_data_qubits": 68,
+      "t_gate_count": 24000000,
+      "code_distance_d": 17,
+      "physical_qubits_per_logical_tile": 578,
+      "total_physical_qubits_with_routing_and_factory": 65892,
+      "total_qec_syndrome_cycles": 219300000,
+      "estimated_qpu_wall_clock_seconds": 32895.0
+    }
+  },
+  "qltcmlm_multiseed_and_reservoir_ablations": {
+    "n_seeds": 5,
+    "seeds": [
+      42,
+      1042,
+      2042,
+      3042,
+      4042
+    ],
+    "qkernel_original_700_300_subset_seed42_with_f1": {
+      "risk_acc": 0.3333,
+      "risk_macro_f1": 0.3295,
+      "bundle_acc": 0.5367,
+      "bundle_macro_f1": 0.5063
+    },
+    "multiseed_full_split_1800_600_summary": [
+      {
+        "model": "QLTCMLM-VQC (Trained 72Q + 128C)",
+        "params": "200 (72Q + 128C)",
+        "seed42_risk_acc": 0.5417,
+        "seed42_risk_f1": 0.5187,
+        "seed42_bundle_acc": 0.755,
+        "seed42_bundle_f1": 0.7263,
+        "mean_risk_acc": 0.5323,
+        "sd_risk_acc": 0.0157,
+        "mean_risk_f1": 0.5111,
+        "sd_risk_f1": 0.0162,
+        "mean_bundle_acc": 0.7553,
+        "sd_bundle_acc": 0.0048,
+        "mean_bundle_f1": 0.7351,
+        "sd_bundle_f1": 0.0081
+      },
+      {
+        "model": "QLTCMLM-Reservoir (Fixed 72Q + Trained 128C)",
+        "params": "128 trainable (72Q fixed)",
+        "seed42_risk_acc": 0.4167,
+        "seed42_risk_f1": 0.413,
+        "seed42_bundle_acc": 0.5667,
+        "seed42_bundle_f1": 0.4711,
+        "mean_risk_acc": 0.408,
+        "sd_risk_acc": 0.0119,
+        "mean_risk_f1": 0.403,
+        "sd_risk_f1": 0.0128,
+        "mean_bundle_acc": 0.5773,
+        "sd_bundle_acc": 0.056,
+        "mean_bundle_f1": 0.5089,
+        "sd_bundle_f1": 0.0677
+      },
+      {
+        "model": "QLTCMLM-QKernel (4q Fidelity Gram SVM)",
+        "params": "0 var. (Gram SVM)",
+        "seed42_risk_acc": 0.4533,
+        "seed42_risk_f1": 0.4537,
+        "seed42_bundle_acc": 0.5717,
+        "seed42_bundle_f1": 0.5375,
+        "mean_risk_acc": 0.4197,
+        "sd_risk_acc": 0.0248,
+        "mean_risk_f1": 0.4179,
+        "sd_risk_f1": 0.0256,
+        "mean_bundle_acc": 0.5667,
+        "sd_bundle_acc": 0.0082,
+        "mean_bundle_f1": 0.5372,
+        "sd_bundle_f1": 0.0117
+      },
+      {
+        "model": "LogisticRegression (Linear, 72 params)",
+        "params": "36/head (72 tot.)",
+        "seed42_risk_acc": 0.305,
+        "seed42_risk_f1": 0.2879,
+        "seed42_bundle_acc": 0.685,
+        "seed42_bundle_f1": 0.6335,
+        "mean_risk_acc": 0.317,
+        "sd_risk_acc": 0.0163,
+        "mean_risk_f1": 0.2984,
+        "sd_risk_f1": 0.0181,
+        "mean_bundle_acc": 0.6793,
+        "sd_bundle_acc": 0.007,
+        "mean_bundle_f1": 0.6351,
+        "sd_bundle_f1": 0.0068
+      },
+      {
+        "model": "Cubic Poly-LogReg (Degree-3, 1,320 params)",
+        "params": "660/head (1,320 tot.)",
+        "seed42_risk_acc": 0.6683,
+        "seed42_risk_f1": 0.6672,
+        "seed42_bundle_acc": 0.8733,
+        "seed42_bundle_f1": 0.864,
+        "mean_risk_acc": 0.662,
+        "sd_risk_acc": 0.0182,
+        "mean_risk_f1": 0.6643,
+        "sd_risk_f1": 0.0186,
+        "mean_bundle_acc": 0.8743,
+        "sd_bundle_acc": 0.0076,
+        "mean_bundle_f1": 0.8657,
+        "sd_bundle_f1": 0.0095
+      },
+      {
+        "model": "RBF-SVM (C=4.0)",
+        "params": "Support vectors",
+        "seed42_risk_acc": 0.6767,
+        "seed42_risk_f1": 0.6795,
+        "seed42_bundle_acc": 0.85,
+        "seed42_bundle_f1": 0.8392,
+        "mean_risk_acc": 0.6417,
+        "sd_risk_acc": 0.0235,
+        "mean_risk_f1": 0.6487,
+        "sd_risk_f1": 0.0217,
+        "mean_bundle_acc": 0.8497,
+        "sd_bundle_acc": 0.0036,
+        "mean_bundle_f1": 0.8383,
+        "sd_bundle_f1": 0.0051
+      },
+      {
+        "model": "MLPClassifier (32x16 ReLU)",
+        "params": "996/head (1,992 tot.)",
+        "seed42_risk_acc": 0.635,
+        "seed42_risk_f1": 0.6363,
+        "seed42_bundle_acc": 0.8017,
+        "seed42_bundle_f1": 0.7812,
+        "mean_risk_acc": 0.6007,
+        "sd_risk_acc": 0.0386,
+        "mean_risk_f1": 0.6017,
+        "sd_risk_f1": 0.038,
+        "mean_bundle_acc": 0.8237,
+        "sd_bundle_acc": 0.0166,
+        "mean_bundle_f1": 0.8112,
+        "sd_bundle_f1": 0.0212
+      },
+      {
+        "model": "HistGradientBoosting (GBDT)",
+        "params": "150 trees/head",
+        "seed42_risk_acc": 0.5367,
+        "seed42_risk_f1": 0.5351,
+        "seed42_bundle_acc": 0.8183,
+        "seed42_bundle_f1": 0.8003,
+        "mean_risk_acc": 0.5187,
+        "sd_risk_acc": 0.0201,
+        "mean_risk_f1": 0.5205,
+        "sd_risk_f1": 0.0197,
+        "mean_bundle_acc": 0.8197,
+        "sd_bundle_acc": 0.0057,
+        "mean_bundle_f1": 0.8055,
+        "sd_bundle_f1": 0.0057
+      }
+    ]
+  },
+  "dynamical_lie_algebra_gsim_audit": {
+    "su16_full_dimension": 255,
+    "su2_equivariant_4q_brickwork_dim_g": 12,
+    "xy_plus_local_z_4spin_excitation_conserving_dim_g": 66,
+    "transverse_driven_4spin_eq6_xy_z_x_dim_g": 255,
+    "gsim_implication": "The 4-qubit SU(2)-equivariant brickwork ansatz spans a restricted dynamical Lie algebra dim(g) = 12 << 255 (dequantisable within fixed total-spin sectors via g-sim), and pure XY+Z spin exchange spans dim(g) = 66; adding non-commuting transverse drives Omega_i X_i (Eq. 6) plus non-unitary sigma_i^+/- jump operators breaks U(1)/SU(2) symmetry (unitary core dim(g) = 255, full su(2^n) = 4^n - 1), defeating polynomial g-sim."
+  },
+  "receipt_sha256": "a6b3854e9e3bdce25c1771a460b7b65956494c1c7ac3a9c723d47bd42d9b8cac"
+}

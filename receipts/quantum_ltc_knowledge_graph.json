@@ -7,13 +7,14 @@
     "RCSB Protein Data Bank (PDB 1O86 & 1N9V)",
     "SNOMED CT UK Edition (315594003 Interpreter needed)",
     "Kashefi Quantum Algorithmic Primitives Atlas v0.4",
-    "NHS England DCB0129 Clinical Risk Management Standard"
+    "NHS England DCB0129 (Manufacture) & DCB0160 (Deployment) Clinical Risk Management Standards"
   ],
   "demarcation": {
     "phi_present": false,
     "physical_hardware_shots": 0,
     "wet_lab_specimens": 0,
     "open_dcb0129_hazards": 6,
+    "open_dcb0160_deployment_hazards": 6,
     "closed_hazards_claimed": 0
   },
   "graph_statistics": {
@@ -197,7 +198,7 @@
         "haz_h_ltc_01",
         "plat_typesafe_jev"
       ],
-      "readable_chain": "NAFLD / MASLD -> UCLP Case-Finding & Pre-Winter Call/Recall -> H-LTC-01: Incomplete SNOMED 'Interpreter nee (OPEN) -> TypeSafe AI System One (Jev 1.14)"
+      "readable_chain": "NAFLD / MASLD -> UCLP Case-Finding & Pre-Winter Call/Recall -> H-LTC-01: Incomplete SNOMED 'Interpreter nee (OPEN) -> TypeSafe AI System One (jev-latest / Jev 1.14)"
     }
   ],
   "nodes": [
@@ -480,7 +481,7 @@
       "metrics": {
         "zn_lpr_distance_A": 2.1413,
         "steric_clashes_under_2A": 0,
-        "era_iii_cas": "CAS(36e,26o) -> 52L"
+        "era_iii_cas": "CAS(36e,26o) -> 52 data + 12 ancilla = 64L"
       },
       "in_degree": 2,
       "out_degree": 1,
@@ -1098,9 +1099,10 @@
       "curie": "SHA256:bd60742f9f91",
       "external_iri": "",
       "era": "Era I",
-      "summary": "NIST FIPS 204 ML-DSA-65 FHIR R4 bundle signature (33.91 ms), DisCoPy snake identity (2.22e-16), and Moth 5-borough surge blur (Gini 0.88->0.46).",
+      "summary": "NIST FIPS 204 ML-DSA-65 FHIR R4 bundle signature (33.91 ms), DisCoPy snake identity (2.22e-16), and Moth 5-borough surge blur (Gini 0.8750->0.4609).",
       "metrics": {
         "mldsa65_sign_ms": 33.91,
+        "gini_before": 0.875,
         "gini_after": 0.4609,
         "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
       },
@@ -1111,7 +1113,7 @@
     },
     {
       "id": "plat_typesafe_jev",
-      "label": "TypeSafe AI System One (Jev 1.14)",
+      "label": "TypeSafe AI System One (jev-latest / Jev 1.14)",
       "entity_type": "Platform_Receipt",
       "layer": 7,
       "curie": "SHA256:bd60742f9f91",
@@ -1133,13 +1135,13 @@
       "label": "H-LTC-01: Incomplete SNOMED 'Interpreter nee (OPEN)",
       "entity_type": "DCB0129_Hazard",
       "layer": 8,
-      "curie": "DCB0129:H-LTC-01",
+      "curie": "DCB0129-0160:H-LTC-01",
       "external_iri": "",
       "era": "All",
-      "summary": "Incomplete SNOMED 'Interpreter needed' or IMD equity coding causing recall exclusion \u2014 Statutory NHS DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/Tier 2-3 sign-off).",
+      "summary": "Incomplete SNOMED 'Interpreter needed' or IMD equity coding causing recall exclusion \u2014 Statutory DCB0160 (Primary Local EHR/PCN) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "metrics": {
         "status": "OPEN",
-        "standard": "NHS DCB0129"
+        "standard": "DCB0160 (Primary Local EHR/PCN) + DCB0129"
       },
       "in_degree": 1,
       "out_degree": 1,
@@ -1151,13 +1153,13 @@
       "label": "H-LTC-02: ACEi/ARB + SGLT2i + diuretic/NSAID (OPEN)",
       "entity_type": "DCB0129_Hazard",
       "layer": 8,
-      "curie": "DCB0129:H-LTC-02",
+      "curie": "DCB0129-0160:H-LTC-02",
       "external_iri": "",
       "era": "All",
-      "summary": "ACEi/ARB + SGLT2i + diuretic/NSAID AKI or improper DPI inhaler technique without human SMR \u2014 Statutory NHS DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/Tier 2-3 sign-off).",
+      "summary": "ACEi/ARB + SGLT2i + diuretic/NSAID AKI or improper DPI inhaler technique without human SMR \u2014 Statutory DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "metrics": {
         "status": "OPEN",
-        "standard": "NHS DCB0129"
+        "standard": "DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off)"
       },
       "in_degree": 2,
       "out_degree": 2,
@@ -1169,13 +1171,13 @@
       "label": "H-LTC-03: Acute CYP asthma post-attack deter (OPEN)",
       "entity_type": "DCB0129_Hazard",
       "layer": 8,
-      "curie": "DCB0129:H-LTC-03",
+      "curie": "DCB0129-0160:H-LTC-03",
       "external_iri": "",
       "era": "All",
-      "summary": "Acute CYP asthma post-attack deterioration requiring immediate Tier 2/3 clinical escalation \u2014 Statutory NHS DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/Tier 2-3 sign-off).",
+      "summary": "Acute CYP asthma post-attack deterioration requiring immediate Tier 2/3 clinical escalation \u2014 Statutory DCB0160 (Primary Urgent Tier 2/3 Triage) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "metrics": {
         "status": "OPEN",
-        "standard": "NHS DCB0129"
+        "standard": "DCB0160 (Primary Urgent Tier 2/3 Triage) + DCB0129"
       },
       "in_degree": 1,
       "out_degree": 1,
@@ -1187,13 +1189,13 @@
       "label": "H-LTC-04: Conflation of cloud emulator / bio (OPEN)",
       "entity_type": "DCB0129_Hazard",
       "layer": 8,
-      "curie": "DCB0129:H-LTC-04",
+      "curie": "DCB0129-0160:H-LTC-04",
       "external_iri": "",
       "era": "All",
-      "summary": "Conflation of cloud emulator / biophysical toy models with validated RCT clinical efficacy \u2014 Statutory NHS DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/Tier 2-3 sign-off).",
+      "summary": "Conflation of cloud emulator / biophysical toy models with validated RCT clinical efficacy \u2014 Statutory DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "metrics": {
         "status": "OPEN",
-        "standard": "NHS DCB0129"
+        "standard": "DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate)"
       },
       "in_degree": 2,
       "out_degree": 2,
@@ -1205,13 +1207,13 @@
       "label": "H-LTC-05: Secondary-care discharge or UCLP p (OPEN)",
       "entity_type": "DCB0129_Hazard",
       "layer": 8,
-      "curie": "DCB0129:H-LTC-05",
+      "curie": "DCB0129-0160:H-LTC-05",
       "external_iri": "",
       "era": "All",
-      "summary": "Secondary-care discharge or UCLP prevalence-search drift across the 9 LTC registers \u2014 Statutory NHS DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/Tier 2-3 sign-off).",
+      "summary": "Secondary-care discharge or UCLP prevalence-search drift across the 9 LTC registers \u2014 Statutory DCB0160 (Primary Local UCLP/QOF Register Audit) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "metrics": {
         "status": "OPEN",
-        "standard": "NHS DCB0129"
+        "standard": "DCB0160 (Primary Local UCLP/QOF Register Audit) + DCB0129"
       },
       "in_degree": 1,
       "out_degree": 1,
@@ -1223,13 +1225,13 @@
       "label": "H-LTC-06: VCSE social prescribing referral o (OPEN)",
       "entity_type": "DCB0129_Hazard",
       "layer": 8,
-      "curie": "DCB0129:H-LTC-06",
+      "curie": "DCB0129-0160:H-LTC-06",
       "external_iri": "",
       "era": "All",
-      "summary": "VCSE social prescribing referral overload without NCL Borough Partnership resource transfer \u2014 Statutory NHS DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/Tier 2-3 sign-off).",
+      "summary": "VCSE social prescribing referral overload without NCL Borough Partnership resource transfer \u2014 Statutory DCB0160 (Primary NCL Borough VCSE Commissioning) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "metrics": {
         "status": "OPEN",
-        "standard": "NHS DCB0129"
+        "standard": "DCB0160 (Primary NCL Borough VCSE Commissioning) + DCB0129"
       },
       "in_degree": 1,
       "out_degree": 1,
@@ -2151,5 +2153,5 @@
       "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
     }
   ],
-  "receipt_sha256": "c08d35c2231c23b512b7f41e4423a86a689398d671fa55248eedf60b5f589f97"
+  "receipt_sha256": "9b4e62e08dfe095909614aab2752c76c99df0df699377d0756c618d3a825c505"
 }
