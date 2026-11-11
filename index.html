@@ -248,12 +248,12 @@
         <div class="kpi">
           <div class="val">2.141 &Aring; / 0 Clashes</div>
           <div class="lbl">Crystal ACE–Lisinopril Zn2+ (1O86)</div>
-          <div class="sub">HIS383/HIS387/GLU411 triad + HQS 4-spin Lindbladian (58.6%–66.0% burden drop) + QProtSim 1N9V</div>
+          <div class="sub">HIS383/HIS387/GLU411 triad (64L/68L ancilla-complete) + HQS 4-regime Lindbladian (48.5%–50.6% Regime C drop) + QProtSim 1N9V</div>
         </div>
         <div class="kpi">
           <div class="val">57 Nodes &bull; 114 Triples</div>
           <div class="lbl">Ontology Knowledge Graph (JSON-LD)</div>
-          <div class="sub">9 EMBL-EBI OLS4 DOID conditions, SNOMED CT, UniProt/PDB, 10 Kashefi cards, 4 Eras &amp; 6 DCB0129 hazards</div>
+          <div class="sub">9 EMBL-EBI OLS4 DOID conditions, SNOMED CT, UniProt/PDB, 10 Kashefi cards, 4 Eras &amp; 6 DCB0129/DCB0160 hazards</div>
         </div>
       </div>
     </div>
@@ -262,7 +262,7 @@
   <section>
     <div class="container">
       <h2>Interactive Logical-Qubit Roadmap Simulator</h2>
-      <p class="sec-lead">Slide <i>N</i><sub>logical</sub> from 0 to 160 to inspect surface/color-code physical qubit overhead, open-system multi-organ Lindbladian classical Krylov RAM (<i>O</i>(4<sup><i>n</i><sub>spin</sub></sup>)), and the honest classical-vs-quantum regime boundary.</p>
+      <p class="sec-lead">Slide <i>N</i><sub>logical</sub> from 0 to 160 to inspect surface/color-code physical qubit overhead, strict binary classical Krylov RAM (<i>O</i>(4<sup><i>n</i><sub>spin</sub></sup>)) alongside MCWF/MPDO baselines, and the classical-vs-quantum regime boundary.</p>
       <div class="explorer-card">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
           <div><strong>Available Logical Qubits (<i>N</i><sub>logical</sub>):</strong> <span id="nq-val" style="font-size:1.35rem; font-weight:800; color:var(--nhs-navy);">46</span></div>
@@ -277,8 +277,8 @@
             <div class="big" id="organ-scale">20 Coupled Spins (CAS ~23o)</div>
           </div>
           <div class="sim-box">
-            <h4>Classical Krylov RAM (m=30)</h4>
-            <div class="big" id="ram-scale">491.52 TB (&gt;1 TB Wall)</div>
+            <h4>Classical Krylov RAM (m=30, Binary)</h4>
+            <div class="big" id="ram-scale">480.00 TiB (&gt;1 TiB Wall)</div>
           </div>
           <div class="sim-box">
             <h4>Estimated Physical Qubits (d + T-Factory)</h4>
@@ -300,23 +300,23 @@
       <div class="fig-grid">
         <div class="fig-card">
           <a href="figures/figure1_logical_qubit_roadmap.png" target="_blank" rel="noopener"><img src="figures/figure1_logical_qubit_roadmap.png" alt="Figure 1: Four-Era Logical-Qubit Roadmap" loading="lazy" /></a>
-          <div class="cap"><strong>Figure 1 — Four-Era Logical-Qubit Scaling &amp; Liouvillian Memory Wall</strong>Classical Krylov RAM crossover (&gt;1.92 TB at 16 coupled organ spins) &amp; Era II [[8,3,2]] post-selection decay.</div>
+          <div class="cap"><strong>Figure 1 — Four-Era Logical-Qubit Scaling, Krylov vs MCWF/MPDO &amp; MIP Gap (%)</strong>Binary Krylov RAM crossover (1.875 TiB at 16 spins) alongside MCWF &amp; MPDO (&chi;=64) curves and OpenJij vs HiGHS MILP gaps.</div>
         </div>
         <div class="fig-card">
           <a href="figures/figure2_nexus_helios_and_haiqu_jij.png" target="_blank" rel="noopener"><img src="figures/figure2_nexus_helios_and_haiqu_jij.png" alt="Figure 2: Nexus Helios-1E-lite, Haiqu & OpenJij" loading="lazy" /></a>
-          <div class="cap"><strong>Figure 2 — Nexus Helios-1E-lite, Haiqu HUBO &amp; OpenJij PCN Recall</strong>6,144-shot Guppy/HUGR MDT coherence (0.9961 vs 0.5020), 223&rarr;26 depth compression, and 18/18 pre-winter coverage.</div>
+          <div class="cap"><strong>Figure 2 — Nexus Helios-1E-lite, Haiqu HUBO &amp; OpenJij PCN Recall</strong>6,144-shot Guppy/HUGR MDT coherence (0.9961 &plusmn; 0.0014 vs 0.5020 &plusmn; 0.0110), 223&rarr;26 depth compression, and 18/18 pre-winter coverage.</div>
         </div>
         <div class="fig-card">
           <a href="figures/figure3_biophysical_qprotsim_ace1o86.png" target="_blank" rel="noopener"><img src="figures/figure3_biophysical_qprotsim_ace1o86.png" alt="Figure 3: HQS Lindbladian, QProtSim 1N9V & ACE 1O86" loading="lazy" /></a>
-          <div class="cap"><strong>Figure 3 — Multi-Organ HQS Lindbladian, QProtSim (1N9V) &amp; ACE (1O86)</strong>4-spin GKSL cardiorenal-pulmonary damping, Angiotensin II residue MI, and 2.141 &Aring; Zn2+–Lisinopril geometry.</div>
+          <div class="cap"><strong>Figure 3 — 4-Regime HQS Lindbladian, QProtSim (1N9V) &amp; ACE (1O86)</strong>Decoupled 4-spin GKSL damping (Regimes A–D), Angiotensin II residue MI, and dual-axis 2.141 &Aring; Zn2+–Lisinopril geometry.</div>
         </div>
         <div class="fig-card">
           <a href="figures/figure4_modal_qml_and_2x2_barren_plateau.png" target="_blank" rel="noopener"><img src="figures/figure4_modal_qml_and_2x2_barren_plateau.png" alt="Figure 4: Modal QLTCMLM & 2x2 Barren Plateau" loading="lazy" /></a>
-          <div class="cap"><strong>Figure 4 — Modal QLTCMLM Ablations &amp; 2&times;2 Barren-Plateau Controls</strong>Non-linear cubic cohort benchmark vs GBDT/RBF-SVM and 4.82&times; Frobenius gradient variance retention at n=10, L=20.</div>
+          <div class="cap"><strong>Figure 4 — 5-Seed Modal QLTCMLM Ablations &amp; 2&times;2 Barren-Plateau Controls</strong>8-model benchmark (Reservoir, VQC, GBDT, RBF-SVM, Cubic Poly-LogReg) &amp; 4.82&times; gradient variance retention at n=10, L=20.</div>
         </div>
         <div class="fig-card">
           <a href="figures/figure5_typesafe_jev_governance.png" target="_blank" rel="noopener"><img src="figures/figure5_typesafe_jev_governance.png" alt="Figure 5: TypeSafe Jev Audit & Moth Borough Blur" loading="lazy" /></a>
-          <div class="cap"><strong>Figure 5 — TypeSafe Jev Multi-Method Audit &amp; 5-Borough Surge Blur</strong>CUJ-1..4 Health AI evaluation (4.32/5 NHS utility) and NCL 5-borough surge Gini reduction (0.875 &rarr; 0.461).</div>
+          <div class="cap"><strong>Figure 5 — TypeSafe Jev Multi-Method Audit &amp; 5-Borough Surge Blur</strong>CUJ-1..4 Health AI evaluation (4.32/5 NHS utility, DCB0129/DCB0160) and NCL 5-borough surge Gini reduction (0.8750 &rarr; 0.4613).</div>
         </div>
         <div class="fig-card">
           <a href="knowledge-graph.html"><img src="figures/figure6_knowledge_graph.png" alt="Figure 6: 57-Node Ontology Knowledge Graph" loading="lazy" /></a>
@@ -451,14 +451,14 @@
     const verdictScale = document.getElementById('verdict-scale');
 
     function formatRam(nSpin) {
-      if (nSpin <= 2) return '< 1 MB (Trivial)';
+      if (nSpin <= 2) return '< 1 MiB (Trivial)';
       const bytes = 30 * 16 * Math.pow(4, nSpin);
-      const gb = bytes / Math.pow(1024, 3);
-      if (gb < 1) return (gb * 1024).toFixed(1) + ' MB';
-      if (gb < 1024) return gb.toFixed(2) + ' GB';
-      const tb = gb / 1024;
-      if (tb < 1024) return tb.toFixed(2) + ' TB (>1 TB Wall)';
-      return (tb / 1024).toFixed(1) + ' PB (Intractable)';
+      const gib = bytes / Math.pow(1024, 3);
+      if (gib < 1) return (gib * 1024).toFixed(2) + ' MiB';
+      if (gib < 1024) return gib.toFixed(2) + ' GiB';
+      const tib = gib / 1024;
+      if (tib < 1024) return tib.toFixed(3) + ' TiB (>1 TiB Wall)';
+      return (tib / 1024).toFixed(1) + ' PiB (Intractable)';
     }
 
     function updateExplorer() {
@@ -468,7 +468,7 @@
         eraPill.textContent = 'Era I: Classical-Exact & NISQ Hardware Readiness (0 Logical)';
         eraPill.style.background = '#005eb8';
         organScale.textContent = '4-Spin Toy / 128-Var QUBO';
-        ramScale.textContent = '0.12 MB (36.6 ms Exact)';
+        ramScale.textContent = '0.12 MiB (36.6 ms Exact)';
         physScale.textContent = '4–20 phys / Cloud Emul.';
         verdictScale.textContent = 'Classical HiGHS Dominates (<25 ms)';
         verdictScale.style.color = '#b45309';
@@ -481,7 +481,7 @@
         organScale.textContent = nSpin + ' Coupled Spins (Error-Detected)';
         ramScale.textContent = formatRam(nSpin);
         physScale.textContent = (blocks * 8 + 8) + ' phys (Post-select ' + pAcc.toFixed(1) + '%)';
-        verdictScale.textContent = 'Classical MPS / MILP Faster';
+        verdictScale.textContent = 'Classical MCWF / MPDO / MILP Faster';
         verdictScale.style.color = '#b45309';
       } else if (nL <= 72) {
         eraPill.textContent = 'Era III: Early Active FTQC Simulation Crossover';
@@ -492,14 +492,14 @@
         const d = nL >= 50 ? 13 : 11;
         const phys = Math.round((Math.ceil(1.5 * nL) + 12) * 2 * d * d);
         physScale.textContent = '~' + phys.toLocaleString() + ' phys (d = ' + d + ')';
-        verdictScale.textContent = nSpin >= 16 ? 'Genuine Memory Crossover (>1.9 TB)' : 'Approaching 1 TB Boundary';
+        verdictScale.textContent = nSpin >= 16 ? 'Krylov >1.875 TiB & Volume-Law Crossover' : 'Approaching 1 TiB Krylov Boundary';
         verdictScale.style.color = nSpin >= 16 ? '#047857' : '#005eb8';
       } else {
         eraPill.textContent = 'Era IV: Asymptotic ICS-Scale Modular FTQC';
         eraPill.style.background = '#047857';
         const nSpin = Math.floor((nL - 8) / 2);
         organScale.textContent = nSpin + ' Organ Axes + QSVT / Quantum B&B';
-        ramScale.textContent = '>> 1 EB Classical Wall';
+        ramScale.textContent = '>> 1 EiB Classical Wall';
         const d = 15;
         const phys = Math.round((Math.ceil(1.5 * nL) + 24) * 2 * d * d);
         physScale.textContent = '~' + phys.toLocaleString() + ' phys (d = 15)';
