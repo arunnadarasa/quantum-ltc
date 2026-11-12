@@ -35,6 +35,7 @@
 
   <link rel="stylesheet" href="assets/styles.css" />
   <script src="assets/echarts.min.js" defer></script>
+  <script src="assets/3Dmol-min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
 </head>
 <body>
@@ -50,6 +51,7 @@
 
       <nav id="primary-nav" class="nav-links" aria-label="Primary sections">
         <a href="#paper">Monograph</a>
+        <a href="#structures">3D Structures</a>
         <a href="#qml">4q QLTCMLM &amp; Eras</a>
         <a href="#zeno">Bloch &amp; DisCoPy</a>
         <a href="#benchmarks">Charts</a>
@@ -101,6 +103,7 @@
             </div>
             <div class="track-actions">
               <a class="btn btn-primary btn-sm" href="#paper">📖 Read Inline Paper</a>
+              <a class="btn btn-sm" style="border-color:var(--signal);color:var(--signal)" href="#structures">🧬 3D Structures</a>
               <a class="btn btn-sm" href="downloads/Quantum_LTC_Roadmap.pdf" download="Quantum_LTC_Roadmap.pdf">⬇ PDF (5.00 MB)</a>
               <a class="btn btn-ghost btn-sm" href="https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3" target="_blank" rel="noopener">Samskrift Live ↗</a>
             </div>
@@ -139,6 +142,7 @@
             Hosted Cloud Artifacts:
           </span>
           <div class="sandbox-links">
+            <a class="btn btn-sm" style="border-color:var(--signal);color:var(--signal)" href="#structures">🧬 Interactive 3D PDB Viewer</a>
             <a class="btn btn-sm" href="https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3" target="_blank" rel="noopener">📄 Samskrift Cloud Paper ↗</a>
             <a class="btn btn-sm" href="receipts/cyp3a4_drug_barrier_chembl_receipt.json" target="_blank" rel="noopener">💊 Gate 1 CYP3A4 + ChEMBL340 ↗</a>
             <a class="btn btn-sm" href="receipts/metalloenzyme_ftqc_ag2_receipt.json" target="_blank" rel="noopener">🧪 PySCF 1TQN + AG2 Receipt ↗</a>
@@ -240,8 +244,69 @@
       </div>
     </section>
 
+    <!-- Section 01B: Interactive 3D WebGL Biomolecular Structure Viewer -->
+    <section id="structures" class="band">
+      <div class="container">
+        <p class="kicker">01B · Interactive 3D WebGL Biomolecular Structure Viewer (RCSB PDB · PySCF 2.15 · THC-QPE · ChEMBL340)</p>
+        <h2>Interactive 3D Metalloenzyme &amp; Peptide Structure Explorer</h2>
+        <p class="lead">
+          Inspect all five experimental <strong>RCSB PDB</strong> structures directly in 3D WebGL — comparing <strong>Era III–IV open-shell hepatic <code>CYP3A4</code> FTQC targets</strong> (midazolam-bound <code>PDB 5TE8</code>, ritonavir-bound <code>PDB 3NXU</code>, and resting open-shell <code>PDB 1TQN</code>) against the <strong>closed-shell <code>3d¹⁰</code> <code>Zn²⁺</code> <code>ACE–Lisinopril</code> classical single-reference control</strong> (<code>PDB 1O86</code>) and the <strong>8-qubit <code>Angiotensin II</code> solvation peptide</strong> (<code>PDB 1N9V</code>). Click any annotation card on the right to focus the 3D camera onto specific catalytic residues and coordination bonds.
+        </p>
+
+        <div id="mol-viewer-shell" class="mol-viewer-shell" role="region" aria-label="Interactive 3D Biomolecular Structure Viewer">
+          <div id="mol-tabs" class="mol-tabs" role="tablist" aria-label="Select experimental PDB structure"></div>
+
+          <div class="mol-toolbar">
+            <div class="mol-tool-group" role="group" aria-label="3D Representation Mode">
+              <span style="font-family:var(--font-mono);font-size:0.71rem;color:var(--ink-muted);text-transform:uppercase;margin-right:0.2rem">Style:</span>
+              <button type="button" class="lang-btn active" data-mol-style="cartoon_pocket">Cartoon + Pocket Sticks</button>
+              <button type="button" class="lang-btn" data-mol-style="pocket_surface">Pocket Cavity Surface</button>
+              <button type="button" class="lang-btn" data-mol-style="quantum_cluster">Quantum Pocket Only</button>
+              <button type="button" class="lang-btn" data-mol-style="spheres">Backbone + CPK Spheres</button>
+            </div>
+
+            <div class="mol-tool-group" role="group" aria-label="Camera and Overlay Controls">
+              <button id="mol-focus-pocket-btn" type="button" class="reader-icon-btn" title="Zoom to catalytic cofactor and bound drug">🎯 Focus Pocket</button>
+              <button id="mol-focus-full-btn" type="button" class="reader-icon-btn" title="Zoom out to full protein chain">🌐 Full Chain</button>
+              <button id="mol-toggle-labels-btn" type="button" class="reader-icon-btn" aria-pressed="true" title="Toggle 3D residue pins and dashed coordination lines">🏷 Annotations: ON</button>
+              <button id="mol-spin-btn" type="button" class="reader-icon-btn" aria-pressed="false" title="Toggle continuous 3D rotation">🔄 Spin</button>
+              <button id="mol-snap-btn" type="button" class="reader-icon-btn" title="Download high-resolution PNG snapshot">📸 PNG</button>
+              <button id="mol-fullscreen-btn" type="button" class="reader-icon-btn" title="Toggle fullscreen 3D viewer">⛶ Fullscreen</button>
+              <a id="mol-dl-pdb" class="btn btn-primary btn-sm" href="structures/5TE8.pdb" download="5TE8.pdb">⬇ .pdb</a>
+              <a id="mol-rcsb-link" class="btn btn-ghost btn-sm" href="https://www.rcsb.org/structure/5TE8" target="_blank" rel="noopener">RCSB ↗</a>
+            </div>
+          </div>
+
+          <div class="mol-grid">
+            <div class="mol-stage-wrap">
+              <div class="mol-hud-top">
+                <div id="mol-hud-title" class="mol-hud-title">PDB 5TE8 · Human CYP3A4 + Midazolam (2.70 Å X-Ray)</div>
+                <div id="mol-hud-sub" class="mol-hud-sub">Left-drag: Rotate · Scroll/Pinch: Zoom · Right-drag: Pan</div>
+              </div>
+
+              <div id="mol-viewer-stage" aria-label="3Dmol.js WebGL molecular canvas">
+                <div id="mol-loading-msg" class="pdf-loading-msg" style="padding-top:240px">Loading 3D crystallographic coordinates…</div>
+              </div>
+
+              <div class="mol-hud-legend">
+                <div class="mol-legend-items">
+                  <span class="mol-legend-swatch"><span class="mol-tab-dot" style="background:#38d6c4"></span>Bound Drug / Peptide</span>
+                  <span class="mol-legend-swatch"><span class="mol-tab-dot" style="background:#ff4f5e"></span>Heme / Zn²⁺ Cofactor</span>
+                  <span class="mol-legend-swatch"><span class="mol-tab-dot" style="background:#f4ae42"></span>Catalytic Triad / Gate</span>
+                  <span class="mol-legend-swatch"><span class="mol-tab-dot" style="background:#a78bfa"></span>Coordination Bond (Å)</span>
+                </div>
+                <span id="mol-atom-count">Chain A Monomer</span>
+              </div>
+            </div>
+
+            <aside id="mol-inspector" class="mol-inspector" aria-label="Crystallographic and Quantum Demarcation Inspector"></aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section 02: Live In-Browser 4-Qubit QLTCMLM Simulator + Four-Era Logical-Qubit Explorer -->
-    <section id="qml" class="band">
+    <section id="qml" class="band band-alt">
       <div class="container">
         <p class="kicker">02 · Serverless Quantum Machine Learning (Modal + Hugging Face) &amp; Four-Era Logical-Qubit Scaling</p>
         <h2>Live 4-Qubit Frobenius <code>QLTCMLM</code> &amp; Four-Era Roadmap Simulators</h2>
@@ -868,7 +933,7 @@
         </div>
 
         <div class="honesty-banner" style="margin-top:1.35rem;border-left-color:var(--signal)">
-          <strong>Acknowledgments, Ontology &amp; AlphaGenome Non-Commercial Terms Attribution:</strong> This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows. Disease ontology terms are resolved via the <a href="https://www.ebi.ac.uk/ols4/api-docs" target="_blank" rel="noopener">EMBL-EBI Ontology Lookup Service (OLS4)</a> Human Disease Ontology (<code>DOID</code>, CC0 1.0); crystallographic structures <code>PDB 1TQN</code> (Yano et al., 2004), <code>PDB 1O86</code> (Natesh et al., 2003), and <code>PDB 1N9V</code> (Spyroulias et al., 2003) are retrieved from the <a href="https://www.rcsb.org/" target="_blank" rel="noopener">RCSB Protein Data Bank</a>; rsID variant metadata is resolved via <a href="https://www.ncbi.nlm.nih.gov/snp/" target="_blank" rel="noopener">NCBI dbSNP</a>; and AlphaGenome 2 (<code>v2.dna_client</code>) / AlphaGenome Atlas Variant Impact (AVI) predictions are non-commercial research-use-only outputs subject to the <a href="https://deepmind.google.com/science/alphagenome/terms" target="_blank" rel="noopener">AlphaGenome Non-Commercial Terms</a> (not validated for clinical diagnosis or prescribing).
+          <strong>Acknowledgments, Ontology, PDB, ChEMBL &amp; AlphaGenome Non-Commercial Terms Attribution:</strong> This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows. Disease ontology terms are resolved via the <a href="https://www.ebi.ac.uk/ols4/api-docs" target="_blank" rel="noopener">EMBL-EBI Ontology Lookup Service (OLS4)</a> Human Disease Ontology (<code>DOID</code>, CC0 1.0); crystallographic and NMR structures <code>PDB 5TE8</code> (Sevrioukova &amp; Poulos, 2017), <code>PDB 3NXU</code> (Sevrioukova &amp; Poulos, 2010), <code>PDB 1TQN</code> (Yano et al., 2004), <code>PDB 1O86</code> (Natesh et al., 2003), and <code>PDB 1N9V</code> (Spyroulias et al., 2003) are retrieved from the <a href="https://www.rcsb.org/pages/usage-policy" target="_blank" rel="noopener">RCSB Protein Data Bank</a> (CC0 1.0); experimental <code>CYP3A4</code> bioactivities (<code>CHEMBL340</code>, <code>ChEMBL_37</code>) are retrieved from <a href="https://chembl.gitbook.io/chembl-interface-documentation/about" target="_blank" rel="noopener">EMBL-EBI ChEMBL</a> (CC BY-SA 3.0); rsID variant metadata is resolved via <a href="https://www.ncbi.nlm.nih.gov/snp/" target="_blank" rel="noopener">NCBI dbSNP</a>; and AlphaGenome 2 (<code>v2.dna_client</code>) / AlphaGenome Atlas Variant Impact (AVI) predictions are non-commercial research-use-only outputs subject to the <a href="https://deepmind.google.com/science/alphagenome/terms" target="_blank" rel="noopener">AlphaGenome Non-Commercial Terms</a> (not validated for clinical diagnosis or prescribing).
         </div>
       </div>
     </section>
@@ -883,7 +948,8 @@
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:0.9rem;font-family:var(--font-mono);font-size:0.79rem">
         <a href="downloads/Quantum_LTC_Roadmap.pdf">Monograph PDF</a>
-        <a href="knowledge-graph.html">61-Node KG</a>
+        <a href="#structures">3D PDB Viewer</a>
+        <a href="knowledge-graph.html">64-Node KG</a>
         <a href="https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3" target="_blank" rel="noopener">Samskrift</a>
         <a href="https://huggingface.co/spaces/socialprescribing/quantum-ltc" target="_blank" rel="noopener">Hugging Face</a>
         <a href="https://github.com/arunnadarasa/quantum-ltc" target="_blank" rel="noopener">GitHub</a>

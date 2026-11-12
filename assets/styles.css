@@ -2293,6 +2293,33 @@ h1 code, h2 code, h3 code {
   color: var(--ink-muted);
   line-height: 1.5;
 }
+.hero-papers-strip {
+  margin-top: 1.1rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, rgba(20, 56, 60, 0.72), rgba(20, 37, 41, 0.92));
+  border: 1px solid rgba(56, 214, 196, 0.42);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+.hero-papers-label {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--signal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.hero-papers-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
 
 
 /* ── Quantum-LTC Four-Era Logical-Qubit Simulator Strip ── */
@@ -2399,4 +2426,279 @@ h1 code, h2 code, h3 code {
 .qsp-sim-grid,
 .kg-grid {
   gap: 1.85rem;
+}
+
+/* ── Interactive 3D Biomolecular Structure Viewer (3Dmol.js WebGL) ── */
+.mol-viewer-shell {
+  margin-top: 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.36);
+}
+.mol-viewer-shell:fullscreen {
+  background: #060e10;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.mol-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 1rem 1.25rem;
+  background: rgba(6, 14, 16, 0.85);
+  border-bottom: 1px solid var(--border);
+}
+.mol-tab-btn {
+  appearance: none;
+  background: rgba(15, 31, 35, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.55rem 0.88rem;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.mol-tab-btn:hover {
+  border-color: var(--signal);
+  color: var(--ink);
+  background: rgba(56, 214, 196, 0.1);
+}
+.mol-tab-btn.active {
+  background: rgba(56, 214, 196, 0.16);
+  border-color: var(--signal);
+  color: var(--ink);
+  box-shadow: 0 0 0 1px rgba(56, 214, 196, 0.35);
+}
+.mol-tab-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.mol-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.25rem;
+  background: rgba(10, 21, 24, 0.92);
+  border-bottom: 1px solid var(--border);
+}
+.mol-tool-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+.mol-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.48fr) minmax(330px, 1fr);
+  gap: 0;
+}
+@media (max-width: 1024px) {
+  .mol-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.mol-stage-wrap {
+  position: relative;
+  min-height: 590px;
+  background: radial-gradient(circle at 50% 44%, #0d2024 0%, #060d0f 75%);
+  border-right: 1px solid var(--border);
+}
+@media (max-width: 1024px) {
+  .mol-stage-wrap {
+    min-height: 470px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+#mol-viewer-stage {
+  position: relative;
+  width: 100%;
+  height: 590px;
+}
+@media (max-width: 1024px) {
+  #mol-viewer-stage {
+    height: 470px;
+  }
+}
+.mol-viewer-shell:fullscreen #mol-viewer-stage {
+  height: calc(100vh - 145px);
+}
+.mol-hud-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 6;
+  background: rgba(6, 14, 16, 0.84);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 214, 196, 0.34);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.8rem;
+  pointer-events: none;
+  max-width: min(92%, 440px);
+}
+.mol-hud-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--signal);
+}
+.mol-hud-sub {
+  margin-top: 0.18rem;
+  font-size: 0.73rem;
+  color: var(--ink-muted);
+}
+.mol-hud-legend {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(6, 14, 16, 0.84);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.48rem 0.78rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+.mol-legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+.mol-legend-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+}
+.mol-inspector {
+  padding: 1.35rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+  background: rgba(9, 19, 22, 0.96);
+  max-height: 590px;
+  overflow-y: auto;
+}
+@media (max-width: 1024px) {
+  .mol-inspector {
+    max-height: none;
+  }
+}
+.mol-viewer-shell:fullscreen .mol-inspector {
+  max-height: calc(100vh - 145px);
+}
+.mol-verdict-box {
+  padding: 0.8rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(56, 214, 196, 0.4);
+  border-left: 4px solid var(--signal);
+  background: rgba(56, 214, 196, 0.07);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.mol-verdict-box.amber {
+  border-color: rgba(244, 174, 66, 0.45);
+  border-left-color: var(--amber);
+  background: rgba(244, 174, 66, 0.08);
+}
+.mol-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+.mol-kpi-cell {
+  background: #060e10;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.72rem;
+}
+.mol-kpi-cell .mk-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+}
+.mol-kpi-cell .mk-val {
+  margin-top: 0.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.mol-anno-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.mol-anno-card {
+  text-align: left;
+  width: 100%;
+  background: #071114;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--signal);
+  border-radius: var(--radius-sm);
+  padding: 0.62rem 0.78rem;
+  cursor: pointer;
+  color: var(--ink);
+  transition: all 0.15s ease;
+}
+.mol-anno-card:hover {
+  border-color: var(--signal);
+  background: rgba(56, 214, 196, 0.09);
+}
+.mol-anno-title {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+.mol-anno-desc {
+  margin-top: 0.22rem;
+  font-size: 0.77rem;
+  color: var(--ink-muted);
+  line-height: 1.44;
+}
+.mol-coord-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.mol-coord-table th,
+.mol-coord-table td {
+  padding: 0.42rem 0.48rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.mol-coord-table th {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  color: var(--ink-muted);
 }

@@ -1895,10 +1895,626 @@ function initKnowledgeGraph() {
   mountKg();
 }
 
+/* ── Interactive 3D Biomolecular Structure Viewer (3Dmol.js WebGL) ── */
+const MOL_STRUCTURES = [
+  {
+    id: "5TE8",
+    tabLabel: "PDB 5TE8 · CYP3A4 + Midazolam",
+    dotColor: "#ff4f5e",
+    hudTitle: "PDB 5TE8 · Human CYP3A4 + Midazolam (2.70 Å X-Ray · Gate 1 C–H Barrier)",
+    verdictClass: "amber",
+    verdictTitle: "Era III–IV Open-Shell FTQC Target (Gate 1 Reaction Barrier)",
+    verdictBody:
+      "Broken-symmetry UKS/def2-SVP scatters by 12.35 kcal/mol across PBE/BLYP/B3LYP/PBE0 (~10⁹× Eyring rate spread at 310 K), whereas spin-pure CASSCF(9e,9o)+SC-NEVPT2 resolves Quartet → Doublet two-state reactivity (+10.17 kcal/mol) and paired-barrier THC-QPE cuts 58o Toffolis 3.23× (1.92 h on 150L).",
+    kpis: [
+      { lbl: "Experimental Method", val: "2.70 Å X-Ray (Chain A)" },
+      { lbl: "Reactive C–Fe Distance", val: "3.389 Å (08J CAI–FE)" },
+      { lbl: "SC-NEVPT2 / def2-SVP", val: "+10.17 kcal/mol (D)" },
+      { lbl: "Paired 58o THC-QPE", val: "150L · 1.92 h (3.23×)" }
+    ],
+    cofactorSel: { resn: "HEM", resi: 601 },
+    ligandSel: { resn: "08J", resi: 602 },
+    pocketResi: [442, 304, 305, 309, 119, 212, 369, 370],
+    focusSel: { resi: [601, 602, 442, 304, 305, 309] },
+    bonds: [
+      { a: { x: 15.435, y: 0.804, z: -47.784 }, b: { x: 16.631, y: 2.387, z: -46.392 }, color: "#ff4f5e", label: "Fe–SG 2.42 Å" },
+      { a: { x: 15.435, y: 0.804, z: -47.784 }, b: { x: 13.505, y: -0.282, z: -50.349 }, color: "#38d6c4", label: "CAI–Fe 3.39 Å" }
+    ],
+    pins: [
+      { text: "HEM 601 + CYS442 (Fe–SG 2.42 Å)", pos: { x: 16.03, y: 1.6, z: -47.09 }, bg: "#7f1d2d", border: "#ff4f5e" },
+      { text: "Midazolam 08J 602 (CAI–Fe 3.39 Å)", pos: { x: 13.51, y: -0.28, z: -50.35 }, bg: "#083a36", border: "#38d6c4" },
+      { text: "I-Helix Gate (PHE304–THR309)", pos: { x: 11.2, y: 2.6, z: -47.4 }, bg: "#3d2b09", border: "#f4ae42" }
+    ],
+    annotations: [
+      {
+        title: "Catalytic Heme (HEM 601) + Proximal CYS442",
+        badge: "Fe–SG = 2.424 Å",
+        color: "#ff4f5e",
+        desc: "Open-shell Compound I [Fe(IV)=O + porphyrin/Cys•] triradical locus; conditional orbital entropy jumps 1.634 → 2.314 nats at TS_HAT.",
+        sel: { resi: [442, 601] }
+      },
+      {
+        title: "Bound Midazolam Substrate (08J 602)",
+        badge: "CAI–Fe = 3.389 Å",
+        color: "#38d6c4",
+        desc: "Clinical CYP3A4 probe substrate (ChEMBL340 IC50 = 66.1 nM) poised for hydrogen-atom abstraction (+10.17 kcal/mol Doublet vs +12.16 kcal/mol Quartet).",
+        sel: { resi: [602, 601] }
+      },
+      {
+        title: "I-Helix Catalytic Gate (PHE304 · ALA305 · THR309)",
+        badge: "58o THC-QPE",
+        color: "#f4ae42",
+        desc: "Controls distal proton-delivery channel and steric orientation across the 58-orbital enzymatic pocket.",
+        sel: { resi: [304, 305, 309, 602] }
+      }
+    ],
+    contacts: [
+      ["HEM601 FE — CYS442 SG", "2.424 Å", "Proximal thiolate push (triradical locus)"],
+      ["HEM601 FE — 08J602 CAI", "3.389 Å", "Reactive C–H abstraction trajectory"],
+      ["ALA305 O — THR309 OG1", "2.95 Å", "Distal I-helix proton-relay groove"]
+    ]
+  },
+  {
+    id: "3NXU",
+    tabLabel: "PDB 3NXU · CYP3A4 + Ritonavir",
+    dotColor: "#f4ae42",
+    hudTitle: "PDB 3NXU · Human CYP3A4 + Ritonavir (2.00 Å X-Ray · Type-II Heme Ligation)",
+    verdictClass: "amber",
+    verdictTitle: "Era III–IV Open-Shell Mechanism-Based DDI Complex (AUCR 12.29× / 20.00×)",
+    verdictBody:
+      "Ritonavir's thiazole nitrogen ligates the heme iron directly (N5–Fe = 2.225 Å; ChEMBL340 Ki = 100 nM, kinact = 0.228 min⁻¹), driving Simvastatin AUCR to 12.29× (WT) and 20.00× in AlphaGenome 2 CYP3A4*22 carriers under open Pharmacist SMR hazard H-LTC-02.",
+    kpis: [
+      { lbl: "Experimental Method", val: "2.00 Å X-Ray (Chain A)" },
+      { lbl: "Type-II N5–Fe Bond", val: "2.225 Å (RIT 600)" },
+      { lbl: "ChEMBL340 Potency", val: "Ki 100 nM · kinact 0.228/m" },
+      { lbl: "Simvastatin AUCR", val: "12.29× WT / 20.00× *22" }
+    ],
+    cofactorSel: { resn: "HEM", resi: 508 },
+    ligandSel: { resn: "RIT", resi: 600 },
+    pocketResi: [442, 304, 305, 309, 369, 370, 120, 215],
+    focusSel: { resi: [508, 600, 442, 304, 305, 309] },
+    bonds: [
+      { a: { x: 32.66, y: -21.435, z: 23.755 }, b: { x: 34.146, y: -21.246, z: 25.4 }, color: "#38d6c4", label: "N5–Fe 2.23 Å" },
+      { a: { x: 32.66, y: -21.435, z: 23.755 }, b: { x: 31.183, y: -21.862, z: 22.066 }, color: "#ff4f5e", label: "Fe–SG 2.28 Å" }
+    ],
+    pins: [
+      { text: "RIT 600 Type-II N5–Fe (2.23 Å)", pos: { x: 34.15, y: -21.25, z: 25.4 }, bg: "#083a36", border: "#38d6c4" },
+      { text: "HEM 508 + CYS442 (Fe–SG 2.28 Å)", pos: { x: 31.18, y: -21.86, z: 22.07 }, bg: "#7f1d2d", border: "#ff4f5e" }
+    ],
+    annotations: [
+      {
+        title: "Ritonavir Type-II Thiazole Ligation (RIT 600)",
+        badge: "N5–Fe = 2.225 Å",
+        color: "#38d6c4",
+        desc: "Irreversible-like Type-II iron coordination locking out statin and DOAC clearance (Simvastatin hard hold under H-LTC-02).",
+        sel: { resi: [600, 508] }
+      },
+      {
+        title: "Low-Spin Heme–Thiolate Trans-Axis (HEM 508 + CYS442)",
+        badge: "Fe–SG = 2.284 Å",
+        color: "#ff4f5e",
+        desc: "Strong axial N5—Fe—SG trans ligand field shifts ferric d-manifold splitting, demanding multi-reference active-space treatment.",
+        sel: { resi: [442, 508] }
+      }
+    ],
+    contacts: [
+      ["HEM508 FE — RIT600 N5", "2.225 Å", "Type-II thiazole-iron DDI lock"],
+      ["HEM508 FE — CYS442 SG", "2.284 Å", "Trans-axial thiolate coordination"],
+      ["Simvastatin AUCR (Rowland–Matin)", "12.29× / 20.00×", "Clinical range 10–30× (Hard Hold)"]
+    ]
+  },
+  {
+    id: "1TQN",
+    tabLabel: "PDB 1TQN · Resting CYP3A4",
+    dotColor: "#a78bfa",
+    hudTitle: "PDB 1TQN · Resting Open-Shell Human CYP3A4 (2.05 Å X-Ray · Section 4.3)",
+    verdictClass: "amber",
+    verdictTitle: "Era III–IV Open-Shell Benchmark (+47.7 mHa RCCSD(T) Spin-Gap Failure)",
+    verdictBody:
+      "On identical H_CAS Hamiltonians in PySCF 2.15, single-reference RCCSD(T) breaks down on open-shell CYP3A4 Compound I (+47.7 mHa = +30.0 kcal/mol Quartet–Doublet error, 29.8× chemical accuracy; ⟨S²⟩_UHF = 1.710 vs 0.750), while classical FCI hits >1 TiB at M ≥ 22.",
+    kpis: [
+      { lbl: "Experimental Method", val: "2.05 Å X-Ray (Chain A)" },
+      { lbl: "Axial Fe–S Bond", val: "2.355 Å (CYS442 SG)" },
+      { lbl: "RCCSD(T) Spin Error", val: "+47.7 mHa (29.8× Chem Acc)" },
+      { lbl: "DF-QPE Logical Qubits", val: "75L (26o) – 141L (58o)" }
+    ],
+    cofactorSel: { resn: "HEM", resi: 508 },
+    ligandSel: null,
+    pocketResi: [442, 304, 305, 309, 369, 370],
+    focusSel: { resi: [508, 442, 304, 305, 309] },
+    bonds: [
+      { a: { x: -15.846, y: -23.032, z: -11.293 }, b: { x: -13.59, y: -23.609, z: -11.643 }, color: "#ff4f5e", label: "Fe–SG 2.36 Å" }
+    ],
+    pins: [
+      { text: "Open-Shell HEM 508 + CYS442 (2.36 Å)", pos: { x: -14.72, y: -23.32, z: -11.47 }, bg: "#7f1d2d", border: "#ff4f5e" },
+      { text: "Distal Promiscuous Cavity (1,386 Å³)", pos: { x: -17.2, y: -20.4, z: -10.8 }, bg: "#2e1d59", border: "#a78bfa" }
+    ],
+    annotations: [
+      {
+        title: "Open-Shell Fe(III)-Heme-Thiolate Center (HEM 508 + CYS442)",
+        badge: "Fe–SG = 2.355 Å",
+        color: "#ff4f5e",
+        desc: "Frontier natural orbital occupations (1.434, 1.012, 0.548) and bipartite entropy S_A|B = 1.329 nats defeat single-reference coupled-cluster.",
+        sel: { resi: [442, 508] }
+      },
+      {
+        title: "Unliganded Distal Polypharmacy Cavity (PHE304–THR309)",
+        badge: "M ≥ 22 > 1 TiB FCI",
+        color: "#a78bfa",
+        desc: "Accommodates statins, CCBs, DOACs, and macrolides across NCL multimorbid care plans.",
+        sel: { resi: [304, 305, 309, 369, 370, 508] }
+      }
+    ],
+    contacts: [
+      ["HEM508 FE — CYS442 SG", "2.355 Å", "Five-coordinate ferric resting state"],
+      ["UHF Spin Contamination ⟨S²⟩", "1.710 vs 0.750", "3-unpaired-electron triradical mixing"],
+      ["Exact FCI Memory Wall", "> 1.00 TiB at M ≥ 22", "10²² TiB at 58 active orbitals"]
+    ]
+  },
+  {
+    id: "1O86",
+    tabLabel: "PDB 1O86 · ACE + Lisinopril (Zn²⁺)",
+    dotColor: "#38d6c4",
+    hudTitle: "PDB 1O86 · Human ACE + Lisinopril Zn²⁺ (2.00 Å X-Ray · Closed-Shell Classical Control)",
+    verdictClass: "",
+    verdictTitle: "Era I–II Classical Single-Reference Control (|RCCSD(T)−FCI| ≤ 0.0154 mHa)",
+    verdictBody:
+      "Honest negative control (Section 4.3): because catalytic Zn²⁺ is closed-shell 3d¹⁰ (⟨S²⟩ = 0.000, T₁ = 0.024, S_A|B = 0.256 nats), classical RCCSD(T) stays 104× inside 1.6 mHa chemical accuracy — proving no FTQC advantage is needed for static Zn²⁺ ACE binding.",
+    kpis: [
+      { lbl: "Experimental Method", val: "2.00 Å X-Ray (Chain A)" },
+      { lbl: "Zn²⁺–Lisinopril Bond", val: "2.141 Å (ZN701–LPR O3)" },
+      { lbl: "|RCCSD(T) − FCI|", val: "≤ 0.0154 mHa (104× Acc)" },
+      { lbl: "NCL Clinical Target", val: "Outcome #23 BP Control" }
+    ],
+    cofactorSel: { resn: "ZN", resi: 701 },
+    ligandSel: { resn: "LPR", resi: 702 },
+    pocketResi: [383, 387, 411, 354, 511, 520, 523],
+    focusSel: { resi: [701, 702, 383, 387, 411] },
+    bonds: [
+      { a: { x: 43.821, y: 38.24, z: 46.712 }, b: { x: 41.939, y: 37.283, z: 47.069 }, color: "#38d6c4", label: "Zn–O3 2.14 Å" },
+      { a: { x: 43.821, y: 38.24, z: 46.712 }, b: { x: 45.075, y: 37.341, z: 45.381 }, color: "#a78bfa", label: "HIS383 2.04 Å" },
+      { a: { x: 43.821, y: 38.24, z: 46.712 }, b: { x: 44.928, y: 39.14, z: 48.213 }, color: "#a78bfa", label: "HIS387 2.07 Å" },
+      { a: { x: 43.821, y: 38.24, z: 46.712 }, b: { x: 43.226, y: 39.598, z: 45.376 }, color: "#a78bfa", label: "GLU411 2.00 Å" }
+    ],
+    pins: [
+      { text: "Zn²⁺ 701 + Lisinopril LPR 702 (2.14 Å)", pos: { x: 42.88, y: 37.76, z: 46.89 }, bg: "#083a36", border: "#38d6c4" },
+      { text: "HEXXH+E Triad (HIS383/387 · GLU411)", pos: { x: 44.41, y: 38.69, z: 46.32 }, bg: "#3d2b09", border: "#f4ae42" }
+    ],
+    annotations: [
+      {
+        title: "Closed-Shell 3d¹⁰ Zn²⁺ (701) + Lisinopril (LPR 702)",
+        badge: "Zn–O3 = 2.141 Å",
+        color: "#38d6c4",
+        desc: "Carboxylate oxygen O3 coordinates Zn²⁺ at 2.141 Å with 2.556 Å pocket clearance and 0 clashes < 2.0 Å; solved classically to 0.015 mHa.",
+        sel: { resi: [701, 702] }
+      },
+      {
+        title: "HEXXH+E Catalytic Triad (HIS383 · HIS387 · GLU411)",
+        badge: "2.00–2.07 Å",
+        color: "#f4ae42",
+        desc: "Tetrahedral zinc coordination scaffold for first-line NCL Hypertension (Outcome #23) and CKD nephroprotection.",
+        sel: { resi: [383, 387, 411, 701] }
+      }
+    ],
+    contacts: [
+      ["ZN701 — LPR702 O3", "2.141 Å", "Primary carboxyalkyl inhibitor bond"],
+      ["ZN701 — GLU411 OE1", "1.996 Å", "Tetrahedral carboxylate ligand"],
+      ["ZN701 — HIS383 / HIS387 NE2", "2.038 / 2.071 Å", "HEXXH motif histidine coordination"]
+    ]
+  },
+  {
+    id: "1N9V",
+    tabLabel: "PDB 1N9V · Angiotensin II (NMR)",
+    dotColor: "#60a5fa",
+    hudTitle: "PDB 1N9V · Human Angiotensin II Octapeptide DRVYIHPF (Solution NMR · 8q QProtSim)",
+    verdictClass: "",
+    verdictTitle: "8-Qubit Residue-Level Solvation Benchmark (Classical Statevector Exact Today)",
+    verdictBody:
+      "Solution NMR conformer 1 of human Angiotensin II (ASP1–ARG2–VAL3–TYR4–ILE5–HIS6–PRO7–PHE8), mapped to an 8-qubit solvated Ising/XY Hamiltonian (Section 4.2, Figure 3b) peaking at N-terminal I(D1:R2) = 0.1115 bits and C-terminal I(H6:P7) = 0.1041 bits.",
+    kpis: [
+      { lbl: "Experimental Method", val: "Solution NMR (Model 1)" },
+      { lbl: "Peptide Sequence", val: "D1-R2-V3-Y4-I5-H6-P7-F8" },
+      { lbl: "Peak Mutual Info", val: "I(D1:R2) = 0.1115 bits" },
+      { lbl: "C-Terminal Turn", val: "I(H6:P7) = 0.1041 bits" }
+    ],
+    cofactorSel: null,
+    ligandSel: { resi: [1, 2] },
+    pocketResi: [3, 4, 5, 6, 7, 8],
+    focusSel: { resi: [1, 2, 3, 4, 5, 6, 7, 8] },
+    bonds: [],
+    pins: [
+      { text: "ASP1–ARG2 N-Terminus (0.1115 bits)", pos: null, sel: { resi: [1, 2] }, bg: "#083a36", border: "#38d6c4" },
+      { text: "HIS6–PRO7–PHE8 C-Turn (0.1041 bits)", pos: null, sel: { resi: [6, 7, 8] }, bg: "#3d2b09", border: "#f4ae42" }
+    ],
+    annotations: [
+      {
+        title: "N-Terminal Salt-Bridge Pair (ASP1 · ARG2)",
+        badge: "I = 0.1115 bits",
+        color: "#38d6c4",
+        desc: "Highest pairwise quantum mutual information across the 8-qubit solvated Angiotensin II conformational ensemble.",
+        sel: { resi: [1, 2] }
+      },
+      {
+        title: "C-Terminal Vasoconstrictor Turn (HIS6 · PRO7 · PHE8)",
+        badge: "I = 0.1041 bits",
+        color: "#f4ae42",
+        desc: "Aromatic C-terminal motif recognized by AT1R and generated via ACE cleavage.",
+        sel: { resi: [6, 7, 8] }
+      }
+    ],
+    contacts: [
+      ["D1 — R2 Pairwise I(i:j)", "0.1115 bits", "Peak N-terminal electrostatic coupling"],
+      ["H6 — P7 Pairwise I(i:j)", "0.1041 bits", "Proline-turn conformational correlation"],
+      ["R2 — V3 / V3 — Y4", "0.0946 / 0.0923 bits", "Central β-strand-like peptide core"]
+    ]
+  }
+];
+
+function extractChainAModel1(rawPdb) {
+  const out = [];
+  let inModel = false;
+  let atomCount = 0;
+  const lines = rawPdb.split(/\r?\n/);
+  for (let i = 0; i < lines.length; i++) {
+    const ln = lines[i];
+    if (ln.startsWith("MODEL ")) {
+      if (inModel) break;
+      inModel = true;
+      continue;
+    }
+    if (ln.startsWith("ENDMDL") && inModel) break;
+    if (ln.startsWith("ATOM  ") || ln.startsWith("HETATM")) {
+      const ch = ln.slice(21, 22).trim();
+      if (ch && ch !== "A") continue;
+      const resn = ln.slice(17, 20).trim();
+      if (resn === "HOH" || resn === "DMS" || resn === "CL") continue;
+      out.push(ln);
+      atomCount++;
+    } else if (ln.startsWith("CONECT")) {
+      out.push(ln);
+    }
+  }
+  out.push("END");
+  return { pdbText: out.join("\n"), atomCount };
+}
+
+function initStructureViewer() {
+  const stageEl = document.getElementById("mol-viewer-stage");
+  const tabsEl = document.getElementById("mol-tabs");
+  const inspectorEl = document.getElementById("mol-inspector");
+  if (!stageEl || !tabsEl || !inspectorEl) return;
+
+  let viewer = null;
+  let currentIdx = 0;
+  let currentStyle = "cartoon_pocket";
+  let showLabels = true;
+  let spinning = false;
+  const pdbCache = new Map();
+
+  // Render Structure Tabs
+  MOL_STRUCTURES.forEach((st, idx) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.role = "tab";
+    btn.className = "mol-tab-btn" + (idx === 0 ? " active" : "");
+    btn.setAttribute("aria-selected", idx === 0 ? "true" : "false");
+    btn.innerHTML = `<span class="mol-tab-dot" style="background:${st.dotColor}"></span><span>${st.tabLabel}</span>`;
+    btn.addEventListener("click", () => {
+      currentIdx = idx;
+      tabsEl.querySelectorAll(".mol-tab-btn").forEach((b, j) => {
+        b.classList.toggle("active", j === idx);
+        b.setAttribute("aria-selected", j === idx ? "true" : "false");
+      });
+      loadAndRenderStructure(true);
+    });
+    tabsEl.appendChild(btn);
+  });
+
+  function renderInspectorPanel(st) {
+    const kpiHtml = st.kpis
+      .map(
+        k => `<div class="mol-kpi-cell"><div class="mk-lbl">${k.lbl}</div><div class="mk-val">${k.val}</div></div>`
+      )
+      .join("");
+    const annoHtml = st.annotations
+      .map(
+        (a, i) => `
+        <button type="button" class="mol-anno-card" data-anno-idx="${i}" style="border-left-color:${a.color}">
+          <div class="mol-anno-title">
+            <span>${a.title}</span>
+            <span style="color:${a.color}">${a.badge} ⌖</span>
+          </div>
+          <div class="mol-anno-desc">${a.desc}</div>
+        </button>`
+      )
+      .join("");
+    const rowsHtml = st.contacts
+      .map(
+        r => `<tr><td style="font-family:var(--font-mono);color:var(--ink)">${r[0]}</td><td style="font-family:var(--font-mono);color:var(--signal);font-weight:700">${r[1]}</td><td style="color:var(--ink-muted)">${r[2]}</td></tr>`
+      )
+      .join("");
+
+    inspectorEl.innerHTML = `
+      <div class="mol-verdict-box ${st.verdictClass}">
+        <div style="font-family:var(--font-mono);font-size:0.72rem;font-weight:700;text-transform:uppercase;color:${st.verdictClass === "amber" ? "var(--amber)" : "var(--signal)"};margin-bottom:0.22rem">${st.verdictTitle}</div>
+        <div style="color:var(--ink-muted)">${st.verdictBody}</div>
+      </div>
+      <div class="mol-kpi-grid">${kpiHtml}</div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-muted);margin-bottom:0.45rem">Clickable 3D Active-Site Annotations (Click to Focus)</div>
+        <div class="mol-anno-list">${annoHtml}</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-muted);margin-bottom:0.35rem">Verified Crystallographic &amp; Quantum Metrics</div>
+        <table class="mol-coord-table">
+          <thead><tr><th>Locus / Observable</th><th>Value</th><th>Role</th></tr></thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>
+    `;
+
+    inspectorEl.querySelectorAll("[data-anno-idx]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const a = st.annotations[Number(btn.dataset.annoIdx)];
+        if (viewer && a?.sel) {
+          viewer.zoomTo(a.sel, 450);
+          viewer.render();
+        }
+      });
+    });
+  }
+
+  function applyRepresentation(st) {
+    if (!viewer) return;
+    viewer.setStyle({}, {});
+    viewer.removeAllSurfaces();
+    viewer.removeAllShapes();
+    viewer.removeAllLabels();
+
+    if (currentStyle === "quantum_cluster") {
+      viewer.setStyle({}, { line: { color: "#1c363b", opacity: 0.22 } });
+      if (st.pocketResi?.length) {
+        viewer.setStyle({ resi: st.pocketResi }, { stick: { radius: 0.16, colorscheme: "orangeCarbon" } });
+      }
+    } else if (currentStyle === "spheres") {
+      viewer.setStyle({ hetflag: false }, { cartoon: { color: "#1e4b52", opacity: 0.72, thickness: 0.25 } });
+      if (st.pocketResi?.length) {
+        viewer.setStyle({ resi: st.pocketResi }, { cartoon: { color: "#1e4b52", opacity: 0.72 }, stick: { radius: 0.15, colorscheme: "orangeCarbon" } });
+      }
+    } else {
+      // cartoon_pocket or pocket_surface
+      viewer.setStyle({ hetflag: false }, { cartoon: { color: "spectrum", opacity: 0.84 } });
+      if (st.pocketResi?.length) {
+        viewer.setStyle(
+          { resi: st.pocketResi },
+          { cartoon: { color: "spectrum", opacity: 0.84 }, stick: { radius: 0.16, colorscheme: "orangeCarbon" } }
+        );
+      }
+    }
+
+    if (st.cofactorSel) {
+      if (st.cofactorSel.resn === "ZN") {
+        viewer.setStyle(st.cofactorSel, { sphere: { scale: 0.62, color: "#ff4f5e" } });
+      } else {
+        viewer.setStyle(
+          st.cofactorSel,
+          currentStyle === "spheres"
+            ? { sphere: { scale: 0.45, colorscheme: "redCarbon" }, stick: { radius: 0.2, colorscheme: "redCarbon" } }
+            : { stick: { radius: 0.22, colorscheme: "redCarbon" }, sphere: { scale: 0.28, colorscheme: "redCarbon" } }
+        );
+        viewer.setStyle({ resn: st.cofactorSel.resn, elem: "Fe" }, { sphere: { scale: 0.58, color: "#ff4f5e" } });
+      }
+    }
+
+    if (st.ligandSel) {
+      viewer.setStyle(
+        st.ligandSel,
+        currentStyle === "spheres"
+          ? { sphere: { scale: 0.52, colorscheme: "cyanCarbon" } }
+          : { stick: { radius: 0.24, colorscheme: "cyanCarbon" }, sphere: { scale: 0.28, colorscheme: "cyanCarbon" } }
+      );
+    }
+
+    if (currentStyle === "pocket_surface") {
+      const surfTarget = st.focusSel || {};
+      const lib3d = window.$3Dmol || window["3Dmol"];
+      if (lib3d?.SurfaceType) {
+        viewer.addSurface(
+          lib3d.SurfaceType.VDW,
+          { opacity: 0.34, color: "#38d6c4" },
+          surfTarget,
+          surfTarget
+        );
+      }
+    }
+
+    if (showLabels) {
+      for (const b of st.bonds || []) {
+        viewer.addCylinder({
+          start: b.a,
+          end: b.b,
+          radius: 0.065,
+          dashed: true,
+          dashLength: 0.18,
+          gapLength: 0.14,
+          color: b.color,
+          fromCap: 1,
+          toCap: 1
+        });
+      }
+      for (const p of st.pins || []) {
+        const opts = {
+          backgroundColor: p.bg,
+          backgroundOpacity: 0.88,
+          borderColor: p.border,
+          borderThickness: 1.2,
+          fontColor: "#eef7f5",
+          fontSize: 11.5,
+          inFront: true,
+          showBackground: true
+        };
+        if (p.pos) {
+          opts.position = p.pos;
+          viewer.addLabel(p.text, opts);
+        } else if (p.sel) {
+          viewer.addLabel(p.text, opts, p.sel);
+        }
+      }
+    }
+
+    viewer.render();
+  }
+
+  async function loadAndRenderStructure(focusPocket = true) {
+    const st = MOL_STRUCTURES[currentIdx];
+    renderInspectorPanel(st);
+
+    const hudTitle = document.getElementById("mol-hud-title");
+    if (hudTitle) hudTitle.textContent = st.hudTitle;
+    const dlBtn = document.getElementById("mol-dl-pdb");
+    if (dlBtn) {
+      dlBtn.href = `structures/${st.id}.pdb`;
+      dlBtn.setAttribute("download", `${st.id}.pdb`);
+      dlBtn.textContent = `⬇ ${st.id}.pdb`;
+    }
+    const rcsbLink = document.getElementById("mol-rcsb-link");
+    if (rcsbLink) rcsbLink.href = `https://www.rcsb.org/structure/${st.id}`;
+
+    if (!viewer) return;
+
+    const loadingMsg = document.getElementById("mol-loading-msg");
+    try {
+      let parsed = pdbCache.get(st.id);
+      if (!parsed) {
+        if (loadingMsg) loadingMsg.style.display = "block";
+        const resp = await fetch(`structures/${st.id}.pdb`);
+        const raw = await resp.text();
+        parsed = extractChainAModel1(raw);
+        pdbCache.set(st.id, parsed);
+      }
+      if (loadingMsg) loadingMsg.style.display = "none";
+
+      const countEl = document.getElementById("mol-atom-count");
+      if (countEl) countEl.textContent = `Chain A · ${parsed.atomCount.toLocaleString()} heavy atoms`;
+
+      viewer.removeAllModels();
+      viewer.removeAllSurfaces();
+      viewer.removeAllShapes();
+      viewer.removeAllLabels();
+      viewer.addModel(parsed.pdbText, "pdb");
+      applyRepresentation(st);
+
+      if (focusPocket && st.focusSel) {
+        viewer.zoomTo(st.focusSel, 350);
+      } else {
+        viewer.zoomTo({}, 350);
+      }
+      viewer.spin(spinning ? "y" : false);
+      viewer.render();
+    } catch (err) {
+      if (loadingMsg) {
+        loadingMsg.style.display = "block";
+        loadingMsg.textContent = `Unable to load structures/${st.id}.pdb: ${err.message}`;
+      }
+    }
+  }
+
+  // Toolbar Bindings
+  document.querySelectorAll("[data-mol-style]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("[data-mol-style]").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentStyle = btn.dataset.molStyle;
+      applyRepresentation(MOL_STRUCTURES[currentIdx]);
+    });
+  });
+
+  document.getElementById("mol-focus-pocket-btn")?.addEventListener("click", () => {
+    const st = MOL_STRUCTURES[currentIdx];
+    if (viewer && st.focusSel) {
+      viewer.zoomTo(st.focusSel, 400);
+      viewer.render();
+    }
+  });
+
+  document.getElementById("mol-focus-full-btn")?.addEventListener("click", () => {
+    if (viewer) {
+      viewer.zoomTo({}, 400);
+      viewer.render();
+    }
+  });
+
+  const lblBtn = document.getElementById("mol-toggle-labels-btn");
+  lblBtn?.addEventListener("click", () => {
+    showLabels = !showLabels;
+    lblBtn.setAttribute("aria-pressed", showLabels ? "true" : "false");
+    lblBtn.textContent = showLabels ? "🏷 Annotations: ON" : "🏷 Annotations: OFF";
+    applyRepresentation(MOL_STRUCTURES[currentIdx]);
+  });
+
+  const spinBtn = document.getElementById("mol-spin-btn");
+  spinBtn?.addEventListener("click", () => {
+    spinning = !spinning;
+    spinBtn.setAttribute("aria-pressed", spinning ? "true" : "false");
+    spinBtn.textContent = spinning ? "⏸ Spin: ON" : "🔄 Spin";
+    if (viewer) viewer.spin(spinning ? "y" : false);
+  });
+
+  document.getElementById("mol-snap-btn")?.addEventListener("click", () => {
+    if (!viewer) return;
+    const uri = viewer.pngURI();
+    const a = document.createElement("a");
+    a.href = uri;
+    a.download = `Quantum_LTC_${MOL_STRUCTURES[currentIdx].id}_3D.png`;
+    a.click();
+  });
+
+  const shellEl = document.getElementById("mol-viewer-shell");
+  document.getElementById("mol-fullscreen-btn")?.addEventListener("click", () => {
+    if (!shellEl) return;
+    if (!document.fullscreenElement) {
+      shellEl.requestFullscreen?.();
+    } else {
+      document.exitFullscreen?.();
+    }
+  });
+  document.addEventListener("fullscreenchange", () => {
+    setTimeout(() => viewer && viewer.resize(), 120);
+  });
+
+  renderInspectorPanel(MOL_STRUCTURES[0]);
+
+  function mount3DMol() {
+    const lib3d = window.$3Dmol || window["3Dmol"];
+    if (viewer || !lib3d) return;
+    const loadingMsg = document.getElementById("mol-loading-msg");
+    if (loadingMsg) loadingMsg.style.display = "none";
+    viewer = lib3d.createViewer(stageEl, {
+      backgroundColor: "#060d0f",
+      antialias: true
+    });
+    loadAndRenderStructure(true);
+    window.addEventListener("resize", () => viewer && viewer.resize());
+  }
+
+  let tries = 0;
+  const poll = setInterval(() => {
+    tries++;
+    if (window.$3Dmol || window["3Dmol"]) {
+      clearInterval(poll);
+      mount3DMol();
+    } else if (tries > 80) {
+      clearInterval(poll);
+    }
+  }, 60);
+  mount3DMol();
+}
+
 async function boot() {
   if (typeof window === "undefined") return;
   initNav();
   initPdfReader();
+  initStructureViewer();
   initEraSimulator();
   initBlochAndDisCoPy();
   const [dataRes, weightsRes] = await Promise.all([
