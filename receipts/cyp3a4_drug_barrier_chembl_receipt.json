@@ -1,0 +1,788 @@
+{
+  "schema_version": "1.0.0-cyp3a4-gate1-def2svp-chembl-pbpk",
+  "benchmark_suite": "Gate 1 Clinical Quantum Wedge: Drug-Bound CYP3A4 def2-SVP Reaction Barriers (PDB 5TE8/3NXU), THC-QPE & Live ChEMBL340 PBPK",
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "data_licenses": {
+      "rcsb_pdb": "CC0 1.0 (https://www.rcsb.org/pages/usage-policy)",
+      "chembl": "CC BY-SA 3.0 (https://chembl.gitbook.io/chembl-interface-documentation/about)",
+      "alphagenome": "Non-Commercial Research Terms (https://deepmind.google.com/science/alphagenome/terms)"
+    },
+    "clinical_claim_boundary": "Strictly research-grade quantum-chemistry & PBPK parameterization benchmark under open NHS DCB0129/DCB0160 hazard H-LTC-02; mandatory Clinical Pharmacist SMR & GP sign-off required."
+  },
+  "total_benchmark_wall_seconds": 155.331,
+  "drug_bound_cyp3a4_crystal_audit": {
+    "pdb_5te8_midazolam": {
+      "pdb_id": "5TE8",
+      "bound_ligand_code": "08J",
+      "bound_ligand_heavy_atoms": 23,
+      "fe_cys442_sg_distance_angstroms": 2.424,
+      "closest_ligand_atom_to_fe": "08J602.CAI",
+      "closest_ligand_fe_distance_angstroms": 3.389,
+      "second_closest_ligand_atom": "08J602.CAH (3.439 A)",
+      "first_shell_pocket_residues_within_5A": [
+        "ALA305",
+        "ALA370",
+        "ARG105",
+        "ASP217",
+        "GLY481",
+        "ILE301",
+        "ILE369",
+        "LEU216",
+        "LEU482",
+        "PHE304",
+        "PRO218",
+        "SER119",
+        "THR309"
+      ],
+      "first_shell_residue_count": 13,
+      "resolution_angstroms": 2.7,
+      "clinical_mechanism": "FDA index CYP3A4 hydroxylation probe (Midazolam 08J): aliphatic C4/C1' carbon poised 3.389 A above heme Fe for Compound I hydrogen-atom transfer (HAT)."
+    },
+    "pdb_3nxu_ritonavir": {
+      "pdb_id": "3NXU",
+      "bound_ligand_code": "RIT",
+      "bound_ligand_heavy_atoms": 50,
+      "fe_cys442_sg_distance_angstroms": 2.284,
+      "closest_ligand_atom_to_fe": "RIT600.N5",
+      "closest_ligand_fe_distance_angstroms": 2.225,
+      "second_closest_ligand_atom": "RIT600.C4 (3.072 A)",
+      "first_shell_pocket_residues_within_5A": [
+        "ALA305",
+        "ALA370",
+        "ARG105",
+        "ARG106",
+        "ARG372",
+        "ASP76",
+        "GLU374",
+        "GLY481",
+        "ILE120",
+        "ILE300",
+        "ILE301",
+        "ILE369",
+        "LEU210",
+        "LEU211",
+        "LEU373",
+        "LEU482",
+        "MET114",
+        "MET371",
+        "PHE108",
+        "PHE213",
+        "PHE215",
+        "PHE241",
+        "PHE304",
+        "PHE57",
+        "SER119",
+        "THR224",
+        "THR309",
+        "TYR53"
+      ],
+      "first_shell_residue_count": 28,
+      "resolution_angstroms": 2.0,
+      "clinical_mechanism": "Potent CYP3A4 inhibitor (Ritonavir RIT): thiazole N5 directly ligates heme Fe at 2.225 A (Type-II coordination), displacing distal oxo/water and locking out catalysis."
+    }
+  },
+  "def2svp_hat_reaction_barrier_benchmark": {
+    "basis_specification": "Polarized def2-SVP on reactive 4-center [Fe, O, S, C_sub] + 6-31G(N)/STO-3G(H) spectators",
+    "stages": {
+      "RC": {
+        "geometry_parameters_angstroms": {
+          "d_feo": 1.63,
+          "d_oh": 2.25,
+          "d_ch": 1.09,
+          "cos_umb": 0.333,
+          "ch_spec": 1.09
+        },
+        "n_atoms": 15,
+        "n_ao_polarized_def2svp_core": 104,
+        "avas_polarized_pool_count": 28,
+        "broken_symmetry_dft_functionals": {
+          "pbe": {
+            "e_doublet_ha": -1888.904903,
+            "e_quartet_ha": -1888.912616,
+            "s2_broken_sym_doublet": 1.4775,
+            "s2_quartet": 3.8181
+          },
+          "blyp": {
+            "e_doublet_ha": -1889.570017,
+            "e_quartet_ha": -1889.5758,
+            "s2_broken_sym_doublet": 1.4728,
+            "s2_quartet": 3.7913
+          },
+          "b3lyp": {
+            "e_doublet_ha": -1889.580034,
+            "e_quartet_ha": -1889.580992,
+            "s2_broken_sym_doublet": 1.7942,
+            "s2_quartet": 3.9166
+          },
+          "pbe0": {
+            "e_doublet_ha": -1888.875284,
+            "e_quartet_ha": -1888.878989,
+            "s2_broken_sym_doublet": 1.777,
+            "s2_quartet": 3.8961
+          }
+        },
+        "casscf_9e_9o": {
+          "e_doublet_ha": -1886.054902,
+          "e_quartet_ha": -1886.057885
+        },
+        "sc_nevpt2_9e_9o": {
+          "e_doublet_ha": -1886.986118,
+          "e_quartet_ha": -1886.987439,
+          "nevpt2_corr_doublet_mha": -931.216,
+          "nevpt2_corr_quartet_mha": -929.554
+        },
+        "identical_h_cas_doublet": {
+          "e_rohf_cas_ha": -1885.857162,
+          "e_rccsd_cas_ha": -1886.04413,
+          "e_rccsd_t_cas_ha": -1886.052376,
+          "e_fci_exact_cas_ha": -1886.054902,
+          "s2_fci_exact": 0.75,
+          "err_rccsd_t_vs_fci_mha": 2.5254,
+          "frontier_natural_occupations": [
+            1.0582,
+            0.9793,
+            0.9586
+          ],
+          "bipartite_schmidt": {
+            "bipartition_orbitals": "4|5",
+            "von_neumann_entropy_nats": 1.63432,
+            "effective_schmidt_number_K": 3.7531,
+            "discarded_weight_by_chi": {
+              "chi_1": 0.57234298,
+              "chi_2": 0.39364342,
+              "chi_4": 0.07527105,
+              "chi_8": 0.0315344,
+              "chi_16": 0.00446633,
+              "chi_32": 0.00015809
+            }
+          }
+        },
+        "identical_h_cas_quartet": {
+          "e_rohf_cas_ha": -1886.025146,
+          "e_rccsd_cas_ha": -1886.057319,
+          "e_rccsd_t_cas_ha": -1886.057742,
+          "e_fci_exact_cas_ha": -1886.057885,
+          "s2_fci_exact": 3.75,
+          "err_rccsd_t_vs_fci_mha": 0.1429,
+          "frontier_natural_occupations": [
+            1.0002,
+            0.9999,
+            0.9959
+          ],
+          "bipartite_schmidt": {
+            "bipartition_orbitals": "4|5",
+            "von_neumann_entropy_nats": 0.39889,
+            "effective_schmidt_number_K": 1.1815,
+            "discarded_weight_by_chi": {
+              "chi_1": 0.08116426,
+              "chi_2": 0.04564817,
+              "chi_4": 0.01196905,
+              "chi_8": 0.00138858,
+              "chi_16": 0.00012014,
+              "chi_32": 5.59e-06
+            }
+          }
+        },
+        "df_and_thc_9o": {
+          "n_spatial_orbitals": 9,
+          "df_rank_L": 40,
+          "thc_rank_M_thc": 40,
+          "lambda_one_body_ha": 3.5322,
+          "lambda_df_total_ha": 13.8839,
+          "lambda_thc_total_ha": 9.1221
+        },
+        "df_and_thc_13o": {
+          "n_spatial_orbitals": 13,
+          "df_rank_L": 72,
+          "thc_rank_M_thc": 58,
+          "lambda_one_body_ha": 6.1772,
+          "lambda_df_total_ha": 32.5227,
+          "lambda_thc_total_ha": 20.4037
+        }
+      },
+      "TS_HAT": {
+        "geometry_parameters_angstroms": {
+          "d_feo": 1.73,
+          "d_oh": 1.24,
+          "d_ch": 1.28,
+          "cos_umb": 0.12,
+          "ch_spec": 1.08
+        },
+        "n_atoms": 15,
+        "n_ao_polarized_def2svp_core": 104,
+        "avas_polarized_pool_count": 26,
+        "broken_symmetry_dft_functionals": {
+          "pbe": {
+            "e_doublet_ha": -1888.832189,
+            "e_quartet_ha": -1888.858602,
+            "s2_broken_sym_doublet": 1.6704,
+            "s2_quartet": 3.9761
+          },
+          "blyp": {
+            "e_doublet_ha": -1889.502609,
+            "e_quartet_ha": -1889.518316,
+            "s2_broken_sym_doublet": 1.5219,
+            "s2_quartet": 3.9197
+          },
+          "b3lyp": {
+            "e_doublet_ha": -1889.520878,
+            "e_quartet_ha": -1889.525123,
+            "s2_broken_sym_doublet": 1.9325,
+            "s2_quartet": 4.3692
+          },
+          "pbe0": {
+            "e_doublet_ha": -1888.822244,
+            "e_quartet_ha": -1888.816107,
+            "s2_broken_sym_doublet": 2.2252,
+            "s2_quartet": 4.1087
+          }
+        },
+        "casscf_9e_9o": {
+          "e_doublet_ha": -1886.03803,
+          "e_quartet_ha": -1886.037184
+        },
+        "sc_nevpt2_9e_9o": {
+          "e_doublet_ha": -1886.969915,
+          "e_quartet_ha": -1886.968064,
+          "nevpt2_corr_doublet_mha": -931.884,
+          "nevpt2_corr_quartet_mha": -930.88
+        },
+        "identical_h_cas_doublet": {
+          "e_rohf_cas_ha": -1885.703999,
+          "e_rccsd_cas_ha": -1886.019738,
+          "e_rccsd_t_cas_ha": -1886.036832,
+          "e_fci_exact_cas_ha": -1886.03803,
+          "s2_fci_exact": 0.75,
+          "err_rccsd_t_vs_fci_mha": 1.1982,
+          "frontier_natural_occupations": [
+            1.9181,
+            1.8054,
+            1.2063,
+            0.9998,
+            0.8586,
+            0.1988
+          ],
+          "bipartite_schmidt": {
+            "bipartition_orbitals": "4|5",
+            "von_neumann_entropy_nats": 2.31401,
+            "effective_schmidt_number_K": 5.9946,
+            "discarded_weight_by_chi": {
+              "chi_1": 0.69090297,
+              "chi_2": 0.47557715,
+              "chi_4": 0.28790149,
+              "chi_8": 0.14193388,
+              "chi_16": 0.04104111,
+              "chi_32": 0.00759971
+            }
+          }
+        },
+        "identical_h_cas_quartet": {
+          "e_rohf_cas_ha": -1885.946294,
+          "e_rccsd_cas_ha": -1886.028004,
+          "e_rccsd_t_cas_ha": -1886.032615,
+          "e_fci_exact_cas_ha": -1886.037184,
+          "s2_fci_exact": 3.75,
+          "err_rccsd_t_vs_fci_mha": 4.5689,
+          "frontier_natural_occupations": [
+            1.9115,
+            1.8127,
+            1.073,
+            1.0002,
+            0.9972,
+            0.1919
+          ],
+          "bipartite_schmidt": {
+            "bipartition_orbitals": "4|5",
+            "von_neumann_entropy_nats": 1.37527,
+            "effective_schmidt_number_K": 2.5614,
+            "discarded_weight_by_chi": {
+              "chi_1": 0.4296739,
+              "chi_2": 0.18539008,
+              "chi_4": 0.10345007,
+              "chi_8": 0.02115755,
+              "chi_16": 0.00335024,
+              "chi_32": 0.00050844
+            }
+          }
+        },
+        "df_and_thc_9o": {
+          "n_spatial_orbitals": 9,
+          "df_rank_L": 44,
+          "thc_rank_M_thc": 40,
+          "lambda_one_body_ha": 2.909,
+          "lambda_df_total_ha": 14.1561,
+          "lambda_thc_total_ha": 8.9825
+        },
+        "df_and_thc_13o": {
+          "n_spatial_orbitals": 13,
+          "df_rank_L": 80,
+          "thc_rank_M_thc": 58,
+          "lambda_one_body_ha": 8.6666,
+          "lambda_df_total_ha": 31.8655,
+          "lambda_thc_total_ha": 21.194
+        }
+      }
+    },
+    "hat_barrier_comparison_table": [
+      {
+        "method": "BS-DFT PBE (GGA)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 45.63,
+        "barrier_quartet_kcal_mol": 33.89,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": -16.57,
+        "ts_s2_doublet": 1.6704
+      },
+      {
+        "method": "BS-DFT BLYP (GGA)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 42.3,
+        "barrier_quartet_kcal_mol": 36.07,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": -9.86,
+        "ts_s2_doublet": 1.5219
+      },
+      {
+        "method": "BS-DFT B3LYP (20% HF Hybrid)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 37.12,
+        "barrier_quartet_kcal_mol": 35.06,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": -2.66,
+        "ts_s2_doublet": 1.9325
+      },
+      {
+        "method": "BS-DFT PBE0 (25% HF Hybrid)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 33.28,
+        "barrier_quartet_kcal_mol": 39.46,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": 3.85,
+        "ts_s2_doublet": 2.2252
+      },
+      {
+        "method": "SA-CASSCF(9e,9o) / def2-SVP",
+        "family": "Multireference Perturbation / MCSCF",
+        "barrier_doublet_kcal_mol": 10.59,
+        "barrier_quartet_kcal_mol": 12.99,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": 0.53,
+        "ts_s2_doublet": 0.75
+      },
+      {
+        "method": "CASSCF(9e,9o) + SC-NEVPT2 / def2-SVP",
+        "family": "Multireference Perturbation / MCSCF",
+        "barrier_doublet_kcal_mol": 10.17,
+        "barrier_quartet_kcal_mol": 12.16,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": 1.16,
+        "ts_s2_doublet": 0.75
+      }
+    ],
+    "dft_functional_uncertainty_audit": {
+      "doublet_barrier_spread_kcal_mol": 12.35,
+      "quartet_barrier_spread_kcal_mol": 5.57,
+      "max_xc_functional_spread_kcal_mol": 12.35,
+      "eyring_kcat_fold_uncertainty_at_310K": 503917810.7,
+      "chemical_accuracy_1kcal_kcat_fold_at_310K": 5.07
+    },
+    "identical_h_cas_barrier_audit": {
+      "exact_fci_doublet_barrier_delta_mha": 16.872,
+      "rccsd_t_doublet_barrier_delta_mha": 15.544,
+      "rccsd_t_barrier_error_mha": -1.328,
+      "rccsd_t_barrier_error_kcal_mol": -0.833,
+      "rc_entropy_nats": 1.63432,
+      "ts_hat_entropy_nats": 2.31401,
+      "rc_chi4_discarded": 0.07527105,
+      "ts_hat_chi4_discarded": 0.28790149
+    }
+  },
+  "paired_barrier_df_vs_thc_ftqc_resources": {
+    "endpoint_qpe_precision_mha": 0.7,
+    "combined_barrier_precision_mha": 0.99,
+    "chemical_accuracy_target_mha": 1.6,
+    "scaling_rows": [
+      {
+        "n_spatial_orbitals_M": 9,
+        "label": "CAS(9e,9o): Polarized Fe=O(S)...H-C minimal HAT reaction core (PySCF exact)",
+        "lambda_df_single_point_ha": 14.16,
+        "lambda_thc_single_point_ha": 8.07,
+        "df_2point_barrier_toffolis": 18043656,
+        "thc_2point_barrier_toffolis": 10719344,
+        "thc_toffoli_speedup_factor": 1.68,
+        "df_logical_qubits": 38,
+        "thc_logical_qubits": 46,
+        "thc_surface_code_distance_d": 15,
+        "thc_physical_qubits": 36450,
+        "paired_barrier_wall_hours_df_4factory": 0.006,
+        "paired_barrier_wall_hours_thc_4factory": 0.004
+      },
+      {
+        "n_spatial_orbitals_M": 26,
+        "label": "CAS(27e,26o): Fe 3d/4d + O 2p + CYS442 S + 4 pyrrole N + C-H bond (Era III)",
+        "lambda_df_single_point_ha": 147.07,
+        "lambda_thc_single_point_ha": 83.83,
+        "df_2point_barrier_toffolis": 926738280,
+        "thc_2point_barrier_toffolis": 361942880,
+        "thc_toffoli_speedup_factor": 2.56,
+        "df_logical_qubits": 74,
+        "thc_logical_qubits": 82,
+        "thc_surface_code_distance_d": 19,
+        "thc_physical_qubits": 97470,
+        "paired_barrier_wall_hours_df_4factory": 0.309,
+        "paired_barrier_wall_hours_thc_4factory": 0.121
+      },
+      {
+        "n_spatial_orbitals_M": 42,
+        "label": "CAS(43e,42o): Full 24-atom porphyrin pi-ring + CYS442 + midazolam ring (Era III-IV)",
+        "lambda_df_single_point_ha": 423.74,
+        "lambda_thc_single_point_ha": 241.53,
+        "df_2point_barrier_toffolis": 5689958208,
+        "thc_2point_barrier_toffolis": 1866617004,
+        "thc_toffoli_speedup_factor": 3.05,
+        "df_logical_qubits": 108,
+        "thc_logical_qubits": 116,
+        "thc_surface_code_distance_d": 21,
+        "thc_physical_qubits": 164052,
+        "paired_barrier_wall_hours_df_4factory": 1.897,
+        "paired_barrier_wall_hours_thc_4factory": 0.622
+      },
+      {
+        "n_spatial_orbitals_M": 58,
+        "label": "CAS(59e,58o): Drug-bound CYP3A4 pocket + PHE304/ALA305/THR309 HAT gate (Era IV)",
+        "lambda_df_single_point_ha": 863.77,
+        "lambda_thc_single_point_ha": 492.35,
+        "df_2point_barrier_toffolis": 18607603200,
+        "thc_2point_barrier_toffolis": 5767196940,
+        "thc_toffoli_speedup_factor": 3.23,
+        "df_logical_qubits": 140,
+        "thc_logical_qubits": 150,
+        "thc_surface_code_distance_d": 21,
+        "thc_physical_qubits": 209034,
+        "paired_barrier_wall_hours_df_4factory": 6.203,
+        "paired_barrier_wall_hours_thc_4factory": 1.922
+      },
+      {
+        "n_spatial_orbitals_M": 76,
+        "label": "CAS(77e,76o): Allosteric effector + water-wire proton relay + drug scaffold (Era IV)",
+        "lambda_df_single_point_ha": 1568.22,
+        "lambda_thc_single_point_ha": 893.88,
+        "df_2point_barrier_toffolis": 51519243360,
+        "thc_2point_barrier_toffolis": 13720164480,
+        "thc_toffoli_speedup_factor": 3.76,
+        "df_logical_qubits": 177,
+        "thc_logical_qubits": 186,
+        "thc_surface_code_distance_d": 23,
+        "thc_physical_qubits": 307878,
+        "paired_barrier_wall_hours_df_4factory": 17.173,
+        "paired_barrier_wall_hours_thc_4factory": 4.573
+      }
+    ]
+  },
+  "chembl340_and_hybrid_pbpk_aucr_closure": {
+    "chembl_release": "ChEMBL_37",
+    "target_chembl_id": "CHEMBL340",
+    "panel_drugs_count": 10,
+    "ncl_ltc_chembl340_summary": [
+      {
+        "drug_name": "KETOCONAZOLE",
+        "molecule_chembl_id": "CHEMBL157101",
+        "ncl_ltc_clinical_role": "Classic Azole Type-II CYP3A4 Inhibitor (PDB 2V0M)",
+        "raw_chembl340_records_retrieved": 100,
+        "median_ic50_nM": 57.0,
+        "min_ic50_nM": 1.0,
+        "median_ki_nM": 30.0,
+        "min_ki_nM": 7.0,
+        "median_km_nM": null,
+        "median_ac50_potency_nM": 88.0,
+        "kinact_per_min": null,
+        "representative_assay_chembl_ids": [
+          "CHEMBL1000805",
+          "CHEMBL1002238",
+          "CHEMBL1004814",
+          "CHEMBL1022134",
+          "CHEMBL1029448"
+        ]
+      },
+      {
+        "drug_name": "RITONAVIR",
+        "molecule_chembl_id": "CHEMBL163",
+        "ncl_ltc_clinical_role": "Potent Type-II Heme-Ligating Inhibitor (N5-Fe = 2.225 A; PDB 3NXU)",
+        "raw_chembl340_records_retrieved": 44,
+        "median_ic50_nM": 105.0,
+        "min_ic50_nM": 16.0,
+        "median_ki_nM": 100.0,
+        "min_ki_nM": 19.0,
+        "median_km_nM": 19998.62,
+        "median_ac50_potency_nM": null,
+        "kinact_per_min": 0.2275,
+        "representative_assay_chembl_ids": [
+          "CHEMBL1100026",
+          "CHEMBL1262358",
+          "CHEMBL1743427",
+          "CHEMBL1743479",
+          "CHEMBL1743480"
+        ]
+      },
+      {
+        "drug_name": "MIDAZOLAM",
+        "molecule_chembl_id": "CHEMBL655",
+        "ncl_ltc_clinical_role": "FDA Index CYP3A4 Probe Substrate (C1/C4 hydroxylation; PDB 5TE8)",
+        "raw_chembl340_records_retrieved": 13,
+        "median_ic50_nM": 66.1,
+        "min_ic50_nM": 47.0,
+        "median_ki_nM": 2470.0,
+        "min_ki_nM": 2470.0,
+        "median_km_nM": null,
+        "median_ac50_potency_nM": null,
+        "kinact_per_min": 0.028,
+        "representative_assay_chembl_ids": [
+          "CHEMBL3396733",
+          "CHEMBL5117648",
+          "CHEMBL5140381",
+          "CHEMBL5332456",
+          "CHEMBL5356181"
+        ]
+      },
+      {
+        "drug_name": "DILTIAZEM",
+        "molecule_chembl_id": "CHEMBL23",
+        "ncl_ltc_clinical_role": "Non-DHP CCB Moderate CYP3A4 Inhibitor (AF/HTN + Apixaban/Statin DDI)",
+        "raw_chembl340_records_retrieved": 47,
+        "median_ic50_nM": 71000.0,
+        "min_ic50_nM": 100.0,
+        "median_ki_nM": 500.0,
+        "min_ki_nM": 100.0,
+        "median_km_nM": 23007.21,
+        "median_ac50_potency_nM": 3981.1,
+        "kinact_per_min": 0.09,
+        "representative_assay_chembl_ids": [
+          "CHEMBL1063294",
+          "CHEMBL1613886",
+          "CHEMBL1614108",
+          "CHEMBL1741324",
+          "CHEMBL1743442"
+        ]
+      },
+      {
+        "drug_name": "ATORVASTATIN",
+        "molecule_chembl_id": "CHEMBL1487",
+        "ncl_ltc_clinical_role": "First-Line High-Intensity Statin CYP3A4 Substrate (CVD/T2D/CKD)",
+        "raw_chembl340_records_retrieved": 8,
+        "median_ic50_nM": 5100.0,
+        "min_ic50_nM": 5100.0,
+        "median_ki_nM": null,
+        "min_ki_nM": null,
+        "median_km_nM": null,
+        "median_ac50_potency_nM": null,
+        "kinact_per_min": null,
+        "representative_assay_chembl_ids": [
+          "CHEMBL1678715"
+        ]
+      },
+      {
+        "drug_name": "CLARITHROMYCIN",
+        "molecule_chembl_id": "CHEMBL1741",
+        "ncl_ltc_clinical_role": "Macrolide Mechanism-Based Inactivator (Acute COPD/CAP + Statin DDI)",
+        "raw_chembl340_records_retrieved": 9,
+        "median_ic50_nM": null,
+        "min_ic50_nM": null,
+        "median_ki_nM": 5490.0,
+        "min_ki_nM": 5490.0,
+        "median_km_nM": 48752.85,
+        "median_ac50_potency_nM": null,
+        "kinact_per_min": 0.072,
+        "representative_assay_chembl_ids": [
+          "CHEMBL1743430",
+          "CHEMBL836230"
+        ]
+      },
+      {
+        "drug_name": "VERAPAMIL",
+        "molecule_chembl_id": "CHEMBL6966",
+        "ncl_ltc_clinical_role": "Phenylalkylamine CCB Moderate CYP3A4 Inhibitor (AF Rate Control + DOAC/Statin DDI)",
+        "raw_chembl340_records_retrieved": 23,
+        "median_ic50_nM": 10096.5,
+        "min_ic50_nM": 11.0,
+        "median_ki_nM": null,
+        "min_ki_nM": null,
+        "median_km_nM": null,
+        "median_ac50_potency_nM": null,
+        "kinact_per_min": null,
+        "representative_assay_chembl_ids": [
+          "CHEMBL1063294",
+          "CHEMBL3534776",
+          "CHEMBL3541095",
+          "CHEMBL4145388",
+          "CHEMBL4678608"
+        ]
+      },
+      {
+        "drug_name": "NIFEDIPINE",
+        "molecule_chembl_id": "CHEMBL193",
+        "ncl_ltc_clinical_role": "Dihydropyridine CCB CYP3A4 Probe/Substrate (Hypertension Outcome #23)",
+        "raw_chembl340_records_retrieved": 20,
+        "median_ic50_nM": 10500.0,
+        "min_ic50_nM": 5620.0,
+        "median_ki_nM": null,
+        "min_ki_nM": null,
+        "median_km_nM": null,
+        "median_ac50_potency_nM": 12589.27,
+        "kinact_per_min": null,
+        "representative_assay_chembl_ids": [
+          "CHEMBL1063294",
+          "CHEMBL1613886",
+          "CHEMBL1614108",
+          "CHEMBL1678715",
+          "CHEMBL1741324"
+        ]
+      },
+      {
+        "drug_name": "SIMVASTATIN",
+        "molecule_chembl_id": "CHEMBL1064",
+        "ncl_ltc_clinical_role": "Lactone Prodrug Statin High-Extraction CYP3A4 Substrate (f_m,3A4 = 0.88)",
+        "raw_chembl340_records_retrieved": 9,
+        "median_ic50_nM": null,
+        "min_ic50_nM": null,
+        "median_ki_nM": null,
+        "min_ki_nM": null,
+        "median_km_nM": 20892.96,
+        "median_ac50_potency_nM": null,
+        "kinact_per_min": null,
+        "representative_assay_chembl_ids": [
+          "CHEMBL836230"
+        ]
+      },
+      {
+        "drug_name": "AMLODIPINE",
+        "molecule_chembl_id": "CHEMBL1491",
+        "ncl_ltc_clinical_role": "First-Line DHP CCB Weak CYP3A4 Inhibitor (MHRA 20 mg Simvastatin Cap)",
+        "raw_chembl340_records_retrieved": 7,
+        "median_ic50_nM": null,
+        "min_ic50_nM": null,
+        "median_ki_nM": null,
+        "min_ki_nM": null,
+        "median_km_nM": null,
+        "median_ac50_potency_nM": null,
+        "kinact_per_min": null,
+        "representative_assay_chembl_ids": []
+      }
+    ],
+    "pbpk_ddi_aucr_predictions": [
+      {
+        "regimen_id": "NCL-DDI-1",
+        "victim_substrate": "Simvastatin (40 mg CVD/T2D)",
+        "perpetrator": "Ritonavir (PAXLOVID / HIV boost)",
+        "chembl340_ki_nM": 100.0,
+        "chembl340_kinact_min1": 0.2275,
+        "predicted_aucr_wt": 12.29,
+        "predicted_exposure_cyp3a4_star22_vs_wt_baseline": 20.0,
+        "ftqc_1mha_aucr_interval": [
+          11.99,
+          12.44
+        ],
+        "classical_dft_spread_aucr_interval": [
+          2.51,
+          12.63
+        ],
+        "published_clinical_aucr_band": [
+          10.0,
+          20.0
+        ],
+        "within_clinical_band": true,
+        "ncl_pharmacist_smr_action": "HARD CONTRAINDICATION (Hold Simvastatin; rhabdomyolysis risk)"
+      },
+      {
+        "regimen_id": "NCL-DDI-2",
+        "victim_substrate": "Simvastatin (40 mg CVD/COPD)",
+        "perpetrator": "Clarithromycin (500 mg acute COPD/CAP)",
+        "chembl340_ki_nM": 5490.0,
+        "chembl340_kinact_min1": 0.072,
+        "predicted_aucr_wt": 7.5,
+        "predicted_exposure_cyp3a4_star22_vs_wt_baseline": 12.21,
+        "ftqc_1mha_aucr_interval": [
+          5.43,
+          9.3
+        ],
+        "classical_dft_spread_aucr_interval": [
+          1.07,
+          12.6
+        ],
+        "published_clinical_aucr_band": [
+          7.0,
+          12.0
+        ],
+        "within_clinical_band": true,
+        "ncl_pharmacist_smr_action": "SUSPEND STATIN during macrolide course (MHRA / BNF alert)"
+      },
+      {
+        "regimen_id": "NCL-DDI-3",
+        "victim_substrate": "Simvastatin (40 mg AF/HTN)",
+        "perpetrator": "Diltiazem (120 mg BD rate control)",
+        "chembl340_ki_nM": 500.0,
+        "chembl340_kinact_min1": 0.0085,
+        "predicted_aucr_wt": 4.43,
+        "predicted_exposure_cyp3a4_star22_vs_wt_baseline": 7.22,
+        "ftqc_1mha_aucr_interval": [
+          3.02,
+          6.46
+        ],
+        "classical_dft_spread_aucr_interval": [
+          1.14,
+          12.62
+        ],
+        "published_clinical_aucr_band": [
+          3.1,
+          4.8
+        ],
+        "within_clinical_band": true,
+        "ncl_pharmacist_smr_action": "CAP Simvastatin <= 20 mg or switch to Rosuvastatin/Pravastatin"
+      },
+      {
+        "regimen_id": "NCL-DDI-4",
+        "victim_substrate": "Apixaban (5 mg BD AF stroke prev.)",
+        "perpetrator": "Diltiazem (120 mg BD AF rate control)",
+        "chembl340_ki_nM": 500.0,
+        "chembl340_kinact_min1": 0.0085,
+        "predicted_aucr_wt": 1.33,
+        "predicted_exposure_cyp3a4_star22_vs_wt_baseline": 1.5,
+        "ftqc_1mha_aucr_interval": [
+          1.26,
+          1.38
+        ],
+        "classical_dft_spread_aucr_interval": [
+          1.04,
+          1.45
+        ],
+        "published_clinical_aucr_band": [
+          1.3,
+          1.5
+        ],
+        "within_clinical_band": true,
+        "ncl_pharmacist_smr_action": "MONITOR bleeding + eGFR (CrCl < 30 mL/min triggers dose review)"
+      },
+      {
+        "regimen_id": "NCL-DDI-5",
+        "victim_substrate": "Simvastatin (40 mg HTN Outcome #23)",
+        "perpetrator": "Amlodipine (10 mg OD CCB)",
+        "chembl340_ki_nM": 2600.0,
+        "chembl340_kinact_min1": 0.0014,
+        "predicted_aucr_wt": 1.5,
+        "predicted_exposure_cyp3a4_star22_vs_wt_baseline": 2.45,
+        "ftqc_1mha_aucr_interval": [
+          1.41,
+          1.65
+        ],
+        "classical_dft_spread_aucr_interval": [
+          1.03,
+          12.56
+        ],
+        "published_clinical_aucr_band": [
+          1.6,
+          1.9
+        ],
+        "within_clinical_band": true,
+        "ncl_pharmacist_smr_action": "MHRA 20 mg Simvastatin Cap with Amlodipine (or switch to Atorvastatin)"
+      }
+    ]
+  },
+  "generated_figure": "samskrift/figures/figure8_cyp3a4_drug_barrier_chembl.png",
+  "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+}

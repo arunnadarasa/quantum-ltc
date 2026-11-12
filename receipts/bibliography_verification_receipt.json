@@ -1,5 +1,5 @@
 {
-  "total_entries": 42,
+  "total_entries": 47,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -294,6 +294,41 @@
       "status": "VERIFIED",
       "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
       "resolved_title": "{AlphaGenome 2}: Predicting the impact of genetic variants at single-cell resolution"
+    },
+    {
+      "key": "sevrioukova2017midazolam_5te8",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1073/pnas.1616198114)",
+      "resolved_title": "Structural basis for regiospecific midazolam oxidation by human cytochrome P450 3A4"
+    },
+    {
+      "key": "sevrioukova2010ritonavir_3nxu",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1073/pnas.1010693107)",
+      "resolved_title": "Structure and mechanism of the complex between cytochrome P4503A4 and ritonavir"
+    },
+    {
+      "key": "zdrazil2024chembl",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1093/nar/gkad1004)",
+      "resolved_title": "The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods"
+    },
+    {
+      "key": "shaik2010p450",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1021/cr900121s)",
+      "resolved_title": "P450 Enzymes: Their Structure, Reactivity, and Selectivity\u2014Modeled by QM/MM Calculations"
+    },
+    {
+      "key": "angeli2001nevpt2",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1063/1.1361246)",
+      "resolved_title": "Introduction of <i>n</i>-electron valence states for multireference perturbation theory"
     }
   ]
 }

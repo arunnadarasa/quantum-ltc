@@ -1,0 +1,303 @@
+{
+  "database": "EMBL-EBI ChEMBL REST API + RCSB PDB Data API",
+  "chembl_db_version": "ChEMBL_37",
+  "chembl_release_date": "2026-05-01",
+  "target_chembl_id": "CHEMBL340",
+  "target_uniprot_accession": "P08684",
+  "target_pref_name": "Cytochrome P450 3A4 (Homo sapiens)",
+  "chembl_license": "CC BY-SA 3.0 (https://chembl.gitbook.io/chembl-interface-documentation/about)",
+  "rcsb_pdb_usage_policy": "CC0 1.0 (https://www.rcsb.org/pages/usage-policy)",
+  "rcsb_pdb_cyp3a4_structures": [
+    {
+      "rcsb_id": "5TE8",
+      "struct": {
+        "title": "Crystal structure of the midazolam-bound human CYP3A4"
+      },
+      "rcsb_entry_info": {
+        "resolution_combined": [
+          2.7
+        ],
+        "experimental_method": "X-ray",
+        "nonpolymer_bound_components": [
+          "HEM"
+        ]
+      },
+      "rcsb_accession_info": {
+        "deposit_date": "2016-09-20T00:00:00Z",
+        "initial_release_date": "2016-12-07T00:00:00Z"
+      },
+      "rcsb_primary_citation": {
+        "title": "Structural basis for regiospecific midazolam oxidation by human cytochrome P450 3A4.",
+        "rcsb_journal_abbrev": "Proc Natl Acad Sci U S A",
+        "year": 2017,
+        "pdbx_database_id_DOI": "10.1073/pnas.1616198114",
+        "pdbx_database_id_PubMed": 28031486
+      }
+    },
+    {
+      "rcsb_id": "3NXU",
+      "struct": {
+        "title": "Crystal structure of human cytochrome P4503A4 bound to an inhibitor ritonavir"
+      },
+      "rcsb_entry_info": {
+        "resolution_combined": [
+          2.0
+        ],
+        "experimental_method": "X-ray",
+        "nonpolymer_bound_components": [
+          "HEM",
+          "RIT"
+        ]
+      },
+      "rcsb_accession_info": {
+        "deposit_date": "2010-07-14T00:00:00Z",
+        "initial_release_date": "2010-10-20T00:00:00Z"
+      },
+      "rcsb_primary_citation": {
+        "title": "Structure and mechanism of the complex between cytochrome P4503A4 and ritonavir.",
+        "rcsb_journal_abbrev": "Proc Natl Acad Sci U S A",
+        "year": 2010,
+        "pdbx_database_id_DOI": "10.1073/pnas.1010693107",
+        "pdbx_database_id_PubMed": 20937904
+      }
+    },
+    {
+      "rcsb_id": "2V0M",
+      "struct": {
+        "title": "Crystal structure of human P450 3A4 in complex with ketoconazole"
+      },
+      "rcsb_entry_info": {
+        "resolution_combined": [
+          2.8
+        ],
+        "experimental_method": "X-ray",
+        "nonpolymer_bound_components": [
+          "HEM",
+          "KLN"
+        ]
+      },
+      "rcsb_accession_info": {
+        "deposit_date": "2007-05-15T00:00:00Z",
+        "initial_release_date": "2007-06-26T00:00:00Z"
+      },
+      "rcsb_primary_citation": {
+        "title": "Structural Basis for Ligand Promiscuity in Cytochrome P450 3A4",
+        "rcsb_journal_abbrev": "Proc Natl Acad Sci U S A",
+        "year": 2006,
+        "pdbx_database_id_DOI": "10.1073/PNAS.0603236103",
+        "pdbx_database_id_PubMed": 16954191
+      }
+    },
+    {
+      "rcsb_id": "1TQN",
+      "struct": {
+        "title": "Crystal Structure of Human Microsomal P450 3A4"
+      },
+      "rcsb_entry_info": {
+        "resolution_combined": [
+          2.05
+        ],
+        "experimental_method": "X-ray",
+        "nonpolymer_bound_components": [
+          "HEM"
+        ]
+      },
+      "rcsb_accession_info": {
+        "deposit_date": "2004-06-17T00:00:00Z",
+        "initial_release_date": "2004-07-27T00:00:00Z"
+      },
+      "rcsb_primary_citation": {
+        "title": "The Structure of Human Microsomal Cytochrome P450 3A4 Determined by X-ray Crystallography to 2.05-A Resolution",
+        "rcsb_journal_abbrev": "J Biol Chem",
+        "year": 2004,
+        "pdbx_database_id_DOI": "10.1074/jbc.C400293200",
+        "pdbx_database_id_PubMed": 15258162
+      }
+    }
+  ],
+  "ncl_ltc_chembl340_panel": [
+    {
+      "drug_name": "KETOCONAZOLE",
+      "molecule_chembl_id": "CHEMBL157101",
+      "ncl_ltc_clinical_role": "Classic Azole Type-II CYP3A4 Inhibitor (PDB 2V0M)",
+      "raw_chembl340_records_retrieved": 100,
+      "median_ic50_nM": 57.0,
+      "min_ic50_nM": 1.0,
+      "median_ki_nM": 30.0,
+      "min_ki_nM": 7.0,
+      "median_km_nM": null,
+      "median_ac50_potency_nM": 88.0,
+      "kinact_per_min": null,
+      "representative_assay_chembl_ids": [
+        "CHEMBL1000805",
+        "CHEMBL1002238",
+        "CHEMBL1004814",
+        "CHEMBL1022134",
+        "CHEMBL1029448"
+      ]
+    },
+    {
+      "drug_name": "RITONAVIR",
+      "molecule_chembl_id": "CHEMBL163",
+      "ncl_ltc_clinical_role": "Potent Type-II Heme-Ligating Inhibitor (N5-Fe = 2.225 A; PDB 3NXU)",
+      "raw_chembl340_records_retrieved": 44,
+      "median_ic50_nM": 105.0,
+      "min_ic50_nM": 16.0,
+      "median_ki_nM": 100.0,
+      "min_ki_nM": 19.0,
+      "median_km_nM": 19998.62,
+      "median_ac50_potency_nM": null,
+      "kinact_per_min": 0.2275,
+      "representative_assay_chembl_ids": [
+        "CHEMBL1100026",
+        "CHEMBL1262358",
+        "CHEMBL1743427",
+        "CHEMBL1743479",
+        "CHEMBL1743480"
+      ]
+    },
+    {
+      "drug_name": "MIDAZOLAM",
+      "molecule_chembl_id": "CHEMBL655",
+      "ncl_ltc_clinical_role": "FDA Index CYP3A4 Probe Substrate (C1/C4 hydroxylation; PDB 5TE8)",
+      "raw_chembl340_records_retrieved": 13,
+      "median_ic50_nM": 66.1,
+      "min_ic50_nM": 47.0,
+      "median_ki_nM": 2470.0,
+      "min_ki_nM": 2470.0,
+      "median_km_nM": null,
+      "median_ac50_potency_nM": null,
+      "kinact_per_min": 0.028,
+      "representative_assay_chembl_ids": [
+        "CHEMBL3396733",
+        "CHEMBL5117648",
+        "CHEMBL5140381",
+        "CHEMBL5332456",
+        "CHEMBL5356181"
+      ]
+    },
+    {
+      "drug_name": "DILTIAZEM",
+      "molecule_chembl_id": "CHEMBL23",
+      "ncl_ltc_clinical_role": "Non-DHP CCB Moderate CYP3A4 Inhibitor (AF/HTN + Apixaban/Statin DDI)",
+      "raw_chembl340_records_retrieved": 47,
+      "median_ic50_nM": 71000.0,
+      "min_ic50_nM": 100.0,
+      "median_ki_nM": 500.0,
+      "min_ki_nM": 100.0,
+      "median_km_nM": 23007.21,
+      "median_ac50_potency_nM": 3981.1,
+      "kinact_per_min": 0.09,
+      "representative_assay_chembl_ids": [
+        "CHEMBL1063294",
+        "CHEMBL1613886",
+        "CHEMBL1614108",
+        "CHEMBL1741324",
+        "CHEMBL1743442"
+      ]
+    },
+    {
+      "drug_name": "ATORVASTATIN",
+      "molecule_chembl_id": "CHEMBL1487",
+      "ncl_ltc_clinical_role": "First-Line High-Intensity Statin CYP3A4 Substrate (CVD/T2D/CKD)",
+      "raw_chembl340_records_retrieved": 8,
+      "median_ic50_nM": 5100.0,
+      "min_ic50_nM": 5100.0,
+      "median_ki_nM": null,
+      "min_ki_nM": null,
+      "median_km_nM": null,
+      "median_ac50_potency_nM": null,
+      "kinact_per_min": null,
+      "representative_assay_chembl_ids": [
+        "CHEMBL1678715"
+      ]
+    },
+    {
+      "drug_name": "CLARITHROMYCIN",
+      "molecule_chembl_id": "CHEMBL1741",
+      "ncl_ltc_clinical_role": "Macrolide Mechanism-Based Inactivator (Acute COPD/CAP + Statin DDI)",
+      "raw_chembl340_records_retrieved": 9,
+      "median_ic50_nM": null,
+      "min_ic50_nM": null,
+      "median_ki_nM": 5490.0,
+      "min_ki_nM": 5490.0,
+      "median_km_nM": 48752.85,
+      "median_ac50_potency_nM": null,
+      "kinact_per_min": 0.072,
+      "representative_assay_chembl_ids": [
+        "CHEMBL1743430",
+        "CHEMBL836230"
+      ]
+    },
+    {
+      "drug_name": "VERAPAMIL",
+      "molecule_chembl_id": "CHEMBL6966",
+      "ncl_ltc_clinical_role": "Phenylalkylamine CCB Moderate CYP3A4 Inhibitor (AF Rate Control + DOAC/Statin DDI)",
+      "raw_chembl340_records_retrieved": 23,
+      "median_ic50_nM": 10096.5,
+      "min_ic50_nM": 11.0,
+      "median_ki_nM": null,
+      "min_ki_nM": null,
+      "median_km_nM": null,
+      "median_ac50_potency_nM": null,
+      "kinact_per_min": null,
+      "representative_assay_chembl_ids": [
+        "CHEMBL1063294",
+        "CHEMBL3534776",
+        "CHEMBL3541095",
+        "CHEMBL4145388",
+        "CHEMBL4678608"
+      ]
+    },
+    {
+      "drug_name": "NIFEDIPINE",
+      "molecule_chembl_id": "CHEMBL193",
+      "ncl_ltc_clinical_role": "Dihydropyridine CCB CYP3A4 Probe/Substrate (Hypertension Outcome #23)",
+      "raw_chembl340_records_retrieved": 20,
+      "median_ic50_nM": 10500.0,
+      "min_ic50_nM": 5620.0,
+      "median_ki_nM": null,
+      "min_ki_nM": null,
+      "median_km_nM": null,
+      "median_ac50_potency_nM": 12589.27,
+      "kinact_per_min": null,
+      "representative_assay_chembl_ids": [
+        "CHEMBL1063294",
+        "CHEMBL1613886",
+        "CHEMBL1614108",
+        "CHEMBL1678715",
+        "CHEMBL1741324"
+      ]
+    },
+    {
+      "drug_name": "SIMVASTATIN",
+      "molecule_chembl_id": "CHEMBL1064",
+      "ncl_ltc_clinical_role": "Lactone Prodrug Statin High-Extraction CYP3A4 Substrate (f_m,3A4 = 0.88)",
+      "raw_chembl340_records_retrieved": 9,
+      "median_ic50_nM": null,
+      "min_ic50_nM": null,
+      "median_ki_nM": null,
+      "min_ki_nM": null,
+      "median_km_nM": 20892.96,
+      "median_ac50_potency_nM": null,
+      "kinact_per_min": null,
+      "representative_assay_chembl_ids": [
+        "CHEMBL836230"
+      ]
+    },
+    {
+      "drug_name": "AMLODIPINE",
+      "molecule_chembl_id": "CHEMBL1491",
+      "ncl_ltc_clinical_role": "First-Line DHP CCB Weak CYP3A4 Inhibitor (MHRA 20 mg Simvastatin Cap)",
+      "raw_chembl340_records_retrieved": 7,
+      "median_ic50_nM": null,
+      "min_ic50_nM": null,
+      "median_ki_nM": null,
+      "min_ki_nM": null,
+      "median_km_nM": null,
+      "median_ac50_potency_nM": null,
+      "kinact_per_min": null,
+      "representative_assay_chembl_ids": []
+    }
+  ]
+}

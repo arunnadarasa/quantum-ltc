@@ -4,7 +4,8 @@
   "ontology_sources": [
     "EMBL-EBI OLS4 Human Disease Ontology (DOID) \u2014 https://www.ebi.ac.uk/ols4/api-docs",
     "UniProtKB, GENCODE v46 & Google DeepMind AlphaGenome 2 (v2.dna_client + Atlas AVI)",
-    "RCSB Protein Data Bank (PDB 1O86, 1TQN & 1N9V)",
+    "RCSB Protein Data Bank (PDB 1O86, 1TQN, 5TE8, 3NXU & 1N9V \u2014 CC0 1.0)",
+    "EMBL-EBI ChEMBL Database Release ChEMBL_37 (CHEMBL340 Human CYP3A4 \u2014 CC BY-SA 3.0)",
     "SNOMED CT UK Edition (315594003 Interpreter needed)",
     "Kashefi Quantum Algorithmic Primitives Atlas v0.4",
     "NHS England DCB0129 (Manufacture) & DCB0160 (Deployment) Clinical Risk Management Standards"
@@ -18,20 +19,20 @@
     "closed_hazards_claimed": 0
   },
   "graph_statistics": {
-    "total_nodes": 61,
-    "total_edges": 126,
+    "total_nodes": 64,
+    "total_edges": 136,
     "entity_types_count": 8,
-    "predicate_types_count": 53,
+    "predicate_types_count": 58,
     "connected_components": 1,
-    "mean_total_degree": 4.131,
+    "mean_total_degree": 4.25,
     "nodes_by_entity_type": {
       "NCL_LTC_Condition": 9,
       "HouseOfCare_Stage": 5,
-      "Molecular_Target": 11,
+      "Molecular_Target": 13,
       "Intervention": 6,
       "Quantum_Primitive": 10,
       "Logical_Era": 4,
-      "Platform_Receipt": 10,
+      "Platform_Receipt": 11,
       "DCB0129_Hazard": 6
     },
     "edges_by_predicate": {
@@ -51,7 +52,7 @@
       "INFLAMED_BY_MEDIATOR": 3,
       "COMORBID_RENAL_AXIS": 1,
       "MODIFIED_BY_LOCUS": 2,
-      "RESOLVED_IN_CRYSTAL": 2,
+      "RESOLVED_IN_CRYSTAL": 4,
       "CLEAVED_FROM_ANG_I_BY": 1,
       "METABOLISES_POLYPHARMACY": 2,
       "REGULATED_IN_HEPATOCYTE": 1,
@@ -59,8 +60,14 @@
       "CLEARED_FIRST_PASS_BY": 1,
       "DEMARCATES_FTQC_WALL": 1,
       "SCALES_TO_141L_DF_QPE": 1,
-      "EXECUTED_AND_SEALED_ON": 11,
+      "EXECUTED_AND_SEALED_ON": 13,
       "SCORED_AT_SINGLE_CELL_BY": 2,
+      "BENCHMARKS_HAT_BARRIER_ON": 1,
+      "SCALES_TO_144L_THC_QPE": 1,
+      "ANCHORS_DDI_INACTIVATION_IN": 1,
+      "PARAMETERISES_DDI_AUCR_VIA": 1,
+      "GOVERNS_CLINICAL_RISK_OF": 9,
+      "AUDITS_DEMARCATION_OF": 1,
       "COORDINATES_CATALYTIC_ZN2": 1,
       "INHIBITS_TARGET": 2,
       "SYNERGISES_METABOLICALLY": 1,
@@ -86,7 +93,6 @@
       "SIGNED_IN_PQC_FHIR_BY": 1,
       "DIFFUSED_ACROSS_BOROUGHS_BY": 1,
       "VERIFIED_ON_TRAPPED_ION": 1,
-      "GOVERNS_CLINICAL_RISK_OF": 8,
       "AUDITS_OPEN_HAZARD": 8
     },
     "top_10_pagerank_hubs": [
@@ -94,70 +100,70 @@
         "id": "era_iii",
         "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.05046,
+        "pagerank": 0.043321,
         "total_degree": 5
       },
       {
         "id": "era_iv",
         "label": "Era IV: Asymptotic ICS-Scale FTQC (100\u20131,000+L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.044475,
-        "total_degree": 4
-      },
-      {
-        "id": "era_ii",
-        "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
-        "entity_type": "Logical_Era",
-        "pagerank": 0.043604,
-        "total_degree": 6
+        "pagerank": 0.042757,
+        "total_degree": 5
       },
       {
         "id": "prim_x03",
         "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
         "entity_type": "Quantum_Primitive",
-        "pagerank": 0.039292,
-        "total_degree": 5
+        "pagerank": 0.041374,
+        "total_degree": 7
+      },
+      {
+        "id": "era_ii",
+        "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
+        "entity_type": "Logical_Era",
+        "pagerank": 0.040552,
+        "total_degree": 6
       },
       {
         "id": "stage_1_check_test",
         "label": "Stage 1: Check & Test + Interpreter Access",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.032803,
+        "pagerank": 0.031007,
         "total_degree": 14
       },
       {
-        "id": "prim_p04",
-        "label": "Atlas P04: Quantum walk search",
-        "entity_type": "Quantum_Primitive",
-        "pagerank": 0.026062,
-        "total_degree": 3
+        "id": "plat_cyp3a4_gate1",
+        "label": "Gate 1: def2-SVP HAT + THC-QPE + ChEMBL340",
+        "entity_type": "Platform_Receipt",
+        "pagerank": 0.026723,
+        "total_degree": 6
       },
       {
         "id": "stage_3_pcsp",
         "label": "Stage 3: PCSP Coaching, VCSE & Net-Zero Switch",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.026043,
+        "pagerank": 0.024754,
         "total_degree": 7
-      },
-      {
-        "id": "prim_p22",
-        "label": "Atlas P22: Open-system (Lindbladian) simulation",
-        "entity_type": "Quantum_Primitive",
-        "pagerank": 0.025752,
-        "total_degree": 4
       },
       {
         "id": "era_i",
         "label": "Era I: Classical-Exact & NISQ (0L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.025585,
+        "pagerank": 0.024357,
+        "total_degree": 4
+      },
+      {
+        "id": "prim_p22",
+        "label": "Atlas P22: Open-system (Lindbladian) simulation",
+        "entity_type": "Quantum_Primitive",
+        "pagerank": 0.02373,
         "total_degree": 4
       },
       {
         "id": "stage_call_recall",
         "label": "UCLP Case-Finding & Pre-Winter Call/Recall",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.02503,
+        "pagerank": 0.023611,
         "total_degree": 12
       }
     ]
@@ -225,7 +231,7 @@
       "in_degree": 0,
       "out_degree": 6,
       "total_degree": 6,
-      "pagerank": 0.010878
+      "pagerank": 0.009805
     },
     {
       "id": "ltc_af",
@@ -243,7 +249,7 @@
       "in_degree": 0,
       "out_degree": 4,
       "total_degree": 4,
-      "pagerank": 0.008172
+      "pagerank": 0.007246
     },
     {
       "id": "ltc_htn",
@@ -261,7 +267,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.009794
+      "pagerank": 0.009241
     },
     {
       "id": "ltc_t2d",
@@ -278,7 +284,7 @@
       "in_degree": 0,
       "out_degree": 4,
       "total_degree": 4,
-      "pagerank": 0.009285
+      "pagerank": 0.008844
     },
     {
       "id": "ltc_t1d",
@@ -295,7 +301,7 @@
       "in_degree": 0,
       "out_degree": 4,
       "total_degree": 4,
-      "pagerank": 0.007852
+      "pagerank": 0.007468
     },
     {
       "id": "ltc_ckd",
@@ -313,7 +319,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.009349
+      "pagerank": 0.008874
     },
     {
       "id": "ltc_masld",
@@ -331,7 +337,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.013529
+      "pagerank": 0.012311
     },
     {
       "id": "ltc_copd",
@@ -348,7 +354,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.011866
+      "pagerank": 0.011017
     },
     {
       "id": "ltc_asthma",
@@ -366,7 +372,7 @@
       "in_degree": 1,
       "out_degree": 6,
       "total_degree": 7,
-      "pagerank": 0.015967
+      "pagerank": 0.015244
     },
     {
       "id": "stage_call_recall",
@@ -384,7 +390,7 @@
       "in_degree": 10,
       "out_degree": 2,
       "total_degree": 12,
-      "pagerank": 0.02503
+      "pagerank": 0.023611
     },
     {
       "id": "stage_1_check_test",
@@ -402,7 +408,7 @@
       "in_degree": 11,
       "out_degree": 3,
       "total_degree": 14,
-      "pagerank": 0.032803
+      "pagerank": 0.031007
     },
     {
       "id": "stage_2_mdt_review",
@@ -420,7 +426,7 @@
       "in_degree": 5,
       "out_degree": 3,
       "total_degree": 8,
-      "pagerank": 0.019628
+      "pagerank": 0.018714
     },
     {
       "id": "stage_3_pcsp",
@@ -438,7 +444,7 @@
       "in_degree": 5,
       "out_degree": 2,
       "total_degree": 7,
-      "pagerank": 0.026043
+      "pagerank": 0.024754
     },
     {
       "id": "stage_4_continuity",
@@ -456,7 +462,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.019437
+      "pagerank": 0.018161
     },
     {
       "id": "mol_ace",
@@ -474,7 +480,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.015121
+      "pagerank": 0.014219
     },
     {
       "id": "mol_pdb_1o86",
@@ -493,7 +499,7 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "pagerank": 0.013142
+      "pagerank": 0.011935
     },
     {
       "id": "mol_slc5a2",
@@ -511,7 +517,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.013493
+      "pagerank": 0.012908
     },
     {
       "id": "mol_glp1r",
@@ -529,7 +535,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.009829
+      "pagerank": 0.009408
     },
     {
       "id": "mol_adrb2",
@@ -546,7 +552,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.008948
+      "pagerank": 0.008457
     },
     {
       "id": "mol_il6",
@@ -564,7 +570,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.012957
+      "pagerank": 0.012041
     },
     {
       "id": "mol_angii_1n9v",
@@ -582,7 +588,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.00781
+      "pagerank": 0.007373
     },
     {
       "id": "mol_pnpla3",
@@ -599,7 +605,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.004846
+      "pagerank": 0.004516
     },
     {
       "id": "mol_cyp3a4",
@@ -615,9 +621,9 @@
         "locus": "chr7:99756966-99784184"
       },
       "in_degree": 5,
-      "out_degree": 2,
-      "total_degree": 7,
-      "pagerank": 0.021903
+      "out_degree": 4,
+      "total_degree": 9,
+      "pagerank": 0.02289
     },
     {
       "id": "mol_pdb_1tqn",
@@ -636,7 +642,45 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.019892
+      "pagerank": 0.015177
+    },
+    {
+      "id": "mol_pdb_5te8",
+      "label": "Crystal CYP3A4\u2013Midazolam (PDB 5TE8)",
+      "entity_type": "Molecular_Target",
+      "layer": 3,
+      "curie": "PDB:5TE8",
+      "external_iri": "https://www.rcsb.org/structure/5TE8",
+      "era": "All",
+      "summary": "2.70 \u00c5 X-ray co-crystal of human CYP3A4 bound to FDA index hydroxylation substrate Midazolam (08J CAI\u2013Fe 3.389 \u00c5, CYS442 SG\u2013Fe 2.424 \u00c5); anchors polarized def2-SVP C\u2013H HAT barrier.",
+      "metrics": {
+        "resolution_A": 2.7,
+        "midazolam_cai_fe_A": 3.389,
+        "fe_sg_A": 2.424
+      },
+      "in_degree": 1,
+      "out_degree": 3,
+      "total_degree": 4,
+      "pagerank": 0.019497
+    },
+    {
+      "id": "mol_pdb_3nxu",
+      "label": "Crystal CYP3A4\u2013Ritonavir (PDB 3NXU)",
+      "entity_type": "Molecular_Target",
+      "layer": 3,
+      "curie": "PDB:3NXU",
+      "external_iri": "https://www.rcsb.org/structure/3NXU",
+      "era": "All",
+      "summary": "2.00 \u00c5 X-ray co-crystal of human CYP3A4 bound to Ritonavir (RIT thiazole N5\u2013Fe 2.225 \u00c5 Type-II heme ligation); anchors ChEMBL340 MBI inactivation (AUCR 12.29x WT / 20.0x *22).",
+      "metrics": {
+        "resolution_A": 2.0,
+        "ritonavir_n5_fe_A": 2.225,
+        "chembl340_ki_nM": 100.0
+      },
+      "in_degree": 1,
+      "out_degree": 1,
+      "total_degree": 2,
+      "pagerank": 0.009654
     },
     {
       "id": "mol_muc5b",
@@ -655,7 +699,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.011508
+      "pagerank": 0.009814
     },
     {
       "id": "tx_acei_lisinopril",
@@ -673,7 +717,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.012608
+      "pagerank": 0.012154
     },
     {
       "id": "tx_sglt2i",
@@ -691,7 +735,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.01251
+      "pagerank": 0.012551
     },
     {
       "id": "tx_mart_dpi",
@@ -709,7 +753,7 @@
       "in_degree": 1,
       "out_degree": 5,
       "total_degree": 6,
-      "pagerank": 0.014399
+      "pagerank": 0.013572
     },
     {
       "id": "tx_pharmacist_smr",
@@ -725,9 +769,9 @@
         "triple_whammy_penalty_K016": 7.2
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.009085
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.012054
     },
     {
       "id": "tx_home_bp",
@@ -745,7 +789,7 @@
       "in_degree": 0,
       "out_degree": 1,
       "total_degree": 1,
-      "pagerank": 0.003422
+      "pagerank": 0.003272
     },
     {
       "id": "tx_vcse_sp",
@@ -763,7 +807,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.008004
+      "pagerank": 0.007774
     },
     {
       "id": "prim_p08",
@@ -781,7 +825,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.018447
+      "pagerank": 0.017511
     },
     {
       "id": "prim_a01d",
@@ -799,7 +843,7 @@
       "in_degree": 4,
       "out_degree": 2,
       "total_degree": 6,
-      "pagerank": 0.022111
+      "pagerank": 0.021498
     },
     {
       "id": "prim_p09",
@@ -817,7 +861,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.017147
+      "pagerank": 0.016349
     },
     {
       "id": "prim_p13",
@@ -835,7 +879,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.016347
+      "pagerank": 0.015396
     },
     {
       "id": "prim_p20",
@@ -853,7 +897,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.01505
+      "pagerank": 0.014162
     },
     {
       "id": "prim_a01g",
@@ -871,7 +915,7 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "pagerank": 0.023736
+      "pagerank": 0.022007
     },
     {
       "id": "prim_a01h",
@@ -889,7 +933,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.01725
+      "pagerank": 0.016153
     },
     {
       "id": "prim_p22",
@@ -907,7 +951,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.025752
+      "pagerank": 0.02373
     },
     {
       "id": "prim_x03",
@@ -922,10 +966,10 @@
         "kind": "composite",
         "defining_paper": "McClean, Schwartz, Carter, de Jong (2017)"
       },
-      "in_degree": 2,
-      "out_degree": 3,
-      "total_degree": 5,
-      "pagerank": 0.039292
+      "in_degree": 3,
+      "out_degree": 4,
+      "total_degree": 7,
+      "pagerank": 0.041374
     },
     {
       "id": "prim_p04",
@@ -943,7 +987,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.026062
+      "pagerank": 0.022517
     },
     {
       "id": "era_i",
@@ -962,7 +1006,7 @@
       "in_degree": 3,
       "out_degree": 1,
       "total_degree": 4,
-      "pagerank": 0.025585
+      "pagerank": 0.024357
     },
     {
       "id": "era_ii",
@@ -981,7 +1025,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.043604
+      "pagerank": 0.040552
     },
     {
       "id": "era_iii",
@@ -1000,7 +1044,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.05046
+      "pagerank": 0.043321
     },
     {
       "id": "era_iv",
@@ -1016,10 +1060,10 @@
         "physical_qubits": "90,000-250,000+",
         "governance": "NHS DCB0129 Advisory"
       },
-      "in_degree": 4,
+      "in_degree": 5,
       "out_degree": 0,
-      "total_degree": 4,
-      "pagerank": 0.044475
+      "total_degree": 5,
+      "pagerank": 0.042757
     },
     {
       "id": "plat_nexus_helios",
@@ -1038,7 +1082,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.019965
+      "pagerank": 0.018741
     },
     {
       "id": "plat_haiqu",
@@ -1057,7 +1101,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.014652
+      "pagerank": 0.014079
     },
     {
       "id": "plat_jij_highs",
@@ -1076,7 +1120,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.009336
+      "pagerank": 0.008872
     },
     {
       "id": "plat_hqs_qprotsim",
@@ -1095,7 +1139,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.017309
+      "pagerank": 0.016123
     },
     {
       "id": "plat_multiomics",
@@ -1114,7 +1158,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.011841
+      "pagerank": 0.009531
     },
     {
       "id": "plat_modal_rhyme_hf",
@@ -1133,7 +1177,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.01848
+      "pagerank": 0.016584
     },
     {
       "id": "plat_text2wetlab",
@@ -1152,7 +1196,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.007025
+      "pagerank": 0.00666
     },
     {
       "id": "plat_medicus_discopy_moth",
@@ -1172,7 +1216,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.014165
+      "pagerank": 0.013376
     },
     {
       "id": "plat_typesafe_jev",
@@ -1189,9 +1233,9 @@
         "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
       },
       "in_degree": 0,
-      "out_degree": 8,
-      "total_degree": 8,
-      "pagerank": 0.012083
+      "out_degree": 9,
+      "total_degree": 9,
+      "pagerank": 0.015326
     },
     {
       "id": "plat_pyscf_ag2",
@@ -1210,7 +1254,26 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.023879
+      "pagerank": 0.018884
+    },
+    {
+      "id": "plat_cyp3a4_gate1",
+      "label": "Gate 1: def2-SVP HAT + THC-QPE + ChEMBL340",
+      "entity_type": "Platform_Receipt",
+      "layer": 7,
+      "curie": "SHA256:164d38afa9d0",
+      "external_iri": "",
+      "era": "Era IV",
+      "summary": "Drug-bound CYP3A4 (PDB 5TE8/3NXU) polarized def2-SVP C\u2013H barrier (12.35 kcal/mol XC spread vs spin-pure SC-NEVPT2), paired-barrier THC-QPE (2.8x\u20133.3x Toffoli cut), & live ChEMBL340 PBPK AUCR.",
+      "metrics": {
+        "dft_xc_spread_kcal": 12.35,
+        "chembl340_drugs": 10,
+        "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+      },
+      "in_degree": 6,
+      "out_degree": 0,
+      "total_degree": 6,
+      "pagerank": 0.026723
     },
     {
       "id": "haz_h_ltc_01",
@@ -1228,7 +1291,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005204
+      "pagerank": 0.005147
     },
     {
       "id": "haz_h_ltc_02",
@@ -1244,9 +1307,9 @@
         "standard": "DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off)"
       },
       "in_degree": 2,
-      "out_degree": 2,
-      "total_degree": 4,
-      "pagerank": 0.006735
+      "out_degree": 3,
+      "total_degree": 5,
+      "pagerank": 0.010649
     },
     {
       "id": "haz_h_ltc_03",
@@ -1264,7 +1327,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.004488
+      "pagerank": 0.004481
     },
     {
       "id": "haz_h_ltc_04",
@@ -1282,7 +1345,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.019627
+      "pagerank": 0.016887
     },
     {
       "id": "haz_h_ltc_05",
@@ -1300,7 +1363,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005334
+      "pagerank": 0.005274
     },
     {
       "id": "haz_h_ltc_06",
@@ -1318,7 +1381,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005444
+      "pagerank": 0.005421
     }
   ],
   "edges": [
@@ -1777,6 +1840,86 @@
       "rationale": "Live AlphaGenome 2 v2.dna_client AT2 pneumocyte vs hepatocyte control",
       "weight": 1.2,
       "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "mol_cyp3a4",
+      "target": "mol_pdb_5te8",
+      "predicate": "RESOLVED_IN_CRYSTAL",
+      "rationale": "2.70 \u00c5 X-ray co-crystal of human CYP3A4 bound to Midazolam (08J CAI\u2013Fe 3.389 \u00c5)",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "mol_cyp3a4",
+      "target": "mol_pdb_3nxu",
+      "predicate": "RESOLVED_IN_CRYSTAL",
+      "rationale": "2.00 \u00c5 X-ray co-crystal of human CYP3A4 Type-II heme-ligated by Ritonavir (RIT N5\u2013Fe 2.225 \u00c5)",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "mol_pdb_5te8",
+      "target": "prim_x03",
+      "predicate": "BENCHMARKS_HAT_BARRIER_ON",
+      "rationale": "Polarized def2-SVP RC->TS_HAT C\u2013H abstraction benchmark (12.35 kcal/mol XC spread vs spin-pure SC-NEVPT2)",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "mol_pdb_5te8",
+      "target": "era_iv",
+      "predicate": "SCALES_TO_144L_THC_QPE",
+      "rationale": "Paired 2-geometry E(TS_HAT)-E(RC) Tensor-Hypercontraction QPE (eps_barrier = 0.99 mHa)",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "mol_pdb_3nxu",
+      "target": "plat_cyp3a4_gate1",
+      "predicate": "ANCHORS_DDI_INACTIVATION_IN",
+      "rationale": "Type-II heme ligation + live ChEMBL340 Ki=100 nM, kinact=0.2275 min^-1",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "mol_pdb_5te8",
+      "target": "plat_cyp3a4_gate1",
+      "predicate": "EXECUTED_AND_SEALED_ON",
+      "rationale": "Gate 1 def2-SVP C\u2013H barrier + THC-QPE + ChEMBL340 Rowland-Matin PBPK receipt",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "prim_x03",
+      "target": "plat_cyp3a4_gate1",
+      "predicate": "EXECUTED_AND_SEALED_ON",
+      "rationale": "Paired 2-point barrier DF vs THC resource accounting & exact multi-root FCI Schmidt surge",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "tx_pharmacist_smr",
+      "target": "plat_cyp3a4_gate1",
+      "predicate": "PARAMETERISES_DDI_AUCR_VIA",
+      "rationale": "Live ChEMBL340 + AlphaGenome 2 CYP3A4*22 PBPK AUCR across statin/DOAC/CCB regimens",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "haz_h_ltc_02",
+      "target": "plat_cyp3a4_gate1",
+      "predicate": "GOVERNS_CLINICAL_RISK_OF",
+      "rationale": "Mandatory Clinical Pharmacist SMR sign-off under open NHS DCB0129 & DCB0160 hazard H-LTC-02",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "plat_typesafe_jev",
+      "target": "plat_cyp3a4_gate1",
+      "predicate": "AUDITS_DEMARCATION_OF",
+      "rationale": "Zero physical QPU shots, zero wet-lab human specimens, non-autonomous shadow research boundary",
+      "weight": 1.25,
+      "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
     },
     {
       "source": "tx_acei_lisinopril",
@@ -2331,5 +2474,5 @@
       "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
     }
   ],
-  "receipt_sha256": "73ee2005158f2843e9aa4466ba6b946f8192f1a79a70a9c78e1bcd1ae13bb3d6"
+  "receipt_sha256": "1ee2e7f5b88f8e1e4e5711f4d0807b0f08dea2d7d8f369b05bf828cd2a7aad66"
 }

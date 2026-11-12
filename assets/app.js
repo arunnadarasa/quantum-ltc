@@ -3,13 +3,14 @@
 
 const BOOKMARKS = [
   { label: "p.1 · Abstract & NCL LTC Spec", page: 1 },
-  { label: "p.2 · 4-Era Roadmap & Baselines", page: 2 },
-  { label: "p.4 · Nexus Helios-1E & Post-SWAP", page: 4 },
-  { label: "p.5 · Haiqu HUBO & OpenJij PCN", page: 5 },
+  { label: "p.3 · 4-Era Roadmap & Baselines", page: 3 },
+  { label: "p.5 · Nexus Helios-1E & Haiqu HUBO", page: 5 },
   { label: "p.7 · 4-Regime HQS & PDB 1O86", page: 7 },
-  { label: "p.8 · PySCF 1TQN vs 1O86 & AlphaGenome 2", page: 8 },
-  { label: "p.10 · 5-Seed Modal QLTCMLM & g-sim", page: 10 },
-  { label: "p.12 · Jev 1.14, 61-Node KG & 42 Refs", page: 12 }
+  { label: "p.9 · PySCF 1TQN vs 1O86 & AlphaGenome 2", page: 9 },
+  { label: "p.11 · Gate 1: PDB 5TE8/3NXU, THC & ChEMBL340", page: 11 },
+  { label: "p.12 · 5-Seed Modal QLTCMLM & Barren Plateau", page: 12 },
+  { label: "p.14 · Jev 1.14 & DCB0129/0160 Audit", page: 14 },
+  { label: "p.15 · 64-Node KG & 47 Verified Refs", page: 15 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -202,7 +203,7 @@ async function initPdfReader() {
   const DOC = {
     pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
     pagesDir: "pages",
-    totalPages: 15,
+    totalPages: 17,
     altTitle: "Quantum-LTC Four-Era Samskrift Monograph"
   };
 
@@ -1218,6 +1219,124 @@ function initChartsAndLightbox() {
       charts.push(cM);
     }
 
+    // Chart 4c (Full-Width): Gate 1 Clinical Quantum Wedge — PDB 5TE8 def2-SVP Barriers & Live ChEMBL340 + AG2 PBPK AUCR
+    const elGate1 = document.getElementById("echart-gate1-cyp3a4");
+    if (elGate1 && PORTAL_DATA.gate1_cyp3a4) {
+      const cG1 = window.echarts.init(elGate1);
+      const hatRows = PORTAL_DATA.gate1_cyp3a4.hat_barriers;
+      const ddiRows = PORTAL_DATA.gate1_cyp3a4.pbpk_ddis;
+      cG1.setOption({
+        tooltip: {
+          trigger: "axis",
+          backgroundColor: "rgba(11, 21, 23, 0.96)",
+          borderColor: "rgba(56, 214, 196, 0.45)",
+          textStyle: { color: "#eef7f5", fontSize: 12 }
+        },
+        legend: [
+          {
+            data: ["Doublet S=1/2 ΔE‡ (kcal/mol)", "Quartet S=3/2 ΔE‡ (kcal/mol)"],
+            textStyle: { color: "#eef7f5", fontSize: 10.5 },
+            left: "5%",
+            top: 6
+          },
+          {
+            data: ["ChEMBL340 PBPK AUCR (WT)", "AG2 CYP3A4*22 Exposure", "Published Clinical Midpoint"],
+            textStyle: { color: "#eef7f5", fontSize: 10.5 },
+            right: "3%",
+            top: 6
+          }
+        ],
+        grid: [
+          { left: 54, width: "41%", top: 64, bottom: 54 },
+          { right: 28, width: "41%", top: 64, bottom: 54 }
+        ],
+        xAxis: [
+          {
+            gridIndex: 0,
+            type: "category",
+            data: ["BS-PBE\n(GGA)", "BS-BLYP\n(GGA)", "BS-B3LYP\n(Hybrid)", "BS-PBE0\n(Hybrid)", "SA-CASSCF\n(9e,9o)", "SC-NEVPT2\n(def2-SVP)"],
+            ...baseAxis,
+            axisLabel: { color: "#bfece6", fontSize: 9.2, interval: 0, lineHeight: 12 }
+          },
+          {
+            gridIndex: 1,
+            type: "category",
+            data: ddiRows.map(d => d.label),
+            ...baseAxis,
+            axisLabel: { color: "#bfece6", fontSize: 9.2, interval: 0, lineHeight: 12 }
+          }
+        ],
+        yAxis: [
+          {
+            gridIndex: 0,
+            type: "value",
+            min: 0,
+            max: 52,
+            ...baseAxis,
+            name: "PDB 5TE8 ΔE‡ (kcal/mol)",
+            nameTextStyle: { color: "#a78bfa", fontSize: 10.5 }
+          },
+          {
+            gridIndex: 1,
+            type: "log",
+            logBase: 10,
+            min: 1,
+            max: 30,
+            ...baseAxis,
+            name: "Clinical Fold Exposure (AUCR)",
+            nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+          }
+        ],
+        series: [
+          {
+            name: "Doublet S=1/2 ΔE‡ (kcal/mol)",
+            type: "bar",
+            xAxisIndex: 0,
+            yAxisIndex: 0,
+            barGap: "10%",
+            data: hatRows.map(r => r.barrier_doublet_kcal_mol),
+            itemStyle: { color: "#a78bfa", borderRadius: [3, 3, 0, 0] },
+            label: { show: true, position: "top", color: "#c4b5fd", fontSize: 9.2 }
+          },
+          {
+            name: "Quartet S=3/2 ΔE‡ (kcal/mol)",
+            type: "bar",
+            xAxisIndex: 0,
+            yAxisIndex: 0,
+            data: hatRows.map(r => r.barrier_quartet_kcal_mol),
+            itemStyle: { color: "#38d6c4", borderRadius: [3, 3, 0, 0] },
+            label: { show: true, position: "top", color: "#38d6c4", fontSize: 9.2 }
+          },
+          {
+            name: "ChEMBL340 PBPK AUCR (WT)",
+            type: "bar",
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            barGap: "10%",
+            data: ddiRows.map(d => d.aucr_wt),
+            itemStyle: { color: "#38d6c4", borderRadius: [3, 3, 0, 0] }
+          },
+          {
+            name: "AG2 CYP3A4*22 Exposure",
+            type: "bar",
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            data: ddiRows.map(d => d.aucr_star22),
+            itemStyle: { color: "#f06a3b", borderRadius: [3, 3, 0, 0] }
+          },
+          {
+            name: "Published Clinical Midpoint",
+            type: "bar",
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            data: ddiRows.map(d => d.clin_mid),
+            itemStyle: { color: "#f4ae42", borderRadius: [3, 3, 0, 0] }
+          }
+        ]
+      });
+      charts.push(cG1);
+    }
+
     // Chart 5 (Full-Width): TypeSafe Jev 1.14 Multi-Method Health AI Audit across CUJ-1..4
     const elG = document.getElementById("echart-governance");
     if (elG && PORTAL_DATA.jev_cujs) {
@@ -1426,14 +1545,14 @@ function initKnowledgeGraph() {
   const concentricPos = {};
   (function computeConcentric() {
     const rings = {
-      Logical_Era: [120, 0.2],
-      HouseOfCare_Stage: [235, 0.05],
-      NCL_LTC_Condition: [360, 0.18],
-      Intervention: [470, -0.4],
-      Molecular_Target: [575, 0.3],
-      Quantum_Primitive: [675, 0.12],
-      Platform_Receipt: [770, -0.22],
-      DCB0129_Hazard: [855, 0.42]
+      Logical_Era: [145, 0.2],
+      HouseOfCare_Stage: [275, 0.05],
+      NCL_LTC_Condition: [420, 0.18],
+      Intervention: [545, -0.4],
+      Molecular_Target: [675, 0.3],
+      Quantum_Primitive: [795, 0.12],
+      Platform_Receipt: [905, -0.22],
+      DCB0129_Hazard: [1010, 0.42]
     };
     const grouped = {};
     kg.categories.forEach(c => { grouped[c.id] = []; });
@@ -1622,11 +1741,11 @@ function initKnowledgeGraph() {
           links: eLinks,
           categories: kg.categories.map(c => ({ name: c.short })),
           roam: true,
-          zoom: currentLayout === "concentric" ? 0.80 : 0.90,
+          zoom: currentLayout === "concentric" ? 0.74 : 0.86,
           edgeSymbol: ["none", "arrow"],
           edgeSymbolSize: [4, 7],
           emphasis: { focus: "adjacency", lineStyle: { width: 2.6 } },
-          force: { repulsion: 330, edgeLength: [75, 135], gravity: 0.08, layoutAnimation: true },
+          force: { repulsion: 520, edgeLength: [110, 195], gravity: 0.06, layoutAnimation: true },
           labelLayout: { hideOverlap: true }
         }
       ]

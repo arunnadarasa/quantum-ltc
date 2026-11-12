@@ -330,6 +330,182 @@
       }
     ]
   },
+  "gate1_cyp3a4": {
+    "hat_barriers": [
+      {
+        "method": "BS-DFT PBE (GGA)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 45.63,
+        "barrier_quartet_kcal_mol": 33.89,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": -16.57,
+        "ts_s2_doublet": 1.6704
+      },
+      {
+        "method": "BS-DFT BLYP (GGA)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 42.3,
+        "barrier_quartet_kcal_mol": 36.07,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": -9.86,
+        "ts_s2_doublet": 1.5219
+      },
+      {
+        "method": "BS-DFT B3LYP (20% HF Hybrid)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 37.12,
+        "barrier_quartet_kcal_mol": 35.06,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": -2.66,
+        "ts_s2_doublet": 1.9325
+      },
+      {
+        "method": "BS-DFT PBE0 (25% HF Hybrid)",
+        "family": "Broken-Symmetry DFT",
+        "barrier_doublet_kcal_mol": 33.28,
+        "barrier_quartet_kcal_mol": 39.46,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": 3.85,
+        "ts_s2_doublet": 2.2252
+      },
+      {
+        "method": "SA-CASSCF(9e,9o) / def2-SVP",
+        "family": "Multireference Perturbation / MCSCF",
+        "barrier_doublet_kcal_mol": 10.59,
+        "barrier_quartet_kcal_mol": 12.99,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": 0.53,
+        "ts_s2_doublet": 0.75
+      },
+      {
+        "method": "CASSCF(9e,9o) + SC-NEVPT2 / def2-SVP",
+        "family": "Multireference Perturbation / MCSCF",
+        "barrier_doublet_kcal_mol": 10.17,
+        "barrier_quartet_kcal_mol": 12.16,
+        "two_state_gap_ts_quartet_minus_doublet_kcal_mol": 1.16,
+        "ts_s2_doublet": 0.75
+      }
+    ],
+    "df_vs_thc": [
+      {
+        "n_spatial_orbitals_M": 9,
+        "label": "CAS(9e,9o): Polarized Fe=O(S)...H-C minimal HAT reaction core (PySCF exact)",
+        "lambda_df_single_point_ha": 14.16,
+        "lambda_thc_single_point_ha": 8.07,
+        "df_2point_barrier_toffolis": 18043656,
+        "thc_2point_barrier_toffolis": 10719344,
+        "thc_toffoli_speedup_factor": 1.68,
+        "df_logical_qubits": 38,
+        "thc_logical_qubits": 46,
+        "thc_surface_code_distance_d": 15,
+        "thc_physical_qubits": 36450,
+        "paired_barrier_wall_hours_df_4factory": 0.006,
+        "paired_barrier_wall_hours_thc_4factory": 0.004
+      },
+      {
+        "n_spatial_orbitals_M": 26,
+        "label": "CAS(27e,26o): Fe 3d/4d + O 2p + CYS442 S + 4 pyrrole N + C-H bond (Era III)",
+        "lambda_df_single_point_ha": 147.07,
+        "lambda_thc_single_point_ha": 83.83,
+        "df_2point_barrier_toffolis": 926738280,
+        "thc_2point_barrier_toffolis": 361942880,
+        "thc_toffoli_speedup_factor": 2.56,
+        "df_logical_qubits": 74,
+        "thc_logical_qubits": 82,
+        "thc_surface_code_distance_d": 19,
+        "thc_physical_qubits": 97470,
+        "paired_barrier_wall_hours_df_4factory": 0.309,
+        "paired_barrier_wall_hours_thc_4factory": 0.121
+      },
+      {
+        "n_spatial_orbitals_M": 42,
+        "label": "CAS(43e,42o): Full 24-atom porphyrin pi-ring + CYS442 + midazolam ring (Era III-IV)",
+        "lambda_df_single_point_ha": 423.74,
+        "lambda_thc_single_point_ha": 241.53,
+        "df_2point_barrier_toffolis": 5689958208,
+        "thc_2point_barrier_toffolis": 1866617004,
+        "thc_toffoli_speedup_factor": 3.05,
+        "df_logical_qubits": 108,
+        "thc_logical_qubits": 116,
+        "thc_surface_code_distance_d": 21,
+        "thc_physical_qubits": 164052,
+        "paired_barrier_wall_hours_df_4factory": 1.897,
+        "paired_barrier_wall_hours_thc_4factory": 0.622
+      },
+      {
+        "n_spatial_orbitals_M": 58,
+        "label": "CAS(59e,58o): Drug-bound CYP3A4 pocket + PHE304/ALA305/THR309 HAT gate (Era IV)",
+        "lambda_df_single_point_ha": 863.77,
+        "lambda_thc_single_point_ha": 492.35,
+        "df_2point_barrier_toffolis": 18607603200,
+        "thc_2point_barrier_toffolis": 5767196940,
+        "thc_toffoli_speedup_factor": 3.23,
+        "df_logical_qubits": 140,
+        "thc_logical_qubits": 150,
+        "thc_surface_code_distance_d": 21,
+        "thc_physical_qubits": 209034,
+        "paired_barrier_wall_hours_df_4factory": 6.203,
+        "paired_barrier_wall_hours_thc_4factory": 1.922
+      },
+      {
+        "n_spatial_orbitals_M": 76,
+        "label": "CAS(77e,76o): Allosteric effector + water-wire proton relay + drug scaffold (Era IV)",
+        "lambda_df_single_point_ha": 1568.22,
+        "lambda_thc_single_point_ha": 893.88,
+        "df_2point_barrier_toffolis": 51519243360,
+        "thc_2point_barrier_toffolis": 13720164480,
+        "thc_toffoli_speedup_factor": 3.76,
+        "df_logical_qubits": 177,
+        "thc_logical_qubits": 186,
+        "thc_surface_code_distance_d": 23,
+        "thc_physical_qubits": 307878,
+        "paired_barrier_wall_hours_df_4factory": 17.173,
+        "paired_barrier_wall_hours_thc_4factory": 4.573
+      }
+    ],
+    "pbpk_ddis": [
+      {
+        "id": "NCL-DDI-1",
+        "label": "Simvastatin +\nRitonavir",
+        "aucr_wt": 12.29,
+        "aucr_star22": 20.0,
+        "clin_mid": 15.0,
+        "clin_band": "10.0\u201320.0\u00d7",
+        "action": "HARD CONTRAINDICATION (Hold Simvastatin; rhabdomyolysis risk)"
+      },
+      {
+        "id": "NCL-DDI-2",
+        "label": "Simvastatin +\nClarithromycin",
+        "aucr_wt": 7.5,
+        "aucr_star22": 12.21,
+        "clin_mid": 9.5,
+        "clin_band": "7.0\u201312.0\u00d7",
+        "action": "SUSPEND STATIN during macrolide course (MHRA / BNF alert)"
+      },
+      {
+        "id": "NCL-DDI-3",
+        "label": "Simvastatin +\nDiltiazem",
+        "aucr_wt": 4.43,
+        "aucr_star22": 7.22,
+        "clin_mid": 3.95,
+        "clin_band": "3.1\u20134.8\u00d7",
+        "action": "CAP Simvastatin <= 20 mg or switch to Rosuvastatin/Pravastatin"
+      },
+      {
+        "id": "NCL-DDI-4",
+        "label": "Apixaban +\nDiltiazem",
+        "aucr_wt": 1.33,
+        "aucr_star22": 1.5,
+        "clin_mid": 1.4,
+        "clin_band": "1.3\u20131.5\u00d7",
+        "action": "MONITOR bleeding + eGFR (CrCl < 30 mL/min triggers dose review)"
+      },
+      {
+        "id": "NCL-DDI-5",
+        "label": "Simvastatin +\nAmlodipine",
+        "aucr_wt": 1.5,
+        "aucr_star22": 2.45,
+        "clin_mid": 1.75,
+        "clin_band": "1.6\u20131.9\u00d7",
+        "action": "MHRA 20 mg Simvastatin Cap with Amlodipine (or switch to Atorvastatin)"
+      }
+    ]
+  },
   "qltcmlm_models": [
     {
       "label": "4q\nReservoir",
@@ -537,7 +713,7 @@
       "file": "biophysical_qprotsim_ltc_receipt.json",
       "sha256": "6ba83347d46f7893f3202d86dd20474f43617d4a15536f41bec4e791e6faf64a",
       "platforms": "HQS <code>struqture-py</code>/<code>qoqo</code>, QProtSim (<code>1N9V</code>), BioHub, Neurosnap (<code>1O86</code>), AlphaGenome, Arc",
-      "metrics": "Crystal ACE\u2013Lisinopril <code>Zn2+ 2.141 \u00c5</code> (0 clashes); Ang II Tyr4\u2013Phe8 MI; Kuramoto R <code>0.214 \u2192 0.946</code>",
+      "metrics": "Crystal ACE\u2013Lisinopril <code>Zn2+ 2.141 \u00c5</code> (0 clashes); Ang II Asp1\u2013Arg2 MI; Kuramoto R <code>0.304 \u2192 0.984</code>",
       "floor": "Exact 256-dim Krylov / Potts"
     },
     {
@@ -546,6 +722,13 @@
       "platforms": "<code>PySCF 2.15.0</code> (<code>RCCSD(T)</code>/<code>FCI</code>/Cholesky DF on <code>1O86</code> vs <code>1TQN</code>), Live <code>alphagenome==2.0.0</code> (<code>v2.dna_client</code>)",
       "metrics": "<code>ACE 1O86</code> \u2264<code>0.015 mHa</code> vs <code>CYP3A4 1TQN</code> <code>+47.7 mHa</code> (<code>29.8\u00d7</code> chem acc), <code>75\u2013141L</code> DF-QPE; AG2 AT2 <code>+1.274</code> vs Hep <code>-0.281</code>",
       "floor": "Exact FCI & Single-Ref CC"
+    },
+    {
+      "file": "cyp3a4_drug_barrier_chembl_receipt.json",
+      "sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d",
+      "platforms": "RCSB PDB (<code>5TE8</code> Midazolam / <code>3NXU</code> Ritonavir), <code>PySCF def2-SVP</code> (<code>SC-NEVPT2</code>/<code>FCI</code>), <code>THC-QPE</code>, Live <code>ChEMBL_37</code> (<code>CHEMBL340</code>)",
+      "metrics": "XC DFT spread <code>12.35 kcal/mol</code> vs <code>SC-NEVPT2</code> <code>+10.17/+12.16</code>; <code>THC-QPE</code> <code>3.23\u00d7</code> Toffoli cut (<code>150L</code>); <code>5/5</code> PBPK <code>AUCR</code> match",
+      "floor": "Spin-Pure Multi-Root FCI & BNF"
     },
     {
       "file": "modal_roadmap_rhyme_qml_receipt.json",
@@ -558,7 +741,7 @@
       "file": "governance_primitives_jev_receipt.json",
       "sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37",
       "platforms": "Text2WetLab (6/6 OT-2), Medicus FHIR R4 + <code>ML-DSA-65</code>, DisCoPy, Moth Blur, Kashefi Atlas v0.4, TypeSafe Jev 1.14",
-      "metrics": "CUJ-1 NHS utility <code>4.32/5</code>, <code>0.00</code> auto-deploy; NCL 5-borough surge Gini <code>0.8750 \u2192 0.4613</code>",
+      "metrics": "CUJ-1 NHS utility <code>4.32/5</code>, <code>0.00</code> auto-deploy; NCL 5-borough surge Gini <code>0.8750 \u2192 0.4609</code>",
       "floor": "NHS DCB0129 & DCB0160"
     },
     {
@@ -570,14 +753,14 @@
     },
     {
       "file": "quantum_ltc_knowledge_graph.json",
-      "sha256": "73ee2005158f2843e9aa4466ba6b946f8192f1a79a70a9c78e1bcd1ae13bb3d6",
-      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), SNOMED CT, UniProtKB, RCSB PDB (<code>1O86</code>/<code>1TQN</code>), AlphaGenome 2, W3C JSON-LD 1.1",
-      "metrics": "<code>61</code> nodes, <code>126</code> directed semantic triples across 8 ontology layers (1 connected component)",
-      "floor": "Live OLS4 REST verified"
+      "sha256": "1ee2e7f5b88f8e1e4e5711f4d0807b0f08dea2d7d8f369b05bf828cd2a7aad66",
+      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, SNOMED CT, UniProtKB, RCSB PDB (<code>1O86/1TQN/5TE8/3NXU</code>), AlphaGenome 2, JSON-LD 1.1",
+      "metrics": "<code>64</code> nodes, <code>136</code> directed semantic triples across 8 ontology layers (1 connected component)",
+      "floor": "Live OLS4 & ChEMBL37 verified"
     }
   ],
   "knowledge_graph": {
-    "receipt_sha256": "73ee2005158f2843e9aa4466ba6b946f8192f1a79a70a9c78e1bcd1ae13bb3d6",
+    "receipt_sha256": "1ee2e7f5b88f8e1e4e5711f4d0807b0f08dea2d7d8f369b05bf828cd2a7aad66",
     "categories": [
       {
         "id": "NCL_LTC_Condition",
@@ -625,10 +808,10 @@
         "NCL_LTC_Condition": 9,
         "HouseOfCare_Stage": 5,
         "Intervention": 6,
-        "Molecular_Target": 11,
+        "Molecular_Target": 13,
         "Quantum_Primitive": 10,
         "Logical_Era": 4,
-        "Platform_Receipt": 10,
+        "Platform_Receipt": 11,
         "DCB0129_Hazard": 6
       }
     },
@@ -644,9 +827,9 @@
         "in_degree": 0,
         "out_degree": 6,
         "total_degree": 6,
-        "pagerank": 0.010878,
-        "betweenness_centrality": 0.0425,
-        "closeness_centrality": 0.4054
+        "pagerank": 0.009805,
+        "betweenness_centrality": 0.0446,
+        "closeness_centrality": 0.4065
       },
       {
         "id": "ltc_af",
@@ -659,9 +842,9 @@
         "in_degree": 0,
         "out_degree": 4,
         "total_degree": 4,
-        "pagerank": 0.008172,
-        "betweenness_centrality": 0.014,
-        "closeness_centrality": 0.3636
+        "pagerank": 0.007246,
+        "betweenness_centrality": 0.0167,
+        "closeness_centrality": 0.3663
       },
       {
         "id": "ltc_htn",
@@ -674,9 +857,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.009794,
-        "betweenness_centrality": 0.061,
-        "closeness_centrality": 0.375
+        "pagerank": 0.009241,
+        "betweenness_centrality": 0.0538,
+        "closeness_centrality": 0.3663
       },
       {
         "id": "ltc_t2d",
@@ -689,9 +872,9 @@
         "in_degree": 0,
         "out_degree": 4,
         "total_degree": 4,
-        "pagerank": 0.009285,
-        "betweenness_centrality": 0.0156,
-        "closeness_centrality": 0.3409
+        "pagerank": 0.008844,
+        "betweenness_centrality": 0.0141,
+        "closeness_centrality": 0.3351
       },
       {
         "id": "ltc_t1d",
@@ -704,9 +887,9 @@
         "in_degree": 0,
         "out_degree": 4,
         "total_degree": 4,
-        "pagerank": 0.007852,
-        "betweenness_centrality": 0.0097,
-        "closeness_centrality": 0.3636
+        "pagerank": 0.007468,
+        "betweenness_centrality": 0.0087,
+        "closeness_centrality": 0.358
       },
       {
         "id": "ltc_ckd",
@@ -719,9 +902,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.009349,
-        "betweenness_centrality": 0.0253,
-        "closeness_centrality": 0.3871
+        "pagerank": 0.008874,
+        "betweenness_centrality": 0.022,
+        "closeness_centrality": 0.3795
       },
       {
         "id": "ltc_masld",
@@ -734,9 +917,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.013529,
-        "betweenness_centrality": 0.054,
-        "closeness_centrality": 0.3593
+        "pagerank": 0.012311,
+        "betweenness_centrality": 0.0546,
+        "closeness_centrality": 0.3621
       },
       {
         "id": "ltc_copd",
@@ -749,9 +932,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.011866,
-        "betweenness_centrality": 0.0416,
-        "closeness_centrality": 0.3571
+        "pagerank": 0.011017,
+        "betweenness_centrality": 0.0364,
+        "closeness_centrality": 0.35
       },
       {
         "id": "ltc_asthma",
@@ -764,9 +947,9 @@
         "in_degree": 1,
         "out_degree": 6,
         "total_degree": 7,
-        "pagerank": 0.015967,
-        "betweenness_centrality": 0.0815,
-        "closeness_centrality": 0.3846
+        "pagerank": 0.015244,
+        "betweenness_centrality": 0.0723,
+        "closeness_centrality": 0.3772
       },
       {
         "id": "stage_call_recall",
@@ -779,9 +962,9 @@
         "in_degree": 10,
         "out_degree": 2,
         "total_degree": 12,
-        "pagerank": 0.02503,
-        "betweenness_centrality": 0.1262,
-        "closeness_centrality": 0.4167
+        "pagerank": 0.023611,
+        "betweenness_centrality": 0.1172,
+        "closeness_centrality": 0.4118
       },
       {
         "id": "stage_1_check_test",
@@ -794,9 +977,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.032803,
-        "betweenness_centrality": 0.1754,
-        "closeness_centrality": 0.4348
+        "pagerank": 0.031007,
+        "betweenness_centrality": 0.1617,
+        "closeness_centrality": 0.4286
       },
       {
         "id": "stage_2_mdt_review",
@@ -809,9 +992,9 @@
         "in_degree": 5,
         "out_degree": 3,
         "total_degree": 8,
-        "pagerank": 0.019628,
-        "betweenness_centrality": 0.1094,
-        "closeness_centrality": 0.4082
+        "pagerank": 0.018714,
+        "betweenness_centrality": 0.106,
+        "closeness_centrality": 0.4118
       },
       {
         "id": "stage_3_pcsp",
@@ -824,9 +1007,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.026043,
-        "betweenness_centrality": 0.0971,
-        "closeness_centrality": 0.3774
+        "pagerank": 0.024754,
+        "betweenness_centrality": 0.088,
+        "closeness_centrality": 0.375
       },
       {
         "id": "stage_4_continuity",
@@ -839,9 +1022,9 @@
         "in_degree": 2,
         "out_degree": 2,
         "total_degree": 4,
-        "pagerank": 0.019437,
-        "betweenness_centrality": 0.0383,
-        "closeness_centrality": 0.3371
+        "pagerank": 0.018161,
+        "betweenness_centrality": 0.034,
+        "closeness_centrality": 0.3333
       },
       {
         "id": "mol_ace",
@@ -854,9 +1037,9 @@
         "in_degree": 5,
         "out_degree": 1,
         "total_degree": 6,
-        "pagerank": 0.015121,
-        "betweenness_centrality": 0.0517,
-        "closeness_centrality": 0.3488
+        "pagerank": 0.014219,
+        "betweenness_centrality": 0.0466,
+        "closeness_centrality": 0.3481
       },
       {
         "id": "mol_pdb_1o86",
@@ -869,9 +1052,9 @@
         "in_degree": 2,
         "out_degree": 1,
         "total_degree": 3,
-        "pagerank": 0.013142,
-        "betweenness_centrality": 0.0202,
-        "closeness_centrality": 0.3015
+        "pagerank": 0.011935,
+        "betweenness_centrality": 0.0167,
+        "closeness_centrality": 0.3119
       },
       {
         "id": "mol_slc5a2",
@@ -884,9 +1067,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.013493,
-        "betweenness_centrality": 0.0319,
-        "closeness_centrality": 0.3409
+        "pagerank": 0.012908,
+        "betweenness_centrality": 0.0281,
+        "closeness_centrality": 0.3369
       },
       {
         "id": "mol_glp1r",
@@ -899,9 +1082,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.009829,
-        "betweenness_centrality": 0.0055,
-        "closeness_centrality": 0.2985
+        "pagerank": 0.009408,
+        "betweenness_centrality": 0.0053,
+        "closeness_centrality": 0.3
       },
       {
         "id": "mol_adrb2",
@@ -914,9 +1097,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.008948,
-        "betweenness_centrality": 0.0053,
-        "closeness_centrality": 0.3226
+        "pagerank": 0.008457,
+        "betweenness_centrality": 0.0049,
+        "closeness_centrality": 0.3231
       },
       {
         "id": "mol_il6",
@@ -929,9 +1112,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.012957,
-        "betweenness_centrality": 0.0327,
-        "closeness_centrality": 0.3636
+        "pagerank": 0.012041,
+        "betweenness_centrality": 0.0302,
+        "closeness_centrality": 0.3621
       },
       {
         "id": "mol_angii_1n9v",
@@ -944,9 +1127,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.00781,
-        "betweenness_centrality": 0.0178,
-        "closeness_centrality": 0.3209
+        "pagerank": 0.007373,
+        "betweenness_centrality": 0.0164,
+        "closeness_centrality": 0.3166
       },
       {
         "id": "mol_pnpla3",
@@ -959,9 +1142,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.004846,
+        "pagerank": 0.004516,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2655
+        "closeness_centrality": 0.2669
       },
       {
         "id": "mol_cyp3a4",
@@ -972,11 +1155,11 @@
         "metric": "Human microsomal Cytochrome P450 3A4 (chr7:99756966-99784184; CYP3A4*22 rs35599367 AVI Phred 8.05) metabolizing >50% of statin/CCB/DOAC/ICS regimens. [avi_phred_star22: 8.05 \u00b7 locus: chr7:99756966-99784184]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 5,
-        "out_degree": 2,
-        "total_degree": 7,
-        "pagerank": 0.021903,
-        "betweenness_centrality": 0.083,
-        "closeness_centrality": 0.3774
+        "out_degree": 4,
+        "total_degree": 9,
+        "pagerank": 0.02289,
+        "betweenness_centrality": 0.1077,
+        "closeness_centrality": 0.3865
       },
       {
         "id": "mol_pdb_1tqn",
@@ -989,9 +1172,39 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.019892,
-        "betweenness_centrality": 0.0244,
-        "closeness_centrality": 0.3125
+        "pagerank": 0.015177,
+        "betweenness_centrality": 0.0126,
+        "closeness_centrality": 0.3182
+      },
+      {
+        "id": "mol_pdb_5te8",
+        "label": "Crystal CYP3A4\u2013Midazolam (PDB 5TE8)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "PDB:5TE8 (https://www.rcsb.org/structure/5TE8)",
+        "metric": "2.70 \u00c5 X-ray co-crystal of human CYP3A4 bound to FDA index hydroxylation substrate Midazolam (08J CAI\u2013Fe 3.389 \u00c5, CYS442 SG\u2013Fe 2.424 \u00c5); anchors polarized def2-SVP C\u2013H HAT barrier. [resolution_A: 2.7 \u00b7 midazolam_cai_fe_A: 3.389 \u00b7 fe_sg_A: 2.424]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 3,
+        "total_degree": 4,
+        "pagerank": 0.019497,
+        "betweenness_centrality": 0.017,
+        "closeness_centrality": 0.3298
+      },
+      {
+        "id": "mol_pdb_3nxu",
+        "label": "Crystal CYP3A4\u2013Ritonavir (PDB 3NXU)",
+        "category": "Molecular_Target",
+        "tier": "Layer 3 \u00b7 Era: All",
+        "external_id": "PDB:3NXU (https://www.rcsb.org/structure/3NXU)",
+        "metric": "2.00 \u00c5 X-ray co-crystal of human CYP3A4 bound to Ritonavir (RIT thiazole N5\u2013Fe 2.225 \u00c5 Type-II heme ligation); anchors ChEMBL340 MBI inactivation (AUCR 12.29x WT / 20.0x *22). [resolution_A: 2.0 \u00b7 ritonavir_n5_fe_A: 2.225 \u00b7 chembl340_ki_nM: 100.0]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "pagerank": 0.009654,
+        "betweenness_centrality": 0.0011,
+        "closeness_centrality": 0.3029
       },
       {
         "id": "mol_muc5b",
@@ -1004,9 +1217,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.011508,
-        "betweenness_centrality": 0.0075,
-        "closeness_centrality": 0.2941
+        "pagerank": 0.009814,
+        "betweenness_centrality": 0.006,
+        "closeness_centrality": 0.2958
       },
       {
         "id": "tx_acei_lisinopril",
@@ -1019,9 +1232,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.012608,
-        "betweenness_centrality": 0.0504,
-        "closeness_centrality": 0.3279
+        "pagerank": 0.012154,
+        "betweenness_centrality": 0.0454,
+        "closeness_centrality": 0.3351
       },
       {
         "id": "tx_sglt2i",
@@ -1034,9 +1247,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.01251,
-        "betweenness_centrality": 0.034,
-        "closeness_centrality": 0.3371
+        "pagerank": 0.012551,
+        "betweenness_centrality": 0.0292,
+        "closeness_centrality": 0.3424
       },
       {
         "id": "tx_mart_dpi",
@@ -1049,9 +1262,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.014399,
-        "betweenness_centrality": 0.0665,
-        "closeness_centrality": 0.3797
+        "pagerank": 0.013572,
+        "betweenness_centrality": 0.0626,
+        "closeness_centrality": 0.3841
       },
       {
         "id": "tx_pharmacist_smr",
@@ -1062,11 +1275,11 @@
         "metric": "Structured Medication Review eliminating nephrotoxic ACEi+SGLT2i+NSAID acute kidney injury triple-whammy (+7.2 penalty). [cubic_synergy_K013: -3.9 \u00b7 triple_whammy_penalty_K016: 7.2]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 5,
-        "total_degree": 5,
-        "pagerank": 0.009085,
-        "betweenness_centrality": 0.0447,
-        "closeness_centrality": 0.3727
+        "out_degree": 6,
+        "total_degree": 6,
+        "pagerank": 0.012054,
+        "betweenness_centrality": 0.0679,
+        "closeness_centrality": 0.3987
       },
       {
         "id": "tx_home_bp",
@@ -1079,9 +1292,9 @@
         "in_degree": 0,
         "out_degree": 1,
         "total_degree": 1,
-        "pagerank": 0.003422,
+        "pagerank": 0.003272,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2479
+        "closeness_centrality": 0.252
       },
       {
         "id": "tx_vcse_sp",
@@ -1094,9 +1307,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.008004,
-        "betweenness_centrality": 0.0105,
-        "closeness_centrality": 0.2871
+        "pagerank": 0.007774,
+        "betweenness_centrality": 0.0084,
+        "closeness_centrality": 0.289
       },
       {
         "id": "prim_p08",
@@ -1109,9 +1322,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.018447,
-        "betweenness_centrality": 0.0397,
-        "closeness_centrality": 0.3371
+        "pagerank": 0.017511,
+        "betweenness_centrality": 0.0375,
+        "closeness_centrality": 0.3316
       },
       {
         "id": "prim_a01d",
@@ -1124,9 +1337,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.022111,
-        "betweenness_centrality": 0.061,
-        "closeness_centrality": 0.3571
+        "pagerank": 0.021498,
+        "betweenness_centrality": 0.0565,
+        "closeness_centrality": 0.358
       },
       {
         "id": "prim_p09",
@@ -1139,9 +1352,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.017147,
-        "betweenness_centrality": 0.0221,
-        "closeness_centrality": 0.3409
+        "pagerank": 0.016349,
+        "betweenness_centrality": 0.0198,
+        "closeness_centrality": 0.3351
       },
       {
         "id": "prim_p13",
@@ -1154,9 +1367,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.016347,
-        "betweenness_centrality": 0.0148,
-        "closeness_centrality": 0.3333
+        "pagerank": 0.015396,
+        "betweenness_centrality": 0.0139,
+        "closeness_centrality": 0.3298
       },
       {
         "id": "prim_p20",
@@ -1169,9 +1382,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.01505,
-        "betweenness_centrality": 0.022,
-        "closeness_centrality": 0.3279
+        "pagerank": 0.014162,
+        "betweenness_centrality": 0.0198,
+        "closeness_centrality": 0.3214
       },
       {
         "id": "prim_a01g",
@@ -1184,9 +1397,9 @@
         "in_degree": 1,
         "out_degree": 3,
         "total_degree": 4,
-        "pagerank": 0.023736,
-        "betweenness_centrality": 0.0418,
-        "closeness_centrality": 0.3409
+        "pagerank": 0.022007,
+        "betweenness_centrality": 0.0385,
+        "closeness_centrality": 0.3369
       },
       {
         "id": "prim_a01h",
@@ -1199,9 +1412,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.01725,
-        "betweenness_centrality": 0.0179,
-        "closeness_centrality": 0.297
+        "pagerank": 0.016153,
+        "betweenness_centrality": 0.0163,
+        "closeness_centrality": 0.293
       },
       {
         "id": "prim_p22",
@@ -1214,9 +1427,9 @@
         "in_degree": 2,
         "out_degree": 2,
         "total_degree": 4,
-        "pagerank": 0.025752,
-        "betweenness_centrality": 0.0468,
-        "closeness_centrality": 0.3297
+        "pagerank": 0.02373,
+        "betweenness_centrality": 0.043,
+        "closeness_centrality": 0.3281
       },
       {
         "id": "prim_x03",
@@ -1226,12 +1439,12 @@
         "external_id": "Kashefi:X03 (https://elhamkashefi.github.io/primitives-atlas/#X03)",
         "metric": "Active-Space Quantum Subspace / Phase Estimation for `PDB 1O86` Human ACE Zn2+ + Lisinopril \u2014 Contract: Targets strongly polarized HEXXH Zn2+ d-shell + oxyanion charge transfer where classical CCSD(T)/DMRG accuracy degrades. [kind: composite \u00b7 defining_paper: McClean, Schwartz, Carter, de Jong (2017)]",
         "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
-        "in_degree": 2,
-        "out_degree": 3,
-        "total_degree": 5,
-        "pagerank": 0.039292,
-        "betweenness_centrality": 0.0646,
-        "closeness_centrality": 0.3125
+        "in_degree": 3,
+        "out_degree": 4,
+        "total_degree": 7,
+        "pagerank": 0.041374,
+        "betweenness_centrality": 0.0768,
+        "closeness_centrality": 0.3405
       },
       {
         "id": "prim_p04",
@@ -1244,9 +1457,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.026062,
-        "betweenness_centrality": 0.0197,
-        "closeness_centrality": 0.2885
+        "pagerank": 0.022517,
+        "betweenness_centrality": 0.0201,
+        "closeness_centrality": 0.2903
       },
       {
         "id": "era_i",
@@ -1259,9 +1472,9 @@
         "in_degree": 3,
         "out_degree": 1,
         "total_degree": 4,
-        "pagerank": 0.025585,
-        "betweenness_centrality": 0.0487,
-        "closeness_centrality": 0.3488
+        "pagerank": 0.024357,
+        "betweenness_centrality": 0.0442,
+        "closeness_centrality": 0.3443
       },
       {
         "id": "era_ii",
@@ -1274,9 +1487,9 @@
         "in_degree": 5,
         "out_degree": 1,
         "total_degree": 6,
-        "pagerank": 0.043604,
-        "betweenness_centrality": 0.0812,
-        "closeness_centrality": 0.3468
+        "pagerank": 0.040552,
+        "betweenness_centrality": 0.0752,
+        "closeness_centrality": 0.3443
       },
       {
         "id": "era_iii",
@@ -1289,9 +1502,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.05046,
-        "betweenness_centrality": 0.0836,
-        "closeness_centrality": 0.3448
+        "pagerank": 0.043321,
+        "betweenness_centrality": 0.0719,
+        "closeness_centrality": 0.35
       },
       {
         "id": "era_iv",
@@ -1301,12 +1514,12 @@
         "external_id": "Roadmap:Era-IV ()",
         "metric": "Modular QCCD (90k\u2013250k+ phys, d=15\u201317). Block-encoded QSVT organ twins, O(1/eps) QAE polypharmacy CVaR & Quantum B&B on k>=4 hypergraphs. [logical_qubits: 100-1000+ \u00b7 physical_qubits: 90,000-250,000+ \u00b7 governance: NHS DCB0129 Advisory]",
         "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
-        "in_degree": 4,
+        "in_degree": 5,
         "out_degree": 0,
-        "total_degree": 4,
-        "pagerank": 0.044475,
-        "betweenness_centrality": 0.0272,
-        "closeness_centrality": 0.3093
+        "total_degree": 5,
+        "pagerank": 0.042757,
+        "betweenness_centrality": 0.0315,
+        "closeness_centrality": 0.315
       },
       {
         "id": "plat_nexus_helios",
@@ -1319,9 +1532,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.019965,
-        "betweenness_centrality": 0.0028,
-        "closeness_centrality": 0.2715
+        "pagerank": 0.018741,
+        "betweenness_centrality": 0.0026,
+        "closeness_centrality": 0.2681
       },
       {
         "id": "plat_haiqu",
@@ -1334,9 +1547,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.014652,
-        "betweenness_centrality": 0.0024,
-        "closeness_centrality": 0.2927
+        "pagerank": 0.014079,
+        "betweenness_centrality": 0.0023,
+        "closeness_centrality": 0.2917
       },
       {
         "id": "plat_jij_highs",
@@ -1349,9 +1562,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.009336,
+        "pagerank": 0.008872,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2532
+        "closeness_centrality": 0.25
       },
       {
         "id": "plat_hqs_qprotsim",
@@ -1364,9 +1577,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.017309,
-        "betweenness_centrality": 0.0037,
-        "closeness_centrality": 0.2715
+        "pagerank": 0.016123,
+        "betweenness_centrality": 0.0034,
+        "closeness_centrality": 0.2692
       },
       {
         "id": "plat_multiomics",
@@ -1379,9 +1592,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.011841,
+        "pagerank": 0.009531,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.239
+        "closeness_centrality": 0.2551
       },
       {
         "id": "plat_modal_rhyme_hf",
@@ -1394,9 +1607,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.01848,
-        "betweenness_centrality": 0.0046,
-        "closeness_centrality": 0.2691
+        "pagerank": 0.016584,
+        "betweenness_centrality": 0.0042,
+        "closeness_centrality": 0.2681
       },
       {
         "id": "plat_text2wetlab",
@@ -1409,9 +1622,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.007025,
+        "pagerank": 0.00666,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.3046
+        "closeness_centrality": 0.3014
       },
       {
         "id": "plat_medicus_discopy_moth",
@@ -1424,9 +1637,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.014165,
+        "pagerank": 0.013376,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2899
+        "closeness_centrality": 0.2877
       },
       {
         "id": "plat_typesafe_jev",
@@ -1437,11 +1650,11 @@
         "metric": "Live typed multi-method Health AI autorater (arXiv:2611.05127): CUJ-1 74.53% (4.32/5 NHS utility), CUJ-2 73.33%, CUJ-3 51.20%, CUJ-4 55.60%. [cuj1_composite_pct: 74.53 \u00b7 cuj4_rigor_0_5: 3.9 \u00b7 receipt_sha256: bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 8,
-        "total_degree": 8,
-        "pagerank": 0.012083,
-        "betweenness_centrality": 0.0626,
-        "closeness_centrality": 0.3315
+        "out_degree": 9,
+        "total_degree": 9,
+        "pagerank": 0.015326,
+        "betweenness_centrality": 0.074,
+        "closeness_centrality": 0.352
       },
       {
         "id": "plat_pyscf_ag2",
@@ -1454,9 +1667,24 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.023879,
-        "betweenness_centrality": 0.0222,
-        "closeness_centrality": 0.3015
+        "pagerank": 0.018884,
+        "betweenness_centrality": 0.0177,
+        "closeness_centrality": 0.3119
+      },
+      {
+        "id": "plat_cyp3a4_gate1",
+        "label": "Gate 1: def2-SVP HAT + THC-QPE + ChEMBL340",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era IV",
+        "external_id": "SHA256:164d38afa9d0 ()",
+        "metric": "Drug-bound CYP3A4 (PDB 5TE8/3NXU) polarized def2-SVP C\u2013H barrier (12.35 kcal/mol XC spread vs spin-pure SC-NEVPT2), paired-barrier THC-QPE (2.8x\u20133.3x Toffoli cut), & live ChEMBL340 PBPK AUCR. [dft_xc_spread_kcal: 12.35 \u00b7 chembl340_drugs: 10 \u00b7 receipt_sha256: 164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 6,
+        "out_degree": 0,
+        "total_degree": 6,
+        "pagerank": 0.026723,
+        "betweenness_centrality": 0.0495,
+        "closeness_centrality": 0.3559
       },
       {
         "id": "haz_h_ltc_01",
@@ -1469,9 +1697,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.005204,
-        "betweenness_centrality": 0.0135,
-        "closeness_centrality": 0.3261
+        "pagerank": 0.005147,
+        "betweenness_centrality": 0.0132,
+        "closeness_centrality": 0.3333
       },
       {
         "id": "haz_h_ltc_02",
@@ -1482,11 +1710,11 @@
         "metric": "ACEi/ARB + SGLT2i + diuretic/NSAID AKI or improper DPI inhaler technique without human SMR \u2014 Statutory DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off)]",
         "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
         "in_degree": 2,
-        "out_degree": 2,
-        "total_degree": 4,
-        "pagerank": 0.006735,
-        "betweenness_centrality": 0.0218,
-        "closeness_centrality": 0.3175
+        "out_degree": 3,
+        "total_degree": 5,
+        "pagerank": 0.010649,
+        "betweenness_centrality": 0.0204,
+        "closeness_centrality": 0.3333
       },
       {
         "id": "haz_h_ltc_03",
@@ -1499,9 +1727,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004488,
-        "betweenness_centrality": 0.0052,
-        "closeness_centrality": 0.3046
+        "pagerank": 0.004481,
+        "betweenness_centrality": 0.0059,
+        "closeness_centrality": 0.3182
       },
       {
         "id": "haz_h_ltc_04",
@@ -1514,9 +1742,9 @@
         "in_degree": 2,
         "out_degree": 2,
         "total_degree": 4,
-        "pagerank": 0.019627,
-        "betweenness_centrality": 0.0278,
-        "closeness_centrality": 0.3077
+        "pagerank": 0.016887,
+        "betweenness_centrality": 0.0161,
+        "closeness_centrality": 0.3134
       },
       {
         "id": "haz_h_ltc_05",
@@ -1529,9 +1757,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.005334,
-        "betweenness_centrality": 0.016,
-        "closeness_centrality": 0.3371
+        "pagerank": 0.005274,
+        "betweenness_centrality": 0.0146,
+        "closeness_centrality": 0.3424
       },
       {
         "id": "haz_h_ltc_06",
@@ -1544,9 +1772,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.005444,
-        "betweenness_centrality": 0.0047,
-        "closeness_centrality": 0.2643
+        "pagerank": 0.005421,
+        "betweenness_centrality": 0.0062,
+        "closeness_centrality": 0.2763
       }
     ],
     "edges": [
@@ -1891,6 +2119,66 @@
         "target": "plat_pyscf_ag2",
         "relation": "SCORED_AT_SINGLE_CELL_BY",
         "weight": "Live AlphaGenome 2 v2.dna_client AT2 pneumocyte vs hepatocyte control"
+      },
+      {
+        "source": "mol_cyp3a4",
+        "target": "mol_pdb_5te8",
+        "relation": "RESOLVED_IN_CRYSTAL",
+        "weight": "2.70 \u00c5 X-ray co-crystal of human CYP3A4 bound to Midazolam (08J CAI\u2013Fe 3.389 \u00c5)"
+      },
+      {
+        "source": "mol_cyp3a4",
+        "target": "mol_pdb_3nxu",
+        "relation": "RESOLVED_IN_CRYSTAL",
+        "weight": "2.00 \u00c5 X-ray co-crystal of human CYP3A4 Type-II heme-ligated by Ritonavir (RIT N5\u2013Fe 2.225 \u00c5)"
+      },
+      {
+        "source": "mol_pdb_5te8",
+        "target": "prim_x03",
+        "relation": "BENCHMARKS_HAT_BARRIER_ON",
+        "weight": "Polarized def2-SVP RC->TS_HAT C\u2013H abstraction benchmark (12.35 kcal/mol XC spread vs spin-pure SC-NEVPT2)"
+      },
+      {
+        "source": "mol_pdb_5te8",
+        "target": "era_iv",
+        "relation": "SCALES_TO_144L_THC_QPE",
+        "weight": "Paired 2-geometry E(TS_HAT)-E(RC) Tensor-Hypercontraction QPE (eps_barrier = 0.99 mHa)"
+      },
+      {
+        "source": "mol_pdb_3nxu",
+        "target": "plat_cyp3a4_gate1",
+        "relation": "ANCHORS_DDI_INACTIVATION_IN",
+        "weight": "Type-II heme ligation + live ChEMBL340 Ki=100 nM, kinact=0.2275 min^-1"
+      },
+      {
+        "source": "mol_pdb_5te8",
+        "target": "plat_cyp3a4_gate1",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Gate 1 def2-SVP C\u2013H barrier + THC-QPE + ChEMBL340 Rowland-Matin PBPK receipt"
+      },
+      {
+        "source": "prim_x03",
+        "target": "plat_cyp3a4_gate1",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "Paired 2-point barrier DF vs THC resource accounting & exact multi-root FCI Schmidt surge"
+      },
+      {
+        "source": "tx_pharmacist_smr",
+        "target": "plat_cyp3a4_gate1",
+        "relation": "PARAMETERISES_DDI_AUCR_VIA",
+        "weight": "Live ChEMBL340 + AlphaGenome 2 CYP3A4*22 PBPK AUCR across statin/DOAC/CCB regimens"
+      },
+      {
+        "source": "haz_h_ltc_02",
+        "target": "plat_cyp3a4_gate1",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Mandatory Clinical Pharmacist SMR sign-off under open NHS DCB0129 & DCB0160 hazard H-LTC-02"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "plat_cyp3a4_gate1",
+        "relation": "AUDITS_DEMARCATION_OF",
+        "weight": "Zero physical QPU shots, zero wet-lab human specimens, non-autonomous shadow research boundary"
       },
       {
         "source": "tx_acei_lisinopril",
