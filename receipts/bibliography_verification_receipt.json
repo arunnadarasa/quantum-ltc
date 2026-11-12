@@ -1,5 +1,5 @@
 {
-  "total_entries": 36,
+  "total_entries": 42,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -252,6 +252,48 @@
       "status": "VERIFIED",
       "verification_source": "Crossref HTTP 200 (10.1103/3y65-f5w6)",
       "resolved_title": "Lie-algebraic classical simulations for quantum computing"
+    },
+    {
+      "key": "yano2004cyp3a4_1tqn",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1074/jbc.C400293200)",
+      "resolved_title": "The Structure of Human Microsomal Cytochrome P450 3A4 Determined by X-ray Crystallography to 2.05-\u00c5 Resolution"
+    },
+    {
+      "key": "vonburg2021catalysis_df",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1103/PhysRevResearch.3.033055)",
+      "resolved_title": "Quantum computing enhanced computational catalysis"
+    },
+    {
+      "key": "lee2021df_hypercontraction",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1103/PRXQuantum.2.030305)",
+      "resolved_title": "Even More Efficient Quantum Computations of Chemistry Through Tensor Hypercontraction"
+    },
+    {
+      "key": "sun2020pyscf",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1063/5.0006074)",
+      "resolved_title": "Recent developments in the P\n                    <scp>y</scp>\n                    SCF program package"
+    },
+    {
+      "key": "avsec2026alphagenome",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1038/s41586-025-10014-0)",
+      "resolved_title": "Advancing regulatory variant effect prediction with AlphaGenome"
+    },
+    {
+      "key": "gayoso2026alphagenome2",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "{AlphaGenome 2}: Predicting the impact of genetic variants at single-cell resolution"
     }
   ]
 }

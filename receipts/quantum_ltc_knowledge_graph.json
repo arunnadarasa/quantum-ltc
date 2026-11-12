@@ -3,8 +3,8 @@
   "title": "Quantum-LTC Ontology-Grounded Clinical-to-Logical-Qubit Knowledge Graph",
   "ontology_sources": [
     "EMBL-EBI OLS4 Human Disease Ontology (DOID) \u2014 https://www.ebi.ac.uk/ols4/api-docs",
-    "UniProtKB & GENCODE v46 (Google DeepMind AlphaGenome Atlas)",
-    "RCSB Protein Data Bank (PDB 1O86 & 1N9V)",
+    "UniProtKB, GENCODE v46 & Google DeepMind AlphaGenome 2 (v2.dna_client + Atlas AVI)",
+    "RCSB Protein Data Bank (PDB 1O86, 1TQN & 1N9V)",
     "SNOMED CT UK Edition (315594003 Interpreter needed)",
     "Kashefi Quantum Algorithmic Primitives Atlas v0.4",
     "NHS England DCB0129 (Manufacture) & DCB0160 (Deployment) Clinical Risk Management Standards"
@@ -18,20 +18,20 @@
     "closed_hazards_claimed": 0
   },
   "graph_statistics": {
-    "total_nodes": 57,
-    "total_edges": 114,
+    "total_nodes": 61,
+    "total_edges": 126,
     "entity_types_count": 8,
-    "predicate_types_count": 46,
+    "predicate_types_count": 53,
     "connected_components": 1,
-    "mean_total_degree": 4.0,
+    "mean_total_degree": 4.131,
     "nodes_by_entity_type": {
       "NCL_LTC_Condition": 9,
       "HouseOfCare_Stage": 5,
-      "Molecular_Target": 8,
+      "Molecular_Target": 11,
       "Intervention": 6,
       "Quantum_Primitive": 10,
       "Logical_Era": 4,
-      "Platform_Receipt": 9,
+      "Platform_Receipt": 10,
       "DCB0129_Hazard": 6
     },
     "edges_by_predicate": {
@@ -50,9 +50,17 @@
       "DRIVEN_BY_PEPTIDE": 1,
       "INFLAMED_BY_MEDIATOR": 3,
       "COMORBID_RENAL_AXIS": 1,
-      "MODIFIED_BY_LOCUS": 1,
-      "RESOLVED_IN_CRYSTAL": 1,
+      "MODIFIED_BY_LOCUS": 2,
+      "RESOLVED_IN_CRYSTAL": 2,
       "CLEAVED_FROM_ANG_I_BY": 1,
+      "METABOLISES_POLYPHARMACY": 2,
+      "REGULATED_IN_HEPATOCYTE": 1,
+      "AUDITS_DDI_CLEARANCE_OF": 1,
+      "CLEARED_FIRST_PASS_BY": 1,
+      "DEMARCATES_FTQC_WALL": 1,
+      "SCALES_TO_141L_DF_QPE": 1,
+      "EXECUTED_AND_SEALED_ON": 11,
+      "SCORED_AT_SINGLE_CELL_BY": 2,
       "COORDINATES_CATALYTIC_ZN2": 1,
       "INHIBITS_TARGET": 2,
       "SYNERGISES_METABOLICALLY": 1,
@@ -73,7 +81,6 @@
       "TARGETS_ACTIVE_SPACE_QPE": 1,
       "SCALES_TO_ICS_TAIL_RISK": 1,
       "MAPS_TO_LOGICAL_ERA": 10,
-      "EXECUTED_AND_SEALED_ON": 10,
       "SCALES_WITH_QEC_TO": 3,
       "ROBOTICALLY_VERIFIED_BY": 1,
       "SIGNED_IN_PQC_FHIR_BY": 1,
@@ -87,71 +94,71 @@
         "id": "era_iii",
         "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.058761,
+        "pagerank": 0.05046,
         "total_degree": 5
-      },
-      {
-        "id": "era_ii",
-        "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
-        "entity_type": "Logical_Era",
-        "pagerank": 0.048478,
-        "total_degree": 6
       },
       {
         "id": "era_iv",
         "label": "Era IV: Asymptotic ICS-Scale FTQC (100\u20131,000+L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.04366,
-        "total_degree": 3
+        "pagerank": 0.044475,
+        "total_degree": 4
+      },
+      {
+        "id": "era_ii",
+        "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
+        "entity_type": "Logical_Era",
+        "pagerank": 0.043604,
+        "total_degree": 6
+      },
+      {
+        "id": "prim_x03",
+        "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
+        "entity_type": "Quantum_Primitive",
+        "pagerank": 0.039292,
+        "total_degree": 5
       },
       {
         "id": "stage_1_check_test",
         "label": "Stage 1: Check & Test + Interpreter Access",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.036962,
+        "pagerank": 0.032803,
         "total_degree": 14
       },
       {
         "id": "prim_p04",
         "label": "Atlas P04: Quantum walk search",
         "entity_type": "Quantum_Primitive",
-        "pagerank": 0.03101,
+        "pagerank": 0.026062,
         "total_degree": 3
       },
       {
         "id": "stage_3_pcsp",
         "label": "Stage 3: PCSP Coaching, VCSE & Net-Zero Switch",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.029038,
+        "pagerank": 0.026043,
         "total_degree": 7
       },
       {
         "id": "prim_p22",
         "label": "Atlas P22: Open-system (Lindbladian) simulation",
         "entity_type": "Quantum_Primitive",
-        "pagerank": 0.028945,
+        "pagerank": 0.025752,
+        "total_degree": 4
+      },
+      {
+        "id": "era_i",
+        "label": "Era I: Classical-Exact & NISQ (0L)",
+        "entity_type": "Logical_Era",
+        "pagerank": 0.025585,
         "total_degree": 4
       },
       {
         "id": "stage_call_recall",
         "label": "UCLP Case-Finding & Pre-Winter Call/Recall",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.028353,
+        "pagerank": 0.02503,
         "total_degree": 12
-      },
-      {
-        "id": "era_i",
-        "label": "Era I: Classical-Exact & NISQ (0L)",
-        "entity_type": "Logical_Era",
-        "pagerank": 0.028243,
-        "total_degree": 4
-      },
-      {
-        "id": "prim_x03",
-        "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
-        "entity_type": "Quantum_Primitive",
-        "pagerank": 0.028188,
-        "total_degree": 3
       }
     ]
   },
@@ -216,9 +223,9 @@
         "default_tier": "High / Complex"
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.010186
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.010878
     },
     {
       "id": "ltc_af",
@@ -234,9 +241,9 @@
         "default_tier": "Moderate / High"
       },
       "in_degree": 0,
-      "out_degree": 3,
-      "total_degree": 3,
-      "pagerank": 0.0072
+      "out_degree": 4,
+      "total_degree": 4,
+      "pagerank": 0.008172
     },
     {
       "id": "ltc_htn",
@@ -254,7 +261,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.010805
+      "pagerank": 0.009794
     },
     {
       "id": "ltc_t2d",
@@ -271,7 +278,7 @@
       "in_degree": 0,
       "out_degree": 4,
       "total_degree": 4,
-      "pagerank": 0.010345
+      "pagerank": 0.009285
     },
     {
       "id": "ltc_t1d",
@@ -288,7 +295,7 @@
       "in_degree": 0,
       "out_degree": 4,
       "total_degree": 4,
-      "pagerank": 0.008663
+      "pagerank": 0.007852
     },
     {
       "id": "ltc_ckd",
@@ -306,7 +313,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.010304
+      "pagerank": 0.009349
     },
     {
       "id": "ltc_masld",
@@ -322,9 +329,9 @@
         "genetic_modifier": "PNPLA3"
       },
       "in_degree": 0,
-      "out_degree": 4,
-      "total_degree": 4,
-      "pagerank": 0.013459
+      "out_degree": 5,
+      "total_degree": 5,
+      "pagerank": 0.013529
     },
     {
       "id": "ltc_copd",
@@ -339,9 +346,9 @@
         "seasonality": "Pre-winter Q2/Q3 priority"
       },
       "in_degree": 0,
-      "out_degree": 4,
-      "total_degree": 4,
-      "pagerank": 0.010477
+      "out_degree": 5,
+      "total_degree": 5,
+      "pagerank": 0.011866
     },
     {
       "id": "ltc_asthma",
@@ -359,7 +366,7 @@
       "in_degree": 1,
       "out_degree": 6,
       "total_degree": 7,
-      "pagerank": 0.017742
+      "pagerank": 0.015967
     },
     {
       "id": "stage_call_recall",
@@ -377,7 +384,7 @@
       "in_degree": 10,
       "out_degree": 2,
       "total_degree": 12,
-      "pagerank": 0.028353
+      "pagerank": 0.02503
     },
     {
       "id": "stage_1_check_test",
@@ -395,7 +402,7 @@
       "in_degree": 11,
       "out_degree": 3,
       "total_degree": 14,
-      "pagerank": 0.036962
+      "pagerank": 0.032803
     },
     {
       "id": "stage_2_mdt_review",
@@ -413,7 +420,7 @@
       "in_degree": 5,
       "out_degree": 3,
       "total_degree": 8,
-      "pagerank": 0.021827
+      "pagerank": 0.019628
     },
     {
       "id": "stage_3_pcsp",
@@ -431,7 +438,7 @@
       "in_degree": 5,
       "out_degree": 2,
       "total_degree": 7,
-      "pagerank": 0.029038
+      "pagerank": 0.026043
     },
     {
       "id": "stage_4_continuity",
@@ -449,7 +456,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.021732
+      "pagerank": 0.019437
     },
     {
       "id": "mol_ace",
@@ -467,7 +474,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.016598
+      "pagerank": 0.015121
     },
     {
       "id": "mol_pdb_1o86",
@@ -486,7 +493,7 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "pagerank": 0.01441
+      "pagerank": 0.013142
     },
     {
       "id": "mol_slc5a2",
@@ -504,7 +511,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.014908
+      "pagerank": 0.013493
     },
     {
       "id": "mol_glp1r",
@@ -522,7 +529,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.011248
+      "pagerank": 0.009829
     },
     {
       "id": "mol_adrb2",
@@ -539,7 +546,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.010145
+      "pagerank": 0.008948
     },
     {
       "id": "mol_il6",
@@ -557,7 +564,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.01486
+      "pagerank": 0.012957
     },
     {
       "id": "mol_angii_1n9v",
@@ -575,7 +582,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.008521
+      "pagerank": 0.00781
     },
     {
       "id": "mol_pnpla3",
@@ -592,7 +599,63 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.005701
+      "pagerank": 0.004846
+    },
+    {
+      "id": "mol_cyp3a4",
+      "label": "Hepatic CYP3A4*22 (P08684)",
+      "entity_type": "Molecular_Target",
+      "layer": 3,
+      "curie": "UniProt:P08684",
+      "external_iri": "https://www.uniprot.org/uniprotkb/P08684",
+      "era": "All",
+      "summary": "Human microsomal Cytochrome P450 3A4 (chr7:99756966-99784184; CYP3A4*22 rs35599367 AVI Phred 8.05) metabolizing >50% of statin/CCB/DOAC/ICS regimens.",
+      "metrics": {
+        "avi_phred_star22": 8.05,
+        "locus": "chr7:99756966-99784184"
+      },
+      "in_degree": 5,
+      "out_degree": 2,
+      "total_degree": 7,
+      "pagerank": 0.021903
+    },
+    {
+      "id": "mol_pdb_1tqn",
+      "label": "Crystal CYP3A4 Compound I (PDB 1TQN)",
+      "entity_type": "Molecular_Target",
+      "layer": 3,
+      "curie": "PDB:1TQN",
+      "external_iri": "https://www.rcsb.org/structure/1TQN",
+      "era": "All",
+      "summary": "2.05 \u00c5 X-ray structure of human CYP3A4 (Fe\u2013CYS442 SG 2.355 \u00c5); open-shell ferryl-oxo triradical breaks RCCSD(T) by 47.7 mHa at CAS(11e,11o) & scales to 141L DF-QPE at 58o.",
+      "metrics": {
+        "fe_sg_distance_A": 2.355,
+        "rccsdt_spin_gap_err_11o_mha": 47.734,
+        "era_iv_58o_logical": "141L"
+      },
+      "in_degree": 1,
+      "out_degree": 2,
+      "total_degree": 3,
+      "pagerank": 0.019892
+    },
+    {
+      "id": "mol_muc5b",
+      "label": "MUC5B Airway Enhancer (rs35705950)",
+      "entity_type": "Molecular_Target",
+      "layer": 3,
+      "curie": "HGNC:7516",
+      "external_iri": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7516",
+      "era": "All",
+      "summary": "Distal airway mucin enhancer variant chr11:1219991:G>T scored live in AlphaGenome 2 (AT2 pneumocyte scRNA LFC +1.27 vs hepatocyte -0.28; AVI Phred 16.14).",
+      "metrics": {
+        "ag2_at2_sc_lfc": 1.2736,
+        "ag2_hep_ctrl_lfc": -0.2814,
+        "avi_phred": 16.14
+      },
+      "in_degree": 1,
+      "out_degree": 1,
+      "total_degree": 2,
+      "pagerank": 0.011508
     },
     {
       "id": "tx_acei_lisinopril",
@@ -610,7 +673,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.013771
+      "pagerank": 0.012608
     },
     {
       "id": "tx_sglt2i",
@@ -628,7 +691,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.013915
+      "pagerank": 0.01251
     },
     {
       "id": "tx_mart_dpi",
@@ -644,9 +707,9 @@
         "saba_clash_J26": 5.4
       },
       "in_degree": 1,
-      "out_degree": 4,
-      "total_degree": 5,
-      "pagerank": 0.014155
+      "out_degree": 5,
+      "total_degree": 6,
+      "pagerank": 0.014399
     },
     {
       "id": "tx_pharmacist_smr",
@@ -662,9 +725,9 @@
         "triple_whammy_penalty_K016": 7.2
       },
       "in_degree": 0,
-      "out_degree": 4,
-      "total_degree": 4,
-      "pagerank": 0.0081
+      "out_degree": 5,
+      "total_degree": 5,
+      "pagerank": 0.009085
     },
     {
       "id": "tx_home_bp",
@@ -682,7 +745,7 @@
       "in_degree": 0,
       "out_degree": 1,
       "total_degree": 1,
-      "pagerank": 0.003683
+      "pagerank": 0.003422
     },
     {
       "id": "tx_vcse_sp",
@@ -700,7 +763,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.008731
+      "pagerank": 0.008004
     },
     {
       "id": "prim_p08",
@@ -718,7 +781,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.020332
+      "pagerank": 0.018447
     },
     {
       "id": "prim_a01d",
@@ -736,7 +799,7 @@
       "in_degree": 4,
       "out_degree": 2,
       "total_degree": 6,
-      "pagerank": 0.0246
+      "pagerank": 0.022111
     },
     {
       "id": "prim_p09",
@@ -754,7 +817,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.018949
+      "pagerank": 0.017147
     },
     {
       "id": "prim_p13",
@@ -772,7 +835,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.01802
+      "pagerank": 0.016347
     },
     {
       "id": "prim_p20",
@@ -790,7 +853,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.016576
+      "pagerank": 0.01505
     },
     {
       "id": "prim_a01g",
@@ -808,7 +871,7 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "pagerank": 0.026535
+      "pagerank": 0.023736
     },
     {
       "id": "prim_a01h",
@@ -826,7 +889,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.018983
+      "pagerank": 0.01725
     },
     {
       "id": "prim_p22",
@@ -844,7 +907,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.028945
+      "pagerank": 0.025752
     },
     {
       "id": "prim_x03",
@@ -859,10 +922,10 @@
         "kind": "composite",
         "defining_paper": "McClean, Schwartz, Carter, de Jong (2017)"
       },
-      "in_degree": 1,
-      "out_degree": 2,
-      "total_degree": 3,
-      "pagerank": 0.028188
+      "in_degree": 2,
+      "out_degree": 3,
+      "total_degree": 5,
+      "pagerank": 0.039292
     },
     {
       "id": "prim_p04",
@@ -880,7 +943,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.03101
+      "pagerank": 0.026062
     },
     {
       "id": "era_i",
@@ -899,7 +962,7 @@
       "in_degree": 3,
       "out_degree": 1,
       "total_degree": 4,
-      "pagerank": 0.028243
+      "pagerank": 0.025585
     },
     {
       "id": "era_ii",
@@ -918,7 +981,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.048478
+      "pagerank": 0.043604
     },
     {
       "id": "era_iii",
@@ -937,7 +1000,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.058761
+      "pagerank": 0.05046
     },
     {
       "id": "era_iv",
@@ -953,10 +1016,10 @@
         "physical_qubits": "90,000-250,000+",
         "governance": "NHS DCB0129 Advisory"
       },
-      "in_degree": 3,
+      "in_degree": 4,
       "out_degree": 0,
-      "total_degree": 3,
-      "pagerank": 0.04366
+      "total_degree": 4,
+      "pagerank": 0.044475
     },
     {
       "id": "plat_nexus_helios",
@@ -975,7 +1038,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.022014
+      "pagerank": 0.019965
     },
     {
       "id": "plat_haiqu",
@@ -994,7 +1057,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.01615
+      "pagerank": 0.014652
     },
     {
       "id": "plat_jij_highs",
@@ -1013,7 +1076,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.010212
+      "pagerank": 0.009336
     },
     {
       "id": "plat_hqs_qprotsim",
@@ -1032,7 +1095,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.019171
+      "pagerank": 0.017309
     },
     {
       "id": "plat_multiomics",
@@ -1051,7 +1114,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.01314
+      "pagerank": 0.011841
     },
     {
       "id": "plat_modal_rhyme_hf",
@@ -1070,7 +1133,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.021241
+      "pagerank": 0.01848
     },
     {
       "id": "plat_text2wetlab",
@@ -1089,7 +1152,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.007777
+      "pagerank": 0.007025
     },
     {
       "id": "plat_medicus_discopy_moth",
@@ -1109,7 +1172,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.015702
+      "pagerank": 0.014165
     },
     {
       "id": "plat_typesafe_jev",
@@ -1128,7 +1191,26 @@
       "in_degree": 0,
       "out_degree": 8,
       "total_degree": 8,
-      "pagerank": 0.013685
+      "pagerank": 0.012083
+    },
+    {
+      "id": "plat_pyscf_ag2",
+      "label": "PySCF 2.15 DF-QPE + AlphaGenome 2 (v2)",
+      "entity_type": "Platform_Receipt",
+      "layer": 7,
+      "curie": "SHA256:1a9541a1e657",
+      "external_iri": "",
+      "era": "Era III",
+      "summary": "Ab-initio identical-H_CAS benchmark: closed-shell 1O86 RCCSD(T) error <=0.015 mHa vs open-shell 1TQN CYP3A4 Cpd I error 9.9-167.0 mHa (FCI wall >=22o; 141L at 58o) + live AG2 v2 primary-cell scores.",
+      "metrics": {
+        "ace_10o_err_mha": 0.0154,
+        "cyp3a4_11o_gap_err_mha": 47.734,
+        "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+      },
+      "in_degree": 3,
+      "out_degree": 0,
+      "total_degree": 3,
+      "pagerank": 0.023879
     },
     {
       "id": "haz_h_ltc_01",
@@ -1146,7 +1228,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.00574
+      "pagerank": 0.005204
     },
     {
       "id": "haz_h_ltc_02",
@@ -1164,7 +1246,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.007519
+      "pagerank": 0.006735
     },
     {
       "id": "haz_h_ltc_03",
@@ -1182,7 +1264,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.004913
+      "pagerank": 0.004488
     },
     {
       "id": "haz_h_ltc_04",
@@ -1200,7 +1282,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.023797
+      "pagerank": 0.019627
     },
     {
       "id": "haz_h_ltc_05",
@@ -1218,7 +1300,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005879
+      "pagerank": 0.005334
     },
     {
       "id": "haz_h_ltc_06",
@@ -1236,7 +1318,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005941
+      "pagerank": 0.005444
     }
   ],
   "edges": [
@@ -1599,6 +1681,102 @@
       "rationale": "ACE C-domain catalytic Zn2+ cleaves Ang I to Ang II",
       "weight": 1.1,
       "receipt_sha256": "6ba83347d46f7893f3202d86dd20474f43617d4a15536f41bec4e791e6faf64a"
+    },
+    {
+      "source": "ltc_cvd",
+      "target": "mol_cyp3a4",
+      "predicate": "METABOLISES_POLYPHARMACY",
+      "rationale": "Hepatic CYP3A4 clears statins, amlodipine, and apixaban across cardiorenal LTCs",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "ltc_af",
+      "target": "mol_cyp3a4",
+      "predicate": "METABOLISES_POLYPHARMACY",
+      "rationale": "CYP3A4 oxidative clearance of DOAC anticoagulants (apixaban/rivaroxaban)",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "ltc_masld",
+      "target": "mol_cyp3a4",
+      "predicate": "REGULATED_IN_HEPATOCYTE",
+      "rationale": "AlphaGenome 2 UBERON:0002107_CL:0000182 hepatocyte chromatin/splicing locus",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "mol_cyp3a4",
+      "target": "mol_pdb_1tqn",
+      "predicate": "RESOLVED_IN_CRYSTAL",
+      "rationale": "2.05 \u00c5 X-ray structure of human microsomal CYP3A4 (Fe\u2013CYS442 SG 2.355 \u00c5)",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "tx_pharmacist_smr",
+      "target": "mol_cyp3a4",
+      "predicate": "AUDITS_DDI_CLEARANCE_OF",
+      "rationale": "Stage 2 Pharmacist SMR screens CYP3A4*22 & statin/CCB/DOAC drug interactions",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "tx_mart_dpi",
+      "target": "mol_cyp3a4",
+      "predicate": "CLEARED_FIRST_PASS_BY",
+      "rationale": "Inhaled budesonide first-pass hepatic inactivation by CYP3A4 Compound I",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "ltc_copd",
+      "target": "mol_muc5b",
+      "predicate": "MODIFIED_BY_LOCUS",
+      "rationale": "AlphaGenome 2 AT2 pneumocyte enhancer gain-of-function rs35705950 (+1.27 scRNA LFC)",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "mol_pdb_1tqn",
+      "target": "prim_x03",
+      "predicate": "DEMARCATES_FTQC_WALL",
+      "rationale": "Open-shell triradical breaks RCCSD(T) (47.7 mHa error) & hits >1 TiB FCI wall at M>=22",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "mol_pdb_1tqn",
+      "target": "era_iv",
+      "predicate": "SCALES_TO_141L_DF_QPE",
+      "rationale": "58-orbital drug-bound CYP3A4 pocket maps to 141 ancilla-complete logical qubits",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "prim_x03",
+      "target": "plat_pyscf_ag2",
+      "predicate": "EXECUTED_AND_SEALED_ON",
+      "rationale": "PySCF 2.15 identical-H_CAS benchmark + Cholesky DF 1-norm scaling",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "mol_cyp3a4",
+      "target": "plat_pyscf_ag2",
+      "predicate": "SCORED_AT_SINGLE_CELL_BY",
+      "rationale": "Live AlphaGenome 2 v2.dna_client hepatocyte & Atlas AVI Phred 8.05",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+    },
+    {
+      "source": "mol_muc5b",
+      "target": "plat_pyscf_ag2",
+      "predicate": "SCORED_AT_SINGLE_CELL_BY",
+      "rationale": "Live AlphaGenome 2 v2.dna_client AT2 pneumocyte vs hepatocyte control",
+      "weight": 1.2,
+      "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
     },
     {
       "source": "tx_acei_lisinopril",
@@ -2153,5 +2331,5 @@
       "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
     }
   ],
-  "receipt_sha256": "9b4e62e08dfe095909614aab2752c76c99df0df699377d0756c618d3a825c505"
+  "receipt_sha256": "73ee2005158f2843e9aa4466ba6b946f8192f1a79a70a9c78e1bcd1ae13bb3d6"
 }

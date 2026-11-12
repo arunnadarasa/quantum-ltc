@@ -1,0 +1,827 @@
+{
+  "schema_version": "1.0.0-metalloenzyme-ftqc-alphagenome2",
+  "benchmark_suite": "Ab-Initio Metalloenzyme Active-Space FTQC Demarcation (PySCF 2.15) & Live AlphaGenome 2 (v2.dna_client)",
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "clinical_claim_boundary": "Strictly research-grade molecular electronic-structure & non-commercial functional genomics benchmarking under open NHS DCB0129/DCB0160 hazards; zero autonomous prescribing or clinical diagnostic use."
+  },
+  "total_benchmark_wall_seconds": 32.647,
+  "pdb_1o86_ace_zn2_single_reference_control": {
+    "pdb_id": "1O86",
+    "clinical_anchor": "Human C-domain ACE bound to lisinopril (NCL Hypertension Outcome #23 & CKD protection)",
+    "metal_center": "Closed-shell Zn2+ (3d^10 singlet, S = 0) + HIS383 + HIS387 + GLU411 + Lisinopril carboxylate",
+    "n_atoms_cluster": 27,
+    "n_ao_sto3g": 108,
+    "nelec_cluster": [
+      74,
+      74
+    ],
+    "rhf_total_energy_ha": -2572.4583249,
+    "active_space_windows": [
+      {
+        "n_spatial_orbitals": 4,
+        "n_active_electrons": 4,
+        "nelec_alpha_beta": [
+          2,
+          2
+        ],
+        "n_fci_determinants": 36,
+        "e_rohf_ha": -2572.4583249,
+        "e_uhf_ha": -2572.4583249,
+        "s2_uhf": 0.0,
+        "s2_fci_exact": 0.0,
+        "e_rccsd_ha": -2572.4595571,
+        "e_rccsd_t_ha": -2572.4595571,
+        "t1_diagnostic": 0.01848,
+        "e_fci_exact_ha": -2572.4595571,
+        "err_rccsd_mha": 0.0,
+        "err_rccsd_t_mha": -0.0,
+        "total_orbital_entropy_nats": 0.0404,
+        "natural_occupations": [
+          2.0,
+          1.9941,
+          0.0059,
+          0.0
+        ],
+        "fci_runtime_ms": 0.99,
+        "df_one_norm": {
+          "n_spatial_orbitals": 4,
+          "df_rank_L": 10,
+          "df_total_givens_rotations": 40,
+          "lambda_1body_ha": 1.113,
+          "lambda_2body_ha": 1.4961,
+          "lambda_df_total_ha": 2.6091
+        }
+      },
+      {
+        "n_spatial_orbitals": 6,
+        "n_active_electrons": 6,
+        "nelec_alpha_beta": [
+          3,
+          3
+        ],
+        "n_fci_determinants": 400,
+        "e_rohf_ha": -2572.4583249,
+        "e_uhf_ha": -2572.4583249,
+        "s2_uhf": 0.0,
+        "s2_fci_exact": 0.0,
+        "e_rccsd_ha": -2572.4605787,
+        "e_rccsd_t_ha": -2572.460579,
+        "t1_diagnostic": 0.02236,
+        "e_fci_exact_ha": -2572.460579,
+        "err_rccsd_mha": 0.0002,
+        "err_rccsd_t_mha": -0.0,
+        "total_orbital_entropy_nats": 0.0805,
+        "natural_occupations": [
+          2.0,
+          2.0,
+          1.9867,
+          0.0133,
+          0.0001,
+          0.0
+        ],
+        "fci_runtime_ms": 21.91,
+        "df_one_norm": {
+          "n_spatial_orbitals": 6,
+          "df_rank_L": 21,
+          "df_total_givens_rotations": 125,
+          "lambda_1body_ha": 2.9685,
+          "lambda_2body_ha": 3.5444,
+          "lambda_df_total_ha": 6.5129
+        }
+      },
+      {
+        "n_spatial_orbitals": 8,
+        "n_active_electrons": 8,
+        "nelec_alpha_beta": [
+          4,
+          4
+        ],
+        "n_fci_determinants": 4900,
+        "e_rohf_ha": -2572.4583249,
+        "e_uhf_ha": -2572.4583249,
+        "s2_uhf": 0.0,
+        "s2_fci_exact": 0.0,
+        "e_rccsd_ha": -2572.4606294,
+        "e_rccsd_t_ha": -2572.4606298,
+        "t1_diagnostic": 0.01991,
+        "e_fci_exact_ha": -2572.4606298,
+        "err_rccsd_mha": 0.0004,
+        "err_rccsd_t_mha": 0.0,
+        "total_orbital_entropy_nats": 0.0808,
+        "natural_occupations": [
+          2.0,
+          2.0,
+          2.0,
+          1.9867,
+          0.0132,
+          0.0001,
+          0.0,
+          0.0
+        ],
+        "fci_runtime_ms": 26.04,
+        "df_one_norm": {
+          "n_spatial_orbitals": 8,
+          "df_rank_L": 35,
+          "df_total_givens_rotations": 274,
+          "lambda_1body_ha": 4.1203,
+          "lambda_2body_ha": 6.4148,
+          "lambda_df_total_ha": 10.535
+        }
+      },
+      {
+        "n_spatial_orbitals": 10,
+        "n_active_electrons": 10,
+        "nelec_alpha_beta": [
+          5,
+          5
+        ],
+        "n_fci_determinants": 63504,
+        "e_rohf_ha": -2572.4583249,
+        "e_uhf_ha": -2572.4583249,
+        "s2_uhf": 0.0,
+        "s2_fci_exact": 0.0,
+        "e_rccsd_ha": -2572.4689666,
+        "e_rccsd_t_ha": -2572.4690054,
+        "t1_diagnostic": 0.02448,
+        "e_fci_exact_ha": -2572.4690207,
+        "err_rccsd_mha": 0.0542,
+        "err_rccsd_t_mha": 0.0154,
+        "total_orbital_entropy_nats": 0.2727,
+        "natural_occupations": [
+          1.9999,
+          1.9998,
+          1.9991,
+          1.9965,
+          1.9496,
+          0.0481,
+          0.0068,
+          0.0001,
+          0.0,
+          0.0
+        ],
+        "fci_runtime_ms": 113.32,
+        "bipartite_schmidt_audit": {
+          "bipartition_von_neumann_entropy_nats": 0.19353,
+          "effective_schmidt_rank_gt_1e4": 7,
+          "discarded_weight_by_bond_dim": {
+            "chi_1": 0.03616352,
+            "chi_2": 0.01291115,
+            "chi_4": 0.00110375,
+            "chi_8": 0.00028193,
+            "chi_16": 6.791e-05,
+            "chi_32": 8.66e-06,
+            "chi_64": 3.1e-07
+          },
+          "top_8_schmidt_weights": [
+            0.963836,
+            0.023252,
+            0.005904,
+            0.005904,
+            0.000258,
+            0.000258,
+            0.000222,
+            8.4e-05
+          ]
+        },
+        "df_one_norm": {
+          "n_spatial_orbitals": 10,
+          "df_rank_L": 52,
+          "df_total_givens_rotations": 508,
+          "lambda_1body_ha": 5.0905,
+          "lambda_2body_ha": 9.7517,
+          "lambda_df_total_ha": 14.8422
+        }
+      }
+    ]
+  },
+  "pdb_1tqn_cyp3a4_compound_i_open_shell_benchmark": {
+    "pdb_id": "1TQN",
+    "clinical_anchor": "Human hepatic microsomal Cytochrome P450 3A4 (metabolizes >50% of NCL multimorbid statins, CCBs, DOACs, and ICS)",
+    "metal_center": "Open-shell Compound I ferryl-oxo--thiolate triradical [Fe(IV)=O(Chelating-N4)(CYS442-SCH3)]0 (S=1/2 vs S=3/2)",
+    "crystal_fe_cys442_sg_distance_angstroms": 2.355,
+    "ferryl_fe_o_distance_angstroms": 1.65,
+    "n_atoms_cluster": 27,
+    "n_ao_sto3g": 100,
+    "nelec_quartet_reference": [
+      68,
+      65
+    ],
+    "avas_auto_selected_active_space": {
+      "n_orbitals": 12,
+      "n_electrons": 15
+    },
+    "su2_spin_eigenstate_circuit_check": {
+      "su2_triradical_state": "(2|110> - |101> - |011>) / sqrt(6)",
+      "su2_state_s2_expectation": 0.75,
+      "broken_symmetry_det_110_s2_expectation": 1.75,
+      "su2_quartet_contamination_prob": 0.0,
+      "broken_symmetry_quartet_contamination_prob": 0.333333
+    },
+    "active_space_windows": [
+      {
+        "n_spatial_orbitals": 5,
+        "n_active_electrons": 5,
+        "doublet_s_half": {
+          "n_spatial_orbitals": 5,
+          "n_active_electrons": 5,
+          "nelec_alpha_beta": [
+            3,
+            2
+          ],
+          "n_fci_determinants": 100,
+          "e_rohf_ha": -2199.5596536,
+          "e_uhf_ha": -2199.6637014,
+          "s2_uhf": 0.7504,
+          "s2_fci_exact": 0.75,
+          "e_rccsd_ha": -2199.7867025,
+          "e_rccsd_t_ha": -2199.9807801,
+          "t1_diagnostic": 0.98889,
+          "e_fci_exact_ha": -2199.963822,
+          "err_rccsd_mha": 177.1195,
+          "err_rccsd_t_mha": -16.9581,
+          "total_orbital_entropy_nats": 1.9926,
+          "natural_occupations": [
+            1.9976,
+            1.3223,
+            1.0,
+            0.6775,
+            0.0026
+          ],
+          "fci_runtime_ms": 1.26
+        },
+        "quartet_s_three_half": {
+          "n_spatial_orbitals": 5,
+          "n_active_electrons": 5,
+          "nelec_alpha_beta": [
+            4,
+            1
+          ],
+          "n_fci_determinants": 25,
+          "e_rohf_ha": -2199.7403247,
+          "e_uhf_ha": -2199.7877058,
+          "s2_uhf": 3.7502,
+          "s2_fci_exact": 3.75,
+          "e_rccsd_ha": -2199.7976149,
+          "e_rccsd_t_ha": -2199.7976149,
+          "t1_diagnostic": 0.40937,
+          "e_fci_exact_ha": -2199.9476117,
+          "err_rccsd_mha": 149.9968,
+          "err_rccsd_t_mha": 149.9968,
+          "total_orbital_entropy_nats": 2.1093,
+          "natural_occupations": [
+            1.9958,
+            1.0,
+            1.0,
+            1.0,
+            0.0042
+          ],
+          "fci_runtime_ms": 0.25
+        },
+        "df_one_norm": {
+          "n_spatial_orbitals": 5,
+          "df_rank_L": 15,
+          "df_total_givens_rotations": 74,
+          "lambda_1body_ha": 1.2523,
+          "lambda_2body_ha": 3.9706,
+          "lambda_df_total_ha": 5.223
+        },
+        "spin_gap_quartet_minus_doublet_mha": {
+          "exact_fci_mha": 16.2103,
+          "rccsd_mha": -10.9124,
+          "rccsd_t_mha": 183.1652,
+          "rccsd_spin_gap_error_mha": -27.1227,
+          "rccsd_t_spin_gap_error_mha": 166.9549,
+          "rccsd_t_spin_gap_error_kcal_mol": 104.766,
+          "exceeds_chemical_accuracy_1p6_mha": true
+        }
+      },
+      {
+        "n_spatial_orbitals": 7,
+        "n_active_electrons": 7,
+        "doublet_s_half": {
+          "n_spatial_orbitals": 7,
+          "n_active_electrons": 7,
+          "nelec_alpha_beta": [
+            4,
+            3
+          ],
+          "n_fci_determinants": 1225,
+          "e_rohf_ha": -2199.6231207,
+          "e_uhf_ha": -2199.662627,
+          "s2_uhf": 0.7658,
+          "s2_fci_exact": 0.75,
+          "e_rccsd_ha": -2199.6674864,
+          "e_rccsd_t_ha": -2199.6718778,
+          "t1_diagnostic": 0.47302,
+          "e_fci_exact_ha": -2199.9701915,
+          "err_rccsd_mha": 302.7051,
+          "err_rccsd_t_mha": 298.3137,
+          "total_orbital_entropy_nats": 2.0084,
+          "natural_occupations": [
+            1.9994,
+            1.9963,
+            1.3183,
+            1.0,
+            0.6817,
+            0.0039,
+            0.0004
+          ],
+          "fci_runtime_ms": 26.95
+        },
+        "quartet_s_three_half": {
+          "n_spatial_orbitals": 7,
+          "n_active_electrons": 7,
+          "nelec_alpha_beta": [
+            5,
+            2
+          ],
+          "n_fci_determinants": 441,
+          "e_rohf_ha": -2199.7222702,
+          "e_uhf_ha": -2199.7190668,
+          "s2_uhf": 3.7591,
+          "s2_fci_exact": 3.75,
+          "e_rccsd_ha": -2199.751624,
+          "e_rccsd_t_ha": -2199.7585425,
+          "t1_diagnostic": 0.40371,
+          "e_fci_exact_ha": -2199.9542927,
+          "err_rccsd_mha": 202.6687,
+          "err_rccsd_t_mha": 195.7503,
+          "total_orbital_entropy_nats": 2.123,
+          "natural_occupations": [
+            1.9997,
+            1.9939,
+            1.0001,
+            1.0,
+            1.0,
+            0.0061,
+            0.0002
+          ],
+          "fci_runtime_ms": 21.29
+        },
+        "df_one_norm": {
+          "n_spatial_orbitals": 7,
+          "df_rank_L": 28,
+          "df_total_givens_rotations": 192,
+          "lambda_1body_ha": 4.6922,
+          "lambda_2body_ha": 7.9686,
+          "lambda_df_total_ha": 12.6608
+        },
+        "spin_gap_quartet_minus_doublet_mha": {
+          "exact_fci_mha": 15.8988,
+          "rccsd_mha": -84.1376,
+          "rccsd_t_mha": -86.6647,
+          "rccsd_spin_gap_error_mha": -100.0364,
+          "rccsd_t_spin_gap_error_mha": -102.5635,
+          "rccsd_t_spin_gap_error_kcal_mol": -64.36,
+          "exceeds_chemical_accuracy_1p6_mha": true
+        }
+      },
+      {
+        "n_spatial_orbitals": 9,
+        "n_active_electrons": 9,
+        "doublet_s_half": {
+          "n_spatial_orbitals": 9,
+          "n_active_electrons": 9,
+          "nelec_alpha_beta": [
+            5,
+            4
+          ],
+          "n_fci_determinants": 15876,
+          "e_rohf_ha": -2199.8419264,
+          "e_uhf_ha": -2199.9208059,
+          "s2_uhf": 1.7062,
+          "s2_fci_exact": 0.75,
+          "e_rccsd_ha": -2199.8813435,
+          "e_rccsd_t_ha": -2199.8819763,
+          "t1_diagnostic": 0.04596,
+          "e_fci_exact_ha": -2199.9738802,
+          "err_rccsd_mha": 92.5367,
+          "err_rccsd_t_mha": 91.9039,
+          "total_orbital_entropy_nats": 2.0503,
+          "natural_occupations": [
+            1.9982,
+            1.9957,
+            1.9836,
+            1.3556,
+            1.013,
+            0.6461,
+            0.0046,
+            0.0017,
+            0.0015
+          ],
+          "fci_runtime_ms": 201.31
+        },
+        "quartet_s_three_half": {
+          "n_spatial_orbitals": 9,
+          "n_active_electrons": 9,
+          "nelec_alpha_beta": [
+            6,
+            3
+          ],
+          "n_fci_determinants": 7056,
+          "e_rohf_ha": -2199.8431979,
+          "e_uhf_ha": -2199.8175646,
+          "s2_uhf": 4.0507,
+          "s2_fci_exact": 3.75,
+          "e_rccsd_ha": -2199.8720451,
+          "e_rccsd_t_ha": -2199.8738492,
+          "t1_diagnostic": 0.14859,
+          "e_fci_exact_ha": -2199.9558346,
+          "err_rccsd_mha": 83.7895,
+          "err_rccsd_t_mha": 81.9854,
+          "total_orbital_entropy_nats": 2.142,
+          "natural_occupations": [
+            1.9994,
+            1.9986,
+            1.9933,
+            1.0001,
+            1.0,
+            0.9998,
+            0.0066,
+            0.0017,
+            0.0006
+          ],
+          "fci_runtime_ms": 61.31
+        },
+        "df_one_norm": {
+          "n_spatial_orbitals": 9,
+          "df_rank_L": 45,
+          "df_total_givens_rotations": 403,
+          "lambda_1body_ha": 4.3265,
+          "lambda_2body_ha": 12.3168,
+          "lambda_df_total_ha": 16.6433
+        },
+        "spin_gap_quartet_minus_doublet_mha": {
+          "exact_fci_mha": 18.0456,
+          "rccsd_mha": 9.2984,
+          "rccsd_t_mha": 8.1271,
+          "rccsd_spin_gap_error_mha": -8.7472,
+          "rccsd_t_spin_gap_error_mha": -9.9185,
+          "rccsd_t_spin_gap_error_kcal_mol": -6.224,
+          "exceeds_chemical_accuracy_1p6_mha": true
+        }
+      },
+      {
+        "n_spatial_orbitals": 11,
+        "n_active_electrons": 11,
+        "doublet_s_half": {
+          "n_spatial_orbitals": 11,
+          "n_active_electrons": 11,
+          "nelec_alpha_beta": [
+            6,
+            5
+          ],
+          "n_fci_determinants": 213444,
+          "e_rohf_ha": -2199.7640934,
+          "e_uhf_ha": -2199.9213291,
+          "s2_uhf": 1.7097,
+          "s2_fci_exact": 0.75,
+          "e_rccsd_ha": -2199.991539,
+          "e_rccsd_t_ha": -2200.0039838,
+          "t1_diagnostic": 0.15884,
+          "e_fci_exact_ha": -2199.9983462,
+          "err_rccsd_mha": 6.8072,
+          "err_rccsd_t_mha": -5.6376,
+          "total_orbital_entropy_nats": 2.1923,
+          "natural_occupations": [
+            1.9978,
+            1.9954,
+            1.9725,
+            1.965,
+            1.4342,
+            1.0223,
+            0.5681,
+            0.0367,
+            0.0049,
+            0.0031,
+            0.0002
+          ],
+          "fci_runtime_ms": 2973.51,
+          "bipartite_schmidt_audit": {
+            "bipartition_von_neumann_entropy_nats": 1.32939,
+            "effective_schmidt_rank_gt_1e4": 35,
+            "discarded_weight_by_bond_dim": {
+              "chi_1": 0.41734296,
+              "chi_2": 0.21753431,
+              "chi_4": 0.05011249,
+              "chi_8": 0.02870399,
+              "chi_16": 0.00938711,
+              "chi_32": 0.00193113,
+              "chi_64": 0.00030022
+            },
+            "top_8_schmidt_weights": [
+              0.582657,
+              0.199809,
+              0.12713,
+              0.040292,
+              0.008024,
+              0.004953,
+              0.004246,
+              0.004186
+            ]
+          }
+        },
+        "quartet_s_three_half": {
+          "n_spatial_orbitals": 11,
+          "n_active_electrons": 11,
+          "nelec_alpha_beta": [
+            7,
+            4
+          ],
+          "n_fci_determinants": 108900,
+          "e_rohf_ha": -2199.7751134,
+          "e_uhf_ha": -2199.9533354,
+          "s2_uhf": 3.7544,
+          "s2_fci_exact": 3.75,
+          "e_rccsd_ha": -2199.8948294,
+          "e_rccsd_t_ha": -2199.9316982,
+          "t1_diagnostic": 0.27263,
+          "e_fci_exact_ha": -2199.9737944,
+          "err_rccsd_mha": 78.965,
+          "err_rccsd_t_mha": 42.0962,
+          "total_orbital_entropy_nats": 2.3064,
+          "natural_occupations": [
+            1.9985,
+            1.9935,
+            1.9923,
+            1.9731,
+            1.0058,
+            1.0012,
+            0.9988,
+            0.0303,
+            0.0049,
+            0.0015,
+            0.0001
+          ],
+          "fci_runtime_ms": 1615.38
+        },
+        "df_one_norm": {
+          "n_spatial_orbitals": 11,
+          "df_rank_L": 66,
+          "df_total_givens_rotations": 718,
+          "lambda_1body_ha": 5.3304,
+          "lambda_2body_ha": 17.012,
+          "lambda_df_total_ha": 22.3424
+        },
+        "spin_gap_quartet_minus_doublet_mha": {
+          "exact_fci_mha": 24.5518,
+          "rccsd_mha": 96.7096,
+          "rccsd_t_mha": 72.2856,
+          "rccsd_spin_gap_error_mha": 72.1578,
+          "rccsd_t_spin_gap_error_mha": 47.7338,
+          "rccsd_t_spin_gap_error_kcal_mol": 29.953,
+          "exceeds_chemical_accuracy_1p6_mha": true
+        }
+      }
+    ],
+    "df_13o_anchor": {
+      "n_spatial_orbitals": 13,
+      "df_rank_L": 90,
+      "df_total_givens_rotations": 1155,
+      "lambda_1body_ha": 5.7089,
+      "lambda_2body_ha": 21.9065,
+      "lambda_df_total_ha": 27.6154
+    }
+  },
+  "double_factorized_qpe_crossover_frontier": {
+    "power_law_fit_lambda_df": {
+      "prefactor_a_ha": 0.3942,
+      "exponent_alpha": 1.6876,
+      "r2_log_log": 0.96463
+    },
+    "power_law_fit_cholesky_rank_L": {
+      "prefactor_c": 0.72711,
+      "exponent_beta": 1.8786
+    },
+    "target_chemical_accuracy_epsilon_mha": 1.0,
+    "frontier_rows": [
+      {
+        "n_spatial_orbitals_M": 11,
+        "description": "CAS(11e,11o): Fe=O + CYS442-S minimal triradical core (solved classically in 3.09 s)",
+        "df_parameter_source": "Exact PySCF Cholesky DF",
+        "df_rank_L": 66,
+        "lambda_df_ha": 22.34,
+        "fci_determinants_log10": 5.329,
+        "fci_single_statevector_tib_log10": -5.508,
+        "fci_single_statevector_tib": 3e-06,
+        "fci_exceeds_1tib_wall": false,
+        "qubitized_qpe_walk_steps_1mha": 35096,
+        "df_qpe_t_gates": 58680512,
+        "ancilla_complete_logical_qubits": 43,
+        "surface_code_distance_d": 17,
+        "total_physical_qubits_with_routing_and_factory": 44506
+      },
+      {
+        "n_spatial_orbitals_M": 16,
+        "description": "CAS(17e,16o): Fe 3d/4s + O 2p + S 3p + axial sigma/pi",
+        "df_parameter_source": "PySCF-calibrated DF power law",
+        "df_rank_L": 133,
+        "lambda_df_ha": 42.44,
+        "fci_determinants_log10": 8.219,
+        "fci_single_statevector_tib_log10": -2.618,
+        "fci_single_statevector_tib": 0.00241,
+        "fci_exceeds_1tib_wall": false,
+        "qubitized_qpe_walk_steps_1mha": 66660,
+        "df_qpe_t_gates": 210112320,
+        "ancilla_complete_logical_qubits": 54,
+        "surface_code_distance_d": 17,
+        "total_physical_qubits_with_routing_and_factory": 53754
+      },
+      {
+        "n_spatial_orbitals_M": 22,
+        "description": "CAS(23e,22o): Exact FCI statevector crosses 1.00 TiB single-node RAM wall",
+        "df_parameter_source": "PySCF-calibrated DF power law",
+        "df_rank_L": 242,
+        "lambda_df_ha": 72.63,
+        "fci_determinants_log10": 11.697,
+        "fci_single_statevector_tib_log10": 0.86,
+        "fci_single_statevector_tib": 7.241532,
+        "fci_exceeds_1tib_wall": true,
+        "qubitized_qpe_walk_steps_1mha": 114093,
+        "df_qpe_t_gates": 602411040,
+        "ancilla_complete_logical_qubits": 66,
+        "surface_code_distance_d": 19,
+        "total_physical_qubits_with_routing_and_factory": 80142
+      },
+      {
+        "n_spatial_orbitals_M": 26,
+        "description": "CAS(27e,26o): Fe 3d/4d + O 2p + CYS442 S + 4 equatorial pyrrole N donors (Era III)",
+        "df_parameter_source": "PySCF-calibrated DF power law",
+        "df_rank_L": 331,
+        "lambda_df_ha": 96.29,
+        "fci_determinants_log10": 14.034,
+        "fci_single_statevector_tib_log10": 3.197,
+        "fci_single_statevector_tib": 1574.116764,
+        "fci_exceeds_1tib_wall": true,
+        "qubitized_qpe_walk_steps_1mha": 151249,
+        "df_qpe_t_gates": 1084152832,
+        "ancilla_complete_logical_qubits": 75,
+        "surface_code_distance_d": 19,
+        "total_physical_qubits_with_routing_and_factory": 90250
+      },
+      {
+        "n_spatial_orbitals_M": 42,
+        "description": "CAS(43e,42o): Full Fe-porphyrin 24-atom pi-system + CYS442 + H2O relay (Era III-IV)",
+        "df_parameter_source": "PySCF-calibrated DF power law",
+        "df_rank_L": 815,
+        "lambda_df_ha": 216.3,
+        "fci_determinants_log10": 23.462,
+        "fci_single_statevector_tib_log10": 12.625,
+        "fci_single_statevector_tib": "10^12.62",
+        "fci_exceeds_1tib_wall": true,
+        "qubitized_qpe_walk_steps_1mha": 339759,
+        "df_qpe_t_gates": 5572047600,
+        "ancilla_complete_logical_qubits": 108,
+        "surface_code_distance_d": 21,
+        "total_physical_qubits_with_routing_and_factory": 153468
+      },
+      {
+        "n_spatial_orbitals_M": 58,
+        "description": "CAS(59e,58o): Full CYP3A4 Compound I + statin/amlodipine/apixaban substrate C-H bond (Era IV)",
+        "df_parameter_source": "PySCF-calibrated DF power law",
+        "df_rank_L": 1494,
+        "lambda_df_ha": 372.92,
+        "fci_determinants_log10": 32.956,
+        "fci_single_statevector_tib_log10": 22.119,
+        "fci_single_statevector_tib": "10^22.12",
+        "fci_exceeds_1tib_wall": true,
+        "qubitized_qpe_walk_steps_1mha": 585774,
+        "df_qpe_t_gates": 16992132192,
+        "ancilla_complete_logical_qubits": 141,
+        "surface_code_distance_d": 21,
+        "total_physical_qubits_with_routing_and_factory": 197568
+      },
+      {
+        "n_spatial_orbitals_M": 76,
+        "description": "CAS(77e,76o): Second-shell PHE304/GLU308/THR309 proton-delivery & allosteric pocket (Era IV)",
+        "df_parameter_source": "PySCF-calibrated DF power law",
+        "df_rank_L": 2482,
+        "lambda_df_ha": 588.44,
+        "fci_determinants_log10": 43.677,
+        "fci_single_statevector_tib_log10": 32.84,
+        "fci_single_statevector_tib": "10^32.84",
+        "fci_exceeds_1tib_wall": true,
+        "qubitized_qpe_walk_steps_1mha": 924327,
+        "df_qpe_t_gates": 43450763616,
+        "ancilla_complete_logical_qubits": 178,
+        "surface_code_distance_d": 21,
+        "total_physical_qubits_with_routing_and_factory": 246078
+      }
+    ]
+  },
+  "alphagenome_2_v2_primary_cell_grounding": {
+    "sdk_version": "alphagenome==2.0.0 (alphagenome.models.v2.dna_client)",
+    "supported_conditions_count": 2799,
+    "non_commercial_research_use_only": true,
+    "terms_url": "https://deepmind.google.com/science/alphagenome/terms",
+    "evaluated_ncl_ltc_loci": [
+      {
+        "id": "CYP3A4_star22_rs35599367",
+        "gene": "CYP3A4",
+        "rsid_or_hgvs": "rs35599367 (CYP3A4*22 intronic regulatory allele)",
+        "vcf": "chr7:99768693:G>A",
+        "chrom": "chr7",
+        "pos": 99768693,
+        "ref": "G",
+        "alt": "A",
+        "primary_condition": "UBERON:0002107_CL:0000182",
+        "primary_cell_label": "Liver hepatocyte",
+        "ncl_ltc_link": "Hepatic statin/CCB/DOAC/ICS polypharmacy clearance (pairs with PDB 1TQN Compound I)",
+        "avi_phred": 8.0468,
+        "avi_top_percentile": 15.6789,
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr7:99768693:G%3EA&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF",
+        "v2_primary_cell_scores": {
+          "rna_seq_gene_lfc": -0.00071,
+          "sc_gene_expression_diff_sum": -0.00673,
+          "splice_sites_score": 0.00813,
+          "splice_junctions_score": 0.02885,
+          "atac_center_diff_log2_sum": 0.02063,
+          "dnase_center_diff_log2_sum": -0.01975
+        }
+      },
+      {
+        "id": "ACE_exon1_donor",
+        "gene": "ACE",
+        "rsid_or_hgvs": "ENST00000290866.10:c.283+1G>A (canonical splice donor)",
+        "vcf": "chr17:63477344:G>A",
+        "chrom": "chr17",
+        "pos": 63477344,
+        "ref": "G",
+        "alt": "A",
+        "primary_condition": "UBERON:0000362_CL:1000850",
+        "primary_cell_label": "Renal medulla macula densa",
+        "ncl_ltc_link": "RAAS blood-pressure & glomerular tone (pairs with PDB 1O86 ACE--lisinopril Zn2+ control)",
+        "avi_phred": 34.2731,
+        "avi_top_percentile": 0.0374,
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr17:63477344:G%3EA&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF",
+        "v2_primary_cell_scores": {
+          "rna_seq_gene_lfc": -0.10781,
+          "sc_gene_expression_diff_sum": -0.19995,
+          "splice_sites_score": 1e-05,
+          "splice_junctions_score": 0.43115,
+          "atac_center_diff_log2_sum": 0.42244,
+          "dnase_center_diff_log2_sum": 0.20622
+        }
+      },
+      {
+        "id": "SLC5A2_exon1_donor",
+        "gene": "SLC5A2",
+        "rsid_or_hgvs": "ENST00000330498.4:c.140+1G>A (familial renal glucosuria SGLT2 mimic)",
+        "vcf": "chr16:31483263:G>A",
+        "chrom": "chr16",
+        "pos": 31483263,
+        "ref": "G",
+        "alt": "A",
+        "primary_condition": "UBERON:0002113_CL:0002306",
+        "primary_cell_label": "Kidney proximal tubule epithelial cell",
+        "ncl_ltc_link": "Renal SGLT2 glucose/sodium reabsorption (T2D, CKD & heart-failure protection)",
+        "avi_phred": 30.193,
+        "avi_top_percentile": 0.0957,
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr16:31483263:G%3EA&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF",
+        "v2_primary_cell_scores": {
+          "rna_seq_gene_lfc": -0.04174,
+          "sc_gene_expression_diff_sum": -0.45055,
+          "splice_sites_score": 0.05024,
+          "splice_junctions_score": 1.57129,
+          "atac_center_diff_log2_sum": -0.13045,
+          "dnase_center_diff_log2_sum": -0.12106
+        }
+      },
+      {
+        "id": "MUC5B_promoter_rs35705950",
+        "gene": "MUC5B",
+        "rsid_or_hgvs": "rs35705950 (distal airway enhancer gain-of-function)",
+        "vcf": "chr11:1219991:G>T",
+        "chrom": "chr11",
+        "pos": 1219991,
+        "ref": "G",
+        "alt": "T",
+        "primary_condition": "UBERON:0002048_CL:0002063",
+        "primary_cell_label": "Lung AT2 pneumocyte",
+        "ncl_ltc_link": "Distal airway mucociliary & interstitial respiratory risk (COPD / respiratory LTCs)",
+        "avi_phred": 16.1421,
+        "avi_top_percentile": 2.431,
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr11:1219991:G%3ET&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF",
+        "v2_primary_cell_scores": {
+          "rna_seq_gene_lfc": 1.00478,
+          "sc_gene_expression_diff_sum": 1.27357,
+          "splice_sites_score": 0.0,
+          "splice_junctions_score": 0.0,
+          "atac_center_diff_log2_sum": 1.00591,
+          "dnase_center_diff_log2_sum": 0.64909
+        }
+      }
+    ],
+    "muc5b_rs35705950_cross_cell_specificity": {
+      "lung_at2_pneumocyte_sc_lfc": 1.27357,
+      "lung_at2_pneumocyte_rna_lfc": 1.00478,
+      "liver_hepatocyte_control_sc_lfc": -0.28142,
+      "liver_hepatocyte_control_rna_lfc": -0.18615
+    }
+  },
+  "generated_figure": "samskrift/figures/figure7_metalloenzyme_ftqc_ag2.png",
+  "receipt_sha256": "1a9541a1e65796507b00946cb03f8f4f18a705ff60bc637cf8288ab7c286738a"
+}

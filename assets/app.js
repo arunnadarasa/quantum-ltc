@@ -7,9 +7,9 @@ const BOOKMARKS = [
   { label: "p.4 · Nexus Helios-1E & Post-SWAP", page: 4 },
   { label: "p.5 · Haiqu HUBO & OpenJij PCN", page: 5 },
   { label: "p.7 · 4-Regime HQS & PDB 1O86", page: 7 },
-  { label: "p.9 · 5-Seed Modal QLTCMLM & g-sim", page: 9 },
-  { label: "p.10 · FHIR ML-DSA-65 & Moth Blur", page: 10 },
-  { label: "p.11 · Jev 1.14, DCB0129/0160 & Refs", page: 11 }
+  { label: "p.8 · PySCF 1TQN vs 1O86 & AlphaGenome 2", page: 8 },
+  { label: "p.10 · 5-Seed Modal QLTCMLM & g-sim", page: 10 },
+  { label: "p.12 · Jev 1.14, 61-Node KG & 42 Refs", page: 12 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -111,9 +111,9 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--13},
+  pages   = {1--15},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Grounded in NHS North Central London ICB LTC LCS v6 (9 LTCs); 0 physical QPU shots; 7 SHA-256-sealed receipts across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PDB 1O86, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
+  note    = {Grounded in NHS North Central London ICB LTC LCS v6 (9 LTCs); 0 physical QPU shots; 8 SHA-256-sealed receipts across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 (CYP3A4 PDB 1TQN vs ACE PDB 1O86), AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
 }`,
   qltcmlm: `@misc{nadarasa2026qltcmlm,
   title        = {{QLTCMLM}: 4-Qubit Frobenius Data-Reuploading Multi-Task Variational Quantum Classifier for Multimorbid {NHS} {LTC} Risk Stratification},
@@ -202,7 +202,7 @@ async function initPdfReader() {
   const DOC = {
     pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
     pagesDir: "pages",
-    totalPages: 13,
+    totalPages: 15,
     altTitle: "Quantum-LTC Four-Era Samskrift Monograph"
   };
 
@@ -674,34 +674,35 @@ function initEraSimulator() {
       verdictScale.textContent = "Classical MCWF / MPDO / MILP";
       verdictScale.style.color = "var(--amber)";
       verdictSub.textContent = "Exponential post-selection limits depth";
-    } else if (nL <= 72) {
+    } else if (nL <= 84) {
       const nSpin = Math.floor((nL - 6) / 2);
-      const d = nL >= 64 ? 15 : (nL >= 50 ? 13 : 11);
-      const phys = Math.round((Math.ceil(1.5 * nL) + 12) * 2 * d * d);
-      eraPill.textContent = "Era III · Active FTQC Simulation Crossover (38–68 Logical)";
+      const isCyp = nL >= 72;
+      const d = isCyp ? 19 : (nL >= 64 ? 17 : (nL >= 50 ? 13 : 11));
+      const phys = isCyp ? 90250 : Math.round((Math.ceil(1.5 * nL) + 12) * 2 * d * d);
+      eraPill.textContent = "Era III · Active FTQC Simulation Crossover (38–75 Logical)";
       eraPill.className = "pill pill-signal";
-      organScale.textContent = nL >= 64 ? `PDB 1O86 CAS(36e,26o) · ${nL}L` : `${nSpin} Organ Spins (${nL}L)`;
-      organSub.textContent = nL >= 64 ? "52 sys + 12–16 QPE/DF ancillae" : "Dilated Lindbladian channel";
-      ramScale.textContent = formatKrylovBinary(nSpin);
-      ramSub.textContent = `MCWF: ${formatMcwfMib(nSpin)} (10⁶ shots @ ε=10⁻³)`;
+      organScale.textContent = isCyp ? `CYP3A4 1TQN CAS(27e,26o) · ${nL}L` : (nL >= 64 ? `ACE 1O86 Control · ${nL}L` : `${nSpin} Organ Spins (${nL}L)`);
+      organSub.textContent = isCyp ? "Open-shell Compound I Cholesky DF-QPE" : (nL >= 64 ? "Closed-shell 3d¹⁰ (RCCSD(T) ≤0.015 mHa)" : "Dilated Lindbladian channel");
+      ramScale.textContent = isCyp ? "1,574 TiB FCI Wall" : formatKrylovBinary(nSpin);
+      ramSub.textContent = isCyp ? "RCCSD(T) fails by +47.7 mHa (29.8×)" : `MCWF: ${formatMcwfMib(nSpin)} (10⁶ shots @ ε=10⁻³)`;
       physScale.textContent = `~${phys.toLocaleString()} phys`;
-      physSub.textContent = `Rotated surface code d=${d} + 15-to-1 T-factory`;
-      verdictScale.textContent = nSpin >= 16 ? "Projected FTQC Crossover" : "Approaching 1 TiB Krylov Wall";
-      verdictScale.style.color = nSpin >= 16 ? "var(--signal)" : "var(--amber)";
-      verdictSub.textContent = nSpin >= 16 ? "Beats >1.875 TiB Krylov & volume-law MPDO" : "Bounded-χ MPDO still competitive";
+      physSub.textContent = `Rotated surface code d=${d} + T-factory`;
+      verdictScale.textContent = isCyp ? "Open-Shell DF-QPE Advantage" : (nL >= 64 ? "Single-Ref CC Solvable" : (nSpin >= 16 ? "Projected Lindblad Crossover" : "Approaching 1 TiB Wall"));
+      verdictScale.style.color = (isCyp || (nSpin >= 16 && nL < 64)) ? "var(--signal)" : "var(--amber)";
+      verdictSub.textContent = isCyp ? "Beats FCI >1 TiB & single-ref CC breakdown" : (nL >= 64 ? "Closed-shell Zn²⁺ negative control" : "Beats >1.875 TiB Krylov & volume-law MPDO");
     } else {
-      const nSpin = Math.floor((nL - 8) / 2);
-      const d = 17;
-      const phys = Math.round((Math.ceil(1.5 * nL) + 24) * 2 * d * d);
-      eraPill.textContent = "Era IV · Asymptotic ICS-Scale Modular FTQC (100–1,000+ Logical)";
+      const isDrugCyp = nL >= 136 && nL <= 156;
+      const d = 21;
+      const phys = isDrugCyp ? 197568 : Math.round((Math.ceil(1.5 * nL) + 24) * 2 * d * d);
+      eraPill.textContent = "Era IV · Drug-Bound CYP3A4 & ICS Modular FTQC (100–1,000+ Logical)";
       eraPill.className = "pill pill-signal";
-      organScale.textContent = `${nSpin} Spins + Quantum B&B`;
-      organSub.textContent = "5-borough ICS digital twins & dense k≥4 HUBO";
-      ramScale.textContent = "≫ 1 EiB Krylov Wall";
-      ramSub.textContent = "Volume-law entanglement blocks tensor nets";
+      organScale.textContent = isDrugCyp ? `CYP3A4 + Statin CAS(59e,58o)` : `CYP3A4 42–76o + Quantum B&B`;
+      organSub.textContent = `Ancilla-complete Cholesky DF-QPE (${nL}L)`;
+      ramScale.textContent = isDrugCyp ? "10²².¹² TiB FCI Wall" : "10¹²–10³³ TiB FCI Wall";
+      ramSub.textContent = "10³³ determinants + volume-law entanglement";
       physScale.textContent = `~${phys.toLocaleString()} phys`;
-      physSub.textContent = `Modular active QEC d=${d} + multi-factory`;
-      verdictScale.textContent = "Asymptotic FTQC Regime";
+      physSub.textContent = `Modular active QEC d=${d} · 1.7×10¹⁰ T-gates`;
+      verdictScale.textContent = "Fault-Tolerant QPE Regime";
       verdictScale.style.color = "var(--signal)";
       verdictSub.textContent = "Strictly advisory R&D under DCB0129/0160";
     }
@@ -1144,6 +1145,77 @@ function initChartsAndLightbox() {
         ]
       });
       charts.push(c4);
+    }
+
+    // Chart 4b (Full-Width): Ab-Initio PySCF 2.15 CYP3A4 (1TQN) DF-QPE Logical Qubits vs Exponential FCI RAM Wall
+    const elM = document.getElementById("echart-metalloenzyme");
+    if (elM && PORTAL_DATA.metalloenzyme_ftqc) {
+      const cM = window.echarts.init(elM);
+      const dfRows = PORTAL_DATA.metalloenzyme_ftqc.df_frontier;
+      cM.setOption({
+        tooltip: darkTooltip,
+        legend: {
+          data: [
+            "log₁₀(Single Exact FCI Statevector TiB)",
+            "Ancilla-Complete Cholesky DF-QPE Logical Qubits (#L)"
+          ],
+          textStyle: { color: "#eef7f5", fontSize: 11 },
+          top: 6
+        },
+        grid: { left: 56, right: 64, top: 54, bottom: 42 },
+        xAxis: {
+          type: "category",
+          data: dfRows.map(r => `M=${r.M}o\n(λ=${r.lambda_df_ha} Ha)`),
+          ...baseAxis,
+          axisLabel: { color: "#bfece6", fontSize: 10.2, interval: 0, lineHeight: 13 }
+        },
+        yAxis: [
+          {
+            type: "value",
+            min: -6,
+            max: 35,
+            ...baseAxis,
+            name: "log₁₀(FCI Statevector TiB)",
+            nameTextStyle: { color: "#f06a3b", fontSize: 10.5 }
+          },
+          {
+            type: "value",
+            min: 0,
+            max: 210,
+            ...baseAxis,
+            splitLine: { show: false },
+            name: "DF-QPE Logical Qubits",
+            nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+          }
+        ],
+        series: [
+          {
+            name: "log₁₀(Single Exact FCI Statevector TiB)",
+            type: "line",
+            yAxisIndex: 0,
+            symbolSize: 8,
+            data: dfRows.map(r => r.log10_fci_tib),
+            itemStyle: { color: "#f06a3b" },
+            lineStyle: { width: 3 },
+            markLine: {
+              silent: true,
+              lineStyle: { color: "#f4ae42", type: "dashed", width: 1.5 },
+              label: { formatter: "1.00 TiB Single-Node RAM Wall (M ≥ 22)", color: "#f4ae42", fontSize: 10 },
+              data: [{ yAxis: 0 }]
+            }
+          },
+          {
+            name: "Ancilla-Complete Cholesky DF-QPE Logical Qubits (#L)",
+            type: "bar",
+            yAxisIndex: 1,
+            barWidth: "34%",
+            data: dfRows.map(r => r.logical_qubits),
+            itemStyle: { color: "rgba(56, 214, 196, 0.72)", borderColor: "#38d6c4", borderWidth: 1.5, borderRadius: [4, 4, 0, 0] },
+            label: { show: true, position: "top", formatter: "{c}L", color: "#38d6c4", fontSize: 10.5, fontFamily: "JetBrains Mono, monospace" }
+          }
+        ]
+      });
+      charts.push(cM);
     }
 
     // Chart 5 (Full-Width): TypeSafe Jev 1.14 Multi-Method Health AI Audit across CUJ-1..4
