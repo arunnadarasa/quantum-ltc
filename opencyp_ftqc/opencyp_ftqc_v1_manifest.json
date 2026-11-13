@@ -1,0 +1,650 @@
+{
+  "schema_version": "1.0.0-opencyp-ftqc",
+  "dataset_name": "OpenCYP-FTQC v1.0",
+  "license": "CC-BY-4.0 (Dataset/FCIDUMP) & Apache-2.0 (Code); Non-Commercial Open Science",
+  "epistemic_governance": {
+    "physical_qpu_shots": 0,
+    "wet_lab_specimens": 0,
+    "phi_present": false,
+    "open_clinical_hazards": [
+      "H-LTC-01",
+      "H-LTC-02",
+      "H-LTC-03",
+      "H-LTC-04",
+      "H-LTC-05",
+      "H-LTC-06"
+    ],
+    "statutory_standards": [
+      "NHS DCB0129",
+      "NHS DCB0160"
+    ]
+  },
+  "runtime_seconds": 850.1,
+  "p450_qmmm_hat_benchmarks": [
+    {
+      "isoform": "CYP3A4",
+      "pdb_id": "5TE8",
+      "ligand_code": "08J",
+      "fe_sg_angstrom": 2.424,
+      "closest_ligand_atom": "08J602.CAI",
+      "closest_ligand_fe_angstrom": 3.389,
+      "mm_environment": {
+        "n_mm_point_charges": 2400,
+        "net_screened_protein_charge_e": 1.974,
+        "gaussian_mm_radius_angstrom": 0.8,
+        "debye_length_0p15m_saline_angstrom": 7.85,
+        "anionic_asp_glu_residues": 52,
+        "cationic_arg_lys_residues": 59
+      },
+      "protein_electric_field": {
+        "e_parallel_fe_o_mv_per_cm": 10.25,
+        "e_parallel_v_per_angstrom": 0.1025,
+        "e_total_magnitude_mv_per_cm": 34.78
+      },
+      "vacuum_barrier_doublet_kcal_mol": 42.31,
+      "qmmm_barrier_doublet_kcal_mol": 28.34,
+      "qmmm_barrier_quartet_kcal_mol": 6.25,
+      "qmmm_minus_vacuum_shift_kcal_mol": -13.97,
+      "qmmm_rc_quartet_minus_doublet_kcal_mol": 24.42,
+      "qmmm_ts_quartet_minus_doublet_kcal_mol": 2.33,
+      "qmmm_dft_barriers": {
+        "PBE": {
+          "doublet_kcal_mol": 38.53,
+          "quartet_kcal_mol": 32.78,
+          "s2_ts_bs_doublet": 1.6212
+        },
+        "BLYP": {
+          "doublet_kcal_mol": 39.3,
+          "quartet_kcal_mol": 34.89,
+          "s2_ts_bs_doublet": 1.4763
+        },
+        "B3LYP": {
+          "doublet_kcal_mol": 35.81,
+          "quartet_kcal_mol": 40.32,
+          "s2_ts_bs_doublet": 2.2414
+        },
+        "PBE0": {
+          "doublet_kcal_mol": 34.58,
+          "quartet_kcal_mol": 37.44,
+          "s2_ts_bs_doublet": 2.0725
+        }
+      },
+      "qmmm_dft_doublet_spread_kcal_mol": 4.72,
+      "procrustes_delta_df_compression": {
+        "lambda_df_rc_ha": 14.8108,
+        "lambda_df_ts_ha": 14.3881,
+        "lambda_delta_df_ts_minus_rc_ha": 5.6313,
+        "one_norm_compression_factor": 2.56
+      },
+      "fcidump_files": [
+        {
+          "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+          "norb": 9,
+          "nelec_alpha_beta": [
+            5,
+            4
+          ],
+          "ms2": 1,
+          "ecore_ha": -1867.37329751,
+          "uncompressed_bytes": 45677,
+          "gzip_bytes": 14323,
+          "sha256_gzip": "f0a4199bd1c579548ebfe7a555e5ec9764c4fa6cc58235d24d106ee2128c2652",
+          "exact_casci_doublet_ha": -1886.089783,
+          "sc_nevpt2_doublet_ha": -1887.023159
+        },
+        {
+          "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+          "norb": 9,
+          "nelec_alpha_beta": [
+            5,
+            4
+          ],
+          "ms2": 1,
+          "ecore_ha": -1870.16311879,
+          "uncompressed_bytes": 45492,
+          "gzip_bytes": 14198,
+          "sha256_gzip": "d0d065aa296a3cbeed341b1012cfb98bcfa5390fa9afd3395518153cb45f42c8",
+          "exact_casci_doublet_ha": -1886.046136,
+          "sc_nevpt2_doublet_ha": -1886.977994
+        }
+      ]
+    },
+    {
+      "isoform": "CYP2D6",
+      "pdb_id": "4WNU",
+      "ligand_code": "QDN",
+      "fe_sg_angstrom": 2.221,
+      "closest_ligand_atom": "QDN602.C14",
+      "closest_ligand_fe_angstrom": 7.936,
+      "mm_environment": {
+        "n_mm_point_charges": 2265,
+        "net_screened_protein_charge_e": 0.178,
+        "gaussian_mm_radius_angstrom": 0.8,
+        "debye_length_0p15m_saline_angstrom": 7.85,
+        "anionic_asp_glu_residues": 49,
+        "cationic_arg_lys_residues": 46
+      },
+      "protein_electric_field": {
+        "e_parallel_fe_o_mv_per_cm": 25.58,
+        "e_parallel_v_per_angstrom": 0.2558,
+        "e_total_magnitude_mv_per_cm": 34.86
+      },
+      "vacuum_barrier_doublet_kcal_mol": 6.17,
+      "qmmm_barrier_doublet_kcal_mol": 51.71,
+      "qmmm_barrier_quartet_kcal_mol": 51.63,
+      "qmmm_minus_vacuum_shift_kcal_mol": 45.54,
+      "qmmm_rc_quartet_minus_doublet_kcal_mol": -0.43,
+      "qmmm_ts_quartet_minus_doublet_kcal_mol": -0.52,
+      "qmmm_dft_barriers": {
+        "PBE": {
+          "doublet_kcal_mol": 30.78,
+          "quartet_kcal_mol": 28.59,
+          "s2_ts_bs_doublet": 1.8199
+        },
+        "BLYP": {
+          "doublet_kcal_mol": 31.2,
+          "quartet_kcal_mol": 29.19,
+          "s2_ts_bs_doublet": 1.7431
+        },
+        "B3LYP": {
+          "doublet_kcal_mol": 31.93,
+          "quartet_kcal_mol": 23.53,
+          "s2_ts_bs_doublet": 2.1613
+        },
+        "PBE0": {
+          "doublet_kcal_mol": 31.96,
+          "quartet_kcal_mol": 17.41,
+          "s2_ts_bs_doublet": 2.5164
+        }
+      },
+      "qmmm_dft_doublet_spread_kcal_mol": 1.18,
+      "procrustes_delta_df_compression": {
+        "lambda_df_rc_ha": 13.8646,
+        "lambda_df_ts_ha": 13.8639,
+        "lambda_delta_df_ts_minus_rc_ha": 2.3027,
+        "one_norm_compression_factor": 6.02
+      },
+      "fcidump_files": [
+        {
+          "file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+          "norb": 9,
+          "nelec_alpha_beta": [
+            5,
+            4
+          ],
+          "ms2": 1,
+          "ecore_ha": -1871.37058915,
+          "uncompressed_bytes": 45395,
+          "gzip_bytes": 14149,
+          "sha256_gzip": "9e4e3caf4c3f0f67fe5e85de48aba03b8153de7835a8a2bdc035915e2fb03097",
+          "exact_casci_doublet_ha": -1886.155129,
+          "sc_nevpt2_doublet_ha": -1887.064961
+        },
+        {
+          "file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+          "norb": 9,
+          "nelec_alpha_beta": [
+            5,
+            4
+          ],
+          "ms2": 1,
+          "ecore_ha": -1871.12655634,
+          "uncompressed_bytes": 45269,
+          "gzip_bytes": 14097,
+          "sha256_gzip": "3187f2222bb16239ecc17cdb5327bc9f2cfbae807e8aad6aa439ca86af1f7b94",
+          "exact_casci_doublet_ha": -1886.049468,
+          "sc_nevpt2_doublet_ha": -1886.982554
+        }
+      ]
+    },
+    {
+      "isoform": "CYP2C9",
+      "pdb_id": "1R9O",
+      "ligand_code": "FLP",
+      "fe_sg_angstrom": 2.378,
+      "closest_ligand_atom": "FLP501.C5",
+      "closest_ligand_fe_angstrom": 4.92,
+      "mm_environment": {
+        "n_mm_point_charges": 2311,
+        "net_screened_protein_charge_e": 1.598,
+        "gaussian_mm_radius_angstrom": 0.8,
+        "debye_length_0p15m_saline_angstrom": 7.85,
+        "anionic_asp_glu_residues": 51,
+        "cationic_arg_lys_residues": 55
+      },
+      "protein_electric_field": {
+        "e_parallel_fe_o_mv_per_cm": 17.3,
+        "e_parallel_v_per_angstrom": 0.173,
+        "e_total_magnitude_mv_per_cm": 32.47
+      },
+      "vacuum_barrier_doublet_kcal_mol": 9.89,
+      "qmmm_barrier_doublet_kcal_mol": 52.1,
+      "qmmm_barrier_quartet_kcal_mol": 53.47,
+      "qmmm_minus_vacuum_shift_kcal_mol": 42.21,
+      "qmmm_rc_quartet_minus_doublet_kcal_mol": -1.34,
+      "qmmm_ts_quartet_minus_doublet_kcal_mol": 0.03,
+      "qmmm_dft_barriers": {
+        "PBE": {
+          "doublet_kcal_mol": 26.09,
+          "quartet_kcal_mol": 29.93,
+          "s2_ts_bs_doublet": 1.5462
+        },
+        "BLYP": {
+          "doublet_kcal_mol": 33.13,
+          "quartet_kcal_mol": 31.49,
+          "s2_ts_bs_doublet": 1.298
+        },
+        "B3LYP": {
+          "doublet_kcal_mol": 38.7,
+          "quartet_kcal_mol": 40.64,
+          "s2_ts_bs_doublet": 2.2074
+        },
+        "PBE0": {
+          "doublet_kcal_mol": 31.72,
+          "quartet_kcal_mol": 42.34,
+          "s2_ts_bs_doublet": 2.1699
+        }
+      },
+      "qmmm_dft_doublet_spread_kcal_mol": 12.61,
+      "procrustes_delta_df_compression": {
+        "lambda_df_rc_ha": 15.2971,
+        "lambda_df_ts_ha": 13.9907,
+        "lambda_delta_df_ts_minus_rc_ha": 5.7667,
+        "one_norm_compression_factor": 2.43
+      },
+      "fcidump_files": [
+        {
+          "file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+          "norb": 9,
+          "nelec_alpha_beta": [
+            5,
+            4
+          ],
+          "ms2": 1,
+          "ecore_ha": -1868.09851905,
+          "uncompressed_bytes": 45583,
+          "gzip_bytes": 14221,
+          "sha256_gzip": "57c09d5f28a0822ff23e73d7bde81d9ab8e9cda62c724406f939021d339151c1",
+          "exact_casci_doublet_ha": -1886.113577,
+          "sc_nevpt2_doublet_ha": -1887.069166
+        },
+        {
+          "file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+          "norb": 9,
+          "nelec_alpha_beta": [
+            5,
+            4
+          ],
+          "ms2": 1,
+          "ecore_ha": -1870.79262475,
+          "uncompressed_bytes": 45323,
+          "gzip_bytes": 14076,
+          "sha256_gzip": "b37203e84a1b658c814c47bde728e2bb406e243980cc5bca3c7855cd74f7d11e",
+          "exact_casci_doublet_ha": -1886.053825,
+          "sc_nevpt2_doublet_ha": -1886.986141
+        }
+      ]
+    }
+  ],
+  "cyp3a4_3nxu_ritonavir_typeii_qmmm": {
+    "isoform": "CYP3A4",
+    "pdb_id": "3NXU",
+    "ligand_code": "RIT",
+    "n5_fe_angstrom": 2.225,
+    "fe_sg_angstrom": 2.284,
+    "mm_environment": {
+      "n_mm_point_charges": 2322,
+      "net_screened_protein_charge_e": 2.523,
+      "gaussian_mm_radius_angstrom": 0.8,
+      "debye_length_0p15m_saline_angstrom": 7.85,
+      "anionic_asp_glu_residues": 52,
+      "cationic_arg_lys_residues": 57
+    },
+    "fcidump_file": {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_3NXU_RIT_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1801.30021221,
+      "uncompressed_bytes": 45834,
+      "gzip_bytes": 14281,
+      "sha256_gzip": "9c59075f5f2c9970db932d9310ce2030f870bfc646b91965dfcbdab6ad6276d6",
+      "exact_casci_low_spin_ha": -1827.244163,
+      "sc_nevpt2_low_spin_ha": -1828.178518
+    }
+  },
+  "ace_1o86_closed_shell_qmmm_control": {
+    "target": "ACE + Lisinopril Zn2+ (Closed-Shell 3d^10 Negative Control)",
+    "pdb_id": "1O86",
+    "mm_environment": {
+      "n_mm_point_charges": 2945,
+      "net_screened_protein_charge_e": -0.959,
+      "gaussian_mm_radius_angstrom": 0.8,
+      "debye_length_0p15m_saline_angstrom": 7.85,
+      "anionic_asp_glu_residues": 67,
+      "cationic_arg_lys_residues": 56
+    },
+    "exact_fci_ha": -2040.58738317,
+    "rccsdt_ha": -2040.58738882,
+    "abs_rccsdt_minus_fci_mha": 0.00566,
+    "t1_diagnostic": 0.00375,
+    "within_chemical_accuracy_1_6_mha": true,
+    "fcidump_file": {
+      "file": "opencyp_ftqc/fcidump/ACE_1O86_LPR_Zn2_QMMM_CAS12e10o_def2SVP.fcidump.gz",
+      "norb": 10,
+      "nelec_alpha_beta": [
+        6,
+        6
+      ],
+      "ms2": 0,
+      "ecore_ha": -2012.43484977,
+      "uncompressed_bytes": 67526,
+      "gzip_bytes": 20671,
+      "sha256_gzip": "5b1fdcede7e4d65fd7e36a705a65304698caa9e493e43d587b94dc6d38e724e4",
+      "exact_fci_ha": -2040.58738317,
+      "rccsdt_ha": -2040.58738882,
+      "abs_rccsdt_minus_fci_mha": 0.00566
+    }
+  },
+  "multi_isoform_chembl37_pbpk_benchmark": {
+    "total_regimens": 12,
+    "clinical_band_matches": 12,
+    "regimens": [
+      {
+        "isoform": "CYP3A4",
+        "target_chembl_id": "CHEMBL340",
+        "regimen_pair": "Simvastatin + Ritonavir",
+        "molecule_chembl_ids": "CHEMBL1064+CHEMBL163",
+        "ki_nm_chembl37": 100.0,
+        "kinact_per_min": 0.2275,
+        "aucr_wt_predicted": 12.29,
+        "variant_allele": "*22",
+        "aucr_variant_vs_wt_baseline": 20.0,
+        "published_clinical_wt_range": "10.0-20.0x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "CVD/T2D Statin Hard Hold (H-LTC-02)"
+      },
+      {
+        "isoform": "CYP3A4",
+        "target_chembl_id": "CHEMBL340",
+        "regimen_pair": "Simvastatin + Clarithromycin",
+        "molecule_chembl_ids": "CHEMBL1064+CHEMBL1051",
+        "ki_nm_chembl37": 5490.0,
+        "kinact_per_min": 0.072,
+        "aucr_wt_predicted": 7.5,
+        "variant_allele": "*22",
+        "aucr_variant_vs_wt_baseline": 12.21,
+        "published_clinical_wt_range": "7.0-12.0x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "COPD Exacerbation Statin Suspend"
+      },
+      {
+        "isoform": "CYP3A4",
+        "target_chembl_id": "CHEMBL340",
+        "regimen_pair": "Simvastatin + Diltiazem",
+        "molecule_chembl_ids": "CHEMBL1064+CHEMBL23",
+        "ki_nm_chembl37": 500.0,
+        "kinact_per_min": 0.0085,
+        "aucr_wt_predicted": 4.43,
+        "variant_allele": "*22",
+        "aucr_variant_vs_wt_baseline": 7.22,
+        "published_clinical_wt_range": "3.1-4.8x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "AF/HTN Cap Simvastatin <= 20 mg"
+      },
+      {
+        "isoform": "CYP3A4",
+        "target_chembl_id": "CHEMBL340",
+        "regimen_pair": "Apixaban + Diltiazem",
+        "molecule_chembl_ids": "CHEMBL539697+CHEMBL23",
+        "ki_nm_chembl37": 500.0,
+        "kinact_per_min": 0.0085,
+        "aucr_wt_predicted": 1.33,
+        "variant_allele": "*22",
+        "aucr_variant_vs_wt_baseline": 1.5,
+        "published_clinical_wt_range": "1.3-1.5x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "AF DOAC + Rate Control Bleed Watch"
+      },
+      {
+        "isoform": "CYP3A4",
+        "target_chembl_id": "CHEMBL340",
+        "regimen_pair": "Simvastatin + Amlodipine",
+        "molecule_chembl_ids": "CHEMBL1064+CHEMBL1491",
+        "ki_nm_chembl37": 2600.0,
+        "kinact_per_min": 0.0014,
+        "aucr_wt_predicted": 1.5,
+        "variant_allele": "*22",
+        "aucr_variant_vs_wt_baseline": 2.45,
+        "published_clinical_wt_range": "1.5-1.9x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "Outcome #23 Crosses 2.0x Cap in *22"
+      },
+      {
+        "isoform": "CYP2D6",
+        "target_chembl_id": "CHEMBL289",
+        "regimen_pair": "Metoprolol + Quinidine",
+        "molecule_chembl_ids": "CHEMBL13+CHEMBL1294",
+        "ki_nm_chembl37": 41.5,
+        "kinact_per_min": 0.0,
+        "aucr_wt_predicted": 3.68,
+        "variant_allele": "*4/*10",
+        "aucr_variant_vs_wt_baseline": 6.57,
+        "published_clinical_wt_range": "3.2-5.0x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "CVD/AF Severe Bradycardia Lock"
+      },
+      {
+        "isoform": "CYP2D6",
+        "target_chembl_id": "CHEMBL289",
+        "regimen_pair": "Metoprolol + Paroxetine",
+        "molecule_chembl_ids": "CHEMBL13+CHEMBL490",
+        "ki_nm_chembl37": 380.0,
+        "kinact_per_min": 0.028,
+        "aucr_wt_predicted": 3.79,
+        "variant_allele": "*4/*10",
+        "aucr_variant_vs_wt_baseline": 6.77,
+        "published_clinical_wt_range": "3.8-6.0x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "HF + Depression MBI Beta-Blockade"
+      },
+      {
+        "isoform": "CYP2D6",
+        "target_chembl_id": "CHEMBL289",
+        "regimen_pair": "Metoprolol + Fluoxetine",
+        "molecule_chembl_ids": "CHEMBL13+CHEMBL41",
+        "ki_nm_chembl37": 350.0,
+        "kinact_per_min": 0.0,
+        "aucr_wt_predicted": 3.23,
+        "variant_allele": "*4/*10",
+        "aucr_variant_vs_wt_baseline": 5.76,
+        "published_clinical_wt_range": "3.0-4.8x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "CVD + SSRI Heart-Rate Monitor"
+      },
+      {
+        "isoform": "CYP2D6",
+        "target_chembl_id": "CHEMBL289",
+        "regimen_pair": "Carvedilol + Fluoxetine",
+        "molecule_chembl_ids": "CHEMBL723+CHEMBL41",
+        "ki_nm_chembl37": 350.0,
+        "kinact_per_min": 0.0,
+        "aucr_wt_predicted": 1.9,
+        "variant_allele": "*4/*10",
+        "aucr_variant_vs_wt_baseline": 2.73,
+        "published_clinical_wt_range": "1.8-2.5x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "HF R(+)-Carvedilol Hypotension Risk"
+      },
+      {
+        "isoform": "CYP2C9",
+        "target_chembl_id": "CHEMBL3397",
+        "regimen_pair": "S-Warfarin + Fluconazole",
+        "molecule_chembl_ids": "CHEMBL1464+CHEMBL106",
+        "ki_nm_chembl37": 9210.0,
+        "kinact_per_min": 0.0,
+        "aucr_wt_predicted": 2.9,
+        "variant_allele": "*2/*3",
+        "aucr_variant_vs_wt_baseline": 4.97,
+        "published_clinical_wt_range": "2.1-3.5x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "AF Major INR Bleed Alert (Cut Dose 50%)"
+      },
+      {
+        "isoform": "CYP2C9",
+        "target_chembl_id": "CHEMBL3397",
+        "regimen_pair": "S-Warfarin + Amiodarone",
+        "molecule_chembl_ids": "CHEMBL1464+CHEMBL633",
+        "ki_nm_chembl37": 63.1,
+        "kinact_per_min": 0.0,
+        "aucr_wt_predicted": 1.79,
+        "variant_allele": "*2/*3",
+        "aucr_variant_vs_wt_baseline": 3.07,
+        "published_clinical_wt_range": "1.6-2.3x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "AF Rhythm + Warfarin INR Titration"
+      },
+      {
+        "isoform": "CYP2C9",
+        "target_chembl_id": "CHEMBL3397",
+        "regimen_pair": "S-Warfarin + Sulfaphenazole",
+        "molecule_chembl_ids": "CHEMBL1464+CHEMBL1109",
+        "ki_nm_chembl37": 350.0,
+        "kinact_per_min": 0.0,
+        "aucr_wt_predicted": 4.63,
+        "variant_allele": "*2/*3",
+        "aucr_variant_vs_wt_baseline": 7.96,
+        "published_clinical_wt_range": "3.5-5.5x",
+        "within_published_clinical_band": true,
+        "ncl_ltc_smr_action": "FDA Index CYP2C9 Bleed Benchmark"
+      }
+    ]
+  },
+  "fcidump_catalog": [
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1867.37329751,
+      "uncompressed_bytes": 45677,
+      "gzip_bytes": 14323,
+      "sha256_gzip": "f0a4199bd1c579548ebfe7a555e5ec9764c4fa6cc58235d24d106ee2128c2652",
+      "exact_casci_doublet_ha": -1886.089783,
+      "sc_nevpt2_doublet_ha": -1887.023159
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1870.16311879,
+      "uncompressed_bytes": 45492,
+      "gzip_bytes": 14198,
+      "sha256_gzip": "d0d065aa296a3cbeed341b1012cfb98bcfa5390fa9afd3395518153cb45f42c8",
+      "exact_casci_doublet_ha": -1886.046136,
+      "sc_nevpt2_doublet_ha": -1886.977994
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_3NXU_RIT_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1801.30021221,
+      "uncompressed_bytes": 45834,
+      "gzip_bytes": 14281,
+      "sha256_gzip": "9c59075f5f2c9970db932d9310ce2030f870bfc646b91965dfcbdab6ad6276d6",
+      "exact_casci_low_spin_ha": -1827.244163,
+      "sc_nevpt2_low_spin_ha": -1828.178518
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1871.37058915,
+      "uncompressed_bytes": 45395,
+      "gzip_bytes": 14149,
+      "sha256_gzip": "9e4e3caf4c3f0f67fe5e85de48aba03b8153de7835a8a2bdc035915e2fb03097",
+      "exact_casci_doublet_ha": -1886.155129,
+      "sc_nevpt2_doublet_ha": -1887.064961
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1871.12655634,
+      "uncompressed_bytes": 45269,
+      "gzip_bytes": 14097,
+      "sha256_gzip": "3187f2222bb16239ecc17cdb5327bc9f2cfbae807e8aad6aa439ca86af1f7b94",
+      "exact_casci_doublet_ha": -1886.049468,
+      "sc_nevpt2_doublet_ha": -1886.982554
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1868.09851905,
+      "uncompressed_bytes": 45583,
+      "gzip_bytes": 14221,
+      "sha256_gzip": "57c09d5f28a0822ff23e73d7bde81d9ab8e9cda62c724406f939021d339151c1",
+      "exact_casci_doublet_ha": -1886.113577,
+      "sc_nevpt2_doublet_ha": -1887.069166
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1870.79262475,
+      "uncompressed_bytes": 45323,
+      "gzip_bytes": 14076,
+      "sha256_gzip": "b37203e84a1b658c814c47bde728e2bb406e243980cc5bca3c7855cd74f7d11e",
+      "exact_casci_doublet_ha": -1886.053825,
+      "sc_nevpt2_doublet_ha": -1886.986141
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/ACE_1O86_LPR_Zn2_QMMM_CAS12e10o_def2SVP.fcidump.gz",
+      "norb": 10,
+      "nelec_alpha_beta": [
+        6,
+        6
+      ],
+      "ms2": 0,
+      "ecore_ha": -2012.43484977,
+      "uncompressed_bytes": 67526,
+      "gzip_bytes": 20671,
+      "sha256_gzip": "5b1fdcede7e4d65fd7e36a705a65304698caa9e493e43d587b94dc6d38e724e4",
+      "exact_fci_ha": -2040.58738317,
+      "rccsdt_ha": -2040.58738882,
+      "abs_rccsdt_minus_fci_mha": 0.00566
+    }
+  ],
+  "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+}

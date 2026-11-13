@@ -2,15 +2,16 @@
 // Matched UX Architecture with Quantum Social Prescribing (https://arunnadarasa.github.io/quantum-social-prescribing/)
 
 const BOOKMARKS = [
-  { label: "p.1 · Abstract & NCL LTC Spec", page: 1 },
+  { label: "p.1 · Abstract & OpenCYP-FTQC v1.0", page: 1 },
   { label: "p.3 · 4-Era Roadmap & Baselines", page: 3 },
   { label: "p.5 · Nexus Helios-1E & Haiqu HUBO", page: 5 },
   { label: "p.7 · 4-Regime HQS & PDB 1O86", page: 7 },
   { label: "p.9 · PySCF 1TQN vs 1O86 & AlphaGenome 2", page: 9 },
-  { label: "p.11 · Gate 1: PDB 5TE8/3NXU, THC & ChEMBL340", page: 11 },
-  { label: "p.12 · 5-Seed Modal QLTCMLM & Barren Plateau", page: 12 },
-  { label: "p.14 · Jev 1.14 & DCB0129/0160 Audit", page: 14 },
-  { label: "p.15 · 64-Node KG & 47 Verified Refs", page: 15 }
+  { label: "p.11 · Gate 1: PDB 5TE8/3NXU & THC-QPE", page: 11 },
+  { label: "p.12 · OpenCYP-FTQC QM/MM & 12-Regimen PBPK", page: 12 },
+  { label: "p.14 · 5-Seed Modal QLTCMLM & Barren Plateau", page: 14 },
+  { label: "p.15 · Jev 1.14 & DCB0129/0160 Audit", page: 15 },
+  { label: "p.16 · 67-Node KG & 49 Verified Refs", page: 16 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -112,9 +113,17 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--15},
+  pages   = {1--18},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Grounded in NHS North Central London ICB LTC LCS v6 (9 LTCs); 0 physical QPU shots; 8 SHA-256-sealed receipts across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 (CYP3A4 PDB 1TQN vs ACE PDB 1O86), AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 9 SHA-256-sealed receipts + 67-node KG across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.0 (PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
+}`,
+  opencyp: `@misc{nadarasa2026opencypftqc,
+  title        = {{OpenCYP-FTQC v1.0}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP} Archive and 12-Regimen {ChEMBL\\_37} {PBPK} Benchmark},
+  author       = {Nadarasa, Arun},
+  year         = {2026},
+  howpublished = {Hugging Face Datasets \\& GitHub Open-Science Benchmark},
+  url          = {https://huggingface.co/datasets/socialprescribing/opencyp-ftqc},
+  note         = {8 SHA-256-sealed PySCF 2.15 def2-SVP QM/MM FCIDUMP Hamiltonians across CYP3A4 (5TE8/3NXU), CYP2D6 (4WNU), CYP2C9 (1R9O), and closed-shell ACE Zn2+ control (1O86, |RCCSD(T)-FCI|=0.00566 mHa); 2.43x--6.02x Procrustes Delta-DF compression; CC BY 4.0}
 }`,
   qltcmlm: `@misc{nadarasa2026qltcmlm,
   title        = {{QLTCMLM}: 4-Qubit Frobenius Data-Reuploading Multi-Task Variational Quantum Classifier for Multimorbid {NHS} {LTC} Risk Stratification},
@@ -203,8 +212,8 @@ async function initPdfReader() {
   const DOC = {
     pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
     pagesDir: "pages",
-    totalPages: 17,
-    altTitle: "Quantum-LTC Four-Era Samskrift Monograph"
+    totalPages: 18,
+    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (18 Pages)"
   };
 
   let zoom = 1.0;
@@ -1337,6 +1346,129 @@ function initChartsAndLightbox() {
       charts.push(cG1);
     }
 
+    // Chart 4d (Full-Width): OpenCYP-FTQC v1.0 Multi-Isoform Protein QM/MM Barriers, Procrustes Δ-DF & 12-Regimen ChEMBL_37 PBPK
+    const elOpenCyp = document.getElementById("echart-opencyp");
+    if (elOpenCyp && PORTAL_DATA.opencyp_ftqc) {
+      const cOC = window.echarts.init(elOpenCyp);
+      const isoRows = PORTAL_DATA.opencyp_ftqc.isoforms;
+      const regRows = PORTAL_DATA.opencyp_ftqc.regimens_12;
+      const shortReg = r => {
+        const parts = r.regimen_pair.split("+").map(s => s.trim().slice(0, 5));
+        return `${r.isoform.replace("CYP", "")}: ${parts[0]}+${parts[1]}`;
+      };
+      cOC.setOption({
+        tooltip: {
+          trigger: "axis",
+          backgroundColor: "rgba(11, 21, 23, 0.96)",
+          borderColor: "rgba(56, 214, 196, 0.45)",
+          textStyle: { color: "#eef7f5", fontSize: 12 }
+        },
+        legend: [
+          {
+            data: ["Vacuum SC-NEVPT2 (kcal/mol)", "Protein QM/MM SC-NEVPT2 (kcal/mol)", "QM/MM DFT Spread (kcal/mol)"],
+            textStyle: { color: "#eef7f5", fontSize: 10 },
+            left: "3%",
+            top: 6
+          },
+          {
+            data: ["ChEMBL_37 PBPK AUCR (WT)", "CPIC / AG2 Variant Carrier AUCR"],
+            textStyle: { color: "#eef7f5", fontSize: 10 },
+            right: "3%",
+            top: 6
+          }
+        ],
+        grid: [
+          { left: 54, width: "37%", top: 66, bottom: 64 },
+          { right: 26, width: "47%", top: 66, bottom: 68 }
+        ],
+        xAxis: [
+          {
+            gridIndex: 0,
+            type: "category",
+            data: isoRows.map(r => `${r.isoform} (${r.pdb_id})\nΔ-DF ${r.compression_x}× · E∥ +${r.e_parallel_mv_cm}`),
+            ...baseAxis,
+            axisLabel: { color: "#bfece6", fontSize: 9.2, interval: 0, lineHeight: 12.5 }
+          },
+          {
+            gridIndex: 1,
+            type: "category",
+            data: regRows.map(shortReg),
+            ...baseAxis,
+            axisLabel: { color: "#bfece6", fontSize: 8.8, interval: 0, rotate: 28 }
+          }
+        ],
+        yAxis: [
+          {
+            gridIndex: 0,
+            type: "value",
+            min: 0,
+            max: 62,
+            ...baseAxis,
+            name: "Barrier / Spread (kcal/mol)",
+            nameTextStyle: { color: "#a78bfa", fontSize: 10.5 }
+          },
+          {
+            gridIndex: 1,
+            type: "log",
+            logBase: 10,
+            min: 1,
+            max: 25,
+            ...baseAxis,
+            name: "12-Regimen Fold Exposure (AUCR)",
+            nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+          }
+        ],
+        series: [
+          {
+            name: "Vacuum SC-NEVPT2 (kcal/mol)",
+            type: "bar",
+            xAxisIndex: 0,
+            yAxisIndex: 0,
+            barGap: "10%",
+            data: isoRows.map(r => r.vac_kcal),
+            itemStyle: { color: "#60a5fa", borderRadius: [3, 3, 0, 0] },
+            label: { show: true, position: "top", color: "#93c5fd", fontSize: 9 }
+          },
+          {
+            name: "Protein QM/MM SC-NEVPT2 (kcal/mol)",
+            type: "bar",
+            xAxisIndex: 0,
+            yAxisIndex: 0,
+            data: isoRows.map(r => r.qmmm_kcal),
+            itemStyle: { color: "#38d6c4", borderRadius: [3, 3, 0, 0] },
+            label: { show: true, position: "top", color: "#38d6c4", fontSize: 9 }
+          },
+          {
+            name: "QM/MM DFT Spread (kcal/mol)",
+            type: "bar",
+            xAxisIndex: 0,
+            yAxisIndex: 0,
+            data: isoRows.map(r => r.dft_spread_kcal),
+            itemStyle: { color: "#f06a3b", borderRadius: [3, 3, 0, 0] },
+            label: { show: true, position: "top", color: "#f06a3b", fontSize: 9 }
+          },
+          {
+            name: "ChEMBL_37 PBPK AUCR (WT)",
+            type: "bar",
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            barGap: "10%",
+            data: regRows.map(r => r.aucr_wt_predicted),
+            itemStyle: { color: "#38d6c4", borderRadius: [3, 3, 0, 0] }
+          },
+          {
+            name: "CPIC / AG2 Variant Carrier AUCR",
+            type: "bar",
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            data: regRows.map(r => r.aucr_variant_vs_wt_baseline),
+            itemStyle: { color: "#f4ae42", borderRadius: [3, 3, 0, 0] }
+          }
+        ]
+      });
+      charts.push(cOC);
+    }
+
     // Chart 5 (Full-Width): TypeSafe Jev 1.14 Multi-Method Health AI Audit across CUJ-1..4
     const elG = document.getElementById("echart-governance");
     if (elG && PORTAL_DATA.jev_cujs) {
@@ -2004,6 +2136,106 @@ const MOL_STRUCTURES = [
     ]
   },
   {
+    id: "4WNU",
+    tabLabel: "PDB 4WNU · CYP2D6 + Quinidine",
+    dotColor: "#34d399",
+    hudTitle: "PDB 4WNU · Human CYP2D6 + Quinidine (2.26 Å X-Ray · OpenCYP-FTQC v1.0)",
+    verdictClass: "amber",
+    verdictTitle: "Era III–IV Open-Shell Cationic-Pocket FTQC Target (6.02× Procrustes Δ-DF)",
+    verdictBody:
+      "Anionic active-site roof (GLU216 + ASP301) anchors cationic cardiovascular substrates and quinidine (QDN602 O1–GLU216 OE2 = 2.763 Å), generating a +25.6 MV/cm axial pocket electric field in PySCF 2.15 QM/MM while SVD Procrustes orbital alignment compresses the difference-Hamiltonian 1-norm 6.02× (13.86 → 2.30 Ha).",
+    kpis: [
+      { lbl: "Experimental Method", val: "2.26 Å X-Ray (Chain A)" },
+      { lbl: "GLU216 H-Bond Lock", val: "2.763 Å (QDN O1–OE2)" },
+      { lbl: "Procrustes Δ-DF Cut", val: "6.02× (13.86 → 2.30 Ha)" },
+      { lbl: "ChEMBL289 PBPK", val: "Metoprolol 3.68× / 6.57×" }
+    ],
+    cofactorSel: { resn: "HEM", resi: 601 },
+    ligandSel: { resn: "QDN", resi: 602 },
+    pocketResi: [443, 216, 301, 304, 374, 483],
+    focusSel: { resi: [601, 602, 443, 216, 301] },
+    bonds: [
+      { a: { x: 7.635, y: 26.258, z: 4.051 }, b: { x: 8.375, y: 26.733, z: 6.09 }, color: "#ff4f5e", label: "Fe–SG 2.22 Å" },
+      { a: { x: 4.256, y: 25.864, z: -7.817 }, b: { x: 5.423, y: 25.366, z: -10.272 }, color: "#38d6c4", label: "QDN–GLU216 2.76 Å" },
+      { a: { x: 6.061, y: 27.876, z: -6.072 }, b: { x: 6.894, y: 32.429, z: -4.882 }, color: "#f4ae42", label: "QDN–ASP301 4.78 Å" }
+    ],
+    pins: [
+      { text: "QDN 602 + GLU216 Salt/H-Bond (2.76 Å)", pos: { x: 4.84, y: 25.62, z: -9.04 }, bg: "#083a36", border: "#38d6c4" },
+      { text: "HEM 601 + CYS443 (Fe–SG 2.22 Å · E∥ +25.6 MV/cm)", pos: { x: 8.01, y: 26.5, z: 5.07 }, bg: "#7f1d2d", border: "#ff4f5e" }
+    ],
+    annotations: [
+      {
+        title: "Quinidine–GLU216 Ionic/H-Bond Roof (QDN 602 · GLU216)",
+        badge: "O1–OE2 = 2.763 Å",
+        color: "#38d6c4",
+        desc: "Anionic GLU216/ASP301 roof orients basic amines (metoprolol, carvedilol, paroxetine; ChEMBL289 Ki = 41.5 nM) and drives +25.6 MV/cm axial electrostatic polarization.",
+        sel: { resi: [602, 216, 301] }
+      },
+      {
+        title: "CYP2D6 Heme–Thiolate Catalytic Core (HEM 601 + CYS443)",
+        badge: "Fe–SG = 2.221 Å",
+        color: "#ff4f5e",
+        desc: "Exported as SHA-256-sealed RC & TS_HAT CAS(9e,9o) QM/MM FCIDUMP files in OpenCYP-FTQC v1.0 with 6.02× Procrustes Δ-DF 1-norm compression.",
+        sel: { resi: [443, 601] }
+      }
+    ],
+    contacts: [
+      ["HEM601 FE — CYS443 SG", "2.221 Å", "Proximal thiolate heme coordination"],
+      ["QDN602 O1 — GLU216 OE2", "2.763 Å", "Key CYP2D6 anionic active-site lock"],
+      ["Procrustes Δ-DF 1-Norm Cut", "6.02× (2.30 Ha)", "Shared-pocket TS−RC block encoding"]
+    ]
+  },
+  {
+    id: "1R9O",
+    tabLabel: "PDB 1R9O · CYP2C9 + Flurbiprofen",
+    dotColor: "#f4ae42",
+    hudTitle: "PDB 1R9O · Human CYP2C9 + Flurbiprofen (2.00 Å X-Ray · OpenCYP-FTQC v1.0)",
+    verdictClass: "amber",
+    verdictTitle: "Era III–IV Open-Shell Anionic-Pocket Target (12.61 kcal/mol QM/MM DFT Spread)",
+    verdictBody:
+      "Cationic ARG108 anchors flurbiprofen's carboxylate (O1–NE = 2.693 Å), positioning C5 4.920 Å from heme Fe. Inside 2,311 Debye–Hückel protein point charges, broken-symmetry UKS scatters across 12.61 kcal/mol (⟨S²⟩_BS = 1.30–2.21) vs spin-pure SC-NEVPT2 + 2.43× Procrustes Δ-DF.",
+    kpis: [
+      { lbl: "Experimental Method", val: "2.00 Å X-Ray (Chain A)" },
+      { lbl: "ARG108 Salt Bridge", val: "2.693 Å (FLP O1–NE)" },
+      { lbl: "QM/MM DFT Spread", val: "12.61 kcal/mol (PBE..PBE0)" },
+      { lbl: "ChEMBL3397 PBPK", val: "S-Warfarin 2.90× / 4.97×" }
+    ],
+    cofactorSel: { resn: "HEM", resi: 500 },
+    ligandSel: { resn: "FLP", resi: 501 },
+    pocketResi: [435, 108, 205, 293, 297, 363],
+    focusSel: { resi: [500, 501, 435, 108, 297] },
+    bonds: [
+      { a: { x: 5.89, y: 24.568, z: -1.058 }, b: { x: 5.733, y: 28.92, z: -3.347 }, color: "#38d6c4", label: "C5–Fe 4.92 Å" },
+      { a: { x: 5.89, y: 24.568, z: -1.058 }, b: { x: 6.172, y: 22.248, z: -0.62 }, color: "#ff4f5e", label: "Fe–SG 2.38 Å" },
+      { a: { x: 11.869, y: 36.29, z: -2.555 }, b: { x: 14.56, y: 36.288, z: -2.445 }, color: "#f4ae42", label: "FLP–ARG108 2.69 Å" }
+    ],
+    pins: [
+      { text: "FLP 501 C5 → HEM 500 Fe (4.92 Å)", pos: { x: 5.81, y: 26.74, z: -2.2 }, bg: "#083a36", border: "#38d6c4" },
+      { text: "ARG108 Cationic Carboxylate Clamp (2.69 Å)", pos: { x: 13.21, y: 36.29, z: -2.5 }, bg: "#3d2b09", border: "#f4ae42" }
+    ],
+    annotations: [
+      {
+        title: "Flurbiprofen C5 Oxidation Pose (FLP 501 → HEM 500)",
+        badge: "C5–Fe = 4.920 Å",
+        color: "#38d6c4",
+        desc: "Productive 4'-hydroxylation pose where QM/MM broken-symmetry DFT functional choice shifts the barrier by 12.61 kcal/mol (PBE 26.09 vs B3LYP 38.70 kcal/mol).",
+        sel: { resi: [500, 501] }
+      },
+      {
+        title: "Cationic ARG108 Salt-Bridge Anchor (ARG108 · FLP 501)",
+        badge: "O1–NE = 2.693 Å",
+        color: "#f4ae42",
+        desc: "Electrostatic clamp governing NSAID, S-warfarin (AF anticoagulation), and glimepiride (T2D) clearance under CYP2C9 *2/*3 pharmacogenomics.",
+        sel: { resi: [108, 501] }
+      }
+    ],
+    contacts: [
+      ["FLP501 O1 — ARG108 NE", "2.693 Å", "Cationic carboxylate salt-bridge lock"],
+      ["FLP501 C5 — HEM500 FE", "4.920 Å", "Aromatic C–H abstraction locus"],
+      ["HEM500 FE — CYS435 SG", "2.378 Å", "OpenCYP-FTQC CAS(9e,9o) FCIDUMP"]
+    ]
+  },
+  {
     id: "1TQN",
     tabLabel: "PDB 1TQN · Resting CYP3A4",
     dotColor: "#a78bfa",
@@ -2098,7 +2330,7 @@ const MOL_STRUCTURES = [
     ],
     contacts: [
       ["ZN701 — LPR702 O3", "2.141 Å", "Primary carboxyalkyl inhibitor bond"],
-      ["ZN701 — GLU411 OE1", "1.996 Å", "Tetrahedral carboxylate ligand"],
+      ["OpenCYP-FTQC QM/MM |CC − FCI|", "0.00566 mHa", "def2-SVP + 2,945 MM charges (T₁=0.0038)"],
       ["ZN701 — HIS383 / HIS387 NE2", "2.038 / 2.071 Å", "HEXXH motif histidine coordination"]
     ]
   },
@@ -2167,7 +2399,7 @@ function extractChainAModel1(rawPdb) {
       const ch = ln.slice(21, 22).trim();
       if (ch && ch !== "A") continue;
       const resn = ln.slice(17, 20).trim();
-      if (resn === "HOH" || resn === "DMS" || resn === "CL") continue;
+      if (resn === "HOH" || resn === "DMS" || resn === "CL" || resn === "GOL") continue;
       out.push(ln);
       atomCount++;
     } else if (ln.startsWith("CONECT")) {

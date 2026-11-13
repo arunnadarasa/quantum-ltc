@@ -1,5 +1,5 @@
 {
-  "total_entries": 47,
+  "total_entries": 49,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -329,6 +329,20 @@
       "status": "VERIFIED",
       "verification_source": "Crossref HTTP 200 (10.1063/1.1361246)",
       "resolved_title": "Introduction of <i>n</i>-electron valence states for multireference perturbation theory"
+    },
+    {
+      "key": "wang2015cyp2d6_4wnu",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1074/jbc.M114.627661)",
+      "resolved_title": "Contributions of Ionic Interactions and Protein Dynamics to Cytochrome P450 2D6 (CYP2D6) Substrate and Inhibitor Binding"
+    },
+    {
+      "key": "wester2004cyp2c9_1r9o",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1074/jbc.M405427200)",
+      "resolved_title": "The Structure of Human Cytochrome P450 2C9 Complexed with Flurbiprofen at 2.0-\u00c5 Resolution"
     }
   ]
 }

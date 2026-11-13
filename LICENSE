@@ -1,0 +1,61 @@
+Quantum-LTC & OpenCYP-FTQC Open-Science License and Upstream Terms Notice
+=========================================================================
+
+Copyright (c) 2026 Arun Nadarasa
+Mid and South Essex NHS Foundation Trust & International Social Prescribing
+Pharmacy Association (ISPPA), London, United Kingdom.
+
+1. Open-Science Research Scope (Non-Commercial Public-Good Science)
+-------------------------------------------------------------------
+This repository, benchmark suite (`OpenCYP-FTQC v1.0`), active-space `FCIDUMP`
+Hamiltonian collection, and accompanying 18-page monograph (`Quantum-LTC`) are
+released strictly in the name of open, reproducible, non-commercial scientific
+research and clinical safety methodology.
+
+2. Source Code & Original Datasets
+----------------------------------
+- **Original Software & Benchmark Scripts (`src/`, `experiments/`, `models/`,
+  `scripts/`, `tests/`):** Licensed under the **Apache License, Version 2.0**
+  (https://www.apache.org/licenses/LICENSE-2.0).
+- **Monograph, Figures, Active-Space `FCIDUMP` Integrals & Knowledge Graph
+  (`Quantum_LTC_Roadmap.pdf`, `opencyp_ftqc/`, `results/`):** Licensed under the
+  **Creative Commons Attribution 4.0 International License (CC BY 4.0)**
+  (https://creativecommons.org/licenses/by/4.0/), subject to the upstream
+  database and model terms listed in Section 3 below.
+
+3. Mandatory Upstream Scientific Program & Database Terms
+---------------------------------------------------------
+Users reusing or redistributing derived artifacts must respect the following
+upstream terms:
+
+- **Google Antigravity for Scientific Workflows:** Supported in part by
+  complimentary access to Google Antigravity and Gemini 4 Argon for
+  non-commercial scientific research conducted under public clinical /
+  non-profit research affiliation.
+- **AlphaGenome 2 & AlphaGenome Atlas (`v2.dna_client` & AVI Scores):**
+  Regulatory variant predictions (`CYP3A4*22` rs35599367, `ACE` rs4343, `SLC5A2`
+  rs9934336, `MUC5B` rs35705950) are non-commercial research-use-only outputs
+  subject to the **AlphaGenome Non-Commercial Terms**
+  (https://deepmind.google.com/science/alphagenome/terms) and are not validated
+  for clinical diagnosis or prescribing.
+- **EMBL-EBI ChEMBL (`ChEMBL_37`, `CHEMBL340` / `CHEMBL289` / `CHEMBL3397`):**
+  Experimental bioactivity data (`Ki`, `IC50`, `Km`) are derived from the ChEMBL
+  Database and licensed under **Creative Commons Attribution-ShareAlike 3.0
+  Unported (CC BY-SA 3.0)**
+  (https://chembl.gitbook.io/chembl-interface-documentation/about).
+- **RCSB Protein Data Bank (`PDB 5TE8`, `3NXU`, `1TQN`, `4WNU`, `1R9O`, `1O86`,
+  `1N9V`):** Experimental 3D macromolecular coordinates are distributed under
+  the **CC0 1.0 Public Domain Dedication**
+  (https://www.rcsb.org/pages/usage-policy).
+- **EMBL-EBI Ontology Lookup Service (`OLS4`, Human Disease Ontology `DOID`):**
+  Distributed under **CC0 1.0**.
+
+4. Statutory Clinical Safety Disclaimer (NHS DCB0129 & DCB0160)
+---------------------------------------------------------------
+This software and dataset constitute an exploratory computational research
+sandbox (`0` physical QPU shots, `0` human wet-lab specimens, `phi_present =
+False`). All six clinical hazards (`H-LTC-01` through `H-LTC-06`) remain
+strictly `OPEN`. Nothing in this repository is certified as a medical device
+(UKCA / CE SaMD) or intended for autonomous patient diagnosis, triage, or
+prescribing without qualified clinician and Pharmacist Structured Medication
+Review (SMR) oversight.

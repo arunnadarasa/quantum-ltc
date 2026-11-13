@@ -4,8 +4,9 @@
   "ontology_sources": [
     "EMBL-EBI OLS4 Human Disease Ontology (DOID) \u2014 https://www.ebi.ac.uk/ols4/api-docs",
     "UniProtKB, GENCODE v46 & Google DeepMind AlphaGenome 2 (v2.dna_client + Atlas AVI)",
-    "RCSB Protein Data Bank (PDB 1O86, 1TQN, 5TE8, 3NXU & 1N9V \u2014 CC0 1.0)",
-    "EMBL-EBI ChEMBL Database Release ChEMBL_37 (CHEMBL340 Human CYP3A4 \u2014 CC BY-SA 3.0)",
+    "RCSB Protein Data Bank (PDB 1O86, 1TQN, 5TE8, 3NXU, 4WNU, 1R9O & 1N9V \u2014 CC0 1.0)",
+    "EMBL-EBI ChEMBL Database Release ChEMBL_37 (CHEMBL340 CYP3A4, CHEMBL289 CYP2D6, CHEMBL3397 CYP2C9 \u2014 CC BY-SA 3.0)",
+    "OpenCYP-FTQC v1.0 Public QM/MM FCIDUMP Archive (https://huggingface.co/datasets/socialprescribing/opencyp-ftqc)",
     "SNOMED CT UK Edition (315594003 Interpreter needed)",
     "Kashefi Quantum Algorithmic Primitives Atlas v0.4",
     "NHS England DCB0129 (Manufacture) & DCB0160 (Deployment) Clinical Risk Management Standards"
@@ -19,20 +20,20 @@
     "closed_hazards_claimed": 0
   },
   "graph_statistics": {
-    "total_nodes": 64,
-    "total_edges": 136,
+    "total_nodes": 67,
+    "total_edges": 151,
     "entity_types_count": 8,
-    "predicate_types_count": 58,
+    "predicate_types_count": 61,
     "connected_components": 1,
-    "mean_total_degree": 4.25,
+    "mean_total_degree": 4.507,
     "nodes_by_entity_type": {
       "NCL_LTC_Condition": 9,
       "HouseOfCare_Stage": 5,
-      "Molecular_Target": 13,
+      "Molecular_Target": 15,
       "Intervention": 6,
       "Quantum_Primitive": 10,
       "Logical_Era": 4,
-      "Platform_Receipt": 11,
+      "Platform_Receipt": 12,
       "DCB0129_Hazard": 6
     },
     "edges_by_predicate": {
@@ -54,20 +55,23 @@
       "MODIFIED_BY_LOCUS": 2,
       "RESOLVED_IN_CRYSTAL": 4,
       "CLEAVED_FROM_ANG_I_BY": 1,
-      "METABOLISES_POLYPHARMACY": 2,
+      "METABOLISES_POLYPHARMACY": 5,
       "REGULATED_IN_HEPATOCYTE": 1,
-      "AUDITS_DDI_CLEARANCE_OF": 1,
+      "AUDITS_DDI_CLEARANCE_OF": 3,
       "CLEARED_FIRST_PASS_BY": 1,
       "DEMARCATES_FTQC_WALL": 1,
       "SCALES_TO_141L_DF_QPE": 1,
       "EXECUTED_AND_SEALED_ON": 13,
       "SCORED_AT_SINGLE_CELL_BY": 2,
-      "BENCHMARKS_HAT_BARRIER_ON": 1,
+      "BENCHMARKS_HAT_BARRIER_ON": 3,
       "SCALES_TO_144L_THC_QPE": 1,
       "ANCHORS_DDI_INACTIVATION_IN": 1,
       "PARAMETERISES_DDI_AUCR_VIA": 1,
-      "GOVERNS_CLINICAL_RISK_OF": 9,
-      "AUDITS_DEMARCATION_OF": 1,
+      "GOVERNS_CLINICAL_RISK_OF": 10,
+      "AUDITS_DEMARCATION_OF": 2,
+      "ARCHIVED_AS_FCIDUMP_IN": 4,
+      "VALIDATES_CLASSICAL_CONTROL_IN": 1,
+      "BENCHMARKED_BY_OPEN_ARCHIVE": 1,
       "COORDINATES_CATALYTIC_ZN2": 1,
       "INHIBITS_TARGET": 2,
       "SYNERGISES_METABOLICALLY": 1,
@@ -97,73 +101,73 @@
     },
     "top_10_pagerank_hubs": [
       {
-        "id": "era_iii",
-        "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
-        "entity_type": "Logical_Era",
-        "pagerank": 0.043321,
-        "total_degree": 5
+        "id": "prim_x03",
+        "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
+        "entity_type": "Quantum_Primitive",
+        "pagerank": 0.042094,
+        "total_degree": 9
+      },
+      {
+        "id": "plat_opencyp_ftqc",
+        "label": "OpenCYP-FTQC v1.0: 8 QM/MM FCIDUMPs + ChEMBL37",
+        "entity_type": "Platform_Receipt",
+        "pagerank": 0.040113,
+        "total_degree": 8
       },
       {
         "id": "era_iv",
         "label": "Era IV: Asymptotic ICS-Scale FTQC (100\u20131,000+L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.042757,
-        "total_degree": 5
-      },
-      {
-        "id": "prim_x03",
-        "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
-        "entity_type": "Quantum_Primitive",
-        "pagerank": 0.041374,
-        "total_degree": 7
+        "pagerank": 0.03849,
+        "total_degree": 6
       },
       {
         "id": "era_ii",
         "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.040552,
+        "pagerank": 0.036961,
         "total_degree": 6
+      },
+      {
+        "id": "era_iii",
+        "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
+        "entity_type": "Logical_Era",
+        "pagerank": 0.035916,
+        "total_degree": 5
       },
       {
         "id": "stage_1_check_test",
         "label": "Stage 1: Check & Test + Interpreter Access",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.031007,
+        "pagerank": 0.028738,
         "total_degree": 14
-      },
-      {
-        "id": "plat_cyp3a4_gate1",
-        "label": "Gate 1: def2-SVP HAT + THC-QPE + ChEMBL340",
-        "entity_type": "Platform_Receipt",
-        "pagerank": 0.026723,
-        "total_degree": 6
       },
       {
         "id": "stage_3_pcsp",
         "label": "Stage 3: PCSP Coaching, VCSE & Net-Zero Switch",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.024754,
+        "pagerank": 0.023304,
         "total_degree": 7
+      },
+      {
+        "id": "plat_cyp3a4_gate1",
+        "label": "Gate 1: def2-SVP HAT + THC-QPE + ChEMBL340",
+        "entity_type": "Platform_Receipt",
+        "pagerank": 0.023039,
+        "total_degree": 6
       },
       {
         "id": "era_i",
         "label": "Era I: Classical-Exact & NISQ (0L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.024357,
-        "total_degree": 4
-      },
-      {
-        "id": "prim_p22",
-        "label": "Atlas P22: Open-system (Lindbladian) simulation",
-        "entity_type": "Quantum_Primitive",
-        "pagerank": 0.02373,
+        "pagerank": 0.022654,
         "total_degree": 4
       },
       {
         "id": "stage_call_recall",
         "label": "UCLP Case-Finding & Pre-Winter Call/Recall",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.023611,
+        "pagerank": 0.021821,
         "total_degree": 12
       }
     ]
@@ -229,9 +233,9 @@
         "default_tier": "High / Complex"
       },
       "in_degree": 0,
-      "out_degree": 6,
-      "total_degree": 6,
-      "pagerank": 0.009805
+      "out_degree": 7,
+      "total_degree": 7,
+      "pagerank": 0.010245
     },
     {
       "id": "ltc_af",
@@ -247,9 +251,9 @@
         "default_tier": "Moderate / High"
       },
       "in_degree": 0,
-      "out_degree": 4,
-      "total_degree": 4,
-      "pagerank": 0.007246
+      "out_degree": 5,
+      "total_degree": 5,
+      "pagerank": 0.007982
     },
     {
       "id": "ltc_htn",
@@ -267,7 +271,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.009241
+      "pagerank": 0.008564
     },
     {
       "id": "ltc_t2d",
@@ -282,9 +286,9 @@
         "biomarkers": "HbA1c, eGFR, uACR"
       },
       "in_degree": 0,
-      "out_degree": 4,
-      "total_degree": 4,
-      "pagerank": 0.008844
+      "out_degree": 5,
+      "total_degree": 5,
+      "pagerank": 0.009489
     },
     {
       "id": "ltc_t1d",
@@ -301,7 +305,7 @@
       "in_degree": 0,
       "out_degree": 4,
       "total_degree": 4,
-      "pagerank": 0.007468
+      "pagerank": 0.00695
     },
     {
       "id": "ltc_ckd",
@@ -319,7 +323,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.008874
+      "pagerank": 0.008212
     },
     {
       "id": "ltc_masld",
@@ -337,7 +341,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.012311
+      "pagerank": 0.011436
     },
     {
       "id": "ltc_copd",
@@ -354,7 +358,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.011017
+      "pagerank": 0.010351
     },
     {
       "id": "ltc_asthma",
@@ -372,7 +376,7 @@
       "in_degree": 1,
       "out_degree": 6,
       "total_degree": 7,
-      "pagerank": 0.015244
+      "pagerank": 0.014435
     },
     {
       "id": "stage_call_recall",
@@ -390,7 +394,7 @@
       "in_degree": 10,
       "out_degree": 2,
       "total_degree": 12,
-      "pagerank": 0.023611
+      "pagerank": 0.021821
     },
     {
       "id": "stage_1_check_test",
@@ -408,7 +412,7 @@
       "in_degree": 11,
       "out_degree": 3,
       "total_degree": 14,
-      "pagerank": 0.031007
+      "pagerank": 0.028738
     },
     {
       "id": "stage_2_mdt_review",
@@ -426,7 +430,7 @@
       "in_degree": 5,
       "out_degree": 3,
       "total_degree": 8,
-      "pagerank": 0.018714
+      "pagerank": 0.017136
     },
     {
       "id": "stage_3_pcsp",
@@ -444,7 +448,7 @@
       "in_degree": 5,
       "out_degree": 2,
       "total_degree": 7,
-      "pagerank": 0.024754
+      "pagerank": 0.023304
     },
     {
       "id": "stage_4_continuity",
@@ -462,7 +466,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.018161
+      "pagerank": 0.016637
     },
     {
       "id": "mol_ace",
@@ -480,7 +484,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.014219
+      "pagerank": 0.012773
     },
     {
       "id": "mol_pdb_1o86",
@@ -497,9 +501,9 @@
         "era_iii_cas": "CAS(36e,26o) -> 52 data + 12 ancilla = 64L"
       },
       "in_degree": 2,
-      "out_degree": 1,
-      "total_degree": 3,
-      "pagerank": 0.011935
+      "out_degree": 2,
+      "total_degree": 4,
+      "pagerank": 0.015087
     },
     {
       "id": "mol_slc5a2",
@@ -517,7 +521,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.012908
+      "pagerank": 0.011786
     },
     {
       "id": "mol_glp1r",
@@ -535,7 +539,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.009408
+      "pagerank": 0.008605
     },
     {
       "id": "mol_adrb2",
@@ -552,7 +556,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.008457
+      "pagerank": 0.008024
     },
     {
       "id": "mol_il6",
@@ -570,7 +574,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.012041
+      "pagerank": 0.011058
     },
     {
       "id": "mol_angii_1n9v",
@@ -588,7 +592,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.007373
+      "pagerank": 0.006851
     },
     {
       "id": "mol_pnpla3",
@@ -605,7 +609,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.004516
+      "pagerank": 0.004256
     },
     {
       "id": "mol_cyp3a4",
@@ -623,7 +627,7 @@
       "in_degree": 5,
       "out_degree": 4,
       "total_degree": 9,
-      "pagerank": 0.02289
+      "pagerank": 0.019865
     },
     {
       "id": "mol_pdb_1tqn",
@@ -642,7 +646,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.015177
+      "pagerank": 0.01122
     },
     {
       "id": "mol_pdb_5te8",
@@ -659,9 +663,9 @@
         "fe_sg_A": 2.424
       },
       "in_degree": 1,
-      "out_degree": 3,
-      "total_degree": 4,
-      "pagerank": 0.019497
+      "out_degree": 4,
+      "total_degree": 5,
+      "pagerank": 0.019121
     },
     {
       "id": "mol_pdb_3nxu",
@@ -678,9 +682,49 @@
         "chembl340_ki_nM": 100.0
       },
       "in_degree": 1,
-      "out_degree": 1,
-      "total_degree": 2,
-      "pagerank": 0.009654
+      "out_degree": 2,
+      "total_degree": 3,
+      "pagerank": 0.012824
+    },
+    {
+      "id": "mol_pdb_4wnu",
+      "label": "Crystal CYP2D6\u2013Quinidine (PDB 4WNU)",
+      "entity_type": "Molecular_Target",
+      "layer": 3,
+      "curie": "PDB:4WNU",
+      "external_iri": "https://www.rcsb.org/structure/4WNU",
+      "era": "All",
+      "summary": "2.26 \u00c5 X-ray co-crystal of human CYP2D6 bound to Quinidine (QDN602 O1\u2013GLU216 OE2 2.763 \u00c5, Fe\u2013CYS443 SG 2.221 \u00c5); anchors OpenCYP-FTQC v1.0 QM/MM FCIDUMP (6.02x Delta-DF) & ChEMBL289 beta-blocker PBPK.",
+      "metrics": {
+        "resolution_A": 2.26,
+        "fe_sg_A": 2.221,
+        "qdn_glu216_A": 2.763,
+        "delta_df_compression": "6.02x"
+      },
+      "in_degree": 2,
+      "out_degree": 2,
+      "total_degree": 4,
+      "pagerank": 0.011551
+    },
+    {
+      "id": "mol_pdb_1r9o",
+      "label": "Crystal CYP2C9\u2013Flurbiprofen (PDB 1R9O)",
+      "entity_type": "Molecular_Target",
+      "layer": 3,
+      "curie": "PDB:1R9O",
+      "external_iri": "https://www.rcsb.org/structure/1R9O",
+      "era": "All",
+      "summary": "2.00 \u00c5 X-ray co-crystal of human CYP2C9 bound to Flurbiprofen (FLP501 O1\u2013ARG108 NE 2.693 \u00c5, C5\u2013Fe 4.920 \u00c5, Fe\u2013CYS435 SG 2.378 \u00c5); anchors OpenCYP-FTQC v1.0 QM/MM FCIDUMP & ChEMBL3397 warfarin/SU PBPK.",
+      "metrics": {
+        "resolution_A": 2.0,
+        "fe_sg_A": 2.378,
+        "flp_arg108_A": 2.693,
+        "dft_spread_kcal": 12.61
+      },
+      "in_degree": 3,
+      "out_degree": 2,
+      "total_degree": 5,
+      "pagerank": 0.013569
     },
     {
       "id": "mol_muc5b",
@@ -699,7 +743,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.009814
+      "pagerank": 0.00909
     },
     {
       "id": "tx_acei_lisinopril",
@@ -717,7 +761,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.012154
+      "pagerank": 0.010819
     },
     {
       "id": "tx_sglt2i",
@@ -735,7 +779,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.012551
+      "pagerank": 0.011743
     },
     {
       "id": "tx_mart_dpi",
@@ -753,7 +797,7 @@
       "in_degree": 1,
       "out_degree": 5,
       "total_degree": 6,
-      "pagerank": 0.013572
+      "pagerank": 0.012923
     },
     {
       "id": "tx_pharmacist_smr",
@@ -769,9 +813,9 @@
         "triple_whammy_penalty_K016": 7.2
       },
       "in_degree": 0,
-      "out_degree": 6,
-      "total_degree": 6,
-      "pagerank": 0.012054
+      "out_degree": 8,
+      "total_degree": 8,
+      "pagerank": 0.01339
     },
     {
       "id": "tx_home_bp",
@@ -789,7 +833,7 @@
       "in_degree": 0,
       "out_degree": 1,
       "total_degree": 1,
-      "pagerank": 0.003272
+      "pagerank": 0.003065
     },
     {
       "id": "tx_vcse_sp",
@@ -807,7 +851,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.007774
+      "pagerank": 0.007499
     },
     {
       "id": "prim_p08",
@@ -825,7 +869,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.017511
+      "pagerank": 0.016409
     },
     {
       "id": "prim_a01d",
@@ -843,7 +887,7 @@
       "in_degree": 4,
       "out_degree": 2,
       "total_degree": 6,
-      "pagerank": 0.021498
+      "pagerank": 0.019832
     },
     {
       "id": "prim_p09",
@@ -861,7 +905,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.016349
+      "pagerank": 0.015265
     },
     {
       "id": "prim_p13",
@@ -879,7 +923,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.015396
+      "pagerank": 0.014205
     },
     {
       "id": "prim_p20",
@@ -897,7 +941,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.014162
+      "pagerank": 0.013145
     },
     {
       "id": "prim_a01g",
@@ -915,7 +959,7 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "pagerank": 0.022007
+      "pagerank": 0.019791
     },
     {
       "id": "prim_a01h",
@@ -933,7 +977,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.016153
+      "pagerank": 0.014917
     },
     {
       "id": "prim_p22",
@@ -951,7 +995,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.02373
+      "pagerank": 0.021397
     },
     {
       "id": "prim_x03",
@@ -966,10 +1010,10 @@
         "kind": "composite",
         "defining_paper": "McClean, Schwartz, Carter, de Jong (2017)"
       },
-      "in_degree": 3,
+      "in_degree": 5,
       "out_degree": 4,
-      "total_degree": 7,
-      "pagerank": 0.041374
+      "total_degree": 9,
+      "pagerank": 0.042094
     },
     {
       "id": "prim_p04",
@@ -987,7 +1031,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.022517
+      "pagerank": 0.017687
     },
     {
       "id": "era_i",
@@ -1006,7 +1050,7 @@
       "in_degree": 3,
       "out_degree": 1,
       "total_degree": 4,
-      "pagerank": 0.024357
+      "pagerank": 0.022654
     },
     {
       "id": "era_ii",
@@ -1025,7 +1069,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.040552
+      "pagerank": 0.036961
     },
     {
       "id": "era_iii",
@@ -1044,7 +1088,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.043321
+      "pagerank": 0.035916
     },
     {
       "id": "era_iv",
@@ -1061,9 +1105,9 @@
         "governance": "NHS DCB0129 Advisory"
       },
       "in_degree": 5,
-      "out_degree": 0,
-      "total_degree": 5,
-      "pagerank": 0.042757
+      "out_degree": 1,
+      "total_degree": 6,
+      "pagerank": 0.03849
     },
     {
       "id": "plat_nexus_helios",
@@ -1082,7 +1126,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.018741
+      "pagerank": 0.017271
     },
     {
       "id": "plat_haiqu",
@@ -1101,7 +1145,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.014079
+      "pagerank": 0.013133
     },
     {
       "id": "plat_jij_highs",
@@ -1120,7 +1164,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.008872
+      "pagerank": 0.008356
     },
     {
       "id": "plat_hqs_qprotsim",
@@ -1139,7 +1183,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.016123
+      "pagerank": 0.014795
     },
     {
       "id": "plat_multiomics",
@@ -1158,7 +1202,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.009531
+      "pagerank": 0.008674
     },
     {
       "id": "plat_modal_rhyme_hf",
@@ -1177,7 +1221,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.016584
+      "pagerank": 0.014089
     },
     {
       "id": "plat_text2wetlab",
@@ -1196,7 +1240,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.00666
+      "pagerank": 0.006239
     },
     {
       "id": "plat_medicus_discopy_moth",
@@ -1216,7 +1260,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.013376
+      "pagerank": 0.012486
     },
     {
       "id": "plat_typesafe_jev",
@@ -1233,9 +1277,9 @@
         "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
       },
       "in_degree": 0,
-      "out_degree": 9,
-      "total_degree": 9,
-      "pagerank": 0.015326
+      "out_degree": 10,
+      "total_degree": 10,
+      "pagerank": 0.018156
     },
     {
       "id": "plat_pyscf_ag2",
@@ -1254,7 +1298,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.018884
+      "pagerank": 0.017148
     },
     {
       "id": "plat_cyp3a4_gate1",
@@ -1273,7 +1317,28 @@
       "in_degree": 6,
       "out_degree": 0,
       "total_degree": 6,
-      "pagerank": 0.026723
+      "pagerank": 0.023039
+    },
+    {
+      "id": "plat_opencyp_ftqc",
+      "label": "OpenCYP-FTQC v1.0: 8 QM/MM FCIDUMPs + ChEMBL37",
+      "entity_type": "Platform_Receipt",
+      "layer": 7,
+      "curie": "SHA256:b46e2d8309ab",
+      "external_iri": "",
+      "era": "Era IV",
+      "summary": "Open-science HF dataset (socialprescribing/opencyp-ftqc): 8 PySCF 2.15 def2-SVP QM/MM FCIDUMP Hamiltonians (CYP3A4/2D6/2C9 + ACE 1O86 |CC-FCI|=0.00566 mHa), 2.43x\u20136.02x Procrustes Delta-DF, & 12/12 ChEMBL_37 PBPK.",
+      "metrics": {
+        "fcidump_files": 8,
+        "ace_qmmm_err_mha": 0.00566,
+        "pbpk_agreement": "12/12",
+        "hf_dataset": "https://huggingface.co/datasets/socialprescribing/opencyp-ftqc",
+        "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+      },
+      "in_degree": 8,
+      "out_degree": 0,
+      "total_degree": 8,
+      "pagerank": 0.040113
     },
     {
       "id": "haz_h_ltc_01",
@@ -1291,7 +1356,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005147
+      "pagerank": 0.005015
     },
     {
       "id": "haz_h_ltc_02",
@@ -1307,9 +1372,9 @@
         "standard": "DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off)"
       },
       "in_degree": 2,
-      "out_degree": 3,
-      "total_degree": 5,
-      "pagerank": 0.010649
+      "out_degree": 4,
+      "total_degree": 6,
+      "pagerank": 0.014342
     },
     {
       "id": "haz_h_ltc_03",
@@ -1327,7 +1392,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.004481
+      "pagerank": 0.004415
     },
     {
       "id": "haz_h_ltc_04",
@@ -1345,7 +1410,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.016887
+      "pagerank": 0.013075
     },
     {
       "id": "haz_h_ltc_05",
@@ -1363,7 +1428,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005274
+      "pagerank": 0.005135
     },
     {
       "id": "haz_h_ltc_06",
@@ -1381,7 +1446,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005421
+      "pagerank": 0.005335
     }
   ],
   "edges": [
@@ -1920,6 +1985,126 @@
       "rationale": "Zero physical QPU shots, zero wet-lab human specimens, non-autonomous shadow research boundary",
       "weight": 1.25,
       "receipt_sha256": "164d38afa9d04ee04bd8f6499b12f90d32ee828e2569853b657d197246d6655d"
+    },
+    {
+      "source": "ltc_cvd",
+      "target": "mol_pdb_4wnu",
+      "predicate": "METABOLISES_POLYPHARMACY",
+      "rationale": "CYP2D6 clears metoprolol & carvedilol beta-blockers across CVD/HF multimorbidity",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "ltc_af",
+      "target": "mol_pdb_1r9o",
+      "predicate": "METABOLISES_POLYPHARMACY",
+      "rationale": "CYP2C9 clears narrow-therapeutic-index S-warfarin anticoagulation in AF",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "ltc_t2d",
+      "target": "mol_pdb_1r9o",
+      "predicate": "METABOLISES_POLYPHARMACY",
+      "rationale": "CYP2C9 clears glimepiride/glipizide sulfonylureas in T2D",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "tx_pharmacist_smr",
+      "target": "mol_pdb_4wnu",
+      "predicate": "AUDITS_DDI_CLEARANCE_OF",
+      "rationale": "Stage 2 Pharmacist SMR screens CYP2D6 *4/*10 SSRI/quinidine beta-blocker DDIs (ChEMBL289)",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "tx_pharmacist_smr",
+      "target": "mol_pdb_1r9o",
+      "predicate": "AUDITS_DDI_CLEARANCE_OF",
+      "rationale": "Stage 2 Pharmacist SMR screens CYP2C9 *2/*3 fluconazole/amiodarone warfarin DDIs (ChEMBL3397)",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "mol_pdb_4wnu",
+      "target": "prim_x03",
+      "predicate": "BENCHMARKS_HAT_BARRIER_ON",
+      "rationale": "Protein QM/MM CAS(9e,9o) FCIDUMP export & 6.02x Procrustes Delta-DF compression",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "mol_pdb_1r9o",
+      "target": "prim_x03",
+      "predicate": "BENCHMARKS_HAT_BARRIER_ON",
+      "rationale": "Protein QM/MM CAS(9e,9o) FCIDUMP export (12.61 kcal/mol DFT scatter) & 2.43x Delta-DF",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "mol_pdb_5te8",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "ARCHIVED_AS_FCIDUMP_IN",
+      "rationale": "CYP3A4 5TE8 RC & TS_HAT QM/MM CAS(9e,9o) FCIDUMPs (2.56x Procrustes Delta-DF)",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "mol_pdb_3nxu",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "ARCHIVED_AS_FCIDUMP_IN",
+      "rationale": "CYP3A4 3NXU Ritonavir Type-II low-spin QM/MM CAS(9e,9o) FCIDUMP",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "mol_pdb_4wnu",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "ARCHIVED_AS_FCIDUMP_IN",
+      "rationale": "CYP2D6 4WNU Quinidine RC & TS_HAT QM/MM CAS(9e,9o) FCIDUMPs",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "mol_pdb_1r9o",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "ARCHIVED_AS_FCIDUMP_IN",
+      "rationale": "CYP2C9 1R9O Flurbiprofen RC & TS_HAT QM/MM CAS(9e,9o) FCIDUMPs",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "mol_pdb_1o86",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "VALIDATES_CLASSICAL_CONTROL_IN",
+      "rationale": "Closed-shell ACE Zn2+ QM/MM CAS(12e,10o) FCIDUMP (|RCCSD(T)-FCI| = 0.00566 mHa)",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "era_iv",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "BENCHMARKED_BY_OPEN_ARCHIVE",
+      "rationale": "Standardized HF dataset socialprescribing/opencyp-ftqc for FTQC polypharmacy benchmarks",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "haz_h_ltc_02",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "GOVERNS_CLINICAL_RISK_OF",
+      "rationale": "12-regimen CYP3A4/2D6/2C9 PBPK predictions strictly advisory under open H-LTC-02 SMR gate",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
+    },
+    {
+      "source": "plat_typesafe_jev",
+      "target": "plat_opencyp_ftqc",
+      "predicate": "AUDITS_DEMARCATION_OF",
+      "rationale": "Non-commercial open science: 0 physical QPU shots, 0 wet-lab specimens, phi_present=False",
+      "weight": 1.25,
+      "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
     },
     {
       "source": "tx_acei_lisinopril",
@@ -2474,5 +2659,5 @@
       "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
     }
   ],
-  "receipt_sha256": "1ee2e7f5b88f8e1e4e5711f4d0807b0f08dea2d7d8f369b05bf828cd2a7aad66"
+  "receipt_sha256": "c8f94fe1f6fc932484f5eb6ea1a60cdd4a5e81e3aa4248b506c35574f059c481"
 }
