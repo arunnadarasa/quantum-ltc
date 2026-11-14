@@ -7,7 +7,7 @@ sdk: static
 app_file: index.html
 pinned: false
 license: cc-by-4.0
-short_description: 4-Era Quantum Roadmap, CQWM v0.2, OpenCYP-FTQC v1.1 & 71-Node KG
+short_description: 4-Era Quantum-LTC, CQWM v0.2, OpenCYP v1.1 & 71-Node KG
 ---
 
 # Quantum-LTC — Open Research, `CQWM v0.1/v0.2`, `OpenCYP-FTQC v1.1` & Interactive Results Portal
