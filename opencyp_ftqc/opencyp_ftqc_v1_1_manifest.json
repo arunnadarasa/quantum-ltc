@@ -1,0 +1,203 @@
+{
+  "dataset_name": "OpenCYP-FTQC v1.1",
+  "license": "CC-BY-4.0 (Dataset/FCIDUMP/THC) & Apache-2.0 (Code); Non-Commercial Open Science",
+  "total_fcidump_files": 13,
+  "v1_0_fcidump_files": 8,
+  "v1_1_new_fcidump_files": 5,
+  "thc_factors_archive": {
+    "file": "opencyp_ftqc/opencyp_ftqc_v1_1_thc_factors.npz",
+    "sha256": "4d0fff5abc0d6b59467b860ab45d2d77b4582ff84d17d68fd884f7043bf77d6a",
+    "bytes": 162714
+  },
+  "fcidump_catalog": [
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1867.37329751,
+      "uncompressed_bytes": 45677,
+      "gzip_bytes": 14323,
+      "sha256_gzip": "f0a4199bd1c579548ebfe7a555e5ec9764c4fa6cc58235d24d106ee2128c2652",
+      "exact_casci_doublet_ha": -1886.089783,
+      "sc_nevpt2_doublet_ha": -1887.023159
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1870.16311879,
+      "uncompressed_bytes": 45492,
+      "gzip_bytes": 14198,
+      "sha256_gzip": "d0d065aa296a3cbeed341b1012cfb98bcfa5390fa9afd3395518153cb45f42c8",
+      "exact_casci_doublet_ha": -1886.046136,
+      "sc_nevpt2_doublet_ha": -1886.977994
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_3NXU_RIT_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1801.30021221,
+      "uncompressed_bytes": 45834,
+      "gzip_bytes": 14281,
+      "sha256_gzip": "9c59075f5f2c9970db932d9310ce2030f870bfc646b91965dfcbdab6ad6276d6",
+      "exact_casci_low_spin_ha": -1827.244163,
+      "sc_nevpt2_low_spin_ha": -1828.178518
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1871.37058915,
+      "uncompressed_bytes": 45395,
+      "gzip_bytes": 14149,
+      "sha256_gzip": "9e4e3caf4c3f0f67fe5e85de48aba03b8153de7835a8a2bdc035915e2fb03097",
+      "exact_casci_doublet_ha": -1886.155129,
+      "sc_nevpt2_doublet_ha": -1887.064961
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1871.12655634,
+      "uncompressed_bytes": 45269,
+      "gzip_bytes": 14097,
+      "sha256_gzip": "3187f2222bb16239ecc17cdb5327bc9f2cfbae807e8aad6aa439ca86af1f7b94",
+      "exact_casci_doublet_ha": -1886.049468,
+      "sc_nevpt2_doublet_ha": -1886.982554
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_RC_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1868.09851905,
+      "uncompressed_bytes": 45583,
+      "gzip_bytes": 14221,
+      "sha256_gzip": "57c09d5f28a0822ff23e73d7bde81d9ab8e9cda62c724406f939021d339151c1",
+      "exact_casci_doublet_ha": -1886.113577,
+      "sc_nevpt2_doublet_ha": -1887.069166
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "norb": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1870.79262475,
+      "uncompressed_bytes": 45323,
+      "gzip_bytes": 14076,
+      "sha256_gzip": "b37203e84a1b658c814c47bde728e2bb406e243980cc5bca3c7855cd74f7d11e",
+      "exact_casci_doublet_ha": -1886.053825,
+      "sc_nevpt2_doublet_ha": -1886.986141
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/ACE_1O86_LPR_Zn2_QMMM_CAS12e10o_def2SVP.fcidump.gz",
+      "norb": 10,
+      "nelec_alpha_beta": [
+        6,
+        6
+      ],
+      "ms2": 0,
+      "ecore_ha": -2012.43484977,
+      "uncompressed_bytes": 67526,
+      "gzip_bytes": 20671,
+      "sha256_gzip": "5b1fdcede7e4d65fd7e36a705a65304698caa9e493e43d587b94dc6d38e724e4",
+      "exact_fci_ha": -2040.58738317,
+      "rccsdt_ha": -2040.58738882,
+      "abs_rccsdt_minus_fci_mha": 0.00566
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_Resting_OH2_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "sha256": "6a2e70ab1382d860c903c920b99e08c7d0f63884bf81d62208c54b9f5d46e46b",
+      "gzip_bytes": 14301,
+      "n_spatial_orbitals": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1821.754818,
+      "exact_fci_doublet_ha": -1846.96399
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_CLR_MIC_QMMM_CAS10e10o_def2SVP.fcidump.gz",
+      "sha256": "86768eda7d40fb7f3c12ab97bdf50c8d814f0c95a06edcd8a7a222463adf120c",
+      "gzip_bytes": 20692,
+      "n_spatial_orbitals": 10,
+      "nelec_alpha_beta": [
+        5,
+        5
+      ],
+      "ms2": 0,
+      "ecore_ha": -1915.047208,
+      "exact_fci_singlet_ha": -1940.138078,
+      "rccsdt_singlet_ha": -1940.130929,
+      "abs_rccsdt_minus_fci_mha": 7.1487,
+      "t1_diagnostic": 0.1239
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_ITR_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "sha256": "ba87598bf957c8b35084e21ac4745e83360419e909ee18ee238d02ad13031af6",
+      "gzip_bytes": 14418,
+      "n_spatial_orbitals": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "ms2": 1,
+      "ecore_ha": -1998.222072,
+      "exact_fci_low_spin_ha": -2011.872686
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_RC_QMMM_CAS11e11o_def2SVP.fcidump.gz",
+      "sha256": "545c26a0be57ab8585d2e61c6c62b68c07ebeb970bb5889e0886377e964b6885",
+      "gzip_bytes": 29713,
+      "n_spatial_orbitals": 11,
+      "nelec_alpha_beta": [
+        6,
+        5
+      ],
+      "ms2": 1,
+      "ecore_ha": -1863.931209,
+      "exact_fci_doublet_ha": -1886.04337
+    },
+    {
+      "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS11e11o_def2SVP.fcidump.gz",
+      "sha256": "1d089cf4e288e629395c261361182ba66a813871646c0024e9982837597e6fd9",
+      "gzip_bytes": 29557,
+      "n_spatial_orbitals": 11,
+      "nelec_alpha_beta": [
+        6,
+        5
+      ],
+      "ms2": 1,
+      "ecore_ha": -1864.173727,
+      "exact_fci_doublet_ha": -1885.98265
+    }
+  ]
+}

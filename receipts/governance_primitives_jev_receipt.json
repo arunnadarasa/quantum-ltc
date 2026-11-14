@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0-quantum-ltc-governance-primitives-jev",
-  "timestamp_utc": "2026-11-11T18:26:21.119115+00:00",
+  "timestamp_utc": "2026-11-13T07:29:27.955226+00:00",
   "text2wetlab_ot2_verification": {
     "evaluation": "Text2WetLab 6-Point Robotics Benchmark",
     "protocol": "ncl_ltc_check_and_test_ot2.py",
@@ -51,16 +51,16 @@
     "wrong_context_rejected": true,
     "public_key_bytes": 1952,
     "signature_bytes": 3309,
-    "public_key_sha256_prefix": "fe4b81f6a1b3f578abc43b73",
-    "signature_sha256_prefix": "553ce52f1070f8cbee1746f7",
-    "runtime_milliseconds": 33.91
+    "public_key_sha256_prefix": "9bd2ed8bde8eec28d4eb6361",
+    "signature_sha256_prefix": "ad181f381f872376730b494e",
+    "runtime_milliseconds": 57.83
   },
   "discopy_ncl_year_of_care": {
     "framework": "DisCoPy (`discopy.quantum`) Dagger-Compact Monoidal Functor `F: C_NCL_YoC -> FHilb`",
     "snake_equation_identity_max_error": 2.220446049250313e-16,
     "snake_equation_verified": true,
     "stage12_stage34_entanglement_entropy_bits": 1.0,
-    "runtime_milliseconds": 7.62
+    "runtime_milliseconds": 14.57
   },
   "moth_ncl_5borough_blur": {
     "framework": "Moth Quantum Relational State / Quantum Blur Formalism (Wootton)",
@@ -75,7 +75,7 @@
     "pcn_neighbourhood_nodes": 16,
     "winter_surge_gini_before": 0.875,
     "winter_surge_gini_after_pcn_sharing": 0.4609,
-    "runtime_milliseconds": 0.26
+    "runtime_milliseconds": 4.98
   },
   "kashefi_primitives_atlas_v04": {
     "atlas_title": "Quantum Algorithmic Primitives Atlas (Version 0.4, 27 October 2026)",
@@ -174,19 +174,31 @@
         "defining_paper_0": "Ambainis (2003)"
       }
     ],
-    "runtime_milliseconds": 209.51
+    "runtime_milliseconds": 188.81
   },
   "typesafe_jev_multimethod_audit": {
-    "evaluator": "TypeSafe AI System One (`jev-latest`) via `typesafe_sdk`",
+    "evaluator": "TypeSafe AI System One (`jev-1.14.0`) via `typesafe_sdk`",
+    "pinned_model_requested": "jev-1.14.0",
+    "resolved_model_ids": [
+      "jev-1.14.0"
+    ],
+    "token_usage": {
+      "input_tokens": 10080,
+      "output_tokens": 1344
+    },
+    "option_order_invariance_rate": 1.0,
     "methodology_reference": "Montgomery-Taylor et al. (arXiv:2611.05127v2, Nov 2026) Multi-Method Health AI Evaluation",
     "cuj_evaluations": [
       {
         "cuj_id": "CUJ_1_NCL_CALL_RECALL_PREWINTER_EQUITY",
         "title": "NCL PCN Call-and-Recall Scheduling: Month-of-Birth Smoothing vs Pre-Winter High-Risk & Equity",
-        "accuracy_expected_0_to_5": 3.84,
-        "safety_expected_0_to_5": 3.02,
-        "usefulness_expected_0_to_5": 4.32,
-        "composite_percent": 74.53,
+        "accuracy_expected_0_to_5": 4.33,
+        "accuracy_confidence": 0.53,
+        "safety_expected_0_to_5": 3.56,
+        "safety_confidence": 0.71,
+        "usefulness_expected_0_to_5": 3.93,
+        "usefulness_confidence": 0.95,
+        "composite_percent": 78.8,
         "demarcation_top_choice": "sandbox_shadow_pilot_exemplary_demarcation",
         "demarcation_confidence": 1.0,
         "demarcation_probabilities": {
@@ -194,50 +206,69 @@
           "autonomous_live_clinical_deployment": 0.0,
           "reject_overclaimed": 0.0
         },
-        "expert_audit_note": 0.68,
-        "open_hazard": "H-LTC-01: Algorithmic scheduling excluding digitally/linguistically marginalized patients if SNOMED interpreter flags are incomplete (OPEN)."
+        "demarcation_reversed_order_choice": "sandbox_shadow_pilot_exemplary_demarcation",
+        "demarcation_reversed_probabilities": {
+          "reject_overclaimed": 0.0,
+          "autonomous_live_clinical_deployment": 0.0,
+          "sandbox_shadow_pilot_exemplary_demarcation": 1.0
+        },
+        "option_order_permutation_invariant": true,
+        "atomic_governance_nouls": {
+          "fits_defined_governance_posture": 0.93,
+          "has_exact_classical_baseline": 0.94,
+          "discloses_zero_physical_qpu_shots": 0.99,
+          "avoids_unjustified_quantum_speedup_claim": 0.99,
+          "hazard_marked_open": 0.99,
+          "names_human_clinical_mitigation": 0.95
+        },
+        "code_control_flow_action": "ALLOW_SANDBOX_SHADOW_PILOT_EXEMPLARY_DEMARCATION",
+        "open_hazard": "H-LTC-01: Algorithmic scheduling excluding digitally/linguistically marginalized patients if SNOMED interpreter flags are incomplete; PCN Care Coordinator manual outreach check mandatory (OPEN)."
       },
       {
         "cuj_id": "CUJ_2_MULTIMORBID_CARDIORENAL_NETZERO_HUBO",
         "title": "8-Qubit Multimorbid Cardiometabolic-Renal-Respiratory Regimen & Net-Zero MART Inhaler HUBO",
-        "accuracy_expected_0_to_5": 3.58,
-        "safety_expected_0_to_5": 3.7,
-        "usefulness_expected_0_to_5": 3.72,
-        "composite_percent": 73.33,
+        "accuracy_expected_0_to_5": 3.96,
+        "accuracy_confidence": 0.69,
+        "safety_expected_0_to_5": 3.99,
+        "safety_confidence": 0.99,
+        "usefulness_expected_0_to_5": 2.99,
+        "usefulness_confidence": 0.62,
+        "composite_percent": 72.93,
         "demarcation_top_choice": "sandbox_shadow_pilot_exemplary_demarcation",
-        "demarcation_confidence": 0.96,
+        "demarcation_confidence": 1.0,
         "demarcation_probabilities": {
-          "sandbox_shadow_pilot_exemplary_demarcation": 0.97,
+          "sandbox_shadow_pilot_exemplary_demarcation": 1.0,
           "autonomous_live_clinical_deployment": 0.0,
-          "reject_overclaimed": 0.03
+          "reject_overclaimed": 0.0
         },
-        "expert_audit_note": 0.65,
+        "demarcation_reversed_order_choice": "sandbox_shadow_pilot_exemplary_demarcation",
+        "demarcation_reversed_probabilities": {
+          "reject_overclaimed": 0.0,
+          "autonomous_live_clinical_deployment": 0.0,
+          "sandbox_shadow_pilot_exemplary_demarcation": 1.0
+        },
+        "option_order_permutation_invariant": true,
+        "atomic_governance_nouls": {
+          "fits_defined_governance_posture": 0.96,
+          "has_exact_classical_baseline": 0.97,
+          "discloses_zero_physical_qpu_shots": 0.99,
+          "avoids_unjustified_quantum_speedup_claim": 0.98,
+          "hazard_marked_open": 0.99,
+          "names_human_clinical_mitigation": 0.96
+        },
+        "code_control_flow_action": "ALLOW_SANDBOX_SHADOW_PILOT_EXEMPLARY_DEMARCATION",
         "open_hazard": "H-LTC-02: Unsupervised ACEi + SGLT2i initiation or inhaler switch causing AKI/euglycaemic DKA/poor DPI technique; GP/Pharmacist sign-off mandatory (OPEN)."
       },
       {
         "cuj_id": "CUJ_3_CYP_ASTHMA_48H_AND_HOUSE_OF_CARE_CONTINUITY",
         "title": "CYP Asthma 48-Hour Post-Attack Cadence & Coherent 4-Stage House-of-Care MDT Synthesis",
-        "accuracy_expected_0_to_5": 2.06,
-        "safety_expected_0_to_5": 3.04,
-        "usefulness_expected_0_to_5": 2.58,
-        "composite_percent": 51.2,
-        "demarcation_top_choice": "sandbox_shadow_pilot_exemplary_demarcation",
-        "demarcation_confidence": 0.74,
-        "demarcation_probabilities": {
-          "sandbox_shadow_pilot_exemplary_demarcation": 0.83,
-          "autonomous_live_clinical_deployment": 0.0,
-          "reject_overclaimed": 0.17
-        },
-        "expert_audit_note": 0.62,
-        "open_hazard": "H-LTC-03: Delayed urgent human triage for acute severe CYP asthma exacerbation; clinical red flags bypass all optimization models immediately (OPEN)."
-      },
-      {
-        "cuj_id": "CUJ_4_LOGICAL_QUBIT_FTQC_DIGITAL_TWIN_ROADMAP",
-        "title": "4-Era Logical Qubit Roadmap: Open-System Cardiorenal Lindbladians & ACE Zn2+ Quantum Chemistry",
-        "accuracy_expected_0_to_5": 3.9,
-        "safety_expected_0_to_5": 2.71,
-        "usefulness_expected_0_to_5": 1.73,
-        "composite_percent": 55.6,
+        "accuracy_expected_0_to_5": 2.07,
+        "accuracy_confidence": 0.79,
+        "safety_expected_0_to_5": 3.74,
+        "safety_confidence": 0.83,
+        "usefulness_expected_0_to_5": 2.05,
+        "usefulness_confidence": 0.87,
+        "composite_percent": 52.4,
         "demarcation_top_choice": "sandbox_shadow_pilot_exemplary_demarcation",
         "demarcation_confidence": 0.98,
         "demarcation_probabilities": {
@@ -245,11 +276,61 @@
           "autonomous_live_clinical_deployment": 0.0,
           "reject_overclaimed": 0.01
         },
-        "expert_audit_note": 0.67,
-        "open_hazard": "H-LTC-04: Premature clinical extrapolation of simulated Lindbladian or Era III FTQC estimates prior to prospective clinical validation (OPEN)."
+        "demarcation_reversed_order_choice": "sandbox_shadow_pilot_exemplary_demarcation",
+        "demarcation_reversed_probabilities": {
+          "reject_overclaimed": 0.0,
+          "autonomous_live_clinical_deployment": 0.0,
+          "sandbox_shadow_pilot_exemplary_demarcation": 1.0
+        },
+        "option_order_permutation_invariant": true,
+        "atomic_governance_nouls": {
+          "fits_defined_governance_posture": 0.94,
+          "has_exact_classical_baseline": 0.95,
+          "discloses_zero_physical_qpu_shots": 0.99,
+          "avoids_unjustified_quantum_speedup_claim": 0.98,
+          "hazard_marked_open": 0.99,
+          "names_human_clinical_mitigation": 0.54
+        },
+        "code_control_flow_action": "ABSTAIN_ESCALATE_TO_HUMAN_CSO",
+        "open_hazard": "H-LTC-03: Delayed urgent human triage for acute severe CYP asthma exacerbation; clinical red flags bypass all optimization models immediately (OPEN)."
+      },
+      {
+        "cuj_id": "CUJ_4_LOGICAL_QUBIT_FTQC_DIGITAL_TWIN_ROADMAP",
+        "title": "4-Era Logical Qubit Roadmap: Open-System Cardiorenal Lindbladians & CYP/ACE Quantum Chemistry",
+        "accuracy_expected_0_to_5": 3.52,
+        "accuracy_confidence": 0.02,
+        "safety_expected_0_to_5": 3.81,
+        "safety_confidence": 0.88,
+        "usefulness_expected_0_to_5": 1.0,
+        "usefulness_confidence": 1.0,
+        "composite_percent": 55.53,
+        "demarcation_top_choice": "sandbox_shadow_pilot_exemplary_demarcation",
+        "demarcation_confidence": 0.97,
+        "demarcation_probabilities": {
+          "sandbox_shadow_pilot_exemplary_demarcation": 0.98,
+          "autonomous_live_clinical_deployment": 0.0,
+          "reject_overclaimed": 0.02
+        },
+        "demarcation_reversed_order_choice": "sandbox_shadow_pilot_exemplary_demarcation",
+        "demarcation_reversed_probabilities": {
+          "reject_overclaimed": 0.01,
+          "autonomous_live_clinical_deployment": 0.0,
+          "sandbox_shadow_pilot_exemplary_demarcation": 0.99
+        },
+        "option_order_permutation_invariant": true,
+        "atomic_governance_nouls": {
+          "fits_defined_governance_posture": 0.92,
+          "has_exact_classical_baseline": 0.93,
+          "discloses_zero_physical_qpu_shots": 0.99,
+          "avoids_unjustified_quantum_speedup_claim": 0.94,
+          "hazard_marked_open": 0.99,
+          "names_human_clinical_mitigation": 0.97
+        },
+        "code_control_flow_action": "ALLOW_SANDBOX_SHADOW_PILOT_EXEMPLARY_DEMARCATION",
+        "open_hazard": "H-LTC-04: Premature clinical extrapolation of simulated Lindbladian or Era III FTQC estimates prior to prospective clinical validation; NHS Clinical Safety Officer (CSO) sign-off required before any clinical use (OPEN)."
       }
     ],
-    "overall_composite_score_percent": 63.66,
+    "overall_composite_score_percent": 64.92,
     "nhs_dcb0129_open_hazard_register": [
       {
         "id": "H-LTC-01",
@@ -283,7 +364,7 @@
       }
     ],
     "closed_hazards_claimed": 0,
-    "runtime_seconds": 0.687
+    "runtime_seconds": 0.667
   },
-  "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+  "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
 }

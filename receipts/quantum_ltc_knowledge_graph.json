@@ -6,7 +6,7 @@
     "UniProtKB, GENCODE v46 & Google DeepMind AlphaGenome 2 (v2.dna_client + Atlas AVI)",
     "RCSB Protein Data Bank (PDB 1O86, 1TQN, 5TE8, 3NXU, 4WNU, 1R9O & 1N9V \u2014 CC0 1.0)",
     "EMBL-EBI ChEMBL Database Release ChEMBL_37 (CHEMBL340 CYP3A4, CHEMBL289 CYP2D6, CHEMBL3397 CYP2C9 \u2014 CC BY-SA 3.0)",
-    "OpenCYP-FTQC v1.0 Public QM/MM FCIDUMP Archive (https://huggingface.co/datasets/socialprescribing/opencyp-ftqc)",
+    "OpenCYP-FTQC v1.1 Public QM/MM FCIDUMP & Empirical THC Archive (https://huggingface.co/datasets/socialprescribing/opencyp-ftqc)",
     "SNOMED CT UK Edition (315594003 Interpreter needed)",
     "Kashefi Quantum Algorithmic Primitives Atlas v0.4",
     "NHS England DCB0129 (Manufacture) & DCB0160 (Deployment) Clinical Risk Management Standards"
@@ -20,12 +20,12 @@
     "closed_hazards_claimed": 0
   },
   "graph_statistics": {
-    "total_nodes": 67,
-    "total_edges": 151,
+    "total_nodes": 69,
+    "total_edges": 172,
     "entity_types_count": 8,
-    "predicate_types_count": 61,
+    "predicate_types_count": 68,
     "connected_components": 1,
-    "mean_total_degree": 4.507,
+    "mean_total_degree": 4.986,
     "nodes_by_entity_type": {
       "NCL_LTC_Condition": 9,
       "HouseOfCare_Stage": 5,
@@ -33,7 +33,7 @@
       "Intervention": 6,
       "Quantum_Primitive": 10,
       "Logical_Era": 4,
-      "Platform_Receipt": 12,
+      "Platform_Receipt": 14,
       "DCB0129_Hazard": 6
     },
     "edges_by_predicate": {
@@ -61,17 +61,24 @@
       "CLEARED_FIRST_PASS_BY": 1,
       "DEMARCATES_FTQC_WALL": 1,
       "SCALES_TO_141L_DF_QPE": 1,
-      "EXECUTED_AND_SEALED_ON": 13,
+      "EXECUTED_AND_SEALED_ON": 14,
       "SCORED_AT_SINGLE_CELL_BY": 2,
       "BENCHMARKS_HAT_BARRIER_ON": 3,
       "SCALES_TO_144L_THC_QPE": 1,
       "ANCHORS_DDI_INACTIVATION_IN": 1,
       "PARAMETERISES_DDI_AUCR_VIA": 1,
-      "GOVERNS_CLINICAL_RISK_OF": 10,
+      "GOVERNS_CLINICAL_RISK_OF": 12,
       "AUDITS_DEMARCATION_OF": 2,
       "ARCHIVED_AS_FCIDUMP_IN": 4,
-      "VALIDATES_CLASSICAL_CONTROL_IN": 1,
-      "BENCHMARKED_BY_OPEN_ARCHIVE": 1,
+      "VALIDATES_CLASSICAL_CONTROL_IN": 2,
+      "BENCHMARKED_BY_OPEN_ARCHIVE": 2,
+      "ROUTED_BY_JEV_CONTROL_PLANE": 5,
+      "REJECTED_FOR_QPU_DISPATCH_BY": 2,
+      "ABSTAINED_UNDER_ILL_POSED_BY": 1,
+      "GATED_AND_ROUTED_BY": 1,
+      "POWERS_INLINE_ROUTING_OF": 1,
+      "FACTORED_BY_EMPIRICAL_THC_IN": 5,
+      "DISPATCHES_6_FTQC_LTCS_TO": 1,
       "COORDINATES_CATALYTIC_ZN2": 1,
       "INHIBITS_TARGET": 2,
       "SYNERGISES_METABOLICALLY": 1,
@@ -101,74 +108,74 @@
     },
     "top_10_pagerank_hubs": [
       {
+        "id": "plat_opencyp_v1_1_thc",
+        "label": "OpenCYP-FTQC v1.1: 13 FCIDUMPs + Empirical THC",
+        "entity_type": "Platform_Receipt",
+        "pagerank": 0.042751,
+        "total_degree": 10
+      },
+      {
         "id": "prim_x03",
         "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
         "entity_type": "Quantum_Primitive",
-        "pagerank": 0.042094,
-        "total_degree": 9
-      },
-      {
-        "id": "plat_opencyp_ftqc",
-        "label": "OpenCYP-FTQC v1.0: 8 QM/MM FCIDUMPs + ChEMBL37",
-        "entity_type": "Platform_Receipt",
-        "pagerank": 0.040113,
-        "total_degree": 8
+        "pagerank": 0.038746,
+        "total_degree": 10
       },
       {
         "id": "era_iv",
         "label": "Era IV: Asymptotic ICS-Scale FTQC (100\u20131,000+L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.03849,
-        "total_degree": 6
+        "pagerank": 0.035944,
+        "total_degree": 7
       },
       {
         "id": "era_ii",
         "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.036961,
+        "pagerank": 0.034052,
         "total_degree": 6
+      },
+      {
+        "id": "plat_opencyp_ftqc",
+        "label": "OpenCYP-FTQC v1.0: 8 QM/MM FCIDUMPs + ChEMBL37",
+        "entity_type": "Platform_Receipt",
+        "pagerank": 0.031553,
+        "total_degree": 8
       },
       {
         "id": "era_iii",
         "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.035916,
+        "pagerank": 0.030756,
         "total_degree": 5
       },
       {
         "id": "stage_1_check_test",
         "label": "Stage 1: Check & Test + Interpreter Access",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.028738,
+        "pagerank": 0.025751,
         "total_degree": 14
+      },
+      {
+        "id": "plat_jev_10ltc_cqa",
+        "label": "Jev 1.14 Control Plane & 10-LTC CQA Portfolio",
+        "entity_type": "Platform_Receipt",
+        "pagerank": 0.023511,
+        "total_degree": 12
       },
       {
         "id": "stage_3_pcsp",
         "label": "Stage 3: PCSP Coaching, VCSE & Net-Zero Switch",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.023304,
+        "pagerank": 0.021215,
         "total_degree": 7
-      },
-      {
-        "id": "plat_cyp3a4_gate1",
-        "label": "Gate 1: def2-SVP HAT + THC-QPE + ChEMBL340",
-        "entity_type": "Platform_Receipt",
-        "pagerank": 0.023039,
-        "total_degree": 6
       },
       {
         "id": "era_i",
         "label": "Era I: Classical-Exact & NISQ (0L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.022654,
+        "pagerank": 0.021116,
         "total_degree": 4
-      },
-      {
-        "id": "stage_call_recall",
-        "label": "UCLP Case-Finding & Pre-Winter Call/Recall",
-        "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.021821,
-        "total_degree": 12
       }
     ]
   },
@@ -208,14 +215,13 @@
     },
     {
       "query_title": "NAFLD/MASLD -> Statutory TypeSafe Jev & DCB0129 Governance",
-      "hops": 3,
+      "hops": 2,
       "node_ids": [
         "ltc_masld",
-        "stage_call_recall",
-        "haz_h_ltc_01",
+        "plat_jev_10ltc_cqa",
         "plat_typesafe_jev"
       ],
-      "readable_chain": "NAFLD / MASLD -> UCLP Case-Finding & Pre-Winter Call/Recall -> H-LTC-01: Incomplete SNOMED 'Interpreter nee (OPEN) -> TypeSafe AI System One (jev-latest / Jev 1.14)"
+      "readable_chain": "NAFLD / MASLD -> Jev 1.14 Control Plane & 10-LTC CQA Portfolio -> TypeSafe AI System One (jev-latest / Jev 1.14)"
     }
   ],
   "nodes": [
@@ -233,9 +239,9 @@
         "default_tier": "High / Complex"
       },
       "in_degree": 0,
-      "out_degree": 7,
-      "total_degree": 7,
-      "pagerank": 0.010245
+      "out_degree": 8,
+      "total_degree": 8,
+      "pagerank": 0.01071
     },
     {
       "id": "ltc_af",
@@ -251,9 +257,9 @@
         "default_tier": "Moderate / High"
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.007982
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.008642
     },
     {
       "id": "ltc_htn",
@@ -269,9 +275,9 @@
         "target_bp_home": "135/85 mmHg"
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.008564
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.009336
     },
     {
       "id": "ltc_t2d",
@@ -286,9 +292,9 @@
         "biomarkers": "HbA1c, eGFR, uACR"
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.009489
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.010044
     },
     {
       "id": "ltc_t1d",
@@ -303,9 +309,9 @@
         "mandated_stratum": "High Risk + Complex"
       },
       "in_degree": 0,
-      "out_degree": 4,
-      "total_degree": 4,
-      "pagerank": 0.00695
+      "out_degree": 5,
+      "total_degree": 5,
+      "pagerank": 0.007847
     },
     {
       "id": "ltc_ckd",
@@ -321,9 +327,9 @@
         "green_plan_priority": "Prevent dialysis"
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.008212
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.008989
     },
     {
       "id": "ltc_masld",
@@ -339,9 +345,9 @@
         "genetic_modifier": "PNPLA3"
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.011436
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.011864
     },
     {
       "id": "ltc_copd",
@@ -356,9 +362,9 @@
         "seasonality": "Pre-winter Q2/Q3 priority"
       },
       "in_degree": 0,
-      "out_degree": 5,
-      "total_degree": 5,
-      "pagerank": 0.010351
+      "out_degree": 6,
+      "total_degree": 6,
+      "pagerank": 0.01085
     },
     {
       "id": "ltc_asthma",
@@ -374,9 +380,9 @@
         "followup_sla": "6 weeks"
       },
       "in_degree": 1,
-      "out_degree": 6,
-      "total_degree": 7,
-      "pagerank": 0.014435
+      "out_degree": 7,
+      "total_degree": 8,
+      "pagerank": 0.013942
     },
     {
       "id": "stage_call_recall",
@@ -394,7 +400,7 @@
       "in_degree": 10,
       "out_degree": 2,
       "total_degree": 12,
-      "pagerank": 0.021821
+      "pagerank": 0.019382
     },
     {
       "id": "stage_1_check_test",
@@ -412,7 +418,7 @@
       "in_degree": 11,
       "out_degree": 3,
       "total_degree": 14,
-      "pagerank": 0.028738
+      "pagerank": 0.025751
     },
     {
       "id": "stage_2_mdt_review",
@@ -430,7 +436,7 @@
       "in_degree": 5,
       "out_degree": 3,
       "total_degree": 8,
-      "pagerank": 0.017136
+      "pagerank": 0.015586
     },
     {
       "id": "stage_3_pcsp",
@@ -448,7 +454,7 @@
       "in_degree": 5,
       "out_degree": 2,
       "total_degree": 7,
-      "pagerank": 0.023304
+      "pagerank": 0.021215
     },
     {
       "id": "stage_4_continuity",
@@ -466,7 +472,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.016637
+      "pagerank": 0.015204
     },
     {
       "id": "mol_ace",
@@ -484,7 +490,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.012773
+      "pagerank": 0.011572
     },
     {
       "id": "mol_pdb_1o86",
@@ -501,9 +507,9 @@
         "era_iii_cas": "CAS(36e,26o) -> 52 data + 12 ancilla = 64L"
       },
       "in_degree": 2,
-      "out_degree": 2,
-      "total_degree": 4,
-      "pagerank": 0.015087
+      "out_degree": 3,
+      "total_degree": 5,
+      "pagerank": 0.016708
     },
     {
       "id": "mol_slc5a2",
@@ -521,7 +527,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.011786
+      "pagerank": 0.010705
     },
     {
       "id": "mol_glp1r",
@@ -539,7 +545,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.008605
+      "pagerank": 0.007759
     },
     {
       "id": "mol_adrb2",
@@ -556,7 +562,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.008024
+      "pagerank": 0.007157
     },
     {
       "id": "mol_il6",
@@ -574,7 +580,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.011058
+      "pagerank": 0.009975
     },
     {
       "id": "mol_angii_1n9v",
@@ -592,7 +598,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.006851
+      "pagerank": 0.006369
     },
     {
       "id": "mol_pnpla3",
@@ -609,7 +615,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.004256
+      "pagerank": 0.003867
     },
     {
       "id": "mol_cyp3a4",
@@ -627,7 +633,7 @@
       "in_degree": 5,
       "out_degree": 4,
       "total_degree": 9,
-      "pagerank": 0.019865
+      "pagerank": 0.017217
     },
     {
       "id": "mol_pdb_1tqn",
@@ -644,9 +650,9 @@
         "era_iv_58o_logical": "141L"
       },
       "in_degree": 1,
-      "out_degree": 2,
-      "total_degree": 3,
-      "pagerank": 0.01122
+      "out_degree": 3,
+      "total_degree": 4,
+      "pagerank": 0.012655
     },
     {
       "id": "mol_pdb_5te8",
@@ -663,9 +669,9 @@
         "fe_sg_A": 2.424
       },
       "in_degree": 1,
-      "out_degree": 4,
-      "total_degree": 5,
-      "pagerank": 0.019121
+      "out_degree": 5,
+      "total_degree": 6,
+      "pagerank": 0.019005
     },
     {
       "id": "mol_pdb_3nxu",
@@ -682,9 +688,9 @@
         "chembl340_ki_nM": 100.0
       },
       "in_degree": 1,
-      "out_degree": 2,
-      "total_degree": 3,
-      "pagerank": 0.012824
+      "out_degree": 3,
+      "total_degree": 4,
+      "pagerank": 0.014524
     },
     {
       "id": "mol_pdb_4wnu",
@@ -702,9 +708,9 @@
         "delta_df_compression": "6.02x"
       },
       "in_degree": 2,
-      "out_degree": 2,
-      "total_degree": 4,
-      "pagerank": 0.011551
+      "out_degree": 3,
+      "total_degree": 5,
+      "pagerank": 0.013429
     },
     {
       "id": "mol_pdb_1r9o",
@@ -722,9 +728,9 @@
         "dft_spread_kcal": 12.61
       },
       "in_degree": 3,
-      "out_degree": 2,
-      "total_degree": 5,
-      "pagerank": 0.013569
+      "out_degree": 3,
+      "total_degree": 6,
+      "pagerank": 0.015137
     },
     {
       "id": "mol_muc5b",
@@ -743,7 +749,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.00909
+      "pagerank": 0.008014
     },
     {
       "id": "tx_acei_lisinopril",
@@ -761,7 +767,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.010819
+      "pagerank": 0.009924
     },
     {
       "id": "tx_sglt2i",
@@ -779,7 +785,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.011743
+      "pagerank": 0.010774
     },
     {
       "id": "tx_mart_dpi",
@@ -797,7 +803,7 @@
       "in_degree": 1,
       "out_degree": 5,
       "total_degree": 6,
-      "pagerank": 0.012923
+      "pagerank": 0.011807
     },
     {
       "id": "tx_pharmacist_smr",
@@ -815,7 +821,7 @@
       "in_degree": 0,
       "out_degree": 8,
       "total_degree": 8,
-      "pagerank": 0.01339
+      "pagerank": 0.011892
     },
     {
       "id": "tx_home_bp",
@@ -833,7 +839,7 @@
       "in_degree": 0,
       "out_degree": 1,
       "total_degree": 1,
-      "pagerank": 0.003065
+      "pagerank": 0.002932
     },
     {
       "id": "tx_vcse_sp",
@@ -851,7 +857,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.007499
+      "pagerank": 0.007001
     },
     {
       "id": "prim_p08",
@@ -869,7 +875,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.016409
+      "pagerank": 0.015275
     },
     {
       "id": "prim_a01d",
@@ -887,7 +893,7 @@
       "in_degree": 4,
       "out_degree": 2,
       "total_degree": 6,
-      "pagerank": 0.019832
+      "pagerank": 0.018413
     },
     {
       "id": "prim_p09",
@@ -905,7 +911,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.015265
+      "pagerank": 0.01418
     },
     {
       "id": "prim_p13",
@@ -923,7 +929,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.014205
+      "pagerank": 0.013197
     },
     {
       "id": "prim_p20",
@@ -941,7 +947,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.013145
+      "pagerank": 0.012043
     },
     {
       "id": "prim_a01g",
@@ -959,7 +965,7 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "pagerank": 0.019791
+      "pagerank": 0.018225
     },
     {
       "id": "prim_a01h",
@@ -977,7 +983,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.014917
+      "pagerank": 0.013915
     },
     {
       "id": "prim_p22",
@@ -995,7 +1001,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.021397
+      "pagerank": 0.019451
     },
     {
       "id": "prim_x03",
@@ -1011,9 +1017,9 @@
         "defining_paper": "McClean, Schwartz, Carter, de Jong (2017)"
       },
       "in_degree": 5,
-      "out_degree": 4,
-      "total_degree": 9,
-      "pagerank": 0.042094
+      "out_degree": 5,
+      "total_degree": 10,
+      "pagerank": 0.038746
     },
     {
       "id": "prim_p04",
@@ -1031,7 +1037,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.017687
+      "pagerank": 0.015274
     },
     {
       "id": "era_i",
@@ -1050,7 +1056,7 @@
       "in_degree": 3,
       "out_degree": 1,
       "total_degree": 4,
-      "pagerank": 0.022654
+      "pagerank": 0.021116
     },
     {
       "id": "era_ii",
@@ -1069,7 +1075,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.036961
+      "pagerank": 0.034052
     },
     {
       "id": "era_iii",
@@ -1088,7 +1094,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.035916
+      "pagerank": 0.030756
     },
     {
       "id": "era_iv",
@@ -1105,9 +1111,9 @@
         "governance": "NHS DCB0129 Advisory"
       },
       "in_degree": 5,
-      "out_degree": 1,
-      "total_degree": 6,
-      "pagerank": 0.03849
+      "out_degree": 2,
+      "total_degree": 7,
+      "pagerank": 0.035944
     },
     {
       "id": "plat_nexus_helios",
@@ -1126,7 +1132,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.017271
+      "pagerank": 0.016037
     },
     {
       "id": "plat_haiqu",
@@ -1145,7 +1151,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.013133
+      "pagerank": 0.012291
     },
     {
       "id": "plat_jij_highs",
@@ -1164,7 +1170,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.008356
+      "pagerank": 0.007868
     },
     {
       "id": "plat_hqs_qprotsim",
@@ -1183,7 +1189,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.014795
+      "pagerank": 0.01372
     },
     {
       "id": "plat_multiomics",
@@ -1202,7 +1208,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.008674
+      "pagerank": 0.007194
     },
     {
       "id": "plat_modal_rhyme_hf",
@@ -1221,33 +1227,33 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.014089
+      "pagerank": 0.012709
     },
     {
       "id": "plat_text2wetlab",
       "label": "Text2WetLab Opentrons OT-2 Verifier",
       "entity_type": "Platform_Receipt",
       "layer": 7,
-      "curie": "SHA256:bd60742f9f91",
+      "curie": "SHA256:7d127bfad600",
       "external_iri": "",
       "era": "Era I",
       "summary": "6/6 deterministic AST, deck-slot collision, pipette, tip-balance & volume verification of Stage 1 uACR/HbA1c protocol (0 human samples).",
       "metrics": {
         "checks_passed": "6/6",
         "wet_lab_specimens": 0,
-        "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+        "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
       },
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.006239
+      "pagerank": 0.005759
     },
     {
       "id": "plat_medicus_discopy_moth",
       "label": "Medicus FHIR ML-DSA-65 + DisCoPy + Moth",
       "entity_type": "Platform_Receipt",
       "layer": 7,
-      "curie": "SHA256:bd60742f9f91",
+      "curie": "SHA256:7d127bfad600",
       "external_iri": "",
       "era": "Era I",
       "summary": "NIST FIPS 204 ML-DSA-65 FHIR R4 bundle signature (33.91 ms), DisCoPy snake identity (2.22e-16), and Moth 5-borough surge blur (Gini 0.8750->0.4609).",
@@ -1255,31 +1261,31 @@
         "mldsa65_sign_ms": 33.91,
         "gini_before": 0.875,
         "gini_after": 0.4609,
-        "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+        "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
       },
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.012486
+      "pagerank": 0.01152
     },
     {
       "id": "plat_typesafe_jev",
       "label": "TypeSafe AI System One (jev-latest / Jev 1.14)",
       "entity_type": "Platform_Receipt",
       "layer": 7,
-      "curie": "SHA256:bd60742f9f91",
+      "curie": "SHA256:7d127bfad600",
       "external_iri": "",
       "era": "All",
       "summary": "Live typed multi-method Health AI autorater (arXiv:2611.05127): CUJ-1 74.53% (4.32/5 NHS utility), CUJ-2 73.33%, CUJ-3 51.20%, CUJ-4 55.60%.",
       "metrics": {
         "cuj1_composite_pct": 74.53,
         "cuj4_rigor_0_5": 3.9,
-        "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+        "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
       },
       "in_degree": 0,
-      "out_degree": 10,
-      "total_degree": 10,
-      "pagerank": 0.018156
+      "out_degree": 11,
+      "total_degree": 11,
+      "pagerank": 0.016837
     },
     {
       "id": "plat_pyscf_ag2",
@@ -1298,7 +1304,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.017148
+      "pagerank": 0.014647
     },
     {
       "id": "plat_cyp3a4_gate1",
@@ -1317,7 +1323,7 @@
       "in_degree": 6,
       "out_degree": 0,
       "total_degree": 6,
-      "pagerank": 0.023039
+      "pagerank": 0.019147
     },
     {
       "id": "plat_opencyp_ftqc",
@@ -1338,7 +1344,49 @@
       "in_degree": 8,
       "out_degree": 0,
       "total_degree": 8,
-      "pagerank": 0.040113
+      "pagerank": 0.031553
+    },
+    {
+      "id": "plat_jev_10ltc_cqa",
+      "label": "Jev 1.14 Control Plane & 10-LTC CQA Portfolio",
+      "entity_type": "Platform_Receipt",
+      "layer": 7,
+      "curie": "SHA256:2c0f2ddabb33",
+      "external_iri": "",
+      "era": "All",
+      "summary": "Inline jev-1.14.0 control plane across all 10 NCL ICB LTC cohorts: 10/10 CQA routing (6 Era III\u2013IV FTQC vs 4 zero-qubit classical/safety), 10/10 span extraction, 8/8 order invariance, & 12/12 citation checks.",
+      "metrics": {
+        "ltcs_routed": "10/10",
+        "ftqc_ltcs": 6,
+        "zero_qubit_ltcs": 4,
+        "control_plane_sha256": "2cb109628687df04",
+        "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+      },
+      "in_degree": 11,
+      "out_degree": 1,
+      "total_degree": 12,
+      "pagerank": 0.023511
+    },
+    {
+      "id": "plat_opencyp_v1_1_thc",
+      "label": "OpenCYP-FTQC v1.1: 13 FCIDUMPs + Empirical THC",
+      "entity_type": "Platform_Receipt",
+      "layer": 7,
+      "curie": "SHA256:f06654228aab",
+      "external_iri": "",
+      "era": "Era IV",
+      "summary": "Expands OpenCYP-FTQC to 13 QM/MM FCIDUMPs (CAS(11e,11o) 5TE8 213,444 dets, matched-S=0 COPD CLR-MIC 7.15 mHa vs ACE 1O86 0.00566 mHa) & empirical THC/SO(M) Delta-THC (1.95x\u20137.01x compression, |dE|<=0.61 mHa, M=26 crossover).",
+      "metrics": {
+        "fcidump_files": 13,
+        "max_thc_fci_err_mha": 0.6124,
+        "delta_thc_compression": "1.95x-7.01x",
+        "singlet_copd_err_mha": 7.1487,
+        "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+      },
+      "in_degree": 10,
+      "out_degree": 0,
+      "total_degree": 10,
+      "pagerank": 0.042751
     },
     {
       "id": "haz_h_ltc_01",
@@ -1356,7 +1404,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005015
+      "pagerank": 0.004559
     },
     {
       "id": "haz_h_ltc_02",
@@ -1372,9 +1420,9 @@
         "standard": "DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off)"
       },
       "in_degree": 2,
-      "out_degree": 4,
-      "total_degree": 6,
-      "pagerank": 0.014342
+      "out_degree": 5,
+      "total_degree": 7,
+      "pagerank": 0.015821
     },
     {
       "id": "haz_h_ltc_03",
@@ -1390,9 +1438,9 @@
         "standard": "DCB0160 (Primary Urgent Tier 2/3 Triage) + DCB0129"
       },
       "in_degree": 1,
-      "out_degree": 1,
-      "total_degree": 2,
-      "pagerank": 0.004415
+      "out_degree": 2,
+      "total_degree": 3,
+      "pagerank": 0.005408
     },
     {
       "id": "haz_h_ltc_04",
@@ -1410,7 +1458,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.013075
+      "pagerank": 0.010702
     },
     {
       "id": "haz_h_ltc_05",
@@ -1428,7 +1476,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005135
+      "pagerank": 0.004678
     },
     {
       "id": "haz_h_ltc_06",
@@ -1446,7 +1494,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.005335
+      "pagerank": 0.004916
     }
   ],
   "edges": [
@@ -1464,7 +1512,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_af",
@@ -1480,7 +1528,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_htn",
@@ -1496,7 +1544,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_t2d",
@@ -1512,7 +1560,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_t1d",
@@ -1528,7 +1576,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_ckd",
@@ -1544,7 +1592,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_masld",
@@ -1560,7 +1608,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_copd",
@@ -1576,7 +1624,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_asthma",
@@ -1592,7 +1640,7 @@
       "predicate": "REQUIRES_BIOMARKER_PANEL",
       "rationale": "Single 30-min Stage 1 Check-and-Test appointment",
       "weight": 0.9,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "ltc_t1d",
@@ -2107,6 +2155,174 @@
       "receipt_sha256": "b46e2d8309ab0db9d6ea134b16742eb01cb11c11c36b2425e0dae7771030d9a4"
     },
     {
+      "source": "ltc_cvd",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "ROUTED_BY_JEV_CONTROL_PLANE",
+      "rationale": "CVD HFrEF + CYP2D6 4WNU routed to Era IV OpenCYP FTQC (137L)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_af",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "ROUTED_BY_JEV_CONTROL_PLANE",
+      "rationale": "AF S-warfarin + CYP2C9 1R9O routed to Era IV OpenCYP FTQC (140L)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_htn",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "REJECTED_FOR_QPU_DISPATCH_BY",
+      "rationale": "Closed-shell ACE 1O86 routed to 0-qubit PySCF RCCSD(T) exact solver",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_t2d",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "ABSTAINED_UNDER_ILL_POSED_BY",
+      "rationale": "Unlabelled botanical supplement triggers Companion Noul abstention & Pharmacist SMR",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_t1d",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "REJECTED_FOR_QPU_DISPATCH_BY",
+      "rationale": "128-var PCN clinic schedule solved optimally in 12.5 ms by classical HiGHS MILP (0L)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_ckd",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "ROUTED_BY_JEV_CONTROL_PLANE",
+      "rationale": "CKD cardiorenal crosstalk routed to Era III 18-spin open-system Lindbladian + 3NXU (42L)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_masld",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "ROUTED_BY_JEV_CONTROL_PLANE",
+      "rationale": "NAFLD/MASLD hepatocyte CYP3A4*22 + midazolam 5TE8 routed to Era IV FTQC (141L)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_copd",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "ROUTED_BY_JEV_CONTROL_PLANE",
+      "rationale": "COPD winter recall MILP + clarithromycin CYP3A4 MIC routed to Hybrid Era III FTQC (82L)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "ltc_asthma",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "GATED_AND_ROUTED_BY",
+      "rationale": "Adult Asthma budesonide+itraconazole routed to Era IV (138L) while CYP 48h red-flag bypasses solvers (0L)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "plat_typesafe_jev",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "POWERS_INLINE_ROUTING_OF",
+      "rationale": "Pinned jev-1.14.0 Noul + Choice + Companion Noul + Box primitives",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "haz_h_ltc_03",
+      "target": "plat_jev_10ltc_cqa",
+      "predicate": "GOVERNS_CLINICAL_RISK_OF",
+      "rationale": "Deterministic Tier-0 acute paediatric asthma bypass (p_red_flag=0.98 -> 0 logical qubits)",
+      "weight": 1.25,
+      "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+    },
+    {
+      "source": "mol_pdb_4wnu",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "FACTORED_BY_EMPIRICAL_THC_IN",
+      "rationale": "CYP2D6 4WNU empirical THC (|dE|=0.09 mHa) & 7.01x SO(M) Delta-THC compression",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "mol_pdb_1r9o",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "FACTORED_BY_EMPIRICAL_THC_IN",
+      "rationale": "CYP2C9 1R9O empirical THC (|dE|=0.21 mHa) & 3.09x SO(M) Delta-THC compression",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "mol_pdb_3nxu",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "FACTORED_BY_EMPIRICAL_THC_IN",
+      "rationale": "CYP3A4 3NXU Ritonavir Type-II empirical THC (|dE|=0.61 mHa) & 5.20x SO(M) Delta-THC",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "mol_pdb_5te8",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "FACTORED_BY_EMPIRICAL_THC_IN",
+      "rationale": "Expanded CAS(11e,11o) 213,444-det CYP3A4 5TE8 THC (|dE|=0.14 mHa) & 1.95x SO(M) Delta-THC",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "mol_pdb_1tqn",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "FACTORED_BY_EMPIRICAL_THC_IN",
+      "rationale": "Matched-S=0 COPD CLR-MIC (|RCCSD(T)-FCI|=7.15 mHa, T1=0.124) & Itraconazole Type-II (2.15x Delta-THC)",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "mol_pdb_1o86",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "VALIDATES_CLASSICAL_CONTROL_IN",
+      "rationale": "Matched-S=0 singlet negative control: ACE Zn2+ 0.00566 mHa (1,263x smaller than COPD CLR-MIC)",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "prim_x03",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "EXECUTED_AND_SEALED_ON",
+      "rationale": "Empirical frozen-core M=26 crossover (lambda_THC 95.50 < lambda_DF 95.81 Ha; 9.62x Delta-THC speedup at M=58)",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "era_iv",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "BENCHMARKED_BY_OPEN_ARCHIVE",
+      "rationale": "13 .fcidump.gz Hamiltonians + opencyp_ftqc_v1_1_thc_factors.npz (150L, 171,114 phys q at M=58)",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "plat_jev_10ltc_cqa",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "DISPATCHES_6_FTQC_LTCS_TO",
+      "rationale": "All 6 FTQC-eligible LTCs (CVD, AF, CKD, MASLD, COPD, Adult Asthma) verified with empirical THC",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
+      "source": "haz_h_ltc_02",
+      "target": "plat_opencyp_v1_1_thc",
+      "predicate": "GOVERNS_CLINICAL_RISK_OF",
+      "rationale": "OpenCYP-FTQC v1.1 barrier & MBI kinetics remain strictly advisory under Pharmacist SMR gate",
+      "weight": 1.25,
+      "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+    },
+    {
       "source": "tx_acei_lisinopril",
       "target": "mol_pdb_1o86",
       "predicate": "COORDINATES_CATALYTIC_ZN2",
@@ -2328,7 +2544,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_a01d",
@@ -2344,7 +2560,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_p09",
@@ -2360,7 +2576,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_p13",
@@ -2376,7 +2592,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_p20",
@@ -2392,7 +2608,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_a01g",
@@ -2408,7 +2624,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_a01h",
@@ -2424,7 +2640,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_p22",
@@ -2440,7 +2656,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_x03",
@@ -2456,7 +2672,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_p04",
@@ -2472,7 +2688,7 @@
       "predicate": "EXECUTED_AND_SEALED_ON",
       "rationale": "Verified by canonical SHA-256 platform receipt",
       "weight": 1.25,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "era_i",
@@ -2504,7 +2720,7 @@
       "predicate": "ROBOTICALLY_VERIFIED_BY",
       "rationale": "Opentrons OT-2 uACR/HbA1c protocol passed 6/6 checks",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "stage_3_pcsp",
@@ -2512,7 +2728,7 @@
       "predicate": "SIGNED_IN_PQC_FHIR_BY",
       "rationale": "NIST FIPS 204 ML-DSA-65 signed FHIR R4 Bundle (33.91 ms)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "stage_4_continuity",
@@ -2520,7 +2736,7 @@
       "predicate": "DIFFUSED_ACROSS_BOROUGHS_BY",
       "rationale": "Moth 4-qubit unitary blur lowers 5-borough surge Gini 0.875 -> 0.461",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "prim_a01g",
@@ -2536,7 +2752,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "Requires SNOMED Interpreter & IMD Core20 register audit before recall release",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2544,7 +2760,7 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "haz_h_ltc_02",
@@ -2552,7 +2768,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "Mandates baseline eGFR/K+ & Pharmacist SMR sign-off",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2560,7 +2776,7 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "haz_h_ltc_02",
@@ -2568,7 +2784,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "Mandates inspiratory flow & inhaler-technique check before DPI switch",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2576,7 +2792,7 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "haz_h_ltc_03",
@@ -2584,7 +2800,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "48h CYP post-attack review bypasses batch solvers via urgent Tier 2/3 alert",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2592,7 +2808,7 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "haz_h_ltc_04",
@@ -2600,7 +2816,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "Simulated Lindbladian/CAS outputs strictly advisory pending NHS cohort calibration",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2608,7 +2824,7 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "haz_h_ltc_04",
@@ -2616,7 +2832,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "Even at 1000+ logical qubits, mandatory GP/Pharmacist human sign-off applies",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2624,7 +2840,7 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "haz_h_ltc_05",
@@ -2632,7 +2848,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "Quarterly UCLP/QOF denominator audit across all 9 LTCs",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2640,7 +2856,7 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "haz_h_ltc_06",
@@ -2648,7 +2864,7 @@
       "predicate": "GOVERNS_CLINICAL_RISK_OF",
       "rationale": "Enforces VCSE slot caps & NCL Borough Partnership resource tracking",
       "weight": 1.15,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     },
     {
       "source": "plat_typesafe_jev",
@@ -2656,8 +2872,8 @@
       "predicate": "AUDITS_OPEN_HAZARD",
       "rationale": "Live TypeSafe Jev 1.14 multi-method evaluation (0 closed hazards claimed)",
       "weight": 1.1,
-      "receipt_sha256": "bd60742f9f91170c04130db370e3ff1bff939553ef7879e60905c1e64cbede37"
+      "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     }
   ],
-  "receipt_sha256": "c8f94fe1f6fc932484f5eb6ea1a60cdd4a5e81e3aa4248b506c35574f059c481"
+  "receipt_sha256": "456df37bc99a50c94858825f5477d7cf0fa54f6444770ee0dc7737f22e15befc"
 }

@@ -2,7 +2,7 @@
 // Matched UX Architecture with Quantum Social Prescribing (https://arunnadarasa.github.io/quantum-social-prescribing/)
 
 const BOOKMARKS = [
-  { label: "p.1 · Abstract & OpenCYP-FTQC v1.0", page: 1 },
+  { label: "p.1 · Abstract & OpenCYP-FTQC v1.1", page: 1 },
   { label: "p.3 · 4-Era Roadmap & Baselines", page: 3 },
   { label: "p.5 · Nexus Helios-1E & Haiqu HUBO", page: 5 },
   { label: "p.7 · 4-Regime HQS & PDB 1O86", page: 7 },
@@ -10,8 +10,9 @@ const BOOKMARKS = [
   { label: "p.11 · Gate 1: PDB 5TE8/3NXU & THC-QPE", page: 11 },
   { label: "p.12 · OpenCYP-FTQC QM/MM & 12-Regimen PBPK", page: 12 },
   { label: "p.14 · 5-Seed Modal QLTCMLM & Barren Plateau", page: 14 },
-  { label: "p.15 · Jev 1.14 & DCB0129/0160 Audit", page: 15 },
-  { label: "p.16 · 67-Node KG & 49 Verified Refs", page: 16 }
+  { label: "p.15 · Jev 1.14, 10-LTC CQA & OpenCYP v1.1", page: 15 },
+  { label: "p.17 · 10-LTC CQA & Empirical THC Figures", page: 17 },
+  { label: "p.18 · 69-Node KG & 49 Verified Refs", page: 18 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -113,17 +114,17 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--18},
+  pages   = {1--20},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 9 SHA-256-sealed receipts + 67-node KG across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.0 (PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 12 SHA-256-sealed receipts + 69-node KG across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.1 (13 QM/MM FCIDUMPs + Empirical THC across PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
 }`,
   opencyp: `@misc{nadarasa2026opencypftqc,
-  title        = {{OpenCYP-FTQC v1.0}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP} Archive and 12-Regimen {ChEMBL\\_37} {PBPK} Benchmark},
+  title        = {{OpenCYP-FTQC v1.1}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP} \\& Empirical {THC} Archive and 12-Regimen {ChEMBL\\_37} {PBPK} Benchmark},
   author       = {Nadarasa, Arun},
   year         = {2026},
   howpublished = {Hugging Face Datasets \\& GitHub Open-Science Benchmark},
   url          = {https://huggingface.co/datasets/socialprescribing/opencyp-ftqc},
-  note         = {8 SHA-256-sealed PySCF 2.15 def2-SVP QM/MM FCIDUMP Hamiltonians across CYP3A4 (5TE8/3NXU), CYP2D6 (4WNU), CYP2C9 (1R9O), and closed-shell ACE Zn2+ control (1O86, |RCCSD(T)-FCI|=0.00566 mHa); 2.43x--6.02x Procrustes Delta-DF compression; CC BY 4.0}
+  note         = {13 SHA-256-sealed PySCF 2.15 def2-SVP QM/MM FCIDUMP Hamiltonians + empirical unit-leaf THC (.npz, |dE_FCI|<=0.61 mHa) across CYP3A4 (5TE8/3NXU/1TQN), CYP2D6 (4WNU), CYP2C9 (1R9O), and matched S=0 ACE Zn2+ control (1O86, |RCCSD(T)-FCI|=0.00566 mHa vs COPD CLR-MIC 7.15 mHa); 1.95x--7.01x Cayley SO(M) Delta-THC compression; CC BY 4.0}
 }`,
   qltcmlm: `@misc{nadarasa2026qltcmlm,
   title        = {{QLTCMLM}: 4-Qubit Frobenius Data-Reuploading Multi-Task Variational Quantum Classifier for Multimorbid {NHS} {LTC} Risk Stratification},
@@ -212,8 +213,8 @@ async function initPdfReader() {
   const DOC = {
     pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
     pagesDir: "pages",
-    totalPages: 18,
-    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (18 Pages)"
+    totalPages: 20,
+    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (20 Pages)"
   };
 
   let zoom = 1.0;
@@ -908,7 +909,7 @@ function initChartsAndLightbox() {
     btnInt.setAttribute("aria-selected", "true");
     btnStat.classList.remove("active");
     btnStat.setAttribute("aria-selected", "false");
-    cards.forEach(c => c.classList.add("interactive-mode"));
+    cards.forEach(c => { if (c.querySelector(".echart-box")) c.classList.add("interactive-mode"); });
     setTimeout(() => charts.forEach(ch => ch.resize()), 50);
   });
 

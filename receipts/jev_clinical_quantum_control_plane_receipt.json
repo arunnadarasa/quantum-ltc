@@ -1,0 +1,486 @@
+{
+  "schema_version": "1.0.0-jev-1.14-clinical-quantum-control-plane",
+  "timestamp_utc": "2026-11-13T07:37:17.584409+00:00",
+  "pinned_model_id": "jev-1.14.0",
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "autonomous_clinical_decisions": 0,
+    "open_dcb0129_hazards": 6
+  },
+  "module_1_chembl37_assay_curation": {
+    "source": "Live EMBL-EBI ChEMBL_37 REST API (`https://www.ebi.ac.uk/chembl/api/data/assay/`)",
+    "total_assays_evaluated": 10,
+    "pool_distribution": {
+      "THERMODYNAMIC_REVERSIBLE_KI_POOL": 4,
+      "KINETIC_TDI_TRANSITION_STATE_POOL": 5,
+      "EXCLUDE_NON_HUMAN": 1
+    },
+    "curated_assays": [
+      {
+        "drug_name": "KETOCONAZOLE",
+        "assay_chembl_id": "CHEMBL1000805",
+        "description": "Inhibition of human CYP3A4 by radiometric assay",
+        "p_human_cyp3a4": 0.99,
+        "p_tdi_or_preincubated": 0.06,
+        "p_states_matrix": 0.12,
+        "resolved_matrix": "unspecified_matrix",
+        "matrix_top_prob": 0.62,
+        "p_states_probe": 0.04,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.67,
+        "assigned_benchmark_pool": "THERMODYNAMIC_REVERSIBLE_KI_POOL",
+        "usage": {
+          "input_tokens": 1365,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "KETOCONAZOLE",
+        "assay_chembl_id": "CHEMBL1002238",
+        "description": "Inhibition of human recombinant CYP3A4 expressed in insect microsomes",
+        "p_human_cyp3a4": 0.98,
+        "p_tdi_or_preincubated": 0.05,
+        "p_states_matrix": 0.79,
+        "resolved_matrix": "recombinant_enzyme_system",
+        "matrix_top_prob": 1.0,
+        "p_states_probe": 0.03,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.71,
+        "assigned_benchmark_pool": "THERMODYNAMIC_REVERSIBLE_KI_POOL",
+        "usage": {
+          "input_tokens": 1375,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "RITONAVIR",
+        "assay_chembl_id": "CHEMBL1100026",
+        "description": "Inhibition of human recombinant CYP3A4-mediated oxidation of 7-benzyloxyquinoline",
+        "p_human_cyp3a4": 0.99,
+        "p_tdi_or_preincubated": 0.05,
+        "p_states_matrix": 0.34,
+        "resolved_matrix": "unspecified_matrix",
+        "matrix_top_prob": 0.93,
+        "p_states_probe": 0.28,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.97,
+        "assigned_benchmark_pool": "THERMODYNAMIC_REVERSIBLE_KI_POOL",
+        "usage": {
+          "input_tokens": 1374,
+          "output_tokens": 259
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "RITONAVIR",
+        "assay_chembl_id": "CHEMBL1743427",
+        "description": "Mechanism based inhibition of human cytochrome P450 3A4",
+        "p_human_cyp3a4": 0.99,
+        "p_tdi_or_preincubated": 0.89,
+        "p_states_matrix": 0.08,
+        "resolved_matrix": "unspecified_matrix",
+        "matrix_top_prob": 0.35,
+        "p_states_probe": 0.03,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.75,
+        "assigned_benchmark_pool": "KINETIC_TDI_TRANSITION_STATE_POOL",
+        "usage": {
+          "input_tokens": 1368,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "RITONAVIR",
+        "assay_chembl_id": "CHEMBL1743479",
+        "description": "Mechanism based inhibition of human cytochrome P450 3A4 using intestinal microsomes",
+        "p_human_cyp3a4": 0.99,
+        "p_tdi_or_preincubated": 0.85,
+        "p_states_matrix": 0.6,
+        "resolved_matrix": "human_liver_microsomes",
+        "matrix_top_prob": 0.98,
+        "p_states_probe": 0.03,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.82,
+        "assigned_benchmark_pool": "KINETIC_TDI_TRANSITION_STATE_POOL",
+        "usage": {
+          "input_tokens": 1382,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "MIDAZOLAM",
+        "assay_chembl_id": "CHEMBL3396733",
+        "description": "Inhibition of human recombinant CYP3A4 in liver microsomes by mechanism based inhibition assay",
+        "p_human_cyp3a4": 0.99,
+        "p_tdi_or_preincubated": 0.9,
+        "p_states_matrix": 0.63,
+        "resolved_matrix": "recombinant_enzyme_system",
+        "matrix_top_prob": 0.72,
+        "p_states_probe": 0.12,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 1.0,
+        "assigned_benchmark_pool": "KINETIC_TDI_TRANSITION_STATE_POOL",
+        "usage": {
+          "input_tokens": 1379,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "DILTIAZEM",
+        "assay_chembl_id": "CHEMBL1063294",
+        "description": "Inhibition of CYP3A4",
+        "p_human_cyp3a4": 0.34,
+        "p_tdi_or_preincubated": 0.06,
+        "p_states_matrix": 0.05,
+        "resolved_matrix": "unspecified_matrix",
+        "matrix_top_prob": 0.46,
+        "p_states_probe": 0.03,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.78,
+        "assigned_benchmark_pool": "EXCLUDE_NON_HUMAN",
+        "usage": {
+          "input_tokens": 1353,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "DILTIAZEM",
+        "assay_chembl_id": "CHEMBL1613886",
+        "description": "PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors and Substrates of Cytochrome P450 3A4. (Class of assay: confirmatory) [Related pubchem assays: 410 ]",
+        "p_human_cyp3a4": 0.97,
+        "p_tdi_or_preincubated": 0.06,
+        "p_states_matrix": 0.09,
+        "resolved_matrix": "unspecified_matrix",
+        "matrix_top_prob": 0.52,
+        "p_states_probe": 0.06,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.58,
+        "assigned_benchmark_pool": "THERMODYNAMIC_REVERSIBLE_KI_POOL",
+        "usage": {
+          "input_tokens": 1404,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "DILTIAZEM",
+        "assay_chembl_id": "CHEMBL1743442",
+        "description": "Mechanism based inhibition of human cytochrome P450 3A4 measured by midazolam hydroxylase activity",
+        "p_human_cyp3a4": 0.99,
+        "p_tdi_or_preincubated": 0.84,
+        "p_states_matrix": 0.12,
+        "resolved_matrix": "unspecified_matrix",
+        "matrix_top_prob": 0.61,
+        "p_states_probe": 0.97,
+        "resolved_probe": "midazolam",
+        "probe_top_prob": 1.0,
+        "assigned_benchmark_pool": "KINETIC_TDI_TRANSITION_STATE_POOL",
+        "usage": {
+          "input_tokens": 1378,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      },
+      {
+        "drug_name": "CLARITHROMYCIN",
+        "assay_chembl_id": "CHEMBL1743430",
+        "description": "Mechanism based inhibition of human cytochrome P450 3A4",
+        "p_human_cyp3a4": 0.99,
+        "p_tdi_or_preincubated": 0.85,
+        "p_states_matrix": 0.07,
+        "resolved_matrix": "unspecified_matrix",
+        "matrix_top_prob": 0.53,
+        "p_states_probe": 0.03,
+        "resolved_probe": "unspecified_probe",
+        "probe_top_prob": 0.68,
+        "assigned_benchmark_pool": "KINETIC_TDI_TRANSITION_STATE_POOL",
+        "usage": {
+          "input_tokens": 1369,
+          "output_tokens": 250
+        },
+        "model": "jev-1.14.0"
+      }
+    ],
+    "runtime_seconds": 0.455
+  },
+  "module_2_clinical_quantum_router": {
+    "cases_evaluated": 6,
+    "routing_accuracy": 1.0,
+    "asymmetric_thresholds": {
+      "acute_clinical_red_flag_noul_threshold": 0.2,
+      "ftqc_dispatch_choice_probability_threshold": 0.8,
+      "min_active_space_orbitals_classical_fci_wall": 22
+    },
+    "routing_decisions": [
+      {
+        "case_id": "ROUTE_01_ACUTE_CYP_ASTHMA_RED_FLAG",
+        "p_acute_red_flag": 0.96,
+        "p_well_defined_species": 0.81,
+        "p_companion_fit": 0.55,
+        "selected_problem_class": "combinatorial_clinic_scheduling",
+        "selected_class_probability": 1.0,
+        "routed_action": "BYPASS_ALL_SOLVERS_URGENT_CLINICIAN_TRIAGE",
+        "expected_route": "BYPASS_ALL_SOLVERS_URGENT_CLINICIAN_TRIAGE",
+        "matched_expected": true
+      },
+      {
+        "case_id": "ROUTE_02_SPARSE_PCN_CALL_RECALL_32PT",
+        "p_acute_red_flag": 0.02,
+        "p_well_defined_species": 0.79,
+        "p_companion_fit": 0.86,
+        "selected_problem_class": "combinatorial_clinic_scheduling",
+        "selected_class_probability": 1.0,
+        "routed_action": "ROUTE_CLASSICAL_HIGHS_MILP_UNDER_5MS",
+        "expected_route": "ROUTE_CLASSICAL_HIGHS_MILP_UNDER_5MS",
+        "matched_expected": true
+      },
+      {
+        "case_id": "ROUTE_03_ACE_ZN2_CLOSED_SHELL_CONTROL",
+        "p_acute_red_flag": 0.01,
+        "p_well_defined_species": 0.98,
+        "p_companion_fit": 0.97,
+        "selected_problem_class": "closed_shell_main_group_or_d10_binding",
+        "selected_class_probability": 1.0,
+        "routed_action": "ROUTE_CLASSICAL_SINGLE_REFERENCE_RCCSDS_T",
+        "expected_route": "ROUTE_CLASSICAL_SINGLE_REFERENCE_RCCSDS_T",
+        "matched_expected": true
+      },
+      {
+        "case_id": "ROUTE_04_CYP3A4_CPDI_MIDAZOLAM_HAT",
+        "p_acute_red_flag": 0.01,
+        "p_well_defined_species": 0.97,
+        "p_companion_fit": 0.98,
+        "selected_problem_class": "open_shell_p450_hat_transition_state",
+        "selected_class_probability": 1.0,
+        "routed_action": "DISPATCH_OPENCYP_FTQC_ACTIVE_SPACE_HAMILTONIAN",
+        "expected_route": "DISPATCH_OPENCYP_FTQC_ACTIVE_SPACE_HAMILTONIAN",
+        "matched_expected": true
+      },
+      {
+        "case_id": "ROUTE_05_CYP3A4_RITONAVIR_TYPE_II_HEME_LOCK",
+        "p_acute_red_flag": 0.01,
+        "p_well_defined_species": 0.98,
+        "p_companion_fit": 0.9,
+        "selected_problem_class": "open_shell_heme_type_ii_nitrogen_ligation",
+        "selected_class_probability": 1.0,
+        "routed_action": "DISPATCH_OPENCYP_FTQC_ACTIVE_SPACE_HAMILTONIAN",
+        "expected_route": "DISPATCH_OPENCYP_FTQC_ACTIVE_SPACE_HAMILTONIAN",
+        "matched_expected": true
+      },
+      {
+        "case_id": "ROUTE_06_AMBIGUOUS_BOTANICAL_POLYPHARMACY",
+        "p_acute_red_flag": 0.03,
+        "p_well_defined_species": 0.03,
+        "p_companion_fit": 0.23,
+        "selected_problem_class": "open_shell_heme_type_ii_nitrogen_ligation",
+        "selected_class_probability": 0.61,
+        "routed_action": "ABSTAIN_ESCALATE_PHARMACIST_REVIEW",
+        "expected_route": "ABSTAIN_ESCALATE_PHARMACIST_REVIEW",
+        "matched_expected": true
+      }
+    ],
+    "runtime_seconds": 0.871
+  },
+  "module_3_preparsed_fhir_pbpk_cascade": {
+    "vignettes_evaluated": 3,
+    "cascade_accuracy": 1.0,
+    "vignette_results": [
+      {
+        "vignette_id": "NCL_VIGNETTE_A_CONTROLLED_HBPM_CLEAN",
+        "regex_bp_candidates": [
+          "154/94 mmHg",
+          "132/80 mmHg"
+        ],
+        "p_reliable_home_bp": 0.96,
+        "selected_home_bp_span": "132/80 mmHg",
+        "selected_span_probability": 1.0,
+        "ncl_outcome_23_home_bp_under_135_85": true,
+        "p_informal_interpreter_h_ltc_01": 0.02,
+        "p_nsaid_triple_whammy_h_ltc_02": 0.03,
+        "p_cyp3a4_ddi_active": 0.03,
+        "python_rowland_matin_aucr": null,
+        "gate_decision": "SIGN_FHIR_R4_ML_DSA_65_OUTCOME_23_ACHIEVED",
+        "expected_gate": "SIGN_FHIR_R4_ML_DSA_65_OUTCOME_23_ACHIEVED",
+        "matched_expected": true,
+        "mldsa65_signature_sha256_prefix": "44dd9bf26dfccc0029f6"
+      },
+      {
+        "vignette_id": "NCL_VIGNETTE_B_DDI_TRIPLE_WHAMMY_HAZARD",
+        "regex_bp_candidates": [
+          "146/88 mmHg",
+          "138/86 mmHg"
+        ],
+        "p_reliable_home_bp": 0.29,
+        "selected_home_bp_span": null,
+        "selected_span_probability": 1.0,
+        "ncl_outcome_23_home_bp_under_135_85": null,
+        "p_informal_interpreter_h_ltc_01": 0.99,
+        "p_nsaid_triple_whammy_h_ltc_02": 0.96,
+        "p_cyp3a4_ddi_active": 0.97,
+        "python_rowland_matin_aucr": 7.12,
+        "gate_decision": "HOLD_FOR_URGENT_PHARMACIST_SMR_DDI_AND_INTERPRETER_SAFEGUARD",
+        "expected_gate": "HOLD_FOR_URGENT_PHARMACIST_SMR_DDI_AND_INTERPRETER_SAFEGUARD",
+        "matched_expected": true,
+        "mldsa65_signature_sha256_prefix": null
+      },
+      {
+        "vignette_id": "NCL_VIGNETTE_C_AMBIGUOUS_BP_ABSTAIN",
+        "regex_bp_candidates": [
+          "128/78 mmHg",
+          "148/94 mmHg"
+        ],
+        "p_reliable_home_bp": 0.01,
+        "selected_home_bp_span": null,
+        "selected_span_probability": 0.79,
+        "ncl_outcome_23_home_bp_under_135_85": null,
+        "p_informal_interpreter_h_ltc_01": 0.04,
+        "p_nsaid_triple_whammy_h_ltc_02": 0.02,
+        "p_cyp3a4_ddi_active": 0.02,
+        "python_rowland_matin_aucr": null,
+        "gate_decision": "ABSTAIN_REQUEST_REPEAT_7DAY_HBPM",
+        "expected_gate": "ABSTAIN_REQUEST_REPEAT_7DAY_HBPM",
+        "matched_expected": true,
+        "mldsa65_signature_sha256_prefix": null
+      }
+    ],
+    "runtime_seconds": 0.558
+  },
+  "module_4_claim_to_receipt_citation_audit": {
+    "total_claims_checked": 8,
+    "real_claims_verified": 6,
+    "adversarial_traps_caught": 2,
+    "option_order_invariance_rate": 1.0,
+    "claim_verifications": [
+      {
+        "claim_id": "CLAIM_01_NEXUS_EMULATOR_DEMARCATION",
+        "verdict_forward": "supported",
+        "verdict_reversed": "supported",
+        "forward_probability": 0.92,
+        "reversed_probability": 0.93,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.07,
+        "expected_verdict": "supported",
+        "passed_check": true
+      },
+      {
+        "claim_id": "CLAIM_02_ACE_1O86_CLOSED_SHELL_CONTROL",
+        "verdict_forward": "supported",
+        "verdict_reversed": "supported",
+        "forward_probability": 0.98,
+        "reversed_probability": 0.99,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.02,
+        "expected_verdict": "supported",
+        "passed_check": true
+      },
+      {
+        "claim_id": "CLAIM_03_PROCRUSTES_DELTA_DF_COMPRESSION",
+        "verdict_forward": "supported",
+        "verdict_reversed": "supported",
+        "forward_probability": 0.89,
+        "reversed_probability": 0.76,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.02,
+        "expected_verdict": "supported",
+        "passed_check": true
+      },
+      {
+        "claim_id": "CLAIM_04_DFT_BARRIER_SCATTER_5TE8",
+        "verdict_forward": "supported",
+        "verdict_reversed": "supported",
+        "forward_probability": 0.87,
+        "reversed_probability": 0.86,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.02,
+        "expected_verdict": "supported",
+        "passed_check": true
+      },
+      {
+        "claim_id": "CLAIM_05_ALPHAGENOME2_MUC5B_SPECIFICITY",
+        "verdict_forward": "supported",
+        "verdict_reversed": "supported",
+        "forward_probability": 0.91,
+        "reversed_probability": 0.91,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.02,
+        "expected_verdict": "supported",
+        "passed_check": true
+      },
+      {
+        "claim_id": "CLAIM_06_MULTI_ISOFORM_PBPK_12_OF_12",
+        "verdict_forward": "supported",
+        "verdict_reversed": "supported",
+        "forward_probability": 0.91,
+        "reversed_probability": 0.95,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.04,
+        "expected_verdict": "supported",
+        "passed_check": true
+      },
+      {
+        "claim_id": "TRAP_07_FABRICATED_PHYSICAL_QPU_CLAIM",
+        "verdict_forward": "contradicted",
+        "verdict_reversed": "contradicted",
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.98,
+        "expected_verdict": "contradicted",
+        "passed_check": true
+      },
+      {
+        "claim_id": "TRAP_08_UNSUPPORTED_RANDOMIZED_TRIAL_MORTALITY",
+        "verdict_forward": "unsupported_silence",
+        "verdict_reversed": "unsupported_silence",
+        "forward_probability": 0.54,
+        "reversed_probability": 0.76,
+        "option_order_invariant": true,
+        "p_overstates_hardware_or_clinical_trial": 0.83,
+        "expected_verdict": "unsupported_silence",
+        "passed_check": true
+      }
+    ],
+    "runtime_seconds": 1.277
+  },
+  "module_5_multimodal_box_visual_qa": {
+    "sandbox_dreamer_ready_disclosure": "Executed strictly on non-clinical synthetic/manuscript PNGs with `TypeSafe-Danger-Zone-Images: true` per TypeSafe Jev 1.14 Box documentation; not used for autonomous patient diagnosis.",
+    "scientific_figure_qa": {
+      "figure_file": "samskrift/figures/figure5_typesafe_jev_governance.png",
+      "prepared_dimensions_px": [
+        1568,
+        526
+      ],
+      "p_has_bar_chart_panel": 0.99,
+      "p_has_line_plot_panel": 0.99,
+      "readability_score_0_to_2": 1.79,
+      "readability_confidence": 0.7,
+      "bar_chart_panel_box": {
+        "left": 0.03,
+        "top": 0.12,
+        "right": 0.44,
+        "bottom": 0.96
+      },
+      "bar_chart_box_confidence": 0.51
+    },
+    "synthetic_hbpm_localization": {
+      "p_lcd_screen_visible_companion_noul": 0.98,
+      "lcd_screen_box": {
+        "left": 0.28,
+        "top": 0.25,
+        "right": 0.73,
+        "bottom": 0.69
+      },
+      "lcd_box_confidence": 0.91
+    },
+    "runtime_seconds": 0.944
+  },
+  "receipt_sha256": "2cb109628687df04a182d7cf13c43814e4332fa68beca57b33fba6f486775912"
+}

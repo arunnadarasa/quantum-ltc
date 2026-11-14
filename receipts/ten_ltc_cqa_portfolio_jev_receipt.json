@@ -1,0 +1,829 @@
+{
+  "schema_version": "1.0.0-ten-ltc-cqa-portfolio-jev-1.14",
+  "generated_at_utc": "2026-11-13T08:05:37.398662+00:00",
+  "pinned_model_id": "jev-1.14.0",
+  "skill_package": "antigravity-jev-quantum==0.1.0",
+  "scope_specification": "NHS North Central London ICB LTC LCS v6 (All 10 Distinct LTC Cohorts)",
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "autonomous_clinical_decisions": 0,
+    "closed_hazards_claimed": 0,
+    "open_dcb0129_hazards": [
+      "H-LTC-01",
+      "H-LTC-02",
+      "H-LTC-03",
+      "H-LTC-04",
+      "H-LTC-05",
+      "H-LTC-06"
+    ]
+  },
+  "summary_metrics": {
+    "total_ltc_use_cases": 10,
+    "routing_accuracy": 1.0,
+    "biomarker_span_accuracy": 1.0,
+    "dispatched_mechanism_option_order_invariance_rate": 1.0,
+    "raw_all_10_mechanism_order_invariance_rate": 0.9,
+    "tier_distribution": {
+      "ERA_IV_OPENCYP_FTQC_ADVANTAGE": 4,
+      "ERA_I_II_CLASSICAL_EXACT_SUFFICIENT": 2,
+      "SAFETY_TIER_1_ABSTAIN_PHARMACIST_SMR": 1,
+      "ERA_III_EARLY_ACTIVE_FTQC_CROSSOVER": 1,
+      "ERA_III_HYBRID_MILP_PLUS_ACTIVE_FTQC": 1,
+      "SAFETY_TIER_0_URGENT_RED_FLAG_BYPASS": 1
+    },
+    "quantum_advantage_ltcs_count": 6,
+    "zero_qubit_classical_or_safety_ltcs_count": 4,
+    "classical_highs_milp_live_floor": {
+      "solver": "scipy.optimize.milp (HiGHS)",
+      "n_binary_variables": 128,
+      "optimal_objective": -40.987,
+      "solve_wall_clock_ms": 12.547
+    },
+    "total_wall_clock_seconds": 3.238,
+    "all_checks_passed": true
+  },
+  "ten_ltc_use_cases": [
+    {
+      "ltc_id": "LTC_01_CVD",
+      "ltc_number": 1,
+      "condition_name": "Cardiovascular Disease (HFrEF + Depression)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_1287",
+      "house_of_care_stage": "Stage 3: Personalised Care & SMR",
+      "pdb_id": "4WNU",
+      "fcidump_relpath": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "fcidump_sha256_verified": "3187f2222bb16239ecc17cdb5327bc9f2cfbae807e8aad6aa439ca86af1f7b94",
+      "jev_latency_ms": 273.12,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.04,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.92,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.92,
+        "p_species_or_schedule_defined": 0.99,
+        "selected_biomarker_span": "HR 51 bpm",
+        "expected_biomarker_span": "HR 51 bpm",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "open_shell_p450_hat_or_heme_lock",
+        "p_selected_mechanism_min_fwd_rev": 1.0,
+        "p_mechanism_companion": 0.97,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2232,
+          "output_tokens": 412
+        }
+      },
+      "classical_floor": {
+        "summary": "CYP2D6 4WNU broken-spin DFT <S^2>=2.52 vs 0.75; +13.70 mHa (+8.60 kcal/mol) RCCSD(T) error",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+        "era": "ERA_IV",
+        "logical_qubits_required": 137,
+        "quantum_advantage_claimed": true,
+        "solver_dispatch": "OPENCYP_FTQC_PROCRUSTES_DELTA_DF_QPE"
+      },
+      "expected_cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": {
+        "logical_qubits": 137,
+        "procrustes_delta_df_compression_x": 6.02,
+        "code_distance_d_compressed": 17,
+        "physical_qubits_uncompressed": 126004,
+        "physical_qubits_delta_df_compressed": 126004,
+        "estimated_qpu_wall_clock_s": 3049.8331
+      },
+      "pbpk_aucr": {
+        "aucr_wt_predicted": 4.73,
+        "aucr_variant_predicted": 7.3
+      },
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_01_cvd",
+        "open_hazards_flagged": [
+          "H-LTC-02"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "4fcae231e5a826a8f7e4e9de",
+        "verified": true
+      },
+      "smr_recommendation": "Flag H-LTC-02 severe CYP2D6 MBI beta-blockade lock; Pharmacist/GP review SSRI switch (e.g. Sertraline/Citalopram) and titrate Metoprolol."
+    },
+    {
+      "ltc_id": "LTC_02_AF",
+      "ltc_number": 2,
+      "condition_name": "Atrial Fibrillation (Anticoagulation)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_0060224",
+      "house_of_care_stage": "Stage 3: Anticoagulation Safety SMR",
+      "pdb_id": "1R9O",
+      "fcidump_relpath": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "fcidump_sha256_verified": "b37203e84a1b658c814c47bde728e2bb406e243980cc5bca3c7855cd74f7d11e",
+      "jev_latency_ms": 372.29,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.03,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.94,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.97,
+        "p_species_or_schedule_defined": 0.98,
+        "selected_biomarker_span": "INR 3.2",
+        "expected_biomarker_span": "INR 3.2",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "open_shell_p450_hat_or_heme_lock",
+        "p_selected_mechanism_min_fwd_rev": 1.0,
+        "p_mechanism_companion": 0.97,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2222,
+          "output_tokens": 412
+        }
+      },
+      "classical_floor": {
+        "summary": "CYP2C9 1R9O 12.61 kcal/mol QM/MM DFT doublet barrier spread; +19.16 mHa (+12.02 kcal/mol) RCCSD(T) error",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+        "era": "ERA_IV",
+        "logical_qubits_required": 141,
+        "quantum_advantage_claimed": true,
+        "solver_dispatch": "OPENCYP_FTQC_PROCRUSTES_DELTA_DF_QPE"
+      },
+      "expected_cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": {
+        "logical_qubits": 141,
+        "procrustes_delta_df_compression_x": 2.43,
+        "code_distance_d_compressed": 17,
+        "physical_qubits_uncompressed": 129472,
+        "physical_qubits_delta_df_compressed": 129472,
+        "estimated_qpu_wall_clock_s": 7555.5556
+      },
+      "pbpk_aucr": {
+        "aucr_wt_predicted": 2.62,
+        "aucr_variant_predicted": 4.32
+      },
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_02_af",
+        "open_hazards_flagged": [
+          "H-LTC-02"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "0707ea643554a993aaead53f",
+        "verified": true
+      },
+      "smr_recommendation": "Flag H-LTC-02 narrow-therapeutic-index S-Warfarin bleed surge; urgent Anticoagulation Clinic review for empirical 50% dose reduction and 48h repeat INR."
+    },
+    {
+      "ltc_id": "LTC_03_HYPERTENSION",
+      "ltc_number": 3,
+      "condition_name": "Hypertension (NCL PCN Outcome #23)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_10763",
+      "house_of_care_stage": "Stage 2: Check & Test Biomarker Triage",
+      "pdb_id": "1O86",
+      "fcidump_relpath": "opencyp_ftqc/fcidump/ACE_1O86_LPR_Zn2_QMMM_CAS12e10o_def2SVP.fcidump.gz",
+      "fcidump_sha256_verified": "5b1fdcede7e4d65fd7e36a705a65304698caa9e493e43d587b94dc6d38e724e4",
+      "jev_latency_ms": 542.09,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.02,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.96,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.02,
+        "p_species_or_schedule_defined": 0.99,
+        "selected_biomarker_span": "131/79 mmHg",
+        "expected_biomarker_span": "131/79 mmHg",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "closed_shell_main_group_or_d10_binding",
+        "p_selected_mechanism_min_fwd_rev": 1.0,
+        "p_mechanism_companion": 0.98,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2220,
+          "output_tokens": 408
+        }
+      },
+      "classical_floor": {
+        "summary": "NONE \u2014 Closed-shell 3d10 Zn2+ ACE (1O86): |RCCSD(T) - FCI| = 0.00566 mHa (280x inside 1.6 mHa chemical accuracy)",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_I_II_CLASSICAL_EXACT_SUFFICIENT",
+        "era": "ERA_I",
+        "logical_qubits_required": 0,
+        "quantum_advantage_claimed": false,
+        "solver_dispatch": "PYSCF_SINGLE_REFERENCE_RCCSDS_T"
+      },
+      "expected_cqa_tier": "ERA_I_II_CLASSICAL_EXACT_SUFFICIENT",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": null,
+      "pbpk_aucr": null,
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_03_hypertension",
+        "open_hazards_flagged": [],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "8215775257a5a4be0cdc8dd6",
+        "verified": true
+      },
+      "smr_recommendation": "NCL Outcome #23 home BP target (<135/85 mmHg) achieved; reject quantum dispatch (classical RCCSD(T) exact); continue Lisinopril 20mg."
+    },
+    {
+      "ltc_id": "LTC_04_T2D",
+      "ltc_number": 4,
+      "condition_name": "Type 2 Diabetes (Cardiometabolic-Renal)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_9352",
+      "house_of_care_stage": "Stage 3: Polypharmacy & Botanical Safety Gate",
+      "pdb_id": null,
+      "fcidump_relpath": null,
+      "fcidump_sha256_verified": null,
+      "jev_latency_ms": 433.38,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.02,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.96,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.88,
+        "p_species_or_schedule_defined": 0.02,
+        "selected_biomarker_span": "HbA1c 61 mmol/mol",
+        "expected_biomarker_span": "HbA1c 61 mmol/mol",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "closed_shell_main_group_or_d10_binding",
+        "p_selected_mechanism_min_fwd_rev": 0.48,
+        "p_mechanism_companion": 0.24,
+        "mechanism_option_order_invariant": false,
+        "usage": {
+          "input_tokens": 2220,
+          "output_tokens": 407
+        }
+      },
+      "classical_floor": {
+        "summary": "ILL-POSED HAMILTONIAN \u2014 Unlabelled botanical tea has undefined molecular species/stoichiometry; zero synthetic integrals fabricated",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "SAFETY_TIER_1_ABSTAIN_PHARMACIST_SMR",
+        "era": "SAFETY_ABSTAIN",
+        "logical_qubits_required": 0,
+        "quantum_advantage_claimed": false,
+        "solver_dispatch": "ESCALATE_HUMAN_CLINICAL_PHARMACIST_SMR"
+      },
+      "expected_cqa_tier": "SAFETY_TIER_1_ABSTAIN_PHARMACIST_SMR",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": null,
+      "pbpk_aucr": null,
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_04_t2d",
+        "open_hazards_flagged": [
+          "H-LTC-02"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "c4cce7a3ac3ee861040c816a",
+        "verified": true
+      },
+      "smr_recommendation": "Calibrated ABSTAIN on quantum chemistry; immediately flag H-LTC-02 nephrotoxic triple-whammy (stop OTC Ibuprofen on Ramipril+Dapagliflozin) and route herbal review to Clinical Pharmacist SMR."
+    },
+    {
+      "ltc_id": "LTC_05_T1D",
+      "ltc_number": 5,
+      "condition_name": "Type 1 Diabetes (Mandated High Risk + Complex)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_9744",
+      "house_of_care_stage": "Stage 1: Proactive Call-and-Recall & Equity",
+      "pdb_id": null,
+      "fcidump_relpath": null,
+      "fcidump_sha256_verified": null,
+      "jev_latency_ms": 399.56,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.02,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.96,
+        "p_h_ltc_01_interpreter": 0.98,
+        "p_h_ltc_02_polypharmacy_ddi": 0.02,
+        "p_species_or_schedule_defined": 0.98,
+        "selected_biomarker_span": "HbA1c 68 mmol/mol",
+        "expected_biomarker_span": "HbA1c 68 mmol/mol",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "combinatorial_clinic_scheduling",
+        "p_selected_mechanism_min_fwd_rev": 1.0,
+        "p_mechanism_companion": 0.85,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2233,
+          "output_tokens": 406
+        }
+      },
+      "classical_floor": {
+        "summary": "NONE \u2014 Sparse 144-variable PCN Call-and-Recall MILP solved to proven global optimality by SciPy HiGHS in < 5 ms",
+        "highs_milp_live_ms": 12.547,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_I_II_CLASSICAL_EXACT_SUFFICIENT",
+        "era": "ERA_I",
+        "logical_qubits_required": 0,
+        "quantum_advantage_claimed": false,
+        "solver_dispatch": "SCIPY_HIGHS_MCCORMICK_MILP_UNDER_25MS"
+      },
+      "expected_cqa_tier": "ERA_I_II_CLASSICAL_EXACT_SUFFICIENT",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": null,
+      "pbpk_aucr": null,
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_05_t1d",
+        "open_hazards_flagged": [
+          "H-LTC-01"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "8109b66a1d7cc62c3e4f4bf7",
+        "verified": true
+      },
+      "smr_recommendation": "Schedule Q1/Q2 pre-winter High+Complex MDT slot via exact classical HiGHS MILP (<5 ms) with mandatory booked Bengali interpreter (H-LTC-01 safeguard)."
+    },
+    {
+      "ltc_id": "LTC_06_CKD",
+      "ltc_number": 6,
+      "condition_name": "Chronic Kidney Disease (Stage 3b Cardiorenal)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_557",
+      "house_of_care_stage": "Stage 3: Cardiorenal-Hepatic MDT Digital Twin",
+      "pdb_id": "3NXU",
+      "fcidump_relpath": "opencyp_ftqc/fcidump/CYP3A4_3NXU_RIT_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "fcidump_sha256_verified": "9c59075f5f2c9970db932d9310ce2030f870bfc646b91965dfcbdab6ad6276d6",
+      "jev_latency_ms": 180.55,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.02,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.96,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.97,
+        "p_species_or_schedule_defined": 0.98,
+        "selected_biomarker_span": "eGFR 36 mL/min",
+        "expected_biomarker_span": "eGFR 36 mL/min",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "open_shell_p450_hat_or_heme_lock",
+        "p_selected_mechanism_min_fwd_rev": 1.0,
+        "p_mechanism_companion": 0.97,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2277,
+          "output_tokens": 412
+        }
+      },
+      "classical_floor": {
+        "summary": "CYP3A4 3NXU +17.34 mHa (+10.88 kcal/mol) RCCSD(T) error; 18-spin exact Krylov Liouvillian requires 29.96 TiB (>1 TiB node RAM wall)",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": 30.0
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+        "era": "ERA_IV",
+        "logical_qubits_required": 141,
+        "quantum_advantage_claimed": true,
+        "solver_dispatch": "OPENCYP_FTQC_PROCRUSTES_DELTA_DF_QPE"
+      },
+      "expected_cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": {
+        "logical_qubits": 141,
+        "procrustes_delta_df_compression_x": 3.46,
+        "code_distance_d_compressed": 17,
+        "physical_qubits_uncompressed": 129472,
+        "physical_qubits_delta_df_compressed": 129472,
+        "estimated_qpu_wall_clock_s": 5306.3562
+      },
+      "pbpk_aucr": {
+        "aucr_wt_predicted": 9.87,
+        "aucr_variant_predicted": 13.77
+      },
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_06_ckd",
+        "open_hazards_flagged": [
+          "H-LTC-02"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "834ecab5d782bf73eb3c0701",
+        "verified": true
+      },
+      "smr_recommendation": "Contraindicated H-LTC-02 Finerenone + strong CYP3A4 inhibitor lock (extreme hyperkalaemia risk at eGFR 36); hold co-administration and refer Renal/Pharmacist MDT."
+    },
+    {
+      "ltc_id": "LTC_07_NAFLD_MASLD",
+      "ltc_number": 7,
+      "condition_name": "NAFLD / MASLD (Fibrosis-F2 Steatohepatitis)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_0080208",
+      "house_of_care_stage": "Stage 3: Hepatic Microenvironment & DDI",
+      "pdb_id": "5TE8",
+      "fcidump_relpath": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "fcidump_sha256_verified": "d0d065aa296a3cbeed341b1012cfb98bcfa5390fa9afd3395518153cb45f42c8",
+      "jev_latency_ms": 459.49,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.02,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.96,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.65,
+        "p_species_or_schedule_defined": 0.99,
+        "selected_biomarker_span": "FIB-4 2.18",
+        "expected_biomarker_span": "FIB-4 2.18",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "open_shell_p450_hat_or_heme_lock",
+        "p_selected_mechanism_min_fwd_rev": 1.0,
+        "p_mechanism_companion": 0.98,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2262,
+          "output_tokens": 412
+        }
+      },
+      "classical_floor": {
+        "summary": "CYP3A4 5TE8 -13.97 kcal/mol QM/MM protein field shift vs vacuum; +26.18 mHa (+16.43 kcal/mol) gas-phase RCCSD(T) barrier error",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+        "era": "ERA_IV",
+        "logical_qubits_required": 141,
+        "quantum_advantage_claimed": true,
+        "solver_dispatch": "OPENCYP_FTQC_PROCRUSTES_DELTA_DF_QPE"
+      },
+      "expected_cqa_tier": "ERA_IV_OPENCYP_FTQC_ADVANTAGE",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": {
+        "logical_qubits": 141,
+        "procrustes_delta_df_compression_x": 2.56,
+        "code_distance_d_compressed": 17,
+        "physical_qubits_uncompressed": 129472,
+        "physical_qubits_delta_df_compressed": 129472,
+        "estimated_qpu_wall_clock_s": 7171.875
+      },
+      "pbpk_aucr": {
+        "aucr_wt_predicted": 1.36,
+        "aucr_variant_predicted": 2.43
+      },
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_07_nafld_masld",
+        "open_hazards_flagged": [
+          "H-LTC-02"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "88503fa58684edfbc4d226d0",
+        "verified": true
+      },
+      "smr_recommendation": "Flag compounded MASLD F2 + CYP3A4*22 Midazolam oversedation hazard (H-LTC-02); advise endoscopy team 50% Midazolam titration cap and monitor statin CK."
+    },
+    {
+      "ltc_id": "LTC_08_COPD",
+      "ltc_number": 8,
+      "condition_name": "COPD (GOLD-3 Infective Exacerbation)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_3083",
+      "house_of_care_stage": "Stage 3: Exacerbation Rescue Pack & Statin Gate",
+      "pdb_id": "1TQN",
+      "fcidump_relpath": null,
+      "fcidump_sha256_verified": null,
+      "jev_latency_ms": 583.91,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.03,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.94,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.94,
+        "p_species_or_schedule_defined": 0.99,
+        "selected_biomarker_span": "SpO2 93%",
+        "expected_biomarker_span": "SpO2 93%",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "open_shell_heme_tdi_complex",
+        "p_selected_mechanism_min_fwd_rev": 0.99,
+        "p_mechanism_companion": 0.97,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2230,
+          "output_tokens": 404
+        }
+      },
+      "classical_floor": {
+        "summary": "Resting CYP3A4 Compound I (1TQN) breaks RCCSD(T) doublet/quartet spin gap by +47.73 mHa (+29.95 kcal/mol); exact FCI > 1 TiB at M >= 22",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_III_EARLY_ACTIVE_FTQC_CROSSOVER",
+        "era": "ERA_III",
+        "logical_qubits_required": 75,
+        "quantum_advantage_claimed": true,
+        "solver_dispatch": "ACTIVE_QEC_DF_QPE_OR_LINDBLADIAN_SIMULATION"
+      },
+      "expected_cqa_tier": "ERA_III_EARLY_ACTIVE_FTQC_CROSSOVER",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": {
+        "logical_qubits": 75,
+        "procrustes_delta_df_compression_x": 3.12,
+        "code_distance_d_compressed": 15,
+        "physical_qubits_uncompressed": 72250,
+        "physical_qubits_delta_df_compressed": 56250,
+        "estimated_qpu_wall_clock_s": 1514.4232
+      },
+      "pbpk_aucr": {
+        "aucr_wt_predicted": 8.63,
+        "aucr_variant_predicted": 12.05
+      },
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_08_copd",
+        "open_hazards_flagged": [
+          "H-LTC-02"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "02bc1c93eb06646f4d90bf62",
+        "verified": true
+      },
+      "smr_recommendation": "Mandatory H-LTC-02 Simvastatin suspension during Clarithromycin course (12.2x *22 rhabdomyolysis surge); resume 48h post-antibiotic completion."
+    },
+    {
+      "ltc_id": "LTC_09_ADULT_ASTHMA",
+      "ltc_number": 9,
+      "condition_name": "Adult Asthma (NCL Green Plan Net-Zero MART)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_2841",
+      "house_of_care_stage": "Stage 3: Net-Zero MART & Corticosteroid DDI",
+      "pdb_id": "1TQN",
+      "fcidump_relpath": null,
+      "fcidump_sha256_verified": null,
+      "jev_latency_ms": 217.88,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.02,
+        "acute_red_flag_band": "NO",
+        "acute_red_flag_confidence": 0.96,
+        "p_h_ltc_01_interpreter": 0.02,
+        "p_h_ltc_02_polypharmacy_ddi": 0.96,
+        "p_species_or_schedule_defined": 0.98,
+        "selected_biomarker_span": "PEF 86%",
+        "expected_biomarker_span": "PEF 86%",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "hybrid_milp_mart_plus_open_shell_heme",
+        "p_selected_mechanism_min_fwd_rev": 0.99,
+        "p_mechanism_companion": 0.96,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2215,
+          "output_tokens": 416
+        }
+      },
+      "classical_floor": {
+        "summary": "HYBRID SPLIT \u2014 8-var Net-Zero MART 3-body HUBO solved in <5 ms by classical HiGHS MILP (0L), whereas Azole-Heme Fe-N lock breaks single-ref (+17.34 mHa -> 75L Era III)",
+        "highs_milp_live_ms": 12.547,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "ERA_III_HYBRID_MILP_PLUS_ACTIVE_FTQC",
+        "era": "ERA_I_PLUS_ERA_III",
+        "logical_qubits_required": 75,
+        "quantum_advantage_claimed": true,
+        "solver_dispatch": "SPLIT_HIGHS_MILP_SCHEDULING_AND_75L_DF_QPE_HEME"
+      },
+      "expected_cqa_tier": "ERA_III_HYBRID_MILP_PLUS_ACTIVE_FTQC",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": {
+        "logical_qubits": 75,
+        "procrustes_delta_df_compression_x": 3.46,
+        "code_distance_d_compressed": 15,
+        "physical_qubits_uncompressed": 72250,
+        "physical_qubits_delta_df_compressed": 56250,
+        "estimated_qpu_wall_clock_s": 1365.6082
+      },
+      "pbpk_aucr": {
+        "aucr_wt_predicted": 5.89,
+        "aucr_variant_predicted": 8.16
+      },
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_09_adult_asthma",
+        "open_hazards_flagged": [
+          "H-LTC-02"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "c569bd8c3b429c288de21de9",
+        "verified": true
+      },
+      "smr_recommendation": "Approve Net-Zero DPI MART transition classically (<5 ms), but flag H-LTC-02 iatrogenic Cushing's / adrenal suppression risk from Azole + Budesonide; switch antifungal or ENT review."
+    },
+    {
+      "ltc_id": "LTC_10_CYP_ASTHMA",
+      "ltc_number": 10,
+      "condition_name": "CYP Asthma (Aged 0-17, 48h Post-Attack Mandate)",
+      "doid_iri": "http://purl.obolibrary.org/obo/DOID_2841",
+      "house_of_care_stage": "Stage 0: Urgent Clinical Red-Flag Escalation",
+      "pdb_id": null,
+      "fcidump_relpath": null,
+      "fcidump_sha256_verified": null,
+      "jev_latency_ms": 325.83,
+      "jev_primitives": {
+        "model": "jev-1.14.0",
+        "p_acute_red_flag": 0.98,
+        "acute_red_flag_band": "YES",
+        "acute_red_flag_confidence": 0.96,
+        "p_h_ltc_01_interpreter": 0.97,
+        "p_h_ltc_02_polypharmacy_ddi": 0.03,
+        "p_species_or_schedule_defined": 0.97,
+        "selected_biomarker_span": "SpO2 89%",
+        "expected_biomarker_span": "SpO2 89%",
+        "span_selection_passed": true,
+        "span_option_order_invariant": true,
+        "selected_mechanism": "combinatorial_clinic_scheduling",
+        "p_selected_mechanism_min_fwd_rev": 0.9,
+        "p_mechanism_companion": 0.19,
+        "mechanism_option_order_invariant": true,
+        "usage": {
+          "input_tokens": 2209,
+          "output_tokens": 406
+        }
+      },
+      "classical_floor": {
+        "summary": "ALL SOLVERS BYPASSED (<120 ms) \u2014 Life-threatening acute pediatric asthma (SpO2 89%, silent chest) + child sibling translation hazard",
+        "highs_milp_live_ms": null,
+        "krylov_18spin_ram_tib": null
+      },
+      "cqa_routing": {
+        "cqa_tier": "SAFETY_TIER_0_URGENT_RED_FLAG_BYPASS",
+        "era": "SAFETY_BYPASS",
+        "logical_qubits_required": 0,
+        "quantum_advantage_claimed": false,
+        "solver_dispatch": "IMMEDIATE_999_OR_CLINICIAN_TRIAGE"
+      },
+      "expected_cqa_tier": "SAFETY_TIER_0_URGENT_RED_FLAG_BYPASS",
+      "cqa_routing_passed": true,
+      "ftqc_resource_estimate": null,
+      "pbpk_aucr": null,
+      "fhir_ml_dsa_65": {
+        "resource_id": "ncl-cqa-ltc_10_cyp_asthma",
+        "open_hazards_flagged": [
+          "H-LTC-01",
+          "H-LTC-03"
+        ],
+        "signature_bytes": 3309,
+        "signature_sha256_prefix": "fb8ee00bf3161104304b20ac",
+        "verified": true
+      },
+      "smr_recommendation": "IMMEDIATE 999 BLUE-LIGHT AMBULANCE / PAEDIATRIC ED ESCALATION (H-LTC-03); connect professional Somali interpreter immediately (H-LTC-01); book Tier 3 48h/6wk follow-up post-stabilisation."
+    }
+  ],
+  "twelve_claim_citation_audit": {
+    "total_claims_audited": 12,
+    "option_order_invariance_rate": 1.0,
+    "citation_accuracy_rate": 1.0,
+    "verdicts": [
+      {
+        "claim_id": "CLAIM_LTC_01_CVD",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.94,
+        "reversed_probability": 0.92,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_02_AF",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.87,
+        "reversed_probability": 0.92,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_03_HYPERTENSION",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.92,
+        "reversed_probability": 0.95,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_04_T2D",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.92,
+        "reversed_probability": 0.93,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_05_T1D",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.92,
+        "reversed_probability": 0.9,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_06_CKD",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.92,
+        "reversed_probability": 0.97,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_07_NAFLD_MASLD",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.95,
+        "reversed_probability": 0.95,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_08_COPD",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.89,
+        "reversed_probability": 0.93,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_09_ADULT_ASTHMA",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.95,
+        "reversed_probability": 0.97,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_LTC_10_CYP_ASTHMA",
+        "selected_verdict": "supported",
+        "expected_verdict": "supported",
+        "forward_probability": 0.93,
+        "reversed_probability": 0.97,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "TRAP_11_HTN_FAKE_QUANTUM_ADVANTAGE",
+        "selected_verdict": "contradicted",
+        "expected_verdict": "contradicted",
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "TRAP_12_T1D_FAKE_PHYSICAL_QPU",
+        "selected_verdict": "contradicted",
+        "expected_verdict": "contradicted",
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "option_order_invariant": true,
+        "passed": true
+      }
+    ]
+  },
+  "figure10_multimodal_box_qa": {
+    "figure_file": "samskrift/figures/figure10_ten_ltc_cqa_roadmap.png",
+    "prepared_dimensions_px": [
+      1568,
+      713
+    ],
+    "p_two_panels_visible": 0.98,
+    "spacing_and_legibility_score_0_to_2": 1.3,
+    "left_panel_box": {
+      "left": 0.09,
+      "top": 0.12,
+      "right": 0.42,
+      "bottom": 0.91,
+      "confidence": 0.51
+    },
+    "right_panel_box": {
+      "left": 0.6,
+      "top": 0.14,
+      "right": 0.95,
+      "bottom": 0.91,
+      "confidence": 0.21
+    },
+    "sandbox_visual_qa_only": true,
+    "passed": true
+  },
+  "receipt_sha256": "2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451"
+}
