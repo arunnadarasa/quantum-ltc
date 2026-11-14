@@ -11,8 +11,9 @@ const BOOKMARKS = [
   { label: "p.12 · OpenCYP-FTQC QM/MM & 12-Regimen PBPK", page: 12 },
   { label: "p.14 · 5-Seed Modal QLTCMLM & Barren Plateau", page: 14 },
   { label: "p.15 · Jev 1.14, 10-LTC CQA & OpenCYP v1.1", page: 15 },
-  { label: "p.17 · 10-LTC CQA & Empirical THC Figures", page: 17 },
-  { label: "p.18 · 69-Node KG & 49 Verified Refs", page: 18 }
+  { label: "p.16 · §6.4 Clinical Quantum World Model (CQWM)", page: 16 },
+  { label: "p.18 · 70-Node KG & Conclusion", page: 18 },
+  { label: "p.19 · Fig. 12 CQWM v0.1 & 49 Verified Refs", page: 19 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -114,9 +115,9 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--20},
+  pages   = {1--21},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 12 SHA-256-sealed receipts + 69-node KG across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.1 (13 QM/MM FCIDUMPs + Empirical THC across PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 13 SHA-256-sealed receipts + 70-node KG across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.1 (13 QM/MM FCIDUMPs + Empirical THC across PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), Clinical Quantum World Model (CQWM v0.1), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
 }`,
   opencyp: `@misc{nadarasa2026opencypftqc,
   title        = {{OpenCYP-FTQC v1.1}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP} \\& Empirical {THC} Archive and 12-Regimen {ChEMBL\\_37} {PBPK} Benchmark},
@@ -213,8 +214,8 @@ async function initPdfReader() {
   const DOC = {
     pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
     pagesDir: "pages",
-    totalPages: 20,
-    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (20 Pages)"
+    totalPages: 21,
+    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (21 Pages)"
   };
 
   let zoom = 1.0;

@@ -1037,6 +1037,13 @@
   ],
   "receipts_summary": [
     {
+      "file": "clinical_quantum_world_model_receipt.json",
+      "sha256": "7b828614e76a26d46daa1f069db15d574b44e0b66c34e507887f90303d8ce0f5",
+      "platforms": "<code>CQWM v0.1</code>: Inline <code>jev-1.14.0</code> Gate, Continuous-Time RK4 <code>PBPK-MBI</code> Eyring Rollouts, 6-Qubit Non-Markovian Quantum Comb (<code>Kashefi A01c</code>), <code>ML-DSA-65</code>",
+      "metrics": "<code>6/6</code> vignette gates; <code>ACE 1O86</code> <code>0L</code> RMSE <code>0.0012 mmHg</code>; catches Day-5 washout spikes (<code>5.96\u00d7</code> COPD / <code>3.62\u00d7</code> CKD \u2192 <code>\u22641.05\u00d7</code> safe); Comb <code>D_tr = 0.814</code>, <code>I(S:M) = 2.67 bits</code>",
+      "floor": "0L ACE 1O86 ODE + Emergency/Abstain Gates"
+    },
+    {
       "file": "opencyp_ftqc_v1_1_thc_ltcs_receipt.json",
       "sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6",
       "platforms": "<code>OpenCYP-FTQC v1.1</code> (<code>13 .fcidump.gz</code> + <code>.npz</code>), Empirical <code>THC</code> &amp; Cayley <code>SO(M) \u0394-THC</code>, Matched <code>S=0</code> <code>COPD CLR-MIC</code>, <code>jev-1.14.0</code>",
@@ -1122,14 +1129,14 @@
     },
     {
       "file": "quantum_ltc_knowledge_graph.json",
-      "sha256": "456df37bc99a50c94858825f5477d7cf0fa54f6444770ee0dc7737f22e15befc",
-      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, SNOMED CT, UniProtKB, RCSB PDB (<code>7 structures</code>), <code>OpenCYP-FTQC v1.1</code>, <code>Jev 1.14</code>, JSON-LD 1.1",
-      "metrics": "<code>69</code> nodes, <code>172</code> directed semantic triples across 8 ontology layers (1 connected component)",
+      "sha256": "ec507eb4fca3b93d05b51d9859b4ecb4eac62fcfaa460ef4a5c314e5c354b7d6",
+      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, SNOMED CT, UniProtKB, RCSB PDB (<code>7 structures</code>), <code>OpenCYP-FTQC v1.1</code>, <code>CQWM v0.1</code>, <code>Jev 1.14</code>, JSON-LD 1.1",
+      "metrics": "<code>70</code> nodes, <code>184</code> directed semantic triples across 8 ontology layers (1 connected component)",
       "floor": "Live OLS4 & ChEMBL37 verified"
     }
   ],
   "knowledge_graph": {
-    "receipt_sha256": "456df37bc99a50c94858825f5477d7cf0fa54f6444770ee0dc7737f22e15befc",
+    "receipt_sha256": "ec507eb4fca3b93d05b51d9859b4ecb4eac62fcfaa460ef4a5c314e5c354b7d6",
     "categories": [
       {
         "id": "NCL_LTC_Condition",
@@ -1180,7 +1187,7 @@
         "Molecular_Target": 15,
         "Quantum_Primitive": 10,
         "Logical_Era": 4,
-        "Platform_Receipt": 14,
+        "Platform_Receipt": 15,
         "DCB0129_Hazard": 6
       }
     },
@@ -1194,11 +1201,11 @@
         "metric": "CHD, stroke/TIA, PAD, and heart failure across NCL's 5 boroughs. [ncl_lcs_v6_scope: Core 9 LTCs \u00b7 default_tier: High / Complex]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 8,
-        "total_degree": 8,
-        "pagerank": 0.01071,
-        "betweenness_centrality": 0.0495,
-        "closeness_centrality": 0.4304
+        "out_degree": 9,
+        "total_degree": 9,
+        "pagerank": 0.012281,
+        "betweenness_centrality": 0.0483,
+        "closeness_centrality": 0.4395
       },
       {
         "id": "ltc_af",
@@ -1211,9 +1218,9 @@
         "in_degree": 0,
         "out_degree": 6,
         "total_degree": 6,
-        "pagerank": 0.008642,
-        "betweenness_centrality": 0.0215,
-        "closeness_centrality": 0.3908
+        "pagerank": 0.00813,
+        "betweenness_centrality": 0.0181,
+        "closeness_centrality": 0.392
       },
       {
         "id": "ltc_htn",
@@ -1224,11 +1231,11 @@
         "metric": "Anchored by NCL PCN Outcome #23 (<140/90 clinic, <135/85 home for age <80; <150/90 for >=80). [target_bp_under80: 140/90 mmHg \u00b7 target_bp_home: 135/85 mmHg]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 6,
-        "total_degree": 6,
-        "pagerank": 0.009336,
-        "betweenness_centrality": 0.0508,
-        "closeness_centrality": 0.3886
+        "out_degree": 7,
+        "total_degree": 7,
+        "pagerank": 0.011016,
+        "betweenness_centrality": 0.0551,
+        "closeness_centrality": 0.4107
       },
       {
         "id": "ltc_t2d",
@@ -1239,11 +1246,11 @@
         "metric": "Cardiometabolic insulin resistance managed via HbA1c, uACR, SGLT2i, and GLP-1RA. [biomarkers: HbA1c, eGFR, uACR]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 6,
-        "total_degree": 6,
-        "pagerank": 0.010044,
-        "betweenness_centrality": 0.0252,
-        "closeness_centrality": 0.3799
+        "out_degree": 7,
+        "total_degree": 7,
+        "pagerank": 0.011627,
+        "betweenness_centrality": 0.0273,
+        "closeness_centrality": 0.392
       },
       {
         "id": "ltc_t1d",
@@ -1256,9 +1263,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.007847,
-        "betweenness_centrality": 0.0103,
-        "closeness_centrality": 0.3842
+        "pagerank": 0.007454,
+        "betweenness_centrality": 0.008,
+        "closeness_centrality": 0.3855
       },
       {
         "id": "ltc_ckd",
@@ -1269,11 +1276,11 @@
         "metric": "Progressive nephron loss tracked by uACR & eGFR; early SGLT2i/ACEi averts high-carbon dialysis. [biomarkers: uACR, eGFR \u00b7 green_plan_priority: Prevent dialysis]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 6,
-        "total_degree": 6,
-        "pagerank": 0.008989,
-        "betweenness_centrality": 0.0205,
-        "closeness_centrality": 0.4
+        "out_degree": 7,
+        "total_degree": 7,
+        "pagerank": 0.010668,
+        "betweenness_centrality": 0.0206,
+        "closeness_centrality": 0.4083
       },
       {
         "id": "ltc_masld",
@@ -1286,9 +1293,9 @@
         "in_degree": 0,
         "out_degree": 6,
         "total_degree": 6,
-        "pagerank": 0.011864,
-        "betweenness_centrality": 0.0473,
-        "closeness_centrality": 0.3757
+        "pagerank": 0.011421,
+        "betweenness_centrality": 0.0448,
+        "closeness_centrality": 0.3812
       },
       {
         "id": "ltc_copd",
@@ -1299,11 +1306,11 @@
         "metric": "Chronic airflow limitation requiring winter exacerbation prevention & low-GWP inhaler review. [seasonality: Pre-winter Q2/Q3 priority]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 6,
-        "total_degree": 6,
-        "pagerank": 0.01085,
-        "betweenness_centrality": 0.0358,
-        "closeness_centrality": 0.3716
+        "out_degree": 7,
+        "total_degree": 7,
+        "pagerank": 0.01243,
+        "betweenness_centrality": 0.042,
+        "closeness_centrality": 0.4035
       },
       {
         "id": "ltc_asthma",
@@ -1314,11 +1321,11 @@
         "metric": "Mandates 48-hour post-attack review (2 working days) & 6-week full review by Tier 2/3 clinicians + SABA-free MART. [post_attack_sla: 48 hours (2 working days) \u00b7 followup_sla: 6 weeks]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 1,
-        "out_degree": 7,
-        "total_degree": 8,
-        "pagerank": 0.013942,
-        "betweenness_centrality": 0.0622,
-        "closeness_centrality": 0.3953
+        "out_degree": 8,
+        "total_degree": 9,
+        "pagerank": 0.014993,
+        "betweenness_centrality": 0.0505,
+        "closeness_centrality": 0.4107
       },
       {
         "id": "stage_call_recall",
@@ -1331,9 +1338,9 @@
         "in_degree": 10,
         "out_degree": 2,
         "total_degree": 12,
-        "pagerank": 0.019382,
-        "betweenness_centrality": 0.0854,
-        "closeness_centrality": 0.4172
+        "pagerank": 0.018795,
+        "betweenness_centrality": 0.0785,
+        "closeness_centrality": 0.4182
       },
       {
         "id": "stage_1_check_test",
@@ -1346,9 +1353,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.025751,
-        "betweenness_centrality": 0.1216,
-        "closeness_centrality": 0.4331
+        "pagerank": 0.025058,
+        "betweenness_centrality": 0.1113,
+        "closeness_centrality": 0.434
       },
       {
         "id": "stage_2_mdt_review",
@@ -1361,9 +1368,9 @@
         "in_degree": 5,
         "out_degree": 3,
         "total_degree": 8,
-        "pagerank": 0.015586,
-        "betweenness_centrality": 0.0939,
-        "closeness_centrality": 0.4121
+        "pagerank": 0.01571,
+        "betweenness_centrality": 0.0834,
+        "closeness_centrality": 0.4157
       },
       {
         "id": "stage_3_pcsp",
@@ -1376,9 +1383,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.021215,
-        "betweenness_centrality": 0.0717,
-        "closeness_centrality": 0.3736
+        "pagerank": 0.020679,
+        "betweenness_centrality": 0.0674,
+        "closeness_centrality": 0.377
       },
       {
         "id": "stage_4_continuity",
@@ -1391,9 +1398,9 @@
         "in_degree": 2,
         "out_degree": 2,
         "total_degree": 4,
-        "pagerank": 0.015204,
-        "betweenness_centrality": 0.026,
-        "closeness_centrality": 0.3333
+        "pagerank": 0.014842,
+        "betweenness_centrality": 0.0251,
+        "closeness_centrality": 0.3366
       },
       {
         "id": "mol_ace",
@@ -1406,9 +1413,9 @@
         "in_degree": 5,
         "out_degree": 1,
         "total_degree": 6,
-        "pagerank": 0.011572,
-        "betweenness_centrality": 0.0352,
-        "closeness_centrality": 0.3636
+        "pagerank": 0.011456,
+        "betweenness_centrality": 0.0298,
+        "closeness_centrality": 0.369
       },
       {
         "id": "mol_pdb_1o86",
@@ -1421,9 +1428,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.016708,
-        "betweenness_centrality": 0.0232,
-        "closeness_centrality": 0.3542
+        "pagerank": 0.015252,
+        "betweenness_centrality": 0.0203,
+        "closeness_centrality": 0.3594
       },
       {
         "id": "mol_slc5a2",
@@ -1436,9 +1443,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.010705,
-        "betweenness_centrality": 0.0196,
-        "closeness_centrality": 0.3417
+        "pagerank": 0.010045,
+        "betweenness_centrality": 0.0113,
+        "closeness_centrality": 0.345
       },
       {
         "id": "mol_glp1r",
@@ -1451,9 +1458,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.007759,
-        "betweenness_centrality": 0.0035,
-        "closeness_centrality": 0.3091
+        "pagerank": 0.007671,
+        "betweenness_centrality": 0.0028,
+        "closeness_centrality": 0.3151
       },
       {
         "id": "mol_adrb2",
@@ -1466,9 +1473,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.007157,
-        "betweenness_centrality": 0.0032,
-        "closeness_centrality": 0.3223
+        "pagerank": 0.006889,
+        "betweenness_centrality": 0.0022,
+        "closeness_centrality": 0.3255
       },
       {
         "id": "mol_il6",
@@ -1481,9 +1488,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.009975,
-        "betweenness_centrality": 0.0241,
-        "closeness_centrality": 0.3656
+        "pagerank": 0.009134,
+        "betweenness_centrality": 0.0132,
+        "closeness_centrality": 0.367
       },
       {
         "id": "mol_angii_1n9v",
@@ -1496,9 +1503,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.006369,
-        "betweenness_centrality": 0.0161,
-        "closeness_centrality": 0.3238
+        "pagerank": 0.006153,
+        "betweenness_centrality": 0.0138,
+        "closeness_centrality": 0.327
       },
       {
         "id": "mol_pnpla3",
@@ -1511,9 +1518,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.003867,
+        "pagerank": 0.003773,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2742
+        "closeness_centrality": 0.2771
       },
       {
         "id": "mol_cyp3a4",
@@ -1526,9 +1533,9 @@
         "in_degree": 5,
         "out_degree": 4,
         "total_degree": 9,
-        "pagerank": 0.017217,
-        "betweenness_centrality": 0.0679,
-        "closeness_centrality": 0.3953
+        "pagerank": 0.016939,
+        "betweenness_centrality": 0.0633,
+        "closeness_centrality": 0.3988
       },
       {
         "id": "mol_pdb_1tqn",
@@ -1541,9 +1548,9 @@
         "in_degree": 1,
         "out_degree": 3,
         "total_degree": 4,
-        "pagerank": 0.012655,
-        "betweenness_centrality": 0.0054,
-        "closeness_centrality": 0.3417
+        "pagerank": 0.011064,
+        "betweenness_centrality": 0.0048,
+        "closeness_centrality": 0.3467
       },
       {
         "id": "mol_pdb_5te8",
@@ -1556,9 +1563,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.019005,
-        "betweenness_centrality": 0.0088,
-        "closeness_centrality": 0.3523
+        "pagerank": 0.01691,
+        "betweenness_centrality": 0.0081,
+        "closeness_centrality": 0.3575
       },
       {
         "id": "mol_pdb_3nxu",
@@ -1571,9 +1578,9 @@
         "in_degree": 1,
         "out_degree": 3,
         "total_degree": 4,
-        "pagerank": 0.014524,
+        "pagerank": 0.012967,
         "betweenness_centrality": 0.0019,
-        "closeness_centrality": 0.3317
+        "closeness_centrality": 0.3399
       },
       {
         "id": "mol_pdb_4wnu",
@@ -1586,9 +1593,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.013429,
-        "betweenness_centrality": 0.0108,
-        "closeness_centrality": 0.3716
+        "pagerank": 0.012492,
+        "betweenness_centrality": 0.0095,
+        "closeness_centrality": 0.375
       },
       {
         "id": "mol_pdb_1r9o",
@@ -1601,9 +1608,9 @@
         "in_degree": 3,
         "out_degree": 3,
         "total_degree": 6,
-        "pagerank": 0.015137,
-        "betweenness_centrality": 0.0229,
-        "closeness_centrality": 0.3757
+        "pagerank": 0.014069,
+        "betweenness_centrality": 0.0199,
+        "closeness_centrality": 0.3791
       },
       {
         "id": "mol_muc5b",
@@ -1616,9 +1623,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.008014,
-        "betweenness_centrality": 0.0037,
-        "closeness_centrality": 0.3009
+        "pagerank": 0.007706,
+        "betweenness_centrality": 0.0036,
+        "closeness_centrality": 0.3094
       },
       {
         "id": "tx_acei_lisinopril",
@@ -1631,9 +1638,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009924,
-        "betweenness_centrality": 0.0391,
-        "closeness_centrality": 0.3452
+        "pagerank": 0.01036,
+        "betweenness_centrality": 0.0373,
+        "closeness_centrality": 0.3557
       },
       {
         "id": "tx_sglt2i",
@@ -1646,9 +1653,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.010774,
-        "betweenness_centrality": 0.0216,
-        "closeness_centrality": 0.3523
+        "pagerank": 0.010969,
+        "betweenness_centrality": 0.0179,
+        "closeness_centrality": 0.3613
       },
       {
         "id": "tx_mart_dpi",
@@ -1661,9 +1668,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.011807,
-        "betweenness_centrality": 0.0493,
-        "closeness_centrality": 0.3842
+        "pagerank": 0.011335,
+        "betweenness_centrality": 0.0427,
+        "closeness_centrality": 0.3833
       },
       {
         "id": "tx_pharmacist_smr",
@@ -1673,12 +1680,12 @@
         "external_id": "HUBO:x3 ()",
         "metric": "Structured Medication Review eliminating nephrotoxic ACEi+SGLT2i+NSAID acute kidney injury triple-whammy (+7.2 penalty). [cubic_synergy_K013: -3.9 \u00b7 triple_whammy_penalty_K016: 7.2]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
-        "in_degree": 0,
+        "in_degree": 1,
         "out_degree": 8,
-        "total_degree": 8,
-        "pagerank": 0.011892,
-        "betweenness_centrality": 0.066,
-        "closeness_centrality": 0.4096
+        "total_degree": 9,
+        "pagerank": 0.017903,
+        "betweenness_centrality": 0.0803,
+        "closeness_centrality": 0.4367
       },
       {
         "id": "tx_home_bp",
@@ -1691,9 +1698,9 @@
         "in_degree": 0,
         "out_degree": 1,
         "total_degree": 1,
-        "pagerank": 0.002932,
+        "pagerank": 0.002934,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2576
+        "closeness_centrality": 0.2634
       },
       {
         "id": "tx_vcse_sp",
@@ -1706,9 +1713,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.007001,
-        "betweenness_centrality": 0.0051,
-        "closeness_centrality": 0.2894
+        "pagerank": 0.006806,
+        "betweenness_centrality": 0.0047,
+        "closeness_centrality": 0.2899
       },
       {
         "id": "prim_p08",
@@ -1721,9 +1728,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.015275,
-        "betweenness_centrality": 0.0345,
-        "closeness_centrality": 0.3285
+        "pagerank": 0.014962,
+        "betweenness_centrality": 0.0338,
+        "closeness_centrality": 0.3286
       },
       {
         "id": "prim_a01d",
@@ -1736,9 +1743,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.018413,
-        "betweenness_centrality": 0.05,
-        "closeness_centrality": 0.3579
+        "pagerank": 0.018993,
+        "betweenness_centrality": 0.0469,
+        "closeness_centrality": 0.3632
       },
       {
         "id": "prim_p09",
@@ -1751,8 +1758,8 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.01418,
-        "betweenness_centrality": 0.0175,
+        "pagerank": 0.014021,
+        "betweenness_centrality": 0.0166,
         "closeness_centrality": 0.3317
       },
       {
@@ -1766,9 +1773,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.013197,
-        "betweenness_centrality": 0.0121,
-        "closeness_centrality": 0.3269
+        "pagerank": 0.01244,
+        "betweenness_centrality": 0.0081,
+        "closeness_centrality": 0.327
       },
       {
         "id": "prim_p20",
@@ -1779,11 +1786,11 @@
         "metric": "8-Rung Self-Calibrating MCMR Recall & CYP Asthma 48h/6wk Cadence Ladder \u2014 Contract: Models non-Markovian longitudinal memory across multi-step `project_z` interventions. [kind: procedural \u00b7 defining_paper: Quintino, Dong, Shimbo, Soeda, Murao (2019)]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 1,
-        "out_degree": 2,
-        "total_degree": 3,
-        "pagerank": 0.012043,
-        "betweenness_centrality": 0.0182,
-        "closeness_centrality": 0.3208
+        "out_degree": 3,
+        "total_degree": 4,
+        "pagerank": 0.013232,
+        "betweenness_centrality": 0.0276,
+        "closeness_centrality": 0.369
       },
       {
         "id": "prim_a01g",
@@ -1796,8 +1803,8 @@
         "in_degree": 1,
         "out_degree": 3,
         "total_degree": 4,
-        "pagerank": 0.018225,
-        "betweenness_centrality": 0.0328,
+        "pagerank": 0.017265,
+        "betweenness_centrality": 0.0283,
         "closeness_centrality": 0.3333
       },
       {
@@ -1811,9 +1818,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.013915,
-        "betweenness_centrality": 0.0136,
-        "closeness_centrality": 0.2906
+        "pagerank": 0.012537,
+        "betweenness_centrality": 0.0102,
+        "closeness_centrality": 0.2911
       },
       {
         "id": "prim_p22",
@@ -1824,11 +1831,11 @@
         "metric": "HQS `struqture-py` + `qoqo` Cardiorenal-Metabolic-Pulmonary Open-System Lindbladian \u2014 Contract: Classical Krylov Liouvillian hits O(4^{n_spin}) RAM wall (>1 TB at n_spin >= 19-20); dilated FTQC scales polynomially in n_spin. [kind: procedural \u00b7 defining_paper: Bacon, Childs, Chuang, Kempe, Leung, Zhou (2001)]",
         "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
         "in_degree": 2,
-        "out_degree": 2,
-        "total_degree": 4,
-        "pagerank": 0.019451,
-        "betweenness_centrality": 0.0324,
-        "closeness_centrality": 0.3285
+        "out_degree": 3,
+        "total_degree": 5,
+        "pagerank": 0.019453,
+        "betweenness_centrality": 0.0354,
+        "closeness_centrality": 0.3594
       },
       {
         "id": "prim_x03",
@@ -1841,9 +1848,9 @@
         "in_degree": 5,
         "out_degree": 5,
         "total_degree": 10,
-        "pagerank": 0.038746,
-        "betweenness_centrality": 0.0701,
-        "closeness_centrality": 0.3736
+        "pagerank": 0.034883,
+        "betweenness_centrality": 0.0614,
+        "closeness_centrality": 0.375
       },
       {
         "id": "prim_p04",
@@ -1856,9 +1863,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.015274,
-        "betweenness_centrality": 0.0194,
-        "closeness_centrality": 0.3009
+        "pagerank": 0.014526,
+        "betweenness_centrality": 0.0175,
+        "closeness_centrality": 0.3013
       },
       {
         "id": "era_i",
@@ -1871,9 +1878,9 @@
         "in_degree": 3,
         "out_degree": 1,
         "total_degree": 4,
-        "pagerank": 0.021116,
-        "betweenness_centrality": 0.0355,
-        "closeness_centrality": 0.3383
+        "pagerank": 0.020757,
+        "betweenness_centrality": 0.0313,
+        "closeness_centrality": 0.3382
       },
       {
         "id": "era_ii",
@@ -1886,9 +1893,9 @@
         "in_degree": 5,
         "out_degree": 1,
         "total_degree": 6,
-        "pagerank": 0.034052,
-        "betweenness_centrality": 0.0615,
-        "closeness_centrality": 0.3434
+        "pagerank": 0.031294,
+        "betweenness_centrality": 0.0513,
+        "closeness_centrality": 0.3485
       },
       {
         "id": "era_iii",
@@ -1901,9 +1908,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.030756,
-        "betweenness_centrality": 0.057,
-        "closeness_centrality": 0.356
+        "pagerank": 0.026469,
+        "betweenness_centrality": 0.0414,
+        "closeness_centrality": 0.3613
       },
       {
         "id": "era_iv",
@@ -1916,9 +1923,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.035944,
-        "betweenness_centrality": 0.0406,
-        "closeness_centrality": 0.3469
+        "pagerank": 0.031179,
+        "betweenness_centrality": 0.0355,
+        "closeness_centrality": 0.3485
       },
       {
         "id": "plat_nexus_helios",
@@ -1931,9 +1938,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.016037,
+        "pagerank": 0.014429,
         "betweenness_centrality": 0.0021,
-        "closeness_centrality": 0.2667
+        "closeness_centrality": 0.2828
       },
       {
         "id": "plat_haiqu",
@@ -1946,9 +1953,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.012291,
-        "betweenness_centrality": 0.002,
-        "closeness_centrality": 0.2906
+        "pagerank": 0.012353,
+        "betweenness_centrality": 0.0019,
+        "closeness_centrality": 0.2924
       },
       {
         "id": "plat_jij_highs",
@@ -1961,7 +1968,7 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.007868,
+        "pagerank": 0.007721,
         "betweenness_centrality": 0.0,
         "closeness_centrality": 0.2482
       },
@@ -1976,9 +1983,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.01372,
-        "betweenness_centrality": 0.0027,
-        "closeness_centrality": 0.2677
+        "pagerank": 0.01141,
+        "betweenness_centrality": 0.0028,
+        "closeness_centrality": 0.2794
       },
       {
         "id": "plat_multiomics",
@@ -1991,9 +1998,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.007194,
+        "pagerank": 0.006663,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2731
+        "closeness_centrality": 0.2738
       },
       {
         "id": "plat_modal_rhyme_hf",
@@ -2006,9 +2013,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.012709,
-        "betweenness_centrality": 0.0035,
-        "closeness_centrality": 0.272
+        "pagerank": 0.012144,
+        "betweenness_centrality": 0.0031,
+        "closeness_centrality": 0.2717
       },
       {
         "id": "plat_text2wetlab",
@@ -2021,9 +2028,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.005759,
+        "pagerank": 0.005631,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.3036
+        "closeness_centrality": 0.304
       },
       {
         "id": "plat_medicus_discopy_moth",
@@ -2036,9 +2043,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.01152,
+        "pagerank": 0.01126,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2857
+        "closeness_centrality": 0.2863
       },
       {
         "id": "plat_typesafe_jev",
@@ -2051,9 +2058,9 @@
         "in_degree": 0,
         "out_degree": 11,
         "total_degree": 11,
-        "pagerank": 0.016837,
-        "betweenness_centrality": 0.0812,
-        "closeness_centrality": 0.3931
+        "pagerank": 0.015268,
+        "betweenness_centrality": 0.0681,
+        "closeness_centrality": 0.3943
       },
       {
         "id": "plat_pyscf_ag2",
@@ -2066,9 +2073,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.014647,
-        "betweenness_centrality": 0.0127,
-        "closeness_centrality": 0.3192
+        "pagerank": 0.013899,
+        "betweenness_centrality": 0.0096,
+        "closeness_centrality": 0.3194
       },
       {
         "id": "plat_cyp3a4_gate1",
@@ -2081,9 +2088,9 @@
         "in_degree": 6,
         "out_degree": 0,
         "total_degree": 6,
-        "pagerank": 0.019147,
-        "betweenness_centrality": 0.0225,
-        "closeness_centrality": 0.3696
+        "pagerank": 0.018059,
+        "betweenness_centrality": 0.02,
+        "closeness_centrality": 0.373
       },
       {
         "id": "plat_opencyp_ftqc",
@@ -2096,9 +2103,9 @@
         "in_degree": 8,
         "out_degree": 0,
         "total_degree": 8,
-        "pagerank": 0.031553,
-        "betweenness_centrality": 0.0267,
-        "closeness_centrality": 0.3696
+        "pagerank": 0.028475,
+        "betweenness_centrality": 0.0242,
+        "closeness_centrality": 0.369
       },
       {
         "id": "plat_jev_10ltc_cqa",
@@ -2109,11 +2116,11 @@
         "metric": "Inline jev-1.14.0 control plane across all 10 NCL ICB LTC cohorts: 10/10 CQA routing (6 Era III\u2013IV FTQC vs 4 zero-qubit classical/safety), 10/10 span extraction, 8/8 order invariance, & 12/12 citation checks. [ltcs_routed: 10/10 \u00b7 ftqc_ltcs: 6 \u00b7 zero_qubit_ltcs: 4 \u00b7 control_plane_sha256: 2cb109628687df04 \u00b7 receipt_sha256: 2c0f2ddabb338818ad025f1f360ec24b9f8831eb64012783200185b574eed451]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 11,
-        "out_degree": 1,
-        "total_degree": 12,
-        "pagerank": 0.023511,
-        "betweenness_centrality": 0.0988,
-        "closeness_centrality": 0.4331
+        "out_degree": 2,
+        "total_degree": 13,
+        "pagerank": 0.023803,
+        "betweenness_centrality": 0.0796,
+        "closeness_centrality": 0.4481
       },
       {
         "id": "plat_opencyp_v1_1_thc",
@@ -2124,11 +2131,26 @@
         "metric": "Expands OpenCYP-FTQC to 13 QM/MM FCIDUMPs (CAS(11e,11o) 5TE8 213,444 dets, matched-S=0 COPD CLR-MIC 7.15 mHa vs ACE 1O86 0.00566 mHa) & empirical THC/SO(M) Delta-THC (1.95x\u20137.01x compression, |dE|<=0.61 mHa, M=26 crossover). [fcidump_files: 13 \u00b7 max_thc_fci_err_mha: 0.6124 \u00b7 delta_thc_compression: 1.95x-7.01x \u00b7 singlet_copd_err_mha: 7.1487 \u00b7 receipt_sha256: f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6]",
         "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
         "in_degree": 10,
-        "out_degree": 0,
-        "total_degree": 10,
-        "pagerank": 0.042751,
-        "betweenness_centrality": 0.0507,
-        "closeness_centrality": 0.3908
+        "out_degree": 1,
+        "total_degree": 11,
+        "pagerank": 0.04026,
+        "betweenness_centrality": 0.0612,
+        "closeness_centrality": 0.4035
+      },
+      {
+        "id": "plat_cqwm_v0_1",
+        "label": "Clinical Quantum World Model (CQWM v0.1)",
+        "category": "Platform_Receipt",
+        "tier": "Layer 7 \u00b7 Era: Era III-IV",
+        "external_id": "SHA256:7b828614e76a ()",
+        "metric": "14-day counterfactual do(pi) non-Markovian PBPK-MBI + 6q Quantum Comb world model: inline jev-1.14.0 rollout gate (6/6), ACE 1O86 0L RMSE 0.0012 mmHg, catches Day-5 washout spike (5.96x/3.62x), & 8/8 citation checks. [vignettes_gated: 6/6 \u00b7 ace_0L_sbp_rmse_mmhg: 0.001207 \u00b7 comb_peak_trace_distance: 0.81406 \u00b7 citation_checks: 8/8 \u00b7 receipt_sha256: 7b828614e76a26d46daa1f069db15d574b44e0b66c34e507887f90303d8ce0f5]",
+        "epistemic_status": "Era III\u2013IV Projected FTQC Crossover",
+        "in_degree": 11,
+        "out_degree": 1,
+        "total_degree": 12,
+        "pagerank": 0.034335,
+        "betweenness_centrality": 0.0994,
+        "closeness_centrality": 0.46
       },
       {
         "id": "haz_h_ltc_01",
@@ -2141,9 +2163,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004559,
-        "betweenness_centrality": 0.0057,
-        "closeness_centrality": 0.3383
+        "pagerank": 0.004377,
+        "betweenness_centrality": 0.0048,
+        "closeness_centrality": 0.3382
       },
       {
         "id": "haz_h_ltc_02",
@@ -2156,9 +2178,9 @@
         "in_degree": 2,
         "out_degree": 5,
         "total_degree": 7,
-        "pagerank": 0.015821,
-        "betweenness_centrality": 0.0247,
-        "closeness_centrality": 0.3598
+        "pagerank": 0.014064,
+        "betweenness_centrality": 0.0221,
+        "closeness_centrality": 0.3651
       },
       {
         "id": "haz_h_ltc_03",
@@ -2171,9 +2193,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.005408,
-        "betweenness_centrality": 0.0029,
-        "closeness_centrality": 0.3542
+        "pagerank": 0.004986,
+        "betweenness_centrality": 0.0016,
+        "closeness_centrality": 0.3557
       },
       {
         "id": "haz_h_ltc_04",
@@ -2184,11 +2206,11 @@
         "metric": "Conflation of cloud emulator / biophysical toy models with validated RCT clinical efficacy \u2014 Statutory DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate)]",
         "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
         "in_degree": 2,
-        "out_degree": 2,
-        "total_degree": 4,
-        "pagerank": 0.010702,
-        "betweenness_centrality": 0.0099,
-        "closeness_centrality": 0.3333
+        "out_degree": 3,
+        "total_degree": 5,
+        "pagerank": 0.0117,
+        "betweenness_centrality": 0.0138,
+        "closeness_centrality": 0.373
       },
       {
         "id": "haz_h_ltc_05",
@@ -2201,9 +2223,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004678,
-        "betweenness_centrality": 0.0064,
-        "closeness_centrality": 0.3469
+        "pagerank": 0.004496,
+        "betweenness_centrality": 0.0052,
+        "closeness_centrality": 0.3467
       },
       {
         "id": "haz_h_ltc_06",
@@ -2216,9 +2238,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004916,
-        "betweenness_centrality": 0.007,
-        "closeness_centrality": 0.2957
+        "pagerank": 0.004727,
+        "betweenness_centrality": 0.0067,
+        "closeness_centrality": 0.2961
       }
     ],
     "edges": [
@@ -2839,6 +2861,78 @@
         "target": "plat_opencyp_v1_1_thc",
         "relation": "GOVERNS_CLINICAL_RISK_OF",
         "weight": "OpenCYP-FTQC v1.1 barrier & MBI kinetics remain strictly advisory under Pharmacist SMR gate"
+      },
+      {
+        "source": "plat_opencyp_v1_1_thc",
+        "target": "plat_cqwm_v0_1",
+        "relation": "SUPPLIES_EYRING_ORACLES_TO",
+        "weight": "Propagates Exact FCI, Empirical THC, & Paired Delta-THC barriers into 14-day RK4 trajectories"
+      },
+      {
+        "source": "plat_jev_10ltc_cqa",
+        "target": "plat_cqwm_v0_1",
+        "relation": "GATES_ROLLOUT_SAFETY_OF",
+        "weight": "Inline jev-1.14.0 evaluate_cqwm_rollout_gate (6/6 vignettes) & 8/8 citation checks"
+      },
+      {
+        "source": "ltc_copd",
+        "target": "plat_cqwm_v0_1",
+        "relation": "SIMULATES_COUNTERFACTUAL_IN",
+        "weight": "CQWM-04 COPD *1/*22 Clarithromycin MIC + Simvastatin: catches 5.96x Day-5 washout spike vs 1.05x Day-8 hold"
+      },
+      {
+        "source": "ltc_cvd",
+        "target": "plat_cqwm_v0_1",
+        "relation": "SIMULATES_COUNTERFACTUAL_IN",
+        "weight": "CQWM-05 CVD *4/*10 Metoprolol + Paroxetine MBI (146L 4WNU Delta-THC): 2.47x co-Rx -> 1.00x Escitalopram switch"
+      },
+      {
+        "source": "ltc_ckd",
+        "target": "plat_cqwm_v0_1",
+        "relation": "SIMULATES_COUNTERFACTUAL_IN",
+        "weight": "CQWM-06 CKD-3b+MASLD Finerenone + 5d Ritonavir (150L 3NXU): catches 3.62x Day-5 spike -> 1.04x Day-8 hold"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "plat_cqwm_v0_1",
+        "relation": "VERIFIES_0L_CLASSICAL_CEILING_IN",
+        "weight": "CQWM-03 closed-shell ACE 1O86 14-day SBP rollout: 0L RCCSD(T) matches exact FCI to 0.0012 mmHg RMSE"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "plat_cqwm_v0_1",
+        "relation": "BLOCKS_EMERGENCY_ROLLOUT_IN",
+        "weight": "CQWM-01 acute CYP Asthma SpO2 89% triggers immediate Tier-0 0L emergency block"
+      },
+      {
+        "source": "ltc_t2d",
+        "target": "plat_cqwm_v0_1",
+        "relation": "ABSTAINS_ILL_POSED_ROLLOUT_IN",
+        "weight": "CQWM-02 unlabelled 7-herb tea + nephew translation triggers Tier-1 0L abstain & H-LTC-01 flag"
+      },
+      {
+        "source": "prim_p20",
+        "target": "plat_cqwm_v0_1",
+        "relation": "PROPAGATES_QUANTUM_COMB_IN",
+        "weight": "6-qubit (4 organ + 2 memory) Non-Markovian Quantum Comb vs Markovian reset (D_tr = 0.814)"
+      },
+      {
+        "source": "prim_p22",
+        "target": "plat_cqwm_v0_1",
+        "relation": "COUPLES_BATH_MEMORY_IN",
+        "weight": "36h hepatic CYP3A4 resynthesis memory & multi-organ Lindblad backflow (I(S:M) = 2.67 bits)"
+      },
+      {
+        "source": "plat_cqwm_v0_1",
+        "target": "tx_pharmacist_smr",
+        "relation": "DELIVERS_SHADOW_COUNTERFACTUAL_TO",
+        "weight": "ML-DSA-65 signed FHIR R4 DetectedIssue advisory branches for Clinical Pharmacist SMR"
+      },
+      {
+        "source": "haz_h_ltc_04",
+        "target": "plat_cqwm_v0_1",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Strictly shadow advisory world model: 0 autonomous prescriptions, 0 QPU shots, 6 open hazards"
       },
       {
         "source": "tx_acei_lisinopril",
