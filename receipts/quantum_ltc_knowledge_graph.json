@@ -20,12 +20,12 @@
     "closed_hazards_claimed": 0
   },
   "graph_statistics": {
-    "total_nodes": 70,
-    "total_edges": 184,
+    "total_nodes": 71,
+    "total_edges": 192,
     "entity_types_count": 8,
-    "predicate_types_count": 77,
+    "predicate_types_count": 83,
     "connected_components": 1,
-    "mean_total_degree": 5.257,
+    "mean_total_degree": 5.408,
     "nodes_by_entity_type": {
       "NCL_LTC_Condition": 9,
       "HouseOfCare_Stage": 5,
@@ -33,7 +33,7 @@
       "Intervention": 6,
       "Quantum_Primitive": 10,
       "Logical_Era": 4,
-      "Platform_Receipt": 15,
+      "Platform_Receipt": 16,
       "DCB0129_Hazard": 6
     },
     "edges_by_predicate": {
@@ -61,13 +61,13 @@
       "CLEARED_FIRST_PASS_BY": 1,
       "DEMARCATES_FTQC_WALL": 1,
       "SCALES_TO_141L_DF_QPE": 1,
-      "EXECUTED_AND_SEALED_ON": 14,
+      "EXECUTED_AND_SEALED_ON": 15,
       "SCORED_AT_SINGLE_CELL_BY": 2,
       "BENCHMARKS_HAT_BARRIER_ON": 3,
       "SCALES_TO_144L_THC_QPE": 1,
       "ANCHORS_DDI_INACTIVATION_IN": 1,
       "PARAMETERISES_DDI_AUCR_VIA": 1,
-      "GOVERNS_CLINICAL_RISK_OF": 13,
+      "GOVERNS_CLINICAL_RISK_OF": 14,
       "AUDITS_DEMARCATION_OF": 2,
       "ARCHIVED_AS_FCIDUMP_IN": 4,
       "VALIDATES_CLASSICAL_CONTROL_IN": 2,
@@ -88,6 +88,12 @@
       "PROPAGATES_QUANTUM_COMB_IN": 1,
       "COUPLES_BATH_MEMORY_IN": 1,
       "DELIVERS_SHADOW_COUNTERFACTUAL_TO": 1,
+      "COMPILED_TO_6Q_HUGR_COMB_ON": 1,
+      "EXECUTES_LIVE_CLOUD_EMULATOR_JOBS_FOR": 1,
+      "BENCHMARKED_BY_MCMR_COMB_ON": 1,
+      "BENCHMARKS_WASHOUT_MEMORY_ON": 1,
+      "COUPLES_RENAL_TUBULAR_MEMORY_IN": 1,
+      "COUPLES_HEPATIC_BATH_MEMORY_IN": 1,
       "COORDINATES_CATALYTIC_ZN2": 1,
       "INHIBITS_TARGET": 2,
       "SYNERGISES_METABOLICALLY": 1,
@@ -120,71 +126,71 @@
         "id": "plat_opencyp_v1_1_thc",
         "label": "OpenCYP-FTQC v1.1: 13 FCIDUMPs + Empirical THC",
         "entity_type": "Platform_Receipt",
-        "pagerank": 0.04026,
+        "pagerank": 0.038187,
         "total_degree": 11
-      },
-      {
-        "id": "prim_x03",
-        "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
-        "entity_type": "Quantum_Primitive",
-        "pagerank": 0.034883,
-        "total_degree": 10
       },
       {
         "id": "plat_cqwm_v0_1",
         "label": "Clinical Quantum World Model (CQWM v0.1)",
         "entity_type": "Platform_Receipt",
-        "pagerank": 0.034335,
-        "total_degree": 12
+        "pagerank": 0.035769,
+        "total_degree": 13
+      },
+      {
+        "id": "prim_x03",
+        "label": "Atlas X03: Quantum subspace and Krylov diagonalisatio",
+        "entity_type": "Quantum_Primitive",
+        "pagerank": 0.033214,
+        "total_degree": 10
+      },
+      {
+        "id": "plat_cqwm_v0_2_helios",
+        "label": "CQWM v0.2: Live Nexus Helios-1E-lite 6q Comb",
+        "entity_type": "Platform_Receipt",
+        "pagerank": 0.031536,
+        "total_degree": 8
       },
       {
         "id": "era_ii",
         "label": "Era II: [[8,3,2]] Error-Detected (3\u201324L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.031294,
-        "total_degree": 6
+        "pagerank": 0.030008,
+        "total_degree": 7
       },
       {
         "id": "era_iv",
         "label": "Era IV: Asymptotic ICS-Scale FTQC (100\u20131,000+L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.031179,
+        "pagerank": 0.028535,
         "total_degree": 7
       },
       {
         "id": "plat_opencyp_ftqc",
         "label": "OpenCYP-FTQC v1.0: 8 QM/MM FCIDUMPs + ChEMBL37",
         "entity_type": "Platform_Receipt",
-        "pagerank": 0.028475,
+        "pagerank": 0.027062,
         "total_degree": 8
-      },
-      {
-        "id": "era_iii",
-        "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
-        "entity_type": "Logical_Era",
-        "pagerank": 0.026469,
-        "total_degree": 5
       },
       {
         "id": "stage_1_check_test",
         "label": "Stage 1: Check & Test + Interpreter Access",
         "entity_type": "HouseOfCare_Stage",
-        "pagerank": 0.025058,
+        "pagerank": 0.024905,
         "total_degree": 14
       },
       {
         "id": "plat_jev_10ltc_cqa",
         "label": "Jev 1.14 Control Plane & 10-LTC CQA Portfolio",
         "entity_type": "Platform_Receipt",
-        "pagerank": 0.023803,
+        "pagerank": 0.023351,
         "total_degree": 13
       },
       {
-        "id": "era_i",
-        "label": "Era I: Classical-Exact & NISQ (0L)",
+        "id": "era_iii",
+        "label": "Era III: Early Active FTQC Crossover (24\u201372L)",
         "entity_type": "Logical_Era",
-        "pagerank": 0.020757,
-        "total_degree": 4
+        "pagerank": 0.022367,
+        "total_degree": 5
       }
     ]
   },
@@ -249,7 +255,7 @@
       "in_degree": 0,
       "out_degree": 9,
       "total_degree": 9,
-      "pagerank": 0.012281
+      "pagerank": 0.011754
     },
     {
       "id": "ltc_af",
@@ -267,7 +273,7 @@
       "in_degree": 0,
       "out_degree": 6,
       "total_degree": 6,
-      "pagerank": 0.00813
+      "pagerank": 0.007972
     },
     {
       "id": "ltc_htn",
@@ -285,7 +291,7 @@
       "in_degree": 0,
       "out_degree": 7,
       "total_degree": 7,
-      "pagerank": 0.011016
+      "pagerank": 0.010551
     },
     {
       "id": "ltc_t2d",
@@ -302,7 +308,7 @@
       "in_degree": 0,
       "out_degree": 7,
       "total_degree": 7,
-      "pagerank": 0.011627
+      "pagerank": 0.011205
     },
     {
       "id": "ltc_t1d",
@@ -319,7 +325,7 @@
       "in_degree": 0,
       "out_degree": 5,
       "total_degree": 5,
-      "pagerank": 0.007454
+      "pagerank": 0.007318
     },
     {
       "id": "ltc_ckd",
@@ -335,9 +341,9 @@
         "green_plan_priority": "Prevent dialysis"
       },
       "in_degree": 0,
-      "out_degree": 7,
-      "total_degree": 7,
-      "pagerank": 0.010668
+      "out_degree": 8,
+      "total_degree": 8,
+      "pagerank": 0.013567
     },
     {
       "id": "ltc_masld",
@@ -353,9 +359,9 @@
         "genetic_modifier": "PNPLA3"
       },
       "in_degree": 0,
-      "out_degree": 6,
-      "total_degree": 6,
-      "pagerank": 0.011421
+      "out_degree": 7,
+      "total_degree": 7,
+      "pagerank": 0.014786
     },
     {
       "id": "ltc_copd",
@@ -370,9 +376,9 @@
         "seasonality": "Pre-winter Q2/Q3 priority"
       },
       "in_degree": 0,
-      "out_degree": 7,
-      "total_degree": 7,
-      "pagerank": 0.01243
+      "out_degree": 8,
+      "total_degree": 8,
+      "pagerank": 0.015374
     },
     {
       "id": "ltc_asthma",
@@ -390,7 +396,7 @@
       "in_degree": 1,
       "out_degree": 8,
       "total_degree": 9,
-      "pagerank": 0.014993
+      "pagerank": 0.01424
     },
     {
       "id": "stage_call_recall",
@@ -408,7 +414,7 @@
       "in_degree": 10,
       "out_degree": 2,
       "total_degree": 12,
-      "pagerank": 0.018795
+      "pagerank": 0.018744
     },
     {
       "id": "stage_1_check_test",
@@ -426,7 +432,7 @@
       "in_degree": 11,
       "out_degree": 3,
       "total_degree": 14,
-      "pagerank": 0.025058
+      "pagerank": 0.024905
     },
     {
       "id": "stage_2_mdt_review",
@@ -444,7 +450,7 @@
       "in_degree": 5,
       "out_degree": 3,
       "total_degree": 8,
-      "pagerank": 0.01571
+      "pagerank": 0.014864
     },
     {
       "id": "stage_3_pcsp",
@@ -462,7 +468,7 @@
       "in_degree": 5,
       "out_degree": 2,
       "total_degree": 7,
-      "pagerank": 0.020679
+      "pagerank": 0.020225
     },
     {
       "id": "stage_4_continuity",
@@ -480,7 +486,7 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "pagerank": 0.014842
+      "pagerank": 0.014424
     },
     {
       "id": "mol_ace",
@@ -498,7 +504,7 @@
       "in_degree": 5,
       "out_degree": 1,
       "total_degree": 6,
-      "pagerank": 0.011456
+      "pagerank": 0.011232
     },
     {
       "id": "mol_pdb_1o86",
@@ -517,7 +523,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.015252
+      "pagerank": 0.01472
     },
     {
       "id": "mol_slc5a2",
@@ -535,7 +541,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.010045
+      "pagerank": 0.009888
     },
     {
       "id": "mol_glp1r",
@@ -553,7 +559,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.007671
+      "pagerank": 0.00766
     },
     {
       "id": "mol_adrb2",
@@ -570,7 +576,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.006889
+      "pagerank": 0.006839
     },
     {
       "id": "mol_il6",
@@ -588,7 +594,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.009134
+      "pagerank": 0.008812
     },
     {
       "id": "mol_angii_1n9v",
@@ -606,7 +612,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.006153
+      "pagerank": 0.005866
     },
     {
       "id": "mol_pnpla3",
@@ -623,7 +629,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.003773
+      "pagerank": 0.003885
     },
     {
       "id": "mol_cyp3a4",
@@ -641,7 +647,7 @@
       "in_degree": 5,
       "out_degree": 4,
       "total_degree": 9,
-      "pagerank": 0.016939
+      "pagerank": 0.016607
     },
     {
       "id": "mol_pdb_1tqn",
@@ -660,7 +666,7 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "pagerank": 0.011064
+      "pagerank": 0.010582
     },
     {
       "id": "mol_pdb_5te8",
@@ -679,7 +685,7 @@
       "in_degree": 1,
       "out_degree": 5,
       "total_degree": 6,
-      "pagerank": 0.01691
+      "pagerank": 0.016157
     },
     {
       "id": "mol_pdb_3nxu",
@@ -698,7 +704,7 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "pagerank": 0.012967
+      "pagerank": 0.012493
     },
     {
       "id": "mol_pdb_4wnu",
@@ -718,7 +724,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.012492
+      "pagerank": 0.011912
     },
     {
       "id": "mol_pdb_1r9o",
@@ -738,7 +744,7 @@
       "in_degree": 3,
       "out_degree": 3,
       "total_degree": 6,
-      "pagerank": 0.014069
+      "pagerank": 0.013462
     },
     {
       "id": "mol_muc5b",
@@ -757,7 +763,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.007706
+      "pagerank": 0.007701
     },
     {
       "id": "tx_acei_lisinopril",
@@ -775,7 +781,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.01036
+      "pagerank": 0.010032
     },
     {
       "id": "tx_sglt2i",
@@ -793,7 +799,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.010969
+      "pagerank": 0.01065
     },
     {
       "id": "tx_mart_dpi",
@@ -811,7 +817,7 @@
       "in_degree": 1,
       "out_degree": 5,
       "total_degree": 6,
-      "pagerank": 0.011335
+      "pagerank": 0.011059
     },
     {
       "id": "tx_pharmacist_smr",
@@ -829,7 +835,7 @@
       "in_degree": 1,
       "out_degree": 8,
       "total_degree": 9,
-      "pagerank": 0.017903
+      "pagerank": 0.016612
     },
     {
       "id": "tx_home_bp",
@@ -847,7 +853,7 @@
       "in_degree": 0,
       "out_degree": 1,
       "total_degree": 1,
-      "pagerank": 0.002934
+      "pagerank": 0.002879
     },
     {
       "id": "tx_vcse_sp",
@@ -865,7 +871,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.006806
+      "pagerank": 0.006677
     },
     {
       "id": "prim_p08",
@@ -883,7 +889,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.014962
+      "pagerank": 0.014556
     },
     {
       "id": "prim_a01d",
@@ -901,7 +907,7 @@
       "in_degree": 4,
       "out_degree": 2,
       "total_degree": 6,
-      "pagerank": 0.018993
+      "pagerank": 0.018256
     },
     {
       "id": "prim_p09",
@@ -919,7 +925,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.014021
+      "pagerank": 0.013592
     },
     {
       "id": "prim_p13",
@@ -937,7 +943,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.01244
+      "pagerank": 0.009218
     },
     {
       "id": "prim_p20",
@@ -953,9 +959,9 @@
         "defining_paper": "Quintino, Dong, Shimbo, Soeda, Murao (2019)"
       },
       "in_degree": 1,
-      "out_degree": 3,
-      "total_degree": 4,
-      "pagerank": 0.013232
+      "out_degree": 4,
+      "total_degree": 5,
+      "pagerank": 0.013141
     },
     {
       "id": "prim_a01g",
@@ -973,7 +979,7 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "pagerank": 0.017265
+      "pagerank": 0.013638
     },
     {
       "id": "prim_a01h",
@@ -991,7 +997,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.012537
+      "pagerank": 0.011044
     },
     {
       "id": "prim_p22",
@@ -1009,7 +1015,7 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "pagerank": 0.019453
+      "pagerank": 0.018079
     },
     {
       "id": "prim_x03",
@@ -1027,7 +1033,7 @@
       "in_degree": 5,
       "out_degree": 5,
       "total_degree": 10,
-      "pagerank": 0.034883
+      "pagerank": 0.033214
     },
     {
       "id": "prim_p04",
@@ -1045,7 +1051,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.014526
+      "pagerank": 0.013589
     },
     {
       "id": "era_i",
@@ -1064,7 +1070,7 @@
       "in_degree": 3,
       "out_degree": 1,
       "total_degree": 4,
-      "pagerank": 0.020757
+      "pagerank": 0.019196
     },
     {
       "id": "era_ii",
@@ -1081,9 +1087,9 @@
         "postselect_24L": "15.81%"
       },
       "in_degree": 5,
-      "out_degree": 1,
-      "total_degree": 6,
-      "pagerank": 0.031294
+      "out_degree": 2,
+      "total_degree": 7,
+      "pagerank": 0.030008
     },
     {
       "id": "era_iii",
@@ -1102,7 +1108,7 @@
       "in_degree": 4,
       "out_degree": 1,
       "total_degree": 5,
-      "pagerank": 0.026469
+      "pagerank": 0.022367
     },
     {
       "id": "era_iv",
@@ -1121,7 +1127,7 @@
       "in_degree": 5,
       "out_degree": 2,
       "total_degree": 7,
-      "pagerank": 0.031179
+      "pagerank": 0.028535
     },
     {
       "id": "plat_nexus_helios",
@@ -1138,9 +1144,9 @@
         "receipt_sha256": "0e3216dd2d9c1b81a6f128886b77538fd55757d1bb91fb502cb8c2f47aa0e8bf"
       },
       "in_degree": 3,
-      "out_degree": 0,
-      "total_degree": 3,
-      "pagerank": 0.014429
+      "out_degree": 1,
+      "total_degree": 4,
+      "pagerank": 0.014842
     },
     {
       "id": "plat_haiqu",
@@ -1159,7 +1165,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.012353
+      "pagerank": 0.011969
     },
     {
       "id": "plat_jij_highs",
@@ -1178,7 +1184,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.007721
+      "pagerank": 0.007539
     },
     {
       "id": "plat_hqs_qprotsim",
@@ -1197,7 +1203,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.01141
+      "pagerank": 0.010499
     },
     {
       "id": "plat_multiomics",
@@ -1216,7 +1222,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.006663
+      "pagerank": 0.006416
     },
     {
       "id": "plat_modal_rhyme_hf",
@@ -1235,7 +1241,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.012144
+      "pagerank": 0.010802
     },
     {
       "id": "plat_text2wetlab",
@@ -1254,7 +1260,7 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "pagerank": 0.005631
+      "pagerank": 0.00558
     },
     {
       "id": "plat_medicus_discopy_moth",
@@ -1274,7 +1280,7 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "pagerank": 0.01126
+      "pagerank": 0.011002
     },
     {
       "id": "plat_typesafe_jev",
@@ -1293,7 +1299,7 @@
       "in_degree": 0,
       "out_degree": 11,
       "total_degree": 11,
-      "pagerank": 0.015268
+      "pagerank": 0.014717
     },
     {
       "id": "plat_pyscf_ag2",
@@ -1312,7 +1318,7 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "pagerank": 0.013899
+      "pagerank": 0.013609
     },
     {
       "id": "plat_cyp3a4_gate1",
@@ -1331,7 +1337,7 @@
       "in_degree": 6,
       "out_degree": 0,
       "total_degree": 6,
-      "pagerank": 0.018059
+      "pagerank": 0.017303
     },
     {
       "id": "plat_opencyp_ftqc",
@@ -1352,7 +1358,7 @@
       "in_degree": 8,
       "out_degree": 0,
       "total_degree": 8,
-      "pagerank": 0.028475
+      "pagerank": 0.027062
     },
     {
       "id": "plat_jev_10ltc_cqa",
@@ -1373,7 +1379,7 @@
       "in_degree": 11,
       "out_degree": 2,
       "total_degree": 13,
-      "pagerank": 0.023803
+      "pagerank": 0.023351
     },
     {
       "id": "plat_opencyp_v1_1_thc",
@@ -1394,7 +1400,7 @@
       "in_degree": 10,
       "out_degree": 1,
       "total_degree": 11,
-      "pagerank": 0.04026
+      "pagerank": 0.038187
     },
     {
       "id": "plat_cqwm_v0_1",
@@ -1413,9 +1419,32 @@
         "receipt_sha256": "7b828614e76a26d46daa1f069db15d574b44e0b66c34e507887f90303d8ce0f5"
       },
       "in_degree": 11,
-      "out_degree": 1,
-      "total_degree": 12,
-      "pagerank": 0.034335
+      "out_degree": 2,
+      "total_degree": 13,
+      "pagerank": 0.035769
+    },
+    {
+      "id": "plat_cqwm_v0_2_helios",
+      "label": "CQWM v0.2: Live Nexus Helios-1E-lite 6q Comb",
+      "entity_type": "Platform_Receipt",
+      "layer": 7,
+      "curie": "SHA256:ca845d5e1b49",
+      "external_iri": "",
+      "era": "Era II-III",
+      "summary": "Live Guppy 1.0 -> HUGR 6-qubit Quantum Comb on Quantinuum Nexus Helios-1E-lite (6,144 emulator shots, 0 physical QPU shots): Non-Markovian Comb P(adv)=92.53% vs mid-circuit reset Markovian Twin 41.46% (+51.07 pp gap) vs do(pi_C) Safe Hold 46.92% (Bhattacharyya >=0.9916).",
+      "metrics": {
+        "emulator_shots": 6144,
+        "physical_qpu_shots": 0,
+        "p_adv_comb": 0.925293,
+        "p_adv_markov_reset": 0.414551,
+        "p_adv_safe_hold": 0.469238,
+        "min_bhattacharyya_6q": 0.991621,
+        "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+      },
+      "in_degree": 8,
+      "out_degree": 0,
+      "total_degree": 8,
+      "pagerank": 0.031536
     },
     {
       "id": "haz_h_ltc_01",
@@ -1433,7 +1462,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.004377
+      "pagerank": 0.004303
     },
     {
       "id": "haz_h_ltc_02",
@@ -1451,7 +1480,7 @@
       "in_degree": 2,
       "out_degree": 5,
       "total_degree": 7,
-      "pagerank": 0.014064
+      "pagerank": 0.01352
     },
     {
       "id": "haz_h_ltc_03",
@@ -1469,7 +1498,7 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "pagerank": 0.004986
+      "pagerank": 0.004866
     },
     {
       "id": "haz_h_ltc_04",
@@ -1485,9 +1514,9 @@
         "standard": "DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate)"
       },
       "in_degree": 2,
-      "out_degree": 3,
-      "total_degree": 5,
-      "pagerank": 0.0117
+      "out_degree": 4,
+      "total_degree": 6,
+      "pagerank": 0.013994
     },
     {
       "id": "haz_h_ltc_05",
@@ -1505,7 +1534,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.004496
+      "pagerank": 0.004417
     },
     {
       "id": "haz_h_ltc_06",
@@ -1523,7 +1552,7 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "pagerank": 0.004727
+      "pagerank": 0.004628
     }
   ],
   "edges": [
@@ -2448,6 +2477,70 @@
       "receipt_sha256": "7b828614e76a26d46daa1f069db15d574b44e0b66c34e507887f90303d8ce0f5"
     },
     {
+      "source": "plat_cqwm_v0_1",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "COMPILED_TO_6Q_HUGR_COMB_ON",
+      "rationale": "Compiles 6q (4 organ + 2 bath-memory) Quantum Comb & mid-circuit reset twin to Guppy 1.0 HUGR",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
+      "source": "plat_nexus_helios",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "EXECUTES_LIVE_CLOUD_EMULATOR_JOBS_FOR",
+      "rationale": "3 live Helios-1E-lite jobs (c1931525, df9123d0, 829f7ca2; 6,144 shots; Bhattacharyya >=0.9916)",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
+      "source": "prim_p20",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "EXECUTED_AND_SEALED_ON",
+      "rationale": "Live multi-time Quantum Comb vs mid-circuit project_z+reset Markovian twin (+51.07 pp gap)",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
+      "source": "era_ii",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "BENCHMARKED_BY_MCMR_COMB_ON",
+      "rationale": "6-qubit mid-circuit bath reset & persistent enzyme-memory comb benchmark",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
+      "source": "ltc_copd",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "BENCHMARKS_WASHOUT_MEMORY_ON",
+      "rationale": "Post-clarithromycin hepatic CYP3A4 memory: P(adv)=92.53% (Comb) vs 46.92% (Safe Hold do(pi_C))",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
+      "source": "ltc_ckd",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "COUPLES_RENAL_TUBULAR_MEMORY_IN",
+      "rationale": "Persistent m1 tubular bath memory spin coupled to s2 renal axis across 4 visits",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
+      "source": "ltc_masld",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "COUPLES_HEPATIC_BATH_MEMORY_IN",
+      "rationale": "Persistent m0 hepatic CYP3A4 memory spin (s1 toxicity 91.02% Comb vs 7.08% reset)",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
+      "source": "haz_h_ltc_04",
+      "target": "plat_cqwm_v0_2_helios",
+      "predicate": "GOVERNS_CLINICAL_RISK_OF",
+      "rationale": "0 physical QPU shots claimed; cloud-emulator Quantum Comb strictly non-clinical shadow research",
+      "weight": 1.25,
+      "receipt_sha256": "ca845d5e1b49d587b1403234cf0a7e80238c794ae59d7b7546b9b0e34cce7923"
+    },
+    {
       "source": "tx_acei_lisinopril",
       "target": "mol_pdb_1o86",
       "predicate": "COORDINATES_CATALYTIC_ZN2",
@@ -3000,5 +3093,5 @@
       "receipt_sha256": "7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242"
     }
   ],
-  "receipt_sha256": "ec507eb4fca3b93d05b51d9859b4ecb4eac62fcfaa460ef4a5c314e5c354b7d6"
+  "receipt_sha256": "71956f58024dd69be9348a5d1f950061ebd218230d5a6d78d84a2d9d41dba062"
 }

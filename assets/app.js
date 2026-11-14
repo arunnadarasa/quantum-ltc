@@ -2,18 +2,17 @@
 // Matched UX Architecture with Quantum Social Prescribing (https://arunnadarasa.github.io/quantum-social-prescribing/)
 
 const BOOKMARKS = [
-  { label: "p.1 · Abstract & OpenCYP-FTQC v1.1", page: 1 },
-  { label: "p.3 · 4-Era Roadmap & Baselines", page: 3 },
-  { label: "p.5 · Nexus Helios-1E & Haiqu HUBO", page: 5 },
-  { label: "p.7 · 4-Regime HQS & PDB 1O86", page: 7 },
-  { label: "p.9 · PySCF 1TQN vs 1O86 & AlphaGenome 2", page: 9 },
-  { label: "p.11 · Gate 1: PDB 5TE8/3NXU & THC-QPE", page: 11 },
-  { label: "p.12 · OpenCYP-FTQC QM/MM & 12-Regimen PBPK", page: 12 },
-  { label: "p.14 · 5-Seed Modal QLTCMLM & Barren Plateau", page: 14 },
-  { label: "p.15 · Jev 1.14, 10-LTC CQA & OpenCYP v1.1", page: 15 },
-  { label: "p.16 · §6.4 Clinical Quantum World Model (CQWM)", page: 16 },
-  { label: "p.18 · 70-Node KG & Conclusion", page: 18 },
-  { label: "p.19 · Fig. 12 CQWM v0.1 & 49 Verified Refs", page: 19 }
+  { label: "p.1 · Concise Abstract & §1 NCL LTC", page: 1 },
+  { label: "p.2 · §2 Four-Era Roadmap & Table 1", page: 2 },
+  { label: "p.4 · §3 Nexus Helios-1E & Haiqu HUBO", page: 4 },
+  { label: "p.7 · §4 HQS Lindbladian & PySCF 1TQN", page: 7 },
+  { label: "p.9 · §4.4 Gate 1: PDB 5TE8/3NXU & THC", page: 9 },
+  { label: "p.10 · §4.5 OpenCYP-FTQC & ChEMBL_37", page: 10 },
+  { label: "p.11 · §5 Modal QLTCMLM & Barren Plateau", page: 11 },
+  { label: "p.14 · §6.3 10-LTC CQA & OpenCYP v1.1", page: 14 },
+  { label: "p.16 · Fig. 11 71-Node Knowledge Graph", page: 16 },
+  { label: "p.17 · §6.4 CQWM v0.1 & v0.2 (Helios 6q Comb)", page: 17 },
+  { label: "p.18 · §7 Conclusion & 49 Verified Refs", page: 18 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -117,7 +116,7 @@ const BIBTEX_ENTRIES = {
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
   pages   = {1--21},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 13 SHA-256-sealed receipts + 70-node KG across Quantinuum Nexus Helios-1E-lite, Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.1 (13 QM/MM FCIDUMPs + Empirical THC across PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), Clinical Quantum World Model (CQWM v0.1), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 14 SHA-256-sealed receipts + 71-node KG across Quantinuum Nexus Helios-1E-lite (12,288 emulator shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.1 (13 QM/MM FCIDUMPs + Empirical THC across PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), Clinical Quantum World Model (CQWM v0.1 \\& v0.2), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
 }`,
   opencyp: `@misc{nadarasa2026opencypftqc,
   title        = {{OpenCYP-FTQC v1.1}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP} \\& Empirical {THC} Archive and 12-Regimen {ChEMBL\\_37} {PBPK} Benchmark},
@@ -1539,6 +1538,569 @@ function initChartsAndLightbox() {
       charts.push(c5);
     }
 
+    // Chart 6 (Full-Width · Fig. 9): 10-LTC Clinical Quantum Advantage Portfolio (Sub-Panel Switcher)
+    const elCqa = document.getElementById("echart-ten-ltc-cqa");
+    if (elCqa && PORTAL_DATA.ten_ltc_cqa) {
+      const cCqa = window.echarts.init(elCqa);
+      const allCohorts = PORTAL_DATA.ten_ltc_cqa.cohorts;
+      function renderCqaTab(mode) {
+        if (mode === "pbpk") {
+          const ftqcCohorts = allCohorts.filter(c => c.aucr_wt !== null);
+          cCqa.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: ["Wild-Type CYP450 DDI AUCR", "Variant Allele (*22 / *4/*10 / *2/*3) AUCR"],
+              textStyle: { color: "#eef7f5", fontSize: 11 },
+              top: 6
+            },
+            grid: { left: 56, right: 30, top: 54, bottom: 52 },
+            xAxis: {
+              type: "category",
+              data: ftqcCohorts.map(c => c.short_label.replace(" (", "\n(")),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 10, interval: 0, lineHeight: 13 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 16,
+              ...baseAxis,
+              name: "Rowland–Matin Fold Exposure (AUCR)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Wild-Type CYP450 DDI AUCR",
+                type: "bar",
+                barGap: "12%",
+                barWidth: "28%",
+                data: ftqcCohorts.map(c => c.aucr_wt),
+                itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}×", color: "#38d6c4", fontSize: 10 },
+                markLine: {
+                  silent: true,
+                  data: [
+                    { yAxis: 2.0, lineStyle: { color: "#f4ae42", type: "dashed", width: 1.4 }, label: { formatter: "FDA Moderate (2.0×)", color: "#f4ae42", fontSize: 9.5 } },
+                    { yAxis: 5.0, lineStyle: { color: "#f06a3b", type: "dashed", width: 1.6 }, label: { formatter: "FDA Strong / Contraindicated (5.0×)", color: "#f06a3b", fontSize: 9.5 } }
+                  ]
+                }
+              },
+              {
+                name: "Variant Allele (*22 / *4/*10 / *2/*3) AUCR",
+                type: "bar",
+                barWidth: "28%",
+                data: ftqcCohorts.map(c => c.aucr_variant),
+                itemStyle: { color: "#a78bfa", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}×", color: "#c4b5fd", fontSize: 10 }
+              }
+            ]
+          }, true);
+        } else {
+          const rev = [...allCohorts].reverse();
+          cCqa.setOption({
+            tooltip: {
+              ...darkTooltip,
+              formatter: params => {
+                const p = Array.isArray(params) ? params[0] : params;
+                const row = rev[p.dataIndex];
+                return `<strong>${row.condition_name}</strong><br/>` +
+                  `Jev 1.14 Tier: <code style="color:#38d6c4">${row.cqa_tier}</code><br/>` +
+                  `Logical Qubits: <strong>${row.logical_qubits}L</strong> (${row.era} · PDB ${row.pdb_id})`;
+              }
+            },
+            grid: { left: 175, right: 65, top: 28, bottom: 42 },
+            xAxis: {
+              type: "value",
+              min: 0,
+              max: 165,
+              ...baseAxis,
+              name: "Active Fault-Tolerant Logical Qubits Required (#L)",
+              nameLocation: "middle",
+              nameGap: 28,
+              nameTextStyle: { color: "#bfece6", fontSize: 11 }
+            },
+            yAxis: {
+              type: "category",
+              data: rev.map(c => c.short_label),
+              ...baseAxis,
+              axisLabel: { color: "#eef7f5", fontSize: 10.2 }
+            },
+            series: [
+              {
+                name: "Logical Qubits (#L)",
+                type: "bar",
+                barWidth: "56%",
+                data: rev.map(c => ({
+                  value: c.logical_qubits,
+                  itemStyle: {
+                    color: c.logical_qubits >= 100 ? "#a78bfa" : (c.logical_qubits >= 70 ? "#38d6c4" : "rgba(244,174,66,0.45)"),
+                    borderRadius: [0, 4, 4, 0]
+                  }
+                })),
+                label: {
+                  show: true,
+                  position: "right",
+                  formatter: p => {
+                    const row = rev[p.dataIndex];
+                    if (row.logical_qubits === 0) {
+                      if (row.ltc_id.includes("CYP_ASTHMA")) return "0L · Tier-0 999 Bypass";
+                      if (row.ltc_id.includes("T2D")) return "0L · Tier-1 SMR Abstain";
+                      if (row.ltc_id.includes("HYPERTENSION")) return "0L · Exact RCCSD(T) (0.006 mHa)";
+                      return "0L · Exact HiGHS MILP (<25 ms)";
+                    }
+                    return `${row.logical_qubits}L (${row.era.replace("_", " ")})`;
+                  },
+                  color: "#bfece6",
+                  fontSize: 9.8,
+                  fontFamily: "JetBrains Mono, monospace"
+                },
+                markLine: {
+                  silent: true,
+                  data: [
+                    { xAxis: 75, lineStyle: { color: "#38d6c4", type: "dashed", width: 1.4 }, label: { formatter: "Era III (75L)", color: "#38d6c4", fontSize: 9.5 } },
+                    { xAxis: 137, lineStyle: { color: "#a78bfa", type: "dashed", width: 1.4 }, label: { formatter: "Era IV (137–141L)", color: "#c4b5fd", fontSize: 9.5 } }
+                  ]
+                }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderCqaTab("routing");
+      document.querySelectorAll("[data-cqa-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-cqa-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderCqaTab(btn.dataset.cqaTab);
+        });
+      });
+      charts.push(cCqa);
+    }
+
+    // Chart 7 (Full-Width · Fig. 10): OpenCYP-FTQC v1.1 Empirical THC & Frozen-Core Crossover (Sub-Panel Switcher)
+    const elOc11 = document.getElementById("echart-opencyp-v1-1");
+    if (elOc11 && PORTAL_DATA.opencyp_v1_1) {
+      const cOc11 = window.echarts.init(elOc11);
+      const d11 = PORTAL_DATA.opencyp_v1_1;
+      function renderOc11Tab(mode) {
+        if (mode === "scaling") {
+          const sRows = d11.frozen_core_scaling;
+          cOc11.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Cholesky DF-QPE Toffolis",
+                "Empirical Non-Orthogonal THC-QPE Toffolis",
+                "Paired Cayley SO(M) Δ-THC-QPE Toffolis"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.8 },
+              top: 6
+            },
+            grid: { left: 64, right: 32, top: 56, bottom: 48 },
+            xAxis: {
+              type: "category",
+              data: sRows.map(r => `M=${r.M}o\n(${r.logical_qubits_delta_thc}L · ${r.delta_thc_speedup}×)`),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.8, interval: 0, lineHeight: 13 }
+            },
+            yAxis: {
+              type: "log",
+              logBase: 10,
+              min: 5e5,
+              max: 2e10,
+              ...baseAxis,
+              name: "Total QPE Toffoli Gates (ε = 1.0 mHa, log₁₀)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Cholesky DF-QPE Toffolis",
+                type: "line",
+                symbolSize: 8,
+                data: sRows.map(r => r.toffoli_df),
+                itemStyle: { color: "#60a5fa" },
+                lineStyle: { width: 2.8 }
+              },
+              {
+                name: "Empirical Non-Orthogonal THC-QPE Toffolis",
+                type: "line",
+                symbolSize: 7,
+                data: sRows.map(r => r.toffoli_thc),
+                itemStyle: { color: "#f4ae42" },
+                lineStyle: { width: 2.5, type: "dashed" }
+              },
+              {
+                name: "Paired Cayley SO(M) Δ-THC-QPE Toffolis",
+                type: "line",
+                symbolSize: 9,
+                data: sRows.map(r => r.toffoli_delta_thc),
+                itemStyle: { color: "#38d6c4" },
+                lineStyle: { width: 3.2 },
+                label: {
+                  show: true,
+                  position: "bottom",
+                  formatter: p => `${sRows[p.dataIndex].delta_thc_speedup}×`,
+                  color: "#38d6c4",
+                  fontSize: 9.5,
+                  fontFamily: "JetBrains Mono, monospace"
+                }
+              }
+            ]
+          }, true);
+        } else {
+          const rows = d11.six_ltcs;
+          cOc11.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Cholesky DF (λ_DF Ha)",
+                "Empirical Unit-Leaf THC (λ_THC Ha)",
+                "SO(M) Δ-DF (Ha)",
+                "Cayley SO(M) Δ-THC (Ha)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.5 },
+              top: 6
+            },
+            grid: { left: 54, right: 24, top: 56, bottom: 52 },
+            xAxis: {
+              type: "category",
+              data: rows.map(r => r.short_label + (r.delta_thc_compression_x ? `\n(${r.delta_thc_compression_x}× Δ-THC)` : "\n(Singlet MIC S=0)")),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.6, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 30,
+              ...baseAxis,
+              name: "Block-Encoding 1-Norm λ (Hartree)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              { name: "Cholesky DF (λ_DF Ha)", type: "bar", barGap: "8%", data: rows.map(r => r.lambda_df_ha), itemStyle: { color: "#60a5fa", borderRadius: [3, 3, 0, 0] } },
+              { name: "Empirical Unit-Leaf THC (λ_THC Ha)", type: "bar", data: rows.map(r => r.lambda_thc_pauli_ha), itemStyle: { color: "#38bdf8", borderRadius: [3, 3, 0, 0] } },
+              { name: "SO(M) Δ-DF (Ha)", type: "bar", data: rows.map(r => r.lambda_delta_df_ha), itemStyle: { color: "#f4ae42", borderRadius: [3, 3, 0, 0] } },
+              {
+                name: "Cayley SO(M) Δ-THC (Ha)",
+                type: "bar",
+                data: rows.map(r => r.lambda_delta_thc_ha),
+                itemStyle: { color: "#38d6c4", borderRadius: [3, 3, 0, 0] },
+                label: {
+                  show: true,
+                  position: "top",
+                  formatter: p => (p.value != null ? `${p.value} Ha` : ""),
+                  color: "#38d6c4",
+                  fontSize: 9
+                }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderOc11Tab("norms");
+      document.querySelectorAll("[data-oc11-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-oc11-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderOc11Tab(btn.dataset.oc11Tab);
+        });
+      });
+      charts.push(cOc11);
+    }
+
+    // Chart 8 (Full-Width · Fig. 12): Clinical Quantum World Model CQWM v0.1 & v0.2 (4-Tab Switcher)
+    const elCqwm = document.getElementById("echart-cqwm");
+    if (elCqwm && PORTAL_DATA.cqwm_world_model) {
+      const cCqwm = window.echarts.init(elCqwm);
+      const wm = PORTAL_DATA.cqwm_world_model;
+      function renderCqwmTab(mode) {
+        if (mode === "enzyme") {
+          const ep = wm.copd_enzyme_pool;
+          cCqwm.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Single-Ref RCCSD(T) (+7.15 mHa · False Negative)",
+                "Exact CASCI/FCI (S=0)",
+                "OpenCYP-FTQC v1.1 THC (+0.56 mHa)",
+                "BS-DFT Low Barrier",
+                "BS-DFT High Barrier"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.2 },
+              top: 4
+            },
+            grid: { left: 56, right: 26, top: 60, bottom: 44 },
+            xAxis: {
+              type: "category",
+              data: ep.time_days.map(d => `d${d}`),
+              ...baseAxis,
+              name: "World-Model Horizon (Days)",
+              nameLocation: "middle",
+              nameGap: 28,
+              nameTextStyle: { color: "#bfece6", fontSize: 10.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 105,
+              ...baseAxis,
+              name: "Active Hepatic CYP3A4 (% Baseline)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Single-Ref RCCSD(T) (+7.15 mHa · False Negative)",
+                type: "line",
+                showSymbol: false,
+                data: ep.rccsdt_pct,
+                itemStyle: { color: "#f06a3b" },
+                lineStyle: { width: 2.8, type: "dashed" }
+              },
+              {
+                name: "Exact CASCI/FCI (S=0)",
+                type: "line",
+                showSymbol: false,
+                data: ep.fci_pct,
+                itemStyle: { color: "#eef7f5" },
+                lineStyle: { width: 3.2 }
+              },
+              {
+                name: "OpenCYP-FTQC v1.1 THC (+0.56 mHa)",
+                type: "line",
+                showSymbol: false,
+                data: ep.thc_pct,
+                itemStyle: { color: "#38d6c4" },
+                lineStyle: { width: 2.8 },
+                markLine: {
+                  silent: true,
+                  data: [
+                    { xAxis: "d5", lineStyle: { color: "#f06a3b", type: "dotted", width: 1.5 }, label: { formatter: "Day 5 Plasma Washout (8.7% Active)", color: "#f06a3b", fontSize: 9.5 } },
+                    { xAxis: "d8", lineStyle: { color: "#38d6c4", type: "dotted", width: 1.5 }, label: { formatter: "Day 8 Safe Resynthesis Hold", color: "#38d6c4", fontSize: 9.5 } }
+                  ]
+                }
+              },
+              {
+                name: "BS-DFT Low Barrier",
+                type: "line",
+                showSymbol: false,
+                data: ep.dft_low_pct,
+                itemStyle: { color: "#a78bfa" },
+                lineStyle: { width: 1.5, type: "dotted" }
+              },
+              {
+                name: "BS-DFT High Barrier",
+                type: "line",
+                showSymbol: false,
+                data: ep.dft_high_pct,
+                itemStyle: { color: "#f4ae42" },
+                lineStyle: { width: 1.5, type: "dotted" }
+              }
+            ]
+          }, true);
+        } else if (mode === "helios") {
+          const hj = wm.comb_v0_2_helios.jobs;
+          cCqwm.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Multi-Organ Adverse P(adv) (%)",
+                "Hepatic Toxicity P(s₁=1) (%)",
+                "Persistent Bath Inactivated P(m₀=1) (%)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.8 },
+              top: 6
+            },
+            grid: { left: 56, right: 28, top: 56, bottom: 54 },
+            xAxis: {
+              type: "category",
+              data: hj.map(j => `${j.label}\n(6q Fid = ${j.fidelity_6q})`),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 10, interval: 0, lineHeight: 13.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 105,
+              ...baseAxis,
+              name: "Live Helios-1E-lite Measured Probability (%)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Multi-Organ Adverse P(adv) (%)",
+                type: "bar",
+                barGap: "12%",
+                barWidth: "22%",
+                data: hj.map(j => j.p_adv_pct),
+                itemStyle: { color: "#f06a3b", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}%", color: "#ff9a76", fontSize: 10.5, fontFamily: "JetBrains Mono, monospace" }
+              },
+              {
+                name: "Hepatic Toxicity P(s₁=1) (%)",
+                type: "bar",
+                barWidth: "22%",
+                data: hj.map(j => j.p_hep_pct),
+                itemStyle: { color: "#f4ae42", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}%", color: "#f4ae42", fontSize: 10, fontFamily: "JetBrains Mono, monospace" }
+              },
+              {
+                name: "Persistent Bath Inactivated P(m₀=1) (%)",
+                type: "bar",
+                barWidth: "22%",
+                data: hj.map(j => j.p_bath_m0_pct),
+                itemStyle: { color: "#a78bfa", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}%", color: "#c4b5fd", fontSize: 10, fontFamily: "JetBrains Mono, monospace" }
+              }
+            ]
+          }, true);
+        } else if (mode === "vignettes") {
+          const vs = wm.ftqc_vignettes;
+          cCqwm.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "π_A Unmodified Co-Rx (Unsafe)",
+                "π_B Naive Day-5 Washout Restart (Memory Trap)",
+                "CQWM Selected Resynthesis Hold / Switch (Safe ≤2.0×)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.6 },
+              top: 6
+            },
+            grid: { left: 56, right: 28, top: 56, bottom: 50 },
+            xAxis: {
+              type: "category",
+              data: vs.map(v => v.id),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 10.4, interval: 0, lineHeight: 13.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 12,
+              ...baseAxis,
+              name: "Peak Victim Drug Exposure (AUCR)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "π_A Unmodified Co-Rx (Unsafe)",
+                type: "bar",
+                barGap: "12%",
+                barWidth: "22%",
+                data: vs.map(v => v.unmodified_aucr),
+                itemStyle: { color: "#f06a3b", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}×", color: "#ff9a76", fontSize: 10.5 },
+                markLine: {
+                  silent: true,
+                  data: [{ yAxis: 2.0, lineStyle: { color: "#38d6c4", type: "dashed", width: 1.5 }, label: { formatter: "2.0× Safety Ceiling", color: "#38d6c4", fontSize: 9.8 } }]
+                }
+              },
+              {
+                name: "π_B Naive Day-5 Washout Restart (Memory Trap)",
+                type: "bar",
+                barWidth: "22%",
+                data: vs.map(v => v.naive_washout_aucr),
+                itemStyle: { color: "#f4ae42", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}×", color: "#f4ae42", fontSize: 10.5 }
+              },
+              {
+                name: "CQWM Selected Resynthesis Hold / Switch (Safe ≤2.0×)",
+                type: "bar",
+                barWidth: "22%",
+                data: vs.map(v => v.safe_hold_aucr),
+                itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}×", color: "#38d6c4", fontSize: 10.5 }
+              }
+            ]
+          }, true);
+        } else {
+          const cf = wm.copd_counterfactual_aucr;
+          cCqwm.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "π_A Unmodified Co-Rx (Peak 10.06×)",
+                "π_B Naive Day-5 Restart (Peak 5.96× Enzyme-Memory Spike)",
+                "π_C Day-8 Resynthesis Hold + Step (Peak 1.05×)",
+                "π_D Azithromycin Non-MBI Switch (Peak 1.00×)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.3 },
+              top: 4
+            },
+            grid: { left: 56, right: 26, top: 60, bottom: 44 },
+            xAxis: {
+              type: "category",
+              data: cf.days.map(d => `Day ${d}`),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 10 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 11.5,
+              ...baseAxis,
+              name: "24h Rolling Simvastatin Exposure (AUCR)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "π_A Unmodified Co-Rx (Peak 10.06×)",
+                type: "line",
+                symbolSize: 7,
+                data: cf.pi_A_unmodified,
+                itemStyle: { color: "#f06a3b" },
+                lineStyle: { width: 3 },
+                markLine: {
+                  silent: true,
+                  data: [{ yAxis: 2.0, lineStyle: { color: "#ff4f5e", type: "dashed", width: 1.5 }, label: { formatter: "MHRA / FDA Clinical Safety Ceiling (2.0× AUCR)", color: "#ff9a76", fontSize: 9.8 } }]
+                }
+              },
+              {
+                name: "π_B Naive Day-5 Restart (Peak 5.96× Enzyme-Memory Spike)",
+                type: "line",
+                symbolSize: 8,
+                data: cf.pi_B_day5_restart,
+                itemStyle: { color: "#f4ae42" },
+                lineStyle: { width: 3, type: "dashed" },
+                markPoint: {
+                  data: [{ coord: ["Day 6", 5.96], value: "5.96× Memory Spike", itemStyle: { color: "#f4ae42" }, label: { color: "#081012", fontWeight: 700, fontSize: 9 } }],
+                  symbolSize: 52
+                }
+              },
+              {
+                name: "π_C Day-8 Resynthesis Hold + Step (Peak 1.05×)",
+                type: "line",
+                symbolSize: 7,
+                data: cf.pi_C_day8_hold,
+                itemStyle: { color: "#38bdf8" },
+                lineStyle: { width: 2.8 }
+              },
+              {
+                name: "π_D Azithromycin Non-MBI Switch (Peak 1.00×)",
+                type: "line",
+                symbolSize: 6,
+                data: cf.pi_D_azithro_switch,
+                itemStyle: { color: "#38d6c4" },
+                lineStyle: { width: 2.6 }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderCqwmTab("aucr");
+      document.querySelectorAll("[data-cqwm-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-cqwm-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderCqwmTab(btn.dataset.cqwmTab);
+        });
+      });
+      charts.push(cCqwm);
+    }
+
     window.addEventListener("resize", () => charts.forEach(c => c.resize()));
   }
 
@@ -1643,7 +2205,7 @@ function initTablesAndCitations() {
   });
 }
 
-/* ── 7. Interactive Apache ECharts Knowledge Graph Explorer (57 Nodes, 114 Triples) ── */
+/* ── 7. Interactive Apache ECharts Knowledge Graph Explorer (71 Nodes, 192 Triples) ── */
 function initKnowledgeGraph() {
   const el = document.getElementById("echart-kg");
   if (!el || !PORTAL_DATA?.knowledge_graph) return;
@@ -1652,9 +2214,13 @@ function initKnowledgeGraph() {
   const catMap = Object.fromEntries(kg.categories.map(c => [c.id, c]));
   const nodeMap = Object.fromEntries(kg.nodes.map(n => [n.id, n]));
   const activeCats = new Set(kg.categories.map(c => c.id));
-  let currentLayout = "concentric";
+  let currentLayout = "layered";
   let searchNeedle = "";
-  let selectedId = "plat_nexus_helios";
+  let selectedId = "plat_cqwm_v0_2_helios";
+  let focusMode = false;
+  let egoFocus = true;
+  let smartLabels = true;
+  let currentZoom = 0.88;
   let pathNodes = new Set();
   let pathEdges = new Set();
 
@@ -1671,10 +2237,38 @@ function initKnowledgeGraph() {
     incident[e.target].push({ ...e, dir: "IN" });
   });
 
+  const topHubIds = new Set(
+    [...kg.nodes]
+      .sort((a, b) => b.total_degree - a.total_degree)
+      .slice(0, 18)
+      .map(n => n.id)
+  );
+  topHubIds.add("plat_cqwm_v0_2_helios");
+  topHubIds.add("plat_cqwm_v0_1");
+
   function shortLabel(n) {
     const base = n.label.split("(")[0].trim();
     return base.length > 24 ? base.slice(0, 23).trim() + "…" : base;
   }
+
+  const layeredPos = {};
+  (function computeLayered() {
+    const byLayer = {};
+    kg.nodes.forEach(n => {
+      const lyr = n.layer || 1;
+      if (!byLayer[lyr]) byLayer[lyr] = [];
+      byLayer[lyr].push(n);
+    });
+    for (let lyr = 1; lyr <= 8; lyr++) {
+      const col = (byLayer[lyr] || []).sort((a, b) => b.total_degree - a.total_degree);
+      const x = (lyr - 4.5) * 235;
+      const spanY = 660;
+      col.forEach((it, idx) => {
+        const y = col.length === 1 ? 0 : -spanY / 2 + (spanY * idx) / (col.length - 1);
+        layeredPos[it.id] = [x + (idx % 2 === 0 ? -12 : 12), y];
+      });
+    }
+  })();
 
   const concentricPos = {};
   (function computeConcentric() {
@@ -1776,6 +2370,7 @@ function initKnowledgeGraph() {
 
     box.querySelectorAll("[data-kg-hop]").forEach(b => {
       b.addEventListener("click", () => {
+        focusMode = true;
         renderInspector(b.dataset.kgHop);
         updateChart();
       });
@@ -1788,13 +2383,26 @@ function initKnowledgeGraph() {
     const visNodes = kg.nodes.filter(nodeMatches);
     const visSet = new Set(visNodes.map(n => n.id));
     const hasPath = pathNodes.size > 0;
+    const egoSet = new Set();
+    if (!hasPath && egoFocus && focusMode && selectedId) {
+      egoSet.add(selectedId);
+      (adj[selectedId] || []).forEach(step => egoSet.add(step.neighbor));
+    }
+    const useEgoDim = egoSet.size > 0;
 
     const eNodes = visNodes.map(n => {
       const catIdx = kg.categories.findIndex(c => c.id === n.category);
       const col = catMap[n.category].color;
       const onPath = hasPath && pathNodes.has(n.id);
       const isSel = n.id === selectedId;
-      const [cx, cy] = concentricPos[n.id] || [0, 0];
+      const inEgo = useEgoDim && egoSet.has(n.id);
+      const dimmed = hasPath ? !onPath : (useEgoDim ? !inEgo : false);
+      const showLbl = !smartLabels
+        ? !dimmed
+        : (hasPath ? onPath : (useEgoDim ? inEgo : (isSel || topHubIds.has(n.id) || Boolean(searchNeedle))));
+      const [cx, cy] = currentLayout === "layered"
+        ? (layeredPos[n.id] || [0, 0])
+        : (concentricPos[n.id] || [0, 0]);
       const base = {
         id: n.id,
         name: shortLabel(n),
@@ -1802,26 +2410,26 @@ function initKnowledgeGraph() {
         metric: n.metric,
         external_id: n.external_id,
         category: catIdx,
-        symbolSize: 13 + Math.min(18, n.total_degree * 1.55),
+        symbolSize: 13 + Math.min(18, n.total_degree * 1.55) + (isSel ? 4 : 0),
         draggable: true,
         itemStyle: {
           color: col,
           borderColor: onPath ? "#f4ae42" : (isSel ? "#ffffff" : "#0b1517"),
-          borderWidth: onPath || isSel ? 2.8 : 1.2,
-          opacity: hasPath && !onPath ? 0.25 : 1.0
+          borderWidth: onPath || isSel ? 3.0 : 1.2,
+          opacity: dimmed ? 0.14 : 1.0
         },
         label: {
-          show: true,
-          fontSize: 9.8,
+          show: showLbl,
+          fontSize: isSel || onPath ? 10.4 : 9.6,
           color: "#eef7f5",
-          backgroundColor: "rgba(11,21,23,0.82)",
-          borderColor: onPath ? "#f4ae42" : col,
-          borderWidth: 0.7,
+          backgroundColor: "rgba(11,21,23,0.88)",
+          borderColor: onPath ? "#f4ae42" : (isSel ? "#ffffff" : col),
+          borderWidth: isSel || onPath ? 1.1 : 0.7,
           borderRadius: 4,
           padding: [2, 5]
         }
       };
-      if (currentLayout === "concentric") {
+      if (currentLayout === "concentric" || currentLayout === "layered") {
         base.x = cx;
         base.y = cy;
       }
@@ -1833,6 +2441,7 @@ function initKnowledgeGraph() {
       if (!visSet.has(e.source) || !visSet.has(e.target)) return;
       const onPath = hasPath && pathEdges.has(idx);
       const isFocus = !hasPath && (e.source === selectedId || e.target === selectedId);
+      const dimmedEdge = hasPath ? !onPath : (useEgoDim ? !isFocus : false);
       eLinks.push({
         source: e.source,
         target: e.target,
@@ -1842,15 +2451,19 @@ function initKnowledgeGraph() {
           color: onPath
             ? "#f4ae42"
             : (isFocus ? (e.relation.includes("HAZARD") || e.target.startsWith("haz_") ? "#f06a3b" : "#38d6c4") : "rgba(158,183,180,0.28)"),
-          width: onPath ? 3.2 : (isFocus ? 2.1 : 1.0),
-          opacity: hasPath && !onPath ? 0.14 : 0.85,
-          curveness: 0.11
+          width: onPath ? 3.3 : (isFocus ? 2.2 : 1.0),
+          opacity: dimmedEdge ? 0.05 : (isFocus || onPath ? 0.96 : 0.42),
+          curveness: currentLayout === "layered" ? 0.13 : 0.11
         }
       });
     });
 
     const statusPill = document.getElementById("kg-status-pill");
-    if (statusPill) statusPill.textContent = `${eNodes.length} / ${kg.nodes.length} Nodes · ${eLinks.length} Triples`;
+    if (statusPill) {
+      statusPill.textContent = useEgoDim
+        ? `1-Hop Spotlight: ${egoSet.size} / ${kg.nodes.length} Nodes`
+        : `${eNodes.length} / ${kg.nodes.length} Nodes · ${eLinks.length} Triples`;
+    }
 
     chart.setOption({
       tooltip: {
@@ -1870,16 +2483,16 @@ function initKnowledgeGraph() {
       series: [
         {
           type: "graph",
-          layout: currentLayout === "concentric" ? "none" : currentLayout,
+          layout: (currentLayout === "concentric" || currentLayout === "layered") ? "none" : currentLayout,
           data: eNodes,
           links: eLinks,
           categories: kg.categories.map(c => ({ name: c.short })),
           roam: true,
-          zoom: currentLayout === "concentric" ? 0.74 : 0.86,
+          zoom: currentZoom,
           edgeSymbol: ["none", "arrow"],
-          edgeSymbolSize: [4, 7],
+          edgeSymbolSize: [4, 7.5],
           emphasis: { focus: "adjacency", lineStyle: { width: 2.6 } },
-          force: { repulsion: 520, edgeLength: [110, 195], gravity: 0.06, layoutAnimation: true },
+          force: { repulsion: 560, edgeLength: [115, 205], gravity: 0.06, layoutAnimation: true },
           labelLayout: { hideOverlap: true }
         }
       ]
@@ -1911,8 +2524,42 @@ function initKnowledgeGraph() {
       document.querySelectorAll("[data-kg-layout]").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentLayout = btn.dataset.kgLayout;
+      currentZoom = currentLayout === "concentric" ? 0.74 : 0.88;
       updateChart();
     });
+  });
+
+  const egoBtn = document.getElementById("kg-ego-btn");
+  egoBtn?.addEventListener("click", () => {
+    egoFocus = !egoFocus;
+    egoBtn.classList.toggle("active", egoFocus);
+    egoBtn.textContent = egoFocus ? "🎯 1-Hop Focus: ON" : "🎯 1-Hop Focus: OFF";
+    updateChart();
+  });
+
+  const lblModeBtn = document.getElementById("kg-labels-btn");
+  lblModeBtn?.addEventListener("click", () => {
+    smartLabels = !smartLabels;
+    lblModeBtn.classList.toggle("active", smartLabels);
+    lblModeBtn.textContent = smartLabels ? "🏷 Smart Labels" : "🏷 All Labels";
+    updateChart();
+  });
+
+  document.getElementById("kg-zoom-in")?.addEventListener("click", () => {
+    currentZoom = Math.min(2.6, +(currentZoom * 1.22).toFixed(2));
+    updateChart();
+  });
+  document.getElementById("kg-zoom-out")?.addEventListener("click", () => {
+    currentZoom = Math.max(0.35, +(currentZoom / 1.22).toFixed(2));
+    updateChart();
+  });
+  document.getElementById("kg-zoom-fit")?.addEventListener("click", () => {
+    currentZoom = currentLayout === "concentric" ? 0.74 : 0.88;
+    focusMode = false;
+    pathNodes.clear();
+    pathEdges.clear();
+    document.getElementById("kg-path-ribbon")?.classList.remove("visible");
+    updateChart();
   });
 
   const searchInput = document.getElementById("kg-search");
@@ -1934,8 +2581,8 @@ function initKnowledgeGraph() {
     srcSel?.appendChild(opt);
     dstSel?.appendChild(opt.cloneNode(true));
   });
-  if (srcSel) srcSel.value = "ltc_htn";
-  if (dstSel) dstSel.value = "mol_pdb_1o86";
+  if (srcSel) srcSel.value = "ltc_copd";
+  if (dstSel) dstSel.value = "plat_cqwm_v0_2_helios";
 
   function runShortestPath(sId, dId) {
     pathNodes.clear();
@@ -2001,14 +2648,21 @@ function initKnowledgeGraph() {
     });
   });
 
-  renderInspector("plat_nexus_helios");
+  renderInspector("plat_cqwm_v0_2_helios");
 
   function mountKg() {
     if (chart || !window.echarts) return;
     chart = window.echarts.init(el);
     chart.on("click", params => {
       if (params.dataType === "node" && params.data?.id) {
+        focusMode = true;
         renderInspector(params.data.id);
+        updateChart();
+      }
+    });
+    chart.getZr().on("click", evt => {
+      if (!evt.target && focusMode) {
+        focusMode = false;
         updateChart();
       }
     });

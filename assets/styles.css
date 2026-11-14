@@ -2512,6 +2512,94 @@ h1 code, h2 code, h3 code {
   padding-top: 0.35rem;
   line-height: 1.62;
 }
+.fig-card:not(.interactive-mode) img {
+  max-height: 520px;
+  width: 100%;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.55rem;
+  cursor: zoom-in;
+}
+.fig-subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--border);
+}
+.fig-card:not(.interactive-mode) .fig-subtabs {
+  display: none;
+}
+.fig-subtab-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+.fig-subtab-btn {
+  appearance: none;
+  background: rgba(12, 26, 30, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.38rem 0.78rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.fig-subtab-btn:hover {
+  border-color: var(--signal);
+  color: var(--ink);
+}
+.fig-subtab-btn.active {
+  background: rgba(56, 214, 196, 0.16);
+  border-color: var(--signal);
+  color: var(--signal);
+  box-shadow: 0 0 0 1px rgba(56, 214, 196, 0.28);
+}
+.kg-stage-wrap {
+  position: relative;
+}
+.kg-stage-hud {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  background: rgba(6, 14, 16, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.32rem 0.42rem;
+}
+.kg-hud-btn {
+  appearance: none;
+  background: rgba(15, 31, 35, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.28rem 0.55rem;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+.kg-hud-btn:hover {
+  border-color: var(--signal);
+  color: var(--ink);
+}
+.kg-hud-btn.active {
+  background: rgba(56, 214, 196, 0.16);
+  border-color: var(--signal);
+  color: var(--signal);
+}
 .reader-canvas-stream {
   gap: 2.35rem;
   padding: 1.75rem 1.2rem;

@@ -1,0 +1,548 @@
+{
+  "schema_version": "1.1.0-opencyp-ftqc-thc-ltcs",
+  "dataset_name": "OpenCYP-FTQC v1.1 (13 QM/MM FCIDUMPs + Empirical THC & SO(M) Delta-THC Across 6 FTQC LTCs)",
+  "timestamp_utc": "2026-11-14T00:00:51.504235+00:00",
+  "pinned_jev_model": "jev-1.14.0",
+  "runtime_seconds": 1312.55,
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "autonomous_clinical_decisions": 0,
+    "closed_hazards_claimed": 0,
+    "open_dcb0129_hazards": [
+      "H-LTC-01",
+      "H-LTC-02",
+      "H-LTC-03",
+      "H-LTC-04",
+      "H-LTC-05",
+      "H-LTC-06"
+    ],
+    "upstream_licenses": {
+      "rcsb_pdb": "CC0 1.0 Universal (1TQN, 5TE8, 3NXU, 4WNU, 1R9O, 1O86)",
+      "chembl_37": "CC BY-SA 3.0 (https://chembl.gitbook.io/chembl-interface-documentation/about)",
+      "opencyp_ftqc_v1_1": "CC BY 4.0 / Apache-2.0 Non-Commercial Open Science"
+    }
+  },
+  "archive_summary": {
+    "total_fcidump_files": 13,
+    "v1_0_preserved_files": 8,
+    "v1_1_new_files": 5,
+    "new_fcidump_catalog": [
+      {
+        "file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_Resting_OH2_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+        "sha256": "6a2e70ab1382d860c903c920b99e08c7d0f63884bf81d62208c54b9f5d46e46b",
+        "gzip_bytes": 14301,
+        "n_spatial_orbitals": 9,
+        "nelec_alpha_beta": [
+          5,
+          4
+        ],
+        "ms2": 1,
+        "ecore_ha": -1821.754818,
+        "exact_fci_doublet_ha": -1846.96399
+      },
+      {
+        "file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_CLR_MIC_QMMM_CAS10e10o_def2SVP.fcidump.gz",
+        "sha256": "86768eda7d40fb7f3c12ab97bdf50c8d814f0c95a06edcd8a7a222463adf120c",
+        "gzip_bytes": 20692,
+        "n_spatial_orbitals": 10,
+        "nelec_alpha_beta": [
+          5,
+          5
+        ],
+        "ms2": 0,
+        "ecore_ha": -1915.047208,
+        "exact_fci_singlet_ha": -1940.138078,
+        "rccsdt_singlet_ha": -1940.130929,
+        "abs_rccsdt_minus_fci_mha": 7.1487,
+        "t1_diagnostic": 0.1239
+      },
+      {
+        "file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_ITR_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+        "sha256": "ba87598bf957c8b35084e21ac4745e83360419e909ee18ee238d02ad13031af6",
+        "gzip_bytes": 14418,
+        "n_spatial_orbitals": 9,
+        "nelec_alpha_beta": [
+          5,
+          4
+        ],
+        "ms2": 1,
+        "ecore_ha": -1998.222072,
+        "exact_fci_low_spin_ha": -2011.872686
+      },
+      {
+        "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_RC_QMMM_CAS11e11o_def2SVP.fcidump.gz",
+        "sha256": "545c26a0be57ab8585d2e61c6c62b68c07ebeb970bb5889e0886377e964b6885",
+        "gzip_bytes": 29713,
+        "n_spatial_orbitals": 11,
+        "nelec_alpha_beta": [
+          6,
+          5
+        ],
+        "ms2": 1,
+        "ecore_ha": -1863.931209,
+        "exact_fci_doublet_ha": -1886.04337
+      },
+      {
+        "file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS11e11o_def2SVP.fcidump.gz",
+        "sha256": "1d089cf4e288e629395c261361182ba66a813871646c0024e9982837597e6fd9",
+        "gzip_bytes": 29557,
+        "n_spatial_orbitals": 11,
+        "nelec_alpha_beta": [
+          6,
+          5
+        ],
+        "ms2": 1,
+        "ecore_ha": -1864.173727,
+        "exact_fci_doublet_ha": -1885.98265
+      }
+    ],
+    "thc_factors_npz": {
+      "file": "opencyp_ftqc/opencyp_ftqc_v1_1_thc_factors.npz",
+      "sha256": "4d0fff5abc0d6b59467b860ab45d2d77b4582ff84d17d68fd884f7043bf77d6a",
+      "size_bytes": 162714
+    }
+  },
+  "expanded_cas11e11o_5te8_benchmark": {
+    "pdb_id": "5TE8",
+    "active_space": "CAS(11e, 11o)",
+    "slater_determinants_doublet": 213444,
+    "qmmm_casci_barrier_doublet_kcal_mol": 38.1,
+    "rc_casci_doublet_ha": -1886.04337,
+    "ts_casci_doublet_ha": -1885.98265
+  },
+  "matched_spin_singlet_demarcation": {
+    "spin_quantum_number_S": 0,
+    "ltc_08_copd_clarithromycin_mic_1tqn": {
+      "active_space": "CAS(10e, 10o)",
+      "exact_fci_singlet_ha": -1940.138078,
+      "rccsdt_singlet_ha": -1940.130929,
+      "abs_rccsdt_minus_fci_mha": 7.1487,
+      "t1_diagnostic": 0.1239,
+      "exceeds_chemical_accuracy_1_6_mha": true
+    },
+    "ltc_03_htn_ace_lisinopril_1o86_control": {
+      "active_space": "CAS(12e, 10o)",
+      "exact_fci_singlet_ha": -2040.587383,
+      "abs_rccsdt_minus_fci_mha": 0.00566,
+      "thc_fci_error_mha": -0.2394,
+      "lambda_df_ha": 21.72,
+      "lambda_thc_pauli_ha": 22.8902,
+      "within_chemical_accuracy_1_6_mha": true
+    },
+    "singlet_error_ratio_copd_over_ace": 1263.0
+  },
+  "six_ftqc_ltcs_empirical_thc_benchmarks": [
+    {
+      "ltc_id": "LTC_01_CVD",
+      "condition_name": "Cardiovascular Disease (CYP2D6 4WNU)",
+      "isoform": "CYP2D6",
+      "pdb_id": "4WNU",
+      "n_spatial_orbitals_M": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "fcidump_file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "m_thc": 45,
+      "m_delta_thc": 38,
+      "exact_fci_target_ha": -1886.049468,
+      "thc_fci_error_mha": -0.0943,
+      "delta_thc_paired_fci_error_mha": -0.7053,
+      "eri_rmse_thc_ha": 3.29e-05,
+      "lambda_df_ha": 13.8639,
+      "lambda_thc_pauli_ha": 14.0224,
+      "lambda_delta_df_ha": 1.8421,
+      "lambda_delta_thc_ha": 2.0002,
+      "delta_df_compression_x": 7.53,
+      "delta_thc_compression_x": 7.01
+    },
+    {
+      "ltc_id": "LTC_02_AF",
+      "condition_name": "Atrial Fibrillation (CYP2C9 1R9O)",
+      "isoform": "CYP2C9",
+      "pdb_id": "1R9O",
+      "n_spatial_orbitals_M": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "fcidump_file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "m_thc": 45,
+      "m_delta_thc": 38,
+      "exact_fci_target_ha": -1886.053825,
+      "thc_fci_error_mha": -0.2099,
+      "delta_thc_paired_fci_error_mha": 0.6959,
+      "eri_rmse_thc_ha": 2.95e-05,
+      "lambda_df_ha": 13.9907,
+      "lambda_thc_pauli_ha": 14.1623,
+      "lambda_delta_df_ha": 4.6756,
+      "lambda_delta_thc_ha": 4.5762,
+      "delta_df_compression_x": 2.99,
+      "delta_thc_compression_x": 3.09
+    },
+    {
+      "ltc_id": "LTC_06_CKD",
+      "condition_name": "Chronic Kidney Disease (CYP3A4 3NXU Type-II)",
+      "isoform": "CYP3A4",
+      "pdb_id": "3NXU",
+      "n_spatial_orbitals_M": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_3NXU_RIT_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "m_thc": 45,
+      "m_delta_thc": 38,
+      "exact_fci_target_ha": -1827.244163,
+      "thc_fci_error_mha": 0.6124,
+      "delta_thc_paired_fci_error_mha": 0.7389,
+      "eri_rmse_thc_ha": 5.73e-05,
+      "lambda_df_ha": 20.4581,
+      "lambda_thc_pauli_ha": 24.9732,
+      "lambda_delta_df_ha": 3.5705,
+      "lambda_delta_thc_ha": 4.8061,
+      "delta_df_compression_x": 5.73,
+      "delta_thc_compression_x": 5.2
+    },
+    {
+      "ltc_id": "LTC_07_NAFLD_MASLD",
+      "condition_name": "NAFLD / MASLD (CYP3A4 5TE8 Expanded CAS 11e,11o)",
+      "isoform": "CYP3A4",
+      "pdb_id": "5TE8",
+      "n_spatial_orbitals_M": 11,
+      "nelec_alpha_beta": [
+        6,
+        5
+      ],
+      "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS11e11o_def2SVP.fcidump.gz",
+      "m_thc": 50,
+      "m_delta_thc": 46,
+      "exact_fci_target_ha": -1885.98265,
+      "thc_fci_error_mha": -0.1414,
+      "delta_thc_paired_fci_error_mha": 0.1977,
+      "eri_rmse_thc_ha": 3.32e-05,
+      "lambda_df_ha": 20.9721,
+      "lambda_thc_pauli_ha": 20.9566,
+      "lambda_delta_df_ha": 10.9845,
+      "lambda_delta_thc_ha": 10.77,
+      "delta_df_compression_x": 1.91,
+      "delta_thc_compression_x": 1.95
+    },
+    {
+      "ltc_id": "LTC_08_COPD",
+      "condition_name": "COPD (CYP3A4 1TQN Clarithromycin Nitroso-Alkane MIC)",
+      "isoform": "CYP3A4",
+      "pdb_id": "1TQN",
+      "n_spatial_orbitals_M": 10,
+      "nelec_alpha_beta": [
+        5,
+        5
+      ],
+      "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_CLR_MIC_QMMM_CAS10e10o_def2SVP.fcidump.gz",
+      "m_thc": 45,
+      "m_delta_thc": null,
+      "exact_fci_target_ha": -1940.138078,
+      "thc_fci_error_mha": 0.5627,
+      "delta_thc_paired_fci_error_mha": null,
+      "eri_rmse_thc_ha": 9.08e-05,
+      "lambda_df_ha": 19.8193,
+      "lambda_thc_pauli_ha": 26.2257,
+      "lambda_delta_df_ha": null,
+      "lambda_delta_thc_ha": null,
+      "delta_df_compression_x": null,
+      "delta_thc_compression_x": null,
+      "singlet_rccsdt_minus_fci_mha": 7.1487,
+      "t1_diagnostic": 0.1239
+    },
+    {
+      "ltc_id": "LTC_09_ADULT_ASTHMA",
+      "condition_name": "Adult Asthma (CYP3A4 1TQN Itraconazole Type-II)",
+      "isoform": "CYP3A4",
+      "pdb_id": "1TQN",
+      "n_spatial_orbitals_M": 9,
+      "nelec_alpha_beta": [
+        5,
+        4
+      ],
+      "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_ITR_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+      "m_thc": 45,
+      "m_delta_thc": 38,
+      "exact_fci_target_ha": -2011.872686,
+      "thc_fci_error_mha": -0.202,
+      "delta_thc_paired_fci_error_mha": 0.1669,
+      "eri_rmse_thc_ha": 1.65e-05,
+      "lambda_df_ha": 14.0394,
+      "lambda_thc_pauli_ha": 14.5129,
+      "lambda_delta_df_ha": 6.2885,
+      "lambda_delta_thc_ha": 6.7394,
+      "delta_df_compression_x": 2.23,
+      "delta_thc_compression_x": 2.15
+    }
+  ],
+  "frozen_core_df_vs_thc_scaling_frontier": [
+    {
+      "M_spatial_orbitals": 9,
+      "source": "empirical_pyscf_frozen_core",
+      "df_rank": 45,
+      "m_thc": 36,
+      "lambda_df_ha": 10.1177,
+      "lambda_thc_pauli_ha": 10.8239,
+      "eri_rmse_ha": 8.58e-05,
+      "lambda_delta_thc_paired_ha": 3.49,
+      "toffoli_gates_df_qpe": 4783793,
+      "toffoli_gates_thc_qpe": 3485615,
+      "toffoli_gates_delta_thc_qpe": 1041770,
+      "thc_vs_df_toffoli_speedup": 1.37,
+      "delta_thc_vs_df_toffoli_speedup": 4.59,
+      "logical_qubits_df": 42,
+      "logical_qubits_thc": 50,
+      "logical_qubits_delta_thc": 46,
+      "delta_thc_surface_code_d": 15,
+      "delta_thc_physical_qubits": 36450
+    },
+    {
+      "M_spatial_orbitals": 11,
+      "source": "empirical_pyscf_frozen_core",
+      "df_rank": 66,
+      "m_thc": 44,
+      "lambda_df_ha": 16.7411,
+      "lambda_thc_pauli_ha": 17.8754,
+      "eri_rmse_ha": 9.78e-05,
+      "lambda_delta_thc_paired_ha": 5.77,
+      "toffoli_gates_df_qpe": 10992146,
+      "toffoli_gates_thc_qpe": 7047829,
+      "toffoli_gates_delta_thc_qpe": 2093784,
+      "thc_vs_df_toffoli_speedup": 1.56,
+      "delta_thc_vs_df_toffoli_speedup": 5.25,
+      "logical_qubits_df": 47,
+      "logical_qubits_thc": 54,
+      "logical_qubits_delta_thc": 52,
+      "delta_thc_surface_code_d": 15,
+      "delta_thc_physical_qubits": 40500
+    },
+    {
+      "M_spatial_orbitals": 16,
+      "source": "empirical_pyscf_frozen_core",
+      "df_rank": 136,
+      "m_thc": 64,
+      "lambda_df_ha": 34.5022,
+      "lambda_thc_pauli_ha": 36.9478,
+      "eri_rmse_ha": 0.0001458,
+      "lambda_delta_thc_paired_ha": 11.92,
+      "toffoli_gates_df_qpe": 42760644,
+      "toffoli_gates_thc_qpe": 21183870,
+      "toffoli_gates_delta_thc_qpe": 6291264,
+      "thc_vs_df_toffoli_speedup": 2.02,
+      "delta_thc_vs_df_toffoli_speedup": 6.8,
+      "logical_qubits_df": 58,
+      "logical_qubits_thc": 64,
+      "logical_qubits_delta_thc": 62,
+      "delta_thc_surface_code_d": 15,
+      "delta_thc_physical_qubits": 47250
+    },
+    {
+      "M_spatial_orbitals": 22,
+      "source": "empirical_pyscf_frozen_core",
+      "df_rank": 242,
+      "m_thc": 88,
+      "lambda_df_ha": 66.0505,
+      "lambda_thc_pauli_ha": 69.6902,
+      "eri_rmse_ha": 0.00015,
+      "lambda_delta_thc_paired_ha": 22.48,
+      "toffoli_gates_df_qpe": 140998968,
+      "toffoli_gates_thc_qpe": 54953940,
+      "toffoli_gates_delta_thc_qpe": 16314144,
+      "thc_vs_df_toffoli_speedup": 2.57,
+      "delta_thc_vs_df_toffoli_speedup": 8.64,
+      "logical_qubits_df": 70,
+      "logical_qubits_thc": 78,
+      "logical_qubits_delta_thc": 76,
+      "delta_thc_surface_code_d": 17,
+      "delta_thc_physical_qubits": 72828
+    },
+    {
+      "M_spatial_orbitals": 26,
+      "source": "empirical_pyscf_frozen_core",
+      "df_rank": 308,
+      "m_thc": 104,
+      "lambda_df_ha": 95.8061,
+      "lambda_thc_pauli_ha": 95.495,
+      "eri_rmse_ha": 0.000147,
+      "lambda_delta_thc_paired_ha": 30.8,
+      "toffoli_gates_df_qpe": 266671824,
+      "toffoli_gates_thc_qpe": 88952372,
+      "toffoli_gates_delta_thc_qpe": 26464407,
+      "thc_vs_df_toffoli_speedup": 3.0,
+      "delta_thc_vs_df_toffoli_speedup": 10.08,
+      "logical_qubits_df": 79,
+      "logical_qubits_thc": 86,
+      "logical_qubits_delta_thc": 84,
+      "delta_thc_surface_code_d": 17,
+      "delta_thc_physical_qubits": 79764
+    },
+    {
+      "M_spatial_orbitals": 56,
+      "source": "power_law_extrapolated (b_DF=2.078, b_THC=2.028)",
+      "df_rank": 258,
+      "m_thc": 224,
+      "lambda_df_ha": 468.27,
+      "lambda_thc_pauli_ha": 461.67,
+      "eri_rmse_ha": null,
+      "lambda_delta_thc_paired_ha": 148.93,
+      "toffoli_gates_df_qpe": 2611227350,
+      "toffoli_gates_thc_qpe": 926067630,
+      "toffoli_gates_delta_thc_qpe": 275580142,
+      "thc_vs_df_toffoli_speedup": 2.82,
+      "delta_thc_vs_df_toffoli_speedup": 9.48,
+      "logical_qubits_df": 139,
+      "logical_qubits_thc": 148,
+      "logical_qubits_delta_thc": 146,
+      "delta_thc_surface_code_d": 19,
+      "delta_thc_physical_qubits": 166782
+    },
+    {
+      "M_spatial_orbitals": 58,
+      "source": "power_law_extrapolated (b_DF=2.078, b_THC=2.028)",
+      "df_rank": 267,
+      "m_thc": 232,
+      "lambda_df_ha": 503.69,
+      "lambda_thc_pauli_ha": 495.71,
+      "eri_rmse_ha": null,
+      "lambda_delta_thc_paired_ha": 159.91,
+      "toffoli_gates_df_qpe": 2950366155,
+      "toffoli_gates_thc_qpe": 1029388520,
+      "toffoli_gates_delta_thc_qpe": 306699327,
+      "thc_vs_df_toffoli_speedup": 2.87,
+      "delta_thc_vs_df_toffoli_speedup": 9.62,
+      "logical_qubits_df": 143,
+      "logical_qubits_thc": 152,
+      "logical_qubits_delta_thc": 150,
+      "delta_thc_surface_code_d": 19,
+      "delta_thc_physical_qubits": 171114
+    },
+    {
+      "M_spatial_orbitals": 76,
+      "source": "power_law_extrapolated (b_DF=2.078, b_THC=2.028)",
+      "df_rank": 350,
+      "m_thc": 304,
+      "lambda_df_ha": 883.25,
+      "lambda_thc_pauli_ha": 857.5,
+      "eri_rmse_ha": null,
+      "lambda_delta_thc_paired_ha": 276.61,
+      "toffoli_gates_df_qpe": 7578011572,
+      "toffoli_gates_thc_qpe": 2334278214,
+      "toffoli_gates_delta_thc_qpe": 694762302,
+      "thc_vs_df_toffoli_speedup": 3.25,
+      "delta_thc_vs_df_toffoli_speedup": 10.91,
+      "logical_qubits_df": 179,
+      "logical_qubits_thc": 190,
+      "logical_qubits_delta_thc": 186,
+      "delta_thc_surface_code_d": 19,
+      "delta_thc_physical_qubits": 210102
+    }
+  ],
+  "jev_v1_1_citation_and_visual_audit": {
+    "pinned_model_id": "jev-1.14.0",
+    "claims_checked": 8,
+    "citation_accuracy": 1.0,
+    "option_order_invariance_rate": 1.0,
+    "claim_verdicts": [
+      {
+        "id": "C1_ARCHIVE_SIZE",
+        "expected": "supported",
+        "predicted": "supported",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 1.0
+      },
+      {
+        "id": "C2_MASLD_11O_FIDELITY",
+        "expected": "supported",
+        "predicted": "supported",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 0.985
+      },
+      {
+        "id": "C3_MATCHED_SINGLET_COPD_VS_ACE",
+        "expected": "supported",
+        "predicted": "supported",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 0.975
+      },
+      {
+        "id": "C4_M26_THC_CROSSOVER",
+        "expected": "supported",
+        "predicted": "supported",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 0.9
+      },
+      {
+        "id": "C5_M58_TOFFOLI_SPEEDUP",
+        "expected": "supported",
+        "predicted": "supported",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 1.0
+      },
+      {
+        "id": "C6_CVD_4WNU_COMPRESSION",
+        "expected": "supported",
+        "predicted": "supported",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 0.985
+      },
+      {
+        "id": "TRAP_1_ACE_NEEDS_FTQC",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 1.0
+      },
+      {
+        "id": "TRAP_2_PHYSICAL_QPU_CLAIMED",
+        "expected": "contradicted",
+        "predicted": "contradicted",
+        "correct": true,
+        "order_invariant": true,
+        "p_mean": 1.0
+      }
+    ],
+    "figure11_visual_qa": {
+      "prepared_dimensions_px": [
+        1568,
+        572
+      ],
+      "p_two_panels_visible": 0.99,
+      "panel_visibility_confidence": 0.98,
+      "panel_a_box": {
+        "left": 0.01,
+        "top": 0.09,
+        "right": 0.34,
+        "bottom": 0.95
+      },
+      "panel_b_box": {
+        "left": 0.54,
+        "top": 0.1,
+        "right": 0.96,
+        "bottom": 0.97
+      },
+      "spacing_legibility_score_out_of_2": 0.97
+    }
+  },
+  "post_quantum_signature": {
+    "algorithm": "NIST FIPS 204 ML-DSA-65",
+    "domain_context": "quantum-ltc:opencyp-ftqc-v1-1-thc:v1",
+    "public_key_bytes": 1952,
+    "signature_bytes": 3309,
+    "verified": true
+  },
+  "all_checks_passed": true,
+  "receipt_sha256": "f06654228aab76bca3de3574491e73fa9e8ad1541a033995dae8370e2a9d77a6"
+}
