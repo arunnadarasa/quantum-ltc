@@ -14,8 +14,8 @@ const BOOKMARKS = [
   { label: "p.14 · §6 DCB0129/0160 & Jev 1.14 Audit", page: 14 },
   { label: "p.15 · §6.3 10-LTC CQA & OpenCYP v1.1–v1.2", page: 15 },
   { label: "p.16 · §6.4 Trilogy Synthesis (CQWM + Swarm)", page: 16 },
-  { label: "p.17 · Fig. 10 (Δ-THC) & Fig. 11 (74-Node KG)", page: 17 },
-  { label: "p.18 · Table 4 (3-Paper Trilogy) & §7 (65 Refs)", page: 18 }
+  { label: "p.17 · Fig. 10 (Δ-THC) & Fig. 11 (75-Node KG)", page: 17 },
+  { label: "p.18 · Table 4 (3-Paper Trilogy) & §7 (69 Refs)", page: 18 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -119,7 +119,7 @@ const BIBTEX_ENTRIES = {
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
   pages   = {1--20},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 17 SHA-256-sealed experimental receipts + 74-node KG across Quantinuum Nexus Helios-1E-lite (20,480 emulator shots across 10 jobs; 0 QPU shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1--v0.3 zero-fit hepatocyte-depot closure across N=40 humans + live 6q \\& 8q Quantum Combs + live openFDA FAERS 21.05M reports), Clinical SwarmWorld v0.1, ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0 / UK OGL v3.0); qltc v1.4 reproducibility harness; 18 SHA-256-sealed experimental receipts + 75-node KG across Quantinuum Nexus Helios-1E-lite (20,480 emulator shots across 10 jobs; 0 QPU shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1--v0.3 zero-fit hepatocyte-depot closure across N=40 humans + live 6q \\& 8q Quantum Combs + live openFDA FAERS 21.05M reports), Clinical SwarmWorld v0.1--v0.2 (real 32-PCN 1.81M-patient NHS NCL twin + Goodhart commit-time verification), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
 }`,
   cqwm: `@article{nadarasa2026cqwm,
   title   = {Clinical Quantum World Models: Non-Markovian Intracellular Enzyme Memory, Multi-Slot Trapped-Ion Quantum Combs, and Zero-Refit Human Washout Validation},
@@ -132,14 +132,14 @@ const BIBTEX_ENTRIES = {
   note    = {Zero-refit 9-state RK4 hepatocyte/enterocyte depot + PXR + autoinhibition world model across N=40 human subjects (PMID 38393578 GMFE=1.236, 7/7 in 2-fold; PMID 17635500 elderly IV/PO; PMID 21937987) + 21.05M openFDA FAERS reports + OpenCYP-FTQC v1.2 (2.94M-det CAS(13e,13o), Fiedler chi=963) + 14,336 live Helios-1E-lite 6q/8q ASPS Comb emulator shots (0 QPU shots); NIST FIPS 204 ML-DSA-65 receipts: 7b828614..., ca845d5e..., 9564f1a3..., 66ef2908...}
 }`,
   swarmworld: `@article{nadarasa2026clinicalswarmworld,
-  title   = {Clinical {SwarmWorld}: Zero-Hype Stigmergic Protocol Evolution, Agent-Free {NHS} Shock Resilience, and Consequence-Oracle Amplification Across Multimorbid Primary Care Networks},
+  title   = {Clinical {SwarmWorld} (v0.1--v0.2): Zero-Hype Stigmergic Protocol Evolution, Real 32-{PCN} {NHS} Digital Twin, and Commit-Time Verification Against {Goodhart} Amplification},
   author  = {Nadarasa, Arun},
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical AI \\& Biophysical Systems Paper (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--8},
+  pages   = {1--10},
   url     = {https://arunnadarasa.github.io/quantum-ltc/downloads/Clinical_SwarmWorld_Paper.pdf},
-  note    = {Grounded in Pal, Wang \\& Buehler (arXiv:2608.26081v1) and NHS NCL ICB LTC LCS v6; 8 paired world seeds (1,920 matched macroturns/seed, 0 role prompts, 0 agent calls during S=8 shock assays); 10/10 Jev 1.14.0 citation \\& hype-trap audit; NIST FIPS 204 ML-DSA-65 receipt SHA-256: a22a9ed5...}
+  note    = {Grounded in Pal, Wang \\& Buehler (arXiv:2608.26081v1), NHS NCL ICB LTC LCS v6, and real UK OGL v3.0 data across all 32 active NCL PCNs (171 GP practices, 1,810,301 patients, phi_present=False); 8 paired world seeds (0 role prompts, 0 agent calls during S=8 shock assays); 20/20 Jev 1.14.0 citation \\& hype-trap audits; NIST FIPS 204 ML-DSA-65 receipts: a22a9ed5..., 7caafd39...}
 }`,
   opencyp: `@misc{nadarasa2026opencypftqc,
   title        = {{OpenCYP-FTQC v1.2}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP}, Empirical {THC} \\& Orbital Entanglement Archive},
@@ -267,17 +267,19 @@ async function initPdfReader() {
       dlName: "Clinical_SwarmWorld_Paper.pdf",
       samskriftUrl: "https://samskrift.com/view/fe9bb98f-7d8f-4aa7-960a-da471011a2bc/351e0ede-b660-4c9c-bb08-7f006c49a4dc",
       pagesDir: "pages_swarmworld",
-      totalPages: 8,
-      altTitle: "Clinical SwarmWorld v0.1 Samskrift Paper (8 Pages)",
+      totalPages: 10,
+      altTitle: "Clinical SwarmWorld v0.1–v0.2 Samskrift Paper (10 Pages)",
       bookmarks: [
-        { label: "p.1 · Abstract & §1 Anti-Hype Invariants", page: 1 },
-        { label: "p.2 · §2 20×6 NCL PCN Grid & Table 1", page: 2 },
-        { label: "p.3 · §3 Live jev-1.14.0 Cognition & HiGHS MILP", page: 3 },
-        { label: "p.4 · Fig. 1 & §4 4-Arm Matched-Budget Results", page: 4 },
-        { label: "p.5 · Fig. 2 & §4.3 Oracle Amplification", page: 5 },
-        { label: "p.6 · Fig. 3 & §5 Stigmergy (84.3%) & Phenotypes", page: 6 },
-        { label: "p.7 · Tables 3–4 (10/10 Jev Audit) & §6 DCB0129", page: 7 },
-        { label: "p.8 · Verified References [1]–[20]", page: 8 }
+        { label: "p.1 · Abstract, OGL v3.0 & §1 Anti-Hype", page: 1 },
+        { label: "p.2 · §2 20×6 NCL Grid & Table 1", page: 2 },
+        { label: "p.3 · §3 CQWM v0.3 Oracles & Live Jev 1.14", page: 3 },
+        { label: "p.4 · Fig. 1 & §4 v0.1 Matched-Budget Results", page: 4 },
+        { label: "p.5 · Table 2 & Fig. 2 Oracle Amplification", page: 5 },
+        { label: "p.6 · Fig. 3 & §5 Stigmergy (84.3%) & Turnover", page: 6 },
+        { label: "p.7 · Fig. 4 & §6 Real 32-PCN NHS Twin (1.81M pts)", page: 7 },
+        { label: "p.8 · Table 4 & §6.2 Zero-Trust Commit Gate", page: 8 },
+        { label: "p.9 · Table 5 (20/20 Jev Audits) & §7 DCB0129", page: 9 },
+        { label: "p.10 · Verified References [1]–[24]", page: 10 }
       ]
     }
   };
@@ -2930,6 +2932,235 @@ function initChartsAndLightbox() {
         });
       });
       charts.push(cCsw);
+    }
+
+    // Chart 13 (Full-Width · Fig. 16): Clinical SwarmWorld v0.2 Real 32-PCN NHS NCL Twin & Goodhart Verification
+    const elCsw2 = document.getElementById("echart-clinical-swarmworld-v0-2");
+    if (elCsw2 && PORTAL_DATA.clinical_swarmworld_v0_2) {
+      const cCsw2 = window.echarts.init(elCsw2);
+      const csw2 = PORTAL_DATA.clinical_swarmworld_v0_2;
+      const boroughColors = {
+        Barnet: "#60a5fa",
+        Camden: "#a78bfa",
+        Enfield: "#f4ae42",
+        Haringey: "#f06a3b",
+        Islington: "#38d6c4"
+      };
+
+      function renderCsw2Tab(mode) {
+        if (mode === "inversion") {
+          const regs = csw2.regimes;
+          cCsw2.setOption({
+            tooltip: {
+              ...darkTooltip,
+              formatter: params => {
+                const idx = params[0]?.dataIndex ?? 0;
+                const r = regs[idx];
+                return `<strong>${r.label.replace("\n", " ")}</strong><br/>` +
+                  `Observable Proxy Score: <strong>${r.proxy_score.toFixed(4)}</strong><br/>` +
+                  `True Safety-Adjusted Score: <strong>${r.true_score.toFixed(4)}</strong><br/>` +
+                  `Active Goodhart Share: <strong>${r.goodhart_pct.toFixed(1)}%</strong><br/>` +
+                  `Preventable Harms / World: <strong>${Math.round(r.harms).toLocaleString()}</strong>`;
+              }
+            },
+            legend: {
+              data: [
+                "Observable Proxy Score (Q_proxy / R_proxy)",
+                "True Clinical Safety Score (Q_true / R_true)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.6 },
+              top: 4
+            },
+            grid: { left: 58, right: 26, top: 56, bottom: 56 },
+            xAxis: {
+              type: "category",
+              data: regs.map(r => r.label),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.6, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 1.08,
+              ...baseAxis,
+              name: "Score (32 Real NCL PCNs · 8 World Seeds)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Observable Proxy Score (Q_proxy / R_proxy)",
+                type: "bar",
+                barGap: "12%",
+                barWidth: "28%",
+                data: regs.map(r => r.proxy_score),
+                itemStyle: { color: "#f4ae42", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#fcd34d", fontSize: 9.2 }
+              },
+              {
+                name: "True Clinical Safety Score (Q_true / R_true)",
+                type: "bar",
+                barWidth: "28%",
+                data: regs.map(r => r.true_score),
+                itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#38d6c4", fontSize: 9.2 }
+              }
+            ]
+          }, true);
+        } else if (mode === "amplification") {
+          const ck = csw2.checkpoints;
+          cCsw2.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Unverified Stigmergic Swarm (68.6% Goodhart, 22,024 Harms)",
+                "Isolated Unverified Best-of-32 (38.7% Goodhart)",
+                "Post-Hoc Quarterly Audit Swarm (6,394 Intra-Quarter Harms)",
+                "Commit-Verified Stigmergic Swarm (0.0% Goodhart, 0 Harms)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.1 },
+              top: 4
+            },
+            grid: { left: 60, right: 30, top: 62, bottom: 48 },
+            xAxis: {
+              type: "category",
+              data: ck.ticks.map(t => `Tick ${t}`),
+              ...baseAxis,
+              name: "Evolutionary World Checkpoint",
+              nameLocation: "middle",
+              nameGap: 30,
+              nameTextStyle: { color: "#bfece6", fontSize: 10.4 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 80,
+              ...baseAxis,
+              name: "Active Goodhart Controller Share (%)",
+              nameTextStyle: { color: "#f06a3b", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Unverified Stigmergic Swarm (68.6% Goodhart, 22,024 Harms)",
+                type: "line",
+                symbolSize: 8,
+                data: ck.unverified_goodhart_pct,
+                itemStyle: { color: "#f06a3b" },
+                lineStyle: { width: 2.8 }
+              },
+              {
+                name: "Isolated Unverified Best-of-32 (38.7% Goodhart)",
+                type: "line",
+                symbolSize: 7,
+                data: ck.isolated_goodhart_pct,
+                itemStyle: { color: "#f4ae42" },
+                lineStyle: { width: 2.2, type: "dashed" }
+              },
+              {
+                name: "Post-Hoc Quarterly Audit Swarm (6,394 Intra-Quarter Harms)",
+                type: "line",
+                symbolSize: 7,
+                data: ck.posthoc_goodhart_pct,
+                itemStyle: { color: "#a78bfa" },
+                lineStyle: { width: 2.2 }
+              },
+              {
+                name: "Commit-Verified Stigmergic Swarm (0.0% Goodhart, 0 Harms)",
+                type: "line",
+                symbolSize: 8,
+                data: ck.verified_goodhart_pct,
+                itemStyle: { color: "#38d6c4" },
+                lineStyle: { width: 3.0 }
+              }
+            ]
+          }, true);
+        } else {
+          const pcns = csw2.pcns;
+          const xs = pcns.map(p => p.imd_2025);
+          const ys = pcns.map(p => p.pmdi_pct);
+          const mx = xs.reduce((a, b) => a + b, 0) / xs.length;
+          const my = ys.reduce((a, b) => a + b, 0) / ys.length;
+          const num = xs.reduce((s, x, i) => s + (x - mx) * (ys[i] - my), 0);
+          const den = xs.reduce((s, x) => s + (x - mx) * (x - mx), 0) || 1;
+          const slope = num / den;
+          const intercept = my - slope * mx;
+          const xMin = 13.0, xMax = 44.0;
+
+          const byBorough = Object.keys(boroughColors).map(b => ({
+            name: b,
+            type: "scatter",
+            symbolSize: val => Math.max(9, Math.min(20, Math.sqrt(val[2] / 280))),
+            itemStyle: { color: boroughColors[b], opacity: 0.9 },
+            data: pcns
+              .filter(p => p.borough === b)
+              .map(p => ({
+                value: [p.imd_2025, p.pmdi_pct, p.list_size],
+                pcn: p
+              }))
+          }));
+
+          cCsw2.setOption({
+            tooltip: {
+              ...darkTooltip,
+              trigger: "item",
+              formatter: params => {
+                const p = params.data?.pcn;
+                if (!p) return `OLS Fit (r = +${csw2.correlations.imd_vs_pmdi_pearson_r})`;
+                return `<strong>${p.name} (${p.ods_code})</strong> · ${p.borough}<br/>` +
+                  `Registered Patients: <strong>${p.list_size.toLocaleString()}</strong><br/>` +
+                  `IMD 2025 Deprivation: <strong>${p.imd_2025}</strong><br/>` +
+                  `Propellant pMDI Share: <strong>${p.pmdi_pct}%</strong><br/>` +
+                  `Frail 80+ Hypertension Share: <strong>${p.frail80_pct}%</strong><br/>` +
+                  `Jan vs Aug CYP3A4 MBI Surge: <strong>${p.mbi_winter_surge}×</strong>`;
+              }
+            },
+            legend: {
+              data: [...Object.keys(boroughColors), `OLS Trend (r = +${csw2.correlations.imd_vs_pmdi_pearson_r}, p = 8.8e-5)`],
+              textStyle: { color: "#eef7f5", fontSize: 10.4 },
+              top: 4
+            },
+            grid: { left: 60, right: 28, top: 54, bottom: 48 },
+            xAxis: {
+              type: "value",
+              min: xMin,
+              max: xMax,
+              ...baseAxis,
+              name: "UK OHID IMD 2025 Deprivation Score (32 Active NCL PCNs)",
+              nameLocation: "middle",
+              nameGap: 30,
+              nameTextStyle: { color: "#bfece6", fontSize: 10.4 }
+            },
+            yAxis: {
+              type: "value",
+              min: 56,
+              max: 85,
+              ...baseAxis,
+              name: "NHSBSA Propellant pMDI Share (%)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              ...byBorough,
+              {
+                name: `OLS Trend (r = +${csw2.correlations.imd_vs_pmdi_pearson_r}, p = 8.8e-5)`,
+                type: "line",
+                showSymbol: false,
+                data: [[xMin, +(intercept + slope * xMin).toFixed(2)], [xMax, +(intercept + slope * xMax).toFixed(2)]],
+                lineStyle: { color: "#38d6c4", width: 2, type: "dashed" },
+                itemStyle: { color: "#38d6c4" }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderCsw2Tab("pcns");
+      document.querySelectorAll("[data-csw2-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-csw2-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderCsw2Tab(btn.dataset.csw2Tab);
+        });
+      });
+      charts.push(cCsw2);
     }
 
     window.addEventListener("resize", () => charts.forEach(c => c.resize()));

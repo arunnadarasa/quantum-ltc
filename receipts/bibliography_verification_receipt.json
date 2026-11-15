@@ -1,5 +1,5 @@
 {
-  "total_entries": 65,
+  "total_entries": 69,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -455,6 +455,34 @@
       "status": "VERIFIED",
       "verification_source": "Crossref HTTP 200 (10.1111/j.0030-1299.2008.16644.x)",
       "resolved_title": "A consistent metric for nestedness analysis in ecological systems: reconciling concept and measurement"
+    },
+    {
+      "key": "strathern1997goodhart",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1017/S1062798700002660)",
+      "resolved_title": "\u2018Improving ratings\u2019: audit in the British University system"
+    },
+    {
+      "key": "skalse2022goodhart",
+      "entry_type": "misc",
+      "status": "VERIFIED",
+      "verification_source": "arXiv API HTTP 200 (2209.13085) authors=['Joar Skalse', 'Nikolaus H. R. Howe', 'Dmitrii Krasheninnikov']",
+      "resolved_title": "Defining and Characterizing Reward Hacking"
+    },
+    {
+      "key": "ohid2026fingertips_qof",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "National General Practice Profiles: Quality and Outcomes Framework ({QOF} 2024--2026) and {English} Indices of Deprivation ({IMD} 2025) Across {NHS} {North Central London} Primary Care Networks"
+    },
+    {
+      "key": "nhsbsa2026epd_snomed",
+      "entry_type": "techreport",
+      "status": "VERIFIED",
+      "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
+      "resolved_title": "English Prescribing Dataset ({EPD}) with {SNOMED CT} (\\texttt{EPD\\_SNOMED\\_202601} and \\texttt{EPD\\_SNOMED\\_202608}) and {NHS} Spine Organisation Reference Data ({ORD})"
     }
   ]
 }

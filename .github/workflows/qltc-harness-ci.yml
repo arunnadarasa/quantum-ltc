@@ -1,0 +1,87 @@
+name: qltc Portal & Receipt Verification CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-portal-receipts:
+    name: Cryptographic SHA-256, ML-DSA-65, 32-PCN Twin & DCB0129 Gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv & Python 3.12
+        uses: astral-sh/setup-uv@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dilithium-py & networkx
+        run: uv pip install --system "dilithium-py>=1.2" "networkx>=3.2"
+
+      - name: Verify 19 provenance artifacts, ML-DSA-65 envelopes, 15 FCIDUMPs, 75-node KG, 32-PCN UK OGL v3.0 twin & 3 PDFs
+        run: |
+          python3 - <<'PY'
+          import hashlib, importlib.util, json, sys
+          from pathlib import Path
+          import networkx as nx
+
+          root = Path(".")
+          spec = importlib.util.spec_from_file_location("qltc_harness", root / "receipts" / "qltc_harness.py")
+          mod = importlib.util.module_from_spec(spec)
+          sys.modules["qltc_harness"] = mod
+          spec.loader.exec_module(mod)
+
+          data = json.loads((root / "assets" / "data.json").read_text())
+          prov = data["receipts_summary"]
+          assert len(prov) >= 19, f"Expected >=19 provenance entries, got {len(prov)}"
+
+          verified_receipts = 0
+          verified_pqc = 0
+          for entry in prov:
+              p = root / "receipts" / entry["file"]
+              assert p.exists(), f"Missing receipt {p}"
+              obj = json.loads(p.read_text())
+              res = mod.audit_receipt_payload(obj, label=entry["file"], strict_epistemic=True)
+              assert res["passed"], f"Receipt audit failed for {entry['file']}: {res['errors']}"
+              verified_receipts += 1
+              if res["ml_dsa_65_checked"]:
+                  verified_pqc += 1
+
+          # 32-PCN Real NHS Twin (UK OGL v3.0)
+          twin = json.loads((root / "receipts" / "ncl_icb_real_pcn_twin_2026.json").read_text())
+          twin_copy = {k: v for k, v in twin.items() if k != "snapshot_sha256"}
+          twin_sha = hashlib.sha256(
+              json.dumps(twin_copy, sort_keys=True, separators=(",", ":")).encode()
+          ).hexdigest()
+          assert twin_sha == twin["snapshot_sha256"], "32-PCN twin SHA-256 mismatch"
+          assert len(twin["pcns"]) == 32 and twin["total_registered_patients"] == 1810301
+          assert twin["phi_present"] is False and "Open Government Licence v3.0" in json.dumps(twin)
+
+          # 75-Node / 228-Triple Connected KG
+          kg = json.loads((root / "receipts" / "quantum_ltc_knowledge_graph.json").read_text())
+          g = nx.Graph()
+          for n in kg["nodes"]:
+              g.add_node(n["id"])
+          for e in kg["edges"]:
+              g.add_edge(e["source"], e["target"])
+          assert len(kg["nodes"]) == 75 and len(kg["edges"]) == 228
+          assert nx.number_connected_components(g) == 1
+
+          # 15 OpenCYP-FTQC v1.2 FCIDUMPs + 3 Compiled Samskrift PDFs
+          fcidumps = list((root / "opencyp_ftqc").rglob("*.fcidump.gz"))
+          assert len(fcidumps) == 15, f"Expected 15 FCIDUMPs, got {len(fcidumps)}"
+          for pdf_name in ["Quantum_LTC_Roadmap.pdf", "Clinical_Quantum_World_Model_Paper.pdf", "Clinical_SwarmWorld_Paper.pdf"]:
+              pdf_path = root / "downloads" / pdf_name
+              assert pdf_path.exists() and pdf_path.stat().st_size > 500_000, f"Missing/empty PDF {pdf_path}"
+
+          print(f"[qltc-portal-ci] PASS — {verified_receipts} SHA-256 receipts, {verified_pqc} ML-DSA-65 envelopes, 15 FCIDUMPs, 75-node KG, 32-PCN UK OGL v3.0 twin & 3 PDFs verified.")
+          PY

@@ -3923,6 +3923,437 @@
       }
     ]
   },
+  "clinical_swarmworld_v0_2": {
+    "receipt_sha256": "7caafd39d3d8ec24a9dd6119c06d8afcf07bb0207ff151a6f7cc0b64073dda34",
+    "snapshot_sha256": "bd9503b526ba009b243c00d5a97ecda88c1b2601d68cfed63ba4c5b016c61cc3",
+    "correlations": {
+      "n_pcns": 32,
+      "n_gp_practices": 171,
+      "total_registered_patients": 1810301,
+      "imd_2025_min": 14.056,
+      "imd_2025_median": 25.14,
+      "imd_2025_max": 42.595,
+      "propellant_pmdi_pct_min": 59.27,
+      "propellant_pmdi_pct_mean": 69.81,
+      "propellant_pmdi_pct_max": 81.59,
+      "imd_vs_pmdi_pearson_r": 0.6372,
+      "imd_vs_pmdi_pearson_p": 8.782168352820711e-05,
+      "imd_vs_pmdi_spearman_rho": 0.6019,
+      "imd_vs_pmdi_spearman_p": 0.00026802754606910514,
+      "imd_vs_diabetes_pearson_r": 0.5014,
+      "imd_vs_diabetes_pearson_p": 0.0034637826057703647,
+      "imd_vs_frail80_hyp_pearson_r": -0.7285,
+      "imd_vs_frail80_hyp_pearson_p": 2.280506114472585e-06,
+      "jan_vs_aug_2026_mbi_surge_mean": 1.4647,
+      "jan_vs_aug_2026_mbi_surge_max": 1.944,
+      "jan_vs_aug_2026_inhaler_surge_mean": 1.1947
+    },
+    "pcns": [
+      {
+        "ods_code": "U07605",
+        "name": "Barnet 1W PCN",
+        "borough": "Barnet",
+        "list_size": 39494,
+        "imd_2025": 25.17,
+        "pmdi_pct": 65.78,
+        "frail80_pct": 14.84,
+        "mbi_winter_surge": 1.517
+      },
+      {
+        "ods_code": "U30079",
+        "name": "Barnet 6 PCN",
+        "borough": "Barnet",
+        "list_size": 67147,
+        "imd_2025": 19.94,
+        "pmdi_pct": 65.42,
+        "frail80_pct": 26.48,
+        "mbi_winter_surge": 1.454
+      },
+      {
+        "ods_code": "U33392",
+        "name": "Barnet 2 PCN",
+        "borough": "Barnet",
+        "list_size": 108004,
+        "imd_2025": 16.74,
+        "pmdi_pct": 62.8,
+        "frail80_pct": 22.91,
+        "mbi_winter_surge": 1.64
+      },
+      {
+        "ods_code": "U35438",
+        "name": "Barnet 4 PCN",
+        "borough": "Barnet",
+        "list_size": 53406,
+        "imd_2025": 18.51,
+        "pmdi_pct": 59.27,
+        "frail80_pct": 23.89,
+        "mbi_winter_surge": 1.886
+      },
+      {
+        "ods_code": "U39686",
+        "name": "Barnet 5 PCN",
+        "borough": "Barnet",
+        "list_size": 53625,
+        "imd_2025": 24.57,
+        "pmdi_pct": 62.72,
+        "frail80_pct": 21.18,
+        "mbi_winter_surge": 1.567
+      },
+      {
+        "ods_code": "U58538",
+        "name": "Barnet 3 PCN",
+        "borough": "Barnet",
+        "list_size": 73122,
+        "imd_2025": 16.32,
+        "pmdi_pct": 65.14,
+        "frail80_pct": 24.33,
+        "mbi_winter_surge": 1.041
+      },
+      {
+        "ods_code": "U84655",
+        "name": "Barnet 1D PCN",
+        "borough": "Barnet",
+        "list_size": 35667,
+        "imd_2025": 24.32,
+        "pmdi_pct": 62.74,
+        "frail80_pct": 18.5,
+        "mbi_winter_surge": 1.789
+      },
+      {
+        "ods_code": "U05885",
+        "name": "South Camden PCN",
+        "borough": "Camden",
+        "list_size": 33109,
+        "imd_2025": 23.16,
+        "pmdi_pct": 59.92,
+        "frail80_pct": 14.9,
+        "mbi_winter_surge": 1.938
+      },
+      {
+        "ods_code": "U34811",
+        "name": "West and Central PCN",
+        "borough": "Camden",
+        "list_size": 42302,
+        "imd_2025": 25.67,
+        "pmdi_pct": 70.0,
+        "frail80_pct": 12.52,
+        "mbi_winter_surge": 1.021
+      },
+      {
+        "ods_code": "U51577",
+        "name": "Kentish Town Central PCN",
+        "borough": "Camden",
+        "list_size": 33352,
+        "imd_2025": 26.39,
+        "pmdi_pct": 60.17,
+        "frail80_pct": 18.7,
+        "mbi_winter_surge": 1.442
+      },
+      {
+        "ods_code": "U52461",
+        "name": "Central Hampstead PCN",
+        "borough": "Camden",
+        "list_size": 40148,
+        "imd_2025": 19.58,
+        "pmdi_pct": 72.12,
+        "frail80_pct": 17.62,
+        "mbi_winter_surge": 1.159
+      },
+      {
+        "ods_code": "U54007",
+        "name": "North Camden PCN",
+        "borough": "Camden",
+        "list_size": 54642,
+        "imd_2025": 16.92,
+        "pmdi_pct": 65.2,
+        "frail80_pct": 23.81,
+        "mbi_winter_surge": 1.456
+      },
+      {
+        "ods_code": "U78517",
+        "name": "Kentish Town South PCN",
+        "borough": "Camden",
+        "list_size": 29700,
+        "imd_2025": 30.87,
+        "pmdi_pct": 66.87,
+        "frail80_pct": 14.44,
+        "mbi_winter_surge": 1.277
+      },
+      {
+        "ods_code": "U81184",
+        "name": "West Camden PCN",
+        "borough": "Camden",
+        "list_size": 36826,
+        "imd_2025": 22.88,
+        "pmdi_pct": 64.11,
+        "frail80_pct": 17.57,
+        "mbi_winter_surge": 1.531
+      },
+      {
+        "ods_code": "U83457",
+        "name": "Central Camden PCN",
+        "borough": "Camden",
+        "list_size": 82184,
+        "imd_2025": 27.32,
+        "pmdi_pct": 69.84,
+        "frail80_pct": 14.38,
+        "mbi_winter_surge": 1.36
+      },
+      {
+        "ods_code": "U36687",
+        "name": "Enfield South West PCN",
+        "borough": "Enfield",
+        "list_size": 53040,
+        "imd_2025": 21.99,
+        "pmdi_pct": 73.79,
+        "frail80_pct": 21.38,
+        "mbi_winter_surge": 1.585
+      },
+      {
+        "ods_code": "U50311",
+        "name": "Edmonton PCN",
+        "borough": "Enfield",
+        "list_size": 34158,
+        "imd_2025": 42.08,
+        "pmdi_pct": 81.59,
+        "frail80_pct": 14.3,
+        "mbi_winter_surge": 1.31
+      },
+      {
+        "ods_code": "U58312",
+        "name": "Enfield Unity PCN",
+        "borough": "Enfield",
+        "list_size": 161296,
+        "imd_2025": 28.3,
+        "pmdi_pct": 74.21,
+        "frail80_pct": 19.09,
+        "mbi_winter_surge": 1.454
+      },
+      {
+        "ods_code": "U63047",
+        "name": "West Enfield Collaborative PCN",
+        "borough": "Enfield",
+        "list_size": 37439,
+        "imd_2025": 17.96,
+        "pmdi_pct": 71.42,
+        "frail80_pct": 23.54,
+        "mbi_winter_surge": 1.5
+      },
+      {
+        "ods_code": "U80019",
+        "name": "Enfield Care Network PCN",
+        "borough": "Enfield",
+        "list_size": 80156,
+        "imd_2025": 36.58,
+        "pmdi_pct": 69.85,
+        "frail80_pct": 14.63,
+        "mbi_winter_surge": 1.316
+      },
+      {
+        "ods_code": "U12920",
+        "name": "Haringey - North West PCN",
+        "borough": "Haringey",
+        "list_size": 54738,
+        "imd_2025": 14.06,
+        "pmdi_pct": 67.87,
+        "frail80_pct": 21.4,
+        "mbi_winter_surge": 1.449
+      },
+      {
+        "ods_code": "U15334",
+        "name": "Haringey - East Central PCN",
+        "borough": "Haringey",
+        "list_size": 48261,
+        "imd_2025": 32.35,
+        "pmdi_pct": 79.83,
+        "frail80_pct": 10.86,
+        "mbi_winter_surge": 1.672
+      },
+      {
+        "ods_code": "U27139",
+        "name": "Haringey - South West PCN",
+        "borough": "Haringey",
+        "list_size": 37634,
+        "imd_2025": 20.67,
+        "pmdi_pct": 71.3,
+        "frail80_pct": 17.84,
+        "mbi_winter_surge": 1.944
+      },
+      {
+        "ods_code": "U36584",
+        "name": "Haringey - N15/South East PCN",
+        "borough": "Haringey",
+        "list_size": 47899,
+        "imd_2025": 35.77,
+        "pmdi_pct": 79.74,
+        "frail80_pct": 14.41,
+        "mbi_winter_surge": 1.482
+      },
+      {
+        "ods_code": "U51636",
+        "name": "Haringey - North Central PCN",
+        "borough": "Haringey",
+        "list_size": 50096,
+        "imd_2025": 29.33,
+        "pmdi_pct": 73.08,
+        "frail80_pct": 19.19,
+        "mbi_winter_surge": 1.574
+      },
+      {
+        "ods_code": "U83168",
+        "name": "Haringey - Welbourne PCN",
+        "borough": "Haringey",
+        "list_size": 57364,
+        "imd_2025": 38.94,
+        "pmdi_pct": 77.21,
+        "frail80_pct": 12.94,
+        "mbi_winter_surge": 1.15
+      },
+      {
+        "ods_code": "U96599",
+        "name": "Haringey - North East PCN",
+        "borough": "Haringey",
+        "list_size": 54575,
+        "imd_2025": 42.59,
+        "pmdi_pct": 76.99,
+        "frail80_pct": 13.44,
+        "mbi_winter_surge": 1.678
+      },
+      {
+        "ods_code": "U02795",
+        "name": "North 2 Islington PCN",
+        "borough": "Islington",
+        "list_size": 87562,
+        "imd_2025": 29.01,
+        "pmdi_pct": 78.25,
+        "frail80_pct": 14.99,
+        "mbi_winter_surge": 1.271
+      },
+      {
+        "ods_code": "U36795",
+        "name": "North 1 Islington PCN",
+        "borough": "Islington",
+        "list_size": 41467,
+        "imd_2025": 28.96,
+        "pmdi_pct": 72.29,
+        "frail80_pct": 16.52,
+        "mbi_winter_surge": 1.095
+      },
+      {
+        "ods_code": "U55709",
+        "name": "Central 2 Islington PCN",
+        "borough": "Islington",
+        "list_size": 40918,
+        "imd_2025": 23.88,
+        "pmdi_pct": 70.02,
+        "frail80_pct": 16.33,
+        "mbi_winter_surge": 1.403
+      },
+      {
+        "ods_code": "U60337",
+        "name": "Central 1 Islington PCN",
+        "borough": "Islington",
+        "list_size": 63589,
+        "imd_2025": 25.95,
+        "pmdi_pct": 75.7,
+        "frail80_pct": 15.34,
+        "mbi_winter_surge": 1.32
+      },
+      {
+        "ods_code": "U87168",
+        "name": "South Islington PCN",
+        "borough": "Islington",
+        "list_size": 77381,
+        "imd_2025": 25.11,
+        "pmdi_pct": 68.54,
+        "frail80_pct": 14.07,
+        "mbi_winter_surge": 1.589
+      }
+    ],
+    "regimes": [
+      {
+        "label": "Proxy MILP\n(Static, 6/6 Game)",
+        "proxy_score": 0.976,
+        "true_score": 0.0739,
+        "goodhart_pct": 100.0,
+        "harms": 0.0
+      },
+      {
+        "label": "Safety MILP\n(Static, 0/6 Game)",
+        "proxy_score": 0.7668,
+        "true_score": 0.8764,
+        "goodhart_pct": 0.0,
+        "harms": 0.0
+      },
+      {
+        "label": "Unverified Swarm\n(68.6% Goodhart)",
+        "proxy_score": 0.434,
+        "true_score": 0.3337,
+        "goodhart_pct": 68.6,
+        "harms": 22024.0
+      },
+      {
+        "label": "Commit-Verified\n(0% Goodhart)",
+        "proxy_score": 0.3767,
+        "true_score": 0.4073,
+        "goodhart_pct": 0.0,
+        "harms": 0.0
+      },
+      {
+        "label": "Post-Hoc Audit\n(Quarterly, 6.4k Harm)",
+        "proxy_score": 0.3896,
+        "true_score": 0.4214,
+        "goodhart_pct": 3.62,
+        "harms": 6394.25
+      },
+      {
+        "label": "Pure Verified\n(No Fork, 91.5% Ret)",
+        "proxy_score": 0.3888,
+        "true_score": 0.4265,
+        "goodhart_pct": 0.0,
+        "harms": 0.0
+      },
+      {
+        "label": "Isolated Best-32\n(38.7% Goodhart)",
+        "proxy_score": 0.2777,
+        "true_score": 0.2385,
+        "goodhart_pct": 38.65,
+        "harms": 42634.375
+      }
+    ],
+    "checkpoints": {
+      "ticks": [
+        "120",
+        "240",
+        "360",
+        "480"
+      ],
+      "unverified_goodhart_pct": [
+        55.47,
+        64.39,
+        68.36,
+        68.75
+      ],
+      "isolated_goodhart_pct": [
+        38.0,
+        39.92,
+        37.58,
+        38.76
+      ],
+      "posthoc_goodhart_pct": [
+        18.54,
+        14.45,
+        10.74,
+        3.91
+      ],
+      "verified_goodhart_pct": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
   "qltcmlm_models": [
     {
       "label": "4q\nReservoir",
@@ -4113,6 +4544,13 @@
   ],
   "receipts_summary": [
     {
+      "file": "clinical_swarmworld_v0_2_real_nhs_receipt.json",
+      "sha256": "7caafd39d3d8ec24a9dd6119c06d8afcf07bb0207ff151a6f7cc0b64073dda34",
+      "platforms": "<code>Clinical SwarmWorld v0.2</code>: Real <code>32</code>-PCN NHS NCL Twin (<code>171</code> GPs, <code>1,810,301</code> pts, UK OGL v3.0: OHID QOF/IMD 2025 + NHSBSA <code>EPD_SNOMED_202608/01</code> + Spine ORD), Dual <code>HiGHS MILP</code>, Live <code>jev-1.14.0</code> Gate + <code>ML-DSA-65</code>",
+      "metrics": "<code>r(IMD, pMDI)=+0.637</code> (<code>p=8.8\u00d710\u207b\u2075</code>); Unverified Swarm amplifies Goodhart <code>38.6%\u219268.6%</code> (<code>p=0.0078</code>, <code>22,024</code> harms/world) vs Commit-Verified <code>0.0%</code> &amp; <code>0.0</code> harms (<code>R_true=0.4073</code> vs <code>0.3337</code>); Post-Hoc <code>6,394</code> harms; <code>12/12</code> gate &amp; <code>10/10</code> citations",
+      "floor": "Safety HiGHS MILP (8.80 ms, Q_true=0.876) & Isolated Best-of-32"
+    },
+    {
       "file": "clinical_swarmworld_v0_1_receipt.json",
       "sha256": "a22a9ed5213090f21f700d0a8934d86da2a102da5cc95e85afa60f0bae10e0c0",
       "platforms": "<code>Clinical SwarmWorld v0.1</code> (<code>arXiv:2608.26081v1</code>): <code>20 \u00d7 6</code> NCL PCN Grid, <code>CQWM v0.3</code> + <code>OpenCYP-FTQC v1.2</code> Oracles, <code>HiGHS MILP</code>, Live <code>jev-1.14.0</code> + <code>ML-DSA-65</code>",
@@ -4233,14 +4671,14 @@
     },
     {
       "file": "quantum_ltc_knowledge_graph.json",
-      "sha256": "80ca88ed1ab6ad824105332e270699850334457ce94a97a69699a6f6040becd5",
-      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, PubMed, <code>openFDA FAERS</code>, SNOMED CT, UniProtKB, RCSB PDB (<code>7 structures</code>), <code>OpenCYP-FTQC v1.2</code>, <code>CQWM v0.1\u2013v0.3</code>, <code>Clinical SwarmWorld v0.1</code>, <code>Jev 1.14</code>, JSON-LD 1.1",
-      "metrics": "<code>74</code> nodes, <code>219</code> directed semantic triples across 8 ontology layers (1 connected component)",
-      "floor": "Live OLS4, ChEMBL37, PubMed & openFDA verified"
+      "sha256": "43ec479315b74f1f2052f44d43e41efb8a234927646e441fd88dbc69ab704d0f",
+      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, PubMed, <code>openFDA FAERS</code>, UK OHID/NHSBSA (OGL v3.0), SNOMED CT, UniProtKB, RCSB PDB (<code>7 structures</code>), <code>OpenCYP-FTQC v1.2</code>, <code>CQWM v0.1\u2013v0.3</code>, <code>Clinical SwarmWorld v0.1\u2013v0.2</code>, <code>qltc v1.4</code>, <code>Jev 1.14</code>, JSON-LD 1.1",
+      "metrics": "<code>75</code> nodes, <code>228</code> directed semantic triples across 8 ontology layers (1 connected component)",
+      "floor": "Live OLS4, ChEMBL37, PubMed, openFDA & UK OGL v3.0 verified"
     }
   ],
   "knowledge_graph": {
-    "receipt_sha256": "80ca88ed1ab6ad824105332e270699850334457ce94a97a69699a6f6040becd5",
+    "receipt_sha256": "43ec479315b74f1f2052f44d43e41efb8a234927646e441fd88dbc69ab704d0f",
     "categories": [
       {
         "id": "NCL_LTC_Condition",
@@ -4291,7 +4729,7 @@
         "Molecular_Target": 15,
         "Quantum_Primitive": 10,
         "Logical_Era": 4,
-        "Platform_Receipt": 19,
+        "Platform_Receipt": 20,
         "DCB0129_Hazard": 6
       }
     },
@@ -4308,9 +4746,9 @@
         "in_degree": 0,
         "out_degree": 10,
         "total_degree": 10,
-        "pagerank": 0.012199,
-        "betweenness_centrality": 0.0429,
-        "closeness_centrality": 0.4479
+        "pagerank": 0.011735,
+        "betweenness_centrality": 0.041,
+        "closeness_centrality": 0.4458
       },
       {
         "id": "ltc_af",
@@ -4324,9 +4762,9 @@
         "in_degree": 0,
         "out_degree": 6,
         "total_degree": 6,
-        "pagerank": 0.007162,
-        "betweenness_centrality": 0.014,
-        "closeness_centrality": 0.3904
+        "pagerank": 0.006936,
+        "betweenness_centrality": 0.0133,
+        "closeness_centrality": 0.3895
       },
       {
         "id": "ltc_htn",
@@ -4338,11 +4776,11 @@
         "metric": "Anchored by NCL PCN Outcome #23 (<140/90 clinic, <135/85 home for age <80; <150/90 for >=80). [target_bp_under80: 140/90 mmHg \u00b7 target_bp_home: 135/85 mmHg]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 8,
-        "total_degree": 8,
-        "pagerank": 0.012095,
-        "betweenness_centrality": 0.0515,
-        "closeness_centrality": 0.4195
+        "out_degree": 9,
+        "total_degree": 9,
+        "pagerank": 0.013492,
+        "betweenness_centrality": 0.0558,
+        "closeness_centrality": 0.4229
       },
       {
         "id": "ltc_t2d",
@@ -4356,9 +4794,9 @@
         "in_degree": 0,
         "out_degree": 7,
         "total_degree": 7,
-        "pagerank": 0.009796,
-        "betweenness_centrality": 0.0213,
-        "closeness_centrality": 0.3946
+        "pagerank": 0.009456,
+        "betweenness_centrality": 0.0208,
+        "closeness_centrality": 0.3936
       },
       {
         "id": "ltc_t1d",
@@ -4372,9 +4810,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.006665,
-        "betweenness_centrality": 0.0063,
-        "closeness_centrality": 0.3842
+        "pagerank": 0.006428,
+        "betweenness_centrality": 0.0061,
+        "closeness_centrality": 0.3834
       },
       {
         "id": "ltc_ckd",
@@ -4388,9 +4826,9 @@
         "in_degree": 0,
         "out_degree": 11,
         "total_degree": 11,
-        "pagerank": 0.018152,
-        "betweenness_centrality": 0.0417,
-        "closeness_centrality": 0.4424
+        "pagerank": 0.016237,
+        "betweenness_centrality": 0.0396,
+        "closeness_centrality": 0.4431
       },
       {
         "id": "ltc_masld",
@@ -4404,9 +4842,9 @@
         "in_degree": 0,
         "out_degree": 7,
         "total_degree": 7,
-        "pagerank": 0.01243,
-        "betweenness_centrality": 0.0465,
-        "closeness_centrality": 0.4033
+        "pagerank": 0.011982,
+        "betweenness_centrality": 0.0456,
+        "closeness_centrality": 0.4022
       },
       {
         "id": "ltc_copd",
@@ -4418,11 +4856,11 @@
         "metric": "Chronic airflow limitation requiring winter exacerbation prevention & low-GWP inhaler review. [seasonality: Pre-winter Q2/Q3 priority]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 11,
-        "total_degree": 11,
-        "pagerank": 0.019835,
-        "betweenness_centrality": 0.0674,
-        "closeness_centrality": 0.4424
+        "out_degree": 12,
+        "total_degree": 12,
+        "pagerank": 0.02046,
+        "betweenness_centrality": 0.0689,
+        "closeness_centrality": 0.4458
       },
       {
         "id": "ltc_asthma",
@@ -4434,11 +4872,11 @@
         "metric": "Mandates 48-hour post-attack review (2 working days) & 6-week full review by Tier 2/3 clinicians + SABA-free MART. [post_attack_sla: 48 hours (2 working days) \u00b7 followup_sla: 6 weeks]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 1,
-        "out_degree": 8,
-        "total_degree": 9,
-        "pagerank": 0.01264,
-        "betweenness_centrality": 0.037,
-        "closeness_centrality": 0.4148
+        "out_degree": 9,
+        "total_degree": 10,
+        "pagerank": 0.014816,
+        "betweenness_centrality": 0.0412,
+        "closeness_centrality": 0.4205
       },
       {
         "id": "stage_call_recall",
@@ -4452,9 +4890,9 @@
         "in_degree": 10,
         "out_degree": 3,
         "total_degree": 13,
-        "pagerank": 0.019337,
-        "betweenness_centrality": 0.0629,
-        "closeness_centrality": 0.432
+        "pagerank": 0.017635,
+        "betweenness_centrality": 0.0558,
+        "closeness_centrality": 0.4327
       },
       {
         "id": "stage_1_check_test",
@@ -4468,9 +4906,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.022718,
-        "betweenness_centrality": 0.0992,
-        "closeness_centrality": 0.4398
+        "pagerank": 0.021902,
+        "betweenness_centrality": 0.098,
+        "closeness_centrality": 0.4405
       },
       {
         "id": "stage_2_mdt_review",
@@ -4484,9 +4922,9 @@
         "in_degree": 5,
         "out_degree": 3,
         "total_degree": 8,
-        "pagerank": 0.013476,
-        "betweenness_centrality": 0.0642,
-        "closeness_centrality": 0.422
+        "pagerank": 0.012967,
+        "betweenness_centrality": 0.0621,
+        "closeness_centrality": 0.4205
       },
       {
         "id": "stage_3_pcsp",
@@ -4500,9 +4938,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.018835,
-        "betweenness_centrality": 0.0623,
-        "closeness_centrality": 0.3883
+        "pagerank": 0.018475,
+        "betweenness_centrality": 0.0612,
+        "closeness_centrality": 0.3895
       },
       {
         "id": "stage_4_continuity",
@@ -4516,9 +4954,9 @@
         "in_degree": 2,
         "out_degree": 2,
         "total_degree": 4,
-        "pagerank": 0.013577,
-        "betweenness_centrality": 0.0216,
-        "closeness_centrality": 0.3395
+        "pagerank": 0.013331,
+        "betweenness_centrality": 0.0215,
+        "closeness_centrality": 0.341
       },
       {
         "id": "mol_ace",
@@ -4532,9 +4970,9 @@
         "in_degree": 5,
         "out_degree": 1,
         "total_degree": 6,
-        "pagerank": 0.010396,
-        "betweenness_centrality": 0.0265,
-        "closeness_centrality": 0.3782
+        "pagerank": 0.010051,
+        "betweenness_centrality": 0.0266,
+        "closeness_centrality": 0.3795
       },
       {
         "id": "mol_pdb_1o86",
@@ -4548,9 +4986,9 @@
         "in_degree": 2,
         "out_degree": 4,
         "total_degree": 6,
-        "pagerank": 0.014504,
-        "betweenness_centrality": 0.0199,
-        "closeness_centrality": 0.3724
+        "pagerank": 0.013994,
+        "betweenness_centrality": 0.0192,
+        "closeness_centrality": 0.3719
       },
       {
         "id": "mol_slc5a2",
@@ -4564,9 +5002,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.008995,
-        "betweenness_centrality": 0.0098,
-        "closeness_centrality": 0.3596
+        "pagerank": 0.008642,
+        "betweenness_centrality": 0.0095,
+        "closeness_centrality": 0.3592
       },
       {
         "id": "mol_glp1r",
@@ -4580,9 +5018,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.006865,
+        "pagerank": 0.006672,
         "betweenness_centrality": 0.0025,
-        "closeness_centrality": 0.3216
+        "closeness_centrality": 0.3203
       },
       {
         "id": "mol_adrb2",
@@ -4596,9 +5034,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.006301,
-        "betweenness_centrality": 0.002,
-        "closeness_centrality": 0.3364
+        "pagerank": 0.006189,
+        "betweenness_centrality": 0.0021,
+        "closeness_centrality": 0.3379
       },
       {
         "id": "mol_il6",
@@ -4612,9 +5050,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.008024,
+        "pagerank": 0.007895,
         "betweenness_centrality": 0.0107,
-        "closeness_centrality": 0.3668
+        "closeness_centrality": 0.37
       },
       {
         "id": "mol_angii_1n9v",
@@ -4628,9 +5066,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.005545,
-        "betweenness_centrality": 0.0105,
-        "closeness_centrality": 0.3303
+        "pagerank": 0.005429,
+        "betweenness_centrality": 0.0108,
+        "closeness_centrality": 0.3318
       },
       {
         "id": "mol_pnpla3",
@@ -4644,9 +5082,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.003517,
+        "pagerank": 0.003436,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2885
+        "closeness_centrality": 0.2879
       },
       {
         "id": "mol_cyp3a4",
@@ -4660,9 +5098,9 @@
         "in_degree": 5,
         "out_degree": 4,
         "total_degree": 9,
-        "pagerank": 0.014496,
-        "betweenness_centrality": 0.0463,
-        "closeness_centrality": 0.4056
+        "pagerank": 0.014014,
+        "betweenness_centrality": 0.0448,
+        "closeness_centrality": 0.4044
       },
       {
         "id": "mol_pdb_1tqn",
@@ -4676,9 +5114,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.013045,
-        "betweenness_centrality": 0.0092,
-        "closeness_centrality": 0.3744
+        "pagerank": 0.012153,
+        "betweenness_centrality": 0.0094,
+        "closeness_centrality": 0.3776
       },
       {
         "id": "mol_pdb_5te8",
@@ -4692,9 +5130,9 @@
         "in_degree": 1,
         "out_degree": 6,
         "total_degree": 7,
-        "pagerank": 0.01521,
-        "betweenness_centrality": 0.0086,
-        "closeness_centrality": 0.3706
+        "pagerank": 0.014625,
+        "betweenness_centrality": 0.0083,
+        "closeness_centrality": 0.37
       },
       {
         "id": "mol_pdb_3nxu",
@@ -4708,9 +5146,9 @@
         "in_degree": 1,
         "out_degree": 4,
         "total_degree": 5,
-        "pagerank": 0.012895,
-        "betweenness_centrality": 0.0046,
-        "closeness_centrality": 0.3706
+        "pagerank": 0.012056,
+        "betweenness_centrality": 0.0047,
+        "closeness_centrality": 0.3719
       },
       {
         "id": "mol_pdb_4wnu",
@@ -4724,9 +5162,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009909,
-        "betweenness_centrality": 0.0074,
-        "closeness_centrality": 0.3744
+        "pagerank": 0.009579,
+        "betweenness_centrality": 0.0072,
+        "closeness_centrality": 0.3737
       },
       {
         "id": "mol_pdb_1r9o",
@@ -4740,9 +5178,9 @@
         "in_degree": 3,
         "out_degree": 3,
         "total_degree": 6,
-        "pagerank": 0.011233,
-        "betweenness_centrality": 0.0161,
-        "closeness_centrality": 0.3782
+        "pagerank": 0.010865,
+        "betweenness_centrality": 0.0157,
+        "closeness_centrality": 0.3776
       },
       {
         "id": "mol_muc5b",
@@ -4756,9 +5194,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.007006,
-        "betweenness_centrality": 0.004,
-        "closeness_centrality": 0.323
+        "pagerank": 0.006781,
+        "betweenness_centrality": 0.0044,
+        "closeness_centrality": 0.3246
       },
       {
         "id": "tx_acei_lisinopril",
@@ -4772,9 +5210,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009034,
-        "betweenness_centrality": 0.0344,
-        "closeness_centrality": 0.3561
+        "pagerank": 0.008819,
+        "betweenness_centrality": 0.0339,
+        "closeness_centrality": 0.3558
       },
       {
         "id": "tx_sglt2i",
@@ -4788,9 +5226,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009518,
-        "betweenness_centrality": 0.0151,
-        "closeness_centrality": 0.365
+        "pagerank": 0.009209,
+        "betweenness_centrality": 0.0148,
+        "closeness_centrality": 0.3645
       },
       {
         "id": "tx_mart_dpi",
@@ -4804,9 +5242,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.010067,
-        "betweenness_centrality": 0.0344,
-        "closeness_centrality": 0.3862
+        "pagerank": 0.009801,
+        "betweenness_centrality": 0.0334,
+        "closeness_centrality": 0.3854
       },
       {
         "id": "tx_pharmacist_smr",
@@ -4820,9 +5258,9 @@
         "in_degree": 1,
         "out_degree": 8,
         "total_degree": 9,
-        "pagerank": 0.013903,
-        "betweenness_centrality": 0.0654,
-        "closeness_centrality": 0.4345
+        "pagerank": 0.013439,
+        "betweenness_centrality": 0.0636,
+        "closeness_centrality": 0.4327
       },
       {
         "id": "tx_home_bp",
@@ -4836,9 +5274,9 @@
         "in_degree": 0,
         "out_degree": 1,
         "total_degree": 1,
-        "pagerank": 0.002717,
+        "pagerank": 0.002673,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2635
+        "closeness_centrality": 0.2633
       },
       {
         "id": "tx_vcse_sp",
@@ -4852,9 +5290,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.006358,
-        "betweenness_centrality": 0.0038,
-        "closeness_centrality": 0.2932
+        "pagerank": 0.006262,
+        "betweenness_centrality": 0.0036,
+        "closeness_centrality": 0.2937
       },
       {
         "id": "prim_p08",
@@ -4868,9 +5306,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.00872,
-        "betweenness_centrality": 0.0098,
-        "closeness_centrality": 0.3318
+        "pagerank": 0.007779,
+        "betweenness_centrality": 0.009,
+        "closeness_centrality": 0.3333
       },
       {
         "id": "prim_a01d",
@@ -4884,9 +5322,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.016242,
-        "betweenness_centrality": 0.0389,
-        "closeness_centrality": 0.3596
+        "pagerank": 0.015785,
+        "betweenness_centrality": 0.0376,
+        "closeness_centrality": 0.3575
       },
       {
         "id": "prim_p09",
@@ -4900,7 +5338,7 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.012194,
+        "pagerank": 0.011829,
         "betweenness_centrality": 0.0152,
         "closeness_centrality": 0.3318
       },
@@ -4916,9 +5354,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.007662,
-        "betweenness_centrality": 0.0036,
-        "closeness_centrality": 0.3349
+        "pagerank": 0.007372,
+        "betweenness_centrality": 0.0035,
+        "closeness_centrality": 0.3348
       },
       {
         "id": "prim_p20",
@@ -4932,9 +5370,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.012403,
-        "betweenness_centrality": 0.0125,
-        "closeness_centrality": 0.3925
+        "pagerank": 0.01157,
+        "betweenness_centrality": 0.0119,
+        "closeness_centrality": 0.3936
       },
       {
         "id": "prim_a01g",
@@ -4948,9 +5386,9 @@
         "in_degree": 1,
         "out_degree": 3,
         "total_degree": 4,
-        "pagerank": 0.011678,
-        "betweenness_centrality": 0.0228,
-        "closeness_centrality": 0.3411
+        "pagerank": 0.011297,
+        "betweenness_centrality": 0.0223,
+        "closeness_centrality": 0.341
       },
       {
         "id": "prim_a01h",
@@ -4964,9 +5402,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.009919,
-        "betweenness_centrality": 0.009,
-        "closeness_centrality": 0.3017
+        "pagerank": 0.009678,
+        "betweenness_centrality": 0.0088,
+        "closeness_centrality": 0.302
       },
       {
         "id": "prim_p22",
@@ -4980,9 +5418,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.015509,
-        "betweenness_centrality": 0.0302,
-        "closeness_centrality": 0.365
+        "pagerank": 0.015047,
+        "betweenness_centrality": 0.0296,
+        "closeness_centrality": 0.3645
       },
       {
         "id": "prim_x03",
@@ -4996,9 +5434,9 @@
         "in_degree": 5,
         "out_degree": 5,
         "total_degree": 10,
-        "pagerank": 0.026992,
-        "betweenness_centrality": 0.0525,
-        "closeness_centrality": 0.3802
+        "pagerank": 0.026014,
+        "betweenness_centrality": 0.0514,
+        "closeness_centrality": 0.3795
       },
       {
         "id": "prim_p04",
@@ -5012,9 +5450,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.012275,
-        "betweenness_centrality": 0.0148,
-        "closeness_centrality": 0.3042
+        "pagerank": 0.011994,
+        "betweenness_centrality": 0.0146,
+        "closeness_centrality": 0.3045
       },
       {
         "id": "era_i",
@@ -5028,9 +5466,9 @@
         "in_degree": 3,
         "out_degree": 1,
         "total_degree": 4,
-        "pagerank": 0.015533,
-        "betweenness_centrality": 0.0216,
-        "closeness_centrality": 0.338
+        "pagerank": 0.014843,
+        "betweenness_centrality": 0.0206,
+        "closeness_centrality": 0.3379
       },
       {
         "id": "era_ii",
@@ -5044,9 +5482,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.024016,
-        "betweenness_centrality": 0.0484,
-        "closeness_centrality": 0.3724
+        "pagerank": 0.023022,
+        "betweenness_centrality": 0.0468,
+        "closeness_centrality": 0.3719
       },
       {
         "id": "era_iii",
@@ -5060,9 +5498,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.020888,
-        "betweenness_centrality": 0.0368,
-        "closeness_centrality": 0.3946
+        "pagerank": 0.01968,
+        "betweenness_centrality": 0.0364,
+        "closeness_centrality": 0.3957
       },
       {
         "id": "era_iv",
@@ -5076,9 +5514,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.022077,
-        "betweenness_centrality": 0.0307,
-        "closeness_centrality": 0.3614
+        "pagerank": 0.021097,
+        "betweenness_centrality": 0.0301,
+        "closeness_centrality": 0.3627
       },
       {
         "id": "plat_nexus_helios",
@@ -5092,9 +5530,9 @@
         "in_degree": 3,
         "out_degree": 2,
         "total_degree": 5,
-        "pagerank": 0.014288,
-        "betweenness_centrality": 0.0104,
-        "closeness_centrality": 0.338
+        "pagerank": 0.013297,
+        "betweenness_centrality": 0.0113,
+        "closeness_centrality": 0.341
       },
       {
         "id": "plat_haiqu",
@@ -5108,9 +5546,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.010834,
+        "pagerank": 0.010551,
         "betweenness_centrality": 0.0016,
-        "closeness_centrality": 0.2897
+        "closeness_centrality": 0.2891
       },
       {
         "id": "plat_jij_highs",
@@ -5122,11 +5560,11 @@
         "metric": "128-var (144 w/ slack) NCL Call/Recall QUBO achieving 18/18 pre-winter High/Complex coverage within 0.80% of 4.33 ms HiGHS MILP. [pre_winter_recall: 18/18 \u00b7 gap_vs_highs_pct: 0.8038 \u00b7 receipt_sha256: 7212c3d95a5fc0b960c2c3b48398f2ce13469623ea8b4de1e3001d54c3403955]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 1,
-        "out_degree": 1,
-        "total_degree": 2,
-        "pagerank": 0.007974,
-        "betweenness_centrality": 0.0015,
-        "closeness_centrality": 0.3054
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.009292,
+        "betweenness_centrality": 0.0028,
+        "closeness_centrality": 0.3122
       },
       {
         "id": "plat_hqs_qprotsim",
@@ -5140,9 +5578,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.009387,
-        "betweenness_centrality": 0.0022,
-        "closeness_centrality": 0.2808
+        "pagerank": 0.009161,
+        "betweenness_centrality": 0.0021,
+        "closeness_centrality": 0.2803
       },
       {
         "id": "plat_multiomics",
@@ -5156,9 +5594,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.005524,
+        "pagerank": 0.005371,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2765
+        "closeness_centrality": 0.2761
       },
       {
         "id": "plat_modal_rhyme_hf",
@@ -5172,9 +5610,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.009705,
-        "betweenness_centrality": 0.0025,
-        "closeness_centrality": 0.2724
+        "pagerank": 0.009472,
+        "betweenness_centrality": 0.0024,
+        "closeness_centrality": 0.2721
       },
       {
         "id": "plat_text2wetlab",
@@ -5188,9 +5626,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.005189,
+        "pagerank": 0.005049,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.3067
+        "closeness_centrality": 0.3071
       },
       {
         "id": "plat_medicus_discopy_moth",
@@ -5204,9 +5642,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.010349,
+        "pagerank": 0.010166,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2897
+        "closeness_centrality": 0.2902
       },
       {
         "id": "plat_typesafe_jev",
@@ -5218,11 +5656,11 @@
         "metric": "Live typed multi-method Health AI autorater (arXiv:2611.05127): CUJ-1 74.53% (4.32/5 NHS utility), CUJ-2 73.33%, CUJ-3 51.20%, CUJ-4 55.60%. [cuj1_composite_pct: 74.53 \u00b7 cuj4_rigor_0_5: 3.9 \u00b7 receipt_sha256: 7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 12,
-        "total_degree": 12,
-        "pagerank": 0.015589,
-        "betweenness_centrality": 0.0666,
-        "closeness_centrality": 0.4078
+        "out_degree": 13,
+        "total_degree": 13,
+        "pagerank": 0.016756,
+        "betweenness_centrality": 0.0675,
+        "closeness_centrality": 0.4111
       },
       {
         "id": "plat_pyscf_ag2",
@@ -5236,9 +5674,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.011994,
-        "betweenness_centrality": 0.0063,
-        "closeness_centrality": 0.323
+        "pagerank": 0.01163,
+        "betweenness_centrality": 0.0061,
+        "closeness_centrality": 0.3231
       },
       {
         "id": "plat_cyp3a4_gate1",
@@ -5252,9 +5690,9 @@
         "in_degree": 6,
         "out_degree": 0,
         "total_degree": 6,
-        "pagerank": 0.014592,
-        "betweenness_centrality": 0.0167,
-        "closeness_centrality": 0.3822
+        "pagerank": 0.01402,
+        "betweenness_centrality": 0.0165,
+        "closeness_centrality": 0.3834
       },
       {
         "id": "plat_opencyp_ftqc",
@@ -5268,9 +5706,9 @@
         "in_degree": 8,
         "out_degree": 0,
         "total_degree": 8,
-        "pagerank": 0.022181,
-        "betweenness_centrality": 0.0206,
-        "closeness_centrality": 0.3822
+        "pagerank": 0.021307,
+        "betweenness_centrality": 0.0208,
+        "closeness_centrality": 0.3834
       },
       {
         "id": "plat_jev_10ltc_cqa",
@@ -5284,9 +5722,9 @@
         "in_degree": 11,
         "out_degree": 2,
         "total_degree": 13,
-        "pagerank": 0.020581,
-        "betweenness_centrality": 0.0586,
-        "closeness_centrality": 0.4534
+        "pagerank": 0.019917,
+        "betweenness_centrality": 0.0562,
+        "closeness_centrality": 0.454
       },
       {
         "id": "plat_opencyp_v1_1_thc",
@@ -5300,9 +5738,9 @@
         "in_degree": 10,
         "out_degree": 2,
         "total_degree": 12,
-        "pagerank": 0.032889,
-        "betweenness_centrality": 0.0407,
-        "closeness_centrality": 0.4101
+        "pagerank": 0.031487,
+        "betweenness_centrality": 0.039,
+        "closeness_centrality": 0.4088
       },
       {
         "id": "plat_cqwm_v0_1",
@@ -5316,9 +5754,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.031031,
-        "betweenness_centrality": 0.0759,
-        "closeness_centrality": 0.471
+        "pagerank": 0.029682,
+        "betweenness_centrality": 0.0735,
+        "closeness_centrality": 0.4713
       },
       {
         "id": "plat_cqwm_v0_2_helios",
@@ -5332,9 +5770,9 @@
         "in_degree": 8,
         "out_degree": 1,
         "total_degree": 9,
-        "pagerank": 0.027052,
-        "betweenness_centrality": 0.0333,
-        "closeness_centrality": 0.422
+        "pagerank": 0.025238,
+        "betweenness_centrality": 0.0321,
+        "closeness_centrality": 0.4229
       },
       {
         "id": "plat_opencyp_v1_2_faers_val",
@@ -5348,9 +5786,9 @@
         "in_degree": 9,
         "out_degree": 1,
         "total_degree": 10,
-        "pagerank": 0.026662,
-        "betweenness_centrality": 0.0277,
-        "closeness_centrality": 0.4269
+        "pagerank": 0.025023,
+        "betweenness_centrality": 0.027,
+        "closeness_centrality": 0.4277
       },
       {
         "id": "plat_cqwm_v0_3_depot_8q_comb",
@@ -5362,11 +5800,11 @@
         "metric": "Zero-fit 9-state human hepatocyte/enterocyte depot (Kp,uu=1.4, PMID 25989229) + PXR world model closing PMID 38393578 (GMFE=1.236, 7/7 in 2-fold, r=0.967), elderly PMID 17635500 (IV 2.21x/PO 5.42x), & PMID 21937987 + live 8q Guppy->HUGR Depot Quantum Comb on Nexus Helios-1E-lite (8,192 shots, 98.79% ASPS, N_total=0.837, Delta_N_depot=0.398; 19q 1 TiB crossover). [pmid38393578_gmfe: 1.236 \u00b7 within_2fold_visits: 7/7 \u00b7 emulator_shots_8q: 8192 \u00b7 asps_acceptance_rate: 0.987915 \u00b7 depot_causal_break_tvd: 0.398265 \u00b7 liouvillian_1tib_comb_qubits: 19 \u00b7 receipt_sha256: 66ef29086f39e99938b4efa9765c565d4ca6541a891ec2692725c73d3e6f931e]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 10,
-        "out_degree": 1,
-        "total_degree": 11,
-        "pagerank": 0.037688,
-        "betweenness_centrality": 0.0482,
-        "closeness_centrality": 0.4345
+        "out_degree": 2,
+        "total_degree": 12,
+        "pagerank": 0.037186,
+        "betweenness_centrality": 0.054,
+        "closeness_centrality": 0.4405
       },
       {
         "id": "plat_clinical_swarmworld_v0_1",
@@ -5378,11 +5816,27 @@
         "metric": "Zero-hype stigmergic protocol evolution (arXiv:2608.26081) across 20 NCL PCN cells x K=6 LTC pathways (8 paired world seeds, 224 worlds, 0 role prompts, 0 agent calls during S=8 unseen NHS shocks): R=0.4088 vs 0.1992 solo (p=0.007812), Solo Best-of-24 wins single-specialist peak (0.9990 vs 0.9955), HiGHS static ceiling 7.42 ms, 84.26% physical stigmergy reuse, 97.59% 50% turnover retention, & CQWM v0.3 vs naive RCCSD(T)/Markov oracle consequence amplification (0 vs 5,909.6 safety lockouts/world). [held_out_resilience_R_full: 0.4088 \u00b7 held_out_resilience_R_solo: 0.1992 \u00b7 stigmergy_reuse_share: 0.8426 \u00b7 turnover_50pct_retention: 0.9759 \u00b7 naive_oracle_lockout_trips: 5909.625 \u00b7 jev_citation_audit: 10/10 PASS (100% invariant) \u00b7 receipt_sha256: a22a9ed5213090f21f700d0a8934d86da2a102da5cc95e85afa60f0bae10e0c0]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 8,
+        "out_degree": 1,
+        "total_degree": 9,
+        "pagerank": 0.023997,
+        "betweenness_centrality": 0.0239,
+        "closeness_centrality": 0.4181
+      },
+      {
+        "id": "plat_clinical_swarmworld_v0_2",
+        "label": "Clinical SwarmWorld v0.2: Real 32-PCN NCL Twin & Goodhart Verification",
+        "category": "Platform_Receipt",
+        "layer": 7,
+        "tier": "Layer 7 \u00b7 Era: Era I + III-IV Oracle",
+        "external_id": "SHA256:7caafd39d3d8 ()",
+        "metric": "Real-NHS 32-PCN digital twin of North Central London ICB (171 GP practices, 1,810,301 patients, UK OGL v3.0 OHID QOF/IMD 2025 + NHSBSA EPD_SNOMED_202608 & 202601, phi_present=False): IMD vs pMDI r=+0.637 (p=8.8e-5), IMD vs 80+ frailty r=-0.729 (p=2.3e-6); Dual HiGHS MILP Goodhart Theorem (Proxy-MILP 6/6 gaming, Q_true=0.0739 vs Verified-MILP 0/6, Q_true=0.8764); Unverified Swarm culturally amplifies Goodhart share 38.7% -> 68.6% (p=0.007812, 22,024 harms/world) while Commit-Verified Stigmergy (AST + CQWM v0.3 + Jev 1.14, 12/12 recall/specificity) achieves 0 harms, R_true=0.4073 vs 0.3337 (p=0.007812), and 100% 50%-turnover retention. [ncl_real_pcns: 32 \u00b7 ncl_registered_patients: 1810301 \u00b7 imd_vs_pmdi_pearson_r: 0.6372 \u00b7 goodhart_share_unverified_vs_solo: 0.686 vs 0.3865 \u00b7 r_true_verified_vs_unverified: 0.4073 vs 0.3337 \u00b7 harms_unverified_posthoc_verified: 22024.0 / 6394.25 / 0.0 \u00b7 jev_commit_gate_recall: 1.0 \u00b7 receipt_sha256: 7caafd39d3d8ec24a9dd6119c06d8afcf07bb0207ff151a6f7cc0b64073dda34]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 9,
         "out_degree": 0,
-        "total_degree": 8,
-        "pagerank": 0.025377,
-        "betweenness_centrality": 0.0359,
-        "closeness_centrality": 0.4148
+        "total_degree": 9,
+        "pagerank": 0.026864,
+        "betweenness_centrality": 0.0246,
+        "closeness_centrality": 0.4
       },
       {
         "id": "haz_h_ltc_01",
@@ -5394,11 +5848,11 @@
         "metric": "Incomplete SNOMED 'Interpreter needed' or IMD equity coding causing recall exclusion \u2014 Statutory DCB0160 (Primary Local EHR/PCN) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0160 (Primary Local EHR/PCN) + DCB0129]",
         "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
         "in_degree": 1,
-        "out_degree": 1,
-        "total_degree": 2,
-        "pagerank": 0.004005,
-        "betweenness_centrality": 0.0012,
-        "closeness_centrality": 0.3395
+        "out_degree": 2,
+        "total_degree": 3,
+        "pagerank": 0.006419,
+        "betweenness_centrality": 0.0013,
+        "closeness_centrality": 0.3491
       },
       {
         "id": "haz_h_ltc_02",
@@ -5412,9 +5866,9 @@
         "in_degree": 2,
         "out_degree": 7,
         "total_degree": 9,
-        "pagerank": 0.015917,
-        "betweenness_centrality": 0.0307,
-        "closeness_centrality": 0.4033
+        "pagerank": 0.014968,
+        "betweenness_centrality": 0.0299,
+        "closeness_centrality": 0.4044
       },
       {
         "id": "haz_h_ltc_03",
@@ -5428,9 +5882,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.004547,
-        "betweenness_centrality": 0.0011,
-        "closeness_centrality": 0.3578
+        "pagerank": 0.004487,
+        "betweenness_centrality": 0.0008,
+        "closeness_centrality": 0.3592
       },
       {
         "id": "haz_h_ltc_04",
@@ -5442,11 +5896,11 @@
         "metric": "Conflation of cloud emulator / biophysical toy models with validated RCT clinical efficacy \u2014 Statutory DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate)]",
         "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
         "in_degree": 2,
-        "out_degree": 5,
-        "total_degree": 7,
-        "pagerank": 0.013465,
-        "betweenness_centrality": 0.0183,
-        "closeness_centrality": 0.3989
+        "out_degree": 6,
+        "total_degree": 8,
+        "pagerank": 0.01474,
+        "betweenness_centrality": 0.0198,
+        "closeness_centrality": 0.4022
       },
       {
         "id": "haz_h_ltc_05",
@@ -5460,9 +5914,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004185,
-        "betweenness_centrality": 0.0037,
-        "closeness_centrality": 0.3493
+        "pagerank": 0.004103,
+        "betweenness_centrality": 0.0036,
+        "closeness_centrality": 0.3507
       },
       {
         "id": "haz_h_ltc_06",
@@ -5476,9 +5930,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004434,
-        "betweenness_centrality": 0.0058,
-        "closeness_centrality": 0.3029
+        "pagerank": 0.004372,
+        "betweenness_centrality": 0.0057,
+        "closeness_centrality": 0.3045
       }
     ],
     "edges": [
@@ -6381,6 +6835,60 @@
         "target": "plat_clinical_swarmworld_v0_1",
         "relation": "GOVERNS_CLINICAL_RISK_OF",
         "weight": "0 physical QPU shots, 0 role prompts, Solo Best-of-24 wins single-specialist peak, 6/6 open hazards"
+      },
+      {
+        "source": "plat_clinical_swarmworld_v0_1",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "SCALED_TO_REAL_32PCN_TWIN_IN",
+        "weight": "Upgrades synthetic 20x6 grid to real 32-PCN / 171-practice / 1,810,301-patient NHS NCL digital twin (UK OGL v3.0)"
+      },
+      {
+        "source": "plat_cqwm_v0_3_depot_8q_comb",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "ENFORCES_COMMIT_WASHOUT_GATE_IN",
+        "weight": "Blocks G3 premature +0h/+24h post-ritonavir/clarithromycin PDC-gaming commits at commit time (0 vs 1,392 washout lockouts/world)"
+      },
+      {
+        "source": "plat_jij_highs",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "PROVES_DUAL_MILP_GOODHART_THEOREM_IN",
+        "weight": "Exact 0.00%-gap Proxy-MILP selects 6/6 Goodhart controllers (Q_true=0.0739) vs Verified-MILP 0/6 (Q_true=0.8764 in 6.1 ms)"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "GATES_COMMITS_AND_AUDITS",
+        "weight": "Live jev-1.14.0 Zero-Trust Commit Gate (12/12 recall & specificity, 100% invariant) + 10/10 citation & hype-trap audit"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "STRATIFIES_FRAIL_80PLUS_IN",
+        "weight": "Real QOF HYP003/HYP007 shows affluent Barnet/Camden 80+ frailty enrichment (r=-0.729) & blocks G1 <=150/90 ceiling omission"
+      },
+      {
+        "source": "ltc_asthma",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "MAPS_PROPELLANT_INEQUALITY_IN",
+        "weight": "Real NHSBSA EPD_SNOMED_202608 shows IMD 2025 vs propellant pMDI r=+0.637 (59.3% Barnet 4 to 81.6% Edmonton)"
+      },
+      {
+        "source": "ltc_copd",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "ANCHORS_WINTER_MBI_SHOCK_IN",
+        "weight": "Empirical Jan-2026 vs Aug-2026 NHSBSA EPD clarithromycin/MBI surge (1.465x mean, 1.944x max) parameterises shock S1"
+      },
+      {
+        "source": "haz_h_ltc_01",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "Blocks G2 SNOMED 315594003 interpreter skipping that otherwise causes 11,920.5 Core20 exclusions/world"
+      },
+      {
+        "source": "haz_h_ltc_04",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "phi_present=False (100% public OGL v3.0 PCN aggregates), 0 QPU shots, 0 autonomous clinical decisions, 6/6 open hazards"
       },
       {
         "source": "tx_acei_lisinopril",
