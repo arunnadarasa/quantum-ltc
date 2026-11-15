@@ -1,5 +1,5 @@
 {
-  "total_entries": 54,
+  "total_entries": 59,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -378,6 +378,41 @@
       "status": "VERIFIED",
       "verification_source": "Crossref HTTP 200 (10.1021/jz301319v)",
       "resolved_title": "Entanglement Measures for Single- and Multireference Correlation Effects"
+    },
+    {
+      "key": "keemink2015hepatocyte_ritonavir",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1002/jps.24477)",
+      "resolved_title": "Unbound Ritonavir Concentrations in Rat and Human Hepatocytes"
+    },
+    {
+      "key": "kirby2011ritonavir_hepatocytes",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1124/dmd.110.037523)",
+      "resolved_title": "Complex Drug Interactions of HIV Protease Inhibitors 1: Inactivation, Induction, and Inhibition of Cytochrome P450 3A by Ritonavir or Nelfinavir"
+    },
+    {
+      "key": "dixit2007pi_induction",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1124/dmd.107.016089)",
+      "resolved_title": "Cytochrome P450 Enzymes and Transporters Induced by Anti-Human Immunodeficiency Virus Protease Inhibitors in Human Hepatocytes: Implications for Predicting Clinical Drug Interactions"
+    },
+    {
+      "key": "quinney2008elderly_clarithromycin",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1111/j.1365-2125.2007.02970.x)",
+      "resolved_title": "Interaction between midazolam and clarithromycin in the elderly"
+    },
+    {
+      "key": "quinney2010clarithromycin_pbpk",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1124/dmd.109.028746)",
+      "resolved_title": "Physiologically Based Pharmacokinetic Model of Mechanism-Based Inhibition of CYP3A by Clarithromycin"
     }
   ]
 }

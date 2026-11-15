@@ -10,10 +10,11 @@ const BOOKMARKS = [
   { label: "p.10 · §4.5 OpenCYP-FTQC & ChEMBL_37", page: 10 },
   { label: "p.11 · §5 Modal QLTCMLM & Barren Plateau", page: 11 },
   { label: "p.14 · §6.3 10-LTC CQA & OpenCYP v1.1", page: 14 },
-  { label: "p.16 · Fig. 11 72-Node Knowledge Graph", page: 16 },
+  { label: "p.16 · Fig. 11 73-Node Knowledge Graph", page: 16 },
   { label: "p.17 · §6.4 CQWM v0.1 & v0.2 (Helios 6q Comb)", page: 17 },
   { label: "p.18 · §6.5 Washout, FAERS & OpenCYP v1.2", page: 18 },
-  { label: "p.19 · §7 Conclusion & 54 Verified Refs", page: 19 }
+  { label: "p.19 · §6.6 CQWM v0.3 Depot (N=40) & 8q Comb", page: 19 },
+  { label: "p.21 · Fig. 14 & §7 Conclusion (59 Refs)", page: 21 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -115,9 +116,9 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--22},
+  pages   = {1--24},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 15 SHA-256-sealed experimental receipts + 72-node KG across Quantinuum Nexus Helios-1E-lite (12,288 emulator shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1 \\& v0.2 validated against human washout trial PMID 38393578 \\& live openFDA FAERS 21.05M reports), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 16 SHA-256-sealed experimental receipts + 73-node KG across Quantinuum Nexus Helios-1E-lite (20,480 emulator shots across 10 jobs; 0 QPU shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1--v0.3 zero-fit hepatocyte-depot closure across N=40 humans [PMID 38393578 GMFE=1.236, 7/7 in 2-fold; Elderly PMID 17635500] + live 6q \\& 8q Quantum Combs + live openFDA FAERS 21.05M reports), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
 }`,
   opencyp: `@misc{nadarasa2026opencypftqc,
   title        = {{OpenCYP-FTQC v1.2}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP}, Empirical {THC} \\& Orbital Entanglement Archive},
@@ -214,8 +215,8 @@ async function initPdfReader() {
   const DOC = {
     pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
     pagesDir: "pages",
-    totalPages: 22,
-    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (22 Pages)"
+    totalPages: 24,
+    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (24 Pages)"
   };
 
   let zoom = 1.0;
@@ -2356,6 +2357,321 @@ function initChartsAndLightbox() {
         });
       });
       charts.push(cExt12);
+    }
+
+    // Chart 11: CQWM v0.3 Hepatocyte-Depot Washout Closure (N=40) & Live 8-Qubit Helios-1E-lite Quantum Comb
+    const elCqwm03 = document.getElementById("echart-cqwm-v0-3");
+    if (elCqwm03 && PORTAL_DATA.cqwm_v0_3) {
+      const c03 = echarts.init(elCqwm03);
+      const v03 = PORTAL_DATA.cqwm_v0_3;
+
+      function renderCqwm03Tab(mode) {
+        if (mode === "depot") {
+          const dt = v03.depot_trajectory;
+          const xDays = dt.time_days.map(d => d.toFixed(2));
+          c03.setOption({
+            tooltip: { ...darkTooltip, trigger: "axis" },
+            legend: {
+              data: [
+                "Plasma Ritonavir C_p (ng/mL; Day 7 = 1.53 < LLOQ)",
+                "Hepatocyte Phospholipid Depot C_dep (nM; Day 7 = 129 nM)",
+                "Hepatocyte Unbound C_u,hep (nM; Kp,uu = 1.4, Day 7 = 3.02 nM)",
+                "Active Hepatic CYP3A4 (% of Baseline; Day 7 = 11.7%)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.1 },
+              top: 4
+            },
+            grid: { left: 62, right: 64, top: 64, bottom: 48 },
+            xAxis: {
+              type: "category",
+              data: xDays,
+              ...baseAxis,
+              name: "World-Model Horizon (Days; Oral Ritonavir 100 mg BID Stopped After Day 5)",
+              nameLocation: "middle",
+              nameGap: 30,
+              axisLabel: {
+                color: "#bfece6",
+                fontSize: 9.5,
+                formatter: val => (Math.abs(Number(val) - Math.round(Number(val))) < 0.04 ? `D${Math.round(Number(val))}` : "")
+              }
+            },
+            yAxis: [
+              {
+                type: "log",
+                logBase: 10,
+                min: 0.01,
+                max: 25000,
+                ...baseAxis,
+                name: "Plasma (ng/mL) / Hepatocyte (nM, Log)",
+                nameTextStyle: { color: "#38d6c4", fontSize: 10.2 }
+              },
+              {
+                type: "value",
+                min: 0,
+                max: 140,
+                ...baseAxis,
+                name: "Active Hepatic CYP3A4 (%)",
+                nameTextStyle: { color: "#f4ae42", fontSize: 10.2 }
+              }
+            ],
+            series: [
+              {
+                name: "Plasma Ritonavir C_p (ng/mL; Day 7 = 1.53 < LLOQ)",
+                type: "line",
+                showSymbol: false,
+                data: dt.plasma_ng_ml.map(v => Math.max(0.01, v)),
+                itemStyle: { color: "#f06a3b" },
+                lineStyle: { width: 2.0 }
+              },
+              {
+                name: "Hepatocyte Phospholipid Depot C_dep (nM; Day 7 = 129 nM)",
+                type: "line",
+                showSymbol: false,
+                data: dt.c_depot_nm.map(v => Math.max(0.01, v)),
+                itemStyle: { color: "#a78bfa" },
+                lineStyle: { width: 2.6 }
+              },
+              {
+                name: "Hepatocyte Unbound C_u,hep (nM; Kp,uu = 1.4, Day 7 = 3.02 nM)",
+                type: "line",
+                showSymbol: false,
+                data: dt.cu_hep_nm.map(v => Math.max(0.01, v)),
+                itemStyle: { color: "#38d6c4" },
+                lineStyle: { width: 2.7 },
+                markLine: {
+                  silent: true,
+                  data: [
+                    {
+                      yAxis: dt.cu_hep_50_nm,
+                      lineStyle: { color: "#38d6c4", type: "dashed", width: 1.4 },
+                      label: { formatter: `C_u,50 = ${dt.cu_hep_50_nm} nM (50% MBI)`, color: "#38d6c4", fontSize: 9.4 }
+                    }
+                  ]
+                }
+              },
+              {
+                name: "Active Hepatic CYP3A4 (% of Baseline; Day 7 = 11.7%)",
+                type: "line",
+                yAxisIndex: 1,
+                showSymbol: false,
+                data: dt.cyp3a4_hep_pct,
+                itemStyle: { color: "#f4ae42" },
+                lineStyle: { width: 3.0 }
+              }
+            ]
+          }, true);
+        } else if (mode === "comb8q") {
+          const arms = v03.comb8q.arms;
+          c03.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Exact 256×256 Liouvillian Floor P(adverse) (%)",
+                "Live Helios-1E-lite 8q ASPS-Clean P(adverse) (%)",
+                "Live Helios-1E-lite Hepatic s₁ Dysregulation (%)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.4 },
+              top: 6
+            },
+            grid: { left: 58, right: 28, top: 58, bottom: 56 },
+            xAxis: {
+              type: "category",
+              data: arms.map(a => `${a.label}\n(Job ${a.job_id.slice(0, 8)} · ${a.asps_rate_pct}% ASPS)`),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.2, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 105,
+              ...baseAxis,
+              name: "Multi-Organ / Hepatic Probability (%)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Exact 256×256 Liouvillian Floor P(adverse) (%)",
+                type: "bar",
+                barGap: "10%",
+                barWidth: "22%",
+                data: arms.map(a => a.exact_adv_pct),
+                itemStyle: { color: "#60a5fa", borderRadius: [4, 4, 0, 0] }
+              },
+              {
+                name: "Live Helios-1E-lite 8q ASPS-Clean P(adverse) (%)",
+                type: "bar",
+                barWidth: "22%",
+                data: arms.map(a => a.emp_adv_pct),
+                itemStyle: { color: "#f06a3b", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}%", color: "#ff9a76", fontSize: 9.6, fontFamily: "JetBrains Mono, monospace" }
+              },
+              {
+                name: "Live Helios-1E-lite Hepatic s₁ Dysregulation (%)",
+                type: "bar",
+                barWidth: "22%",
+                data: arms.map(a => a.emp_s1_pct),
+                itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}%", color: "#38d6c4", fontSize: 9.4, fontFamily: "JetBrains Mono, monospace" }
+              }
+            ]
+          }, true);
+        } else if (mode === "scaling") {
+          const rows = v03.scaling;
+          c03.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Exact System+Bath Liouvillian 16·4^(n_S+n_B) (GiB)",
+                "Volume-Law K=8 Process-Tensor MPO (GiB)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.6 },
+              top: 6
+            },
+            grid: { left: 64, right: 32, top: 58, bottom: 54 },
+            xAxis: {
+              type: "category",
+              data: rows.map(r => `n_B = ${r.n_bath_spins}\n(${r.total_comb_qubits_with_asps}q Comb)`),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.5, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "log",
+              logBase: 10,
+              min: 0.0001,
+              max: 1e9,
+              ...baseAxis,
+              name: "Classical Exact State / Tensor Memory (GiB, Log)",
+              nameTextStyle: { color: "#f4ae42", fontSize: 10.4 }
+            },
+            series: [
+              {
+                name: "Exact System+Bath Liouvillian 16·4^(n_S+n_B) (GiB)",
+                type: "line",
+                symbolSize: 8,
+                data: rows.map(r => r.exact_liouvillian_ram_gib),
+                itemStyle: { color: "#f06a3b" },
+                lineStyle: { width: 3.1 },
+                markLine: {
+                  silent: true,
+                  data: [
+                    {
+                      yAxis: 1024,
+                      lineStyle: { color: "#f4ae42", type: "dashed", width: 1.6 },
+                      label: { formatter: "1 TiB Supercomputer RAM Wall (Crossed at n_B = 14 / 19q)", color: "#f4ae42", fontSize: 9.6 }
+                    }
+                  ]
+                }
+              },
+              {
+                name: "Volume-Law K=8 Process-Tensor MPO (GiB)",
+                type: "line",
+                symbolSize: 7,
+                data: rows.map(r => r.volume_law_pt_mpo_ram_gib),
+                itemStyle: { color: "#a78bfa" },
+                lineStyle: { width: 2.5, type: "dashed" }
+              }
+            ]
+          }, true);
+        } else {
+          const vs = v03.cohort1_visits;
+          c03.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Human Observed GMR (PMID 38393578, N=8)",
+                "CQWM v0.3 Depot+PXR+Δ-THC (GMFE = 1.236, 7/7 in 2-Fold)",
+                "CQWM v0.1 Plasma-Only MBI (GMFE = 1.434, 6/7)",
+                "Ablation: No Depot R_dep = 0 (Day 7 = 3.51×)",
+                "Memoryless Markovian PK (GMFE = 2.526)",
+                "Single-Reference RCCSD(T) (GMFE = 7.623)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 9.8 },
+              top: 2
+            },
+            grid: { left: 56, right: 28, top: 68, bottom: 50 },
+            xAxis: {
+              type: "category",
+              data: vs.map(v => v.day === 7 ? "Day 7 (+48h)\nPlasma <LLOQ" : (v.day === 9 ? "Day 9 (+96h)\nRecovery" : `Day ${v.day}`)),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.5, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 19,
+              ...baseAxis,
+              name: "Oral Midazolam Fold Exposure (AUCR)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Human Observed GMR (PMID 38393578, N=8)",
+                type: "bar",
+                barWidth: "28%",
+                data: vs.map(v => v.obs),
+                itemStyle: { color: "rgba(238, 247, 245, 0.24)", borderColor: "#eef7f5", borderWidth: 1.5, borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}×", color: "#eef7f5", fontSize: 9.4 }
+              },
+              {
+                name: "CQWM v0.3 Depot+PXR+Δ-THC (GMFE = 1.236, 7/7 in 2-Fold)",
+                type: "line",
+                symbolSize: 8,
+                data: vs.map(v => v.v0_3),
+                itemStyle: { color: "#38d6c4" },
+                lineStyle: { width: 3.4 },
+                markLine: {
+                  silent: true,
+                  data: [
+                    { yAxis: 2.0, lineStyle: { color: "#f4ae42", type: "dashed", width: 1.3 }, label: { formatter: "2.0× Clinical Safety Ceiling", color: "#f4ae42", fontSize: 9.2 } }
+                  ]
+                }
+              },
+              {
+                name: "CQWM v0.1 Plasma-Only MBI (GMFE = 1.434, 6/7)",
+                type: "line",
+                symbolSize: 6,
+                data: vs.map(v => v.v0_1),
+                itemStyle: { color: "#60a5fa" },
+                lineStyle: { width: 2.1, type: "dashed" }
+              },
+              {
+                name: "Ablation: No Depot R_dep = 0 (Day 7 = 3.51×)",
+                type: "line",
+                symbolSize: 6,
+                data: vs.map(v => v.no_depot),
+                itemStyle: { color: "#a78bfa" },
+                lineStyle: { width: 2.1, type: "dotted" }
+              },
+              {
+                name: "Memoryless Markovian PK (GMFE = 2.526)",
+                type: "line",
+                symbolSize: 6,
+                data: vs.map(v => v.markov),
+                itemStyle: { color: "#f4ae42" },
+                lineStyle: { width: 2.1, type: "dashed" }
+              },
+              {
+                name: "Single-Reference RCCSD(T) (GMFE = 7.623)",
+                type: "line",
+                symbolSize: 6,
+                data: vs.map(v => v.rccsdt),
+                itemStyle: { color: "#f06a3b" },
+                lineStyle: { width: 2.1, type: "dashed" }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderCqwm03Tab("washout");
+      document.querySelectorAll("[data-cqwm03-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-cqwm03-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderCqwm03Tab(btn.dataset.cqwm03Tab);
+        });
+      });
+      charts.push(c03);
     }
 
     window.addEventListener("resize", () => charts.forEach(c => c.resize()));
