@@ -25,11 +25,13 @@ jobs:
           python-version: "3.12"
 
       - name: Install dilithium-py & networkx
-        run: uv pip install --system "dilithium-py>=1.2" "networkx>=3.2"
+        run: |
+          uv venv .venv
+          uv pip install --python .venv/bin/python "dilithium-py>=1.2" "networkx>=3.2"
 
       - name: Verify 19 provenance artifacts, ML-DSA-65 envelopes, 15 FCIDUMPs, 75-node KG, 32-PCN UK OGL v3.0 twin & 3 PDFs
         run: |
-          python3 - <<'PY'
+          .venv/bin/python - <<'PY'
           import hashlib, importlib.util, json, sys
           from pathlib import Path
           import networkx as nx
