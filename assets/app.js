@@ -3,18 +3,19 @@
 
 const BOOKMARKS = [
   { label: "p.1 · Concise Abstract & §1 NCL LTC", page: 1 },
-  { label: "p.2 · §2 Four-Era Roadmap & Table 1", page: 2 },
+  { label: "p.2 · §2 Four-Era Roadmap & Scaling", page: 2 },
+  { label: "p.3 · Table 1 (4-Era Logical Qubits)", page: 3 },
   { label: "p.4 · §3 Nexus Helios-1E & Haiqu HUBO", page: 4 },
-  { label: "p.7 · §4 HQS Lindbladian & PySCF 1TQN", page: 7 },
+  { label: "p.6 · §4 HQS Lindbladian & QProtSim", page: 6 },
+  { label: "p.8 · §4.3 PySCF 1TQN/1O86 & AlphaGenome 2", page: 8 },
   { label: "p.9 · §4.4 Gate 1: PDB 5TE8/3NXU & THC", page: 9 },
-  { label: "p.10 · §4.5 OpenCYP-FTQC & ChEMBL_37", page: 10 },
-  { label: "p.11 · §5 Modal QLTCMLM & Barren Plateau", page: 11 },
-  { label: "p.14 · §6.3 10-LTC CQA & OpenCYP v1.1", page: 14 },
-  { label: "p.16 · Fig. 11 73-Node Knowledge Graph", page: 16 },
-  { label: "p.17 · §6.4 CQWM v0.1 & v0.2 (Helios 6q Comb)", page: 17 },
-  { label: "p.18 · §6.5 Washout, FAERS & OpenCYP v1.2", page: 18 },
-  { label: "p.19 · §6.6 CQWM v0.3 Depot (N=40) & 8q Comb", page: 19 },
-  { label: "p.21 · Fig. 14 & §7 Conclusion (59 Refs)", page: 21 }
+  { label: "p.10 · §4.5 OpenCYP-FTQC v1.0 & ChEMBL_37", page: 10 },
+  { label: "p.12 · §5 Modal QLTCMLM & Barren Plateau", page: 12 },
+  { label: "p.14 · §6 DCB0129/0160 & Jev 1.14 Audit", page: 14 },
+  { label: "p.15 · §6.3 10-LTC CQA & OpenCYP v1.1–v1.2", page: 15 },
+  { label: "p.16 · §6.4 Trilogy Synthesis (CQWM + Swarm)", page: 16 },
+  { label: "p.17 · Fig. 10 (Δ-THC) & Fig. 11 (74-Node KG)", page: 17 },
+  { label: "p.18 · Table 4 (3-Paper Trilogy) & §7 (65 Refs)", page: 18 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -116,7 +117,7 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--24},
+  pages   = {1--20},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
   note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 17 SHA-256-sealed experimental receipts + 74-node KG across Quantinuum Nexus Helios-1E-lite (20,480 emulator shots across 10 jobs; 0 QPU shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1--v0.3 zero-fit hepatocyte-depot closure across N=40 humans + live 6q \\& 8q Quantum Combs + live openFDA FAERS 21.05M reports), Clinical SwarmWorld v0.1, ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
 }`,
@@ -238,8 +239,8 @@ async function initPdfReader() {
       dlName: "Quantum_LTC_Roadmap.pdf",
       samskriftUrl: "https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3",
       pagesDir: "pages",
-      totalPages: 24,
-      altTitle: "Quantum-LTC Four-Era Samskrift Monograph (24 Pages)",
+      totalPages: 20,
+      altTitle: "Quantum-LTC Four-Era Samskrift Monograph (20 Pages)",
       bookmarks: BOOKMARKS
     },
     cqwm: {
