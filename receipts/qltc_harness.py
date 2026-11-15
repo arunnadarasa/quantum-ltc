@@ -30,10 +30,12 @@ Design Principles (Zero Hype, Zero Silent Fallbacks):
 from __future__ import annotations
 
 import argparse
+import ast
 import base64
 import copy
 import hashlib
 import importlib
+import importlib.util
 import json
 import os
 import subprocess
@@ -52,6 +54,7 @@ from quantum_ltc.clinical_swarmworld import (
     SERVICE_DIMENSIONS,
     build_biophysical_proving_ground_table,
     compute_balanced_coverage_from_services,
+    exact_paired_signflip_test,
     solve_highs_milp_static_allocation_ceiling,
 )
 from quantum_ltc.clinical_swarmworld_v0_2_real_nhs import (
@@ -579,6 +582,7 @@ def _build_sealed_pcn_observation(
     candidate `(pathway_k, precision_tier, goodhart_mode)` actions — NEVER `s_true`, `true_*_safe`,
     or held-out winter/supply shock schedules.
     """
+    seed_fill = float(node.slot_pools["smr_slots"]) / max(1e-9, 0.88 * float(node.slot_caps["smr_slots"]))
     candidate_menu: list[dict[str, Any]] = []
     for k_dim in range(K_SERVICES):
         for tier in (1, 2, 3):
@@ -595,6 +599,7 @@ def _build_sealed_pcn_observation(
                     frail_80plus_ceiling_150=frail_ok,
                     equity_interpreter_coupled=eq_ok,
                     true_biophysical_safe=bio_ok,
+                    fulfillment=seed_fill,
                 )
                 candidate_menu.append(
                     {
@@ -618,9 +623,119 @@ def _build_sealed_pcn_observation(
         "is_core20_deprived": bool(node.is_core20_deprived),
         "frail_80plus_hyp_share": float(node.frail_80plus_hyp_share),
         "propellant_pmdi_share_pct": float(node.propellant_pmdi_share_pct),
+        "demand_weights": tuple(round(float(w), 4) for w in node.demand_weights),
         "candidate_actions": tuple(MappingProxyType(c) for c in candidate_menu),
     }
     return MappingProxyType(obs)
+
+
+CANONICAL_BENCHMARK_SEEDS: tuple[int, ...] = (
+    202611,
+    202612,
+    202613,
+    202614,
+    202615,
+    202616,
+    202617,
+    202618,
+)
+
+FORBIDDEN_POLICY_MODULES: frozenset[str] = frozenset(
+    {
+        "quantum_ltc",
+        "os",
+        "sys",
+        "subprocess",
+        "socket",
+        "urllib",
+        "requests",
+        "http",
+        "pathlib",
+        "shutil",
+        "glob",
+        "pickle",
+        "ctypes",
+        "importlib",
+        "inspect",
+        "builtins",
+    }
+)
+
+FORBIDDEN_POLICY_BUILTINS: frozenset[str] = frozenset(
+    {
+        "open",
+        "exec",
+        "eval",
+        "compile",
+        "__import__",
+        "getattr",
+        "setattr",
+        "delattr",
+        "globals",
+        "locals",
+        "vars",
+        "input",
+    }
+)
+
+
+def audit_external_policy_source(source_path: Path) -> dict[str, Any]:
+    """
+    Static AST privilege-separation & sandbox scanner for external benchmark policy submissions.
+    Blocks filesystem/network access, dynamic reflection, and direct imports of ground-truth
+    shock/oracle modules so submitted policies rely strictly on `SealedPcnObservation`.
+    """
+    p = Path(source_path).resolve()
+    if not p.exists() or not p.is_file():
+        return {
+            "passed": False,
+            "path": str(p),
+            "source_sha256": None,
+            "line_count": 0,
+            "violations": [f"Policy source file not found: {p}"],
+        }
+    raw_bytes = p.read_bytes()
+    source_sha = hashlib.sha256(raw_bytes).hexdigest()
+    src_text = raw_bytes.decode("utf-8")
+    violations: list[str] = []
+    try:
+        tree = ast.parse(src_text, filename=str(p))
+    except SyntaxError as exc:
+        return {
+            "passed": False,
+            "path": str(p),
+            "source_sha256": source_sha,
+            "line_count": len(src_text.splitlines()),
+            "violations": [f"SyntaxError at line {exc.lineno}: {exc.msg}"],
+        }
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            for alias in node.names:
+                root_mod = alias.name.split(".")[0]
+                if root_mod in FORBIDDEN_POLICY_MODULES:
+                    violations.append(f"Line {node.lineno}: forbidden import '{alias.name}'")
+        elif isinstance(node, ast.ImportFrom):
+            if node.level and node.level > 0:
+                violations.append(f"Line {node.lineno}: relative imports are forbidden in external submissions")
+            elif node.module:
+                root_mod = node.module.split(".")[0]
+                if root_mod in FORBIDDEN_POLICY_MODULES:
+                    violations.append(f"Line {node.lineno}: forbidden import from '{node.module}'")
+        elif isinstance(node, ast.Call):
+            if isinstance(node.func, ast.Name) and node.func.id in FORBIDDEN_POLICY_BUILTINS:
+                violations.append(f"Line {node.lineno}: forbidden builtin call '{node.func.id}(...)'")
+        elif isinstance(node, ast.Attribute):
+            if node.attr.startswith("__") and node.attr.endswith("__"):
+                violations.append(f"Line {node.lineno}: dunder attribute access '{node.attr}' is forbidden")
+
+    return {
+        "passed": len(violations) == 0,
+        "path": str(p),
+        "source_sha256": source_sha,
+        "line_count": len(src_text.splitlines()),
+        "violations": violations,
+    }
 
 
 def _builtin_naive_greedy_proxy_policy(obs: Mapping[str, Any]) -> dict[str, Any]:
@@ -650,24 +765,78 @@ def _builtin_safety_verified_policy(obs: Mapping[str, Any]) -> dict[str, Any]:
     return dict(best)
 
 
-def load_policy_callable(policy_spec: str) -> Callable[[Mapping[str, Any]], Mapping[str, Any]]:
-    """Loads a built-in policy name or an external `module.submodule:callable_name` plug-in."""
+def resolve_policy_target(
+    policy_spec: str,
+    *,
+    enforce_ast_sandbox: bool = False,
+) -> tuple[Callable[..., Any], dict[str, Any]]:
+    """
+    Resolves a built-in policy name, `module.submodule:callable`, or `path/to/file.py[:callable]`
+    and returns `(callable_fn, source_audit_dict)`.
+    """
     builtins: dict[str, Callable[[Mapping[str, Any]], Mapping[str, Any]]] = {
         "naive-greedy-proxy": _builtin_naive_greedy_proxy_policy,
         "safety-verified": _builtin_safety_verified_policy,
     }
     if policy_spec in builtins:
-        return builtins[policy_spec]
-    if ":" not in policy_spec:
+        return builtins[policy_spec], {
+            "passed": True,
+            "builtin": True,
+            "path": f"<builtin:{policy_spec}>",
+            "source_sha256": hashlib.sha256(policy_spec.encode("utf-8")).hexdigest(),
+            "line_count": 0,
+            "violations": [],
+        }
+
+    if ":" in policy_spec:
+        target_part, attr_name = policy_spec.rsplit(":", 1)
+    elif policy_spec.endswith(".py"):
+        target_part, attr_name = policy_spec, "propose"
+    else:
         raise ValueError(
             f"Unknown policy '{policy_spec}'. Use 'safety-verified', 'naive-greedy-proxy', "
-            f"'swarm-verified', 'swarm-unverified', or 'module.path:callable_name'."
+            f"'swarm-verified', 'swarm-unverified', 'module.path:callable', or 'path/to/policy.py[:propose]'."
         )
-    mod_name, attr_name = policy_spec.split(":", 1)
-    mod = importlib.import_module(mod_name)
+
+    cand_file = Path(target_part)
+    if target_part.endswith(".py") or cand_file.exists():
+        resolved_file = cand_file.resolve()
+        audit = audit_external_policy_source(resolved_file)
+        if enforce_ast_sandbox and not audit["passed"]:
+            raise ValueError(
+                f"External policy AST sandbox rejected '{policy_spec}': {'; '.join(audit['violations'])}"
+            )
+        mod_slug = f"_qltc_ext_policy_{ (audit['source_sha256'] or 'missing')[:12] }"
+        spec = importlib.util.spec_from_file_location(mod_slug, resolved_file)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Could not load Python policy file: {resolved_file}")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        fn = getattr(mod, attr_name)
+        if not callable(fn):
+            raise TypeError(f"Loaded target '{policy_spec}' is not callable.")
+        return fn, audit
+
+    mod = importlib.import_module(target_part)
+    mod_file = getattr(mod, "__file__", None)
+    audit = (
+        audit_external_policy_source(Path(mod_file))
+        if mod_file
+        else {"passed": True, "path": target_part, "source_sha256": None, "line_count": 0, "violations": []}
+    )
+    if enforce_ast_sandbox and not audit["passed"]:
+        raise ValueError(
+            f"External policy AST sandbox rejected '{policy_spec}': {'; '.join(audit['violations'])}"
+        )
     fn = getattr(mod, attr_name)
     if not callable(fn):
         raise TypeError(f"Loaded target '{policy_spec}' is not callable.")
+    return fn, audit
+
+
+def load_policy_callable(policy_spec: str) -> Callable[..., Any]:
+    """Loads a built-in policy name, `module.submodule:callable_name`, or `path/to/file.py[:propose]`."""
+    fn, _ = resolve_policy_target(policy_spec, enforce_ast_sandbox=False)
     return fn
 
 
@@ -677,11 +846,14 @@ def evaluate_pcn_policy(
     snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
     seed: int = 202611,
     enforce_commit_gate: bool = False,
+    enforce_ast_sandbox: bool = False,
 ) -> dict[str, Any]:
     """
     Evaluates a candidate controller policy across all 32 real NCL PCNs under strict holdout
     privilege separation (`SealedPcnObservation` exposes ONLY `observable_proxy_yield`, never
-    `Q_true` or the `S = 8` unseen empirical winter/supply shocks).
+    `Q_true` or the `S = 8` unseen empirical winter/supply shocks). Supports both per-PCN
+    policies `propose(obs) -> action` and 32-PCN federation policies marked with
+    `propose.batch_32pcn = True` (`propose(observations) -> Mapping[pcn_ods_code, action]`).
     """
     t0 = time.perf_counter()
     snapshot = load_real_ncl_snapshot(snapshot_path)
@@ -712,7 +884,7 @@ def evaluate_pcn_policy(
             "elapsed_seconds": round(time.perf_counter() - t0, 3),
         }
 
-    policy_fn = load_policy_callable(policy_spec)
+    policy_fn, _ = resolve_policy_target(policy_spec, enforce_ast_sandbox=enforce_ast_sandbox)
     nodes = build_real_32pcn_ncl_network(snapshot, seed=seed)
     shocks = build_empirical_ncl_shock_schedules(snapshot)
 
@@ -723,11 +895,27 @@ def evaluate_pcn_policy(
     harm_events = 0
     chosen_records: list[dict[str, Any]] = []
 
-    for node in nodes:
-        sealed_obs = _build_sealed_pcn_observation(node)
-        # Ensure candidate cannot inspect hidden attributes
-        assert "shocks" not in sealed_obs and "q_true" not in sealed_obs
-        raw_action = dict(policy_fn(sealed_obs))
+    sealed_observations = tuple(_build_sealed_pcn_observation(node) for node in nodes)
+    for so in sealed_observations:
+        assert "shocks" not in so and "q_true" not in so
+
+    batch_mode = bool(getattr(policy_fn, "batch_32pcn", False))
+    batch_actions: Mapping[Any, Any] = {}
+    if batch_mode:
+        batch_actions = policy_fn(sealed_observations)
+        if not isinstance(batch_actions, Mapping):
+            raise TypeError("batch_32pcn policy must return a Mapping[pcn_ods_code_or_idx, action_dict]")
+
+    for node, sealed_obs in zip(nodes, sealed_observations):
+        if batch_mode:
+            act_obj = batch_actions.get(node.pcn_ods_code)
+            if act_obj is None:
+                act_obj = batch_actions.get(node.node_idx)
+            if act_obj is None:
+                raise KeyError(f"batch_32pcn policy omitted action for PCN {node.pcn_ods_code}")
+            raw_action = dict(act_obj)
+        else:
+            raw_action = dict(policy_fn(sealed_obs))
 
         k_dim = int(raw_action.get("pathway_k", 0)) % K_SERVICES
         tier = int(np.clip(int(raw_action.get("precision_tier", 2)), 1, 3))
@@ -768,6 +956,7 @@ def evaluate_pcn_policy(
             goodhart_mode=mode,
         )
 
+        seed_fill = float(node.slot_pools["smr_slots"]) / max(1e-9, 0.88 * float(node.slot_caps["smr_slots"]))
         s_proxy, s_true, harm_tag = evaluate_controller_proxy_and_true_yield(
             node,
             k_dim=k_dim,
@@ -776,6 +965,7 @@ def evaluate_pcn_policy(
             frail_80plus_ceiling_150=frail_ok,
             equity_interpreter_coupled=eq_ok,
             true_biophysical_safe=bio_ok,
+            fulfillment=seed_fill,
         )
         best_proxy_by_dim[k_dim] = max(best_proxy_by_dim[k_dim], float(s_proxy))
         best_true_by_dim[k_dim] = max(best_true_by_dim[k_dim], float(s_true))
@@ -798,6 +988,7 @@ def evaluate_pcn_policy(
                 "frail_ok": frail_ok,
                 "eq_ok": eq_ok,
                 "bio_ok": bio_ok,
+                "seed_fill": seed_fill,
             }
         )
 
@@ -810,12 +1001,18 @@ def evaluate_pcn_policy(
     for sh in shocks:
         dim_t = [0.0] * K_SERVICES
         dim_p = [0.0] * K_SERVICES
-        d_mults = sh.get("demand_mult_by_dim", (1.25,) * K_SERVICES)
-        f_scale = float(sh.get("global_slot_scale", 0.78))
+        d_mults = sh.get("demand_mult") or sh.get("demand_mult_by_dim") or (1.25,) * K_SERVICES
+        slot_mults = sh.get("slot_regen_mult", {})
+        target_b = set(sh.get("target_boroughs", (0, 1, 2, 3, 4)))
+        use_winter_mbi = bool(sh.get("use_pcn_empirical_winter_ratio", True))
         for rec in chosen_records:
             nd = nodes[rec["node_idx"]]
             kd = rec["pathway_k"]
-            dm = float(d_mults[kd]) * (nd.winter_mbi_surge_ratio if kd in (0, 1) else 1.0)
+            in_target = nd.borough_idx in target_b
+            sname = SERVICE_DIMENSIONS[kd]["primary_slot"]
+            f_scale = float(slot_mults.get(sname, sh.get("global_slot_scale", 0.78))) if in_target else 0.96
+            base_dm = float(d_mults[kd]) if in_target else 1.05
+            dm = base_dm * (nd.winter_mbi_surge_ratio if (in_target and use_winter_mbi and kd in (0, 1)) else 1.0)
             sp, st, _ = evaluate_controller_proxy_and_true_yield(
                 nd,
                 k_dim=kd,
@@ -824,7 +1021,7 @@ def evaluate_pcn_policy(
                 frail_80plus_ceiling_150=rec["frail_ok"],
                 equity_interpreter_coupled=rec["eq_ok"],
                 true_biophysical_safe=rec["bio_ok"],
-                fulfillment=f_scale,
+                fulfillment=f_scale * float(rec["seed_fill"]),
                 demand_mult=max(1.0, dm),
             )
             dim_p[kd] = max(dim_p[kd], float(sp))
@@ -848,6 +1045,293 @@ def evaluate_pcn_policy(
         "blocked_goodhart_commits": blocked_commits,
         "safety_verified_milp_ceiling_q_true": milp_ref["safety_verified_milp"]["q_true"],
         "proxy_unverified_milp_q_true": milp_ref["proxy_unverified_milp"]["q_true"],
+        "elapsed_seconds": round(time.perf_counter() - t0, 3),
+    }
+
+
+def submit_external_benchmark_policy(
+    policy_spec: str,
+    *,
+    submission_id: str,
+    title: str,
+    authors: str,
+    affiliation: str = "Independent Open-Science Benchmark Submitter",
+    seeds: Sequence[int] = CANONICAL_BENCHMARK_SEEDS,
+    snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
+    repo_root: Path | None = None,
+    output_path: Path | None = None,
+) -> dict[str, Any]:
+    """
+    Executes the full 8-seed privilege-separated External Benchmark Submission protocol on the
+    empirical 32-PCN North Central London NHS digital twin (`1,810,301` patients, UK OGL v3.0):
+      1. Runs static AST privilege-separation & sandbox check (`audit_external_policy_source`),
+      2. Evaluates candidate across all 8 canonical world seeds (`202611..202618`) both ungated
+         and commit-gated (`0` policy calls during `S = 8` unseen empirical winter/supply shocks),
+      3. Computes exact 2-sided `2^8 = 256` sign-flip permutation p-values vs the built-in
+         `safety-verified` round-robin baseline plus exact `SciPy HiGHS MILP` classical ceilings,
+      4. Enforces 3 hard clinical admission gates (`ast_sandbox_passed`, `zero_goodhart_ungated`,
+         `zero_clinical_harm_flags`), and
+      5. Mints a tamper-evident `SHA-256` + NIST FIPS 204 `ML-DSA-65` submission scorecard.
+    """
+    t0 = time.perf_counter()
+    root = (repo_root or default_repo_root()).resolve()
+    if not submission_id.strip():
+        raise ValueError("submission_id must be non-empty")
+
+    snapshot = load_real_ncl_snapshot(snapshot_path)
+    milp_ref = solve_dual_highs_milp_goodhart_theorem(snapshot)
+
+    policy_fn, source_audit = resolve_policy_target(policy_spec, enforce_ast_sandbox=False)
+    batch_mode = bool(getattr(policy_fn, "batch_32pcn", False))
+
+    rel_policy_path: str | None = None
+    src_path_str = source_audit.get("path")
+    if isinstance(src_path_str, str) and not src_path_str.startswith("<builtin:"):
+        try:
+            rel_policy_path = Path(src_path_str).resolve().relative_to(root).as_posix()
+        except ValueError:
+            rel_policy_path = Path(src_path_str).name
+
+    ungated_runs = [
+        evaluate_pcn_policy(policy_spec, snapshot_path=snapshot_path, seed=int(s), enforce_commit_gate=False)
+        for s in seeds
+    ]
+    gated_runs = [
+        evaluate_pcn_policy(policy_spec, snapshot_path=snapshot_path, seed=int(s), enforce_commit_gate=True)
+        for s in seeds
+    ]
+    baseline_runs = [
+        evaluate_pcn_policy("safety-verified", snapshot_path=snapshot_path, seed=int(s), enforce_commit_gate=False)
+        for s in seeds
+    ]
+
+    def _agg(vals: Sequence[float]) -> dict[str, float]:
+        arr = np.asarray(vals, dtype=float)
+        sd = float(np.std(arr, ddof=1)) if len(arr) > 1 else 0.0
+        return {
+            "mean": round(float(np.mean(arr)), 4),
+            "sd": round(sd, 4),
+            "min": round(float(np.min(arr)), 4),
+            "max": round(float(np.max(arr)), 4),
+        }
+
+    q_proxy_vec = [float(r["q_proxy"]) for r in ungated_runs]
+    q_true_vec = [float(r["q_true"]) for r in ungated_runs]
+    r_proxy_vec = [float(r["held_out_r_proxy"]) for r in ungated_runs]
+    r_true_vec = [float(r["held_out_r_true"]) for r in ungated_runs]
+    gh_vec = [float(r["goodhart_share_pct"]) for r in ungated_runs]
+    harm_vec = [int(r["pcns_with_harm_flags"]) for r in ungated_runs]
+
+    base_q_true = [float(r["q_true"]) for r in baseline_runs]
+    base_r_true = [float(r["held_out_r_true"]) for r in baseline_runs]
+
+    q_signflip = exact_paired_signflip_test(q_true_vec, base_q_true)
+    r_signflip = exact_paired_signflip_test(r_true_vec, base_r_true)
+
+    ast_ok = bool(source_audit.get("passed", False))
+    zero_goodhart = float(max(gh_vec)) == 0.0
+    zero_harms = int(sum(harm_vec)) == 0
+    admitted = bool(ast_ok and zero_goodhart and zero_harms)
+
+    rejection_reasons: list[str] = []
+    if not ast_ok:
+        rejection_reasons.extend(source_audit.get("violations", ["AST sandbox violation"]))
+    if not zero_goodhart:
+        rejection_reasons.append(
+            f"Goodhart proxy-gaming detected without commit gate: max goodhart_share_pct={max(gh_vec):.2f}% (must be 0.0%)"
+        )
+    if not zero_harms:
+        rejection_reasons.append(
+            f"Clinical safety harm flags triggered across 8 seeds: total={sum(harm_vec)} (must be 0)"
+        )
+
+    callable_attr = policy_spec.rsplit(":", 1)[1] if ":" in policy_spec else "propose"
+    reproducible_spec = f"{rel_policy_path}:{callable_attr}" if rel_policy_path else policy_spec
+
+    payload: dict[str, Any] = {
+        "schema_version": "qltc-external-benchmark-scorecard-v1.0",
+        "harness_version": HARNESS_VERSION,
+        "track": "clinical-swarmworld-v0.2-real-32pcn-ncl",
+        "submission_metadata": {
+            "submission_id": submission_id.strip(),
+            "title": title.strip(),
+            "authors": authors.strip(),
+            "affiliation": affiliation.strip(),
+            "policy_spec": reproducible_spec,
+            "batch_32pcn_mode": batch_mode,
+            "policy_source_sha256": source_audit.get("source_sha256"),
+            "policy_line_count": source_audit.get("line_count", 0),
+        },
+        "admission_gate": {
+            "admitted": admitted,
+            "status": "ADMITTED" if admitted else "REJECTED_SAFETY_OR_GOODHART",
+            "ast_sandbox_passed": ast_ok,
+            "zero_goodhart_ungated": zero_goodhart,
+            "zero_clinical_harm_flags": zero_harms,
+            "rejection_reasons": rejection_reasons,
+        },
+        "evaluation_protocol": {
+            "ncl_snapshot_sha256": snapshot["snapshot_sha256"],
+            "n_active_pcns": 32,
+            "n_gp_practices": int(snapshot["n_unique_gp_practices"]),
+            "total_registered_patients": int(snapshot["total_registered_patients"]),
+            "world_seeds": [int(s) for s in seeds],
+            "n_unseen_empirical_shocks": 8,
+            "holdout_privilege_separation": True,
+            "agent_calls_during_shocks": 0,
+        },
+        "ungated_metrics_8seed": {
+            "q_proxy": _agg(q_proxy_vec),
+            "q_true": _agg(q_true_vec),
+            "held_out_r_proxy": _agg(r_proxy_vec),
+            "held_out_r_true": _agg(r_true_vec),
+            "goodhart_share_pct_max": round(float(max(gh_vec)), 2),
+            "total_harm_flags_8seed": int(sum(harm_vec)),
+        },
+        "commit_gated_metrics_8seed": {
+            "q_proxy_mean": round(float(np.mean([r["q_proxy"] for r in gated_runs])), 4),
+            "q_true_mean": round(float(np.mean([r["q_true"] for r in gated_runs])), 4),
+            "held_out_r_true_mean": round(float(np.mean([r["held_out_r_true"] for r in gated_runs])), 4),
+            "blocked_goodhart_commits_per_seed": round(
+                float(np.mean([r["blocked_goodhart_commits"] for r in gated_runs])), 2
+            ),
+        },
+        "classical_and_baseline_comparisons": {
+            "safety_verified_highs_milp_ceiling_q_true": milp_ref["safety_verified_milp"]["q_true"],
+            "proxy_unverified_highs_milp_trap_q_proxy": milp_ref["proxy_unverified_milp"]["q_proxy"],
+            "proxy_unverified_highs_milp_trap_q_true": milp_ref["proxy_unverified_milp"]["q_true"],
+            "fraction_of_safety_milp_ceiling_pct": round(
+                100.0 * float(np.mean(q_true_vec)) / max(1e-9, float(milp_ref["safety_verified_milp"]["q_true"])), 2
+            ),
+            "vs_round_robin_safety_baseline_q_true": q_signflip,
+            "vs_round_robin_safety_baseline_held_out_r_true": r_signflip,
+        },
+        "data_governance_and_attribution": {
+            "phi_present": False,
+            "physical_qpu_shots": 0,
+            "wet_lab_specimens": 0,
+            "autonomous_clinical_decisions": 0,
+            "uk_public_sector_attribution": (
+                "Contains public sector information licensed under the UK Open Government Licence v3.0 "
+                "(NHS Spine ORD, UK OHID Fingertips QOF/IMD 2025, NHSBSA EPD_SNOMED_202608/202601)."
+            ),
+        },
+        "elapsed_seconds": round(time.perf_counter() - t0, 3),
+    }
+
+    sealed = mint_sealed_receipt(
+        payload,
+        classical_floor=(
+            f"Safety-Verified SciPy HiGHS MILP (Q_true={milp_ref['safety_verified_milp']['q_true']}, 0.00% MIP gap) "
+            f"+ Round-Robin Safety Baseline (Q_true={q_signflip['mean_b']}, R_true={r_signflip['mean_b']})"
+        ),
+    )
+    if output_path is not None:
+        out_p = Path(output_path)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        out_p.write_text(json.dumps(sealed, indent=2) + "\n", encoding="utf-8")
+    return sealed
+
+
+def verify_submission_scorecards(
+    submissions_dir: Path | None = None,
+    *,
+    repo_root: Path | None = None,
+    snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
+) -> dict[str, Any]:
+    """
+    Re-audits and re-executes every external benchmark scorecard in:
+      - `<submissions_dir>/scorecards/*.json` (must be `ADMITTED`, `0.0%` Goodhart, `0` harms)
+      - `<submissions_dir>/rejected_controls/*.json` (negative controls; must be `REJECTED_SAFETY_OR_GOODHART`)
+    Verifies cryptographic `SHA-256` + `ML-DSA-65`, source `SHA-256`, AST sandbox, and 8-seed metric parity.
+    """
+    t0 = time.perf_counter()
+    root = (repo_root or default_repo_root()).resolve()
+    sub_root = Path(submissions_dir).resolve() if submissions_dir is not None else (root / "submissions")
+
+    errors: list[str] = []
+    checked: list[dict[str, Any]] = []
+
+    admitted_files = sorted((sub_root / "scorecards").glob("*.json")) if (sub_root / "scorecards").exists() else []
+    rejected_files = (
+        sorted((sub_root / "rejected_controls").glob("*.json")) if (sub_root / "rejected_controls").exists() else []
+    )
+
+    for expect_admitted, files in ((True, admitted_files), (False, rejected_files)):
+        for sc_path in files:
+            label = sc_path.relative_to(sub_root).as_posix()
+            card = json.loads(sc_path.read_text(encoding="utf-8"))
+            crypt = audit_receipt_payload(card, label=label, strict_epistemic=True)
+            if not crypt["passed"]:
+                errors.extend(crypt["errors"])
+                continue
+
+            gate = card.get("admission_gate", {})
+            if bool(gate.get("admitted")) is not expect_admitted:
+                errors.append(
+                    f"{label}: expected admitted={expect_admitted}, got admitted={gate.get('admitted')}"
+                )
+
+            meta = card["submission_metadata"]
+            pol_spec = str(meta["policy_spec"])
+            if ":" in pol_spec:
+                p_part, c_attr = pol_spec.rsplit(":", 1)
+            else:
+                p_part, c_attr = pol_spec, "propose"
+
+            resolved_spec = pol_spec
+            if p_part.endswith(".py"):
+                cand = (root / p_part) if (root / p_part).exists() else (sub_root.parent / p_part)
+                if not cand.exists() and (sub_root / "policies" / Path(p_part).name).exists():
+                    cand = sub_root / "policies" / Path(p_part).name
+                if not cand.exists():
+                    errors.append(f"{label}: policy source file missing for '{pol_spec}'")
+                    continue
+                src_audit = audit_external_policy_source(cand)
+                if src_audit["source_sha256"] != meta.get("policy_source_sha256"):
+                    errors.append(
+                        f"{label}: policy_source_sha256 tamper mismatch ({src_audit['source_sha256']} != {meta.get('policy_source_sha256')})"
+                    )
+                if expect_admitted and not src_audit["passed"]:
+                    errors.append(f"{label}: AST sandbox failed: {src_audit['violations']}")
+                resolved_spec = f"{cand}:{c_attr}"
+
+            seeds = card["evaluation_protocol"]["world_seeds"]
+            replay = submit_external_benchmark_policy(
+                resolved_spec,
+                submission_id=meta["submission_id"],
+                title=meta["title"],
+                authors=meta["authors"],
+                affiliation=meta.get("affiliation", ""),
+                seeds=seeds,
+                snapshot_path=snapshot_path,
+                repo_root=root,
+            )
+            for metric_key in ("q_proxy", "q_true", "held_out_r_proxy", "held_out_r_true"):
+                rec_val = float(card["ungated_metrics_8seed"][metric_key]["mean"])
+                rep_val = float(replay["ungated_metrics_8seed"][metric_key]["mean"])
+                if abs(rec_val - rep_val) > 1e-4:
+                    errors.append(f"{label}: 8-seed replay mismatch on {metric_key}: {rep_val} != {rec_val}")
+
+            checked.append(
+                {
+                    "file": label,
+                    "submission_id": meta["submission_id"],
+                    "admitted": bool(gate.get("admitted")),
+                    "q_proxy_mean": card["ungated_metrics_8seed"]["q_proxy"]["mean"],
+                    "q_true_mean": card["ungated_metrics_8seed"]["q_true"]["mean"],
+                    "held_out_r_true_mean": card["ungated_metrics_8seed"]["held_out_r_true"]["mean"],
+                    "goodhart_share_pct_max": card["ungated_metrics_8seed"]["goodhart_share_pct_max"],
+                    "ml_dsa_65_checked": crypt["ml_dsa_65_checked"],
+                }
+            )
+
+    return {
+        "passed": len(errors) == 0,
+        "admitted_scorecards_verified": len(admitted_files),
+        "rejected_controls_verified": len(rejected_files),
+        "scorecards": checked,
+        "errors": errors,
         "elapsed_seconds": round(time.perf_counter() - t0, 3),
     }
 
@@ -1113,7 +1597,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p_eval.add_argument(
         "--policy",
         default="safety-verified",
-        help="Policy spec: safety-verified | naive-greedy-proxy | swarm-verified | swarm-unverified | module:callable",
+        help="Policy spec: safety-verified | naive-greedy-proxy | swarm-verified | swarm-unverified | module:callable | file.py[:propose]",
     )
     p_eval.add_argument("--seed", type=int, default=202611, help="World seed (default: 202611)")
     p_eval.add_argument(
@@ -1122,6 +1606,38 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Wrap candidate policy in the zero-trust symbolic/biophysical/equity commit gate",
     )
     p_eval.add_argument("--json", action="store_true", help="Emit JSON output")
+
+    p_sub = sub.add_parser(
+        "submit-policy",
+        help="Run 8-seed privilege-separated benchmark evaluation, AST sandbox & ML-DSA-65 scorecard sealing",
+    )
+    p_sub.add_argument(
+        "--policy",
+        required=True,
+        help="External policy file (`path/to/policy.py[:propose]`), module (`pkg.mod:fn`), or built-in name",
+    )
+    p_sub.add_argument("--submission-id", required=True, help="Unique slug, e.g. ext-my-team-v1")
+    p_sub.add_argument("--title", required=True, help="Concise descriptive title of the policy")
+    p_sub.add_argument("--authors", required=True, help="Author(s) or team name")
+    p_sub.add_argument(
+        "--affiliation",
+        default="Independent Open-Science Benchmark Submitter",
+        help="Institution or team affiliation",
+    )
+    p_sub.add_argument("--output", default=None, help="Optional JSON output path for the sealed scorecard")
+    p_sub.add_argument(
+        "--allow-rejected",
+        action="store_true",
+        help="Exit 0 even if admission gate rejects the policy (used when generating negative-control traps)",
+    )
+    p_sub.add_argument("--json", action="store_true", help="Emit full JSON scorecard to stdout")
+
+    p_vsub = sub.add_parser(
+        "verify-submissions",
+        help="Cryptographically verify and re-execute all external benchmark scorecards in submissions/",
+    )
+    p_vsub.add_argument("--dir", default=None, help="Path to submissions/ directory (default: <repo>/submissions)")
+    p_vsub.add_argument("--json", action="store_true", help="Emit JSON verification report")
     return p
 
 
@@ -1196,6 +1712,59 @@ def main(argv: Sequence[str] | None = None) -> int:
                 f"Safety-MILP Ceiling={ev['safety_verified_milp_ceiling_q_true']:.4f} ({ev['elapsed_seconds']}s)"
             )
         return 0
+
+    if args.command == "submit-policy":
+        out_p = Path(args.output) if args.output else None
+        card = submit_external_benchmark_policy(
+            args.policy,
+            submission_id=args.submission_id,
+            title=args.title,
+            authors=args.authors,
+            affiliation=args.affiliation,
+            output_path=out_p,
+        )
+        admitted = bool(card["admission_gate"]["admitted"])
+        if args.json:
+            print(json.dumps(card, indent=2))
+        else:
+            um = card["ungated_metrics_8seed"]
+            comp = card["classical_and_baseline_comparisons"]
+            print(
+                f"[qltc submit-policy] id={card['submission_metadata']['submission_id']} | "
+                f"status={card['admission_gate']['status']} | "
+                f"8-seed Q_proxy={um['q_proxy']['mean']:.4f} | "
+                f"Q_true={um['q_true']['mean']:.4f}±{um['q_true']['sd']:.4f} "
+                f"({comp['fraction_of_safety_milp_ceiling_pct']:.1f}% of Safety-MILP) | "
+                f"Held-out R_true={um['held_out_r_true']['mean']:.4f}±{um['held_out_r_true']['sd']:.4f} | "
+                f"Goodhart={um['goodhart_share_pct_max']:.1f}% | "
+                f"SHA-256={card['receipt_sha256'][:16]}..."
+            )
+            for reason in card["admission_gate"]["rejection_reasons"]:
+                print(f"  [REJECT] {reason}", file=sys.stderr)
+        return 0 if (admitted or args.allow_rejected) else 1
+
+    if args.command == "verify-submissions":
+        sub_dir = Path(args.dir) if args.dir else None
+        res = verify_submission_scorecards(sub_dir)
+        if args.json:
+            print(json.dumps(res, indent=2))
+        else:
+            st_str = "PASS" if res["passed"] else "FAIL"
+            print(
+                f"[qltc verify-submissions] {st_str} in {res['elapsed_seconds']}s — "
+                f"{res['admitted_scorecards_verified']} admitted scorecards, "
+                f"{res['rejected_controls_verified']} rejected controls verified."
+            )
+            for sc in res["scorecards"]:
+                tag = "ADMITTED" if sc["admitted"] else "REJECTED_CONTROL"
+                print(
+                    f"  - {sc['submission_id']:32s} [{tag:16s}] "
+                    f"Q_true={sc['q_true_mean']:.4f} | R_true={sc['held_out_r_true_mean']:.4f} | "
+                    f"Goodhart={sc['goodhart_share_pct_max']:.1f}%"
+                )
+            for err in res["errors"]:
+                print(f"  [ERROR] {err}", file=sys.stderr)
+        return 0 if res["passed"] else 1
 
     return 1
 

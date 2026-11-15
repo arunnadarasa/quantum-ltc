@@ -1036,12 +1036,95 @@
         <div class="panel" style="margin-bottom:1.35rem;border-color:rgba(56,214,196,0.38)">
           <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.6rem">
             <strong style="font-family:var(--font-mono);font-size:0.83rem;color:var(--signal)">⚙ Unified Reproducibility &amp; Sealed 32-PCN Policy Harness (<code>quantum-ltc v1.4</code> · GitHub Actions CI)</strong>
-            <a class="btn btn-sm" href="receipts/qltc_harness.py" download="qltc_harness.py">⬇ qltc_harness.py</a>
+            <div style="display:flex;flex-wrap:wrap;gap:0.45rem">
+              <a class="btn btn-sm" href="submissions/evaluate_submission.py" download="evaluate_submission.py">⬇ evaluate_submission.py</a>
+              <a class="btn btn-sm" href="receipts/qltc_harness.py" download="qltc_harness.py">⬇ qltc_harness.py</a>
+            </div>
           </div>
           <pre class="code-block wrap-lines" style="margin-top:0.65rem;font-size:0.78rem">uv pip install -e ".[dev]"
 qltc verify --strict                                   # 0.04s: verifies 18 SHA-256/ML-DSA-65 receipts, 75-node KG, 69 BibTeX refs &amp; DCB0129
 qltc repro --tier tier0-offline                        # 0.55s: replays CQWM v0.3 washout (GMFE=1.23) + HiGHS MILP + 32-PCN Goodhart gate
-qltc eval-policy --policy my_pkg.agent:propose_action  # Sealed holdout eval on 32 real NCL PCNs (observable Q_proxy only; Q_true &amp; shocks hidden)</pre>
+qltc submit-policy --policy submissions/policies/custom_pcn_policy_template.py:propose --submission-id ext-my-team-v1 --title "My Safe 32-PCN Policy" --authors "Team"
+qltc verify-submissions                                # 0.46s: replays 8 seeds × 32 PCNs × 8 unseen shocks, AST sandbox &amp; ML-DSA-65 scorecards</pre>
+        </div>
+
+        <div class="panel" style="margin-bottom:1.55rem;border-color:rgba(96,165,250,0.42)">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.65rem;margin-bottom:0.65rem">
+            <div>
+              <strong style="font-family:var(--font-mono);font-size:0.84rem;color:#60a5fa">🏆 External Benchmark Submissions — Real 32-PCN NHS North Central London Leaderboard (<code>Seeds 202611..202618</code>)</strong>
+              <div style="font-size:0.81rem;color:var(--ink-muted);margin-top:0.2rem">
+                Zero-key PR benchmark on <code>32</code> empirical NCL PCNs (<code>171</code> GP practices · <code>1,810,301</code> patients · UK OGL v3.0). Policies see <strong>only</strong> read-only <code>SealedPcnObservation</code> (<code>Q_true</code> &amp; <code>8</code> winter/supply shocks hidden; <code>0</code> calls during shocks) and must pass <strong>AST Sandbox + <code>0.0%</code> Ungated Goodhart + <code>0</code> Harms</strong>.
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.45rem">
+              <a class="btn btn-sm" href="submissions/policies/custom_pcn_policy_template.py" download="custom_pcn_policy_template.py">⬇ Starter Policy (.py)</a>
+              <a class="btn btn-sm" href="submissions/policies/deprivation_equity_pcn_policy.py" download="deprivation_equity_pcn_policy.py">⬇ #1 Federation Router (.py)</a>
+              <a class="btn btn-primary btn-sm" href="https://github.com/arunnadarasa/quantum-ltc/tree/main/submissions" target="_blank" rel="noopener">↗ Submit Policy via GitHub PR</a>
+            </div>
+          </div>
+
+          <div class="table-wrap" style="margin-top:0.55rem">
+            <table class="census">
+              <thead>
+                <tr>
+                  <th>Rank / Role</th>
+                  <th>Submission &amp; Policy Architecture</th>
+                  <th>Observable <code>Q_proxy</code></th>
+                  <th>True Balanced <code>Q_true</code></th>
+                  <th>Unseen 8-Shock <code>R_true</code></th>
+                  <th>Goodhart / Harms</th>
+                  <th>Gate &amp; Scorecard</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Ceiling (<code>tier=5</code>)</strong></td>
+                  <td><code>highs-safety-milp-ceiling</code> · Exact SciPy <code>HiGHS</code> Safety-Verified MILP (<code>0.00%</code> MIP gap, <code>0L</code>)</td>
+                  <td><code>0.7850</code></td>
+                  <td><strong><code>0.8764 ± 0.0052</code></strong></td>
+                  <td><strong><code>0.6317 ± 0.0031</code></strong></td>
+                  <td><code>0.0%</code> · <code>0</code> harms</td>
+                  <td><span style="color:var(--signal);font-family:var(--font-mono);font-size:0.74rem;font-weight:700">REFERENCE CEILING</span></td>
+                </tr>
+                <tr>
+                  <td><strong>#1 Admitted</strong></td>
+                  <td><code>ext-deprivation-equity-v1</code> · Core20PLUS5 + <code>pMDI%</code> + <code>HYP007</code> 32-PCN Router (<code>batch_32pcn</code>, <code>p=0.0078</code>)</td>
+                  <td><code>0.4938</code></td>
+                  <td><strong><code>0.5685 ± 0.0043</code></strong> (<code>+15.8%</code>)</td>
+                  <td><strong><code>0.4128 ± 0.0023</code></strong> (<code>+9.9%</code>)</td>
+                  <td><code>0.0%</code> · <code>0</code> harms</td>
+                  <td><a class="btn btn-sm" href="submissions/scorecards/ext-deprivation-equity-v1.json" target="_blank" rel="noopener">✓ ADMITTED · JSON</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#2 Admitted (Ref)</strong></td>
+                  <td><code>ref-round-robin-safety-v1</code> · Built-in <code>safety-verified</code> Balanced Round-Robin Standing Order (<code>0L</code>)</td>
+                  <td><code>0.4263</code></td>
+                  <td><strong><code>0.4908 ± 0.0031</code></strong></td>
+                  <td><strong><code>0.3756 ± 0.0019</code></strong></td>
+                  <td><code>0.0%</code> · <code>0</code> harms</td>
+                  <td><a class="btn btn-sm" href="submissions/scorecards/ref-round-robin-safety-v1.json" target="_blank" rel="noopener">✓ ADMITTED · JSON</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#3 Admitted</strong></td>
+                  <td><code>ext-starter-template-v1</code> · Decentralized 2-Choice Per-PCN Standing-Order Starter Template</td>
+                  <td><code>0.4283</code></td>
+                  <td><strong><code>0.4879 ± 0.0029</code></strong></td>
+                  <td><strong><code>0.3605 ± 0.0015</code></strong></td>
+                  <td><code>0.0%</code> · <code>0</code> harms</td>
+                  <td><a class="btn btn-sm" href="submissions/scorecards/ext-starter-template-v1.json" target="_blank" rel="noopener">✓ ADMITTED · JSON</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Rejected Control</strong></td>
+                  <td><code>trap-unverified-greedy-proxy</code> · Naive Greedy <code>Q_proxy</code> Maximizer (<em>#1 raw proxy, catastrophic collapse</em>)</td>
+                  <td><code>0.5491</code></td>
+                  <td><strong style="color:#f06a3b"><code>0.0681 ± 0.0003</code></strong> (<code>-86.1%</code>)</td>
+                  <td><strong style="color:#f06a3b"><code>0.0561 ± 0.0003</code></strong> (<code>-85.1%</code>)</td>
+                  <td><strong style="color:#f06a3b"><code>100.0%</code> · <code>256</code> harms</strong></td>
+                  <td><a class="btn btn-ghost btn-sm" href="submissions/rejected_controls/trap-unverified-greedy-proxy.json" target="_blank" rel="noopener" style="color:#f06a3b;border-color:rgba(240,106,59,0.45)">✕ REJECTED · JSON</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div class="table-wrap">

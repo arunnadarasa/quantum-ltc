@@ -24,10 +24,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dilithium-py & networkx
+      - name: Install numpy, scipy, dilithium-py & networkx
         run: |
           uv venv .venv
-          uv pip install --python .venv/bin/python "dilithium-py>=1.2" "networkx>=3.2"
+          uv pip install --python .venv/bin/python "numpy>=1.26" "scipy>=1.13" "dilithium-py>=1.2" "networkx>=3.2"
 
       - name: Verify 19 provenance artifacts, ML-DSA-65 envelopes, 15 FCIDUMPs, 75-node KG, 32-PCN UK OGL v3.0 twin & 3 PDFs
         run: |
@@ -112,3 +112,6 @@ jobs:
 
           print(f"[qltc-portal-ci] PASS — {verified_receipts} SHA-256 receipts, {verified_pqc} ML-DSA-65 envelopes, 15 FCIDUMPs, 75-node KG, 32-PCN UK OGL v3.0 twin & 3 PDFs verified.")
           PY
+
+      - name: Verify External Benchmark Submissions & Pull Request Gate (8-seed replay + AST sandbox + ML-DSA-65)
+        run: .venv/bin/python submissions/evaluate_submission.py --verify-all
