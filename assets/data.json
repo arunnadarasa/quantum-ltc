@@ -3845,6 +3845,84 @@
       }
     ]
   },
+  "clinical_swarmworld": {
+    "receipt_sha256": "a22a9ed5213090f21f700d0a8934d86da2a102da5cc95e85afa60f0bae10e0c0",
+    "milp_static_q": 0.9449,
+    "milp_ms": 7.421,
+    "arms": [
+      {
+        "key": "full_culture",
+        "label": "Full Clinical\nCulture",
+        "portfolio_P": 0.8714,
+        "held_out_R": 0.4088,
+        "specialist_peak": 0.9955,
+        "inventions_I": 27.25,
+        "lockout_trips": 0.0
+      },
+      {
+        "key": "no_communication",
+        "label": "No Comm.\n(Stigmergy+Fork)",
+        "portfolio_P": 0.8864,
+        "held_out_R": 0.417,
+        "specialist_peak": 0.9955,
+        "inventions_I": 25.62,
+        "lockout_trips": 0.0
+      },
+      {
+        "key": "pure_stigmergy",
+        "label": "Pure Stigmergy\n(Single-Owner)",
+        "portfolio_P": 0.8722,
+        "held_out_R": 0.3938,
+        "specialist_peak": 0.9955,
+        "inventions_I": 22.25,
+        "lockout_trips": 0.0
+      },
+      {
+        "key": "isolated_best_of_n",
+        "label": "Isolated\nBest-of-24",
+        "portfolio_P": 0.597,
+        "held_out_R": 0.1992,
+        "specialist_peak": 0.999,
+        "inventions_I": 15.12,
+        "lockout_trips": 0.0
+      },
+      {
+        "key": "full_culture_naive_oracle",
+        "label": "Full Culture\n(Naive Oracle)",
+        "portfolio_P": 0.3088,
+        "held_out_R": 0.1672,
+        "specialist_peak": 0.999,
+        "inventions_I": 16.75,
+        "lockout_trips": 5909.6
+      }
+    ],
+    "turnover": [
+      {
+        "label": "Full Clinical Culture\n(Multi-Steward Fork)",
+        "intact_R": 0.4088,
+        "random_50pct_R": 0.399,
+        "broker_50pct_R": 0.3985,
+        "random_ret_pct": 97.59,
+        "broker_ret_pct": 97.44
+      },
+      {
+        "label": "No Communication\n(Stigmergy + Fork)",
+        "intact_R": 0.417,
+        "random_50pct_R": 0.4057,
+        "broker_50pct_R": 0.4088,
+        "random_ret_pct": 97.28,
+        "broker_ret_pct": 98.03
+      },
+      {
+        "label": "Pure Stigmergy\n(Single-Owner Hub)",
+        "intact_R": 0.3938,
+        "random_50pct_R": 0.3354,
+        "broker_50pct_R": 0.3108,
+        "random_ret_pct": 85.16,
+        "broker_ret_pct": 78.78
+      }
+    ]
+  },
   "qltcmlm_models": [
     {
       "label": "4q\nReservoir",
@@ -4035,6 +4113,13 @@
   ],
   "receipts_summary": [
     {
+      "file": "clinical_swarmworld_v0_1_receipt.json",
+      "sha256": "a22a9ed5213090f21f700d0a8934d86da2a102da5cc95e85afa60f0bae10e0c0",
+      "platforms": "<code>Clinical SwarmWorld v0.1</code> (<code>arXiv:2608.26081v1</code>): <code>20 \u00d7 6</code> NCL PCN Grid, <code>CQWM v0.3</code> + <code>OpenCYP-FTQC v1.2</code> Oracles, <code>HiGHS MILP</code>, Live <code>jev-1.14.0</code> + <code>ML-DSA-65</code>",
+      "metrics": "8 seeds (<code>1,920</code> calls/seed, <code>0</code> prompts): Solo wins peak (<code>0.9990</code> vs <code>0.9955</code>), Swarm wins <code>K=6</code> <code>P</code> (<code>0.8714</code> vs <code>0.5970</code>) &amp; agent-free <code>S=8</code> shock <code>R</code> (<code>0.4088</code> vs <code>0.1992</code>, <code>p=0.0078</code>); <code>84.3%</code> stigmergy; Naive oracle <code>5,909.6</code> lockouts/world; <code>10/10</code> citations",
+      "floor": "HiGHS MILP (7.42 ms) & Solo Best-of-24 Peak Control"
+    },
+    {
       "file": "cqwm_v0_3_depot_and_8q_helios_comb_receipt.json",
       "sha256": "66ef29086f39e99938b4efa9765c565d4ca6541a891ec2692725c73d3e6f931e",
       "platforms": "<code>CQWM v0.3</code>: 9-State Hepatocyte/Enterocyte Depot (<code>Kp,uu = 1.4</code>, <code>PMID 25989229</code>) + <code>PXR</code> Across 3 Human Cohorts (<code>N = 40</code>) &amp; Live 8q <code>Guppy 1.0 \u2192 HUGR</code> Depot Comb on Nexus <code>Helios-1E-lite</code> (Jobs <code>4c8a502c</code>, <code>5bbabfc5</code>, <code>19bc099f</code>, <code>4e30525a</code>) + <code>jev-1.14.0</code> + <code>ML-DSA-65</code>",
@@ -4148,14 +4233,14 @@
     },
     {
       "file": "quantum_ltc_knowledge_graph.json",
-      "sha256": "9d3414501675e2d64950ad51e05b056db20801a79728908328625554f05add2f",
-      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, PubMed, <code>openFDA FAERS</code>, SNOMED CT, UniProtKB, RCSB PDB (<code>7 structures</code>), <code>OpenCYP-FTQC v1.2</code>, <code>CQWM v0.1\u2013v0.3</code>, <code>Jev 1.14</code>, JSON-LD 1.1",
-      "metrics": "<code>73</code> nodes, <code>211</code> directed semantic triples across 8 ontology layers (1 connected component)",
+      "sha256": "80ca88ed1ab6ad824105332e270699850334457ce94a97a69699a6f6040becd5",
+      "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, PubMed, <code>openFDA FAERS</code>, SNOMED CT, UniProtKB, RCSB PDB (<code>7 structures</code>), <code>OpenCYP-FTQC v1.2</code>, <code>CQWM v0.1\u2013v0.3</code>, <code>Clinical SwarmWorld v0.1</code>, <code>Jev 1.14</code>, JSON-LD 1.1",
+      "metrics": "<code>74</code> nodes, <code>219</code> directed semantic triples across 8 ontology layers (1 connected component)",
       "floor": "Live OLS4, ChEMBL37, PubMed & openFDA verified"
     }
   ],
   "knowledge_graph": {
-    "receipt_sha256": "9d3414501675e2d64950ad51e05b056db20801a79728908328625554f05add2f",
+    "receipt_sha256": "80ca88ed1ab6ad824105332e270699850334457ce94a97a69699a6f6040becd5",
     "categories": [
       {
         "id": "NCL_LTC_Condition",
@@ -4206,7 +4291,7 @@
         "Molecular_Target": 15,
         "Quantum_Primitive": 10,
         "Logical_Era": 4,
-        "Platform_Receipt": 18,
+        "Platform_Receipt": 19,
         "DCB0129_Hazard": 6
       }
     },
@@ -4223,9 +4308,9 @@
         "in_degree": 0,
         "out_degree": 10,
         "total_degree": 10,
-        "pagerank": 0.012603,
-        "betweenness_centrality": 0.0459,
-        "closeness_centrality": 0.4472
+        "pagerank": 0.012199,
+        "betweenness_centrality": 0.0429,
+        "closeness_centrality": 0.4479
       },
       {
         "id": "ltc_af",
@@ -4239,9 +4324,9 @@
         "in_degree": 0,
         "out_degree": 6,
         "total_degree": 6,
-        "pagerank": 0.007386,
-        "betweenness_centrality": 0.015,
-        "closeness_centrality": 0.3892
+        "pagerank": 0.007162,
+        "betweenness_centrality": 0.014,
+        "closeness_centrality": 0.3904
       },
       {
         "id": "ltc_htn",
@@ -4253,11 +4338,11 @@
         "metric": "Anchored by NCL PCN Outcome #23 (<140/90 clinic, <135/85 home for age <80; <150/90 for >=80). [target_bp_under80: 140/90 mmHg \u00b7 target_bp_home: 135/85 mmHg]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 7,
-        "total_degree": 7,
-        "pagerank": 0.009596,
-        "betweenness_centrality": 0.0478,
-        "closeness_centrality": 0.4114
+        "out_degree": 8,
+        "total_degree": 8,
+        "pagerank": 0.012095,
+        "betweenness_centrality": 0.0515,
+        "closeness_centrality": 0.4195
       },
       {
         "id": "ltc_t2d",
@@ -4271,9 +4356,9 @@
         "in_degree": 0,
         "out_degree": 7,
         "total_degree": 7,
-        "pagerank": 0.010092,
-        "betweenness_centrality": 0.0226,
-        "closeness_centrality": 0.3934
+        "pagerank": 0.009796,
+        "betweenness_centrality": 0.0213,
+        "closeness_centrality": 0.3946
       },
       {
         "id": "ltc_t1d",
@@ -4287,9 +4372,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.006866,
-        "betweenness_centrality": 0.0069,
-        "closeness_centrality": 0.383
+        "pagerank": 0.006665,
+        "betweenness_centrality": 0.0063,
+        "closeness_centrality": 0.3842
       },
       {
         "id": "ltc_ckd",
@@ -4301,11 +4386,11 @@
         "metric": "Progressive nephron loss tracked by uACR & eGFR; early SGLT2i/ACEi averts high-carbon dialysis. [biomarkers: uACR, eGFR \u00b7 green_plan_priority: Prevent dialysis]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 10,
-        "total_degree": 10,
-        "pagerank": 0.016687,
-        "betweenness_centrality": 0.0388,
-        "closeness_centrality": 0.4364
+        "out_degree": 11,
+        "total_degree": 11,
+        "pagerank": 0.018152,
+        "betweenness_centrality": 0.0417,
+        "closeness_centrality": 0.4424
       },
       {
         "id": "ltc_masld",
@@ -4319,9 +4404,9 @@
         "in_degree": 0,
         "out_degree": 7,
         "total_degree": 7,
-        "pagerank": 0.012887,
-        "betweenness_centrality": 0.0479,
-        "closeness_centrality": 0.4022
+        "pagerank": 0.01243,
+        "betweenness_centrality": 0.0465,
+        "closeness_centrality": 0.4033
       },
       {
         "id": "ltc_copd",
@@ -4333,11 +4418,11 @@
         "metric": "Chronic airflow limitation requiring winter exacerbation prevention & low-GWP inhaler review. [seasonality: Pre-winter Q2/Q3 priority]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 10,
-        "total_degree": 10,
-        "pagerank": 0.018417,
-        "betweenness_centrality": 0.0659,
-        "closeness_centrality": 0.4364
+        "out_degree": 11,
+        "total_degree": 11,
+        "pagerank": 0.019835,
+        "betweenness_centrality": 0.0674,
+        "closeness_centrality": 0.4424
       },
       {
         "id": "ltc_asthma",
@@ -4351,9 +4436,9 @@
         "in_degree": 1,
         "out_degree": 8,
         "total_degree": 9,
-        "pagerank": 0.01298,
-        "betweenness_centrality": 0.04,
-        "closeness_centrality": 0.4138
+        "pagerank": 0.01264,
+        "betweenness_centrality": 0.037,
+        "closeness_centrality": 0.4148
       },
       {
         "id": "stage_call_recall",
@@ -4365,11 +4450,11 @@
         "metric": "3-yearly UCLPartners searches + scheduling tension between Month-of-Birth smoothing and Pre-Winter High/Complex priority. [pre_winter_high_risk_achieved: 18/18 (100%) \u00b7 quarterly_clinic_cap: 8/8/8/8]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 10,
-        "out_degree": 2,
-        "total_degree": 12,
-        "pagerank": 0.017508,
-        "betweenness_centrality": 0.0744,
-        "closeness_centrality": 0.4235
+        "out_degree": 3,
+        "total_degree": 13,
+        "pagerank": 0.019337,
+        "betweenness_centrality": 0.0629,
+        "closeness_centrality": 0.432
       },
       {
         "id": "stage_1_check_test",
@@ -4383,9 +4468,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.023342,
-        "betweenness_centrality": 0.1017,
-        "closeness_centrality": 0.439
+        "pagerank": 0.022718,
+        "betweenness_centrality": 0.0992,
+        "closeness_centrality": 0.4398
       },
       {
         "id": "stage_2_mdt_review",
@@ -4399,9 +4484,9 @@
         "in_degree": 5,
         "out_degree": 3,
         "total_degree": 8,
-        "pagerank": 0.013829,
-        "betweenness_centrality": 0.0652,
-        "closeness_centrality": 0.4186
+        "pagerank": 0.013476,
+        "betweenness_centrality": 0.0642,
+        "closeness_centrality": 0.422
       },
       {
         "id": "stage_3_pcsp",
@@ -4415,9 +4500,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.019122,
-        "betweenness_centrality": 0.0642,
-        "closeness_centrality": 0.385
+        "pagerank": 0.018835,
+        "betweenness_centrality": 0.0623,
+        "closeness_centrality": 0.3883
       },
       {
         "id": "stage_4_continuity",
@@ -4431,9 +4516,9 @@
         "in_degree": 2,
         "out_degree": 2,
         "total_degree": 4,
-        "pagerank": 0.013619,
-        "betweenness_centrality": 0.0218,
-        "closeness_centrality": 0.3364
+        "pagerank": 0.013577,
+        "betweenness_centrality": 0.0216,
+        "closeness_centrality": 0.3395
       },
       {
         "id": "mol_ace",
@@ -4447,9 +4532,9 @@
         "in_degree": 5,
         "out_degree": 1,
         "total_degree": 6,
-        "pagerank": 0.010435,
-        "betweenness_centrality": 0.0263,
-        "closeness_centrality": 0.375
+        "pagerank": 0.010396,
+        "betweenness_centrality": 0.0265,
+        "closeness_centrality": 0.3782
       },
       {
         "id": "mol_pdb_1o86",
@@ -4463,9 +4548,9 @@
         "in_degree": 2,
         "out_degree": 4,
         "total_degree": 6,
-        "pagerank": 0.014898,
-        "betweenness_centrality": 0.0207,
-        "closeness_centrality": 0.3711
+        "pagerank": 0.014504,
+        "betweenness_centrality": 0.0199,
+        "closeness_centrality": 0.3724
       },
       {
         "id": "mol_slc5a2",
@@ -4479,9 +4564,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.009225,
+        "pagerank": 0.008995,
         "betweenness_centrality": 0.0098,
-        "closeness_centrality": 0.3564
+        "closeness_centrality": 0.3596
       },
       {
         "id": "mol_glp1r",
@@ -4495,9 +4580,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.007056,
-        "betweenness_centrality": 0.0026,
-        "closeness_centrality": 0.3214
+        "pagerank": 0.006865,
+        "betweenness_centrality": 0.0025,
+        "closeness_centrality": 0.3216
       },
       {
         "id": "mol_adrb2",
@@ -4511,9 +4596,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.006453,
-        "betweenness_centrality": 0.0018,
-        "closeness_centrality": 0.3333
+        "pagerank": 0.006301,
+        "betweenness_centrality": 0.002,
+        "closeness_centrality": 0.3364
       },
       {
         "id": "mol_il6",
@@ -4527,9 +4612,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.008233,
-        "betweenness_centrality": 0.0111,
-        "closeness_centrality": 0.3673
+        "pagerank": 0.008024,
+        "betweenness_centrality": 0.0107,
+        "closeness_centrality": 0.3668
       },
       {
         "id": "mol_angii_1n9v",
@@ -4543,9 +4628,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.005507,
-        "betweenness_centrality": 0.01,
-        "closeness_centrality": 0.3273
+        "pagerank": 0.005545,
+        "betweenness_centrality": 0.0105,
+        "closeness_centrality": 0.3303
       },
       {
         "id": "mol_pnpla3",
@@ -4559,9 +4644,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.0036,
+        "pagerank": 0.003517,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.288
+        "closeness_centrality": 0.2885
       },
       {
         "id": "mol_cyp3a4",
@@ -4575,9 +4660,9 @@
         "in_degree": 5,
         "out_degree": 4,
         "total_degree": 9,
-        "pagerank": 0.014992,
-        "betweenness_centrality": 0.0487,
-        "closeness_centrality": 0.4068
+        "pagerank": 0.014496,
+        "betweenness_centrality": 0.0463,
+        "closeness_centrality": 0.4056
       },
       {
         "id": "mol_pdb_1tqn",
@@ -4591,9 +4676,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.014156,
-        "betweenness_centrality": 0.009,
-        "closeness_centrality": 0.3692
+        "pagerank": 0.013045,
+        "betweenness_centrality": 0.0092,
+        "closeness_centrality": 0.3744
       },
       {
         "id": "mol_pdb_5te8",
@@ -4607,9 +4692,9 @@
         "in_degree": 1,
         "out_degree": 6,
         "total_degree": 7,
-        "pagerank": 0.015766,
-        "betweenness_centrality": 0.0089,
-        "closeness_centrality": 0.3692
+        "pagerank": 0.01521,
+        "betweenness_centrality": 0.0086,
+        "closeness_centrality": 0.3706
       },
       {
         "id": "mol_pdb_3nxu",
@@ -4623,9 +4708,9 @@
         "in_degree": 1,
         "out_degree": 4,
         "total_degree": 5,
-        "pagerank": 0.013936,
+        "pagerank": 0.012895,
         "betweenness_centrality": 0.0046,
-        "closeness_centrality": 0.3655
+        "closeness_centrality": 0.3706
       },
       {
         "id": "mol_pdb_4wnu",
@@ -4639,9 +4724,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.010213,
-        "betweenness_centrality": 0.008,
-        "closeness_centrality": 0.375
+        "pagerank": 0.009909,
+        "betweenness_centrality": 0.0074,
+        "closeness_centrality": 0.3744
       },
       {
         "id": "mol_pdb_1r9o",
@@ -4655,9 +4740,9 @@
         "in_degree": 3,
         "out_degree": 3,
         "total_degree": 6,
-        "pagerank": 0.011576,
-        "betweenness_centrality": 0.0173,
-        "closeness_centrality": 0.3789
+        "pagerank": 0.011233,
+        "betweenness_centrality": 0.0161,
+        "closeness_centrality": 0.3782
       },
       {
         "id": "mol_muc5b",
@@ -4671,9 +4756,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.007173,
-        "betweenness_centrality": 0.0034,
-        "closeness_centrality": 0.32
+        "pagerank": 0.007006,
+        "betweenness_centrality": 0.004,
+        "closeness_centrality": 0.323
       },
       {
         "id": "tx_acei_lisinopril",
@@ -4687,9 +4772,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009232,
-        "betweenness_centrality": 0.035,
-        "closeness_centrality": 0.3564
+        "pagerank": 0.009034,
+        "betweenness_centrality": 0.0344,
+        "closeness_centrality": 0.3561
       },
       {
         "id": "tx_sglt2i",
@@ -4703,9 +4788,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009838,
-        "betweenness_centrality": 0.0156,
-        "closeness_centrality": 0.3655
+        "pagerank": 0.009518,
+        "betweenness_centrality": 0.0151,
+        "closeness_centrality": 0.365
       },
       {
         "id": "tx_mart_dpi",
@@ -4719,9 +4804,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.010378,
-        "betweenness_centrality": 0.0355,
-        "closeness_centrality": 0.3871
+        "pagerank": 0.010067,
+        "betweenness_centrality": 0.0344,
+        "closeness_centrality": 0.3862
       },
       {
         "id": "tx_pharmacist_smr",
@@ -4735,9 +4820,9 @@
         "in_degree": 1,
         "out_degree": 8,
         "total_degree": 9,
-        "pagerank": 0.014323,
-        "betweenness_centrality": 0.0677,
-        "closeness_centrality": 0.4364
+        "pagerank": 0.013903,
+        "betweenness_centrality": 0.0654,
+        "closeness_centrality": 0.4345
       },
       {
         "id": "tx_home_bp",
@@ -4751,9 +4836,9 @@
         "in_degree": 0,
         "out_degree": 1,
         "total_degree": 1,
-        "pagerank": 0.00276,
+        "pagerank": 0.002717,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2637
+        "closeness_centrality": 0.2635
       },
       {
         "id": "tx_vcse_sp",
@@ -4767,9 +4852,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.00638,
-        "betweenness_centrality": 0.0041,
-        "closeness_centrality": 0.2915
+        "pagerank": 0.006358,
+        "betweenness_centrality": 0.0038,
+        "closeness_centrality": 0.2932
       },
       {
         "id": "prim_p08",
@@ -4783,9 +4868,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.013825,
-        "betweenness_centrality": 0.0315,
-        "closeness_centrality": 0.3288
+        "pagerank": 0.00872,
+        "betweenness_centrality": 0.0098,
+        "closeness_centrality": 0.3318
       },
       {
         "id": "prim_a01d",
@@ -4799,9 +4884,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.017022,
-        "betweenness_centrality": 0.042,
-        "closeness_centrality": 0.3618
+        "pagerank": 0.016242,
+        "betweenness_centrality": 0.0389,
+        "closeness_centrality": 0.3596
       },
       {
         "id": "prim_p09",
@@ -4815,8 +4900,8 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.012852,
-        "betweenness_centrality": 0.0153,
+        "pagerank": 0.012194,
+        "betweenness_centrality": 0.0152,
         "closeness_centrality": 0.3318
       },
       {
@@ -4831,8 +4916,8 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.008026,
-        "betweenness_centrality": 0.0038,
+        "pagerank": 0.007662,
+        "betweenness_centrality": 0.0036,
         "closeness_centrality": 0.3349
       },
       {
@@ -4847,9 +4932,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.013651,
-        "betweenness_centrality": 0.013,
-        "closeness_centrality": 0.3892
+        "pagerank": 0.012403,
+        "betweenness_centrality": 0.0125,
+        "closeness_centrality": 0.3925
       },
       {
         "id": "prim_a01g",
@@ -4863,9 +4948,9 @@
         "in_degree": 1,
         "out_degree": 3,
         "total_degree": 4,
-        "pagerank": 0.012126,
-        "betweenness_centrality": 0.0235,
-        "closeness_centrality": 0.3412
+        "pagerank": 0.011678,
+        "betweenness_centrality": 0.0228,
+        "closeness_centrality": 0.3411
       },
       {
         "id": "prim_a01h",
@@ -4879,9 +4964,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.010173,
-        "betweenness_centrality": 0.0095,
-        "closeness_centrality": 0.3013
+        "pagerank": 0.009919,
+        "betweenness_centrality": 0.009,
+        "closeness_centrality": 0.3017
       },
       {
         "id": "prim_p22",
@@ -4895,9 +4980,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.015966,
-        "betweenness_centrality": 0.0305,
-        "closeness_centrality": 0.3636
+        "pagerank": 0.015509,
+        "betweenness_centrality": 0.0302,
+        "closeness_centrality": 0.365
       },
       {
         "id": "prim_x03",
@@ -4911,9 +4996,9 @@
         "in_degree": 5,
         "out_degree": 5,
         "total_degree": 10,
-        "pagerank": 0.027973,
-        "betweenness_centrality": 0.0537,
-        "closeness_centrality": 0.3789
+        "pagerank": 0.026992,
+        "betweenness_centrality": 0.0525,
+        "closeness_centrality": 0.3802
       },
       {
         "id": "prim_p04",
@@ -4927,9 +5012,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.01248,
-        "betweenness_centrality": 0.015,
-        "closeness_centrality": 0.3025
+        "pagerank": 0.012275,
+        "betweenness_centrality": 0.0148,
+        "closeness_centrality": 0.3042
       },
       {
         "id": "era_i",
@@ -4943,8 +5028,8 @@
         "in_degree": 3,
         "out_degree": 1,
         "total_degree": 4,
-        "pagerank": 0.017974,
-        "betweenness_centrality": 0.0274,
+        "pagerank": 0.015533,
+        "betweenness_centrality": 0.0216,
         "closeness_centrality": 0.338
       },
       {
@@ -4959,9 +5044,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.025943,
-        "betweenness_centrality": 0.0533,
-        "closeness_centrality": 0.3731
+        "pagerank": 0.024016,
+        "betweenness_centrality": 0.0484,
+        "closeness_centrality": 0.3724
       },
       {
         "id": "era_iii",
@@ -4975,9 +5060,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.022401,
-        "betweenness_centrality": 0.0378,
-        "closeness_centrality": 0.3913
+        "pagerank": 0.020888,
+        "betweenness_centrality": 0.0368,
+        "closeness_centrality": 0.3946
       },
       {
         "id": "era_iv",
@@ -4991,9 +5076,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.022987,
-        "betweenness_centrality": 0.031,
-        "closeness_centrality": 0.3547
+        "pagerank": 0.022077,
+        "betweenness_centrality": 0.0307,
+        "closeness_centrality": 0.3614
       },
       {
         "id": "plat_nexus_helios",
@@ -5007,9 +5092,9 @@
         "in_degree": 3,
         "out_degree": 2,
         "total_degree": 5,
-        "pagerank": 0.015634,
-        "betweenness_centrality": 0.0098,
-        "closeness_centrality": 0.3333
+        "pagerank": 0.014288,
+        "betweenness_centrality": 0.0104,
+        "closeness_centrality": 0.338
       },
       {
         "id": "plat_haiqu",
@@ -5023,9 +5108,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.011312,
-        "betweenness_centrality": 0.0017,
-        "closeness_centrality": 0.2903
+        "pagerank": 0.010834,
+        "betweenness_centrality": 0.0016,
+        "closeness_centrality": 0.2897
       },
       {
         "id": "plat_jij_highs",
@@ -5037,11 +5122,11 @@
         "metric": "128-var (144 w/ slack) NCL Call/Recall QUBO achieving 18/18 pre-winter High/Complex coverage within 0.80% of 4.33 ms HiGHS MILP. [pre_winter_recall: 18/18 \u00b7 gap_vs_highs_pct: 0.8038 \u00b7 receipt_sha256: 7212c3d95a5fc0b960c2c3b48398f2ce13469623ea8b4de1e3001d54c3403955]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 1,
-        "out_degree": 0,
-        "total_degree": 1,
-        "pagerank": 0.007209,
-        "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2483
+        "out_degree": 1,
+        "total_degree": 2,
+        "pagerank": 0.007974,
+        "betweenness_centrality": 0.0015,
+        "closeness_centrality": 0.3054
       },
       {
         "id": "plat_hqs_qprotsim",
@@ -5055,9 +5140,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.009617,
+        "pagerank": 0.009387,
         "betweenness_centrality": 0.0022,
-        "closeness_centrality": 0.2812
+        "closeness_centrality": 0.2808
       },
       {
         "id": "plat_multiomics",
@@ -5071,9 +5156,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.005679,
+        "pagerank": 0.005524,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2759
+        "closeness_centrality": 0.2765
       },
       {
         "id": "plat_modal_rhyme_hf",
@@ -5087,9 +5172,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.009928,
-        "betweenness_centrality": 0.0026,
-        "closeness_centrality": 0.2727
+        "pagerank": 0.009705,
+        "betweenness_centrality": 0.0025,
+        "closeness_centrality": 0.2724
       },
       {
         "id": "plat_text2wetlab",
@@ -5103,9 +5188,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.005304,
+        "pagerank": 0.005189,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.3064
+        "closeness_centrality": 0.3067
       },
       {
         "id": "plat_medicus_discopy_moth",
@@ -5119,9 +5204,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.010453,
+        "pagerank": 0.010349,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.288
+        "closeness_centrality": 0.2897
       },
       {
         "id": "plat_typesafe_jev",
@@ -5133,11 +5218,11 @@
         "metric": "Live typed multi-method Health AI autorater (arXiv:2611.05127): CUJ-1 74.53% (4.32/5 NHS utility), CUJ-2 73.33%, CUJ-3 51.20%, CUJ-4 55.60%. [cuj1_composite_pct: 74.53 \u00b7 cuj4_rigor_0_5: 3.9 \u00b7 receipt_sha256: 7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 11,
-        "total_degree": 11,
-        "pagerank": 0.01315,
-        "betweenness_centrality": 0.061,
-        "closeness_centrality": 0.4
+        "out_degree": 12,
+        "total_degree": 12,
+        "pagerank": 0.015589,
+        "betweenness_centrality": 0.0666,
+        "closeness_centrality": 0.4078
       },
       {
         "id": "plat_pyscf_ag2",
@@ -5151,9 +5236,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.012323,
-        "betweenness_centrality": 0.0065,
-        "closeness_centrality": 0.3214
+        "pagerank": 0.011994,
+        "betweenness_centrality": 0.0063,
+        "closeness_centrality": 0.323
       },
       {
         "id": "plat_cyp3a4_gate1",
@@ -5167,9 +5252,9 @@
         "in_degree": 6,
         "out_degree": 0,
         "total_degree": 6,
-        "pagerank": 0.015094,
-        "betweenness_centrality": 0.0166,
-        "closeness_centrality": 0.377
+        "pagerank": 0.014592,
+        "betweenness_centrality": 0.0167,
+        "closeness_centrality": 0.3822
       },
       {
         "id": "plat_opencyp_ftqc",
@@ -5183,9 +5268,9 @@
         "in_degree": 8,
         "out_degree": 0,
         "total_degree": 8,
-        "pagerank": 0.022942,
-        "betweenness_centrality": 0.0205,
-        "closeness_centrality": 0.377
+        "pagerank": 0.022181,
+        "betweenness_centrality": 0.0206,
+        "closeness_centrality": 0.3822
       },
       {
         "id": "plat_jev_10ltc_cqa",
@@ -5199,9 +5284,9 @@
         "in_degree": 11,
         "out_degree": 2,
         "total_degree": 13,
-        "pagerank": 0.02084,
-        "betweenness_centrality": 0.0639,
-        "closeness_centrality": 0.45
+        "pagerank": 0.020581,
+        "betweenness_centrality": 0.0586,
+        "closeness_centrality": 0.4534
       },
       {
         "id": "plat_opencyp_v1_1_thc",
@@ -5215,9 +5300,9 @@
         "in_degree": 10,
         "out_degree": 2,
         "total_degree": 12,
-        "pagerank": 0.03424,
-        "betweenness_centrality": 0.0425,
-        "closeness_centrality": 0.4091
+        "pagerank": 0.032889,
+        "betweenness_centrality": 0.0407,
+        "closeness_centrality": 0.4101
       },
       {
         "id": "plat_cqwm_v0_1",
@@ -5231,9 +5316,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.031996,
-        "betweenness_centrality": 0.0801,
-        "closeness_centrality": 0.4675
+        "pagerank": 0.031031,
+        "betweenness_centrality": 0.0759,
+        "closeness_centrality": 0.471
       },
       {
         "id": "plat_cqwm_v0_2_helios",
@@ -5247,9 +5332,9 @@
         "in_degree": 8,
         "out_degree": 1,
         "total_degree": 9,
-        "pagerank": 0.029095,
-        "betweenness_centrality": 0.0357,
-        "closeness_centrality": 0.4186
+        "pagerank": 0.027052,
+        "betweenness_centrality": 0.0333,
+        "closeness_centrality": 0.422
       },
       {
         "id": "plat_opencyp_v1_2_faers_val",
@@ -5263,9 +5348,9 @@
         "in_degree": 9,
         "out_degree": 1,
         "total_degree": 10,
-        "pagerank": 0.028294,
-        "betweenness_centrality": 0.0288,
-        "closeness_centrality": 0.4235
+        "pagerank": 0.026662,
+        "betweenness_centrality": 0.0277,
+        "closeness_centrality": 0.4269
       },
       {
         "id": "plat_cqwm_v0_3_depot_8q_comb",
@@ -5277,11 +5362,27 @@
         "metric": "Zero-fit 9-state human hepatocyte/enterocyte depot (Kp,uu=1.4, PMID 25989229) + PXR world model closing PMID 38393578 (GMFE=1.236, 7/7 in 2-fold, r=0.967), elderly PMID 17635500 (IV 2.21x/PO 5.42x), & PMID 21937987 + live 8q Guppy->HUGR Depot Quantum Comb on Nexus Helios-1E-lite (8,192 shots, 98.79% ASPS, N_total=0.837, Delta_N_depot=0.398; 19q 1 TiB crossover). [pmid38393578_gmfe: 1.236 \u00b7 within_2fold_visits: 7/7 \u00b7 emulator_shots_8q: 8192 \u00b7 asps_acceptance_rate: 0.987915 \u00b7 depot_causal_break_tvd: 0.398265 \u00b7 liouvillian_1tib_comb_qubits: 19 \u00b7 receipt_sha256: 66ef29086f39e99938b4efa9765c565d4ca6541a891ec2692725c73d3e6f931e]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 10,
+        "out_degree": 1,
+        "total_degree": 11,
+        "pagerank": 0.037688,
+        "betweenness_centrality": 0.0482,
+        "closeness_centrality": 0.4345
+      },
+      {
+        "id": "plat_clinical_swarmworld_v0_1",
+        "label": "Clinical SwarmWorld v0.1: Stigmergic PCN Evolution & Shock Assay",
+        "category": "Platform_Receipt",
+        "layer": 7,
+        "tier": "Layer 7 \u00b7 Era: Era I + III-IV Oracle",
+        "external_id": "SHA256:a22a9ed52130 ()",
+        "metric": "Zero-hype stigmergic protocol evolution (arXiv:2608.26081) across 20 NCL PCN cells x K=6 LTC pathways (8 paired world seeds, 224 worlds, 0 role prompts, 0 agent calls during S=8 unseen NHS shocks): R=0.4088 vs 0.1992 solo (p=0.007812), Solo Best-of-24 wins single-specialist peak (0.9990 vs 0.9955), HiGHS static ceiling 7.42 ms, 84.26% physical stigmergy reuse, 97.59% 50% turnover retention, & CQWM v0.3 vs naive RCCSD(T)/Markov oracle consequence amplification (0 vs 5,909.6 safety lockouts/world). [held_out_resilience_R_full: 0.4088 \u00b7 held_out_resilience_R_solo: 0.1992 \u00b7 stigmergy_reuse_share: 0.8426 \u00b7 turnover_50pct_retention: 0.9759 \u00b7 naive_oracle_lockout_trips: 5909.625 \u00b7 jev_citation_audit: 10/10 PASS (100% invariant) \u00b7 receipt_sha256: a22a9ed5213090f21f700d0a8934d86da2a102da5cc95e85afa60f0bae10e0c0]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 8,
         "out_degree": 0,
-        "total_degree": 10,
-        "pagerank": 0.037383,
-        "betweenness_centrality": 0.0411,
-        "closeness_centrality": 0.4235
+        "total_degree": 8,
+        "pagerank": 0.025377,
+        "betweenness_centrality": 0.0359,
+        "closeness_centrality": 0.4148
       },
       {
         "id": "haz_h_ltc_01",
@@ -5295,9 +5396,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004056,
-        "betweenness_centrality": 0.0038,
-        "closeness_centrality": 0.338
+        "pagerank": 0.004005,
+        "betweenness_centrality": 0.0012,
+        "closeness_centrality": 0.3395
       },
       {
         "id": "haz_h_ltc_02",
@@ -5311,9 +5412,9 @@
         "in_degree": 2,
         "out_degree": 7,
         "total_degree": 9,
-        "pagerank": 0.016885,
-        "betweenness_centrality": 0.0315,
-        "closeness_centrality": 0.3978
+        "pagerank": 0.015917,
+        "betweenness_centrality": 0.0307,
+        "closeness_centrality": 0.4033
       },
       {
         "id": "haz_h_ltc_03",
@@ -5327,9 +5428,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.004522,
-        "betweenness_centrality": 0.0012,
-        "closeness_centrality": 0.3547
+        "pagerank": 0.004547,
+        "betweenness_centrality": 0.0011,
+        "closeness_centrality": 0.3578
       },
       {
         "id": "haz_h_ltc_04",
@@ -5341,11 +5442,11 @@
         "metric": "Conflation of cloud emulator / biophysical toy models with validated RCT clinical efficacy \u2014 Statutory DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate)]",
         "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
         "in_degree": 2,
-        "out_degree": 4,
-        "total_degree": 6,
-        "pagerank": 0.011026,
-        "betweenness_centrality": 0.0149,
-        "closeness_centrality": 0.385
+        "out_degree": 5,
+        "total_degree": 7,
+        "pagerank": 0.013465,
+        "betweenness_centrality": 0.0183,
+        "closeness_centrality": 0.3989
       },
       {
         "id": "haz_h_ltc_05",
@@ -5359,9 +5460,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004167,
-        "betweenness_centrality": 0.0039,
-        "closeness_centrality": 0.3462
+        "pagerank": 0.004185,
+        "betweenness_centrality": 0.0037,
+        "closeness_centrality": 0.3493
       },
       {
         "id": "haz_h_ltc_06",
@@ -5375,9 +5476,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.00439,
-        "betweenness_centrality": 0.0056,
-        "closeness_centrality": 0.2988
+        "pagerank": 0.004434,
+        "betweenness_centrality": 0.0058,
+        "closeness_centrality": 0.3029
       }
     ],
     "edges": [
@@ -6232,6 +6333,54 @@
         "target": "plat_cqwm_v0_3_depot_8q_comb",
         "relation": "GOVERNS_CLINICAL_RISK_OF",
         "weight": "Even with 7/7 visits inside 2-fold across N=40 published humans, H-LTC-02 remains strictly OPEN pending NHS EHR/PK cohort validation"
+      },
+      {
+        "source": "plat_cqwm_v0_3_depot_8q_comb",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "GROUNDS_PROVING_GROUND_IN",
+        "weight": "Supplies authoritative ritonavir +144h depot & clarithromycin 1TQN +96h washout physics (0 vs 5,909.6 safety lockouts/world)"
+      },
+      {
+        "source": "plat_jij_highs",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "BOUNDS_STATIC_CEILING_OF",
+        "weight": "Centralized SciPy HiGHS MILP solves static 20x6 PCN placement to 0.00% MIP gap in 7.421 ms (Q=0.9449)"
+      },
+      {
+        "source": "plat_typesafe_jev",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "CALIBRATES_AND_AUDITS",
+        "weight": "Zero-role-prompt jev-1.14.0 local vignette calibration (10/10 invariant) + 10/10 claim & hype-trap audit"
+      },
+      {
+        "source": "stage_call_recall",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "STRESS_TESTED_WITHOUT_AGENTS_IN",
+        "weight": "FreezeAndRemoveAgents evaluates frozen 20-PCN controllers under S=8 unseen NHS shocks with 0 AI calls (R=0.4088 vs 0.1992)"
+      },
+      {
+        "source": "ltc_htn",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "VALIDATES_0L_CONTROL_IN",
+        "weight": "Closed-shell ACE 1O86 shows 0.001215 mmHg SBP RMSE (0.00% proving-ground divergence)"
+      },
+      {
+        "source": "ltc_ckd",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "TESTS_CULTURAL_AMPLIFICATION_IN",
+        "weight": "Naive Markovian plasma washout spreads +24h ritonavir holds across PCNs, collapsing R to 0.1672"
+      },
+      {
+        "source": "ltc_copd",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "TESTS_CULTURAL_AMPLIFICATION_IN",
+        "weight": "Single-reference RCCSD(T) (+7.15 mHa on 1TQN) spreads +0h clarithromycin holds across PCNs"
+      },
+      {
+        "source": "haz_h_ltc_04",
+        "target": "plat_clinical_swarmworld_v0_1",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "0 physical QPU shots, 0 role prompts, Solo Best-of-24 wins single-specialist peak, 6/6 open hazards"
       },
       {
         "source": "tx_acei_lisinopril",

@@ -1,5 +1,5 @@
 {
-  "total_entries": 59,
+  "total_entries": 65,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -413,6 +413,48 @@
       "status": "VERIFIED",
       "verification_source": "Crossref HTTP 200 (10.1124/dmd.109.028746)",
       "resolved_title": "Physiologically Based Pharmacokinetic Model of Mechanism-Based Inhibition of CYP3A by Clarithromycin"
+    },
+    {
+      "key": "pal2026swarmworld",
+      "entry_type": "misc",
+      "status": "VERIFIED",
+      "verification_source": "arXiv API HTTP 200 (2608.26081) authors=['Subhadeep Pal', 'Fiona Y. Wang', 'Markus J. Buehler']",
+      "resolved_title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents"
+    },
+    {
+      "key": "grasse1959stigmergie",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1007/BF02223791)",
+      "resolved_title": "La reconstruction du nid et les coordinations interindividuelles chezBellicositermes natalensis etCubitermes sp. la th\u00e9orie de la stigmergie: Essai d'interpr\u00e9tation du comportement des termites constructeurs"
+    },
+    {
+      "key": "benjamini1995fdr",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1111/j.2517-6161.1995.tb02031.x)",
+      "resolved_title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing"
+    },
+    {
+      "key": "guimera2005cartography",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1038/nature03288)",
+      "resolved_title": "Functional cartography of complex metabolic networks"
+    },
+    {
+      "key": "rousseeuw1987silhouettes",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1016/0377-0427(87)90125-7)",
+      "resolved_title": "Silhouettes: A graphical aid to the interpretation and validation of cluster analysis"
+    },
+    {
+      "key": "almeidaneto2008nodf",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1111/j.0030-1299.2008.16644.x)",
+      "resolved_title": "A consistent metric for nestedness analysis in ecological systems: reconciling concept and measurement"
     }
   ]
 }

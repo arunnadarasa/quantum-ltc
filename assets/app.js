@@ -2674,6 +2674,148 @@ function initChartsAndLightbox() {
       charts.push(c03);
     }
 
+    // Chart 12 (Full-Width · Fig. 15): Clinical SwarmWorld v0.1 Matched-Budget Resilience & Turnover Knockout
+    const elCsw = document.getElementById("echart-clinical-swarmworld");
+    if (elCsw && PORTAL_DATA.clinical_swarmworld) {
+      const cCsw = window.echarts.init(elCsw);
+      const csw = PORTAL_DATA.clinical_swarmworld;
+      function renderCswTab(mode) {
+        if (mode === "turnover") {
+          const tRows = csw.turnover;
+          cCsw.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Intact Society (0% Turnover)",
+                "50% Random Clinician Absence",
+                "50% Targeted Broker Removal"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.6 },
+              top: 6
+            },
+            grid: { left: 60, right: 28, top: 58, bottom: 54 },
+            xAxis: {
+              type: "category",
+              data: tRows.map(r => `${r.label}\n(Ret: ${r.random_ret_pct.toFixed(1)}% / ${r.broker_ret_pct.toFixed(1)}%)`),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 10, interval: 0, lineHeight: 13 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 0.50,
+              ...baseAxis,
+              name: "Post-Knockout Agent-Free Resilience R",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Intact Society (0% Turnover)",
+                type: "bar",
+                barGap: "10%",
+                barWidth: "22%",
+                data: tRows.map(r => r.intact_R),
+                itemStyle: { color: "#60a5fa", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#93c5fd", fontSize: 9.6 }
+              },
+              {
+                name: "50% Random Clinician Absence",
+                type: "bar",
+                barWidth: "22%",
+                data: tRows.map(r => r.random_50pct_R),
+                itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#38d6c4", fontSize: 9.6 }
+              },
+              {
+                name: "50% Targeted Broker Removal",
+                type: "bar",
+                barWidth: "22%",
+                data: tRows.map(r => r.broker_50pct_R),
+                itemStyle: { color: "#f06a3b", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#ff9a76", fontSize: 9.6 }
+              }
+            ]
+          }, true);
+        } else {
+          const arms = csw.arms;
+          cCsw.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Multi-Need Portfolio Resilience P (K=6)",
+                "Agent-Free Held-Out Shock Resilience R (S=8, 0 AI Calls)",
+                "Single-Specialist Peak Quality (Negative Test: Solo Wins)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.2 },
+              top: 4
+            },
+            grid: { left: 56, right: 28, top: 62, bottom: 52 },
+            xAxis: {
+              type: "category",
+              data: arms.map(a => a.label),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.8, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 1.15,
+              ...baseAxis,
+              name: "Normalized Score (8 Paired World Seeds)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Multi-Need Portfolio Resilience P (K=6)",
+                type: "bar",
+                barGap: "10%",
+                barWidth: "21%",
+                data: arms.map(a => a.portfolio_P),
+                itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#38d6c4", fontSize: 9.2 },
+                markLine: {
+                  silent: true,
+                  data: [
+                    {
+                      yAxis: csw.milp_static_q,
+                      lineStyle: { color: "#a78bfa", type: "dashed", width: 1.5 },
+                      label: { formatter: `Exact HiGHS MILP Static Ceiling (${csw.milp_static_q}, ${csw.milp_ms} ms)`, color: "#c4b5fd", fontSize: 9.4 }
+                    }
+                  ]
+                }
+              },
+              {
+                name: "Agent-Free Held-Out Shock Resilience R (S=8, 0 AI Calls)",
+                type: "bar",
+                barWidth: "21%",
+                data: arms.map(a => a.held_out_R),
+                itemStyle: { color: "#60a5fa", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#93c5fd", fontSize: 9.2 }
+              },
+              {
+                name: "Single-Specialist Peak Quality (Negative Test: Solo Wins)",
+                type: "bar",
+                barWidth: "21%",
+                data: arms.map(a => a.specialist_peak),
+                itemStyle: { color: "#f4ae42", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#f4ae42", fontSize: 9.2 }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderCswTab("arms");
+      document.querySelectorAll("[data-csw-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-csw-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderCswTab(btn.dataset.cswTab);
+        });
+      });
+      charts.push(cCsw);
+    }
+
     window.addEventListener("resize", () => charts.forEach(c => c.resize()));
   }
 

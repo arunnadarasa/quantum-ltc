@@ -1,0 +1,2606 @@
+{
+  "receipt_id": "clinical-swarmworld-v0.1-ncl-ltc-cqwm-v0.3",
+  "generated_utc": "2026-11-15T12:54:22.370470+00:00",
+  "primary_reference": {
+    "arxiv_id": "2608.26081v1",
+    "title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
+    "authors": [
+      "Subhadeep Pal",
+      "Fiona Y. Wang",
+      "Markus J. Buehler"
+    ],
+    "url": "https://arxiv.org/abs/2608.26081"
+  },
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "autonomous_clinical_decisions": 0,
+    "role_prompts_assigned": 0,
+    "agent_calls_during_held_out_shock_assay": 0,
+    "closed_hazards_claimed": 0,
+    "open_clinical_hazards": [
+      "H-LTC-01",
+      "H-LTC-02",
+      "H-LTC-03",
+      "H-LTC-04",
+      "H-LTC-05",
+      "H-LTC-06"
+    ]
+  },
+  "pinned_model_id": "jev-1.14.0",
+  "resolved_model_ids": [
+    "jev-1.14.0"
+  ],
+  "jev_homogeneous_cognition_calibration": {
+    "pinned_model_id": "jev-1.14.0",
+    "resolved_model_ids": [
+      "jev-1.14.0"
+    ],
+    "role_prompts_used": 0,
+    "n_vignettes": 10,
+    "option_order_invariance_rate": 1.0,
+    "red_flag_obs03_bypassed": true,
+    "botanical_obs06_abstained": true,
+    "calibrated_simulator_priors": {
+      "schema_valid_rate": 0.975,
+      "comm_share_prior": 0.1611
+    },
+    "vignette_evaluations": [
+      {
+        "obs_id": "CSW-OBS-01",
+        "pcn_id": "NCL-PCN-01 (Barnet Proving Ground)",
+        "expected_gate": "ASSAY_PHARM_ORACLE",
+        "routed_decision": "ASSAY_PHARM_ORACLE",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.99,
+        "p_companion_fit": 0.91,
+        "p_handover": 0.01,
+        "choice_fwd": "ASSAY_PHARM_ORACLE",
+        "choice_rev": "ASSAY_PHARM_ORACLE",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-02",
+        "pcn_id": "NCL-PCN-09 (Enfield Proving Ground)",
+        "expected_gate": "ASSAY_PHARM_ORACLE",
+        "routed_decision": "ASSAY_PHARM_ORACLE",
+        "p_acute_red_flag": 0.03,
+        "p_species_defined": 0.99,
+        "p_companion_fit": 0.92,
+        "p_handover": 0.01,
+        "choice_fwd": "ASSAY_PHARM_ORACLE",
+        "choice_rev": "ASSAY_PHARM_ORACLE",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-03",
+        "pcn_id": "NCL-PCN-14 (Haringey Tottenham)",
+        "expected_gate": "BYPASS_999_URGENT_TRIAGE",
+        "routed_decision": "BYPASS_999_URGENT_TRIAGE",
+        "p_acute_red_flag": 0.98,
+        "p_species_defined": 0.97,
+        "p_companion_fit": 0.21,
+        "p_handover": 0.01,
+        "choice_fwd": "AUTHOR_INSTALL_PROTOCOL",
+        "choice_rev": "AUTHOR_INSTALL_PROTOCOL",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-04",
+        "pcn_id": "NCL-PCN-10 (Enfield IMD Q1)",
+        "expected_gate": "AUTHOR_INSTALL_PROTOCOL",
+        "routed_decision": "AUTHOR_INSTALL_PROTOCOL",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.98,
+        "p_companion_fit": 0.85,
+        "p_handover": 0.01,
+        "choice_fwd": "AUTHOR_INSTALL_PROTOCOL",
+        "choice_rev": "AUTHOR_INSTALL_PROTOCOL",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-05",
+        "pcn_id": "NCL-PCN-06 (Camden)",
+        "expected_gate": "MAINTAIN_PROTOCOL",
+        "routed_decision": "MAINTAIN_PROTOCOL",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.98,
+        "p_companion_fit": 0.97,
+        "p_handover": 0.02,
+        "choice_fwd": "MAINTAIN_PROTOCOL",
+        "choice_rev": "MAINTAIN_PROTOCOL",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-06",
+        "pcn_id": "NCL-PCN-18 (Islington)",
+        "expected_gate": "ABSTAIN_ESCALATE_PHARMACIST_SMR",
+        "routed_decision": "ABSTAIN_ESCALATE_PHARMACIST_SMR",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.52,
+        "p_companion_fit": 0.3,
+        "p_handover": 0.02,
+        "choice_fwd": "ASSAY_PHARM_ORACLE",
+        "choice_rev": "ASSAY_PHARM_ORACLE",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-07",
+        "pcn_id": "NCL-PCN-19 (Islington)",
+        "expected_gate": "AUTHOR_INSTALL_PROTOCOL",
+        "routed_decision": "AUTHOR_INSTALL_PROTOCOL",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.98,
+        "p_companion_fit": 0.91,
+        "p_handover": 0.01,
+        "choice_fwd": "AUTHOR_INSTALL_PROTOCOL",
+        "choice_rev": "AUTHOR_INSTALL_PROTOCOL",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-08",
+        "pcn_id": "NCL-PCN-02 (Barnet)",
+        "expected_gate": "FORK_PROTOCOL",
+        "routed_decision": "FORK_PROTOCOL",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.99,
+        "p_companion_fit": 0.93,
+        "p_handover": 0.13,
+        "choice_fwd": "FORK_PROTOCOL",
+        "choice_rev": "FORK_PROTOCOL",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-09",
+        "pcn_id": "NCL-PCN-15 (Haringey)",
+        "expected_gate": "AUTHOR_INSTALL_PROTOCOL",
+        "routed_decision": "AUTHOR_INSTALL_PROTOCOL",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.98,
+        "p_companion_fit": 0.82,
+        "p_handover": 0.02,
+        "choice_fwd": "AUTHOR_INSTALL_PROTOCOL",
+        "choice_rev": "AUTHOR_INSTALL_PROTOCOL",
+        "option_order_invariant": true
+      },
+      {
+        "obs_id": "CSW-OBS-10",
+        "pcn_id": "NCL-PCN-05 (Camden Proving Ground)",
+        "expected_gate": "FORK_OR_HANDOVER",
+        "routed_decision": "POST_HANDOVER",
+        "p_acute_red_flag": 0.02,
+        "p_species_defined": 0.98,
+        "p_companion_fit": 0.96,
+        "p_handover": 0.97,
+        "choice_fwd": "POST_HANDOVER",
+        "choice_rev": "POST_HANDOVER",
+        "option_order_invariant": true
+      }
+    ]
+  },
+  "swarmworld_benchmark": {
+    "schema_version": "clinical-swarmworld-v0.1",
+    "runtime_seconds": 61.666,
+    "design": {
+      "n_world_seeds": 8,
+      "seeds": [
+        202601,
+        202602,
+        202603,
+        202604,
+        202605,
+        202606,
+        202607,
+        202608
+      ],
+      "n_pcn_cells": 20,
+      "k_services": 6,
+      "statistical_unit_of_inference": "independent_world_seed (never individual agent N)",
+      "n_agents_per_shared_world": 24,
+      "n_isolated_worlds_per_seed": 24,
+      "n_ticks_discovery": 480,
+      "macroturn_stride": 6,
+      "matched_macroturn_calls_per_seed": 1920,
+      "n_unseen_nhs_shock_schedules": 8,
+      "agent_calls_during_held_out_shock_assay": 0,
+      "role_prompts_assigned": 0
+    },
+    "highs_milp_static_ceiling_summary": {
+      "n_pcn_cells": 20,
+      "k_services": 6,
+      "mean_solve_time_ms": 7.421,
+      "max_mip_gap": 0.0,
+      "mean_balanced_static_coverage_q": 0.9449
+    },
+    "biophysical_proving_ground_oracles": {
+      "ritonavir_hold_true_cqwm_v03_aucr": {
+        "24": 13.7761,
+        "48": 9.2166,
+        "72": 5.2311,
+        "96": 3.1261,
+        "120": 2.151,
+        "144": 1.6769
+      },
+      "ritonavir_hold_naive_markov_aucr": {
+        "24": 1.0,
+        "48": 1.0,
+        "72": 1.0,
+        "96": 1.0,
+        "120": 1.0,
+        "144": 1.0
+      },
+      "clarithromycin_1tqn_hold_true_thc_aucr": {
+        "0": 6.2412,
+        "24": 3.4319,
+        "48": 2.0383,
+        "96": 1.2506,
+        "144": 1.0744,
+        "192": 1.0212
+      },
+      "clarithromycin_1tqn_hold_naive_rccsdt_aucr": {
+        "0": 1.0395,
+        "24": 1.0073,
+        "48": 1.0041,
+        "96": 1.0014,
+        "144": 1.0005,
+        "192": 0.9924
+      },
+      "ace_1o86_closed_shell_0L_control": {
+        "fci_day14_sbp_mmhg": 127.176,
+        "rccsdt_day14_sbp_mmhg": 127.178,
+        "sbp_rmse_mmhg": 0.001215
+      }
+    },
+    "jev_policy_priors_used": {
+      "schema_valid_rate": 0.975,
+      "comm_share_prior": 0.1611
+    },
+    "per_seed_records": [
+      {
+        "seed": 202601,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202601,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 15.169,
+          "balanced_static_coverage_q": 0.959,
+          "service_vector_ck": [
+            0.96,
+            0.96,
+            0.96,
+            0.96,
+            0.96,
+            0.9583
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8918,
+            "portfolio_c_bar": 0.9309,
+            "portfolio_balance_b": 0.9159,
+            "service_peak_vector": [
+              0.8878,
+              0.9609,
+              0.8864,
+              0.999,
+              0.999,
+              0.8526
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9912,
+            "validated_inventions_I": 25,
+            "total_constructed_artifacts": 41,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 37,
+            "artifact_contact_auc": 0.9905,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4125,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4242,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4134,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4423,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.388,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.4472,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3593,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.5117,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.314
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8937,
+            "portfolio_c_bar": 0.9347,
+            "portfolio_balance_b": 0.9122,
+            "service_peak_vector": [
+              0.8878,
+              0.903,
+              0.9668,
+              0.999,
+              0.999,
+              0.8526
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9886,
+            "validated_inventions_I": 26,
+            "total_constructed_artifacts": 44,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 41,
+            "artifact_contact_auc": 0.9933,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.415,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4884,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4273,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4599,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4688,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.4084,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3733,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3768,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3172
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.9047,
+            "portfolio_c_bar": 0.9461,
+            "portfolio_balance_b": 0.9125,
+            "service_peak_vector": [
+              0.8878,
+              0.9609,
+              0.9668,
+              0.999,
+              0.999,
+              0.8633
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9752,
+            "validated_inventions_I": 20,
+            "total_constructed_artifacts": 42,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9908,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3768,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.3845,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4672,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4671,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.3729,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3389,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3473,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3527,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.2836
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.6074,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9878,
+            "validated_inventions_I": 17,
+            "held_out_resilience_R": 0.2097,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1895,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.2441,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.2434,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.2166,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1969,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1999,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.2277,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1597
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3149,
+            "portfolio_c_bar": 0.6298,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.8864,
+              0.999,
+              0.999,
+              0.8944
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9898,
+            "validated_inventions_I": 16,
+            "total_constructed_artifacts": 123,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 109,
+            "artifact_contact_auc": 0.9907,
+            "safety_lockout_trips": 4953,
+            "held_out_resilience_R": 0.1684,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1752,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1995,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1731,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1714,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1566,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1792,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1724,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1197
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.4302,
+            0.4203,
+            0.4306,
+            0.4125
+          ],
+          "no_communication_R": [
+            0.4125,
+            0.3997,
+            0.4041,
+            0.415
+          ],
+          "pure_stigmergy_R": [
+            0.342,
+            0.3845,
+            0.4305,
+            0.3768
+          ],
+          "isolated_best_of_n_R": [
+            0.2249,
+            0.1424,
+            0.1682,
+            0.2097
+          ],
+          "full_culture_naive_oracle_R": [
+            0.158,
+            0.1737,
+            0.1723,
+            0.1684
+          ],
+          "full_culture_P": [
+            0.8918,
+            0.8918,
+            0.8918,
+            0.8918
+          ],
+          "pure_stigmergy_P": [
+            0.7109,
+            0.9047,
+            0.9047,
+            0.9047
+          ],
+          "isolated_best_of_n_P": [
+            0.5034,
+            0.5045,
+            0.5991,
+            0.6074
+          ]
+        }
+      },
+      {
+        "seed": 202602,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202602,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 6.849,
+          "balanced_static_coverage_q": 0.9454,
+          "service_vector_ck": [
+            0.96,
+            0.96,
+            0.96,
+            0.96,
+            0.9349,
+            0.96
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8902,
+            "portfolio_c_bar": 0.9075,
+            "portfolio_balance_b": 0.9618,
+            "service_peak_vector": [
+              0.8733,
+              0.8957,
+              0.8728,
+              0.9167,
+              0.999,
+              0.8877
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9802,
+            "validated_inventions_I": 27,
+            "total_constructed_artifacts": 42,
+            "active_nonretired_artifacts": 39,
+            "max_executable_lineage_depth": 11,
+            "cross_agent_program_forks": 41,
+            "artifact_contact_auc": 0.9893,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4035,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4057,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4313,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.457,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4158,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3978,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3595,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4548,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3063
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8927,
+            "portfolio_c_bar": 0.9125,
+            "portfolio_balance_b": 0.9566,
+            "service_peak_vector": [
+              0.8774,
+              0.8957,
+              0.8728,
+              0.9167,
+              0.999,
+              0.9132
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9854,
+            "validated_inventions_I": 23,
+            "total_constructed_artifacts": 42,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 39,
+            "artifact_contact_auc": 0.991,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3845,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4302,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.3635,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4665,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4332,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3776,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.341,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3721,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.2917
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.883,
+            "portfolio_c_bar": 0.9097,
+            "portfolio_balance_b": 0.9415,
+            "service_peak_vector": [
+              0.8681,
+              0.886,
+              0.8564,
+              0.9608,
+              0.999,
+              0.8877
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.948,
+            "validated_inventions_I": 21,
+            "total_constructed_artifacts": 41,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 7,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9921,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3954,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4497,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4022,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.3994,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.3942,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3596,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3783,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.471,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3091
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.6039,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.981,
+            "validated_inventions_I": 15,
+            "held_out_resilience_R": 0.2188,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.2375,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.2232,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.2308,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.2375,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1897,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.2119,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.2375,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1822
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3019,
+            "portfolio_c_bar": 0.6039,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.7758,
+              0.9608,
+              0.999,
+              0.8877
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9845,
+            "validated_inventions_I": 17,
+            "total_constructed_artifacts": 145,
+            "active_nonretired_artifacts": 38,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 129,
+            "artifact_contact_auc": 0.9923,
+            "safety_lockout_trips": 6348,
+            "held_out_resilience_R": 0.1652,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1714,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1859,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1854,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1749,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1459,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1706,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1659,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1212
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.4335,
+            0.4192,
+            0.4322,
+            0.4035
+          ],
+          "no_communication_R": [
+            0.4036,
+            0.4004,
+            0.3857,
+            0.3845
+          ],
+          "pure_stigmergy_R": [
+            0.3408,
+            0.3596,
+            0.3779,
+            0.3954
+          ],
+          "isolated_best_of_n_R": [
+            0.1351,
+            0.1901,
+            0.1821,
+            0.2188
+          ],
+          "full_culture_naive_oracle_R": [
+            0.1678,
+            0.1687,
+            0.1661,
+            0.1652
+          ],
+          "full_culture_P": [
+            0.8834,
+            0.8834,
+            0.8834,
+            0.8902
+          ],
+          "pure_stigmergy_P": [
+            0.8489,
+            0.8562,
+            0.883,
+            0.883
+          ],
+          "isolated_best_of_n_P": [
+            0.2846,
+            0.5037,
+            0.573,
+            0.6039
+          ]
+        }
+      },
+      {
+        "seed": 202603,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202603,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 4.512,
+          "balanced_static_coverage_q": 0.9308,
+          "service_vector_ck": [
+            0.914,
+            0.96,
+            0.96,
+            0.9316,
+            0.96,
+            0.96
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8378,
+            "portfolio_c_bar": 0.8903,
+            "portfolio_balance_b": 0.882,
+            "service_peak_vector": [
+              0.8876,
+              0.7852,
+              0.8927,
+              0.874,
+              0.999,
+              0.9033
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9901,
+            "validated_inventions_I": 24,
+            "total_constructed_artifacts": 42,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 40,
+            "artifact_contact_auc": 0.9924,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3964,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4069,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4805,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4289,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4068,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3957,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3768,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3622,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3137
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8711,
+            "portfolio_c_bar": 0.9012,
+            "portfolio_balance_b": 0.9332,
+            "service_peak_vector": [
+              0.841,
+              0.8835,
+              0.8927,
+              0.9392,
+              0.999,
+              0.8521
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9886,
+            "validated_inventions_I": 28,
+            "total_constructed_artifacts": 44,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 37,
+            "artifact_contact_auc": 0.9929,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4053,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4287,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4557,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.3997,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4248,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.4166,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.379,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4212,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3166
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8977,
+            "portfolio_c_bar": 0.9216,
+            "portfolio_balance_b": 0.948,
+            "service_peak_vector": [
+              0.8876,
+              0.9428,
+              0.8737,
+              0.9392,
+              0.999,
+              0.8876
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9722,
+            "validated_inventions_I": 23,
+            "total_constructed_artifacts": 45,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9904,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3934,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4116,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4264,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.3875,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4667,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3609,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3725,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4165,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3048
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.5736,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9653,
+            "validated_inventions_I": 14,
+            "held_out_resilience_R": 0.184,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1918,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1996,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1919,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1839,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.2009,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1644,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.2079,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1482
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3098,
+            "portfolio_c_bar": 0.6196,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.8927,
+              0.9392,
+              0.999,
+              0.8868
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9906,
+            "validated_inventions_I": 19,
+            "total_constructed_artifacts": 130,
+            "active_nonretired_artifacts": 39,
+            "max_executable_lineage_depth": 11,
+            "cross_agent_program_forks": 111,
+            "artifact_contact_auc": 0.9905,
+            "safety_lockout_trips": 5894,
+            "held_out_resilience_R": 0.1684,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1787,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1926,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1767,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1706,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1646,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1736,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1688,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1217
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.3815,
+            0.3962,
+            0.3939,
+            0.3964
+          ],
+          "no_communication_R": [
+            0.4083,
+            0.4366,
+            0.4216,
+            0.4053
+          ],
+          "pure_stigmergy_R": [
+            0.3664,
+            0.3913,
+            0.4052,
+            0.3934
+          ],
+          "isolated_best_of_n_R": [
+            0.1357,
+            0.1389,
+            0.1388,
+            0.184
+          ],
+          "full_culture_naive_oracle_R": [
+            0.1729,
+            0.1664,
+            0.1702,
+            0.1684
+          ],
+          "full_culture_P": [
+            0.8378,
+            0.8378,
+            0.8378,
+            0.8378
+          ],
+          "pure_stigmergy_P": [
+            0.8214,
+            0.8324,
+            0.8977,
+            0.8977
+          ],
+          "isolated_best_of_n_P": [
+            0.3186,
+            0.5328,
+            0.5635,
+            0.5736
+          ]
+        }
+      },
+      {
+        "seed": 202604,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202604,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 4.744,
+          "balanced_static_coverage_q": 0.951,
+          "service_vector_ck": [
+            0.96,
+            0.96,
+            0.9446,
+            0.96,
+            0.96,
+            0.96
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8797,
+            "portfolio_c_bar": 0.9191,
+            "portfolio_balance_b": 0.9143,
+            "service_peak_vector": [
+              0.8403,
+              0.9299,
+              0.8489,
+              0.999,
+              0.999,
+              0.8974
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9889,
+            "validated_inventions_I": 27,
+            "total_constructed_artifacts": 44,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 41,
+            "artifact_contact_auc": 0.9927,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3884,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.3953,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.3799,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4614,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.3792,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3915,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3538,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4573,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.2884
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8797,
+            "portfolio_c_bar": 0.9191,
+            "portfolio_balance_b": 0.9143,
+            "service_peak_vector": [
+              0.8403,
+              0.9299,
+              0.8489,
+              0.999,
+              0.999,
+              0.8974
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.99,
+            "validated_inventions_I": 23,
+            "total_constructed_artifacts": 41,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 40,
+            "artifact_contact_auc": 0.9919,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4414,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4734,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4606,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.489,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.494,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.449,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3859,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4643,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3152
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8272,
+            "portfolio_c_bar": 0.8744,
+            "portfolio_balance_b": 0.892,
+            "service_peak_vector": [
+              0.8403,
+              0.7899,
+              0.78,
+              0.9397,
+              0.999,
+              0.8974
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.926,
+            "validated_inventions_I": 23,
+            "total_constructed_artifacts": 43,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9904,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3936,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4377,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.3934,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.475,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4113,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3455,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3539,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4449,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.2871
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.5695,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9553,
+            "validated_inventions_I": 16,
+            "held_out_resilience_R": 0.2289,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.24,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.2899,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.2196,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.2056,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.26,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.2166,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.218,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1817
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3116,
+            "portfolio_c_bar": 0.6231,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.8263,
+              0.999,
+              0.999,
+              0.9145
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9849,
+            "validated_inventions_I": 15,
+            "total_constructed_artifacts": 151,
+            "active_nonretired_artifacts": 39,
+            "max_executable_lineage_depth": 11,
+            "cross_agent_program_forks": 132,
+            "artifact_contact_auc": 0.9915,
+            "safety_lockout_trips": 6195,
+            "held_out_resilience_R": 0.1676,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.182,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1858,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1792,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.182,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1527,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1731,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1607,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1253
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.4235,
+            0.4111,
+            0.4056,
+            0.3884
+          ],
+          "no_communication_R": [
+            0.4301,
+            0.4267,
+            0.4198,
+            0.4414
+          ],
+          "pure_stigmergy_R": [
+            0.3557,
+            0.3524,
+            0.3839,
+            0.3936
+          ],
+          "isolated_best_of_n_R": [
+            0.1334,
+            0.1479,
+            0.1966,
+            0.2289
+          ],
+          "full_culture_naive_oracle_R": [
+            0.1582,
+            0.1698,
+            0.1648,
+            0.1676
+          ],
+          "full_culture_P": [
+            0.8732,
+            0.8797,
+            0.8797,
+            0.8797
+          ],
+          "pure_stigmergy_P": [
+            0.6524,
+            0.8196,
+            0.8272,
+            0.8272
+          ],
+          "isolated_best_of_n_P": [
+            0.2833,
+            0.5436,
+            0.5658,
+            0.5695
+          ]
+        }
+      },
+      {
+        "seed": 202605,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202605,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 4.854,
+          "balanced_static_coverage_q": 0.9469,
+          "service_vector_ck": [
+            0.96,
+            0.9451,
+            0.96,
+            0.9399,
+            0.9581,
+            0.96
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8934,
+            "portfolio_c_bar": 0.9261,
+            "portfolio_balance_b": 0.9293,
+            "service_peak_vector": [
+              0.8791,
+              0.9442,
+              0.9554,
+              0.8606,
+              0.999,
+              0.9183
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9848,
+            "validated_inventions_I": 26,
+            "total_constructed_artifacts": 42,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 9,
+            "cross_agent_program_forks": 40,
+            "artifact_contact_auc": 0.9914,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4064,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4613,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4037,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4131,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4868,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.434,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3516,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3987,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3022
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8758,
+            "portfolio_c_bar": 0.9052,
+            "portfolio_balance_b": 0.9349,
+            "service_peak_vector": [
+              0.8791,
+              0.8463,
+              0.9554,
+              0.881,
+              0.999,
+              0.8705
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9863,
+            "validated_inventions_I": 26,
+            "total_constructed_artifacts": 42,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 40,
+            "artifact_contact_auc": 0.9924,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4176,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4454,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4183,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.508,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4131,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.4225,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3965,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4251,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3117
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8606,
+            "portfolio_c_bar": 0.9127,
+            "portfolio_balance_b": 0.886,
+            "service_peak_vector": [
+              0.8086,
+              0.9442,
+              0.9554,
+              0.8814,
+              0.999,
+              0.8876
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9632,
+            "validated_inventions_I": 20,
+            "total_constructed_artifacts": 42,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9919,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3916,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4001,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.3951,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.3999,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.502,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.4005,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3672,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3836,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.2845
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.6247,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9854,
+            "validated_inventions_I": 14,
+            "held_out_resilience_R": 0.195,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.2247,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.186,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1672,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.2247,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.2029,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1787,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.2247,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1571
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3004,
+            "portfolio_c_bar": 0.6008,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.8544,
+              0.881,
+              0.999,
+              0.8705
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9907,
+            "validated_inventions_I": 17,
+            "total_constructed_artifacts": 118,
+            "active_nonretired_artifacts": 37,
+            "max_executable_lineage_depth": 11,
+            "cross_agent_program_forks": 107,
+            "artifact_contact_auc": 0.9932,
+            "safety_lockout_trips": 5507,
+            "held_out_resilience_R": 0.1626,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1656,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1864,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1733,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1708,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1516,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1721,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1622,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1184
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.4245,
+            0.4196,
+            0.4219,
+            0.4064
+          ],
+          "no_communication_R": [
+            0.395,
+            0.4023,
+            0.4121,
+            0.4176
+          ],
+          "pure_stigmergy_R": [
+            0.3496,
+            0.3678,
+            0.4027,
+            0.3916
+          ],
+          "isolated_best_of_n_R": [
+            0.1284,
+            0.1262,
+            0.194,
+            0.195
+          ],
+          "full_culture_naive_oracle_R": [
+            0.1632,
+            0.1615,
+            0.1644,
+            0.1626
+          ],
+          "full_culture_P": [
+            0.8934,
+            0.8934,
+            0.8934,
+            0.8934
+          ],
+          "pure_stigmergy_P": [
+            0.8592,
+            0.8606,
+            0.8606,
+            0.8606
+          ],
+          "isolated_best_of_n_P": [
+            0.2991,
+            0.4064,
+            0.6214,
+            0.6247
+          ]
+        }
+      },
+      {
+        "seed": 202606,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202606,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 4.916,
+          "balanced_static_coverage_q": 0.9503,
+          "service_vector_ck": [
+            0.9512,
+            0.96,
+            0.96,
+            0.96,
+            0.9445,
+            0.96
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8441,
+            "portfolio_c_bar": 0.9096,
+            "portfolio_balance_b": 0.8559,
+            "service_peak_vector": [
+              0.7786,
+              0.8916,
+              0.9068,
+              0.9436,
+              0.9709,
+              0.9662
+            ],
+            "strongest_specialist_artifact": 0.9709,
+            "discovery_frontier_auc": 0.9614,
+            "validated_inventions_I": 28,
+            "total_constructed_artifacts": 41,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 12,
+            "cross_agent_program_forks": 35,
+            "artifact_contact_auc": 0.995,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4269,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4279,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4447,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4845,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4728,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3885,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.4083,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4545,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3336
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.9017,
+            "portfolio_c_bar": 0.9209,
+            "portfolio_balance_b": 0.9583,
+            "service_peak_vector": [
+              0.8826,
+              0.8916,
+              0.9068,
+              0.9075,
+              0.9709,
+              0.9662
+            ],
+            "strongest_specialist_artifact": 0.9709,
+            "discovery_frontier_auc": 0.9584,
+            "validated_inventions_I": 26,
+            "total_constructed_artifacts": 47,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 45,
+            "artifact_contact_auc": 0.9898,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4429,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4649,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.5218,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.5227,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.451,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3962,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.393,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.467,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3267
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8381,
+            "portfolio_c_bar": 0.8934,
+            "portfolio_balance_b": 0.8763,
+            "service_peak_vector": [
+              0.7828,
+              0.8916,
+              0.8738,
+              0.9436,
+              0.9709,
+              0.8973
+            ],
+            "strongest_specialist_artifact": 0.9709,
+            "discovery_frontier_auc": 0.9436,
+            "validated_inventions_I": 22,
+            "total_constructed_artifacts": 46,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 7,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9912,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3989,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4442,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4036,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4743,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.3866,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.415,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3608,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4068,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3001
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.5942,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.97,
+            "validated_inventions_I": 16,
+            "held_out_resilience_R": 0.1449,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1498,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1702,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1666,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1481,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1472,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1597,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1481,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.122
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3041,
+            "portfolio_c_bar": 0.6082,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.868,
+              0.8848,
+              0.999,
+              0.8973
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9866,
+            "validated_inventions_I": 17,
+            "total_constructed_artifacts": 144,
+            "active_nonretired_artifacts": 34,
+            "max_executable_lineage_depth": 11,
+            "cross_agent_program_forks": 121,
+            "artifact_contact_auc": 0.9898,
+            "safety_lockout_trips": 5584,
+            "held_out_resilience_R": 0.1733,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1801,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.2022,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1926,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1758,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1592,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1766,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1755,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1245
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.4021,
+            0.4146,
+            0.4115,
+            0.4269
+          ],
+          "no_communication_R": [
+            0.4022,
+            0.4156,
+            0.4081,
+            0.4429
+          ],
+          "pure_stigmergy_R": [
+            0.3308,
+            0.372,
+            0.3833,
+            0.3989
+          ],
+          "isolated_best_of_n_R": [
+            0.1304,
+            0.1528,
+            0.1526,
+            0.1449
+          ],
+          "full_culture_naive_oracle_R": [
+            0.1719,
+            0.163,
+            0.17,
+            0.1733
+          ],
+          "full_culture_P": [
+            0.8441,
+            0.8441,
+            0.8441,
+            0.8441
+          ],
+          "pure_stigmergy_P": [
+            0.741,
+            0.7526,
+            0.7526,
+            0.8381
+          ],
+          "isolated_best_of_n_P": [
+            0.2683,
+            0.5141,
+            0.5813,
+            0.5942
+          ]
+        }
+      },
+      {
+        "seed": 202607,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202607,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 12.188,
+          "balanced_static_coverage_q": 0.9476,
+          "service_vector_ck": [
+            0.96,
+            0.9498,
+            0.96,
+            0.9402,
+            0.96,
+            0.96
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8565,
+            "portfolio_c_bar": 0.896,
+            "portfolio_balance_b": 0.9118,
+            "service_peak_vector": [
+              0.8575,
+              0.817,
+              0.8916,
+              0.8507,
+              0.999,
+              0.9603
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9912,
+            "validated_inventions_I": 30,
+            "total_constructed_artifacts": 40,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 11,
+            "cross_agent_program_forks": 39,
+            "artifact_contact_auc": 0.9934,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4151,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4565,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4893,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4041,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4387,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.385,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3833,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4357,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3285
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8955,
+            "portfolio_c_bar": 0.9334,
+            "portfolio_balance_b": 0.9187,
+            "service_peak_vector": [
+              0.8575,
+              0.9589,
+              0.8761,
+              0.9487,
+              0.999,
+              0.9603
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9901,
+            "validated_inventions_I": 25,
+            "total_constructed_artifacts": 40,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 9,
+            "cross_agent_program_forks": 39,
+            "artifact_contact_auc": 0.9934,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4162,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4432,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.3789,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4636,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.5033,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.4113,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3717,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4422,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3154
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8898,
+            "portfolio_c_bar": 0.922,
+            "portfolio_balance_b": 0.9301,
+            "service_peak_vector": [
+              0.8575,
+              0.9589,
+              0.8916,
+              0.8646,
+              0.999,
+              0.9603
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9755,
+            "validated_inventions_I": 26,
+            "total_constructed_artifacts": 44,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 7,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9934,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.3929,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4531,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.3961,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4194,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.3847,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3836,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.37,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.4279,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3081
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.5921,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9765,
+            "validated_inventions_I": 15,
+            "held_out_resilience_R": 0.1793,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1772,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.2311,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1993,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1541,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.2082,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1659,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.2126,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1362
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3081,
+            "portfolio_c_bar": 0.6162,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.8916,
+              0.9487,
+              0.999,
+              0.858
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9874,
+            "validated_inventions_I": 18,
+            "total_constructed_artifacts": 168,
+            "active_nonretired_artifacts": 36,
+            "max_executable_lineage_depth": 13,
+            "cross_agent_program_forks": 148,
+            "artifact_contact_auc": 0.9938,
+            "safety_lockout_trips": 7413,
+            "held_out_resilience_R": 0.1667,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.174,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1916,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1742,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.18,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1587,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.176,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1589,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1202
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.4096,
+            0.4058,
+            0.4071,
+            0.4151
+          ],
+          "no_communication_R": [
+            0.4285,
+            0.4166,
+            0.4246,
+            0.4162
+          ],
+          "pure_stigmergy_R": [
+            0.39,
+            0.385,
+            0.369,
+            0.3929
+          ],
+          "isolated_best_of_n_R": [
+            0.1307,
+            0.1331,
+            0.1393,
+            0.1793
+          ],
+          "full_culture_naive_oracle_R": [
+            0.1552,
+            0.1691,
+            0.1608,
+            0.1667
+          ],
+          "full_culture_P": [
+            0.8565,
+            0.8565,
+            0.8565,
+            0.8565
+          ],
+          "pure_stigmergy_P": [
+            0.809,
+            0.8763,
+            0.8811,
+            0.8898
+          ],
+          "isolated_best_of_n_P": [
+            0.3148,
+            0.5169,
+            0.5921,
+            0.5921
+          ]
+        }
+      },
+      {
+        "seed": 202608,
+        "matched_macroturn_calls": 1920,
+        "highs_milp_static_ceiling": {
+          "seed": 202608,
+          "status": 0,
+          "optimal": true,
+          "mip_gap": 0.0,
+          "solve_time_ms": 6.133,
+          "balanced_static_coverage_q": 0.9281,
+          "service_vector_ck": [
+            0.9217,
+            0.96,
+            0.96,
+            0.9142,
+            0.9355,
+            0.96
+          ]
+        },
+        "final": {
+          "full_culture": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8777,
+            "portfolio_c_bar": 0.9172,
+            "portfolio_balance_b": 0.914,
+            "service_peak_vector": [
+              0.8547,
+              0.8382,
+              0.9348,
+              0.997,
+              0.999,
+              0.8793
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9855,
+            "validated_inventions_I": 31,
+            "total_constructed_artifacts": 45,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 12,
+            "cross_agent_program_forks": 44,
+            "artifact_contact_auc": 0.9921,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4211,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4801,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4638,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.479,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4842,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3853,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3858,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3948,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.2959
+            }
+          },
+          "no_communication": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.881,
+            "portfolio_c_bar": 0.9213,
+            "portfolio_balance_b": 0.9127,
+            "service_peak_vector": [
+              0.8408,
+              0.8768,
+              0.9348,
+              0.997,
+              0.999,
+              0.8793
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9852,
+            "validated_inventions_I": 28,
+            "total_constructed_artifacts": 43,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 10,
+            "cross_agent_program_forks": 42,
+            "artifact_contact_auc": 0.9923,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4133,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.459,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.4287,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.4964,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4367,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.4282,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3685,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3842,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3046
+            }
+          },
+          "pure_stigmergy": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.8766,
+            "portfolio_c_bar": 0.933,
+            "portfolio_balance_b": 0.8791,
+            "service_peak_vector": [
+              0.8202,
+              0.941,
+              0.9348,
+              0.997,
+              0.999,
+              0.9058
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.972,
+            "validated_inventions_I": 23,
+            "total_constructed_artifacts": 40,
+            "active_nonretired_artifacts": 40,
+            "max_executable_lineage_depth": 8,
+            "cross_agent_program_forks": 0,
+            "artifact_contact_auc": 0.9918,
+            "safety_lockout_trips": 0,
+            "held_out_resilience_R": 0.4077,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.4298,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.3707,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.5323,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.4758,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.3873,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.3752,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.3813,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.3095
+            }
+          },
+          "isolated_best_of_n": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.6109,
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9675,
+            "validated_inventions_I": 14,
+            "held_out_resilience_R": 0.2329,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.2573,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.2829,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1991,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.2012,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.2413,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.2309,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.2589,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1915
+            },
+            "max_executable_lineage_depth": 8
+          },
+          "full_culture_naive_oracle": {
+            "tick": 480,
+            "portfolio_resilience_P": 0.3197,
+            "portfolio_c_bar": 0.6394,
+            "portfolio_balance_b": 0.0,
+            "service_peak_vector": [
+              0.0,
+              0.0,
+              0.9348,
+              0.997,
+              0.999,
+              0.9058
+            ],
+            "strongest_specialist_artifact": 0.999,
+            "discovery_frontier_auc": 0.9878,
+            "validated_inventions_I": 15,
+            "total_constructed_artifacts": 132,
+            "active_nonretired_artifacts": 37,
+            "max_executable_lineage_depth": 12,
+            "cross_agent_program_forks": 118,
+            "artifact_contact_auc": 0.9916,
+            "safety_lockout_trips": 5383,
+            "held_out_resilience_R": 0.1655,
+            "held_out_by_shock": {
+              "S1_WINTER_COPD_CLARITHROMYCIN_SURGE": 0.1693,
+              "S2_PAXLOVID_RITONAVIR_DEPOT_WAVE": 0.1938,
+              "S3_HEATWAVE_DEHYDRATION_AKI_CLUSTER": 0.1708,
+              "S4_CORE20_INTERPRETER_BOTTLENECK": 0.1771,
+              "S5_SEPTEMBER_CYP_ASTHMA_SPIKE": 0.1543,
+              "S6_PHARMACOGENOMIC_PM_BURDEN_SHIFT": 0.1753,
+              "S7_SABA_PMDI_SUPPLY_DISRUPTION": 0.1574,
+              "S8_COMPOUND_WINTER_SYNDEMIC": 0.1261
+            }
+          }
+        },
+        "trajectories": {
+          "checkpoints": [
+            120,
+            240,
+            360,
+            480
+          ],
+          "full_culture_R": [
+            0.422,
+            0.422,
+            0.4039,
+            0.4211
+          ],
+          "no_communication_R": [
+            0.4234,
+            0.3964,
+            0.4067,
+            0.4133
+          ],
+          "pure_stigmergy_R": [
+            0.3657,
+            0.3771,
+            0.3855,
+            0.4077
+          ],
+          "isolated_best_of_n_R": [
+            0.1494,
+            0.1965,
+            0.2117,
+            0.2329
+          ],
+          "full_culture_naive_oracle_R": [
+            0.1663,
+            0.1664,
+            0.1584,
+            0.1655
+          ],
+          "full_culture_P": [
+            0.8777,
+            0.8777,
+            0.8777,
+            0.8777
+          ],
+          "pure_stigmergy_P": [
+            0.8441,
+            0.8712,
+            0.8766,
+            0.8766
+          ],
+          "isolated_best_of_n_P": [
+            0.2837,
+            0.5215,
+            0.5582,
+            0.6109
+          ]
+        }
+      }
+    ],
+    "world_seed_hypothesis_tests": {
+      "portfolio_resilience_full_vs_isolated": {
+        "n_world_seeds": 8,
+        "mean_a": 0.8714,
+        "sd_a": 0.0222,
+        "mean_b": 0.597,
+        "sd_b": 0.0187,
+        "paired_mean_diff": 0.2744,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "portfolio_resilience_stigmergy_vs_isolated": {
+        "n_world_seeds": 8,
+        "mean_a": 0.8722,
+        "sd_a": 0.028,
+        "mean_b": 0.597,
+        "sd_b": 0.0187,
+        "paired_mean_diff": 0.2752,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "held_out_resilience_full_vs_isolated": {
+        "n_world_seeds": 8,
+        "mean_a": 0.4088,
+        "sd_a": 0.0127,
+        "mean_b": 0.1992,
+        "sd_b": 0.0295,
+        "paired_mean_diff": 0.2096,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "held_out_resilience_nocomm_vs_isolated": {
+        "n_world_seeds": 8,
+        "mean_a": 0.417,
+        "sd_a": 0.0188,
+        "mean_b": 0.1992,
+        "sd_b": 0.0295,
+        "paired_mean_diff": 0.2178,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "held_out_resilience_stigmergy_vs_isolated": {
+        "n_world_seeds": 8,
+        "mean_a": 0.3938,
+        "sd_a": 0.0086,
+        "mean_b": 0.1992,
+        "sd_b": 0.0295,
+        "paired_mean_diff": 0.1946,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "held_out_resilience_full_vs_nocomm_COMMUNICATION_ABLATION": {
+        "n_world_seeds": 8,
+        "mean_a": 0.4088,
+        "sd_a": 0.0127,
+        "mean_b": 0.417,
+        "sd_b": 0.0188,
+        "paired_mean_diff": -0.0082,
+        "wins_a_over_b": 2,
+        "exact_two_sided_signflip_p": 0.328125
+      },
+      "validated_inventions_full_vs_isolated": {
+        "n_world_seeds": 8,
+        "mean_a": 27.25,
+        "sd_a": 2.3755,
+        "mean_b": 15.125,
+        "sd_b": 1.126,
+        "paired_mean_diff": 12.125,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "single_specialist_peak_full_vs_isolated_NEGATIVE_TEST": {
+        "n_world_seeds": 8,
+        "mean_a": 0.9955,
+        "sd_a": 0.0099,
+        "mean_b": 0.999,
+        "sd_b": 0.0,
+        "paired_mean_diff": -0.0035,
+        "wins_a_over_b": 0,
+        "exact_two_sided_signflip_p": 1.0
+      },
+      "oracle_ablation_cqwm_v03_vs_naive_rccsdt_markov_held_out_R": {
+        "n_world_seeds": 8,
+        "mean_a": 0.4088,
+        "sd_a": 0.0127,
+        "mean_b": 0.1672,
+        "sd_b": 0.0031,
+        "paired_mean_diff": 0.2416,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "oracle_ablation_cqwm_v03_vs_naive_portfolio_P": {
+        "n_world_seeds": 8,
+        "mean_a": 0.8714,
+        "sd_a": 0.0222,
+        "mean_b": 0.3088,
+        "sd_b": 0.0066,
+        "paired_mean_diff": 0.5626,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "oracle_ablation_safety_lockout_trips_naive_vs_cqwm_v03": {
+        "n_world_seeds": 8,
+        "mean_a": 5909.625,
+        "sd_a": 755.4181,
+        "mean_b": 0.0,
+        "sd_b": 0.0,
+        "paired_mean_diff": 5909.625,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      },
+      "multi_steward_turnover_retention_full_vs_stigmergy": {
+        "n_world_seeds": 8,
+        "mean_a": 0.9759,
+        "sd_a": 0.0133,
+        "mean_b": 0.8516,
+        "sd_b": 0.0234,
+        "paired_mean_diff": 0.1244,
+        "wins_a_over_b": 8,
+        "exact_two_sided_signflip_p": 0.007812
+      }
+    },
+    "sociology_and_knockout_summary": {
+      "full_culture": {
+        "stigmergy_first_adoption_share": 0.8426,
+        "handover_message_first_adoption_share": 0.1574,
+        "handover_timestamp_shuffle_p_value": 0.9414,
+        "nodf_nestedness": 91.0356,
+        "bh_fdr_couse_edges": 54.5,
+        "densification_alpha": 15.6857,
+        "knockout_baseline_R": 0.4088,
+        "knockout_random_50pct_R": 0.399,
+        "knockout_targeted_broker_50pct_R": 0.3985,
+        "knockout_random_retention_ratio": 0.9759,
+        "knockout_targeted_retention_ratio": 0.9744,
+        "selective_broker_fragility_gap": 0.0116
+      },
+      "no_communication": {
+        "stigmergy_first_adoption_share": 1.0,
+        "handover_message_first_adoption_share": 0.0,
+        "handover_timestamp_shuffle_p_value": 1.0,
+        "nodf_nestedness": 91.0118,
+        "bh_fdr_couse_edges": 78.0,
+        "densification_alpha": 10.942,
+        "knockout_baseline_R": 0.417,
+        "knockout_random_50pct_R": 0.4057,
+        "knockout_targeted_broker_50pct_R": 0.4088,
+        "knockout_random_retention_ratio": 0.9728,
+        "knockout_targeted_retention_ratio": 0.9803,
+        "selective_broker_fragility_gap": 0.0045
+      },
+      "pure_stigmergy": {
+        "stigmergy_first_adoption_share": 1.0,
+        "handover_message_first_adoption_share": 0.0,
+        "handover_timestamp_shuffle_p_value": 1.0,
+        "nodf_nestedness": 91.7433,
+        "bh_fdr_couse_edges": 75.125,
+        "densification_alpha": 16.151,
+        "knockout_baseline_R": 0.3938,
+        "knockout_random_50pct_R": 0.3354,
+        "knockout_targeted_broker_50pct_R": 0.3108,
+        "knockout_random_retention_ratio": 0.8516,
+        "knockout_targeted_retention_ratio": 0.7878,
+        "selective_broker_fragility_gap": 0.0776
+      }
+    },
+    "action_budget_allocation": {
+      "full_culture": {
+        "MOVE": 0.2547,
+        "INSPECT_PCN": 0.2144,
+        "ASSAY_PHARM_ORACLE": 0.0024,
+        "AUTHOR_INSTALL_PROTOCOL": 0.0037,
+        "FORK_PROTOCOL": 0.0194,
+        "MAINTAIN_PROTOCOL": 0.0433,
+        "REPLENISH_SLOTS": 0.0811,
+        "POST_HANDOVER": 0.0262,
+        "WAIT": 0.3547
+      },
+      "no_communication": {
+        "MOVE": 0.2663,
+        "INSPECT_PCN": 0.2187,
+        "ASSAY_PHARM_ORACLE": 0.006,
+        "AUTHOR_INSTALL_PROTOCOL": 0.0037,
+        "FORK_PROTOCOL": 0.0191,
+        "MAINTAIN_PROTOCOL": 0.0449,
+        "REPLENISH_SLOTS": 0.0854,
+        "POST_HANDOVER": 0.0,
+        "WAIT": 0.3559
+      },
+      "pure_stigmergy": {
+        "MOVE": 0.2692,
+        "INSPECT_PCN": 0.2207,
+        "ASSAY_PHARM_ORACLE": 0.0055,
+        "AUTHOR_INSTALL_PROTOCOL": 0.0037,
+        "FORK_PROTOCOL": 0.0137,
+        "MAINTAIN_PROTOCOL": 0.0426,
+        "REPLENISH_SLOTS": 0.0911,
+        "POST_HANDOVER": 0.0,
+        "WAIT": 0.3535
+      },
+      "isolated_best_of_n": {
+        "MOVE": 0.1223,
+        "INSPECT_PCN": 0.1484,
+        "ASSAY_PHARM_ORACLE": 0.0056,
+        "AUTHOR_INSTALL_PROTOCOL": 0.0683,
+        "FORK_PROTOCOL": 0.1406,
+        "MAINTAIN_PROTOCOL": 0.0811,
+        "REPLENISH_SLOTS": 0.075,
+        "POST_HANDOVER": 0.0,
+        "WAIT": 0.3588
+      }
+    },
+    "label_blind_phenotypes": {
+      "n_agent_trajectories": 576,
+      "k_clusters": 4,
+      "communication_features_included_in_clustering": false,
+      "role_prompts_used": 0,
+      "silhouette_score": 0.1745,
+      "clusters": [
+        {
+          "cluster_id": 0,
+          "posthoc_label": "PCN Slot & Controller Caretaker",
+          "agent_count": 111,
+          "share": 0.1927,
+          "mean_assay_share": 0.0048,
+          "mean_build_fork_share": 0.0247,
+          "mean_caretaker_share": 0.1479,
+          "mean_mobility_share": 0.2503,
+          "mean_borough_entropy": 0.9179,
+          "mean_imd_q1_equity_share": 0.5559
+        },
+        {
+          "cluster_id": 1,
+          "posthoc_label": "Standing-Order Constructor & Forker",
+          "agent_count": 140,
+          "share": 0.2431,
+          "mean_assay_share": 0.004,
+          "mean_build_fork_share": 0.032,
+          "mean_caretaker_share": 0.1273,
+          "mean_mobility_share": 0.2592,
+          "mean_borough_entropy": 0.9329,
+          "mean_imd_q1_equity_share": 0.5075
+        },
+        {
+          "cluster_id": 2,
+          "posthoc_label": "Cross-Borough Equity Surveyor",
+          "agent_count": 129,
+          "share": 0.224,
+          "mean_assay_share": 0.0047,
+          "mean_build_fork_share": 0.0173,
+          "mean_caretaker_share": 0.1254,
+          "mean_mobility_share": 0.2692,
+          "mean_borough_entropy": 0.8055,
+          "mean_imd_q1_equity_share": 0.7023
+        },
+        {
+          "cluster_id": 3,
+          "posthoc_label": "Proving-Ground Assay Pharmacologist",
+          "agent_count": 196,
+          "share": 0.3403,
+          "mean_assay_share": 0.0051,
+          "mean_build_fork_share": 0.0144,
+          "mean_caretaker_share": 0.1266,
+          "mean_mobility_share": 0.2766,
+          "mean_borough_entropy": 0.9291,
+          "mean_imd_q1_equity_share": 0.5712
+        }
+      ]
+    }
+  },
+  "multimodal_figure_qa": {
+    "fig1": {
+      "filename": "csw_fig1_architecture_and_4arm_resilience.png",
+      "sha256": "42ec8e1f5e75cc272823230d687f49d8d12be844913e11597e4ab08476113e01",
+      "prepared_dimensions_px": [
+        1568,
+        536
+      ],
+      "model": "jev-1.14.0",
+      "p_panels_visible": 0.98,
+      "legibility_score": 1.38,
+      "left_panel_bbox": {
+        "left": 0.03,
+        "top": 0.21,
+        "right": 0.35,
+        "bottom": 0.98
+      }
+    },
+    "fig2": {
+      "filename": "csw_fig2_unseen_shocks_and_oracle_amplification.png",
+      "sha256": "6d5660837952513b139d382dcb1bc135bd56fcfcebc97e4ee8fe8325b36158ce",
+      "prepared_dimensions_px": [
+        1568,
+        576
+      ],
+      "model": "jev-1.14.0",
+      "p_panels_visible": 0.97,
+      "legibility_score": 1.07,
+      "left_panel_bbox": {
+        "left": 0.02,
+        "top": 0.12,
+        "right": 0.35,
+        "bottom": 0.95
+      }
+    },
+    "fig3": {
+      "filename": "csw_fig3_stigmergy_phenotypes_and_knockout.png",
+      "sha256": "1b21ce8269413de9f2a9e3a7b403e43545a95081fcdfa0f4c640bec178052a33",
+      "prepared_dimensions_px": [
+        1568,
+        536
+      ],
+      "model": "jev-1.14.0",
+      "p_panels_visible": 0.98,
+      "legibility_score": 1.29,
+      "left_panel_bbox": {
+        "left": 0.02,
+        "top": 0.12,
+        "right": 0.32,
+        "bottom": 0.98
+      }
+    }
+  },
+  "citation_audit": {
+    "total_claims": 10,
+    "passed_and_invariant_claims": 10,
+    "supported_and_invariant_claims": 10,
+    "all_passed": true,
+    "option_order_invariance_rate": 1.0,
+    "claims": [
+      {
+        "claim_id": "CLM-CSW-01",
+        "expected_verdict": "supported",
+        "claim": "Across `8` world seeds with `matched_macroturn_calls_per_seed = 1920` and `role_prompts_assigned = 0`, `held_out_resilience_full_vs_isolated` gave `mean_a = 0.4088` versus `mean_b = 0.1992` (`wins_a_over_b = 8`, `exact_two_sided_signflip_p = 0.007812`).",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.98
+      },
+      {
+        "claim_id": "CLM-CSW-02",
+        "expected_verdict": "supported",
+        "claim": "In `portfolio_resilience_full_vs_isolated` across `n_world_seeds = 8` and `k_services = 6`, Full Clinical Culture achieved `mean_a = 0.8714` versus Isolated Best-of-24 `mean_b = 0.597` (`wins_a_over_b = 8`, `exact_two_sided_signflip_p = 0.007812`).",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.98
+      },
+      {
+        "claim_id": "CLM-CSW-03",
+        "expected_verdict": "supported",
+        "claim": "In `single_specialist_peak_full_vs_isolated_NEGATIVE_TEST`, Isolated Best-of-24 achieved `mean_b = 0.999` while Full Clinical Culture achieved `mean_a = 0.9955` (`wins_a_over_b = 0`, `exact_two_sided_signflip_p = 1.0`).",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 0.98,
+        "reversed_probability": 0.96,
+        "companion_noul": 0.96
+      },
+      {
+        "claim_id": "CLM-CSW-04",
+        "expected_verdict": "supported",
+        "claim": "In `highs_milp_static_ceiling_summary` (`n_pcn_cells = 20`, `k_services = 6`), `max_mip_gap = 0.0`, `mean_solve_time_ms = 7.421`, and `mean_balanced_static_coverage_q = 0.9449`.",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.98
+      },
+      {
+        "claim_id": "CLM-CSW-05",
+        "expected_verdict": "supported",
+        "claim": "During the held-out shock assay across `n_unseen_nhs_shock_schedules = 8`, `agent_calls_during_held_out_shock_assay = 0`.",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.97
+      },
+      {
+        "claim_id": "CLM-CSW-06",
+        "expected_verdict": "supported",
+        "claim": "In `oracle_ablation_cqwm_v03_vs_naive_rccsdt_markov_held_out_R`, `mean_a = 0.4088` versus `mean_b = 0.1672` (`exact_two_sided_signflip_p = 0.007812`), while in `oracle_ablation_safety_lockout_trips_naive_vs_cqwm_v03`, `mean_a = 5909.625` versus `mean_b = 0.0`.",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 0.98,
+        "reversed_probability": 0.99,
+        "companion_noul": 0.95
+      },
+      {
+        "claim_id": "CLM-CSW-07",
+        "expected_verdict": "supported",
+        "claim": "In `ace_1o86_closed_shell_0L_control`, `fci_day14_sbp_mmhg = 127.176`, `rccsdt_day14_sbp_mmhg = 127.178`, and `sbp_rmse_mmhg = 0.001215`.",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.98
+      },
+      {
+        "claim_id": "CLM-CSW-08",
+        "expected_verdict": "supported",
+        "claim": "In `full_culture_sociology`, `stigmergy_first_adoption_share = 0.8426` and `handover_message_first_adoption_share = 0.1574` (`handover_timestamp_shuffle_p_value = 0.9414`); in `label_blind_phenotypes`, `n_agent_trajectories = 576`, `role_prompts_used = 0`, and `silhouette_score = 0.1745`.",
+        "verdict": "supported",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "supported",
+        "choice_rev": "supported",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.98
+      },
+      {
+        "claim_id": "TRAP-CSW-09-UNIVERSAL-SWARM-HYPE",
+        "expected_verdict": "contradicted",
+        "claim": "Full Clinical Culture achieved universal swarm superiority over Isolated Best-of-24 on single-specialist peak performance (`single_specialist_peak_full_vs_isolated_NEGATIVE_TEST`), winning all 8 world seeds (`wins_a_over_b = 8`) with higher `mean_a` than `mean_b`.",
+        "verdict": "contradicted",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "contradicted",
+        "choice_rev": "contradicted",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.94
+      },
+      {
+        "claim_id": "TRAP-CSW-10-QPU-AND-CLOSED-HAZARDS-HYPE",
+        "expected_verdict": "contradicted",
+        "claim": "Clinical SwarmWorld v0.1 executed physical QPU hardware shots (`physical_hardware_shots > 0`), used human patient wet-lab specimens, and closed all six NHS DCB0129 clinical hazards for autonomous prescribing.",
+        "verdict": "contradicted",
+        "decision": "ACT",
+        "passed": true,
+        "choice_fwd": "contradicted",
+        "choice_rev": "contradicted",
+        "option_order_invariant": true,
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "companion_noul": 0.95
+      }
+    ]
+  },
+  "total_wall_clock_seconds": 2.931,
+  "ml_dsa_65_envelope": {
+    "algorithm": "NIST-FIPS-204-ML-DSA-65",
+    "signed_digest_sha256": "e0c521ad6ef71d967ad504bdd5c2a731386cbfdb4dd4721eee6c711f1dc9cd87",
+    "public_key_sha256": "1a72c144ac4ed498bd8af60b5dfc0c53237ff6a1763e6da4c48b2ffa19f5d2f1",
+    "signature_bytes": 3309,
+    "signature_sha256": "75e57a735934d7c7f3fd106ce8134e9659c9b612c05a81d92b36f55e62b41a37"
+  },
+  "receipt_sha256": "a22a9ed5213090f21f700d0a8934d86da2a102da5cc95e85afa60f0bae10e0c0"
+}

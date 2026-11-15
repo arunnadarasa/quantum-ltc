@@ -124,14 +124,14 @@
 
           <div class="track-card amber-track">
             <div>
-              <div class="track-role">Track 03 · Safety, Cryptography &amp; Ontology</div>
-              <div class="track-title">Jev 1.14 CQA, DCB0129/0160 &amp; 73-Node KG</div>
-              <p class="track-desc">Explore the <strong>73-node / 211-triple</strong> 8-layer ontology Knowledge Graph with 1-hop focus spotlight, inline <code>Jev 1.14.0</code> control plane, and 6 open statutory hazards.</p>
+              <div class="track-role">Track 03 · Clinical SwarmWorld, Safety &amp; Ontology</div>
+              <div class="track-title">8-pp SwarmWorld Paper, Jev 1.14 &amp; 74-Node KG</div>
+              <p class="track-desc">Read our dedicated <strong>8-page Clinical SwarmWorld paper</strong> (<code>arXiv:2608.26081v1</code>), explore the <strong>74-node / 219-triple</strong> ontology KG, and audit 6 open hazards.</p>
             </div>
             <div class="track-actions">
-              <a class="btn btn-amber btn-sm" href="#governance">🛡 Audit &amp; 6 Hazards</a>
-              <a class="btn btn-sm" href="#kg">🕸 Explore 73-Node KG</a>
-              <a class="btn btn-ghost btn-sm" href="#census">🔍 17 Provenance Files</a>
+              <a class="btn btn-amber btn-sm" href="downloads/Clinical_SwarmWorld_Paper.pdf" download="Clinical_SwarmWorld_Paper.pdf">📄 SwarmWorld PDF (8 pp.)</a>
+              <a class="btn btn-sm" href="#kg">🕸 Explore 74-Node KG</a>
+              <a class="btn btn-ghost btn-sm" href="#census">🔍 18 Provenance Files</a>
             </div>
           </div>
         </div>
@@ -142,8 +142,11 @@
             Hosted Open-Science Artifacts:
           </span>
           <div class="sandbox-links">
+            <a class="btn btn-sm" style="border-color:var(--signal);color:var(--signal)" href="downloads/Clinical_SwarmWorld_Paper.pdf" download="Clinical_SwarmWorld_Paper.pdf">📄 Clinical SwarmWorld Paper (8 pp. PDF)</a>
+            <a class="btn btn-sm" href="https://samskrift.com/view/fe9bb98f-7d8f-4aa7-960a-da471011a2bc/351e0ede-b660-4c9c-bb08-7f006c49a4dc" target="_blank" rel="noopener">🌐 SwarmWorld Samskrift ↗</a>
+            <a class="btn btn-amber btn-sm" href="receipts/clinical_swarmworld_v0_1_receipt.json" target="_blank" rel="noopener">🐝 Clinical SwarmWorld v0.1 Receipt ↗</a>
             <a class="btn btn-sm" style="border-color:var(--signal);color:var(--signal)" href="#structures">🧬 7-Structure 3D PDB Viewer</a>
-            <a class="btn btn-amber btn-sm" href="receipts/cqwm_v0_3_depot_and_8q_helios_comb_receipt.json" target="_blank" rel="noopener">🧬 CQWM v0.3 Depot (N=40) + 8q Helios Comb Receipt ↗</a>
+            <a class="btn btn-sm" href="receipts/cqwm_v0_3_depot_and_8q_helios_comb_receipt.json" target="_blank" rel="noopener">🧬 CQWM v0.3 Depot (N=40) + 8q Helios Comb Receipt ↗</a>
             <a class="btn btn-sm" href="receipts/cqwm_v0_3_8q_depot_comb_playpond.py" target="_blank" rel="noopener">🐍 8q Guppy Comb (.py) ↗</a>
             <a class="btn btn-sm" href="receipts/cqwm_external_validation_and_entanglement_v1_2_receipt.json" target="_blank" rel="noopener">🩺 FAERS + OpenCYP v1.2 Receipt ↗</a>
             <a class="btn btn-sm" href="receipts/cqwm_v0_2_nexus_helios_comb_receipt.json" target="_blank" rel="noopener">⚡ CQWM v0.2 6q Comb Receipt ↗</a>
@@ -804,16 +807,43 @@
             </div>
           </figcaption>
         </figure>
+
+        <!-- Full-Width Clinical SwarmWorld v0.1 Card (Fig. 15) -->
+        <figure class="fig-card fig-card-wide interactive-mode" data-zoom-src="figures/figure15_clinical_swarmworld_v0_1.png">
+          <div class="fig-subtabs">
+            <div class="fig-subtab-pills" role="tablist" aria-label="Clinical SwarmWorld v0.1 sub-panels">
+              <button type="button" class="fig-subtab-btn active" data-csw-tab="arms">🐝 (a) Matched-Budget 4-Arm Resilience vs Solo Negative Test</button>
+              <button type="button" class="fig-subtab-btn" data-csw-tab="turnover">🏥 (b) 50% Clinician Turnover Knockout (Multi-Steward vs Single-Owner)</button>
+            </div>
+            <span style="font-family:var(--font-mono);font-size:0.71rem;color:var(--amber)">0 Role Prompts · 0 Agent Calls in Shock Assay · 84.3% Stigmergy</span>
+          </div>
+          <div id="echart-clinical-swarmworld" class="echart-box echart-wide" aria-label="Interactive Clinical SwarmWorld v0.1 Matched-Budget Resilience and Clinician Turnover Knockout Chart"></div>
+          <img src="figures/figure15_clinical_swarmworld_v0_1.png" alt="Clinical SwarmWorld v0.1: Matched-Budget 4-Arm Evolution and Agent-Free Shock Assay across 20 NCL PCNs" loading="lazy" />
+          <figcaption>
+            <div>
+              <strong>Fig. 15 — <code>Clinical SwarmWorld v0.1</code> (<code>arXiv:2608.26081v1</code>): Stigmergic PCN Protocol Evolution, Agent-Free NHS Shock Resilience &amp; Consequence Amplification:</strong> Across 8 paired world seeds (<code>1,920</code> matched macroturns/seed, <code>N = 24</code> homogeneous clinicians, <strong>0 role prompts</strong>) over <code>20 × 6</code> NCL PCN cells, exact <strong>HiGHS MILP</strong> solves static placement in <strong>7.42 ms</strong> (<code>0.0%</code> gap) and <strong>Isolated Best-of-24 wins single-specialist peak quality</strong> (<code>0.9990</code> vs <code>0.9955</code>, <code>0/8</code> swarm wins). Yet stigmergic protocol sharing (<strong>84.3%</strong> physical PCN reuse vs <code>15.7%</code> handover notes, shuffle null <code>p = 0.941</code>) lifts <code>K = 6</code> multi-need portfolio resilience <strong>P</strong> from <strong>0.5970 → 0.8714</strong> and <strong>agent-free held-out resilience R</strong> across <code>S = 8</code> unseen NHS shocks (<strong>0 AI calls</strong>) from <strong>0.1992 → 0.4088</strong> (<code>8/8</code> seeds, exact <code>p = 0.007812</code>), retains <strong>97.4%</strong> vs <strong>78.8%</strong> under 50% targeted broker turnover, and proves naive <code>RCCSD(T)/Markov</code> oracles culturally amplify unsafe washout holds into <strong>5,909.6 ± 755.4</strong> safety lockouts/world vs <strong>0.0</strong> under <code>CQWM v0.3</code>.
+            </div>
+            <div class="figcap-footer">
+              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">Receipt: clinical_swarmworld_v0_1_receipt.json · SHA-256: a22a9ed5… (10/10 Jev 1.14 Audit)</span>
+              <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+                <a class="fig-zoom-btn" href="downloads/Clinical_SwarmWorld_Paper.pdf" download="Clinical_SwarmWorld_Paper.pdf" style="text-decoration:none">📄 Dedicated 8-pp Paper PDF</a>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures/csw_fig2_unseen_shocks_and_oracle_amplification.png">🔍 Fig. 2 (Shocks)</button>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures/csw_fig3_stigmergy_phenotypes_and_knockout.png">🔍 Fig. 3 (Sociology)</button>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures/figure15_clinical_swarmworld_v0_1.png">🔍 300-DPI Print Fig</button>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- Section 05: Multi-Tier Knowledge Graph Explorer (QLTC-KG v1.9 · 73 Nodes, 211 Triples) -->
+    <!-- Section 05: Multi-Tier Knowledge Graph Explorer (QLTC-KG v2.0 · 74 Nodes, 219 Triples) -->
     <section id="kg" class="band band-alt">
       <div class="container">
         <div class="section-head-row">
           <div>
-            <p class="kicker">05 · Ontology &amp; Semantic Provenance Graph (EMBL-EBI OLS4 DOID · CQWM v0.1–v0.3 + PubMed/FAERS · OpenCYP-FTQC v1.2 · ChEMBL_37 · Jev 1.14 · W3C JSON-LD)</p>
-            <h2 style="margin-bottom:0">Interactive Knowledge Graph Explorer (<code>QLTC-KG v1.9</code>)</h2>
+            <p class="kicker">05 · Ontology &amp; Semantic Provenance Graph (EMBL-EBI OLS4 DOID · CQWM v0.1–v0.3 + PubMed/FAERS · Clinical SwarmWorld v0.1 · OpenCYP-FTQC v1.2 · W3C JSON-LD)</p>
+            <h2 style="margin-bottom:0">Interactive Knowledge Graph Explorer (<code>QLTC-KG v2.0</code>)</h2>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:0.45rem;align-items:center">
             <div class="mode-segmented" role="tablist" aria-label="Knowledge Graph layout">
@@ -828,12 +858,12 @@
           </div>
         </div>
         <p class="lead">
-          Unifies <strong>73 ontology-grounded nodes</strong> and <strong>211 directed semantic triples</strong> across 8 structured layers (1 connected component). Click any node to spotlight its <strong>1-hop semantic neighborhood</strong> (or click empty canvas to show the full overview), toggle smart hub vs full labels, and trace multi-hop clinical-to-quantum paths across EMBL-EBI OLS4 <code>DOID</code>, 7 RCSB PDB structures, <code>OpenCYP-FTQC v1.2</code> (<code>2.94M</code> dets, Fiedler <code>χ=963</code>), <code>CQWM v0.1–v0.3</code> (multi-cohort human washout <code>N = 40</code> + live <code>openFDA FAERS</code> + <code>Helios-1E-lite</code> 6q &amp; 8q Quantum Combs), and all 6 open <strong>NHS DCB0129 &amp; DCB0160</strong> hazards.
+          Unifies <strong>74 ontology-grounded nodes</strong> and <strong>219 directed semantic triples</strong> across 8 structured layers (1 connected component). Click any node to spotlight its <strong>1-hop semantic neighborhood</strong> (or click empty canvas to show the full overview), toggle smart hub vs full labels, and trace multi-hop clinical-to-quantum paths across EMBL-EBI OLS4 <code>DOID</code>, 7 RCSB PDB structures, <code>OpenCYP-FTQC v1.2</code> (<code>2.94M</code> dets, Fiedler <code>χ=963</code>), <code>CQWM v0.1–v0.3</code> (multi-cohort human washout <code>N = 40</code> + live <code>openFDA FAERS</code> + <code>Helios-1E-lite</code> 6q &amp; 8q Quantum Combs), <code>Clinical SwarmWorld v0.1</code>, and all 6 open <strong>NHS DCB0129 &amp; DCB0160</strong> hazards.
         </p>
 
         <div class="kg-toolbar">
-          <input id="kg-search" type="search" class="search-input" style="margin:0" placeholder="Search 73 nodes by label, DOID, CQWM v0.3, 8q Comb, OpenCYP v1.2, FAERS, PMID 38393578, or H-LTC hazard…" aria-label="Search knowledge graph nodes" />
-          <span id="kg-status-pill" class="pill pill-signal">73 / 73 Nodes · 211 Triples</span>
+          <input id="kg-search" type="search" class="search-input" style="margin:0" placeholder="Search 74 nodes by label, DOID, SwarmWorld, CQWM v0.3, 8q Comb, OpenCYP v1.2, FAERS, or H-LTC hazard…" aria-label="Search knowledge graph nodes" />
+          <span id="kg-status-pill" class="pill pill-signal">74 / 74 Nodes · 219 Triples</span>
         </div>
 
         <div id="kg-cat-chips" class="kg-chip-row" aria-label="Filter knowledge graph categories"></div>
@@ -845,6 +875,7 @@
           <select id="kg-path-dst" class="kg-select" aria-label="Target node"></select>
           <button type="button" id="kg-trace-btn" class="btn btn-primary btn-sm">Trace Path</button>
           <button type="button" id="kg-clear-path-btn" class="btn btn-ghost btn-sm">Clear</button>
+          <button type="button" class="preset-chip" data-kg-preset="ltc_copd|plat_clinical_swarmworld_v0_1">COPD *1/*22 → 1TQN → Clinical SwarmWorld v0.1</button>
           <button type="button" class="preset-chip" data-kg-preset="ltc_ckd|plat_cqwm_v0_3_depot_8q_comb">CKD-3b → CYP3A4 3NXU → CQWM v0.3 Depot (7/7) &amp; 8q Helios Comb</button>
           <button type="button" class="preset-chip" data-kg-preset="ltc_masld|plat_opencyp_v1_2_faers_val">MASLD → CYP3A4 5TE8 → OpenCYP v1.2 (2.94M Dets) &amp; FAERS</button>
           <button type="button" class="preset-chip" data-kg-preset="ltc_copd|plat_cqwm_v0_2_helios">COPD *1/*22 → CQWM v0.2 Live Helios-1E-lite 6q Comb</button>
@@ -961,7 +992,7 @@
         <p class="kicker">07 · Cryptographic &amp; Computational Provenance</p>
         <h2>SHA-256-Sealed JSON Receipts &amp; Ontology Graph</h2>
         <p class="lead">
-          Every number in the 24-page monograph, interactive ECharts plots, and 73-node knowledge graph is read directly from the <strong>17 SHA-256-sealed provenance files</strong> below (16 experimental receipts + ontology graph). Click <strong>🔍 Inspect JSON</strong> to audit any receipt inline.
+          Every number in the 24-page monograph, dedicated 8-page Clinical SwarmWorld paper, interactive ECharts plots, and 74-node knowledge graph is read directly from the <strong>18 SHA-256-sealed provenance files</strong> below (17 experimental receipts + ontology graph). Click <strong>🔍 Inspect JSON</strong> to audit any receipt inline.
         </p>
 
         <div class="table-wrap">
@@ -995,6 +1026,24 @@
             </p>
 
             <div class="resource-list">
+              <a class="resource-card" href="downloads/Clinical_SwarmWorld_Paper.pdf" download="Clinical_SwarmWorld_Paper.pdf">
+                <span class="resource-icon">🐝</span>
+                <div>
+                  <div class="resource-title">Clinical SwarmWorld v0.1 Dedicated Samskrift Paper (8 Pages PDF)</div>
+                  <div class="resource-slug">SHA-256: 9edc6d4c… (arXiv:2608.26081v1 · 20×6 NCL PCNs · 0 Role Prompts · 10/10 Jev Audit)</div>
+                </div>
+                <span class="resource-ext">PDF</span>
+              </a>
+
+              <a class="resource-card" href="receipts/clinical_swarmworld_v0_1_receipt.json" target="_blank" rel="noopener">
+                <span class="resource-icon">📜</span>
+                <div>
+                  <div class="resource-title">Clinical SwarmWorld v0.1 Matched-Budget &amp; Agent-Free Shock Receipt</div>
+                  <div class="resource-slug">SHA-256: a22a9ed5… (Solo wins peak 0.999; Swarm wins P=0.871 &amp; shock R=0.409 · 84.3% stigmergy)</div>
+                </div>
+                <span class="resource-ext">JSON</span>
+              </a>
+
               <a class="resource-card" href="receipts/cqwm_v0_3_depot_and_8q_helios_comb_receipt.json" target="_blank" rel="noopener">
                 <span class="resource-icon">🧬</span>
                 <div>
