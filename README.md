@@ -13,6 +13,7 @@ short_description: 4-Era Quantum-LTC, CQWM v0.3, SwarmWorld & 74-Node KG
 # Quantum-LTC — Open Research, `CQWM v0.1–v0.3`, `Clinical SwarmWorld v0.1`, `OpenCYP-FTQC v1.2` & Interactive Results Portal
 
 - **Live GitHub Pages Portal:** **https://arunnadarasa.github.io/quantum-ltc/**
+- **Interactive 9-Page `Clinical Quantum World Model` (`CQWM v0.1–v0.3`) Paper Preview:** **https://arunnadarasa.github.io/quantum-ltc/#paper-cqwm** · [`downloads/Clinical_Quantum_World_Model_Paper.pdf`](downloads/Clinical_Quantum_World_Model_Paper.pdf) · [Samskrift View](https://samskrift.com/view/75b6f058-1ce6-4c15-8eae-6e603d604bea/43a623bc-5e81-48d7-8499-e10800928d19)
 - **Interactive 8-Page `Clinical SwarmWorld` Paper Preview:** **https://arunnadarasa.github.io/quantum-ltc/#paper-swarmworld** · [`downloads/Clinical_SwarmWorld_Paper.pdf`](downloads/Clinical_SwarmWorld_Paper.pdf) · [Samskrift View](https://samskrift.com/view/fe9bb98f-7d8f-4aa7-960a-da471011a2bc/351e0ede-b660-4c9c-bb08-7f006c49a4dc)
 - **Interactive 24-Page `Quantum-LTC` Monograph Preview:** **https://arunnadarasa.github.io/quantum-ltc/#paper** · [`downloads/Quantum_LTC_Roadmap.pdf`](downloads/Quantum_LTC_Roadmap.pdf) · [Samskrift View](https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3)
 - **Hugging Face Static Space Mirror:** **https://socialprescribing-quantum-ltc.static.hf.space/index.html**
@@ -25,16 +26,21 @@ short_description: 4-Era Quantum-LTC, CQWM v0.3, SwarmWorld & 74-Node KG
 
 ## Inline Publication & Benchmark Previews
 
-| Dedicated 8-Page Paper: `Clinical SwarmWorld v0.1` (`arXiv:2608.26081`) | 24-Page Master Monograph: `Quantum-LTC Roadmap` |
-| :---: | :---: |
-| [![Clinical SwarmWorld Paper Page 1](pages_swarmworld/page_1.png)](downloads/Clinical_SwarmWorld_Paper.pdf) | [![Quantum-LTC Monograph Page 1](pages/page_1.png)](downloads/Quantum_LTC_Roadmap.pdf) |
-| [📄 Download 8-Page PDF](downloads/Clinical_SwarmWorld_Paper.pdf) · [📖 Interactive 8-Page Reader](https://arunnadarasa.github.io/quantum-ltc/#paper-swarmworld) | [📄 Download 24-Page PDF](downloads/Quantum_LTC_Roadmap.pdf) · [📖 Interactive 24-Page Reader](https://arunnadarasa.github.io/quantum-ltc/#paper) |
+| 24-pp Master Monograph (`Quantum-LTC`) | 9-pp World Model Paper (`CQWM v0.1–v0.3`) | 8-pp Multi-Agent Paper (`Clinical SwarmWorld`) |
+| :---: | :---: | :---: |
+| [![Quantum-LTC Monograph Page 1](pages/page_1.png)](downloads/Quantum_LTC_Roadmap.pdf) | [![CQWM World Model Paper Page 1](pages_cqwm/page_1.png)](downloads/Clinical_Quantum_World_Model_Paper.pdf) | [![Clinical SwarmWorld Paper Page 1](pages_swarmworld/page_1.png)](downloads/Clinical_SwarmWorld_Paper.pdf) |
+| [📄 24-pp PDF](downloads/Quantum_LTC_Roadmap.pdf) · [📖 Live Reader](https://arunnadarasa.github.io/quantum-ltc/#paper) | [📄 9-pp PDF](downloads/Clinical_Quantum_World_Model_Paper.pdf) · [📖 Live Reader](https://arunnadarasa.github.io/quantum-ltc/#paper-cqwm) | [📄 8-pp PDF](downloads/Clinical_SwarmWorld_Paper.pdf) · [📖 Live Reader](https://arunnadarasa.github.io/quantum-ltc/#paper-swarmworld) |
+
+[![CQWM v0.3 Hepatocyte-Depot Washout Closure & 8q Helios Comb](figures/figure14_cqwm_v0_3_depot_and_8q_comb.png)](downloads/Clinical_Quantum_World_Model_Paper.pdf)
 
 [![Clinical SwarmWorld Fig. 1 — Architecture & 4-Arm Resilience](figures/csw_fig1_architecture_and_4arm_resilience.png)](downloads/Clinical_SwarmWorld_Paper.pdf)
 
 ---
 
 ## Included Non-Commercial Open-Science Artifacts
+
+- **Dedicated 9-Page Clinical Quantum World Model Paper (`downloads/Clinical_Quantum_World_Model_Paper.pdf`, `CQWM v0.1–v0.3`):**
+  - Four-layer counterfactual $\mathrm{do}(\pi)$ simulator uniting inline `TypeSafe Jev 1.14.0` pre-rollout epistemic gating (`6/6` vignettes: `0L` acute hypoxia bypass, `0L` herbal abstention, `0L` closed-shell `ACE 1O86` classical sufficiency at `0.0012 mmHg` RMSE), `OpenCYP-FTQC v1.2` (`15` `QM/MM` `FCIDUMP`s up to `2,944,656`-determinant `CAS(13e,13o)`, `60.9x–82.8x` orbital entanglement, Fiedler 1D DMRG $\chi(10^{-6}) = 963$ vs `63`), zero-refit 9-state mass-conserving RK4 hepatocyte/enterocyte depot + PXR + autoinhibition world model across $N = 40$ humans (`PMID: 38393578` **`GMFE = 1.236`**, **`7/7` = `100%` visits in 2-fold**; `PMID: 17635500` elderly IV/PO; `PMID: 21937987` voriconazole vs ritonavir), `21.05M` live `openFDA FAERS` reports (`6.57x` COPD and `2.04x` CVD active-comparator `ROR`s vs `0.55x` `ACE` null), and live 6-qubit / 8-qubit `Helios-1E-lite` ASPS Quantum Combs (`14,336` Comb shots, `98.79%` parity acceptance, $\mathcal{N}_{\text{total}} = 0.8370$, $\Delta\mathcal{N}_{\text{depot}} = 0.3983$, `19q` `1 TiB` Liouvillian crossover).
 
 - **Dedicated 8-Page Clinical SwarmWorld Paper (`downloads/Clinical_SwarmWorld_Paper.pdf`, grounded in Pal, Wang & Buehler `arXiv:2608.26081v1`):**
   - Bounded stigmergic clinical protocol evolution across a `20` PCN $\times$ `K = 6` NHS NCL LTC v6 grid (`8` paired world seeds, `1,920` matched macroturn calls/seed, `N = 24` homogeneous agents, **`0` role prompts**).

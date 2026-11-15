@@ -120,6 +120,16 @@ const BIBTEX_ENTRIES = {
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
   note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 17 SHA-256-sealed experimental receipts + 74-node KG across Quantinuum Nexus Helios-1E-lite (20,480 emulator shots across 10 jobs; 0 QPU shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1--v0.3 zero-fit hepatocyte-depot closure across N=40 humans + live 6q \\& 8q Quantum Combs + live openFDA FAERS 21.05M reports), Clinical SwarmWorld v0.1, ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
 }`,
+  cqwm: `@article{nadarasa2026cqwm,
+  title   = {Clinical Quantum World Models: Non-Markovian Intracellular Enzyme Memory, Multi-Slot Trapped-Ion Quantum Combs, and Zero-Refit Human Washout Validation},
+  author  = {Nadarasa, Arun},
+  year    = {2026},
+  month   = nov,
+  journal = {Samskrift Clinical Quantum Pharmacology \\& Open-System Paper (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
+  pages   = {1--9},
+  url     = {https://arunnadarasa.github.io/quantum-ltc/downloads/Clinical_Quantum_World_Model_Paper.pdf},
+  note    = {Zero-refit 9-state RK4 hepatocyte/enterocyte depot + PXR + autoinhibition world model across N=40 human subjects (PMID 38393578 GMFE=1.236, 7/7 in 2-fold; PMID 17635500 elderly IV/PO; PMID 21937987) + 21.05M openFDA FAERS reports + OpenCYP-FTQC v1.2 (2.94M-det CAS(13e,13o), Fiedler chi=963) + 14,336 live Helios-1E-lite 6q/8q ASPS Comb emulator shots (0 QPU shots); NIST FIPS 204 ML-DSA-65 receipts: 7b828614..., ca845d5e..., 9564f1a3..., 66ef2908...}
+}`,
   swarmworld: `@article{nadarasa2026clinicalswarmworld,
   title   = {Clinical {SwarmWorld}: Zero-Hype Stigmergic Protocol Evolution, Agent-Free {NHS} Shock Resilience, and Consequence-Oracle Amplification Across Multimorbid Primary Care Networks},
   author  = {Nadarasa, Arun},
@@ -232,6 +242,25 @@ async function initPdfReader() {
       altTitle: "Quantum-LTC Four-Era Samskrift Monograph (24 Pages)",
       bookmarks: BOOKMARKS
     },
+    cqwm: {
+      pdfUrl: "downloads/Clinical_Quantum_World_Model_Paper.pdf",
+      dlName: "Clinical_Quantum_World_Model_Paper.pdf",
+      samskriftUrl: "https://samskrift.com/view/75b6f058-1ce6-4c15-8eae-6e603d604bea/43a623bc-5e81-48d7-8499-e10800928d19",
+      pagesDir: "pages_cqwm",
+      totalPages: 9,
+      altTitle: "Clinical Quantum World Model (CQWM v0.1–v0.3) Samskrift Paper (9 Pages)",
+      bookmarks: [
+        { label: "p.1 · Abstract, Demarcation & §1 Intro", page: 1 },
+        { label: "p.2 · §2 Jev 1.14 Gate & §3 OpenCYP v1.2", page: 2 },
+        { label: "p.3 · Tables 1–2 (6 Vignettes & χ = 963)", page: 3 },
+        { label: "p.4 · Fig. 1 (CQWM v0.1/v0.2) & §4 9-State ODEs", page: 4 },
+        { label: "p.5 · Table 3 (PMID 38393578 7/7 in 2-Fold) & N=40", page: 5 },
+        { label: "p.6 · Fig. 2 (FAERS & Entanglement) & §5 Combs", page: 6 },
+        { label: "p.7 · Table 4 & Fig. 3 (8q ASPS Helios Comb)", page: 7 },
+        { label: "p.8 · §6 NHS DCB0129 Hazards & Refs [1]–[9]", page: 8 },
+        { label: "p.9 · Verified References [10]–[27]", page: 9 }
+      ]
+    },
     swarmworld: {
       pdfUrl: "downloads/Clinical_SwarmWorld_Paper.pdf",
       dlName: "Clinical_SwarmWorld_Paper.pdf",
@@ -252,7 +281,13 @@ async function initPdfReader() {
     }
   };
 
-  let activeDocKey = window.location.hash === "#paper-swarmworld" ? "swarmworld" : "monograph";
+  function docKeyFromHash(h) {
+    if (h === "#paper-cqwm") return "cqwm";
+    if (h === "#paper-swarmworld") return "swarmworld";
+    return null;
+  }
+
+  let activeDocKey = docKeyFromHash(window.location.hash) || "monograph";
   let DOC = DOC_CATALOG[activeDocKey];
   let zoom = 1.0;
   let renderEpoch = 0;
@@ -311,6 +346,10 @@ async function initPdfReader() {
   });
   document.querySelectorAll("[data-open-reader-doc]").forEach(link => {
     link.addEventListener("click", () => switchReaderDoc(link.dataset.openReaderDoc));
+  });
+  window.addEventListener("hashchange", () => {
+    const k = docKeyFromHash(window.location.hash);
+    if (k && k !== activeDocKey) switchReaderDoc(k);
   });
 
   syncDocChrome();
