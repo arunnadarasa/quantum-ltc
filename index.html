@@ -129,9 +129,10 @@
               <p class="track-desc">Read our dedicated <strong>8-page Clinical SwarmWorld paper</strong> (<code>arXiv:2608.26081v1</code>), explore the <strong>74-node / 219-triple</strong> ontology KG, and audit 6 open hazards.</p>
             </div>
             <div class="track-actions">
-              <a class="btn btn-amber btn-sm" href="downloads/Clinical_SwarmWorld_Paper.pdf" download="Clinical_SwarmWorld_Paper.pdf">📄 SwarmWorld PDF (8 pp.)</a>
-              <a class="btn btn-sm" href="#kg">🕸 Explore 74-Node KG</a>
-              <a class="btn btn-ghost btn-sm" href="#census">🔍 18 Provenance Files</a>
+              <a class="btn btn-amber btn-sm" href="#paper" data-open-reader-doc="swarmworld">📖 Preview 8-pp Paper</a>
+              <a class="btn btn-sm" href="downloads/Clinical_SwarmWorld_Paper.pdf" download="Clinical_SwarmWorld_Paper.pdf">⬇ SwarmWorld PDF</a>
+              <a class="btn btn-sm" href="#kg">🕸 74-Node KG</a>
+              <a class="btn btn-ghost btn-sm" href="#census">🔍 18 Receipts</a>
             </div>
           </div>
         </div>
@@ -196,19 +197,20 @@
       </div>
     </section>
 
-        <!-- Section 01: 24-Page Samskrift Monograph & Live In-Page PDF.js Reader -->
+        <!-- Section 01: Samskrift Publications & Live Dual-Document In-Page PDF.js Reader -->
     <section id="paper" class="band band-alt">
       <div class="container">
-        <p class="kicker">01 · Compiled Samskrift Cloud Monograph (24 Pages · 59 Verified References · Spacious Multi-Panel Figures)</p>
-        <h2>Interactive Monograph Reader: Quantum-LTC Four-Era Clinical Roadmap (24 pp.)</h2>
+        <p class="kicker">01 · Compiled Samskrift Cloud Publications (24-Page Master Monograph + 8-Page Clinical SwarmWorld Paper · 65 Verified References)</p>
+        <h2>Interactive Publication Reader: Quantum-LTC Monograph (24 pp.) &amp; Clinical SwarmWorld Paper (8 pp.)</h2>
         <p class="lead">
-          Read the complete typeset 24-page Samskrift monograph inline below with its concise Page-1 executive abstract (<code>10,581,672 bytes</code> · SHA-256 <code>cf9ec570eee31d7e…</code>), jump directly to any section bookmark (including §4.4 Gate 1 <code>CYP3A4</code> <code>5TE8/3NXU</code> on p.9, §4.5 <code>OpenCYP-FTQC</code> on p.10, §6.3 <code>10-LTC CQA</code> + <code>OpenCYP-FTQC v1.1</code> empirical <code>THC</code> on p.14, §6.4 <code>CQWM v0.1 &amp; v0.2</code> on p.17, §6.5 external washout, live <code>openFDA FAERS</code> &amp; <code>OpenCYP-FTQC v1.2</code> entanglement on p.18, and §6.6 <code>CQWM v0.3</code> hepatocyte-depot closure across <code>N = 40</code> humans &amp; live 8-qubit <code>Helios-1E-lite</code> Quantum Comb on p.19), or open the live Samskrift Cloud view.
+          Switch between both compiled Samskrift publications inline below — our <strong>24-page Quantum-LTC master monograph</strong> (<code>Quantum_LTC_Roadmap.pdf</code>, SHA-256 <code>cf9ec570eee31d7e…</code>) and our dedicated <strong>8-page Clinical SwarmWorld paper</strong> (<code>Clinical_SwarmWorld_Paper.pdf</code>, SHA-256 <code>9edc6d4c5253ad92…</code>, grounded in <code>arXiv:2608.26081v1</code>) — with section jump bookmarks, high-DPI PNG page previews, and live Samskrift Cloud links.
         </p>
 
         <div id="paper-preview-panel" class="reader-panel" role="region" aria-label="Interactive Monograph Preview Panel">
           <div class="reader-doc-tabs">
             <div class="reader-doc-pills" role="tablist" aria-label="Publication document">
-              <button type="button" class="reader-doc-btn active" role="tab" aria-selected="true">📘 Quantum-LTC Samskrift Monograph (24 Pages · CQWM v0.3 Depot &amp; 8q Comb · OpenCYP v1.2)</button>
+              <button type="button" class="reader-doc-btn active" role="tab" aria-selected="true" data-reader-doc="monograph">📘 Quantum-LTC Monograph (24 Pages · CQWM v0.3 &amp; OpenCYP v1.2)</button>
+              <button type="button" class="reader-doc-btn" role="tab" aria-selected="false" data-reader-doc="swarmworld">🐝 Clinical SwarmWorld Paper (8 Pages · arXiv:2608.26081)</button>
               <a id="reader-samskrift-link" class="reader-icon-btn" href="https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3" target="_blank" rel="noopener">🌐 Open on Samskrift Cloud ↗</a>
             </div>
             <div class="reader-controls-group">
@@ -1192,6 +1194,7 @@
 
             <div class="lang-pills" style="margin-top:0.65rem">
               <button type="button" class="lang-btn active" data-bib-tab="monograph">Quantum-LTC Monograph (2026)</button>
+              <button type="button" class="lang-btn" data-bib-tab="swarmworld">Clinical SwarmWorld (2026)</button>
               <button type="button" class="lang-btn" data-bib-tab="opencyp">OpenCYP-FTQC Dataset</button>
               <button type="button" class="lang-btn" data-bib-tab="qltcmlm">QLTCMLM HF Model</button>
               <button type="button" class="lang-btn" data-bib-tab="ncl_lcs">NHS NCL ICB LTC v6</button>

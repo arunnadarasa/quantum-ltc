@@ -118,7 +118,17 @@ const BIBTEX_ENTRIES = {
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
   pages   = {1--24},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 16 SHA-256-sealed experimental receipts + 73-node KG across Quantinuum Nexus Helios-1E-lite (20,480 emulator shots across 10 jobs; 0 QPU shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1--v0.3 zero-fit hepatocyte-depot closure across N=40 humans [PMID 38393578 GMFE=1.236, 7/7 in 2-fold; Elderly PMID 17635500] + live 6q \\& 8q Quantum Combs + live openFDA FAERS 21.05M reports), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 17 SHA-256-sealed experimental receipts + 74-node KG across Quantinuum Nexus Helios-1E-lite (20,480 emulator shots across 10 jobs; 0 QPU shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1--v0.3 zero-fit hepatocyte-depot closure across N=40 humans + live 6q \\& 8q Quantum Combs + live openFDA FAERS 21.05M reports), Clinical SwarmWorld v0.1, ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 under NHS DCB0129 \\& DCB0160}
+}`,
+  swarmworld: `@article{nadarasa2026clinicalswarmworld,
+  title   = {Clinical {SwarmWorld}: Zero-Hype Stigmergic Protocol Evolution, Agent-Free {NHS} Shock Resilience, and Consequence-Oracle Amplification Across Multimorbid Primary Care Networks},
+  author  = {Nadarasa, Arun},
+  year    = {2026},
+  month   = nov,
+  journal = {Samskrift Clinical AI \\& Biophysical Systems Paper (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
+  pages   = {1--8},
+  url     = {https://arunnadarasa.github.io/quantum-ltc/downloads/Clinical_SwarmWorld_Paper.pdf},
+  note    = {Grounded in Pal, Wang \\& Buehler (arXiv:2608.26081v1) and NHS NCL ICB LTC LCS v6; 8 paired world seeds (1,920 matched macroturns/seed, 0 role prompts, 0 agent calls during S=8 shock assays); 10/10 Jev 1.14.0 citation \\& hype-trap audit; NIST FIPS 204 ML-DSA-65 receipt SHA-256: a22a9ed5...}
 }`,
   opencyp: `@misc{nadarasa2026opencypftqc,
   title        = {{OpenCYP-FTQC v1.2}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP}, Empirical {THC} \\& Orbital Entanglement Archive},
@@ -212,32 +222,98 @@ async function initPdfReader() {
   const panel = document.getElementById("paper-preview-panel");
   if (!stream || !viewportEl) return;
 
-  const DOC = {
-    pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
-    pagesDir: "pages",
-    totalPages: 24,
-    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (24 Pages)"
+  const DOC_CATALOG = {
+    monograph: {
+      pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
+      dlName: "Quantum_LTC_Roadmap.pdf",
+      samskriftUrl: "https://samskrift.com/view/00aac676-979d-4bcd-b94f-c680a79d1a6f/ed0f2129-55d6-4699-81ae-0bcc2b01b0c3",
+      pagesDir: "pages",
+      totalPages: 24,
+      altTitle: "Quantum-LTC Four-Era Samskrift Monograph (24 Pages)",
+      bookmarks: BOOKMARKS
+    },
+    swarmworld: {
+      pdfUrl: "downloads/Clinical_SwarmWorld_Paper.pdf",
+      dlName: "Clinical_SwarmWorld_Paper.pdf",
+      samskriftUrl: "https://samskrift.com/view/fe9bb98f-7d8f-4aa7-960a-da471011a2bc/351e0ede-b660-4c9c-bb08-7f006c49a4dc",
+      pagesDir: "pages_swarmworld",
+      totalPages: 8,
+      altTitle: "Clinical SwarmWorld v0.1 Samskrift Paper (8 Pages)",
+      bookmarks: [
+        { label: "p.1 · Abstract & §1 Anti-Hype Invariants", page: 1 },
+        { label: "p.2 · §2 20×6 NCL PCN Grid & Table 1", page: 2 },
+        { label: "p.3 · §3 Live jev-1.14.0 Cognition & HiGHS MILP", page: 3 },
+        { label: "p.4 · Fig. 1 & §4 4-Arm Matched-Budget Results", page: 4 },
+        { label: "p.5 · Fig. 2 & §4.3 Oracle Amplification", page: 5 },
+        { label: "p.6 · Fig. 3 & §5 Stigmergy (84.3%) & Phenotypes", page: 6 },
+        { label: "p.7 · Tables 3–4 (10/10 Jev Audit) & §6 DCB0129", page: 7 },
+        { label: "p.8 · Verified References [1]–[20]", page: 8 }
+      ]
+    }
   };
 
+  let activeDocKey = window.location.hash === "#paper-swarmworld" ? "swarmworld" : "monograph";
+  let DOC = DOC_CATALOG[activeDocKey];
   let zoom = 1.0;
   let renderEpoch = 0;
 
-  if (pageInput) pageInput.max = String(DOC.totalPages);
-  if (pageCountEl) pageCountEl.textContent = String(DOC.totalPages);
-
-  bmWrap.innerHTML = "";
-  BOOKMARKS.forEach((bm, idx) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "bookmark-chip" + (idx === 0 ? " active" : "");
-    btn.textContent = bm.label;
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".bookmark-chip").forEach(c => c.classList.remove("active"));
-      btn.classList.add("active");
-      scrollToPage(bm.page);
+  function renderBookmarks() {
+    bmWrap.innerHTML = "";
+    DOC.bookmarks.forEach((bm, idx) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "bookmark-chip" + (idx === 0 ? " active" : "");
+      btn.textContent = bm.label;
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".bookmark-chip").forEach(c => c.classList.remove("active"));
+        btn.classList.add("active");
+        scrollToPage(bm.page);
+      });
+      bmWrap.appendChild(btn);
     });
-    bmWrap.appendChild(btn);
+  }
+
+  function syncDocChrome() {
+    if (pageInput) {
+      pageInput.max = String(DOC.totalPages);
+      pageInput.value = "1";
+    }
+    if (pageCountEl) pageCountEl.textContent = String(DOC.totalPages);
+    const samLink = document.getElementById("reader-samskrift-link");
+    const openLink = document.getElementById("reader-open-pdf");
+    const dlLink = document.getElementById("reader-dl-pdf");
+    if (samLink) samLink.href = DOC.samskriftUrl;
+    if (openLink) openLink.href = DOC.pdfUrl;
+    if (dlLink) {
+      dlLink.href = DOC.pdfUrl;
+      dlLink.setAttribute("download", DOC.dlName);
+    }
+    document.querySelectorAll("[data-reader-doc]").forEach(btn => {
+      const isAct = btn.dataset.readerDoc === activeDocKey;
+      btn.classList.toggle("active", isAct);
+      btn.setAttribute("aria-selected", String(isAct));
+    });
+    renderBookmarks();
+  }
+
+  function switchReaderDoc(key) {
+    if (!DOC_CATALOG[key]) return;
+    activeDocKey = key;
+    DOC = DOC_CATALOG[key];
+    syncDocChrome();
+    viewportEl.scrollTop = 0;
+    renderFallbackImages();
+    setTimeout(() => renderPdfJs(++renderEpoch), 180);
+  }
+
+  document.querySelectorAll("[data-reader-doc]").forEach(btn => {
+    btn.addEventListener("click", () => switchReaderDoc(btn.dataset.readerDoc));
   });
+  document.querySelectorAll("[data-open-reader-doc]").forEach(link => {
+    link.addEventListener("click", () => switchReaderDoc(link.dataset.openReaderDoc));
+  });
+
+  syncDocChrome();
 
   function scrollToPage(p) {
     const clamped = Math.min(DOC.totalPages, Math.max(1, p));
