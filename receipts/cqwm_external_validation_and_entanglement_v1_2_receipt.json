@@ -1,0 +1,2636 @@
+{
+  "schema_version": "1.2.0-cqwm-external-validation-and-opencyp-entanglement",
+  "benchmark_name": "Step 1 + Step 2A: External Human Washout (PMID 38393578), Live openFDA FAERS (21.05M Reports) & OpenCYP-FTQC v1.2 Entanglement (CAS 13e,13o / 2.94M Determinants)",
+  "timestamp_utc": "2026-11-15T00:25:32.569384+00:00",
+  "pinned_jev_model": "jev-1.14.0",
+  "runtime_seconds": 2.776,
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "autonomous_clinical_decisions": 0,
+    "closed_hazards_claimed": 0,
+    "open_dcb0129_hazards": [
+      "H-LTC-01",
+      "H-LTC-02",
+      "H-LTC-03",
+      "H-LTC-04",
+      "H-LTC-05",
+      "H-LTC-06"
+    ],
+    "zero_curve_fitting_to_human_washout_trial": true,
+    "clinical_claim_boundary": "Strictly non-commercial research shadow-mode validation under NHS DCB0129/DCB0160; FAERS disproportionality reflects spontaneous reporting associations, not causal incidence, and Day 7 (+48h) intracellular ritonavir retention residual keeps H-LTC-02 strictly OPEN."
+  },
+  "step1_external_human_and_faers_validation": {
+    "external_cache_sha256": "2e2eae2cb7c4f63d1c5e319ee5b1663036cc0761f90545e51e3b543bf41332e5",
+    "pmc_38393578_fulltext_sha256": "14e0948e5e0b9aa353b0d0cfce89f2d8b45c84404c1604f8dd20936303eafd52",
+    "openfda_database_metadata": {
+      "endpoint": "https://api.fda.gov/drug/event.json",
+      "last_updated": "2026-10-28",
+      "total_faers_reports": 21054159,
+      "background_rhabdomyolysis_reports": 41745,
+      "background_bradycardia_reports": 53091,
+      "background_acute_kidney_injury_reports": 153188,
+      "regulatory_disclaimer": "Do not rely on openFDA to make decisions regarding medical care. Always speak to your health provider about the risks and benefits of FDA-regulated products."
+    },
+    "human_washout_trial_pmid_38393578_benchmark": {
+      "trial_metadata": {
+        "pmid": "38393578",
+        "doi": "10.1007/s40262-024-01350-x",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/38393578/",
+        "eudract": "2021-006643-39",
+        "journal": "Clinical Pharmacokinetics (2024)",
+        "n_healthy_volunteers": 8,
+        "perpetrator_regimen": "Oral ritonavir 100 mg twice daily on Days 1-5 (discontinued after Day 5)",
+        "probe_substrate": "Oral microdosed midazolam 25 ug (CYP3A4 index substrate)",
+        "reported_cyp3a4_recovery_half_life_days": 2.3,
+        "reported_cyp3a4_recovery_half_life_sd_days": 0.89,
+        "visits": [
+          {
+            "study_day": 0,
+            "phase": "Baseline (pre-ritonavir)",
+            "gmr_aucr": 1.0,
+            "ci90_low": 1.0,
+            "ci90_high": 1.0,
+            "ecl_met_ml_min": 1291.0
+          },
+          {
+            "study_day": 1,
+            "phase": "Ritonavir Day 1",
+            "gmr_aucr": 5.1,
+            "ci90_low": 3.76,
+            "ci90_high": 6.92,
+            "ecl_met_ml_min": 253.0
+          },
+          {
+            "study_day": 2,
+            "phase": "Ritonavir Day 2",
+            "gmr_aucr": 15.5,
+            "ci90_low": 11.2,
+            "ci90_high": 21.4,
+            "ecl_met_ml_min": 83.3
+          },
+          {
+            "study_day": 3,
+            "phase": "Ritonavir Day 3",
+            "gmr_aucr": 14.8,
+            "ci90_low": 10.5,
+            "ci90_high": 20.8,
+            "ecl_met_ml_min": 87.4
+          },
+          {
+            "study_day": 4,
+            "phase": "Ritonavir Day 4",
+            "gmr_aucr": 13.1,
+            "ci90_low": 9.3,
+            "ci90_high": 18.4,
+            "ecl_met_ml_min": 98.5
+          },
+          {
+            "study_day": 5,
+            "phase": "Ritonavir Day 5 (final dose)",
+            "gmr_aucr": 11.1,
+            "ci90_low": 7.72,
+            "ci90_high": 15.8,
+            "ecl_met_ml_min": 117.0
+          },
+          {
+            "study_day": 7,
+            "phase": "Post-washout +48h (Day 7)",
+            "gmr_aucr": 10.2,
+            "ci90_low": 7.6,
+            "ci90_high": 13.8,
+            "ecl_met_ml_min": 126.0
+          },
+          {
+            "study_day": 9,
+            "phase": "Post-washout +96h (Day 9)",
+            "gmr_aucr": 2.91,
+            "ci90_low": 1.99,
+            "ci90_high": 4.27,
+            "ecl_met_ml_min": 443.0
+          }
+        ]
+      },
+      "zero_free_parameters_refit": true,
+      "visit_by_visit_comparison": [
+        {
+          "study_day": 0,
+          "phase": "Baseline (pre-ritonavir)",
+          "human_observed_gmr_aucr": 1.0,
+          "human_ci90": [
+            1.0,
+            1.0
+          ],
+          "pred_cqwm_delta_thc": 1.0,
+          "pred_exact_fci": 1.0,
+          "pred_classical_rccsdt": 1.0,
+          "pred_markovian_plasma_pk": 1.0,
+          "cqwm_fold_error": 1.0,
+          "cqwm_within_2fold": true
+        },
+        {
+          "study_day": 1,
+          "phase": "Ritonavir Day 1",
+          "human_observed_gmr_aucr": 5.1,
+          "human_ci90": [
+            3.76,
+            6.92
+          ],
+          "pred_cqwm_delta_thc": 9.08,
+          "pred_exact_fci": 9.56,
+          "pred_classical_rccsdt": 1.03,
+          "pred_markovian_plasma_pk": 5.54,
+          "cqwm_fold_error": 1.78,
+          "cqwm_within_2fold": true
+        },
+        {
+          "study_day": 2,
+          "phase": "Ritonavir Day 2",
+          "human_observed_gmr_aucr": 15.5,
+          "human_ci90": [
+            11.2,
+            21.4
+          ],
+          "pred_cqwm_delta_thc": 13.12,
+          "pred_exact_fci": 13.84,
+          "pred_classical_rccsdt": 1.03,
+          "pred_markovian_plasma_pk": 6.28,
+          "cqwm_fold_error": 1.181,
+          "cqwm_within_2fold": true
+        },
+        {
+          "study_day": 3,
+          "phase": "Ritonavir Day 3",
+          "human_observed_gmr_aucr": 14.8,
+          "human_ci90": [
+            10.5,
+            20.8
+          ],
+          "pred_cqwm_delta_thc": 14.56,
+          "pred_exact_fci": 15.44,
+          "pred_classical_rccsdt": 1.03,
+          "pred_markovian_plasma_pk": 6.36,
+          "cqwm_fold_error": 1.017,
+          "cqwm_within_2fold": true
+        },
+        {
+          "study_day": 4,
+          "phase": "Ritonavir Day 4",
+          "human_observed_gmr_aucr": 13.1,
+          "human_ci90": [
+            9.3,
+            18.4
+          ],
+          "pred_cqwm_delta_thc": 15.05,
+          "pred_exact_fci": 16.03,
+          "pred_classical_rccsdt": 1.03,
+          "pred_markovian_plasma_pk": 6.37,
+          "cqwm_fold_error": 1.149,
+          "cqwm_within_2fold": true
+        },
+        {
+          "study_day": 5,
+          "phase": "Ritonavir Day 5 (final dose)",
+          "human_observed_gmr_aucr": 11.1,
+          "human_ci90": [
+            7.72,
+            15.8
+          ],
+          "pred_cqwm_delta_thc": 15.22,
+          "pred_exact_fci": 16.24,
+          "pred_classical_rccsdt": 1.03,
+          "pred_markovian_plasma_pk": 6.37,
+          "cqwm_fold_error": 1.372,
+          "cqwm_within_2fold": true
+        },
+        {
+          "study_day": 7,
+          "phase": "Post-washout +48h (Day 7)",
+          "human_observed_gmr_aucr": 10.2,
+          "human_ci90": [
+            7.6,
+            13.8
+          ],
+          "pred_cqwm_delta_thc": 4.81,
+          "pred_exact_fci": 5.79,
+          "pred_classical_rccsdt": 1.0,
+          "pred_markovian_plasma_pk": 1.01,
+          "cqwm_fold_error": 2.121,
+          "cqwm_within_2fold": false
+        },
+        {
+          "study_day": 9,
+          "phase": "Post-washout +96h (Day 9)",
+          "human_observed_gmr_aucr": 2.91,
+          "human_ci90": [
+            1.99,
+            4.27
+          ],
+          "pred_cqwm_delta_thc": 1.67,
+          "pred_exact_fci": 1.74,
+          "pred_classical_rccsdt": 1.0,
+          "pred_markovian_plasma_pk": 1.0,
+          "cqwm_fold_error": 1.739,
+          "cqwm_within_2fold": true
+        }
+      ],
+      "daily_14d_trajectories": {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "cqwm_delta_thc_aucr": [
+          9.076,
+          13.124,
+          14.558,
+          15.054,
+          15.225,
+          12.152,
+          4.809,
+          2.291,
+          1.673,
+          1.41,
+          1.268,
+          1.182,
+          1.127,
+          1.09
+        ],
+        "exact_fci_aucr": [
+          9.559,
+          13.844,
+          15.437,
+          16.026,
+          16.244,
+          13.8,
+          5.791,
+          2.49,
+          1.739,
+          1.443,
+          1.286,
+          1.194,
+          1.135,
+          1.095
+        ],
+        "classical_rccsdt_aucr": [
+          1.032,
+          1.034,
+          1.034,
+          1.034,
+          1.034,
+          1.001,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "markovian_plasma_pk_aucr": [
+          5.543,
+          6.282,
+          6.364,
+          6.371,
+          6.372,
+          2.145,
+          1.012,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "summary_metrics": {
+        "total_active_visits": 7,
+        "cqwm_within_2fold_visits": 6,
+        "cqwm_gmfe": 1.434,
+        "exact_fci_gmfe": 1.418,
+        "classical_rccsdt_gmfe": 8.881,
+        "markovian_plasma_pk_gmfe": 2.526,
+        "cqwm_log_pearson_r": 0.9148,
+        "post_washout_day7_48h_observed_aucr": 10.2,
+        "post_washout_day7_48h_cqwm_aucr": 4.81,
+        "post_washout_day7_48h_markovian_aucr": 1.01,
+        "post_washout_day7_48h_rccsdt_aucr": 1.0,
+        "post_washout_day9_96h_observed_aucr": 2.91,
+        "post_washout_day9_96h_cqwm_aucr": 1.67,
+        "post_washout_day9_96h_markovian_aucr": 1.0
+      }
+    },
+    "pubmed_clinical_concordance_register": [
+      {
+        "pmid": "38393578",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/38393578/",
+        "title": "Time Course of the Interaction Between Oral Short-Term Ritonavir Therapy with Three Factor Xa Inhibitors and the Activity of CYP2D6, CYP2C19, and CYP3A4 in Healthy Volunteers.",
+        "authors": [
+          "Rohr BS",
+          "Krohmer E",
+          "Foerster KI",
+          "Burhenne J",
+          "Schulz M",
+          "Blank A",
+          "Mikus G",
+          "Haefeli WE"
+        ],
+        "journal": "Clinical pharmacokinetics",
+        "pubdate": "2024 Apr",
+        "doi": "10.1007/s40262-024-01350-x",
+        "clinical_role_in_cqwm": "Primary 8-visit out-of-sample human 5-day ritonavir (100 mg BID) + midazolam washout benchmark (Day 7 +48h AUCR 10.2x, Day 9 +96h AUCR 2.91x, CYP3A4 recovery t1/2 = 2.30 +/- 0.89 d)."
+      },
+      {
+        "pmid": "21937987",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/21937987/",
+        "title": "Determining the time course of CYP3A inhibition by potent reversible and irreversible CYP3A inhibitors using A limited sampling strategy.",
+        "authors": [
+          "Katzenmaier S",
+          "Markert C",
+          "Riedel KD",
+          "Burhenne J",
+          "Haefeli WE",
+          "Mikus G"
+        ],
+        "journal": "Clinical pharmacology and therapeutics",
+        "pubdate": "2011 Nov",
+        "doi": "10.1038/clpt.2011.164",
+        "clinical_role_in_cqwm": "Direct human head-to-head contrast proving reversible voriconazole recovers within 24 h while irreversible MBI ritonavir requires multi-day enzyme resynthesis."
+      },
+      {
+        "pmid": "9728893",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/9728893/",
+        "title": "The contribution of intestinal and hepatic CYP3A to the interaction between midazolam and clarithromycin.",
+        "authors": [
+          "Gorski JC",
+          "Jones DR",
+          "Haehner-Daniels BD",
+          "Hamman MA",
+          "O'Mara EM",
+          "Hall SD"
+        ],
+        "journal": "Clinical pharmacology and therapeutics",
+        "pubdate": "1998 Aug",
+        "doi": null,
+        "clinical_role_in_cqwm": "Seminal human IV + oral midazolam crossover dissecting intestinal vs hepatic CYP3A inactivation under clarithromycin (oral AUCR ~7-8x vs IV ~3.2x)."
+      },
+      {
+        "pmid": "17635500",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/17635500/",
+        "title": "Interaction between midazolam and clarithromycin in the elderly.",
+        "authors": [
+          "Quinney SK",
+          "Haehner BD",
+          "Rhoades MB",
+          "Lin Z",
+          "Gorski JC",
+          "Hall SD"
+        ],
+        "journal": "British journal of clinical pharmacology",
+        "pubdate": "2008 Jan",
+        "doi": null,
+        "clinical_role_in_cqwm": "Prospective elderly human crossover confirming persistent ~8.0x oral midazolam AUCR surge under clarithromycin 500 mg BID."
+      },
+      {
+        "pmid": "15735612",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/15735612/",
+        "title": "Inhibition of human intestinal wall metabolism by macrolide antibiotics: effect of clarithromycin on cytochrome P450 3A4/5 activity and expression.",
+        "authors": [
+          "Pinto AG",
+          "Wang YH",
+          "Chalasani N",
+          "Skaar T",
+          "Kolwankar D",
+          "Gorski JC",
+          "Liangpunsakul S",
+          "Hamman MA",
+          "Arefayene M",
+          "Hall SD"
+        ],
+        "journal": "Clinical pharmacology and therapeutics",
+        "pubdate": "2005 Mar",
+        "doi": null,
+        "clinical_role_in_cqwm": "Paired human small-bowel endoscopic biopsies demonstrating >70% loss of catalytic CYP3A4 activity without mRNA/protein loss (direct proof of nitroso-alkane MIC)."
+      },
+      {
+        "pmid": "22777148",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/22777148/",
+        "title": "Rate of onset of inhibition of gut-wall and hepatic CYP3A by clarithromycin.",
+        "authors": [
+          "Quinney SK",
+          "Malireddy SR",
+          "Vuppalanchi R",
+          "Hamman MA",
+          "Chalasani N",
+          "Gorski JC",
+          "Hall SD"
+        ],
+        "journal": "European journal of clinical pharmacology",
+        "pubdate": "2013 Mar",
+        "doi": "10.1007/s00228-012-1339-x",
+        "clinical_role_in_cqwm": "Time-course human intestinal biopsy + midazolam study showing rapid 64% Dose-1 enterocyte CYP3A inactivation followed by delayed hepatic MBI."
+      },
+      {
+        "pmid": "21923449",
+        "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/21923449/",
+        "title": "Effects of paroxetine on the pharmacokinetics and pharmacodynamics of immediate-release and extended-release metoprolol.",
+        "authors": [
+          "Parker RB",
+          "Soberman JE"
+        ],
+        "journal": "Pharmacotherapy",
+        "pubdate": "2011 Jul",
+        "doi": "10.1592/phco.31.7.630",
+        "clinical_role_in_cqwm": "Human 3-way crossover demonstrating 3-4x S/R-metoprolol AUC elevation and beta-blockade surge from paroxetine CYP2D6 MBI (`CQWM-05`)."
+      }
+    ],
+    "openfda_faers_disproportionality_validation": [
+      {
+        "label": "Clarithromycin + Simvastatin (Rhabdomyolysis)",
+        "cqwm_vignette": "CQWM-04 (LTC-08 COPD: MBI Macrolide vs Safe Azithromycin Switch)",
+        "exposed_events_a": 232,
+        "exposed_total_reports": 1793,
+        "exposed_event_rate_pct": 12.939,
+        "faers_ror": 75.222,
+        "faers_ror_ci95": [
+          65.51,
+          86.374
+        ],
+        "faers_prr": 65.618,
+        "yates_chi2": 14645.76,
+        "active_comparator": {
+          "comparator_label": "Azithromycin + Simvastatin (CQWM pi_D Safe Switch)",
+          "comparator_events": 35,
+          "comparator_total_reports": 1583,
+          "comparator_event_rate_pct": 2.211,
+          "head_to_head_ror_unsafe_vs_safe": 6.573,
+          "head_to_head_ci95": [
+            4.576,
+            9.443
+          ],
+          "p_value_two_sided": 2.267655649098247e-24
+        }
+      },
+      {
+        "label": "Azithromycin + Simvastatin (CQWM pi_D Safe Switch)",
+        "cqwm_vignette": "CQWM-04 Counterfactual Safe Branch (Non-MBI Macrolide)",
+        "exposed_events_a": 35,
+        "exposed_total_reports": 1583,
+        "exposed_event_rate_pct": 2.211,
+        "faers_ror": 11.389,
+        "faers_ror_ci95": [
+          8.146,
+          15.924
+        ],
+        "faers_prr": 11.16,
+        "yates_chi2": 314.0
+      },
+      {
+        "label": "Ritonavir + Simvastatin (Rhabdomyolysis)",
+        "cqwm_vignette": "CQWM-06a (CYP3A4 Heme Type-II / MBI Lock Contraindication)",
+        "exposed_events_a": 22,
+        "exposed_total_reports": 118,
+        "exposed_event_rate_pct": 18.644,
+        "faers_ror": 115.412,
+        "faers_ror_ci95": [
+          72.611,
+          183.441
+        ],
+        "faers_prr": 94.081,
+        "yates_chi2": 1936.82,
+        "active_comparator": {
+          "comparator_label": "Simvastatin Monotherapy / All Simvastatin Reports",
+          "comparator_events": 5390,
+          "comparator_total_reports": 250151,
+          "comparator_event_rate_pct": 2.155,
+          "head_to_head_ror_unsafe_vs_safe": 10.407,
+          "head_to_head_ci95": [
+            6.543,
+            16.552
+          ],
+          "p_value_two_sided": 4.455239916054857e-23
+        }
+      },
+      {
+        "label": "Ritonavir + Tacrolimus (Acute Kidney Injury)",
+        "cqwm_vignette": "CQWM-06b (LTC-06 CKD Calcineurin/CYP3A4 Heme Arrest)",
+        "exposed_events_a": 186,
+        "exposed_total_reports": 562,
+        "exposed_event_rate_pct": 33.096,
+        "faers_ror": 67.575,
+        "faers_ror_ci95": [
+          56.683,
+          80.561
+        ],
+        "faers_prr": 45.541,
+        "yates_chi2": 8107.5
+      },
+      {
+        "label": "Paroxetine + Metoprolol (Bradycardia)",
+        "cqwm_vignette": "CQWM-05 (LTC-01 CVD CYP2D6 Carbene MBI vs Escitalopram Switch)",
+        "exposed_events_a": 49,
+        "exposed_total_reports": 1602,
+        "exposed_event_rate_pct": 3.059,
+        "faers_ror": 12.491,
+        "faers_ror_ci95": [
+          9.398,
+          16.603
+        ],
+        "faers_prr": 12.14,
+        "yates_chi2": 490.6,
+        "active_comparator": {
+          "comparator_label": "Escitalopram + Metoprolol (CQWM Safe SSRI Switch)",
+          "comparator_events": 104,
+          "comparator_total_reports": 6837,
+          "comparator_event_rate_pct": 1.521,
+          "head_to_head_ror_unsafe_vs_safe": 2.043,
+          "head_to_head_ci95": [
+            1.448,
+            2.882
+          ],
+          "p_value_two_sided": 4.725024399660196e-05
+        }
+      },
+      {
+        "label": "Escitalopram + Metoprolol (CQWM Safe SSRI Switch)",
+        "cqwm_vignette": "CQWM-05 Counterfactual Safe Branch (Weak CYP2D6 Inhibitor)",
+        "exposed_events_a": 104,
+        "exposed_total_reports": 6837,
+        "exposed_event_rate_pct": 1.521,
+        "faers_ror": 6.12,
+        "faers_ror_ci95": [
+          5.042,
+          7.429
+        ],
+        "faers_prr": 6.042,
+        "yates_chi2": 432.82
+      },
+      {
+        "label": "Clarithromycin + Lisinopril, Statin-Free (Rhabdomyolysis Negative Control)",
+        "cqwm_vignette": "CQWM-03 (LTC-03 HTN Closed-Shell Zn2+ ACE 1O86 Non-CYP3A4 Renal Control)",
+        "exposed_events_a": 1,
+        "exposed_total_reports": 922,
+        "exposed_event_rate_pct": 0.108,
+        "faers_ror": 0.547,
+        "faers_ror_ci95": [
+          0.077,
+          3.884
+        ],
+        "faers_prr": 0.547,
+        "yates_chi2": 0.06
+      }
+    ]
+  },
+  "step2a_opencyp_v1_2_orbital_entanglement_and_dmrg": {
+    "opencyp_v1_2_cas13_summary": {
+      "dataset_name": "OpenCYP-FTQC v1.2",
+      "active_space": "CAS(13e,13o)",
+      "rc_file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_RC_QMMM_CAS13e13o_def2SVP.fcidump.gz",
+      "rc_sha256_gzip": "d4b0f8ae33c63d76a32a13464028c9c12e074bbb874d49559de5093bc04c89f0",
+      "ts_file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS13e13o_def2SVP.fcidump.gz",
+      "ts_sha256_gzip": "0f5fc7d8666dcbf306940edb78bb126c4846c63918e79a10800be0409f689cfd",
+      "e_rc_fci_doublet_ha": -1886.194587,
+      "e_ts_fci_doublet_ha": -1886.036847,
+      "hat_barrier_cas13_doublet_kcal_mol": 98.983,
+      "slater_determinants": 2944656,
+      "fci_solve_wall_seconds": 597.73,
+      "v1_2_manifest_file": "opencyp_ftqc/opencyp_ftqc_v1_2_manifest.json",
+      "v1_2_manifest_sha256": "aa38e7ef05c93b849ccc0859d111607157910f517232d345fa2ac22f0ce69237",
+      "total_archive_fcidump_files": 15
+    },
+    "entanglement_demarcation_highlights": {
+      "ace_1o86_spin_S": 0,
+      "copd_1tqn_clr_mic_spin_S": 0,
+      "masld_5te8_cas13_active_space": "CAS(13e,13o)",
+      "ace_1o86_total_s1_nats": 0.083237,
+      "copd_1tqn_clr_mic_total_s1_nats": 5.065035,
+      "masld_5te8_cas13_total_s1_nats": 6.895263,
+      "matched_singlet_s1_ratio_copd_over_ace": 60.85,
+      "cas13_over_ace_s1_ratio": 82.84,
+      "ace_1o86_fiedler_chi_1e_6": 63,
+      "copd_1tqn_fiedler_chi_1e_6": 378,
+      "masld_5te8_11o_fiedler_chi_1e_6": 446,
+      "masld_5te8_13o_fiedler_chi_1e_6": 963,
+      "cas13_over_ace_fiedler_chi_1e_6_ratio": 15.29
+    },
+    "systems": [
+      {
+        "system_id": "ACE_1O86_Zn2_10o",
+        "clinical_label": "LTC-03 Hypertension (ACE + Lisinopril, Closed-Shell Zn2+ S=0 Control)",
+        "fcidump_file": "opencyp_ftqc/fcidump/ACE_1O86_LPR_Zn2_QMMM_CAS12e10o_def2SVP.fcidump.gz",
+        "fcidump_sha256": "5b1fdcede7e4d65fd7e36a705a65304698caa9e493e43d587b94dc6d38e724e4",
+        "n_spatial_orbitals": 10,
+        "nelec_alpha_beta": [
+          6,
+          6
+        ],
+        "ms2": 0,
+        "exact_fci_ha": -2040.5873832,
+        "s2_expectation": 0.0,
+        "orbital_entanglement": {
+          "n_orb": 10,
+          "nelec": [
+            6,
+            6
+          ],
+          "s1_nats": [
+            0.009626,
+            0.013009,
+            0.00432,
+            0.005214,
+            0.004113,
+            0.005979,
+            0.007197,
+            0.011725,
+            0.012712,
+            0.009341
+          ],
+          "total_s1_nats": 0.083237,
+          "max_s1_nats": 0.013009,
+          "max_s1_fraction_of_ln4": 0.009384,
+          "i_pq_matrix_nats": [
+            [
+              0.0,
+              0.002784,
+              0.001332,
+              0.000905,
+              0.000403,
+              0.000565,
+              0.001356,
+              0.002844,
+              0.005396,
+              0.002449
+            ],
+            [
+              0.002784,
+              0.0,
+              0.000402,
+              0.001024,
+              0.00126,
+              0.001899,
+              0.002757,
+              0.007134,
+              0.003391,
+              0.004058
+            ],
+            [
+              0.001332,
+              0.000402,
+              0.0,
+              0.000413,
+              0.000167,
+              0.000149,
+              0.000739,
+              0.000229,
+              0.003504,
+              0.000632
+            ],
+            [
+              0.000905,
+              0.001024,
+              0.000413,
+              0.0,
+              0.000179,
+              0.000359,
+              0.000825,
+              0.000733,
+              0.002159,
+              0.003005
+            ],
+            [
+              0.000403,
+              0.00126,
+              0.000167,
+              0.000179,
+              0.0,
+              0.000371,
+              0.000585,
+              0.00124,
+              0.00258,
+              0.000826
+            ],
+            [
+              0.000565,
+              0.001899,
+              0.000149,
+              0.000359,
+              0.000371,
+              0.0,
+              0.001746,
+              0.00291,
+              0.001671,
+              0.000992
+            ],
+            [
+              0.001356,
+              0.002757,
+              0.000739,
+              0.000825,
+              0.000585,
+              0.001746,
+              0.0,
+              0.002924,
+              0.001163,
+              0.001026
+            ],
+            [
+              0.002844,
+              0.007134,
+              0.000229,
+              0.000733,
+              0.00124,
+              0.00291,
+              0.002924,
+              0.0,
+              0.001777,
+              0.002474
+            ],
+            [
+              0.005396,
+              0.003391,
+              0.003504,
+              0.002159,
+              0.00258,
+              0.001671,
+              0.001163,
+              0.001777,
+              0.0,
+              0.002527
+            ],
+            [
+              0.002449,
+              0.004058,
+              0.000632,
+              0.003005,
+              0.000826,
+              0.000992,
+              0.001026,
+              0.002474,
+              0.002527,
+              0.0
+            ]
+          ],
+          "max_i_pq_nats": 0.007134,
+          "sum_i_pq_nats": 0.077867,
+          "pairs_gt_0p001": 27,
+          "pairs_gt_0p01": 0,
+          "pairs_gt_0p10": 0,
+          "total_orbital_pairs": 45,
+          "dense_entanglement_edge_fraction_gt_0p01": 0.0,
+          "algebraic_connectivity_fiedler_lambda2": 0.007519,
+          "fiedler_1d_orbital_order": [
+            2,
+            8,
+            0,
+            3,
+            9,
+            6,
+            1,
+            7,
+            5,
+            4
+          ],
+          "rdm16_min_eigenvalue_check": 0.0
+        },
+        "mps_bipartite_canonical_order": {
+          "cut_site_m": 5,
+          "bipartite_entropy_nats": 0.025962,
+          "bipartite_entropy_bits": 0.037455,
+          "leading_schmidt_weight_sigma0_sq": 0.997175,
+          "chi_discard_1e_4": 18,
+          "chi_discard_1e_5": 34,
+          "chi_discard_1e_6": 53,
+          "max_nonzero_schmidt_rank": 315
+        },
+        "mps_bipartite_fiedler_1d_order": {
+          "cut_site_m": 5,
+          "bipartite_entropy_nats": 0.019457,
+          "bipartite_entropy_bits": 0.028071,
+          "leading_schmidt_weight_sigma0_sq": 0.99812,
+          "chi_discard_1e_4": 24,
+          "chi_discard_1e_5": 41,
+          "chi_discard_1e_6": 63,
+          "max_nonzero_schmidt_rank": 333
+        },
+        "selected_ci_convergence": {
+          "full_fci_determinants": 44100,
+          "dets_required_for_1p6_mha": 100,
+          "fraction_of_fci_required_for_1p6_mha": 0.00227,
+          "sweep": [
+            {
+              "select_cutoff": 0.1,
+              "e_sci_ha": -2040.5840712,
+              "abs_err_vs_fci_mha": 3.312,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 2e-05,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.03,
+              "e_sci_ha": -2040.5840712,
+              "abs_err_vs_fci_mha": 3.312,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 2e-05,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.01,
+              "e_sci_ha": -2040.5858044,
+              "abs_err_vs_fci_mha": 1.5788,
+              "selected_subspace_dets": 100,
+              "nonzero_dets_gt_1e_8": 100,
+              "fraction_of_fci_space": 0.00227,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.003,
+              "e_sci_ha": -2040.5867337,
+              "abs_err_vs_fci_mha": 0.6494,
+              "selected_subspace_dets": 441,
+              "nonzero_dets_gt_1e_8": 441,
+              "fraction_of_fci_space": 0.01,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.001,
+              "e_sci_ha": -2040.5869065,
+              "abs_err_vs_fci_mha": 0.4767,
+              "selected_subspace_dets": 1521,
+              "nonzero_dets_gt_1e_8": 1521,
+              "fraction_of_fci_space": 0.03449,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0003,
+              "e_sci_ha": -2040.5872525,
+              "abs_err_vs_fci_mha": 0.1307,
+              "selected_subspace_dets": 5776,
+              "nonzero_dets_gt_1e_8": 5772,
+              "fraction_of_fci_space": 0.13098,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0001,
+              "e_sci_ha": -2040.5873792,
+              "abs_err_vs_fci_mha": 0.0039,
+              "selected_subspace_dets": 11664,
+              "nonzero_dets_gt_1e_8": 11632,
+              "fraction_of_fci_space": 0.26449,
+              "within_chemical_accuracy_1p6_mha": true
+            }
+          ]
+        }
+      },
+      {
+        "system_id": "CYP2D6_4WNU_TS_9o",
+        "clinical_label": "LTC-01 Cardiovascular Disease (CYP2D6 + Quinidine TS_HAT, S=1/2)",
+        "fcidump_file": "opencyp_ftqc/fcidump/CYP2D6_4WNU_QDN_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+        "fcidump_sha256": "3187f2222bb16239ecc17cdb5327bc9f2cfbae807e8aad6aa439ca86af1f7b94",
+        "n_spatial_orbitals": 9,
+        "nelec_alpha_beta": [
+          5,
+          4
+        ],
+        "ms2": 1,
+        "exact_fci_ha": -1886.0494679,
+        "s2_expectation": 0.75,
+        "orbital_entanglement": {
+          "n_orb": 9,
+          "nelec": [
+            5,
+            4
+          ],
+          "s1_nats": [
+            0.407032,
+            1.035182,
+            0.637553,
+            1.216623,
+            1.36127,
+            0.505058,
+            0.256133,
+            0.691658,
+            0.080789
+          ],
+          "total_s1_nats": 6.191299,
+          "max_s1_nats": 1.36127,
+          "max_s1_fraction_of_ln4": 0.981948,
+          "i_pq_matrix_nats": [
+            [
+              0.0,
+              0.294611,
+              0.034066,
+              0.102302,
+              0.173528,
+              0.024755,
+              0.004246,
+              0.004342,
+              0.066023
+            ],
+            [
+              0.294611,
+              0.0,
+              0.077951,
+              0.416092,
+              0.720912,
+              0.102198,
+              0.021421,
+              0.070213,
+              0.019243
+            ],
+            [
+              0.034066,
+              0.077951,
+              0.0,
+              0.063149,
+              0.062202,
+              0.063853,
+              0.022294,
+              0.528301,
+              0.020806
+            ],
+            [
+              0.102302,
+              0.416092,
+              0.063149,
+              0.0,
+              1.066432,
+              0.072804,
+              0.031395,
+              0.124697,
+              0.004572
+            ],
+            [
+              0.173528,
+              0.720912,
+              0.062202,
+              1.066432,
+              0.0,
+              0.154363,
+              0.054871,
+              0.050732,
+              0.003473
+            ],
+            [
+              0.024755,
+              0.102198,
+              0.063853,
+              0.072804,
+              0.154363,
+              0.0,
+              0.058166,
+              0.078322,
+              0.000834
+            ],
+            [
+              0.004246,
+              0.021421,
+              0.022294,
+              0.031395,
+              0.054871,
+              0.058166,
+              0.0,
+              0.068396,
+              0.001003
+            ],
+            [
+              0.004342,
+              0.070213,
+              0.528301,
+              0.124697,
+              0.050732,
+              0.078322,
+              0.068396,
+              0.0,
+              0.006537
+            ],
+            [
+              0.066023,
+              0.019243,
+              0.020806,
+              0.004572,
+              0.003473,
+              0.000834,
+              0.001003,
+              0.006537,
+              0.0
+            ]
+          ],
+          "max_i_pq_nats": 1.066432,
+          "sum_i_pq_nats": 4.669106,
+          "pairs_gt_0p001": 35,
+          "pairs_gt_0p01": 29,
+          "pairs_gt_0p10": 10,
+          "total_orbital_pairs": 36,
+          "dense_entanglement_edge_fraction_gt_0p01": 0.8056,
+          "algebraic_connectivity_fiedler_lambda2": 0.129466,
+          "fiedler_1d_orbital_order": [
+            6,
+            5,
+            7,
+            2,
+            3,
+            4,
+            1,
+            0,
+            8
+          ],
+          "rdm16_min_eigenvalue_check": 0.0
+        },
+        "mps_bipartite_canonical_order": {
+          "cut_site_m": 4,
+          "bipartite_entropy_nats": 2.243012,
+          "bipartite_entropy_bits": 3.235983,
+          "leading_schmidt_weight_sigma0_sq": 0.28065,
+          "chi_discard_1e_4": 115,
+          "chi_discard_1e_5": 163,
+          "chi_discard_1e_6": 207,
+          "max_nonzero_schmidt_rank": 256
+        },
+        "mps_bipartite_fiedler_1d_order": {
+          "cut_site_m": 4,
+          "bipartite_entropy_nats": 1.056483,
+          "bipartite_entropy_bits": 1.524183,
+          "leading_schmidt_weight_sigma0_sq": 0.767635,
+          "chi_discard_1e_4": 77,
+          "chi_discard_1e_5": 125,
+          "chi_discard_1e_6": 173,
+          "max_nonzero_schmidt_rank": 256
+        },
+        "selected_ci_convergence": {
+          "full_fci_determinants": 15876,
+          "dets_required_for_1p6_mha": 12644,
+          "fraction_of_fci_required_for_1p6_mha": 0.79642,
+          "sweep": [
+            {
+              "select_cutoff": 0.1,
+              "e_sci_ha": -1885.3330068,
+              "abs_err_vs_fci_mha": 716.4611,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 6e-05,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.03,
+              "e_sci_ha": -1885.897911,
+              "abs_err_vs_fci_mha": 151.5569,
+              "selected_subspace_dets": 165,
+              "nonzero_dets_gt_1e_8": 165,
+              "fraction_of_fci_space": 0.01039,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.01,
+              "e_sci_ha": -1886.0152556,
+              "abs_err_vs_fci_mha": 34.2123,
+              "selected_subspace_dets": 1258,
+              "nonzero_dets_gt_1e_8": 1258,
+              "fraction_of_fci_space": 0.07924,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.003,
+              "e_sci_ha": -1886.0462944,
+              "abs_err_vs_fci_mha": 3.1735,
+              "selected_subspace_dets": 6192,
+              "nonzero_dets_gt_1e_8": 6192,
+              "fraction_of_fci_space": 0.39002,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.001,
+              "e_sci_ha": -1886.0491901,
+              "abs_err_vs_fci_mha": 0.2778,
+              "selected_subspace_dets": 12644,
+              "nonzero_dets_gt_1e_8": 12644,
+              "fraction_of_fci_space": 0.79642,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0003,
+              "e_sci_ha": -1886.0494673,
+              "abs_err_vs_fci_mha": 0.0006,
+              "selected_subspace_dets": 15750,
+              "nonzero_dets_gt_1e_8": 15750,
+              "fraction_of_fci_space": 0.99206,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0001,
+              "e_sci_ha": -1886.0494667,
+              "abs_err_vs_fci_mha": 0.0012,
+              "selected_subspace_dets": 15876,
+              "nonzero_dets_gt_1e_8": 15874,
+              "fraction_of_fci_space": 1.0,
+              "within_chemical_accuracy_1p6_mha": true
+            }
+          ]
+        }
+      },
+      {
+        "system_id": "CYP2C9_1R9O_TS_9o",
+        "clinical_label": "LTC-02 Atrial Fibrillation (CYP2C9 + Flurbiprofen TS_HAT, S=1/2)",
+        "fcidump_file": "opencyp_ftqc/fcidump/CYP2C9_1R9O_FLP_TS_HAT_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+        "fcidump_sha256": "b37203e84a1b658c814c47bde728e2bb406e243980cc5bca3c7855cd74f7d11e",
+        "n_spatial_orbitals": 9,
+        "nelec_alpha_beta": [
+          5,
+          4
+        ],
+        "ms2": 1,
+        "exact_fci_ha": -1886.0537982,
+        "s2_expectation": 0.75,
+        "orbital_entanglement": {
+          "n_orb": 9,
+          "nelec": [
+            5,
+            4
+          ],
+          "s1_nats": [
+            0.198745,
+            1.122594,
+            0.913958,
+            0.500436,
+            0.955896,
+            0.810742,
+            1.189398,
+            0.957375,
+            0.063129
+          ],
+          "total_s1_nats": 6.712274,
+          "max_s1_nats": 1.189398,
+          "max_s1_fraction_of_ln4": 0.857969,
+          "i_pq_matrix_nats": [
+            [
+              0.0,
+              0.082619,
+              0.0269,
+              0.005465,
+              0.068124,
+              0.008168,
+              0.035194,
+              0.001378,
+              0.06499
+            ],
+            [
+              0.082619,
+              0.0,
+              0.078761,
+              0.08597,
+              0.310073,
+              0.244432,
+              0.438278,
+              0.175036,
+              0.002334
+            ],
+            [
+              0.0269,
+              0.078761,
+              0.0,
+              0.204753,
+              0.230238,
+              0.035563,
+              0.032276,
+              0.616877,
+              0.004526
+            ],
+            [
+              0.005465,
+              0.08597,
+              0.204753,
+              0.0,
+              0.059324,
+              0.047588,
+              0.229422,
+              0.041684,
+              0.001095
+            ],
+            [
+              0.068124,
+              0.310073,
+              0.230238,
+              0.059324,
+              0.0,
+              0.075748,
+              0.258504,
+              0.146959,
+              0.006942
+            ],
+            [
+              0.008168,
+              0.244432,
+              0.035563,
+              0.047588,
+              0.075748,
+              0.0,
+              0.539971,
+              0.069822,
+              0.002101
+            ],
+            [
+              0.035194,
+              0.438278,
+              0.032276,
+              0.229422,
+              0.258504,
+              0.539971,
+              0.0,
+              0.084935,
+              0.002023
+            ],
+            [
+              0.001378,
+              0.175036,
+              0.616877,
+              0.041684,
+              0.146959,
+              0.069822,
+              0.084935,
+              0.0,
+              0.010766
+            ],
+            [
+              0.06499,
+              0.002334,
+              0.004526,
+              0.001095,
+              0.006942,
+              0.002101,
+              0.002023,
+              0.010766,
+              0.0
+            ]
+          ],
+          "max_i_pq_nats": 0.616877,
+          "sum_i_pq_nats": 4.32884,
+          "pairs_gt_0p001": 36,
+          "pairs_gt_0p01": 27,
+          "pairs_gt_0p10": 11,
+          "total_orbital_pairs": 36,
+          "dense_entanglement_edge_fraction_gt_0p01": 0.75,
+          "algebraic_connectivity_fiedler_lambda2": 0.090113,
+          "fiedler_1d_orbital_order": [
+            8,
+            0,
+            4,
+            1,
+            7,
+            2,
+            6,
+            5,
+            3
+          ],
+          "rdm16_min_eigenvalue_check": 0.0
+        },
+        "mps_bipartite_canonical_order": {
+          "cut_site_m": 4,
+          "bipartite_entropy_nats": 2.211481,
+          "bipartite_entropy_bits": 3.190493,
+          "leading_schmidt_weight_sigma0_sq": 0.360128,
+          "chi_discard_1e_4": 105,
+          "chi_discard_1e_5": 156,
+          "chi_discard_1e_6": 193,
+          "max_nonzero_schmidt_rank": 256
+        },
+        "mps_bipartite_fiedler_1d_order": {
+          "cut_site_m": 4,
+          "bipartite_entropy_nats": 1.803134,
+          "bipartite_entropy_bits": 2.601373,
+          "leading_schmidt_weight_sigma0_sq": 0.415142,
+          "chi_discard_1e_4": 79,
+          "chi_discard_1e_5": 131,
+          "chi_discard_1e_6": 193,
+          "max_nonzero_schmidt_rank": 256
+        },
+        "selected_ci_convergence": {
+          "full_fci_determinants": 15876,
+          "dets_required_for_1p6_mha": 13806,
+          "fraction_of_fci_required_for_1p6_mha": 0.86961,
+          "sweep": [
+            {
+              "select_cutoff": 0.1,
+              "e_sci_ha": -1885.3421059,
+              "abs_err_vs_fci_mha": 711.6922,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 6e-05,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.03,
+              "e_sci_ha": -1885.6339568,
+              "abs_err_vs_fci_mha": 419.8414,
+              "selected_subspace_dets": 49,
+              "nonzero_dets_gt_1e_8": 49,
+              "fraction_of_fci_space": 0.00309,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.01,
+              "e_sci_ha": -1886.00986,
+              "abs_err_vs_fci_mha": 43.9381,
+              "selected_subspace_dets": 1638,
+              "nonzero_dets_gt_1e_8": 1638,
+              "fraction_of_fci_space": 0.10317,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.003,
+              "e_sci_ha": -1886.0509228,
+              "abs_err_vs_fci_mha": 2.8754,
+              "selected_subspace_dets": 7480,
+              "nonzero_dets_gt_1e_8": 7480,
+              "fraction_of_fci_space": 0.47115,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.001,
+              "e_sci_ha": -1886.0534884,
+              "abs_err_vs_fci_mha": 0.3098,
+              "selected_subspace_dets": 13806,
+              "nonzero_dets_gt_1e_8": 13806,
+              "fraction_of_fci_space": 0.86961,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0003,
+              "e_sci_ha": -1886.053809,
+              "abs_err_vs_fci_mha": 0.0108,
+              "selected_subspace_dets": 15876,
+              "nonzero_dets_gt_1e_8": 15874,
+              "fraction_of_fci_space": 1.0,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0001,
+              "e_sci_ha": -1886.053749,
+              "abs_err_vs_fci_mha": 0.0491,
+              "selected_subspace_dets": 15876,
+              "nonzero_dets_gt_1e_8": 15875,
+              "fraction_of_fci_space": 1.0,
+              "within_chemical_accuracy_1p6_mha": true
+            }
+          ]
+        }
+      },
+      {
+        "system_id": "CYP3A4_3NXU_RIT_9o",
+        "clinical_label": "LTC-06 Chronic Kidney Disease (CYP3A4 + Ritonavir Type-II, S=1/2)",
+        "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_3NXU_RIT_TypeII_QMMM_CAS9e9o_def2SVP.fcidump.gz",
+        "fcidump_sha256": "9c59075f5f2c9970db932d9310ce2030f870bfc646b91965dfcbdab6ad6276d6",
+        "n_spatial_orbitals": 9,
+        "nelec_alpha_beta": [
+          5,
+          4
+        ],
+        "ms2": 1,
+        "exact_fci_ha": -1827.2441625,
+        "s2_expectation": 0.75,
+        "orbital_entanglement": {
+          "n_orb": 9,
+          "nelec": [
+            5,
+            4
+          ],
+          "s1_nats": [
+            0.847272,
+            0.32504,
+            0.445995,
+            0.725378,
+            0.741532,
+            0.790996,
+            0.563758,
+            0.006174,
+            0.015432
+          ],
+          "total_s1_nats": 4.461578,
+          "max_s1_nats": 0.847272,
+          "max_s1_fraction_of_ln4": 0.611177,
+          "i_pq_matrix_nats": [
+            [
+              0.0,
+              0.025394,
+              0.004687,
+              0.011527,
+              0.026078,
+              1.1153,
+              0.293032,
+              0.000748,
+              0.005932
+            ],
+            [
+              0.025394,
+              0.0,
+              0.008803,
+              0.006147,
+              0.00432,
+              0.048974,
+              0.379007,
+              0.002553,
+              0.004175
+            ],
+            [
+              0.004687,
+              0.008803,
+              0.0,
+              0.327179,
+              0.308147,
+              0.010472,
+              0.061766,
+              0.000309,
+              0.000773
+            ],
+            [
+              0.011527,
+              0.006147,
+              0.327179,
+              0.0,
+              0.879561,
+              0.024538,
+              0.024469,
+              0.000143,
+              0.000362
+            ],
+            [
+              0.026078,
+              0.00432,
+              0.308147,
+              0.879561,
+              0.0,
+              0.057076,
+              0.01334,
+              0.000181,
+              0.000227
+            ],
+            [
+              1.1153,
+              0.048974,
+              0.010472,
+              0.024538,
+              0.057076,
+              0.0,
+              0.095666,
+              0.000418,
+              0.004179
+            ],
+            [
+              0.293032,
+              0.379007,
+              0.061766,
+              0.024469,
+              0.01334,
+              0.095666,
+              0.0,
+              0.002757,
+              0.008556
+            ],
+            [
+              0.000748,
+              0.002553,
+              0.000309,
+              0.000143,
+              0.000181,
+              0.000418,
+              0.002757,
+              0.0,
+              0.001024
+            ],
+            [
+              0.005932,
+              0.004175,
+              0.000773,
+              0.000362,
+              0.000227,
+              0.004179,
+              0.008556,
+              0.001024,
+              0.0
+            ]
+          ],
+          "max_i_pq_nats": 1.1153,
+          "sum_i_pq_nats": 3.757818,
+          "pairs_gt_0p001": 28,
+          "pairs_gt_0p01": 17,
+          "pairs_gt_0p10": 6,
+          "total_orbital_pairs": 36,
+          "dense_entanglement_edge_fraction_gt_0p01": 0.4722,
+          "algebraic_connectivity_fiedler_lambda2": 0.009107,
+          "fiedler_1d_orbital_order": [
+            7,
+            1,
+            8,
+            6,
+            0,
+            5,
+            2,
+            4,
+            3
+          ],
+          "rdm16_min_eigenvalue_check": 0.0
+        },
+        "mps_bipartite_canonical_order": {
+          "cut_site_m": 4,
+          "bipartite_entropy_nats": 1.923069,
+          "bipartite_entropy_bits": 2.774402,
+          "leading_schmidt_weight_sigma0_sq": 0.347865,
+          "chi_discard_1e_4": 45,
+          "chi_discard_1e_5": 79,
+          "chi_discard_1e_6": 115,
+          "max_nonzero_schmidt_rank": 246
+        },
+        "mps_bipartite_fiedler_1d_order": {
+          "cut_site_m": 4,
+          "bipartite_entropy_nats": 0.511171,
+          "bipartite_entropy_bits": 0.737463,
+          "leading_schmidt_weight_sigma0_sq": 0.890118,
+          "chi_discard_1e_4": 20,
+          "chi_discard_1e_5": 42,
+          "chi_discard_1e_6": 69,
+          "max_nonzero_schmidt_rank": 216
+        },
+        "selected_ci_convergence": {
+          "full_fci_determinants": 15876,
+          "dets_required_for_1p6_mha": 4187,
+          "fraction_of_fci_required_for_1p6_mha": 0.26373,
+          "sweep": [
+            {
+              "select_cutoff": 0.1,
+              "e_sci_ha": -1827.0439263,
+              "abs_err_vs_fci_mha": 200.2362,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 6e-05,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.03,
+              "e_sci_ha": -1827.2026395,
+              "abs_err_vs_fci_mha": 41.523,
+              "selected_subspace_dets": 9,
+              "nonzero_dets_gt_1e_8": 9,
+              "fraction_of_fci_space": 0.00057,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.01,
+              "e_sci_ha": -1827.2292211,
+              "abs_err_vs_fci_mha": 14.9414,
+              "selected_subspace_dets": 210,
+              "nonzero_dets_gt_1e_8": 210,
+              "fraction_of_fci_space": 0.01323,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.003,
+              "e_sci_ha": -1827.2421413,
+              "abs_err_vs_fci_mha": 2.0212,
+              "selected_subspace_dets": 1288,
+              "nonzero_dets_gt_1e_8": 1288,
+              "fraction_of_fci_space": 0.08113,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.001,
+              "e_sci_ha": -1827.2440878,
+              "abs_err_vs_fci_mha": 0.0747,
+              "selected_subspace_dets": 4187,
+              "nonzero_dets_gt_1e_8": 4186,
+              "fraction_of_fci_space": 0.26373,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0003,
+              "e_sci_ha": -1827.2441462,
+              "abs_err_vs_fci_mha": 0.0163,
+              "selected_subspace_dets": 7828,
+              "nonzero_dets_gt_1e_8": 7824,
+              "fraction_of_fci_space": 0.49307,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0001,
+              "e_sci_ha": -1827.2441622,
+              "abs_err_vs_fci_mha": 0.0003,
+              "selected_subspace_dets": 11300,
+              "nonzero_dets_gt_1e_8": 11281,
+              "fraction_of_fci_space": 0.71177,
+              "within_chemical_accuracy_1p6_mha": true
+            }
+          ]
+        }
+      },
+      {
+        "system_id": "CYP3A4_1TQN_CLR_MIC_10o",
+        "clinical_label": "LTC-08 COPD (CYP3A4 + Clarithromycin Nitroso-MIC, Matched S=0 Singlet)",
+        "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_1TQN_CLR_MIC_QMMM_CAS10e10o_def2SVP.fcidump.gz",
+        "fcidump_sha256": "86768eda7d40fb7f3c12ab97bdf50c8d814f0c95a06edcd8a7a222463adf120c",
+        "n_spatial_orbitals": 10,
+        "nelec_alpha_beta": [
+          5,
+          5
+        ],
+        "ms2": 0,
+        "exact_fci_ha": -1940.1380776,
+        "s2_expectation": 0.0,
+        "orbital_entanglement": {
+          "n_orb": 10,
+          "nelec": [
+            5,
+            5
+          ],
+          "s1_nats": [
+            0.595449,
+            0.506015,
+            0.413792,
+            0.636419,
+            0.601597,
+            1.056862,
+            0.450308,
+            0.607197,
+            0.10262,
+            0.094776
+          ],
+          "total_s1_nats": 5.065035,
+          "max_s1_nats": 1.056862,
+          "max_s1_fraction_of_ln4": 0.762365,
+          "i_pq_matrix_nats": [
+            [
+              0.0,
+              0.029031,
+              0.010169,
+              0.122298,
+              0.143903,
+              0.497686,
+              0.040229,
+              0.088584,
+              0.002454,
+              0.023946
+            ],
+            [
+              0.029031,
+              0.0,
+              0.005492,
+              0.021803,
+              0.013223,
+              0.067142,
+              0.040846,
+              0.557563,
+              0.005951,
+              0.002934
+            ],
+            [
+              0.010169,
+              0.005492,
+              0.0,
+              0.012411,
+              0.012541,
+              0.058959,
+              0.408175,
+              0.080012,
+              0.002129,
+              0.003622
+            ],
+            [
+              0.122298,
+              0.021803,
+              0.012411,
+              0.0,
+              0.176428,
+              0.562318,
+              0.036384,
+              0.080297,
+              0.011379,
+              0.01617
+            ],
+            [
+              0.143903,
+              0.013223,
+              0.012541,
+              0.176428,
+              0.0,
+              0.530459,
+              0.046735,
+              0.032883,
+              0.039777,
+              0.006063
+            ],
+            [
+              0.497686,
+              0.067142,
+              0.058959,
+              0.562318,
+              0.530459,
+              0.0,
+              0.034397,
+              0.057368,
+              0.002886,
+              0.004502
+            ],
+            [
+              0.040229,
+              0.040846,
+              0.408175,
+              0.036384,
+              0.046735,
+              0.034397,
+              0.0,
+              0.006989,
+              0.003844,
+              0.00532
+            ],
+            [
+              0.088584,
+              0.557563,
+              0.080012,
+              0.080297,
+              0.032883,
+              0.057368,
+              0.006989,
+              0.0,
+              0.005285,
+              0.003339
+            ],
+            [
+              0.002454,
+              0.005951,
+              0.002129,
+              0.011379,
+              0.039777,
+              0.002886,
+              0.003844,
+              0.005285,
+              0.0,
+              0.008217
+            ],
+            [
+              0.023946,
+              0.002934,
+              0.003622,
+              0.01617,
+              0.006063,
+              0.004502,
+              0.00532,
+              0.003339,
+              0.008217,
+              0.0
+            ]
+          ],
+          "max_i_pq_nats": 0.562318,
+          "sum_i_pq_nats": 3.922143,
+          "pairs_gt_0p001": 45,
+          "pairs_gt_0p01": 30,
+          "pairs_gt_0p10": 8,
+          "total_orbital_pairs": 45,
+          "dense_entanglement_edge_fraction_gt_0p01": 0.6667,
+          "algebraic_connectivity_fiedler_lambda2": 0.081382,
+          "fiedler_1d_orbital_order": [
+            9,
+            8,
+            0,
+            3,
+            4,
+            5,
+            7,
+            1,
+            6,
+            2
+          ],
+          "rdm16_min_eigenvalue_check": 0.0
+        },
+        "mps_bipartite_canonical_order": {
+          "cut_site_m": 5,
+          "bipartite_entropy_nats": 2.140528,
+          "bipartite_entropy_bits": 3.088129,
+          "leading_schmidt_weight_sigma0_sq": 0.487854,
+          "chi_discard_1e_4": 474,
+          "chi_discard_1e_5": 692,
+          "chi_discard_1e_6": 845,
+          "max_nonzero_schmidt_rank": 1024
+        },
+        "mps_bipartite_fiedler_1d_order": {
+          "cut_site_m": 5,
+          "bipartite_entropy_nats": 1.395482,
+          "bipartite_entropy_bits": 2.013255,
+          "leading_schmidt_weight_sigma0_sq": 0.541473,
+          "chi_discard_1e_4": 122,
+          "chi_discard_1e_5": 232,
+          "chi_discard_1e_6": 378,
+          "max_nonzero_schmidt_rank": 955
+        },
+        "selected_ci_convergence": {
+          "full_fci_determinants": 63504,
+          "dets_required_for_1p6_mha": 60516,
+          "fraction_of_fci_required_for_1p6_mha": 0.95295,
+          "sweep": [
+            {
+              "select_cutoff": 0.1,
+              "e_sci_ha": -1939.9783915,
+              "abs_err_vs_fci_mha": 159.6861,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 2e-05,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.03,
+              "e_sci_ha": -1940.0167038,
+              "abs_err_vs_fci_mha": 121.3737,
+              "selected_subspace_dets": 64,
+              "nonzero_dets_gt_1e_8": 64,
+              "fraction_of_fci_space": 0.00101,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.01,
+              "e_sci_ha": -1940.0764871,
+              "abs_err_vs_fci_mha": 61.5905,
+              "selected_subspace_dets": 784,
+              "nonzero_dets_gt_1e_8": 784,
+              "fraction_of_fci_space": 0.01235,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.003,
+              "e_sci_ha": -1940.1254788,
+              "abs_err_vs_fci_mha": 12.5988,
+              "selected_subspace_dets": 7744,
+              "nonzero_dets_gt_1e_8": 7744,
+              "fraction_of_fci_space": 0.12195,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.001,
+              "e_sci_ha": -1940.1364683,
+              "abs_err_vs_fci_mha": 1.6092,
+              "selected_subspace_dets": 33489,
+              "nonzero_dets_gt_1e_8": 33485,
+              "fraction_of_fci_space": 0.52735,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.0003,
+              "e_sci_ha": -1940.138061,
+              "abs_err_vs_fci_mha": 0.0166,
+              "selected_subspace_dets": 60516,
+              "nonzero_dets_gt_1e_8": 60502,
+              "fraction_of_fci_space": 0.95295,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0001,
+              "e_sci_ha": -1940.1380774,
+              "abs_err_vs_fci_mha": 0.0002,
+              "selected_subspace_dets": 63001,
+              "nonzero_dets_gt_1e_8": 62981,
+              "fraction_of_fci_space": 0.99208,
+              "within_chemical_accuracy_1p6_mha": true
+            }
+          ]
+        }
+      },
+      {
+        "system_id": "CYP3A4_5TE8_TS_11o",
+        "clinical_label": "LTC-07 MASLD (CYP3A4 + Midazolam TS_HAT CAS(11e,11o), S=1/2)",
+        "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS11e11o_def2SVP.fcidump.gz",
+        "fcidump_sha256": "1d089cf4e288e629395c261361182ba66a813871646c0024e9982837597e6fd9",
+        "n_spatial_orbitals": 11,
+        "nelec_alpha_beta": [
+          6,
+          5
+        ],
+        "ms2": 1,
+        "exact_fci_ha": -1885.9824705,
+        "s2_expectation": 0.75,
+        "orbital_entanglement": {
+          "n_orb": 11,
+          "nelec": [
+            6,
+            5
+          ],
+          "s1_nats": [
+            0.294402,
+            0.10406,
+            1.128604,
+            0.962303,
+            0.979003,
+            0.574428,
+            1.171342,
+            0.264421,
+            0.856631,
+            0.209382,
+            0.089082
+          ],
+          "total_s1_nats": 6.633657,
+          "max_s1_nats": 1.171342,
+          "max_s1_fraction_of_ln4": 0.844944,
+          "i_pq_matrix_nats": [
+            [
+              0.0,
+              0.002497,
+              0.014221,
+              0.046955,
+              0.023967,
+              0.008789,
+              0.01932,
+              0.01,
+              0.122282,
+              0.060508,
+              0.014085
+            ],
+            [
+              0.002497,
+              0.0,
+              0.036815,
+              0.011336,
+              0.020011,
+              0.002825,
+              0.020838,
+              0.000347,
+              0.001997,
+              0.005193,
+              0.065615
+            ],
+            [
+              0.014221,
+              0.036815,
+              0.0,
+              0.104259,
+              0.534992,
+              0.26148,
+              0.685303,
+              0.027727,
+              0.030112,
+              0.001019,
+              0.000561
+            ],
+            [
+              0.046955,
+              0.011336,
+              0.104259,
+              0.0,
+              0.04491,
+              0.041545,
+              0.179812,
+              0.014002,
+              0.737842,
+              0.094561,
+              0.032189
+            ],
+            [
+              0.023967,
+              0.020011,
+              0.534992,
+              0.04491,
+              0.0,
+              0.189223,
+              0.409091,
+              0.057473,
+              0.055997,
+              0.010165,
+              0.002241
+            ],
+            [
+              0.008789,
+              0.002825,
+              0.26148,
+              0.041545,
+              0.189223,
+              0.0,
+              0.114283,
+              0.016745,
+              0.036921,
+              0.00121,
+              0.000221
+            ],
+            [
+              0.01932,
+              0.020838,
+              0.685303,
+              0.179812,
+              0.409091,
+              0.114283,
+              0.0,
+              0.150061,
+              0.060579,
+              0.007755,
+              0.000392
+            ],
+            [
+              0.01,
+              0.000347,
+              0.027727,
+              0.014002,
+              0.057473,
+              0.016745,
+              0.150061,
+              0.0,
+              0.008286,
+              0.002377,
+              6.8e-05
+            ],
+            [
+              0.122282,
+              0.001997,
+              0.030112,
+              0.737842,
+              0.055997,
+              0.036921,
+              0.060579,
+              0.008286,
+              0.0,
+              0.062922,
+              0.006928
+            ],
+            [
+              0.060508,
+              0.005193,
+              0.001019,
+              0.094561,
+              0.010165,
+              0.00121,
+              0.007755,
+              0.002377,
+              0.062922,
+              0.0,
+              0.005533
+            ],
+            [
+              0.014085,
+              0.065615,
+              0.000561,
+              0.032189,
+              0.002241,
+              0.000221,
+              0.000392,
+              6.8e-05,
+              0.006928,
+              0.005533,
+              0.0
+            ]
+          ],
+          "max_i_pq_nats": 0.737842,
+          "sum_i_pq_nats": 4.476384,
+          "pairs_gt_0p001": 50,
+          "pairs_gt_0p01": 36,
+          "pairs_gt_0p10": 11,
+          "total_orbital_pairs": 55,
+          "dense_entanglement_edge_fraction_gt_0p01": 0.6545,
+          "algebraic_connectivity_fiedler_lambda2": 0.094533,
+          "fiedler_1d_orbital_order": [
+            10,
+            1,
+            3,
+            0,
+            8,
+            2,
+            4,
+            6,
+            9,
+            5,
+            7
+          ],
+          "rdm16_min_eigenvalue_check": 0.0
+        },
+        "mps_bipartite_canonical_order": {
+          "cut_site_m": 5,
+          "bipartite_entropy_nats": 2.53556,
+          "bipartite_entropy_bits": 3.658041,
+          "leading_schmidt_weight_sigma0_sq": 0.264453,
+          "chi_discard_1e_4": 383,
+          "chi_discard_1e_5": 608,
+          "chi_discard_1e_6": 815,
+          "max_nonzero_schmidt_rank": 1024
+        },
+        "mps_bipartite_fiedler_1d_order": {
+          "cut_site_m": 5,
+          "bipartite_entropy_nats": 1.119925,
+          "bipartite_entropy_bits": 1.615711,
+          "leading_schmidt_weight_sigma0_sq": 0.773969,
+          "chi_discard_1e_4": 130,
+          "chi_discard_1e_5": 262,
+          "chi_discard_1e_6": 446,
+          "max_nonzero_schmidt_rank": 1021
+        },
+        "selected_ci_convergence": {
+          "full_fci_determinants": 213444,
+          "dets_required_for_1p6_mha": 87672,
+          "fraction_of_fci_required_for_1p6_mha": 0.41075,
+          "sweep": [
+            {
+              "select_cutoff": 0.1,
+              "e_sci_ha": -1885.3575423,
+              "abs_err_vs_fci_mha": 624.9282,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 0.0,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.03,
+              "e_sci_ha": -1885.7936151,
+              "abs_err_vs_fci_mha": 188.8555,
+              "selected_subspace_dets": 121,
+              "nonzero_dets_gt_1e_8": 121,
+              "fraction_of_fci_space": 0.00057,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.01,
+              "e_sci_ha": -1885.9328188,
+              "abs_err_vs_fci_mha": 49.6518,
+              "selected_subspace_dets": 2112,
+              "nonzero_dets_gt_1e_8": 2112,
+              "fraction_of_fci_space": 0.00989,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.003,
+              "e_sci_ha": -1885.9758725,
+              "abs_err_vs_fci_mha": 6.5981,
+              "selected_subspace_dets": 25821,
+              "nonzero_dets_gt_1e_8": 25816,
+              "fraction_of_fci_space": 0.12097,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.001,
+              "e_sci_ha": -1885.9818599,
+              "abs_err_vs_fci_mha": 0.6106,
+              "selected_subspace_dets": 87672,
+              "nonzero_dets_gt_1e_8": 87655,
+              "fraction_of_fci_space": 0.41075,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0003,
+              "e_sci_ha": -1885.9825571,
+              "abs_err_vs_fci_mha": 0.0866,
+              "selected_subspace_dets": 137922,
+              "nonzero_dets_gt_1e_8": 137817,
+              "fraction_of_fci_space": 0.64617,
+              "within_chemical_accuracy_1p6_mha": true
+            },
+            {
+              "select_cutoff": 0.0001,
+              "e_sci_ha": -1885.9826439,
+              "abs_err_vs_fci_mha": 0.1734,
+              "selected_subspace_dets": 188347,
+              "nonzero_dets_gt_1e_8": 188072,
+              "fraction_of_fci_space": 0.88242,
+              "within_chemical_accuracy_1p6_mha": true
+            }
+          ]
+        }
+      },
+      {
+        "system_id": "CYP3A4_5TE8_TS_13o",
+        "clinical_label": "LTC-07 MASLD v1.2 (CYP3A4 + Midazolam TS_HAT CAS(13e,13o), 2.94M Dets, S=1/2)",
+        "fcidump_file": "opencyp_ftqc/fcidump/CYP3A4_5TE8_08J_TS_HAT_QMMM_CAS13e13o_def2SVP.fcidump.gz",
+        "fcidump_sha256": "0f5fc7d8666dcbf306940edb78bb126c4846c63918e79a10800be0409f689cfd",
+        "n_spatial_orbitals": 13,
+        "nelec_alpha_beta": [
+          7,
+          6
+        ],
+        "ms2": 1,
+        "exact_fci_ha": -1886.0368475,
+        "s2_expectation": 0.75,
+        "orbital_entanglement": {
+          "n_orb": 13,
+          "nelec": [
+            7,
+            6
+          ],
+          "s1_nats": [
+            0.052443,
+            0.022774,
+            0.412175,
+            0.574317,
+            0.670896,
+            1.342901,
+            1.284327,
+            0.764314,
+            0.87018,
+            0.592819,
+            0.094528,
+            0.100053,
+            0.113535
+          ],
+          "total_s1_nats": 6.895263,
+          "max_s1_nats": 1.342901,
+          "max_s1_fraction_of_ln4": 0.968698,
+          "i_pq_matrix_nats": [
+            [
+              0.0,
+              0.000916,
+              0.000463,
+              0.000399,
+              0.003818,
+              9.6e-05,
+              0.000339,
+              0.005419,
+              0.001675,
+              0.024278,
+              0.00481,
+              0.005076,
+              0.000504
+            ],
+            [
+              0.000916,
+              0.0,
+              0.001833,
+              0.000258,
+              0.006184,
+              0.000447,
+              0.000316,
+              0.005306,
+              0.006335,
+              0.000702,
+              0.002157,
+              0.00197,
+              0.000175
+            ],
+            [
+              0.000463,
+              0.001833,
+              0.0,
+              0.049965,
+              0.032492,
+              0.007118,
+              0.012133,
+              0.027138,
+              0.023742,
+              0.169832,
+              0.014285,
+              0.015597,
+              0.022269
+            ],
+            [
+              0.000399,
+              0.000258,
+              0.049965,
+              0.0,
+              0.013708,
+              0.006589,
+              0.029139,
+              0.012298,
+              0.159651,
+              0.21921,
+              0.005973,
+              0.010838,
+              0.018383
+            ],
+            [
+              0.003818,
+              0.006184,
+              0.032492,
+              0.013708,
+              0.0,
+              0.01018,
+              0.010567,
+              0.396441,
+              0.337555,
+              0.042174,
+              0.013624,
+              0.020237,
+              0.00657
+            ],
+            [
+              9.6e-05,
+              0.000447,
+              0.007118,
+              0.006589,
+              0.01018,
+              0.0,
+              1.933105,
+              0.20891,
+              0.10912,
+              0.009856,
+              0.000584,
+              0.000508,
+              0.001466
+            ],
+            [
+              0.000339,
+              0.000316,
+              0.012133,
+              0.029139,
+              0.010567,
+              1.933105,
+              0.0,
+              0.093776,
+              0.050087,
+              0.004576,
+              0.000188,
+              0.000199,
+              0.000537
+            ],
+            [
+              0.005419,
+              0.005306,
+              0.027138,
+              0.012298,
+              0.396441,
+              0.20891,
+              0.093776,
+              0.0,
+              0.274576,
+              0.019153,
+              0.006983,
+              0.005995,
+              0.006348
+            ],
+            [
+              0.001675,
+              0.006335,
+              0.023742,
+              0.159651,
+              0.337555,
+              0.10912,
+              0.050087,
+              0.274576,
+              0.0,
+              0.041787,
+              0.007187,
+              0.01495,
+              0.013975
+            ],
+            [
+              0.024278,
+              0.000702,
+              0.169832,
+              0.21921,
+              0.042174,
+              0.009856,
+              0.004576,
+              0.019153,
+              0.041787,
+              0.0,
+              0.015912,
+              0.002492,
+              0.003287
+            ],
+            [
+              0.00481,
+              0.002157,
+              0.014285,
+              0.005973,
+              0.013624,
+              0.000584,
+              0.000188,
+              0.006983,
+              0.007187,
+              0.015912,
+              0.0,
+              0.004549,
+              0.004886
+            ],
+            [
+              0.005076,
+              0.00197,
+              0.015597,
+              0.010838,
+              0.020237,
+              0.000508,
+              0.000199,
+              0.005995,
+              0.01495,
+              0.002492,
+              0.004549,
+              0.0,
+              0.007439
+            ],
+            [
+              0.000504,
+              0.000175,
+              0.022269,
+              0.018383,
+              0.00657,
+              0.001466,
+              0.000537,
+              0.006348,
+              0.013975,
+              0.003287,
+              0.004886,
+              0.007439,
+              0.0
+            ]
+          ],
+          "max_i_pq_nats": 1.933105,
+          "sum_i_pq_nats": 4.603615,
+          "pairs_gt_0p001": 62,
+          "pairs_gt_0p01": 35,
+          "pairs_gt_0p10": 9,
+          "total_orbital_pairs": 78,
+          "dense_entanglement_edge_fraction_gt_0p01": 0.4487,
+          "algebraic_connectivity_fiedler_lambda2": 0.028514,
+          "fiedler_1d_orbital_order": [
+            0,
+            12,
+            9,
+            11,
+            3,
+            2,
+            10,
+            6,
+            5,
+            8,
+            7,
+            4,
+            1
+          ],
+          "rdm16_min_eigenvalue_check": 0.0
+        },
+        "mps_bipartite_canonical_order": {
+          "cut_site_m": 6,
+          "bipartite_entropy_nats": 2.872371,
+          "bipartite_entropy_bits": 4.143955,
+          "leading_schmidt_weight_sigma0_sq": 0.217971,
+          "chi_discard_1e_4": 572,
+          "chi_discard_1e_5": 1006,
+          "chi_discard_1e_6": 1464,
+          "max_nonzero_schmidt_rank": 3365
+        },
+        "mps_bipartite_fiedler_1d_order": {
+          "cut_site_m": 6,
+          "bipartite_entropy_nats": 1.069095,
+          "bipartite_entropy_bits": 1.542378,
+          "leading_schmidt_weight_sigma0_sq": 0.796974,
+          "chi_discard_1e_4": 262,
+          "chi_discard_1e_5": 550,
+          "chi_discard_1e_6": 963,
+          "max_nonzero_schmidt_rank": 3091
+        },
+        "selected_ci_convergence": {
+          "full_fci_determinants": 2944656,
+          "dets_required_for_1p6_mha": 2944656,
+          "fraction_of_fci_required_for_1p6_mha": 1.0,
+          "sweep": [
+            {
+              "select_cutoff": 0.1,
+              "e_sci_ha": -1885.5099126,
+              "abs_err_vs_fci_mha": 526.9348,
+              "selected_subspace_dets": 1,
+              "nonzero_dets_gt_1e_8": 1,
+              "fraction_of_fci_space": 0.0,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.05,
+              "e_sci_ha": -1885.730017,
+              "abs_err_vs_fci_mha": 306.8304,
+              "selected_subspace_dets": 30,
+              "nonzero_dets_gt_1e_8": 30,
+              "fraction_of_fci_space": 1e-05,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.02,
+              "e_sci_ha": -1885.9027589,
+              "abs_err_vs_fci_mha": 134.0885,
+              "selected_subspace_dets": 620,
+              "nonzero_dets_gt_1e_8": 620,
+              "fraction_of_fci_space": 0.00021,
+              "within_chemical_accuracy_1p6_mha": false
+            },
+            {
+              "select_cutoff": 0.01,
+              "e_sci_ha": -1885.9477411,
+              "abs_err_vs_fci_mha": 89.1064,
+              "selected_subspace_dets": 3936,
+              "nonzero_dets_gt_1e_8": 3936,
+              "fraction_of_fci_space": 0.00134,
+              "within_chemical_accuracy_1p6_mha": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "jev_citation_audit": {
+    "total_claims_audited": 8,
+    "all_passed": true,
+    "option_order_invariance_rate": 1.0,
+    "results": [
+      {
+        "claim_id": "CLAIM_STEP1_PMID38393578_OUT_OF_SAMPLE",
+        "expected_verdict": "supported",
+        "observed_verdict": "supported",
+        "forward_probability": 0.87,
+        "reversed_probability": 0.89,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_STEP1_MARKOVIAN_WASHOUT_MISS",
+        "expected_verdict": "supported",
+        "observed_verdict": "supported",
+        "forward_probability": 0.94,
+        "reversed_probability": 0.94,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_STEP1_FAERS_COPD_MACROLIDE_ROR",
+        "expected_verdict": "supported",
+        "observed_verdict": "supported",
+        "forward_probability": 0.96,
+        "reversed_probability": 0.99,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_STEP1_FAERS_ACE_NEGATIVE_CONTROL",
+        "expected_verdict": "supported",
+        "observed_verdict": "supported",
+        "forward_probability": 0.95,
+        "reversed_probability": 0.98,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_STEP2A_ENTANGLEMENT_S0_DEMARCATION",
+        "expected_verdict": "supported",
+        "observed_verdict": "supported",
+        "forward_probability": 0.95,
+        "reversed_probability": 0.97,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "CLAIM_STEP2A_CAS13_2P94M_DETS_AND_CHI",
+        "expected_verdict": "supported",
+        "observed_verdict": "supported",
+        "forward_probability": 0.97,
+        "reversed_probability": 0.99,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "TRAP_FAERS_PROVES_AUTONOMOUS_PRESCRIBING",
+        "expected_verdict": "contradicted",
+        "observed_verdict": "contradicted",
+        "forward_probability": 0.96,
+        "reversed_probability": 0.95,
+        "option_order_invariant": true,
+        "passed": true
+      },
+      {
+        "claim_id": "TRAP_MARKOV_PK_CAPTURES_POST_WASHOUT_MBI",
+        "expected_verdict": "contradicted",
+        "observed_verdict": "contradicted",
+        "forward_probability": 1.0,
+        "reversed_probability": 1.0,
+        "option_order_invariant": true,
+        "passed": true
+      }
+    ]
+  },
+  "figure13_visual_qa": {
+    "file": "samskrift/figures/figure13_external_validation_and_entanglement.png",
+    "sha256": "be1affad552afee9dbdab3fa595b1e244a4658b043681e5647575f837b0358d1",
+    "prepared_dimensions_px": [
+      1568,
+      1059
+    ],
+    "model": "jev-1.14.0",
+    "p_four_panels_visible": 0.99,
+    "publication_legibility_score": 1.44,
+    "washout_panel_box": {
+      "left": 0.01,
+      "top": 0.05,
+      "right": 0.32,
+      "bottom": 0.48
+    },
+    "entanglement_wall_panel_box": {
+      "left": 0.68,
+      "top": 0.56,
+      "right": 0.98,
+      "bottom": 0.98
+    }
+  },
+  "ml_dsa_65_envelope": {
+    "algorithm": "NIST-FIPS-204-ML-DSA-65",
+    "signed_digest_sha256": "64a2a974ff594032e3d47cd79fe666ba281c5aafc1868669f27c30c193973f77",
+    "signature_bytes": 3309,
+    "public_key_sha256": "f5121317b32ce1f9e383c391798a8aef7faa480e1d6678bc505f7d7c4b608270",
+    "signature_sha256": "8203ceb8ee515b7d53907976a3590b4c9b652b09c202b5b9f34269d8f4beae5f"
+  },
+  "receipt_sha256": "9564f1a3bc81ee88cd712f532420d5482d3e9088c29b5e971aeb137aa6d7618f"
+}

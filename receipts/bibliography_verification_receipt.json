@@ -1,5 +1,5 @@
 {
-  "total_entries": 49,
+  "total_entries": 54,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -343,6 +343,41 @@
       "status": "VERIFIED",
       "verification_source": "Crossref HTTP 200 (10.1074/jbc.M405427200)",
       "resolved_title": "The Structure of Human Cytochrome P450 2C9 Complexed with Flurbiprofen at 2.0-\u00c5 Resolution"
+    },
+    {
+      "key": "rohr2024ritonavir_washout",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1007/s40262-024-01350-x)",
+      "resolved_title": "Time Course of the Interaction Between Oral Short-Term Ritonavir Therapy with Three Factor Xa Inhibitors and the Activity of CYP2D6, CYP2C19, and CYP3A4 in Healthy Volunteers"
+    },
+    {
+      "key": "katzenmaier2011cyp3a_timecourse",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1038/clpt.2011.164)",
+      "resolved_title": "Determining the Time Course of CYP3A Inhibition by Potent Reversible and Irreversible CYP3A Inhibitors Using A Limited Sampling Strategy"
+    },
+    {
+      "key": "quinney2013clarithromycin_onset",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1007/s00228-012-1339-x)",
+      "resolved_title": "Rate of onset of inhibition of gut-wall and hepatic CYP3A by clarithromycin"
+    },
+    {
+      "key": "parker2011paroxetine_metoprolol",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1592/phco.31.7.630)",
+      "resolved_title": "Effects of Paroxetine on the Pharmacokinetics and Pharmacodynamics of Immediate\u2010Release and Extended\u2010Release Metoprolol"
+    },
+    {
+      "key": "boguslawski2012orbital_entanglement",
+      "entry_type": "article",
+      "status": "VERIFIED",
+      "verification_source": "Crossref HTTP 200 (10.1021/jz301319v)",
+      "resolved_title": "Entanglement Measures for Single- and Multireference Correlation Effects"
     }
   ]
 }

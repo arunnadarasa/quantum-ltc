@@ -10,9 +10,10 @@ const BOOKMARKS = [
   { label: "p.10 · §4.5 OpenCYP-FTQC & ChEMBL_37", page: 10 },
   { label: "p.11 · §5 Modal QLTCMLM & Barren Plateau", page: 11 },
   { label: "p.14 · §6.3 10-LTC CQA & OpenCYP v1.1", page: 14 },
-  { label: "p.16 · Fig. 11 71-Node Knowledge Graph", page: 16 },
+  { label: "p.16 · Fig. 11 72-Node Knowledge Graph", page: 16 },
   { label: "p.17 · §6.4 CQWM v0.1 & v0.2 (Helios 6q Comb)", page: 17 },
-  { label: "p.18 · §7 Conclusion & 49 Verified Refs", page: 18 }
+  { label: "p.18 · §6.5 Washout, FAERS & OpenCYP v1.2", page: 18 },
+  { label: "p.19 · §7 Conclusion & 54 Verified Refs", page: 19 }
 ];
 
 // Slider UI values in [0, 1], mapped to centered [-1, 1] via x_c = 2*u - 1
@@ -114,17 +115,17 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Clinical Quantum Computing Monograph (Mid and South Essex NHS Foundation Trust \\& ISPPA)},
-  pages   = {1--21},
+  pages   = {1--22},
   url     = {https://arunnadarasa.github.io/quantum-ltc/},
-  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 14 SHA-256-sealed receipts + 71-node KG across Quantinuum Nexus Helios-1E-lite (12,288 emulator shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.1 (13 QM/MM FCIDUMPs + Empirical THC across PDB 5TE8, 3NXU, 4WNU, 1R9O, 1TQN vs ACE 1O86), Clinical Quantum World Model (CQWM v0.1 \\& v0.2), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
+  note    = {Non-commercial open science (Apache-2.0 / CC BY 4.0); 15 SHA-256-sealed experimental receipts + 72-node KG across Quantinuum Nexus Helios-1E-lite (12,288 emulator shots), Haiqu, OpenJij, HiGHS MILP, HQS, QProtSim, PySCF 2.15 OpenCYP-FTQC v1.2 (15 QM/MM FCIDUMPs up to CAS(13e,13o) / 2.94M determinants + Empirical THC + Orbital Entanglement), Clinical Quantum World Model (CQWM v0.1 \\& v0.2 validated against human washout trial PMID 38393578 \\& live openFDA FAERS 21.05M reports), ChEMBL_37, AlphaGenome 2, Modal, and TypeSafe Jev 1.14 (10-LTC CQA Portfolio) under NHS DCB0129 \\& DCB0160}
 }`,
   opencyp: `@misc{nadarasa2026opencypftqc,
-  title        = {{OpenCYP-FTQC v1.1}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP} \\& Empirical {THC} Archive and 12-Regimen {ChEMBL\\_37} {PBPK} Benchmark},
+  title        = {{OpenCYP-FTQC v1.2}: Public Multi-Isoform Human Cytochrome {P450} Protein-Electrostatic {QM/MM} {FCIDUMP}, Empirical {THC} \\& Orbital Entanglement Archive},
   author       = {Nadarasa, Arun},
   year         = {2026},
   howpublished = {Hugging Face Datasets \\& GitHub Open-Science Benchmark},
   url          = {https://huggingface.co/datasets/socialprescribing/opencyp-ftqc},
-  note         = {13 SHA-256-sealed PySCF 2.15 def2-SVP QM/MM FCIDUMP Hamiltonians + empirical unit-leaf THC (.npz, |dE_FCI|<=0.61 mHa) across CYP3A4 (5TE8/3NXU/1TQN), CYP2D6 (4WNU), CYP2C9 (1R9O), and matched S=0 ACE Zn2+ control (1O86, |RCCSD(T)-FCI|=0.00566 mHa vs COPD CLR-MIC 7.15 mHa); 1.95x--7.01x Cayley SO(M) Delta-THC compression; CC BY 4.0}
+  note         = {15 SHA-256-sealed PySCF 2.15 def2-SVP QM/MM FCIDUMP Hamiltonians up to 2,944,656-determinant CAS(13e,13o) + empirical unit-leaf THC (.npz, |dE_FCI|<=0.61 mHa) across CYP3A4 (5TE8/3NXU/1TQN), CYP2D6 (4WNU), CYP2C9 (1R9O), and matched S=0 ACE Zn2+ control (1O86, s1=0.083 nats, chi=63 vs CYP3A4 5TE8 s1=6.90 nats, chi=963); CC BY 4.0}
 }`,
   qltcmlm: `@misc{nadarasa2026qltcmlm,
   title        = {{QLTCMLM}: 4-Qubit Frobenius Data-Reuploading Multi-Task Variational Quantum Classifier for Multimorbid {NHS} {LTC} Risk Stratification},
@@ -213,8 +214,8 @@ async function initPdfReader() {
   const DOC = {
     pdfUrl: "downloads/Quantum_LTC_Roadmap.pdf",
     pagesDir: "pages",
-    totalPages: 21,
-    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (21 Pages)"
+    totalPages: 22,
+    altTitle: "Quantum-LTC Four-Era Samskrift Monograph (22 Pages)"
   };
 
   let zoom = 1.0;
@@ -2101,6 +2102,262 @@ function initChartsAndLightbox() {
       charts.push(cCqwm);
     }
 
+    // Chart 9 (Full-Width · Fig. 13): External Human Washout (PMID 38393578), Live openFDA FAERS & OpenCYP-FTQC v1.2 Entanglement
+    const elExt12 = document.getElementById("echart-ext-v1-2");
+    if (elExt12 && PORTAL_DATA.ext_validation_v1_2) {
+      const cExt12 = window.echarts.init(elExt12);
+      const ext = PORTAL_DATA.ext_validation_v1_2;
+      function renderExt12Tab(mode) {
+        if (mode === "faers") {
+          const fRows = [...ext.faers.rows].reverse();
+          cExt12.setOption({
+            tooltip: {
+              ...darkTooltip,
+              formatter: params => {
+                const p = Array.isArray(params) ? params[0] : params;
+                const r = fRows[p.dataIndex];
+                const h2h = r.h2h_ror ? `<br/>Active-Comparator Head-to-Head ROR: <strong style="color:#f4ae42">${r.h2h_ror}×</strong>` : "";
+                return `<strong>${r.label}</strong><br/>` +
+                  `FAERS ROR: <strong style="color:#38d6c4">${r.ror}×</strong> (95% CI: ${r.ci_low}–${r.ci_high})<br/>` +
+                  `Exposed Events: <code>${r.events} / ${r.total}</code> (${r.rate_pct}%)${h2h}`;
+              }
+            },
+            grid: { left: 162, right: 64, top: 28, bottom: 44 },
+            xAxis: {
+              type: "log",
+              logBase: 10,
+              min: 0.3,
+              max: 220,
+              ...baseAxis,
+              name: `Live openFDA FAERS Reporting Odds Ratio (ROR · ${ext.faers.total_reports.toLocaleString()} Reports)`,
+              nameLocation: "middle",
+              nameGap: 28,
+              nameTextStyle: { color: "#bfece6", fontSize: 10.5 }
+            },
+            yAxis: {
+              type: "category",
+              data: fRows.map(r => r.short_label.replace("\n", " · ")),
+              ...baseAxis,
+              axisLabel: { color: "#eef7f5", fontSize: 9.8 }
+            },
+            series: [
+              {
+                name: "FAERS ROR",
+                type: "bar",
+                barWidth: "56%",
+                data: fRows.map(r => ({
+                  value: r.ror,
+                  itemStyle: {
+                    color: r.ror >= 50 ? "#f06a3b" : (r.ror >= 12 ? "#f4ae42" : (r.ror <= 1.2 ? "#38bdf8" : "#38d6c4")),
+                    borderRadius: [0, 4, 4, 0]
+                  }
+                })),
+                label: {
+                  show: true,
+                  position: "right",
+                  formatter: p => {
+                    const r = fRows[p.dataIndex];
+                    return `${r.ror}× (${r.events}/${r.total})`;
+                  },
+                  color: "#bfece6",
+                  fontSize: 9.6,
+                  fontFamily: "JetBrains Mono, monospace"
+                },
+                markLine: {
+                  silent: true,
+                  data: [
+                    { xAxis: 1.0, lineStyle: { color: "#9eb7b4", type: "dashed", width: 1.4 }, label: { formatter: "Null (ROR=1.0×)", color: "#9eb7b4", fontSize: 9.5 } }
+                  ]
+                }
+              }
+            ]
+          }, true);
+        } else if (mode === "entanglement") {
+          const sys = ext.entanglement.systems;
+          cExt12.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Total Single-Orbital Entropy ∑ sₚ⁽¹⁾ (nats)",
+                "Pairwise Mutual Information ∑_{p<q} I_{pq} (nats)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.8 },
+              top: 6
+            },
+            grid: { left: 56, right: 28, top: 56, bottom: 54 },
+            xAxis: {
+              type: "category",
+              data: sys.map(s => s.short_label),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.4, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 11.5,
+              ...baseAxis,
+              name: "Exact Active-Space Entanglement (nats)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Total Single-Orbital Entropy ∑ sₚ⁽¹⁾ (nats)",
+                type: "bar",
+                barGap: "12%",
+                barWidth: "28%",
+                data: sys.map(s => s.total_s1_nats),
+                itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#38d6c4", fontSize: 9.4, formatter: "{c}" }
+              },
+              {
+                name: "Pairwise Mutual Information ∑_{p<q} I_{pq} (nats)",
+                type: "bar",
+                barWidth: "28%",
+                data: sys.map(s => s.sum_i_pq_nats),
+                itemStyle: { color: "#a78bfa", borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", color: "#c4b5fd", fontSize: 9.4, formatter: "{c}" }
+              }
+            ]
+          }, true);
+        } else if (mode === "dmrg") {
+          const sys = ext.entanglement.systems;
+          cExt12.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Fiedler 1D MPS χ (w_disc ≤ 10⁻⁴)",
+                "Fiedler 1D MPS χ (w_disc ≤ 10⁻⁵)",
+                "Fiedler 1D MPS χ (w_disc ≤ 10⁻⁶)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.8 },
+              top: 6
+            },
+            grid: { left: 58, right: 28, top: 56, bottom: 54 },
+            xAxis: {
+              type: "category",
+              data: sys.map(s => `${s.short_label}\n(${s.fci_dets.toLocaleString()} dets)`),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.0, interval: 0, lineHeight: 12 }
+            },
+            yAxis: {
+              type: "log",
+              logBase: 10,
+              min: 5,
+              max: 1500,
+              ...baseAxis,
+              name: "Spectral Fiedler 1D Central-Cut Bond Dimension χ",
+              nameTextStyle: { color: "#f4ae42", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Fiedler 1D MPS χ (w_disc ≤ 10⁻⁴)",
+                type: "bar",
+                barGap: "10%",
+                data: sys.map(s => s.fiedler_chi_1e_4),
+                itemStyle: { color: "#60a5fa", borderRadius: [3, 3, 0, 0] }
+              },
+              {
+                name: "Fiedler 1D MPS χ (w_disc ≤ 10⁻⁵)",
+                type: "bar",
+                data: sys.map(s => s.fiedler_chi_1e_5),
+                itemStyle: { color: "#f4ae42", borderRadius: [3, 3, 0, 0] }
+              },
+              {
+                name: "Fiedler 1D MPS χ (w_disc ≤ 10⁻⁶)",
+                type: "bar",
+                data: sys.map(s => s.fiedler_chi_1e_6),
+                itemStyle: { color: "#f06a3b", borderRadius: [3, 3, 0, 0] },
+                label: { show: true, position: "top", color: "#ff9a76", fontSize: 9.5, fontFamily: "JetBrains Mono, monospace" }
+              }
+            ]
+          }, true);
+        } else {
+          const vs = ext.washout.visits;
+          cExt12.setOption({
+            tooltip: darkTooltip,
+            legend: {
+              data: [
+                "Human Trial Observed GMR (PMID 38393578, N=8)",
+                "Zero-Refit CQWM Δ-THC (GMFE = 1.434)",
+                "Zero-Refit CQWM Exact FCI",
+                "Memoryless Markovian Plasma-PK Twin",
+                "Single-Reference RCCSD(T) (GMFE = 8.881)"
+              ],
+              textStyle: { color: "#eef7f5", fontSize: 10.1 },
+              top: 4
+            },
+            grid: { left: 56, right: 28, top: 62, bottom: 48 },
+            xAxis: {
+              type: "category",
+              data: vs.map(v => v.study_day === 7 ? "Day 7 (+48h)\n<LLOQ Trap" : (v.study_day >= 9 ? `Day ${v.study_day} (+${(v.study_day - 5) * 24}h)` : `Day ${v.study_day}`)),
+              ...baseAxis,
+              axisLabel: { color: "#bfece6", fontSize: 9.6, interval: 0, lineHeight: 12.5 }
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 18,
+              ...baseAxis,
+              name: "Oral Midazolam Fold Exposure (AUCR)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Human Trial Observed GMR (PMID 38393578, N=8)",
+                type: "bar",
+                barWidth: "30%",
+                data: vs.map(v => v.human_observed_gmr_aucr),
+                itemStyle: { color: "rgba(238, 247, 245, 0.25)", borderColor: "#eef7f5", borderWidth: 1.5, borderRadius: [4, 4, 0, 0] },
+                label: { show: true, position: "top", formatter: "{c}×", color: "#eef7f5", fontSize: 9.5 }
+              },
+              {
+                name: "Zero-Refit CQWM Δ-THC (GMFE = 1.434)",
+                type: "line",
+                symbolSize: 8,
+                data: vs.map(v => v.pred_cqwm_delta_thc),
+                itemStyle: { color: "#38d6c4" },
+                lineStyle: { width: 3.2 }
+              },
+              {
+                name: "Zero-Refit CQWM Exact FCI",
+                type: "line",
+                symbolSize: 6,
+                data: vs.map(v => v.pred_exact_fci),
+                itemStyle: { color: "#a78bfa" },
+                lineStyle: { width: 2.2, type: "dotted" }
+              },
+              {
+                name: "Memoryless Markovian Plasma-PK Twin",
+                type: "line",
+                symbolSize: 7,
+                data: vs.map(v => v.pred_markovian_plasma_pk),
+                itemStyle: { color: "#f4ae42" },
+                lineStyle: { width: 2.5, type: "dashed" }
+              },
+              {
+                name: "Single-Reference RCCSD(T) (GMFE = 8.881)",
+                type: "line",
+                symbolSize: 6,
+                data: vs.map(v => v.pred_classical_rccsdt),
+                itemStyle: { color: "#f06a3b" },
+                lineStyle: { width: 2.3, type: "dashed" }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderExt12Tab("washout");
+      document.querySelectorAll("[data-ext12-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-ext12-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderExt12Tab(btn.dataset.ext12Tab);
+        });
+      });
+      charts.push(cExt12);
+    }
+
     window.addEventListener("resize", () => charts.forEach(c => c.resize()));
   }
 
@@ -2205,7 +2462,7 @@ function initTablesAndCitations() {
   });
 }
 
-/* ── 7. Interactive Apache ECharts Knowledge Graph Explorer (71 Nodes, 192 Triples) ── */
+/* ── 7. Interactive Apache ECharts Knowledge Graph Explorer (72 Nodes, 201 Triples) ── */
 function initKnowledgeGraph() {
   const el = document.getElementById("echart-kg");
   if (!el || !PORTAL_DATA?.knowledge_graph) return;
@@ -2216,7 +2473,7 @@ function initKnowledgeGraph() {
   const activeCats = new Set(kg.categories.map(c => c.id));
   let currentLayout = "layered";
   let searchNeedle = "";
-  let selectedId = "plat_cqwm_v0_2_helios";
+  let selectedId = "plat_opencyp_v1_2_faers_val";
   let focusMode = false;
   let egoFocus = true;
   let smartLabels = true;
@@ -2243,6 +2500,7 @@ function initKnowledgeGraph() {
       .slice(0, 18)
       .map(n => n.id)
   );
+  topHubIds.add("plat_opencyp_v1_2_faers_val");
   topHubIds.add("plat_cqwm_v0_2_helios");
   topHubIds.add("plat_cqwm_v0_1");
 
@@ -2581,8 +2839,8 @@ function initKnowledgeGraph() {
     srcSel?.appendChild(opt);
     dstSel?.appendChild(opt.cloneNode(true));
   });
-  if (srcSel) srcSel.value = "ltc_copd";
-  if (dstSel) dstSel.value = "plat_cqwm_v0_2_helios";
+  if (srcSel) srcSel.value = "ltc_masld";
+  if (dstSel) dstSel.value = "plat_opencyp_v1_2_faers_val";
 
   function runShortestPath(sId, dId) {
     pathNodes.clear();
@@ -2648,7 +2906,7 @@ function initKnowledgeGraph() {
     });
   });
 
-  renderInspector("plat_cqwm_v0_2_helios");
+  renderInspector("plat_opencyp_v1_2_faers_val");
 
   function mountKg() {
     if (chart || !window.echarts) return;
