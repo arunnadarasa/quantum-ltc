@@ -16,7 +16,7 @@
   "@id": "https://arunnadarasa.github.io/quantum-ltc/kg",
   "schema:name": "Quantum-LTC Ontology-Grounded Clinical-to-Logical-Qubit Knowledge Graph",
   "schema:version": "1.0.0-quantum-ltc-knowledge-graph",
-  "receipt_sha256": "43ec479315b74f1f2052f44d43e41efb8a234927646e441fd88dbc69ab704d0f",
+  "receipt_sha256": "b4a0c14e76dcd06c2a26638921c2cc6029f773a13a87387de18ff58de816c8f7",
   "@graph": [
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/ltc_cvd",
@@ -26,7 +26,7 @@
       "description": "CHD, stroke/TIA, PAD, and heart failure across NCL's 5 boroughs.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.011735,
+      "pagerank": 0.01144,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_1287",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -65,7 +65,7 @@
       "description": "Supraventricular tachyarrhythmia requiring stroke prevention & rate/rhythm review.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.006936,
+      "pagerank": 0.006797,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_0060224",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -92,7 +92,7 @@
       "description": "Anchored by NCL PCN Outcome #23 (<140/90 clinic, <135/85 home for age <80; <150/90 for >=80).",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.013492,
+      "pagerank": 0.013198,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_10763",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -130,7 +130,7 @@
       "description": "Cardiometabolic insulin resistance managed via HbA1c, uACR, SGLT2i, and GLP-1RA.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.009456,
+      "pagerank": 0.011608,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_9352",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -150,6 +150,9 @@
       ],
       "ABSTAINS_ILL_POSED_ROLLOUT_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_1"
+      ],
+      "BENCHMARKS_ABCC8_SUR1_IN": [
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite"
       ]
     },
     {
@@ -160,7 +163,7 @@
       "description": "Mandated High Risk + Complex stratification in NCL LTC LCS v6 with specialist MDT link.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.006428,
+      "pagerank": 0.006292,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_9744",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -186,7 +189,7 @@
       "description": "Progressive nephron loss tracked by uACR & eGFR; early SGLT2i/ACEi averts high-carbon dialysis.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.016237,
+      "pagerank": 0.015755,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_784",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -228,7 +231,7 @@
       "description": "Metabolic dysfunction-associated steatotic liver disease staged via LFTs & FIB-4.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.011982,
+      "pagerank": 0.011648,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_0080208",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -260,7 +263,7 @@
       "description": "Chronic airflow limitation requiring winter exacerbation prevention & low-GWP inhaler review.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.02046,
+      "pagerank": 0.020031,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_3083",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -307,7 +310,7 @@
       "description": "Mandates 48-hour post-attack review (2 working days) & 6-week full review by Tier 2/3 clinicians + SABA-free MART.",
       "layer": 1,
       "era": "All",
-      "pagerank": 0.014816,
+      "pagerank": 0.014575,
       "external_iri": "http://purl.obolibrary.org/obo/DOID_2841",
       "ENROLLED_IN_PATHWAY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -345,7 +348,7 @@
       "description": "3-yearly UCLPartners searches + scheduling tension between Month-of-Birth smoothing and Pre-Winter High/Complex priority.",
       "layer": 2,
       "era": "All",
-      "pagerank": 0.017635,
+      "pagerank": 0.01745,
       "TRANSITIONS_TO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_1_check_test"
       ],
@@ -364,7 +367,7 @@
       "description": "Single 30-min phlebotomy/uACR/BP/foot check + SNOMED 315594003 Interpreter needed access + OT-2 assay automation.",
       "layer": 2,
       "era": "All",
-      "pagerank": 0.021902,
+      "pagerank": 0.02119,
       "FEEDS_RESULTS_TO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_2_mdt_review"
       ],
@@ -383,7 +386,7 @@
       "description": "Clinical Pharmacist SMR & multidisciplinary desktop triage for High and High+Complex multimorbid patients.",
       "layer": 2,
       "era": "All",
-      "pagerank": 0.012967,
+      "pagerank": 0.012252,
       "SYNTHESISES_INTO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_3_pcsp"
       ],
@@ -402,7 +405,7 @@
       "description": "30-min Coaching-for-Health co-producing Personalised Care & Support Plan, VCSE social prescribing, and DPI MART switch.",
       "layer": 2,
       "era": "All",
-      "pagerank": 0.018475,
+      "pagerank": 0.014897,
       "SUSTAINED_BY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_4_continuity"
       ],
@@ -418,7 +421,7 @@
       "description": "Clinician-continuity review, >=25 collaboRATE responses, and 1.45x IMD Quintile 1 / minority-ethnic PCN Weighted Payment.",
       "layer": 2,
       "era": "All",
-      "pagerank": 0.013331,
+      "pagerank": 0.009589,
       "SCALES_TO_ICS_TAIL_RISK": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/prim_p04"
       ],
@@ -434,7 +437,7 @@
       "description": "Angiotensin-converting enzyme (1,306 aa; GENCODE v46 chr17:63477061-63498370); central RAAS blood-pressure regulator.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.010051,
+      "pagerank": 0.009793,
       "external_iri": "https://www.uniprot.org/uniprotkb/P12821",
       "RESOLVED_IN_CRYSTAL": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_pdb_1o86"
@@ -448,7 +451,7 @@
       "description": "2.0 \u00c5 X-ray structure of human C-domain ACE bound to lisinopril; Zn2+ coordinated by HIS383, HIS387, GLU411 at 2.141 \u00c5.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.013994,
+      "pagerank": 0.013621,
       "external_iri": "https://www.rcsb.org/structure/1O86",
       "VALIDATES_CLASSICAL_CONTROL_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_ftqc",
@@ -469,7 +472,7 @@
       "description": "Renal proximal tubule sodium/glucose cotransporter 2 (672 aa; chr16); cardiorenal-metabolic protection target.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.008642,
+      "pagerank": 0.00853,
       "external_iri": "https://www.uniprot.org/uniprotkb/P31639",
       "PROPAGATED_IN_LINDBLADIAN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/prim_p22"
@@ -483,7 +486,7 @@
       "description": "Glucagon-like peptide 1 receptor (463 aa; chr6); glycaemic, weight, CVD, and hepatic steatosis axis.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.006672,
+      "pagerank": 0.006617,
       "external_iri": "https://www.uniprot.org/uniprotkb/P43220"
     },
     {
@@ -494,7 +497,7 @@
       "description": "Beta-2 adrenergic receptor (413 aa; chr5); bronchodilation target in formoterol/budesonide MART.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.006189,
+      "pagerank": 0.006027,
       "external_iri": "https://www.uniprot.org/uniprotkb/P07550"
     },
     {
@@ -505,7 +508,7 @@
       "description": "Interleukin-6 (212 aa; chr7); systemic multimorbid vascular and airway inflammatory coupling mediator.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.007895,
+      "pagerank": 0.00768,
       "external_iri": "https://www.uniprot.org/uniprotkb/P05231",
       "PROPAGATED_IN_LINDBLADIAN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/prim_p22"
@@ -519,7 +522,7 @@
       "description": "Experimental NMR structure of human vasoconstrictor DRVYIHPF (8 residues = 8 QProtSim qubits; D1-R2 MI 0.1115 bits).",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.005429,
+      "pagerank": 0.005267,
       "external_iri": "https://www.rcsb.org/structure/1N9V",
       "CLEAVED_FROM_ANG_I_BY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_ace"
@@ -536,7 +539,7 @@
       "description": "Genetic modifier of MASLD/NAFLD steatosis evaluated via Arc Institute ScreenPro2 formalism (z = -9.23).",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.003436,
+      "pagerank": 0.00337,
       "external_iri": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:15822"
     },
     {
@@ -547,7 +550,7 @@
       "description": "Human microsomal Cytochrome P450 3A4 (chr7:99756966-99784184; CYP3A4*22 rs35599367 AVI Phred 8.05) metabolizing >50% of statin/CCB/DOAC/ICS regimens.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.014014,
+      "pagerank": 0.015917,
       "external_iri": "https://www.uniprot.org/uniprotkb/P08684",
       "RESOLVED_IN_CRYSTAL": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_pdb_1tqn",
@@ -556,6 +559,9 @@
       ],
       "SCORED_AT_SINGLE_CELL_BY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_pyscf_ag2"
+      ],
+      "BENCHMARKS_PGX_CONSTELLATION_IN": [
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite"
       ]
     },
     {
@@ -566,7 +572,7 @@
       "description": "2.05 \u00c5 X-ray structure of human CYP3A4 (Fe\u2013CYS442 SG 2.355 \u00c5); open-shell ferryl-oxo triradical breaks RCCSD(T) by 47.7 mHa at CAS(11e,11o) & scales to 141L DF-QPE at 58o.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.012153,
+      "pagerank": 0.011738,
       "external_iri": "https://www.rcsb.org/structure/1TQN",
       "DEMARCATES_FTQC_WALL": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/prim_x03"
@@ -592,7 +598,7 @@
       "description": "2.70 \u00c5 X-ray co-crystal of human CYP3A4 bound to FDA index hydroxylation substrate Midazolam (08J CAI\u2013Fe 3.389 \u00c5, CYS442 SG\u2013Fe 2.424 \u00c5); anchors polarized def2-SVP C\u2013H HAT barrier.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.014625,
+      "pagerank": 0.014166,
       "external_iri": "https://www.rcsb.org/structure/5TE8",
       "BENCHMARKS_HAT_BARRIER_ON": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/prim_x03"
@@ -621,7 +627,7 @@
       "description": "2.00 \u00c5 X-ray co-crystal of human CYP3A4 bound to Ritonavir (RIT thiazole N5\u2013Fe 2.225 \u00c5 Type-II heme ligation); anchors ChEMBL340 MBI inactivation (AUCR 12.29x WT / 20.0x *22).",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.012056,
+      "pagerank": 0.011711,
       "external_iri": "https://www.rcsb.org/structure/3NXU",
       "ANCHORS_DDI_INACTIVATION_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cyp3a4_gate1"
@@ -644,7 +650,7 @@
       "description": "2.26 \u00c5 X-ray co-crystal of human CYP2D6 bound to Quinidine (QDN602 O1\u2013GLU216 OE2 2.763 \u00c5, Fe\u2013CYS443 SG 2.221 \u00c5); anchors OpenCYP-FTQC v1.0 QM/MM FCIDUMP (6.02x Delta-DF) & ChEMBL289 beta-blocker PBPK.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.009579,
+      "pagerank": 0.009327,
       "external_iri": "https://www.rcsb.org/structure/4WNU",
       "BENCHMARKS_HAT_BARRIER_ON": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/prim_x03"
@@ -664,7 +670,7 @@
       "description": "2.00 \u00c5 X-ray co-crystal of human CYP2C9 bound to Flurbiprofen (FLP501 O1\u2013ARG108 NE 2.693 \u00c5, C5\u2013Fe 4.920 \u00c5, Fe\u2013CYS435 SG 2.378 \u00c5); anchors OpenCYP-FTQC v1.0 QM/MM FCIDUMP & ChEMBL3397 warfarin/SU PBPK.",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.010865,
+      "pagerank": 0.010694,
       "external_iri": "https://www.rcsb.org/structure/1R9O",
       "BENCHMARKS_HAT_BARRIER_ON": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/prim_x03"
@@ -684,7 +690,7 @@
       "description": "Distal airway mucin enhancer variant chr11:1219991:G>T scored live in AlphaGenome 2 (AT2 pneumocyte scRNA LFC +1.27 vs hepatocyte -0.28; AVI Phred 16.14).",
       "layer": 3,
       "era": "All",
-      "pagerank": 0.006781,
+      "pagerank": 0.006642,
       "external_iri": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7516",
       "SCORED_AT_SINGLE_CELL_BY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_pyscf_ag2"
@@ -698,7 +704,7 @@
       "description": "First-line RAAS inhibition targeting NCL Outcome #23 (<140/90 mmHg) and heart-failure/CKD nephroprotection.",
       "layer": 4,
       "era": "All",
-      "pagerank": 0.008819,
+      "pagerank": 0.008521,
       "COORDINATES_CATALYTIC_ZN2": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_pdb_1o86"
       ],
@@ -717,7 +723,7 @@
       "description": "Dapagliflozin/empagliflozin slowing CKD eGFR decline, HF hospitalisation, T2D, and MASLD progression.",
       "layer": 4,
       "era": "All",
-      "pagerank": 0.009209,
+      "pagerank": 0.008967,
       "INHIBITS_TARGET": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_slc5a2"
       ],
@@ -736,7 +742,7 @@
       "description": "NCL Green Plan Net-Zero transition from high-GWP propellant SABA to dry-powder ICS/formoterol MART.",
       "layer": 4,
       "era": "All",
-      "pagerank": 0.009801,
+      "pagerank": 0.009253,
       "CLEARED_FIRST_PASS_BY": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_cyp3a4"
       ],
@@ -761,7 +767,7 @@
       "description": "Structured Medication Review eliminating nephrotoxic ACEi+SGLT2i+NSAID acute kidney injury triple-whammy (+7.2 penalty).",
       "layer": 4,
       "era": "All",
-      "pagerank": 0.013439,
+      "pagerank": 0.012991,
       "AUDITS_DDI_CLEARANCE_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_cyp3a4",
         "https://arunnadarasa.github.io/quantum-ltc/kg/mol_pdb_4wnu",
@@ -789,7 +795,7 @@
       "description": "Validated home blood-pressure monitoring supporting Outcome #23 titration without duplicate GP visits.",
       "layer": 4,
       "era": "All",
-      "pagerank": 0.002673,
+      "pagerank": 0.002624,
       "GUIDES_TITRATION_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/tx_acei_lisinopril"
       ]
@@ -802,7 +808,7 @@
       "description": "Stage 3 Link Worker referral addressing housing, fuel poverty, isolation, and lifestyle determinants.",
       "layer": 4,
       "era": "All",
-      "pagerank": 0.006262,
+      "pagerank": 0.005894,
       "DELIVERED_IN_STAGE": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_3_pcsp"
       ]
@@ -815,7 +821,7 @@
       "description": "OpenJij + JijModeling 128-Var NCL PCN Call-and-Recall QUBO \u2014 Contract: HiGHS MILP solves sparse 128-var scheduling exactly in <5 ms; QUBO provides clean multi-constraint penalty compilation.",
       "layer": 5,
       "era": "Era I",
-      "pagerank": 0.007779,
+      "pagerank": 0.007059,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#P08",
       "MAPS_TO_LOGICAL_ERA": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_i"
@@ -832,7 +838,7 @@
       "description": "Haiqu SDK 8-Qubit Multimorbid + Net-Zero MART 3-Body HUBO (88.3% depth compression) \u2014 Contract: McCormick MILP dominates small sparse HUBOs; QAOA crossover requires dense frustrated k>=4 hypergraphs beyond treewidth bounds.",
       "layer": 5,
       "era": "Era I",
-      "pagerank": 0.015785,
+      "pagerank": 0.014153,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#A01d",
       "MAPS_TO_LOGICAL_ERA": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_i"
@@ -849,13 +855,14 @@
       "description": "Haiqu Entangled Manifold Embedding (EME) of 8-Feature NCL LTC Profile \u2014 Contract: O(n)-depth approximate state preparation avoiding O(2^n) generic state-loading bottleneck.",
       "layer": 5,
       "era": "Era I",
-      "pagerank": 0.011829,
+      "pagerank": 0.012655,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#P09",
+      "EXECUTED_AND_SEALED_ON": [
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite",
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_haiqu"
+      ],
       "MAPS_TO_LOGICAL_ERA": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_i"
-      ],
-      "EXECUTED_AND_SEALED_ON": [
-        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_haiqu"
       ]
     },
     {
@@ -866,7 +873,7 @@
       "description": "Guppy 1.0 -> HUGR `Helios-1E-lite` Coherent House-of-Care MDT vs Siloed Collapse \u2014 Contract: Hadamard/Bell overlap test verifying coherent pathway correlation vs mid-circuit projective collapse.",
       "layer": 5,
       "era": "Era II",
-      "pagerank": 0.007372,
+      "pagerank": 0.006696,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#P13",
       "MAPS_TO_LOGICAL_ERA": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_ii"
@@ -883,7 +890,7 @@
       "description": "8-Rung Self-Calibrating MCMR Recall & CYP Asthma 48h/6wk Cadence Ladder \u2014 Contract: Models non-Markovian longitudinal memory across multi-step `project_z` interventions.",
       "layer": 5,
       "era": "Era II",
-      "pagerank": 0.01157,
+      "pagerank": 0.010732,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#P20",
       "PROPAGATES_QUANTUM_COMB_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_1"
@@ -905,7 +912,7 @@
       "description": "Haiqu SU(2)-Equivariant Ansatz & Modal 2x2 Matched-Depth Frobenius Circuits \u2014 Contract: Restricts dynamical Lie algebra dimension; note polynomial Lie algebras can also admit classical g-sim!",
       "layer": 5,
       "era": "Era II",
-      "pagerank": 0.011297,
+      "pagerank": 0.010212,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#A01g",
       "MAPS_TO_LOGICAL_ERA": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_ii"
@@ -925,7 +932,7 @@
       "description": "QProtSim on Crystal `PDB 1N9V` Human Angiotensin II (`DRVYIHPF`) \u2014 Contract: Benchmarked directly against Gate G4 exact 256-state classical Potts/Boltzmann ensemble.",
       "layer": 5,
       "era": "Era II",
-      "pagerank": 0.009678,
+      "pagerank": 0.008987,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#A01h",
       "MAPS_TO_LOGICAL_ERA": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_ii"
@@ -942,7 +949,7 @@
       "description": "HQS `struqture-py` + `qoqo` Cardiorenal-Metabolic-Pulmonary Open-System Lindbladian \u2014 Contract: Classical Krylov Liouvillian hits O(4^{n_spin}) RAM wall (>1 TB at n_spin >= 19-20); dilated FTQC scales polynomially in n_spin.",
       "layer": 5,
       "era": "Era III",
-      "pagerank": 0.015047,
+      "pagerank": 0.014541,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#P22",
       "COUPLES_BATH_MEMORY_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_1"
@@ -962,7 +969,7 @@
       "description": "Active-Space Quantum Subspace / Phase Estimation for `PDB 1O86` Human ACE Zn2+ + Lisinopril \u2014 Contract: Targets strongly polarized HEXXH Zn2+ d-shell + oxyanion charge transfer where classical CCSD(T)/DMRG accuracy degrades.",
       "layer": 5,
       "era": "Era III",
-      "pagerank": 0.026014,
+      "pagerank": 0.025273,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#X03",
       "EXECUTED_AND_SEALED_ON": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_pyscf_ag2",
@@ -982,7 +989,7 @@
       "description": "Coherent Quantum Amplitude Estimation & QSVT for Rare Polypharmacy CVaR Tail Risk \u2014 Contract: Quadratic O(1/eps) speedup over classical O(1/eps^2) Monte Carlo for rare multi-drug AKI/arrhythmia tail events.",
       "layer": 5,
       "era": "Era IV",
-      "pagerank": 0.011994,
+      "pagerank": 0.010215,
       "external_iri": "https://elhamkashefi.github.io/primitives-atlas/#P04",
       "MAPS_TO_LOGICAL_ERA": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_iv"
@@ -999,7 +1006,10 @@
       "description": "0 logical qubits (1\u201320 phys / cloud emulators). Classical HiGHS MILP (<25 ms) & RBF-SVM/GBDT dominate operational tasks.",
       "layer": 6,
       "era": "Era I",
-      "pagerank": 0.014843,
+      "pagerank": 0.014898,
+      "BENCHMARKED_ON_HERON_STANDIN_IN": [
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite"
+      ],
       "SCALES_WITH_QEC_TO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_ii"
       ]
@@ -1012,9 +1022,12 @@
       "description": "Distance-2 [[8,3,2]] color codes + post-selection (yield 94.4% at 3L -> 15.8% at 24L, d=24); shallow MCMR & LR-QAOA.",
       "layer": 6,
       "era": "Era II",
-      "pagerank": 0.023022,
+      "pagerank": 0.021907,
       "BENCHMARKED_BY_MCMR_COMB_ON": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_2_helios"
+      ],
+      "QUANTIFIES_832_POSTSELECTION_IN": [
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite"
       ],
       "SCALES_WITH_QEC_TO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/era_iii"
@@ -1028,7 +1041,7 @@
       "description": "Active QEC (d=9\u201313 + T-factory, 5.3k\u201330.5k phys). First simulation crossover: n>=16 organ Lindbladians (>1.92 TB RAM) & ACE CAS(36e,26o) (52L).",
       "layer": 6,
       "era": "Era III",
-      "pagerank": 0.01968,
+      "pagerank": 0.017839,
       "ESTIMATES_1TIB_COMB_CROSSOVER_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_3_depot_8q_comb"
       ],
@@ -1044,7 +1057,7 @@
       "description": "Modular QCCD (90k\u2013250k+ phys, d=15\u201317). Block-encoded QSVT organ twins, O(1/eps) QAE polypharmacy CVaR & Quantum B&B on k>=4 hypergraphs.",
       "layer": 6,
       "era": "Era IV",
-      "pagerank": 0.021097,
+      "pagerank": 0.019684,
       "BENCHMARKED_BY_OPEN_ARCHIVE": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_ftqc",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_v1_1_thc"
@@ -1058,7 +1071,7 @@
       "description": "Live Guppy 1.0 -> HUGR execution across 3 jobs (6,144 emulator shots, 0 physical QPU shots): MDT P(00)=0.9961, 8-rung R^2=0.9979, VQC fid=0.9990.",
       "layer": 7,
       "era": "Era II",
-      "pagerank": 0.013297,
+      "pagerank": 0.012382,
       "EXECUTES_LIVE_CLOUD_EMULATOR_JOBS_FOR": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_2_helios",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_3_depot_8q_comb"
@@ -1072,7 +1085,7 @@
       "description": "Compresses 8-qubit 3-body multimorbid HUBO depth 223->26 (-88.34%); raw GS hit 41.21% (105x random), CVaR_0.10 = -23.50.",
       "layer": 7,
       "era": "Era I",
-      "pagerank": 0.010551
+      "pagerank": 0.008966
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_jij_highs",
@@ -1082,7 +1095,7 @@
       "description": "128-var (144 w/ slack) NCL Call/Recall QUBO achieving 18/18 pre-winter High/Complex coverage within 0.80% of 4.33 ms HiGHS MILP.",
       "layer": 7,
       "era": "Era I",
-      "pagerank": 0.009292,
+      "pagerank": 0.009302,
       "BOUNDS_STATIC_CEILING_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_clinical_swarmworld_v0_1"
       ],
@@ -1098,7 +1111,7 @@
       "description": "4-spin cardiorenal-pulmonary Lindbladian (33 qoqo ops) & University of Suffolk QProtSim 8-qubit solvation on Angiotensin II (1N9V).",
       "layer": 7,
       "era": "Era III",
-      "pagerank": 0.009161
+      "pagerank": 0.008757
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_multiomics",
@@ -1108,7 +1121,7 @@
       "description": "Live multi-omics & structural grounding: 5 UniProt targets, PDB 1O86 audit, 5 GENCODE v46 loci + AVI scan, 100% scarless bridge-RNA, 5 PMCIDs.",
       "layer": 7,
       "era": "Era III",
-      "pagerank": 0.005371
+      "pagerank": 0.005248
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_modal_rhyme_hf",
@@ -1118,7 +1131,7 @@
       "description": "Serverless Python 3.14 worker running rhyme-beta (4/4 pass), 200-param QLTCMLM cubic cohort ablations, and 2x2 barren-plateau sweep.",
       "layer": 7,
       "era": "Era II",
-      "pagerank": 0.009472
+      "pagerank": 0.008494
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_text2wetlab",
@@ -1128,7 +1141,7 @@
       "description": "6/6 deterministic AST, deck-slot collision, pipette, tip-balance & volume verification of Stage 1 uACR/HbA1c protocol (0 human samples).",
       "layer": 7,
       "era": "Era I",
-      "pagerank": 0.005049
+      "pagerank": 0.004923
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_medicus_discopy_moth",
@@ -1138,7 +1151,10 @@
       "description": "NIST FIPS 204 ML-DSA-65 FHIR R4 bundle signature (33.91 ms), DisCoPy snake identity (2.22e-16), and Moth 5-borough surge blur (Gini 0.8750->0.4609).",
       "layer": 7,
       "era": "Era I",
-      "pagerank": 0.010166
+      "pagerank": 0.010511,
+      "UPGRADED_TO_LIVE_MOTH_API_IN": [
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite"
+      ]
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_typesafe_jev",
@@ -1148,7 +1164,7 @@
       "description": "Live typed multi-method Health AI autorater (arXiv:2611.05127): CUJ-1 74.53% (4.32/5 NHS utility), CUJ-2 73.33%, CUJ-3 51.20%, CUJ-4 55.60%.",
       "layer": 7,
       "era": "All",
-      "pagerank": 0.016756,
+      "pagerank": 0.016894,
       "AUDITS_DEMARCATION_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cyp3a4_gate1",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_ftqc"
@@ -1181,7 +1197,7 @@
       "description": "Ab-initio identical-H_CAS benchmark: closed-shell 1O86 RCCSD(T) error <=0.015 mHa vs open-shell 1TQN CYP3A4 Cpd I error 9.9-167.0 mHa (FCI wall >=22o; 141L at 58o) + live AG2 v2 primary-cell scores.",
       "layer": 7,
       "era": "Era III",
-      "pagerank": 0.01163
+      "pagerank": 0.011344
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cyp3a4_gate1",
@@ -1191,7 +1207,7 @@
       "description": "Drug-bound CYP3A4 (PDB 5TE8/3NXU) polarized def2-SVP C\u2013H barrier (12.35 kcal/mol XC spread vs spin-pure SC-NEVPT2), paired-barrier THC-QPE (2.8x\u20133.3x Toffoli cut), & live ChEMBL340 PBPK AUCR.",
       "layer": 7,
       "era": "Era IV",
-      "pagerank": 0.01402
+      "pagerank": 0.013725
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_ftqc",
@@ -1201,7 +1217,7 @@
       "description": "Open-science HF dataset (socialprescribing/opencyp-ftqc): 8 PySCF 2.15 def2-SVP QM/MM FCIDUMP Hamiltonians (CYP3A4/2D6/2C9 + ACE 1O86 |CC-FCI|=0.00566 mHa), 2.43x\u20136.02x Procrustes Delta-DF, & 12/12 ChEMBL_37 PBPK.",
       "layer": 7,
       "era": "Era IV",
-      "pagerank": 0.021307
+      "pagerank": 0.02066
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_jev_10ltc_cqa",
@@ -1211,7 +1227,7 @@
       "description": "Inline jev-1.14.0 control plane across all 10 NCL ICB LTC cohorts: 10/10 CQA routing (6 Era III\u2013IV FTQC vs 4 zero-qubit classical/safety), 10/10 span extraction, 8/8 order invariance, & 12/12 citation checks.",
       "layer": 7,
       "era": "All",
-      "pagerank": 0.019917,
+      "pagerank": 0.019629,
       "DISPATCHES_6_FTQC_LTCS_TO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_v1_1_thc"
       ],
@@ -1227,7 +1243,7 @@
       "description": "Expands OpenCYP-FTQC to 13 QM/MM FCIDUMPs (CAS(11e,11o) 5TE8 213,444 dets, matched-S=0 COPD CLR-MIC 7.15 mHa vs ACE 1O86 0.00566 mHa) & empirical THC/SO(M) Delta-THC (1.95x\u20137.01x compression, |dE|<=0.61 mHa, M=26 crossover).",
       "layer": 7,
       "era": "Era IV",
-      "pagerank": 0.031487,
+      "pagerank": 0.030544,
       "SUPPLIES_EYRING_ORACLES_TO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_1"
       ],
@@ -1243,7 +1259,7 @@
       "description": "14-day counterfactual do(pi) non-Markovian PBPK-MBI + 6q Quantum Comb world model: inline jev-1.14.0 rollout gate (6/6), ACE 1O86 0L RMSE 0.0012 mmHg, catches Day-5 washout spike (5.96x/3.62x), & 8/8 citation checks.",
       "layer": 7,
       "era": "Era III-IV",
-      "pagerank": 0.029682,
+      "pagerank": 0.028887,
       "DELIVERS_SHADOW_COUNTERFACTUAL_TO": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/tx_pharmacist_smr"
       ],
@@ -1262,7 +1278,7 @@
       "description": "Live Guppy 1.0 -> HUGR 6-qubit Quantum Comb on Quantinuum Nexus Helios-1E-lite (6,144 emulator shots, 0 physical QPU shots): Non-Markovian Comb P(adv)=92.53% vs mid-circuit reset Markovian Twin 41.46% (+51.07 pp gap) vs do(pi_C) Safe Hold 46.92% (Bhattacharyya >=0.9916).",
       "layer": 7,
       "era": "Era II-III",
-      "pagerank": 0.025238,
+      "pagerank": 0.023154,
       "SCALED_TO_8Q_MULTI_SLOT_COMB_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_3_depot_8q_comb"
       ]
@@ -1275,7 +1291,7 @@
       "description": "Zero-refit out-of-sample human ritonavir washout validation (PMID 38393578: GMFE=1.434 vs RCCSD(T) 8.881), live openFDA FAERS disproportionality (21.05M reports: CLR+SIM vs AZI+SIM 6.57x, PRX+MET vs ESC+MET 2.04x, ACE 1O86 control 0.55x), & OpenCYP-FTQC v1.2 (15 FCIDUMPs up to CAS(13e,13o) 2,944,656 dets; Fiedler chi(1e-6)=963 vs 63).",
       "layer": 7,
       "era": "Era III-IV",
-      "pagerank": 0.025023,
+      "pagerank": 0.024366,
       "MECHANISTICALLY_CLOSED_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_3_depot_8q_comb"
       ]
@@ -1288,7 +1304,7 @@
       "description": "Zero-fit 9-state human hepatocyte/enterocyte depot (Kp,uu=1.4, PMID 25989229) + PXR world model closing PMID 38393578 (GMFE=1.236, 7/7 in 2-fold, r=0.967), elderly PMID 17635500 (IV 2.21x/PO 5.42x), & PMID 21937987 + live 8q Guppy->HUGR Depot Quantum Comb on Nexus Helios-1E-lite (8,192 shots, 98.79% ASPS, N_total=0.837, Delta_N_depot=0.398; 19q 1 TiB crossover).",
       "layer": 7,
       "era": "Era II-III",
-      "pagerank": 0.037186,
+      "pagerank": 0.035764,
       "GROUNDS_PROVING_GROUND_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_clinical_swarmworld_v0_1"
       ],
@@ -1304,7 +1320,7 @@
       "description": "Zero-hype stigmergic protocol evolution (arXiv:2608.26081) across 20 NCL PCN cells x K=6 LTC pathways (8 paired world seeds, 224 worlds, 0 role prompts, 0 agent calls during S=8 unseen NHS shocks): R=0.4088 vs 0.1992 solo (p=0.007812), Solo Best-of-24 wins single-specialist peak (0.9990 vs 0.9955), HiGHS static ceiling 7.42 ms, 84.26% physical stigmergy reuse, 97.59% 50% turnover retention, & CQWM v0.3 vs naive RCCSD(T)/Markov oracle consequence amplification (0 vs 5,909.6 safety lockouts/world).",
       "layer": 7,
       "era": "Era I + III-IV Oracle",
-      "pagerank": 0.023997,
+      "pagerank": 0.023919,
       "SCALED_TO_REAL_32PCN_TWIN_IN": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_clinical_swarmworld_v0_2"
       ]
@@ -1317,7 +1333,20 @@
       "description": "Real-NHS 32-PCN digital twin of North Central London ICB (171 GP practices, 1,810,301 patients, UK OGL v3.0 OHID QOF/IMD 2025 + NHSBSA EPD_SNOMED_202608 & 202601, phi_present=False): IMD vs pMDI r=+0.637 (p=8.8e-5), IMD vs 80+ frailty r=-0.729 (p=2.3e-6); Dual HiGHS MILP Goodhart Theorem (Proxy-MILP 6/6 gaming, Q_true=0.0739 vs Verified-MILP 0/6, Q_true=0.8764); Unverified Swarm culturally amplifies Goodhart share 38.7% -> 68.6% (p=0.007812, 22,024 harms/world) while Commit-Verified Stigmergy (AST + CQWM v0.3 + Jev 1.14, 12/12 recall/specificity) achieves 0 harms, R_true=0.4073 vs 0.3337 (p=0.007812), and 100% 50%-turnover retention.",
       "layer": 7,
       "era": "Era I + III-IV Oracle",
-      "pagerank": 0.026864
+      "pagerank": 0.033517
+    },
+    {
+      "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite",
+      "entity_type": "Platform_Receipt",
+      "label": "Moth Quantum Tessa API & Bipartite 32-PCN Loader",
+      "curie": "SHA256:e1eab92b068e",
+      "description": "Zero-SWAP bipartite Tessa encoding (Bultrini arXiv:2611.18440v1) + 6 live Moth Quantum API jobs (mode='emu', 0 QPU shots): 3x3 9q (32 NCL PCNs) & 6x6 36q (200 slots, 2C+C bits), Proposition 1 <1e-15 parity, live qpixl-v1 aer (r=0.9989) vs fake_fez raw (MAE=0.0622) -> mean_std DRR (MAE=0.0546, -12.2%), tessa-image-v1 pair RGB MAE=0.0101, blur-core-v1 32x6 winter surge Gini 0.0831->0.0536, and 192-aa ABCC8+CYP3A4 50.0% NISQ exact AA proving H-LTC-02 OPEN.",
+      "layer": 7,
+      "era": "Era I-II",
+      "pagerank": 0.027083,
+      "BENCHMARKS_SFWHT_POLICY_IN": [
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_clinical_swarmworld_v0_2"
+      ]
     },
     {
       "@id": "https://arunnadarasa.github.io/quantum-ltc/kg/haz_h_ltc_01",
@@ -1327,7 +1356,7 @@
       "description": "Incomplete SNOMED 'Interpreter needed' or IMD equity coding causing recall exclusion \u2014 Statutory DCB0160 (Primary Local EHR/PCN) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "layer": 8,
       "era": "All",
-      "pagerank": 0.006419,
+      "pagerank": 0.006704,
       "GOVERNS_CLINICAL_RISK_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_clinical_swarmworld_v0_2",
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_call_recall"
@@ -1341,13 +1370,14 @@
       "description": "ACEi/ARB + SGLT2i + diuretic/NSAID AKI or improper DPI inhaler technique without human SMR \u2014 Statutory DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "layer": 8,
       "era": "All",
-      "pagerank": 0.014968,
+      "pagerank": 0.016931,
       "GOVERNS_CLINICAL_RISK_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cyp3a4_gate1",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_ftqc",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_v1_1_thc",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_opencyp_v1_2_faers_val",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_3_depot_8q_comb",
+        "https://arunnadarasa.github.io/quantum-ltc/kg/plat_moth_tessa_bipartite",
         "https://arunnadarasa.github.io/quantum-ltc/kg/tx_sglt2i",
         "https://arunnadarasa.github.io/quantum-ltc/kg/tx_mart_dpi"
       ]
@@ -1360,7 +1390,7 @@
       "description": "Acute CYP asthma post-attack deterioration requiring immediate Tier 2/3 clinical escalation \u2014 Statutory DCB0160 (Primary Urgent Tier 2/3 Triage) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "layer": 8,
       "era": "All",
-      "pagerank": 0.004487,
+      "pagerank": 0.004447,
       "GOVERNS_CLINICAL_RISK_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_jev_10ltc_cqa",
         "https://arunnadarasa.github.io/quantum-ltc/kg/ltc_asthma"
@@ -1374,7 +1404,7 @@
       "description": "Conflation of cloud emulator / biophysical toy models with validated RCT clinical efficacy \u2014 Statutory DCB0129 (Epistemic Demarcation) + DCB0160 (ICB CSO Gate) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "layer": 8,
       "era": "All",
-      "pagerank": 0.01474,
+      "pagerank": 0.014597,
       "GOVERNS_CLINICAL_RISK_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_1",
         "https://arunnadarasa.github.io/quantum-ltc/kg/plat_cqwm_v0_2_helios",
@@ -1392,7 +1422,7 @@
       "description": "Secondary-care discharge or UCLP prevalence-search drift across the 9 LTC registers \u2014 Statutory DCB0160 (Primary Local UCLP/QOF Register Audit) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "layer": 8,
       "era": "All",
-      "pagerank": 0.004103,
+      "pagerank": 0.004051,
       "GOVERNS_CLINICAL_RISK_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/stage_1_check_test"
       ]
@@ -1405,7 +1435,7 @@
       "description": "VCSE social prescribing referral overload without NCL Borough Partnership resource transfer \u2014 Statutory DCB0160 (Primary NCL Borough VCSE Commissioning) + DCB0129 clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off).",
       "layer": 8,
       "era": "All",
-      "pagerank": 0.004372,
+      "pagerank": 0.004276,
       "GOVERNS_CLINICAL_RISK_OF": [
         "https://arunnadarasa.github.io/quantum-ltc/kg/tx_vcse_sp"
       ]

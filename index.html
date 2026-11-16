@@ -871,6 +871,33 @@
             </div>
           </figcaption>
         </figure>
+
+        <!-- Full-Width Moth Quantum Tessa Card (Fig. 17: arXiv:2611.18440v1 Bipartite 32-PCN Data Loading & H-LTC-02 Demarcation) -->
+        <figure class="fig-card fig-card-wide interactive-mode" data-zoom-src="figures/figure17_moth_tessa_ncl_bipartite.png">
+          <div class="fig-subtabs">
+            <div class="fig-subtab-pills" role="tablist" aria-label="Moth Quantum Tessa sub-panels">
+              <button type="button" class="fig-subtab-btn active" data-tessa-tab="moth">🦋 (a) Live Moth Cloud qpixl-v1 (aer vs fake_fez + DRR)</button>
+              <button type="button" class="fig-subtab-btn" data-tessa-tab="sfwht">📉 (b) Tessa sfwht Gate Compression Sweep (36q, 200 Slots)</button>
+              <button type="button" class="fig-subtab-btn" data-tessa-tab="pgx">🧬 (c) ABCC8 (SUR1) + CYP3A4 (192-aa) H-LTC-02 Safety</button>
+            </div>
+            <span style="font-family:var(--font-mono);font-size:0.71rem;color:var(--signal)">6 Live Moth API Jobs (mode='emu') · 0 Physical QPU Shots</span>
+          </div>
+          <div id="echart-moth-tessa" class="echart-box echart-wide" aria-label="Interactive Moth Quantum Tessa Bipartite 32-PCN Data Loading, sfwht Gate Compression, and ABCC8/CYP3A4 H-LTC-02 Demarcation Chart"></div>
+          <img src="figures/figure17_moth_tessa_ncl_bipartite.png" alt="Quantum-LTC x Moth Quantum Tessa (arXiv:2611.18440v1): 32-PCN NHS NCL Bipartite Data Loading and H-LTC-02 Safety Demarcation" loading="lazy" />
+          <figcaption>
+            <div>
+              <strong>Fig. 17 — <code>Moth Quantum Tessa</code> (<a href="https://arxiv.org/abs/2611.18440v1" target="_blank" rel="noopener"><code>arXiv:2611.18440v1</code></a>) × Real <code>32</code>-PCN NHS NCL Bipartite Data Loading &amp; <code>H-LTC-02</code> Pharmacogenomic Demarcation:</strong> Planar König 4-colour 2-colouring maps all <strong>32 real NCL PCNs</strong> onto a <code>3×3</code> <strong>9-qubit</strong> checkerboard (<code>4 × 2³ = 32</code> slots, <strong>0 SWAPs</strong>, compiled to <code>Guppy 1.0 → HUGR</code>; Proposition 1 &amp; Eq. 16 <code>K_a</code> statevector parity <strong>1.7 × 10⁻¹⁶</strong> and <strong>3.7 × 10⁻¹⁵</strong>; area-law cut <code>0.60 ≤ 3 bits</code>) and all <code>32 × 6 = 192</code> PCN-pathway burdens (+ <code>8</code> <code>K_a = 1</code> canary slots) onto a <code>6×6</code> <strong>36-qubit</strong> <code>200</code>-slot <code>2C + C bits</code> lattice (<code>1.89 ms</code> Proposition 1 floor, <code>100.0%</code> <code>Core20</code> bit recovery). Across <strong>6 live authenticated jobs on <code>api.mothquantum.com/api/v1</code></strong> (<code>mode="emu"</code>, <code>0</code> physical QPU shots), <code>qpixl-v1</code> recovers the <code>192</code> NCL clinical burdens with <strong>r = 0.9989</strong> on <code>aer</code> (<code>4d22ca58…</code>) and cuts calibrated <code>156q</code> Heron r2 <code>fake_fez</code> error by <strong>−12.2%</strong> via 2-scalar <code>mean_std</code> DRR (<code>MAE 0.0622 → 0.0546</code>, <code>d70a959b…</code>), <code>tessa-image-v1</code> reconstructs the <code>16×12</code> Bloch-pair atlas at <strong>RGB MAE = 0.0101</strong> (<code>3c2ee26a…</code>), and <code>blur-core-v1</code> smooths <code>32×6</code> January MBI surge Gini <strong>0.0831 → 0.0536</strong> (<code>7d2ffc2d…</code>). Conversely, encoding <code>192</code> canonical UniProt residues of human <strong><code>ABCC8</code> (<code>SUR1</code>, <code>Q09428</code>) + <code>CYP3A4</code> (<code>P08684</code> Cys442)</strong> onto <code>discretize=20</code> levels on <code>fake_fez</code> yields <strong>50.0% exact recovery (96/192 miscalls, <code>940fa834…</code>)</strong> — and <code>12.5%</code> on <code>400</code>-point 2-aa/slot NISQ constellations vs <strong>94.8%</strong> under Era II <code>[[8,3,2]]</code> post-selection — proving clinical sequence lookup must remain exact classical (<code>0L</code>) under open <strong>NHS DCB0129 Hazard <code>H-LTC-02</code></strong>.
+            </div>
+            <div class="figcap-footer">
+              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">Receipt: tessa_ncl_bipartite_encoding_receipt.json · SHA-256: e1eab92b… (6 Live Moth API Jobs · 0 QPU Shots)</span>
+              <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+                <a class="fig-zoom-btn" href="receipts/tessa_32pcn_9q_playpond.py" download="tessa_32pcn_9q_playpond.py" style="text-decoration:none">⬇ 9q Tessa Guppy (.py)</a>
+                <a class="fig-zoom-btn" href="submissions/policies/tessa_sfwht_equity_pcn_policy.py" download="tessa_sfwht_equity_pcn_policy.py" style="text-decoration:none">⬇ Tessa sfwht Policy (.py)</a>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures/figure17_moth_tessa_ncl_bipartite.png">🔍 300-DPI Print Fig</button>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -895,7 +922,7 @@
           </div>
         </div>
         <p class="lead">
-          Unifies <strong>75 ontology-grounded nodes</strong> and <strong>228 directed semantic triples</strong> across 8 structured layers (1 connected component). Click any node to spotlight its <strong>1-hop semantic neighborhood</strong> (or click empty canvas to show the full overview), toggle smart hub vs full labels, and trace multi-hop clinical-to-quantum paths across EMBL-EBI OLS4 <code>DOID</code>, 7 RCSB PDB structures, <code>OpenCYP-FTQC v1.2</code> (<code>2.94M</code> dets, Fiedler <code>χ=963</code>), <code>CQWM v0.1–v0.3</code> (multi-cohort human washout <code>N = 40</code> + live <code>openFDA FAERS</code> + <code>Helios-1E-lite</code> 6q &amp; 8q Quantum Combs), <code>Clinical SwarmWorld v0.1–v0.2</code> (real <code>32</code>-PCN NHS NCL twin), and all 6 open <strong>NHS DCB0129 &amp; DCB0160</strong> hazards.
+          Unifies <strong>76 ontology-grounded nodes</strong> and <strong>236 directed semantic triples</strong> across 8 structured layers (1 connected component). Click any node to spotlight its <strong>1-hop semantic neighborhood</strong> (or click empty canvas to show the full overview), toggle smart hub vs full labels, and trace multi-hop clinical-to-quantum paths across EMBL-EBI OLS4 <code>DOID</code>, 7 RCSB PDB structures, <code>OpenCYP-FTQC v1.2</code> (<code>2.94M</code> dets, Fiedler <code>χ=963</code>), <code>CQWM v0.1–v0.3</code> (multi-cohort human washout <code>N = 40</code> + live <code>openFDA FAERS</code> + <code>Helios-1E-lite</code> 6q &amp; 8q Quantum Combs), <code>Clinical SwarmWorld v0.1–v0.2</code> (real <code>32</code>-PCN NHS NCL twin), live <code>Moth Quantum Tessa</code> (<code>arXiv:2611.18440v1</code>), and all 6 open <strong>NHS DCB0129 &amp; DCB0160</strong> hazards.
         </p>
 
         <div class="kg-toolbar">
@@ -1027,25 +1054,25 @@
     <!-- Section 07: Sealed Provenance Receipts & In-Page JSON Inspector -->
     <section id="census" class="band band-alt">
       <div class="container">
-        <p class="kicker">07 · Cryptographic &amp; Computational Provenance + Unified qltc v1.4 Harness</p>
-        <h2>SHA-256-Sealed JSON Receipts, Ontology Graph &amp; <code>qltc v1.4</code> CLI Harness</h2>
+        <p class="kicker">07 · Cryptographic &amp; Computational Provenance + Unified qltc v1.5 Harness</p>
+        <h2>SHA-256-Sealed JSON Receipts, Ontology Graph &amp; <code>qltc v1.5</code> CLI Harness</h2>
         <p class="lead">
-          Every number in the 20-page monograph, 9-page CQWM paper, 10-page Clinical SwarmWorld v0.1–v0.2 paper, interactive ECharts plots, and 75-node knowledge graph is read directly from the <strong>19 SHA-256-sealed provenance files</strong> below (18 experimental receipts + ontology graph) and audited in <code>&lt;0.6s</code> offline via our unified <strong><code>qltc v1.4</code> reproducibility &amp; anti-Goodhart policy harness</strong>. Click <strong>🔍 Inspect JSON</strong> to audit any receipt inline.
+          Every number in the 20-page monograph, 9-page CQWM paper, 10-page Clinical SwarmWorld v0.1–v0.2 paper, interactive ECharts plots, and 76-node knowledge graph is read directly from the <strong>20 SHA-256-sealed provenance files</strong> below (19 experimental receipts + ontology graph) and audited in <code>&lt;0.7s</code> offline via our unified <strong><code>qltc v1.5</code> reproducibility &amp; anti-Goodhart policy harness</strong>. Click <strong>🔍 Inspect JSON</strong> to audit any receipt inline.
         </p>
 
         <div class="panel" style="margin-bottom:1.35rem;border-color:rgba(56,214,196,0.38)">
           <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.6rem">
-            <strong style="font-family:var(--font-mono);font-size:0.83rem;color:var(--signal)">⚙ Unified Reproducibility &amp; Sealed 32-PCN Policy Harness (<code>quantum-ltc v1.4</code> · GitHub Actions CI)</strong>
+            <strong style="font-family:var(--font-mono);font-size:0.83rem;color:var(--signal)">⚙ Unified Reproducibility &amp; Sealed 32-PCN Policy Harness (<code>quantum-ltc v1.5</code> · GitHub Actions CI)</strong>
             <div style="display:flex;flex-wrap:wrap;gap:0.45rem">
               <a class="btn btn-sm" href="submissions/evaluate_submission.py" download="evaluate_submission.py">⬇ evaluate_submission.py</a>
               <a class="btn btn-sm" href="receipts/qltc_harness.py" download="qltc_harness.py">⬇ qltc_harness.py</a>
             </div>
           </div>
           <pre class="code-block wrap-lines" style="margin-top:0.65rem;font-size:0.78rem">uv pip install -e ".[dev]"
-qltc verify --strict                                   # 0.04s: verifies 18 SHA-256/ML-DSA-65 receipts, 75-node KG, 69 BibTeX refs &amp; DCB0129
-qltc repro --tier tier0-offline                        # 0.55s: replays CQWM v0.3 washout (GMFE=1.23) + HiGHS MILP + 32-PCN Goodhart gate
-qltc submit-policy --policy submissions/policies/custom_pcn_policy_template.py:propose --submission-id ext-my-team-v1 --title "My Safe 32-PCN Policy" --authors "Team"
-qltc verify-submissions                                # 0.46s: replays 8 seeds × 32 PCNs × 8 unseen shocks, AST sandbox &amp; ML-DSA-65 scorecards</pre>
+qltc verify --strict                                   # 0.03s: verifies 19 SHA-256/ML-DSA-65 receipts, 76-node KG, 71 BibTeX refs &amp; DCB0129
+qltc repro --tier tier0-offline                        # 0.64s: replays CQWM v0.3 + HiGHS MILP + 32-PCN Goodhart + Tessa 9q/36q Prop.1 floor
+qltc submit-policy --policy submissions/policies/tessa_sfwht_equity_pcn_policy.py:propose --submission-id ext-my-team-v1 --title "My Safe 32-PCN Policy" --authors "Team"
+qltc verify-submissions                                # 0.74s: replays 8 seeds × 32 PCNs × 8 unseen shocks, AST sandbox &amp; ML-DSA-65 scorecards</pre>
         </div>
 
         <div class="panel" style="margin-bottom:1.55rem;border-color:rgba(96,165,250,0.42)">
@@ -1087,7 +1114,7 @@ qltc verify-submissions                                # 0.46s: replays 8 seeds 
                   <td><span style="color:var(--signal);font-family:var(--font-mono);font-size:0.74rem;font-weight:700">REFERENCE CEILING</span></td>
                 </tr>
                 <tr>
-                  <td><strong>#1 Admitted</strong></td>
+                  <td><strong>#1 Admitted (Tie)</strong></td>
                   <td><code>ext-deprivation-equity-v1</code> · Core20PLUS5 + <code>pMDI%</code> + <code>HYP007</code> 32-PCN Router (<code>batch_32pcn</code>, <code>p=0.0078</code>)</td>
                   <td><code>0.4938</code></td>
                   <td><strong><code>0.5685 ± 0.0043</code></strong> (<code>+15.8%</code>)</td>
@@ -1096,7 +1123,16 @@ qltc verify-submissions                                # 0.46s: replays 8 seeds 
                   <td><a class="btn btn-sm" href="submissions/scorecards/ext-deprivation-equity-v1.json" target="_blank" rel="noopener">✓ ADMITTED · JSON</a></td>
                 </tr>
                 <tr>
-                  <td><strong>#2 Admitted (Ref)</strong></td>
+                  <td><strong>#1 Admitted (Tie)</strong></td>
+                  <td><code>ext-tessa-sfwht-equity-v1</code> · <code>Tessa</code> <code>sfwht</code> Continuous-Compressed (<code>τ=0.03</code>) + Exact Binary Guard (<code>arXiv:2611.18440v1</code>)</td>
+                  <td><code>0.4938</code></td>
+                  <td><strong><code>0.5685 ± 0.0044</code></strong> (<code>+15.8%</code>)</td>
+                  <td><strong><code>0.4119 ± 0.0024</code></strong> (<code>+9.7%</code>)</td>
+                  <td><code>0.0%</code> · <code>0</code> harms</td>
+                  <td><a class="btn btn-sm" href="submissions/scorecards/ext-tessa-sfwht-equity-v1.json" target="_blank" rel="noopener">✓ ADMITTED · JSON</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#3 Admitted (Ref)</strong></td>
                   <td><code>ref-round-robin-safety-v1</code> · Built-in <code>safety-verified</code> Balanced Round-Robin Standing Order (<code>0L</code>)</td>
                   <td><code>0.4263</code></td>
                   <td><strong><code>0.4908 ± 0.0031</code></strong></td>
@@ -1105,13 +1141,22 @@ qltc verify-submissions                                # 0.46s: replays 8 seeds 
                   <td><a class="btn btn-sm" href="submissions/scorecards/ref-round-robin-safety-v1.json" target="_blank" rel="noopener">✓ ADMITTED · JSON</a></td>
                 </tr>
                 <tr>
-                  <td><strong>#3 Admitted</strong></td>
+                  <td><strong>#4 Admitted</strong></td>
                   <td><code>ext-starter-template-v1</code> · Decentralized 2-Choice Per-PCN Standing-Order Starter Template</td>
                   <td><code>0.4283</code></td>
                   <td><strong><code>0.4879 ± 0.0029</code></strong></td>
                   <td><strong><code>0.3605 ± 0.0015</code></strong></td>
                   <td><code>0.0%</code> · <code>0</code> harms</td>
                   <td><a class="btn btn-sm" href="submissions/scorecards/ext-starter-template-v1.json" target="_blank" rel="noopener">✓ ADMITTED · JSON</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Rejected Control</strong></td>
+                  <td><code>trap-tessa-overcompressed-flags</code> · Over-Compressed <code>Tessa</code> <code>sfwht</code> (<code>τ=0.35</code>) Flipping Discrete Safety Flags (<code>H-LTC-02</code>)</td>
+                  <td><code>0.1228</code></td>
+                  <td><strong style="color:#f06a3b"><code>0.1170 ± 0.0012</code></strong> (<code>-76.2%</code>)</td>
+                  <td><strong style="color:#f06a3b"><code>0.0914 ± 0.0007</code></strong> (<code>-75.7%</code>)</td>
+                  <td><strong style="color:#f06a3b"><code>12.5%</code> · <code>32</code> harms</strong></td>
+                  <td><a class="btn btn-ghost btn-sm" href="submissions/rejected_controls/trap-tessa-overcompressed-flags.json" target="_blank" rel="noopener" style="color:#f06a3b;border-color:rgba(240,106,59,0.45)">✕ REJECTED · JSON</a></td>
                 </tr>
                 <tr>
                   <td><strong>Rejected Control</strong></td>
@@ -1158,6 +1203,15 @@ qltc verify-submissions                                # 0.46s: replays 8 seeds 
             </p>
 
             <div class="resource-list">
+              <a class="resource-card" href="receipts/tessa_ncl_bipartite_encoding_receipt.json" target="_blank" rel="noopener">
+                <span class="resource-icon">🦋</span>
+                <div>
+                  <div class="resource-title">Moth Quantum Tessa API &amp; 32-PCN Bipartite Encoding Receipt (arXiv:2611.18440v1)</div>
+                  <div class="resource-slug">SHA-256: e1eab92b… (6 live mode='emu' jobs: qpixl-v1 aer/fake_fez DRR -12.2% · ABCC8+CYP3A4 50.0% → H-LTC-02)</div>
+                </div>
+                <span class="resource-ext">JSON</span>
+              </a>
+
               <a class="resource-card" href="downloads/Clinical_SwarmWorld_Paper.pdf" download="Clinical_SwarmWorld_Paper.pdf">
                 <span class="resource-icon">🐝</span>
                 <div>

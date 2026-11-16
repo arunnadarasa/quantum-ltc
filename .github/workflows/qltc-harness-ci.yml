@@ -40,7 +40,7 @@ jobs:
           root = Path(".")
           data = json.loads((root / "assets" / "data.json").read_text())
           prov = data["receipts_summary"]
-          assert len(prov) >= 19, f"Expected >=19 provenance entries, got {len(prov)}"
+          assert len(prov) >= 20, f"Expected >=20 provenance entries, got {len(prov)}"
 
           verified_receipts = 0
           verified_pqc = 0
@@ -93,14 +93,14 @@ jobs:
           assert len(twin["pcns"]) == 32 and twin["total_registered_patients"] == 1810301
           assert twin["phi_present"] is False and "Open Government Licence v3.0" in json.dumps(twin)
 
-          # 75-Node / 228-Triple Connected KG
+          # 76-Node / 236-Triple Connected KG
           kg = json.loads((root / "receipts" / "quantum_ltc_knowledge_graph.json").read_text())
           g = nx.Graph()
           for n in kg["nodes"]:
               g.add_node(n["id"])
           for e in kg["edges"]:
               g.add_edge(e["source"], e["target"])
-          assert len(kg["nodes"]) == 75 and len(kg["edges"]) == 228
+          assert len(kg["nodes"]) == 76 and len(kg["edges"]) == 236
           assert nx.number_connected_components(g) == 1
 
           # 15 OpenCYP-FTQC v1.2 FCIDUMPs + 3 Compiled Samskrift PDFs

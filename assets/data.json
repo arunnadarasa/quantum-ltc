@@ -4354,6 +4354,114 @@
       ]
     }
   },
+  "moth_tessa": {
+    "moth_bars": [
+      {
+        "label": "Local Prop. 1\n(36q, 8192sh)",
+        "mae": 0.008046,
+        "pearson_r": 0.999132
+      },
+      {
+        "label": "Moth qpixl-v1\n(aer, 8192sh)",
+        "mae": 0.00959,
+        "pearson_r": 0.99891
+      },
+      {
+        "label": "Moth qpixl-v1\n(fake_fez Raw)",
+        "mae": 0.06216,
+        "pearson_r": 0.91808
+      },
+      {
+        "label": "Moth qpixl-v1\n(fake_fez + DRR)",
+        "mae": 0.05459,
+        "pearson_r": 0.91876
+      }
+    ],
+    "tau_sweep": [
+      {
+        "threshold_tau_rad": 0.0,
+        "cnot_count_uncompressed": 200,
+        "cnot_count_compressed": 196,
+        "cnot_reduction_pct": 2.0,
+        "mae_normalized": 0.0,
+        "pearson_r": 1.0
+      },
+      {
+        "threshold_tau_rad": 0.01,
+        "cnot_count_uncompressed": 200,
+        "cnot_count_compressed": 196,
+        "cnot_reduction_pct": 2.0,
+        "mae_normalized": 0.000557,
+        "pearson_r": 0.99999
+      },
+      {
+        "threshold_tau_rad": 0.03,
+        "cnot_count_uncompressed": 200,
+        "cnot_count_compressed": 192,
+        "cnot_reduction_pct": 4.0,
+        "mae_normalized": 0.004926,
+        "pearson_r": 0.999639
+      },
+      {
+        "threshold_tau_rad": 0.05,
+        "cnot_count_uncompressed": 200,
+        "cnot_count_compressed": 186,
+        "cnot_reduction_pct": 7.0,
+        "mae_normalized": 0.009801,
+        "pearson_r": 0.998573
+      },
+      {
+        "threshold_tau_rad": 0.08,
+        "cnot_count_uncompressed": 200,
+        "cnot_count_compressed": 174,
+        "cnot_reduction_pct": 13.0,
+        "mae_normalized": 0.022997,
+        "pearson_r": 0.993542
+      },
+      {
+        "threshold_tau_rad": 0.12,
+        "cnot_count_uncompressed": 200,
+        "cnot_count_compressed": 160,
+        "cnot_reduction_pct": 20.0,
+        "mae_normalized": 0.036257,
+        "pearson_r": 0.981275
+      },
+      {
+        "threshold_tau_rad": 0.18,
+        "cnot_count_uncompressed": 200,
+        "cnot_count_compressed": 130,
+        "cnot_reduction_pct": 35.0,
+        "mae_normalized": 0.061872,
+        "pearson_r": 0.948199
+      }
+    ],
+    "pgx_bars": [
+      {
+        "label": "Noiseless 400-Pt\n(2aa/slot)",
+        "exact_pct": 93.75
+      },
+      {
+        "label": "Live Moth fake_fez\n(discretize=20)",
+        "exact_pct": 50.0
+      },
+      {
+        "label": "NISQ 1aa\nAngle + DRR",
+        "exact_pct": 27.6
+      },
+      {
+        "label": "NISQ 2aa\n400-Pt + DRR",
+        "exact_pct": 12.5
+      },
+      {
+        "label": "NISQ 1aa\n20-Pt + DRR",
+        "exact_pct": 98.44
+      },
+      {
+        "label": "Era II [[8,3,2]]\nPost-Selected",
+        "exact_pct": 94.79
+      }
+    ]
+  },
   "external_submissions": [
     {
       "submission_id": "ext-deprivation-equity-v1",
@@ -4373,6 +4481,25 @@
       "signflip_p_vs_ref": 0.007812,
       "scorecard_path": "submissions/scorecards/ext-deprivation-equity-v1.json",
       "receipt_sha256": "20711c75f74a8bb039a819d3d10d461c960b48af0d056dd74ce0ab3bd9677b7f"
+    },
+    {
+      "submission_id": "ext-tessa-sfwht-equity-v1",
+      "title": "Tessa sfwht Continuous-Compressed + Exact Binary Guard 32-PCN Federation Router",
+      "authors": "Quantum-LTC Open Benchmark (Bultrini arXiv:2611.18440v1 Adaptation)",
+      "policy_spec": "submissions/policies/tessa_sfwht_equity_pcn_policy.py:propose",
+      "batch_32pcn_mode": true,
+      "status": "ADMITTED",
+      "admitted": true,
+      "q_proxy_mean": 0.4938,
+      "q_true_mean": 0.5685,
+      "q_true_sd": 0.0044,
+      "held_out_r_true_mean": 0.4119,
+      "held_out_r_true_sd": 0.0024,
+      "goodhart_share_pct_max": 0.0,
+      "total_harm_flags_8seed": 0,
+      "signflip_p_vs_ref": 0.007812,
+      "scorecard_path": "submissions/scorecards/ext-tessa-sfwht-equity-v1.json",
+      "receipt_sha256": "05518c29f00429328e063a8b51a045637403e5847a019ee3dbdd65049974c0b9"
     },
     {
       "submission_id": "ref-round-robin-safety-v1",
@@ -4411,6 +4538,25 @@
       "signflip_p_vs_ref": 0.007812,
       "scorecard_path": "submissions/scorecards/ext-starter-template-v1.json",
       "receipt_sha256": "a0901ab6ab982fe4313f4461a6a3c03c78439eb8f920d5e371b8fcf345665ff5"
+    },
+    {
+      "submission_id": "trap-tessa-overcompressed-flags",
+      "title": "Over-Compressed Tessa sfwht Unverified Discrete-Flag Negative Control",
+      "authors": "Quantum-LTC Adversarial Control",
+      "policy_spec": "submissions/policies/tessa_overcompressed_flags_policy.py:propose",
+      "batch_32pcn_mode": false,
+      "status": "REJECTED_SAFETY_OR_GOODHART",
+      "admitted": false,
+      "q_proxy_mean": 0.1228,
+      "q_true_mean": 0.117,
+      "q_true_sd": 0.0012,
+      "held_out_r_true_mean": 0.0914,
+      "held_out_r_true_sd": 0.0007,
+      "goodhart_share_pct_max": 12.5,
+      "total_harm_flags_8seed": 32,
+      "signflip_p_vs_ref": 0.007812,
+      "scorecard_path": "submissions/rejected_controls/trap-tessa-overcompressed-flags.json",
+      "receipt_sha256": "f6185b68c7960cf3640cf71053209dc95e455519434e7d5118fb0983c6373a0d"
     },
     {
       "submission_id": "trap-unverified-greedy-proxy",
@@ -4622,6 +4768,13 @@
   ],
   "receipts_summary": [
     {
+      "file": "tessa_ncl_bipartite_encoding_receipt.json",
+      "sha256": "e1eab92b068eeea09e616be5f1e59c76fbc28e2a22eb7a93946204587f641886",
+      "platforms": "<code>Moth Quantum Tessa API</code> (<code>arXiv:2611.18440v1</code>, <code>mode='emu'</code>: <code>4\u00d7 qpixl-v1</code>, <code>tessa-image-v1</code>, <code>blur-core-v1</code> on <code>aer</code> &amp; <code>156q fake_fez</code>), <code>9q Guppy 1.0 \u2192 HUGR</code>, UniProt <code>ABCC8/CYP3A4</code> + <code>ML-DSA-65</code>",
+      "metrics": "<code>9q</code> Prop.1 err <code>1.7\u00d710\u207b\u00b9\u2076</code>, <code>K_a</code> err <code>3.7\u00d710\u207b\u00b9\u2075</code>; <code>qpixl-v1</code> <code>aer r=0.9989</code>, <code>fake_fez</code> DRR <code>-12.2%</code> MAE; <code>tessa-image-v1</code> RGB MAE <code>0.0101</code>; <code>ABCC8+CYP3A4</code> <code>50.0%</code> exact AA (<code>96/192</code> miscalls \u2192 <code>H-LTC-02</code> OPEN)",
+      "floor": "Exact O(\u2211 2^{m_d}) Prop. 1 (<3 ms, 0L) & Exact 0L Sequence Lookup"
+    },
+    {
       "file": "clinical_swarmworld_v0_2_real_nhs_receipt.json",
       "sha256": "7caafd39d3d8ec24a9dd6119c06d8afcf07bb0207ff151a6f7cc0b64073dda34",
       "platforms": "<code>Clinical SwarmWorld v0.2</code>: Real <code>32</code>-PCN NHS NCL Twin (<code>171</code> GPs, <code>1,810,301</code> pts, UK OGL v3.0: OHID QOF/IMD 2025 + NHSBSA <code>EPD_SNOMED_202608/01</code> + Spine ORD), Dual <code>HiGHS MILP</code>, Live <code>jev-1.14.0</code> Gate + <code>ML-DSA-65</code>",
@@ -4749,14 +4902,14 @@
     },
     {
       "file": "quantum_ltc_knowledge_graph.json",
-      "sha256": "43ec479315b74f1f2052f44d43e41efb8a234927646e441fd88dbc69ab704d0f",
+      "sha256": "b4a0c14e76dcd06c2a26638921c2cc6029f773a13a87387de18ff58de816c8f7",
       "platforms": "EMBL-EBI OLS4 (<code>DOID</code>), <code>ChEMBL_37</code>, PubMed, <code>openFDA FAERS</code>, UK OHID/NHSBSA (OGL v3.0), SNOMED CT, UniProtKB, RCSB PDB (<code>7 structures</code>), <code>OpenCYP-FTQC v1.2</code>, <code>CQWM v0.1\u2013v0.3</code>, <code>Clinical SwarmWorld v0.1\u2013v0.2</code>, <code>qltc v1.4</code>, <code>Jev 1.14</code>, JSON-LD 1.1",
-      "metrics": "<code>75</code> nodes, <code>228</code> directed semantic triples across 8 ontology layers (1 connected component)",
+      "metrics": "<code>76</code> nodes, <code>236</code> directed semantic triples across 8 ontology layers (1 connected component)",
       "floor": "Live OLS4, ChEMBL37, PubMed, openFDA & UK OGL v3.0 verified"
     }
   ],
   "knowledge_graph": {
-    "receipt_sha256": "43ec479315b74f1f2052f44d43e41efb8a234927646e441fd88dbc69ab704d0f",
+    "receipt_sha256": "b4a0c14e76dcd06c2a26638921c2cc6029f773a13a87387de18ff58de816c8f7",
     "categories": [
       {
         "id": "NCL_LTC_Condition",
@@ -4807,7 +4960,7 @@
         "Molecular_Target": 15,
         "Quantum_Primitive": 10,
         "Logical_Era": 4,
-        "Platform_Receipt": 20,
+        "Platform_Receipt": 21,
         "DCB0129_Hazard": 6
       }
     },
@@ -4824,9 +4977,9 @@
         "in_degree": 0,
         "out_degree": 10,
         "total_degree": 10,
-        "pagerank": 0.011735,
-        "betweenness_centrality": 0.041,
-        "closeness_centrality": 0.4458
+        "pagerank": 0.01144,
+        "betweenness_centrality": 0.0382,
+        "closeness_centrality": 0.4464
       },
       {
         "id": "ltc_af",
@@ -4840,9 +4993,9 @@
         "in_degree": 0,
         "out_degree": 6,
         "total_degree": 6,
-        "pagerank": 0.006936,
-        "betweenness_centrality": 0.0133,
-        "closeness_centrality": 0.3895
+        "pagerank": 0.006797,
+        "betweenness_centrality": 0.0118,
+        "closeness_centrality": 0.3947
       },
       {
         "id": "ltc_htn",
@@ -4856,9 +5009,9 @@
         "in_degree": 0,
         "out_degree": 9,
         "total_degree": 9,
-        "pagerank": 0.013492,
-        "betweenness_centrality": 0.0558,
-        "closeness_centrality": 0.4229
+        "pagerank": 0.013198,
+        "betweenness_centrality": 0.0497,
+        "closeness_centrality": 0.4237
       },
       {
         "id": "ltc_t2d",
@@ -4870,11 +5023,11 @@
         "metric": "Cardiometabolic insulin resistance managed via HbA1c, uACR, SGLT2i, and GLP-1RA. [biomarkers: HbA1c, eGFR, uACR]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 0,
-        "out_degree": 7,
-        "total_degree": 7,
-        "pagerank": 0.009456,
-        "betweenness_centrality": 0.0208,
-        "closeness_centrality": 0.3936
+        "out_degree": 8,
+        "total_degree": 8,
+        "pagerank": 0.011608,
+        "betweenness_centrality": 0.0287,
+        "closeness_centrality": 0.4167
       },
       {
         "id": "ltc_t1d",
@@ -4888,9 +5041,9 @@
         "in_degree": 0,
         "out_degree": 5,
         "total_degree": 5,
-        "pagerank": 0.006428,
-        "betweenness_centrality": 0.0061,
-        "closeness_centrality": 0.3834
+        "pagerank": 0.006292,
+        "betweenness_centrality": 0.0056,
+        "closeness_centrality": 0.3827
       },
       {
         "id": "ltc_ckd",
@@ -4904,9 +5057,9 @@
         "in_degree": 0,
         "out_degree": 11,
         "total_degree": 11,
-        "pagerank": 0.016237,
-        "betweenness_centrality": 0.0396,
-        "closeness_centrality": 0.4431
+        "pagerank": 0.015755,
+        "betweenness_centrality": 0.0369,
+        "closeness_centrality": 0.4412
       },
       {
         "id": "ltc_masld",
@@ -4920,9 +5073,9 @@
         "in_degree": 0,
         "out_degree": 7,
         "total_degree": 7,
-        "pagerank": 0.011982,
-        "betweenness_centrality": 0.0456,
-        "closeness_centrality": 0.4022
+        "pagerank": 0.011648,
+        "betweenness_centrality": 0.0422,
+        "closeness_centrality": 0.4054
       },
       {
         "id": "ltc_copd",
@@ -4936,9 +5089,9 @@
         "in_degree": 0,
         "out_degree": 12,
         "total_degree": 12,
-        "pagerank": 0.02046,
-        "betweenness_centrality": 0.0689,
-        "closeness_centrality": 0.4458
+        "pagerank": 0.020031,
+        "betweenness_centrality": 0.0609,
+        "closeness_centrality": 0.4464
       },
       {
         "id": "ltc_asthma",
@@ -4952,9 +5105,9 @@
         "in_degree": 1,
         "out_degree": 9,
         "total_degree": 10,
-        "pagerank": 0.014816,
-        "betweenness_centrality": 0.0412,
-        "closeness_centrality": 0.4205
+        "pagerank": 0.014575,
+        "betweenness_centrality": 0.0369,
+        "closeness_centrality": 0.4213
       },
       {
         "id": "stage_call_recall",
@@ -4968,9 +5121,9 @@
         "in_degree": 10,
         "out_degree": 3,
         "total_degree": 13,
-        "pagerank": 0.017635,
-        "betweenness_centrality": 0.0558,
-        "closeness_centrality": 0.4327
+        "pagerank": 0.01745,
+        "betweenness_centrality": 0.0496,
+        "closeness_centrality": 0.4335
       },
       {
         "id": "stage_1_check_test",
@@ -4984,9 +5137,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.021902,
-        "betweenness_centrality": 0.098,
-        "closeness_centrality": 0.4405
+        "pagerank": 0.02119,
+        "betweenness_centrality": 0.0851,
+        "closeness_centrality": 0.4412
       },
       {
         "id": "stage_2_mdt_review",
@@ -5000,9 +5153,9 @@
         "in_degree": 5,
         "out_degree": 3,
         "total_degree": 8,
-        "pagerank": 0.012967,
-        "betweenness_centrality": 0.0621,
-        "closeness_centrality": 0.4205
+        "pagerank": 0.012252,
+        "betweenness_centrality": 0.0554,
+        "closeness_centrality": 0.419
       },
       {
         "id": "stage_3_pcsp",
@@ -5016,9 +5169,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.018475,
-        "betweenness_centrality": 0.0612,
-        "closeness_centrality": 0.3895
+        "pagerank": 0.014897,
+        "betweenness_centrality": 0.0469,
+        "closeness_centrality": 0.3906
       },
       {
         "id": "stage_4_continuity",
@@ -5032,9 +5185,9 @@
         "in_degree": 2,
         "out_degree": 2,
         "total_degree": 4,
-        "pagerank": 0.013331,
-        "betweenness_centrality": 0.0215,
-        "closeness_centrality": 0.341
+        "pagerank": 0.009589,
+        "betweenness_centrality": 0.0182,
+        "closeness_centrality": 0.3456
       },
       {
         "id": "mol_ace",
@@ -5048,9 +5201,9 @@
         "in_degree": 5,
         "out_degree": 1,
         "total_degree": 6,
-        "pagerank": 0.010051,
-        "betweenness_centrality": 0.0266,
-        "closeness_centrality": 0.3795
+        "pagerank": 0.009793,
+        "betweenness_centrality": 0.0253,
+        "closeness_centrality": 0.3788
       },
       {
         "id": "mol_pdb_1o86",
@@ -5064,9 +5217,9 @@
         "in_degree": 2,
         "out_degree": 4,
         "total_degree": 6,
-        "pagerank": 0.013994,
-        "betweenness_centrality": 0.0192,
-        "closeness_centrality": 0.3719
+        "pagerank": 0.013621,
+        "betweenness_centrality": 0.0184,
+        "closeness_centrality": 0.3713
       },
       {
         "id": "mol_slc5a2",
@@ -5080,9 +5233,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.008642,
-        "betweenness_centrality": 0.0095,
-        "closeness_centrality": 0.3592
+        "pagerank": 0.00853,
+        "betweenness_centrality": 0.0092,
+        "closeness_centrality": 0.3623
       },
       {
         "id": "mol_glp1r",
@@ -5096,9 +5249,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.006672,
-        "betweenness_centrality": 0.0025,
-        "closeness_centrality": 0.3203
+        "pagerank": 0.006617,
+        "betweenness_centrality": 0.0023,
+        "closeness_centrality": 0.3261
       },
       {
         "id": "mol_adrb2",
@@ -5112,9 +5265,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.006189,
-        "betweenness_centrality": 0.0021,
-        "closeness_centrality": 0.3379
+        "pagerank": 0.006027,
+        "betweenness_centrality": 0.0019,
+        "closeness_centrality": 0.3378
       },
       {
         "id": "mol_il6",
@@ -5128,9 +5281,9 @@
         "in_degree": 4,
         "out_degree": 1,
         "total_degree": 5,
-        "pagerank": 0.007895,
-        "betweenness_centrality": 0.0107,
-        "closeness_centrality": 0.37
+        "pagerank": 0.00768,
+        "betweenness_centrality": 0.0098,
+        "closeness_centrality": 0.3695
       },
       {
         "id": "mol_angii_1n9v",
@@ -5144,9 +5297,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.005429,
-        "betweenness_centrality": 0.0108,
-        "closeness_centrality": 0.3318
+        "pagerank": 0.005267,
+        "betweenness_centrality": 0.009,
+        "closeness_centrality": 0.3319
       },
       {
         "id": "mol_pnpla3",
@@ -5160,9 +5313,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.003436,
+        "pagerank": 0.00337,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2879
+        "closeness_centrality": 0.2896
       },
       {
         "id": "mol_cyp3a4",
@@ -5174,11 +5327,11 @@
         "metric": "Human microsomal Cytochrome P450 3A4 (chr7:99756966-99784184; CYP3A4*22 rs35599367 AVI Phred 8.05) metabolizing >50% of statin/CCB/DOAC/ICS regimens. [avi_phred_star22: 8.05 \u00b7 locus: chr7:99756966-99784184]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 5,
-        "out_degree": 4,
-        "total_degree": 9,
-        "pagerank": 0.014014,
-        "betweenness_centrality": 0.0448,
-        "closeness_centrality": 0.4044
+        "out_degree": 5,
+        "total_degree": 10,
+        "pagerank": 0.015917,
+        "betweenness_centrality": 0.0575,
+        "closeness_centrality": 0.4261
       },
       {
         "id": "mol_pdb_1tqn",
@@ -5192,9 +5345,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.012153,
-        "betweenness_centrality": 0.0094,
-        "closeness_centrality": 0.3776
+        "pagerank": 0.011738,
+        "betweenness_centrality": 0.0091,
+        "closeness_centrality": 0.3846
       },
       {
         "id": "mol_pdb_5te8",
@@ -5208,9 +5361,9 @@
         "in_degree": 1,
         "out_degree": 6,
         "total_degree": 7,
-        "pagerank": 0.014625,
+        "pagerank": 0.014166,
         "betweenness_centrality": 0.0083,
-        "closeness_centrality": 0.37
+        "closeness_centrality": 0.3769
       },
       {
         "id": "mol_pdb_3nxu",
@@ -5224,9 +5377,9 @@
         "in_degree": 1,
         "out_degree": 4,
         "total_degree": 5,
-        "pagerank": 0.012056,
-        "betweenness_centrality": 0.0047,
-        "closeness_centrality": 0.3719
+        "pagerank": 0.011711,
+        "betweenness_centrality": 0.0042,
+        "closeness_centrality": 0.3788
       },
       {
         "id": "mol_pdb_4wnu",
@@ -5240,9 +5393,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009579,
-        "betweenness_centrality": 0.0072,
-        "closeness_centrality": 0.3737
+        "pagerank": 0.009327,
+        "betweenness_centrality": 0.0065,
+        "closeness_centrality": 0.3731
       },
       {
         "id": "mol_pdb_1r9o",
@@ -5256,9 +5409,9 @@
         "in_degree": 3,
         "out_degree": 3,
         "total_degree": 6,
-        "pagerank": 0.010865,
-        "betweenness_centrality": 0.0157,
-        "closeness_centrality": 0.3776
+        "pagerank": 0.010694,
+        "betweenness_centrality": 0.0143,
+        "closeness_centrality": 0.3807
       },
       {
         "id": "mol_muc5b",
@@ -5272,9 +5425,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.006781,
-        "betweenness_centrality": 0.0044,
-        "closeness_centrality": 0.3246
+        "pagerank": 0.006642,
+        "betweenness_centrality": 0.0035,
+        "closeness_centrality": 0.3247
       },
       {
         "id": "tx_acei_lisinopril",
@@ -5288,9 +5441,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.008819,
-        "betweenness_centrality": 0.0339,
-        "closeness_centrality": 0.3558
+        "pagerank": 0.008521,
+        "betweenness_centrality": 0.0331,
+        "closeness_centrality": 0.3555
       },
       {
         "id": "tx_sglt2i",
@@ -5304,9 +5457,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.009209,
-        "betweenness_centrality": 0.0148,
-        "closeness_centrality": 0.3645
+        "pagerank": 0.008967,
+        "betweenness_centrality": 0.0128,
+        "closeness_centrality": 0.3676
       },
       {
         "id": "tx_mart_dpi",
@@ -5320,9 +5473,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.009801,
-        "betweenness_centrality": 0.0334,
-        "closeness_centrality": 0.3854
+        "pagerank": 0.009253,
+        "betweenness_centrality": 0.0265,
+        "closeness_centrality": 0.3886
       },
       {
         "id": "tx_pharmacist_smr",
@@ -5336,9 +5489,9 @@
         "in_degree": 1,
         "out_degree": 8,
         "total_degree": 9,
-        "pagerank": 0.013439,
-        "betweenness_centrality": 0.0636,
-        "closeness_centrality": 0.4327
+        "pagerank": 0.012991,
+        "betweenness_centrality": 0.0584,
+        "closeness_centrality": 0.4335
       },
       {
         "id": "tx_home_bp",
@@ -5352,9 +5505,9 @@
         "in_degree": 0,
         "out_degree": 1,
         "total_degree": 1,
-        "pagerank": 0.002673,
+        "pagerank": 0.002624,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2633
+        "closeness_centrality": 0.2632
       },
       {
         "id": "tx_vcse_sp",
@@ -5368,9 +5521,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.006262,
-        "betweenness_centrality": 0.0036,
-        "closeness_centrality": 0.2937
+        "pagerank": 0.005894,
+        "betweenness_centrality": 0.0034,
+        "closeness_centrality": 0.2941
       },
       {
         "id": "prim_p08",
@@ -5384,9 +5537,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.007779,
-        "betweenness_centrality": 0.009,
-        "closeness_centrality": 0.3333
+        "pagerank": 0.007059,
+        "betweenness_centrality": 0.006,
+        "closeness_centrality": 0.3378
       },
       {
         "id": "prim_a01d",
@@ -5400,9 +5553,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.015785,
-        "betweenness_centrality": 0.0376,
-        "closeness_centrality": 0.3575
+        "pagerank": 0.014153,
+        "betweenness_centrality": 0.0293,
+        "closeness_centrality": 0.3606
       },
       {
         "id": "prim_p09",
@@ -5414,11 +5567,11 @@
         "metric": "Haiqu Entangled Manifold Embedding (EME) of 8-Feature NCL LTC Profile \u2014 Contract: O(n)-depth approximate state preparation avoiding O(2^n) generic state-loading bottleneck. [kind: procedural \u00b7 defining_paper: Giovannetti, Lloyd, Maccone (2007)]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 1,
-        "out_degree": 2,
-        "total_degree": 3,
-        "pagerank": 0.011829,
-        "betweenness_centrality": 0.0152,
-        "closeness_centrality": 0.3318
+        "out_degree": 3,
+        "total_degree": 4,
+        "pagerank": 0.012655,
+        "betweenness_centrality": 0.0173,
+        "closeness_centrality": 0.3571
       },
       {
         "id": "prim_p13",
@@ -5432,9 +5585,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.007372,
-        "betweenness_centrality": 0.0035,
-        "closeness_centrality": 0.3348
+        "pagerank": 0.006696,
+        "betweenness_centrality": 0.0032,
+        "closeness_centrality": 0.3363
       },
       {
         "id": "prim_p20",
@@ -5448,9 +5601,9 @@
         "in_degree": 1,
         "out_degree": 5,
         "total_degree": 6,
-        "pagerank": 0.01157,
-        "betweenness_centrality": 0.0119,
-        "closeness_centrality": 0.3936
+        "pagerank": 0.010732,
+        "betweenness_centrality": 0.01,
+        "closeness_centrality": 0.3947
       },
       {
         "id": "prim_a01g",
@@ -5464,9 +5617,9 @@
         "in_degree": 1,
         "out_degree": 3,
         "total_degree": 4,
-        "pagerank": 0.011297,
-        "betweenness_centrality": 0.0223,
-        "closeness_centrality": 0.341
+        "pagerank": 0.010212,
+        "betweenness_centrality": 0.022,
+        "closeness_centrality": 0.3425
       },
       {
         "id": "prim_a01h",
@@ -5480,9 +5633,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.009678,
-        "betweenness_centrality": 0.0088,
-        "closeness_centrality": 0.302
+        "pagerank": 0.008987,
+        "betweenness_centrality": 0.0095,
+        "closeness_centrality": 0.3086
       },
       {
         "id": "prim_p22",
@@ -5496,9 +5649,9 @@
         "in_degree": 2,
         "out_degree": 3,
         "total_degree": 5,
-        "pagerank": 0.015047,
-        "betweenness_centrality": 0.0296,
-        "closeness_centrality": 0.3645
+        "pagerank": 0.014541,
+        "betweenness_centrality": 0.0278,
+        "closeness_centrality": 0.3641
       },
       {
         "id": "prim_x03",
@@ -5512,9 +5665,9 @@
         "in_degree": 5,
         "out_degree": 5,
         "total_degree": 10,
-        "pagerank": 0.026014,
-        "betweenness_centrality": 0.0514,
-        "closeness_centrality": 0.3795
+        "pagerank": 0.025273,
+        "betweenness_centrality": 0.0484,
+        "closeness_centrality": 0.3807
       },
       {
         "id": "prim_p04",
@@ -5528,9 +5681,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.011994,
-        "betweenness_centrality": 0.0146,
-        "closeness_centrality": 0.3045
+        "pagerank": 0.010215,
+        "betweenness_centrality": 0.0131,
+        "closeness_centrality": 0.3049
       },
       {
         "id": "era_i",
@@ -5542,11 +5695,11 @@
         "metric": "0 logical qubits (1\u201320 phys / cloud emulators). Classical HiGHS MILP (<25 ms) & RBF-SVM/GBDT dominate operational tasks. [logical_qubits: 0 \u00b7 physical_qubits: 1-98 \u00b7 verdict: Classical Dominates]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 3,
-        "out_degree": 1,
-        "total_degree": 4,
-        "pagerank": 0.014843,
-        "betweenness_centrality": 0.0206,
-        "closeness_centrality": 0.3379
+        "out_degree": 2,
+        "total_degree": 5,
+        "pagerank": 0.014898,
+        "betweenness_centrality": 0.0193,
+        "closeness_centrality": 0.3695
       },
       {
         "id": "era_ii",
@@ -5558,11 +5711,11 @@
         "metric": "Distance-2 [[8,3,2]] color codes + post-selection (yield 94.4% at 3L -> 15.8% at 24L, d=24); shallow MCMR & LR-QAOA. [logical_qubits: 3-24 \u00b7 physical_qubits: 10-192 \u00b7 postselect_24L: 15.81%]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 5,
-        "out_degree": 2,
-        "total_degree": 7,
-        "pagerank": 0.023022,
-        "betweenness_centrality": 0.0468,
-        "closeness_centrality": 0.3719
+        "out_degree": 3,
+        "total_degree": 8,
+        "pagerank": 0.021907,
+        "betweenness_centrality": 0.0539,
+        "closeness_centrality": 0.3927
       },
       {
         "id": "era_iii",
@@ -5576,9 +5729,9 @@
         "in_degree": 4,
         "out_degree": 2,
         "total_degree": 6,
-        "pagerank": 0.01968,
-        "betweenness_centrality": 0.0364,
-        "closeness_centrality": 0.3957
+        "pagerank": 0.017839,
+        "betweenness_centrality": 0.0319,
+        "closeness_centrality": 0.3989
       },
       {
         "id": "era_iv",
@@ -5592,9 +5745,9 @@
         "in_degree": 5,
         "out_degree": 2,
         "total_degree": 7,
-        "pagerank": 0.021097,
-        "betweenness_centrality": 0.0301,
-        "closeness_centrality": 0.3627
+        "pagerank": 0.019684,
+        "betweenness_centrality": 0.0275,
+        "closeness_centrality": 0.3623
       },
       {
         "id": "plat_nexus_helios",
@@ -5608,9 +5761,9 @@
         "in_degree": 3,
         "out_degree": 2,
         "total_degree": 5,
-        "pagerank": 0.013297,
-        "betweenness_centrality": 0.0113,
-        "closeness_centrality": 0.341
+        "pagerank": 0.012382,
+        "betweenness_centrality": 0.01,
+        "closeness_centrality": 0.3409
       },
       {
         "id": "plat_haiqu",
@@ -5624,9 +5777,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.010551,
-        "betweenness_centrality": 0.0016,
-        "closeness_centrality": 0.2891
+        "pagerank": 0.008966,
+        "betweenness_centrality": 0.0012,
+        "closeness_centrality": 0.293
       },
       {
         "id": "plat_jij_highs",
@@ -5640,9 +5793,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.009292,
-        "betweenness_centrality": 0.0028,
-        "closeness_centrality": 0.3122
+        "pagerank": 0.009302,
+        "betweenness_centrality": 0.002,
+        "closeness_centrality": 0.3165
       },
       {
         "id": "plat_hqs_qprotsim",
@@ -5656,9 +5809,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.009161,
-        "betweenness_centrality": 0.0021,
-        "closeness_centrality": 0.2803
+        "pagerank": 0.008757,
+        "betweenness_centrality": 0.0018,
+        "closeness_centrality": 0.282
       },
       {
         "id": "plat_multiomics",
@@ -5672,9 +5825,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.005371,
+        "pagerank": 0.005248,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2761
+        "closeness_centrality": 0.2768
       },
       {
         "id": "plat_modal_rhyme_hf",
@@ -5688,9 +5841,9 @@
         "in_degree": 2,
         "out_degree": 0,
         "total_degree": 2,
-        "pagerank": 0.009472,
-        "betweenness_centrality": 0.0024,
-        "closeness_centrality": 0.2721
+        "pagerank": 0.008494,
+        "betweenness_centrality": 0.0022,
+        "closeness_centrality": 0.2727
       },
       {
         "id": "plat_text2wetlab",
@@ -5704,9 +5857,9 @@
         "in_degree": 1,
         "out_degree": 0,
         "total_degree": 1,
-        "pagerank": 0.005049,
+        "pagerank": 0.004923,
         "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.3071
+        "closeness_centrality": 0.3074
       },
       {
         "id": "plat_medicus_discopy_moth",
@@ -5718,11 +5871,11 @@
         "metric": "NIST FIPS 204 ML-DSA-65 FHIR R4 bundle signature (33.91 ms), DisCoPy snake identity (2.22e-16), and Moth 5-borough surge blur (Gini 0.8750->0.4609). [mldsa65_sign_ms: 33.91 \u00b7 gini_before: 0.875 \u00b7 gini_after: 0.4609 \u00b7 receipt_sha256: 7d127bfad600711569b260307b58a20f1e43b7cf2f4878632897f000ff980242]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
         "in_degree": 2,
-        "out_degree": 0,
-        "total_degree": 2,
-        "pagerank": 0.010166,
-        "betweenness_centrality": 0.0,
-        "closeness_centrality": 0.2902
+        "out_degree": 1,
+        "total_degree": 3,
+        "pagerank": 0.010511,
+        "betweenness_centrality": 0.0047,
+        "closeness_centrality": 0.3425
       },
       {
         "id": "plat_typesafe_jev",
@@ -5736,9 +5889,9 @@
         "in_degree": 0,
         "out_degree": 13,
         "total_degree": 13,
-        "pagerank": 0.016756,
-        "betweenness_centrality": 0.0675,
-        "closeness_centrality": 0.4111
+        "pagerank": 0.016894,
+        "betweenness_centrality": 0.0654,
+        "closeness_centrality": 0.4167
       },
       {
         "id": "plat_pyscf_ag2",
@@ -5752,9 +5905,9 @@
         "in_degree": 3,
         "out_degree": 0,
         "total_degree": 3,
-        "pagerank": 0.01163,
-        "betweenness_centrality": 0.0061,
-        "closeness_centrality": 0.3231
+        "pagerank": 0.011344,
+        "betweenness_centrality": 0.0064,
+        "closeness_centrality": 0.3289
       },
       {
         "id": "plat_cyp3a4_gate1",
@@ -5768,9 +5921,9 @@
         "in_degree": 6,
         "out_degree": 0,
         "total_degree": 6,
-        "pagerank": 0.01402,
-        "betweenness_centrality": 0.0165,
-        "closeness_centrality": 0.3834
+        "pagerank": 0.013725,
+        "betweenness_centrality": 0.0158,
+        "closeness_centrality": 0.3886
       },
       {
         "id": "plat_opencyp_ftqc",
@@ -5784,9 +5937,9 @@
         "in_degree": 8,
         "out_degree": 0,
         "total_degree": 8,
-        "pagerank": 0.021307,
-        "betweenness_centrality": 0.0208,
-        "closeness_centrality": 0.3834
+        "pagerank": 0.02066,
+        "betweenness_centrality": 0.0203,
+        "closeness_centrality": 0.3906
       },
       {
         "id": "plat_jev_10ltc_cqa",
@@ -5800,9 +5953,9 @@
         "in_degree": 11,
         "out_degree": 2,
         "total_degree": 13,
-        "pagerank": 0.019917,
-        "betweenness_centrality": 0.0562,
-        "closeness_centrality": 0.454
+        "pagerank": 0.019629,
+        "betweenness_centrality": 0.0531,
+        "closeness_centrality": 0.4573
       },
       {
         "id": "plat_opencyp_v1_1_thc",
@@ -5816,9 +5969,9 @@
         "in_degree": 10,
         "out_degree": 2,
         "total_degree": 12,
-        "pagerank": 0.031487,
-        "betweenness_centrality": 0.039,
-        "closeness_centrality": 0.4088
+        "pagerank": 0.030544,
+        "betweenness_centrality": 0.038,
+        "closeness_centrality": 0.4167
       },
       {
         "id": "plat_cqwm_v0_1",
@@ -5832,9 +5985,9 @@
         "in_degree": 11,
         "out_degree": 3,
         "total_degree": 14,
-        "pagerank": 0.029682,
-        "betweenness_centrality": 0.0735,
-        "closeness_centrality": 0.4713
+        "pagerank": 0.028887,
+        "betweenness_centrality": 0.0685,
+        "closeness_centrality": 0.4717
       },
       {
         "id": "plat_cqwm_v0_2_helios",
@@ -5848,9 +6001,9 @@
         "in_degree": 8,
         "out_degree": 1,
         "total_degree": 9,
-        "pagerank": 0.025238,
-        "betweenness_centrality": 0.0321,
-        "closeness_centrality": 0.4229
+        "pagerank": 0.023154,
+        "betweenness_centrality": 0.0275,
+        "closeness_centrality": 0.4237
       },
       {
         "id": "plat_opencyp_v1_2_faers_val",
@@ -5864,9 +6017,9 @@
         "in_degree": 9,
         "out_degree": 1,
         "total_degree": 10,
-        "pagerank": 0.025023,
-        "betweenness_centrality": 0.027,
-        "closeness_centrality": 0.4277
+        "pagerank": 0.024366,
+        "betweenness_centrality": 0.0252,
+        "closeness_centrality": 0.431
       },
       {
         "id": "plat_cqwm_v0_3_depot_8q_comb",
@@ -5880,9 +6033,9 @@
         "in_degree": 10,
         "out_degree": 2,
         "total_degree": 12,
-        "pagerank": 0.037186,
-        "betweenness_centrality": 0.054,
-        "closeness_centrality": 0.4405
+        "pagerank": 0.035764,
+        "betweenness_centrality": 0.0481,
+        "closeness_centrality": 0.4412
       },
       {
         "id": "plat_clinical_swarmworld_v0_1",
@@ -5896,9 +6049,9 @@
         "in_degree": 8,
         "out_degree": 1,
         "total_degree": 9,
-        "pagerank": 0.023997,
-        "betweenness_centrality": 0.0239,
-        "closeness_centrality": 0.4181
+        "pagerank": 0.023919,
+        "betweenness_centrality": 0.0218,
+        "closeness_centrality": 0.419
       },
       {
         "id": "plat_clinical_swarmworld_v0_2",
@@ -5909,12 +6062,28 @@
         "external_id": "SHA256:7caafd39d3d8 ()",
         "metric": "Real-NHS 32-PCN digital twin of North Central London ICB (171 GP practices, 1,810,301 patients, UK OGL v3.0 OHID QOF/IMD 2025 + NHSBSA EPD_SNOMED_202608 & 202601, phi_present=False): IMD vs pMDI r=+0.637 (p=8.8e-5), IMD vs 80+ frailty r=-0.729 (p=2.3e-6); Dual HiGHS MILP Goodhart Theorem (Proxy-MILP 6/6 gaming, Q_true=0.0739 vs Verified-MILP 0/6, Q_true=0.8764); Unverified Swarm culturally amplifies Goodhart share 38.7% -> 68.6% (p=0.007812, 22,024 harms/world) while Commit-Verified Stigmergy (AST + CQWM v0.3 + Jev 1.14, 12/12 recall/specificity) achieves 0 harms, R_true=0.4073 vs 0.3337 (p=0.007812), and 100% 50%-turnover retention. [ncl_real_pcns: 32 \u00b7 ncl_registered_patients: 1810301 \u00b7 imd_vs_pmdi_pearson_r: 0.6372 \u00b7 goodhart_share_unverified_vs_solo: 0.686 vs 0.3865 \u00b7 r_true_verified_vs_unverified: 0.4073 vs 0.3337 \u00b7 harms_unverified_posthoc_verified: 22024.0 / 6394.25 / 0.0 \u00b7 jev_commit_gate_recall: 1.0 \u00b7 receipt_sha256: 7caafd39d3d8ec24a9dd6119c06d8afcf07bb0207ff151a6f7cc0b64073dda34]",
         "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
-        "in_degree": 9,
+        "in_degree": 10,
         "out_degree": 0,
-        "total_degree": 9,
-        "pagerank": 0.026864,
-        "betweenness_centrality": 0.0246,
-        "closeness_centrality": 0.4
+        "total_degree": 10,
+        "pagerank": 0.033517,
+        "betweenness_centrality": 0.0349,
+        "closeness_centrality": 0.4237
+      },
+      {
+        "id": "plat_moth_tessa_bipartite",
+        "label": "Moth Quantum Tessa API & Bipartite 32-PCN Loader",
+        "category": "Platform_Receipt",
+        "layer": 7,
+        "tier": "Layer 7 \u00b7 Era: Era I-II",
+        "external_id": "SHA256:e1eab92b068e ()",
+        "metric": "Zero-SWAP bipartite Tessa encoding (Bultrini arXiv:2611.18440v1) + 6 live Moth Quantum API jobs (mode='emu', 0 QPU shots): 3x3 9q (32 NCL PCNs) & 6x6 36q (200 slots, 2C+C bits), Proposition 1 <1e-15 parity, live qpixl-v1 aer (r=0.9989) vs fake_fez raw (MAE=0.0622) -> mean_std DRR (MAE=0.0546, -12.2%), tessa-image-v1 pair RGB MAE=0.0101, blur-core-v1 32x6 winter surge Gini 0.0831->0.0536, and 192-aa ABCC8+CYP3A4 50.0% NISQ exact AA proving H-LTC-02 OPEN. [live_moth_jobs: 6 \u00b7 physical_qpu_shots: 0 \u00b7 qpixl_aer_pearson_r: 0.99891 \u00b7 qpixl_fake_fez_drr_mae: 0.05459 \u00b7 pgx_abcc8_cyp3a4_exact_aa_pct: 50.0 \u00b7 leaderboard_tessa_q_true: 0.5685 \u00b7 receipt_sha256: e1eab92b068eeea09e616be5f1e59c76fbc28e2a22eb7a93946204587f641886]",
+        "epistemic_status": "Verified Receipt / Ontology Grounded (0 QPU Shots)",
+        "in_degree": 7,
+        "out_degree": 1,
+        "total_degree": 8,
+        "pagerank": 0.027083,
+        "betweenness_centrality": 0.0566,
+        "closeness_centrality": 0.4412
       },
       {
         "id": "haz_h_ltc_01",
@@ -5928,9 +6097,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.006419,
-        "betweenness_centrality": 0.0013,
-        "closeness_centrality": 0.3491
+        "pagerank": 0.006704,
+        "betweenness_centrality": 0.0011,
+        "closeness_centrality": 0.3538
       },
       {
         "id": "haz_h_ltc_02",
@@ -5942,11 +6111,11 @@
         "metric": "ACEi/ARB + SGLT2i + diuretic/NSAID AKI or improper DPI inhaler technique without human SMR \u2014 Statutory DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off) clinical safety status: OPEN (mandatory human GP/Pharmacist/CSO sign-off). [status: OPEN \u00b7 standard: DCB0129 (Model Guardrail) + DCB0160 (Pharmacist SMR Sign-Off)]",
         "epistemic_status": "OPEN Statutory Hazard (NHS DCB0129 & DCB0160)",
         "in_degree": 2,
-        "out_degree": 7,
-        "total_degree": 9,
-        "pagerank": 0.014968,
-        "betweenness_centrality": 0.0299,
-        "closeness_centrality": 0.4044
+        "out_degree": 8,
+        "total_degree": 10,
+        "pagerank": 0.016931,
+        "betweenness_centrality": 0.0407,
+        "closeness_centrality": 0.4261
       },
       {
         "id": "haz_h_ltc_03",
@@ -5960,9 +6129,9 @@
         "in_degree": 1,
         "out_degree": 2,
         "total_degree": 3,
-        "pagerank": 0.004487,
+        "pagerank": 0.004447,
         "betweenness_centrality": 0.0008,
-        "closeness_centrality": 0.3592
+        "closeness_centrality": 0.3589
       },
       {
         "id": "haz_h_ltc_04",
@@ -5976,9 +6145,9 @@
         "in_degree": 2,
         "out_degree": 6,
         "total_degree": 8,
-        "pagerank": 0.01474,
-        "betweenness_centrality": 0.0198,
-        "closeness_centrality": 0.4022
+        "pagerank": 0.014597,
+        "betweenness_centrality": 0.0183,
+        "closeness_centrality": 0.4076
       },
       {
         "id": "haz_h_ltc_05",
@@ -5992,9 +6161,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004103,
-        "betweenness_centrality": 0.0036,
-        "closeness_centrality": 0.3507
+        "pagerank": 0.004051,
+        "betweenness_centrality": 0.0026,
+        "closeness_centrality": 0.3505
       },
       {
         "id": "haz_h_ltc_06",
@@ -6008,9 +6177,9 @@
         "in_degree": 1,
         "out_degree": 1,
         "total_degree": 2,
-        "pagerank": 0.004372,
-        "betweenness_centrality": 0.0057,
-        "closeness_centrality": 0.3045
+        "pagerank": 0.004276,
+        "betweenness_centrality": 0.0055,
+        "closeness_centrality": 0.3061
       }
     ],
     "edges": [
@@ -6967,6 +7136,54 @@
         "target": "plat_clinical_swarmworld_v0_2",
         "relation": "GOVERNS_CLINICAL_RISK_OF",
         "weight": "phi_present=False (100% public OGL v3.0 PCN aggregates), 0 QPU shots, 0 autonomous clinical decisions, 6/6 open hazards"
+      },
+      {
+        "source": "prim_p09",
+        "target": "plat_moth_tessa_bipartite",
+        "relation": "EXECUTED_AND_SEALED_ON",
+        "weight": "K\u00f6nig 4-colour 0-SWAP Tessa bipartite multiplexer (3x3 9q = 32 NCL PCNs, 6x6 36q = 200 slots; Proposition 1 O(sum 2^m_d) classical floor)"
+      },
+      {
+        "source": "plat_medicus_discopy_moth",
+        "target": "plat_moth_tessa_bipartite",
+        "relation": "UPGRADED_TO_LIVE_MOTH_API_IN",
+        "weight": "Upgrades 16-node local blur to 6 live authenticated Moth API jobs (qpixl-v1, tessa-image-v1, blur-core-v1 on 32x6 NCL surge)"
+      },
+      {
+        "source": "plat_moth_tessa_bipartite",
+        "target": "plat_clinical_swarmworld_v0_2",
+        "relation": "BENCHMARKS_SFWHT_POLICY_IN",
+        "weight": "Paired leaderboard controls: ext-tessa-sfwht-equity-v1 ADMITTED (Q_true=0.5685, 0% Goodhart) vs trap-tessa-overcompressed-flags REJECTED"
+      },
+      {
+        "source": "ltc_t2d",
+        "target": "plat_moth_tessa_bipartite",
+        "relation": "BENCHMARKS_ABCC8_SUR1_IN",
+        "weight": "96-aa UniProt Q09428 ABCC8 (SUR1 pancreatic sulfonylurea receptor) + 96-aa CYP3A4 Cys442 constellation benchmark (50.0% fake_fez exact AA)"
+      },
+      {
+        "source": "mol_cyp3a4",
+        "target": "plat_moth_tessa_bipartite",
+        "relation": "BENCHMARKS_PGX_CONSTELLATION_IN",
+        "weight": "400-pt Fibonacci Bloch constellation vs Era II [[8,3,2]] post-selection (12.5% NISQ -> 94.8% post-selected)"
+      },
+      {
+        "source": "era_i",
+        "target": "plat_moth_tessa_bipartite",
+        "relation": "BENCHMARKED_ON_HERON_STANDIN_IN",
+        "weight": "Live Moth fake_fez (156q Heron r2 noise stand-in, mode='emu', 0 QPU shots): mean_std DRR cuts MAE by 12.2%"
+      },
+      {
+        "source": "era_ii",
+        "target": "plat_moth_tessa_bipartite",
+        "relation": "QUANTIFIES_832_POSTSELECTION_IN",
+        "weight": "[[8,3,2]] distance-2 post-selection restores 2-aa/slot 400-point constellation recovery from 12.5% to 94.79%"
+      },
+      {
+        "source": "haz_h_ltc_02",
+        "target": "plat_moth_tessa_bipartite",
+        "relation": "GOVERNS_CLINICAL_RISK_OF",
+        "weight": "96/192 NISQ amino-acid miscalls on ABCC8+CYP3A4 prove genomic lookup must stay exact classical (0L) under open H-LTC-02"
       },
       {
         "source": "tx_acei_lisinopril",

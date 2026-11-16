@@ -76,12 +76,18 @@ from quantum_ltc.cqwm_v0_3_depot_and_comb import (
     simulate_cqwm_v0_3_perpetrator_and_enzyme_trajectory,
 )
 from quantum_ltc.entanglement_and_clinical_validation import HUMAN_RITONAVIR_WASHOUT_TRIAL_PMID_38393578
+from quantum_ltc.tessa_bipartite_encoding import (
+    build_planar_tessa_lattice,
+    evaluate_pharmacogene_constellation_safety,
+    simulate_tessa_proposition1,
+    verify_9q_proposition1_vs_full_statevector,
+)
 from quantum_ltc.world_model import (
     simulate_ace_htn_bp_rollout,
     simulate_non_markovian_quantum_comb_vs_markov,
 )
 
-HARNESS_VERSION = "1.4.0"
+HARNESS_VERSION = "1.5.0"
 OPEN_CLINICAL_HAZARDS: tuple[str, ...] = (
     "H-LTC-01",
     "H-LTC-02",
@@ -110,6 +116,7 @@ SEALED_EXPERIMENTAL_RECEIPTS: tuple[str, ...] = (
     "cqwm_v0_3_depot_and_8q_helios_comb_receipt.json",
     "clinical_swarmworld_v0_1_receipt.json",
     "clinical_swarmworld_v0_2_real_nhs_receipt.json",
+    "tessa_ncl_bipartite_encoding_receipt.json",
 )
 
 
@@ -147,6 +154,13 @@ HARNESS_LANES: tuple[HarnessLaneSpec, ...] = (
         tier="tier0-offline",
         title="Real 32-PCN NHS NCL Digital Twin (1.81M pts, OGL v3.0) Dual Goodhart MILP + 2-Seed Smoke Replay",
         classical_floor="Safety-Verified HiGHS MILP (0.00% MIP gap) + Isolated Best-of-32",
+        required_env=(),
+    ),
+    HarnessLaneSpec(
+        lane_id="tessa-bipartite-32pcn",
+        tier="tier0-offline",
+        title="Moth Tessa Bipartite 9q/36q 32-PCN Loader (arXiv:2611.18440v1 Prop.1 + Eq.16 Ka + H-LTC-02 PGx)",
+        classical_floor="Exact O(sum_d 2^{m_d}) Proposition 1 Super-Pixel Floor (<3 ms, 0L) + Exact 0L Sequence Lookup",
         required_env=(),
     ),
     HarnessLaneSpec(
@@ -244,6 +258,14 @@ HARNESS_LANES: tuple[HarnessLaneSpec, ...] = (
         classical_floor="Cubic Poly-LogReg / GBDT / RBF-SVM Classical Baselines",
         required_env=("MODAL_TOKEN_ID", "MODAL_TOKEN_SECRET"),
         script_relpath="experiments/modal_ltc_roadmap_rhyme_qml.py",
+    ),
+    HarnessLaneSpec(
+        lane_id="cloud-moth-tessa-api",
+        tier="tier2-quantum-cloud",
+        title="Live Moth Quantum API (qpixl-v1, tessa-image-v1, blur-core-v1; mode='emu', 0 QPU shots)",
+        classical_floor="Exact O(sum_d 2^{m_d}) Proposition 1 Super-Pixel Floor + 0L Sequence Lookup",
+        required_env=("MOTH_API_KEY",),
+        script_relpath="experiments/run_tessa_ncl_bipartite_benchmark.py",
     ),
 )
 
@@ -1437,7 +1459,59 @@ def _run_tier0_lane(lane_id: str, repo_root: Path) -> dict[str, Any]:
             "elapsed_seconds": round(time.perf_counter() - t0, 3),
         }
 
+    if lane_id == "tessa-bipartite-32pcn":
+        snap_path = repo_root / "data" / "ncl_icb_real_pcn_twin_2026.json"
+        snap = load_real_ncl_snapshot(snap_path)
+        nodes = build_real_32pcn_ncl_network(snap, seed=0)
+        imd32 = [n.imd_2025_score for n in nodes]
+        v9 = verify_9q_proposition1_vs_full_statevector(imd32)
+        lat36 = build_planar_tessa_lattice(6, 6)
+        vals200 = [w for n in nodes for w in n.demand_weights] + [1.10] * 8
+        surge200 = [n.winter_mbi_surge_ratio for n in nodes for _ in range(6)] + [1.45] * 8
+        flags200 = [int(n.is_core20_deprived) for n in nodes for _ in range(6)] + [0] * 8
+        s36 = simulate_tessa_proposition1(
+            lat36, vals200, values_secondary=surge200, binary_flags=flags200, shots_per_basis=8192, seed=202611
+        )
+        pgx_data = json.loads((repo_root / "data" / "uniprot_abcc8_cyp3a4_pocket_192aa.json").read_text(encoding="utf-8"))
+        pgx = evaluate_pharmacogene_constellation_safety(str(pgx_data["combined_192aa_panel"]))
+        passed = (
+            v9["proposition1_exact_verified"]
+            and v9["ka_eq16_exact_verified"]
+            and v9["area_law_bound_satisfied"]
+            and lat36.total_capacity == 200
+            and lat36.konig_chromatic_index == 4
+            and s36["binary_flag_exact_match_pct"] == 100.0
+            and pgx["dcb0129_hazard_status"] == "OPEN"
+        )
+        return {
+            "lane_id": lane_id,
+            "tier": "tier0-offline",
+            "passed": passed,
+            "metrics": {
+                "prop1_9q_err": round(float(v9["max_proposition1_marginal_error"]), 15),
+                "ka_eq16_9q_err": round(float(v9["max_ka_eq16_vs_statevector_error"]), 15),
+                "lat36_capacity": lat36.total_capacity,
+                "zxy_flag_exact_pct": s36["binary_flag_exact_match_pct"],
+                "pgx_era2_832_pct": pgx["era2_832_postselected_2aa_constellation_pct"],
+            },
+            "elapsed_seconds": round(time.perf_counter() - t0, 3),
+        }
+
     raise ValueError(f"Unknown tier0-offline lane: {lane_id}")
+
+
+def _has_credential(var_name: str, repo_root: Path) -> bool:
+    """Checks presence of `var_name` in `os.environ`, `~/.env`, or `repo_root/.env` without reading values into logs."""
+    if os.environ.get(var_name, "").strip():
+        return True
+    prefix = f"{var_name}="
+    for env_file in (Path.home() / ".env", repo_root / ".env"):
+        if env_file.exists():
+            for ln in env_file.read_text(encoding="utf-8", errors="ignore").splitlines():
+                s = ln.strip()
+                if s.startswith(prefix) and len(s) > len(prefix):
+                    return True
+    return False
 
 
 def run_reproducibility_tier(
@@ -1460,7 +1534,7 @@ def run_reproducibility_tier(
 
     lane_results: list[dict[str, Any]] = []
     for ln in selected:
-        missing_env = [k for k in ln.required_env if not os.environ.get(k)]
+        missing_env = [k for k in ln.required_env if not _has_credential(k, root)]
         if dry_run:
             lane_results.append(
                 {
@@ -1531,7 +1605,7 @@ def build_status_manifest(repo_root: Path | None = None) -> dict[str, Any]:
     ver = verify_repository(root, strict=True)
     lanes_out = []
     for ln in HARNESS_LANES:
-        missing = [k for k in ln.required_env if not os.environ.get(k)]
+        missing = [k for k in ln.required_env if not _has_credential(k, root)]
         lanes_out.append(
             {
                 "lane_id": ln.lane_id,

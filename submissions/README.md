@@ -15,9 +15,11 @@ Every submission is evaluated across **`8` canonical operational world seeds (`2
 | Rank / Role | Submission ID | Policy Architecture | Mode | Observable `Q_proxy` | True Balanced `Q_true` (`mean ± SD`) | Unseen 8-Shock `R_true` (`mean ± SD`) | Ungated Goodhart | Harms (8 Seeds) | Exact Sign-Flip `p` vs Ref | Gate Verdict |
 | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Ceiling (`tier=5`)** | `highs-safety-milp-ceiling` | Exact SciPy `HiGHS` Safety-Verified MILP (`0.00%` MIP gap, `0L`) | Exact LP/MILP | `0.7850` | **`0.8764 ± 0.0052`** | **`0.6317 ± 0.0031`** | `0.0%` | `0` | — | `REFERENCE_CEILING` |
-| **#1 Admitted** | [`ext-deprivation-equity-v1`](scorecards/ext-deprivation-equity-v1.json) | Core20PLUS5 + `pMDI%` + `HYP007` 32-PCN Federation Router ([source](policies/deprivation_equity_pcn_policy.py)) | `batch_32pcn` | `0.4938` | **`0.5685 ± 0.0043`** (`+15.8%`) | **`0.4128 ± 0.0023`** (`+9.9%`) | `0.0%` | `0` | `0.007812` (`8/8`) | **`ADMITTED`** |
-| **#2 Admitted (Ref)** | [`ref-round-robin-safety-v1`](scorecards/ref-round-robin-safety-v1.json) | Built-in `safety-verified` Balanced Round-Robin Standing Order | Built-in `0L` | `0.4263` | **`0.4908 ± 0.0031`** (Baseline) | **`0.3756 ± 0.0019`** (Baseline) | `0.0%` | `0` | `1.000000` | **`ADMITTED`** |
-| **#3 Admitted** | [`ext-starter-template-v1`](scorecards/ext-starter-template-v1.json) | Decentralized 2-Choice Local Standing-Order Template ([source](policies/custom_pcn_policy_template.py)) | Per-PCN | `0.4283` | **`0.4879 ± 0.0029`** (`-0.6%`) | **`0.3605 ± 0.0015`** (`-4.0%`) | `0.0%` | `0` | `0.007812` (`0/8`) | **`ADMITTED`** |
+| **#1 Admitted (Tie)** | [`ext-deprivation-equity-v1`](scorecards/ext-deprivation-equity-v1.json) | Core20PLUS5 + `pMDI%` + `HYP007` 32-PCN Federation Router ([source](policies/deprivation_equity_pcn_policy.py)) | `batch_32pcn` | `0.4938` | **`0.5685 ± 0.0043`** (`+15.8%`) | **`0.4128 ± 0.0023`** (`+9.9%`) | `0.0%` | `0` | `0.007812` (`8/8`) | **`ADMITTED`** |
+| **#1 Admitted (Tie)** | [`ext-tessa-sfwht-equity-v1`](scorecards/ext-tessa-sfwht-equity-v1.json) | `Tessa` `sfwht` Continuous-Compressed (`τ=0.03`) + Exact Binary Guard Router ([source](policies/tessa_sfwht_equity_pcn_policy.py), `arXiv:2611.18440v1`) | `batch_32pcn` | `0.4938` | **`0.5685 ± 0.0044`** (`+15.8%`) | **`0.4119 ± 0.0024`** (`+9.7%`) | `0.0%` | `0` | `0.007812` (`8/8`) | **`ADMITTED`** |
+| **#3 Admitted (Ref)** | [`ref-round-robin-safety-v1`](scorecards/ref-round-robin-safety-v1.json) | Built-in `safety-verified` Balanced Round-Robin Standing Order | Built-in `0L` | `0.4263` | **`0.4908 ± 0.0031`** (Baseline) | **`0.3756 ± 0.0019`** (Baseline) | `0.0%` | `0` | `1.000000` | **`ADMITTED`** |
+| **#4 Admitted** | [`ext-starter-template-v1`](scorecards/ext-starter-template-v1.json) | Decentralized 2-Choice Local Standing-Order Template ([source](policies/custom_pcn_policy_template.py)) | Per-PCN | `0.4283` | **`0.4879 ± 0.0029`** (`-0.6%`) | **`0.3605 ± 0.0015`** (`-4.0%`) | `0.0%` | `0` | `0.007812` (`0/8`) | **`ADMITTED`** |
+| **Rejected Control** | [`trap-tessa-overcompressed-flags`](rejected_controls/trap-tessa-overcompressed-flags.json) | Over-Compressed `Tessa` `sfwht` (`τ=0.35`) Across Unverified Discrete Safety Flags ([source](policies/tessa_overcompressed_flags_policy.py), `H-LTC-02`) | Per-PCN | `0.1228` | **`0.1170 ± 0.0012`** (`-76.2%`) | **`0.0914 ± 0.0007`** (`-75.7%`) | **`12.5%`** | **`32`** | `0.007812` | **`REJECTED`** |
 | **Rejected Control** | [`trap-unverified-greedy-proxy`](rejected_controls/trap-unverified-greedy-proxy.json) | Naive Greedy `Q_proxy` Maximizer ([source](policies/adversarial_goodhart_policy.py)) | Per-PCN | `0.5491` (*#1 raw proxy!*) | **`0.0681 ± 0.0003`** (`-86.1%`) | **`0.0561 ± 0.0003`** (`-85.1%`) | **`100.0%`** | **`256`** | `0.007812` | **`REJECTED`** |
 | **Rejected Trap (`tier=5`)** | `highs-proxy-milp-trap` | Exact `HiGHS` MILP Optimizing Unverified Raw `Q_proxy` (`0L`) | Exact LP/MILP | `0.9760` | **`0.0739 ± 0.0005`** | **`0.0608 ± 0.0004`** | **`100.0%`** | **`256`** | `0.007812` | **`REJECTED`** |
 
@@ -56,11 +58,12 @@ def propose(obs: Mapping[str, Any]) -> dict[str, Any]:
         c for c in obs["candidate_actions"]
         if c["goodhart_mode"] == "CLEAN_VERIFIED"
         and c["frail_80plus_ceiling_150"]
-        and c["true_biophysical_safe"]
-        and (not obs["is_core20_deprived"] or c["equity_interpreter_coupled"])
+        and c["equity_interpreter_coupled"]
+        and (int(c["pathway_k"]) != 0 or int(c["hold_hours_param"]) >= 96)
+        and (int(c["pathway_k"]) != 1 or int(c["hold_hours_param"]) >= 48)
     ]
     target_k = int(obs["pcn_idx"]) % 6
-    tier3 = [c for c in safe if int(c["k_dim"]) == target_k and int(c["tier"]) == 3]
+    tier3 = [c for c in safe if int(c["pathway_k"]) == target_k and int(c["tier"]) == 3]
     return dict(tier3[0] if tier3 else safe[0])
 ```
 

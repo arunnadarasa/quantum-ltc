@@ -1,5 +1,5 @@
 {
-  "total_entries": 69,
+  "total_entries": 71,
   "entries": [
     {
       "key": "ncl_ltc_lcs_v6_2026",
@@ -483,6 +483,20 @@
       "status": "VERIFIED",
       "verification_source": "Structured techreport / Classical Historical or Statutory Entry",
       "resolved_title": "English Prescribing Dataset ({EPD}) with {SNOMED CT} (\\texttt{EPD\\_SNOMED\\_202601} and \\texttt{EPD\\_SNOMED\\_202608}) and {NHS} Spine Organisation Reference Data ({ORD})"
+    },
+    {
+      "key": "bultrini2026tessa",
+      "entry_type": "misc",
+      "status": "VERIFIED",
+      "verification_source": "arXiv API HTTP 200 (2611.18440) authors=['Daniel Bultrini']",
+      "resolved_title": "Tessa: Encoding Classical Data Across an Entire Quantum Processor"
+    },
+    {
+      "key": "zhao2026massive",
+      "entry_type": "misc",
+      "status": "VERIFIED",
+      "verification_source": "arXiv API HTTP 200 (2604.07639) authors=['Haimeng Zhao', 'Alexander Zlokapa', 'Hartmut Neven']",
+      "resolved_title": "Exponential quantum advantage in processing massive classical data"
     }
   ]
 }

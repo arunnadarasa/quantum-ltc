@@ -3163,6 +3163,164 @@ function initChartsAndLightbox() {
       charts.push(cCsw2);
     }
 
+    // Chart 14 (Full-Width · Fig. 17): Moth Quantum Tessa (arXiv:2611.18440v1) & Live Moth API Telemetry
+    const elTessa = document.getElementById("echart-moth-tessa");
+    if (elTessa && PORTAL_DATA.moth_tessa) {
+      const cTessa = window.echarts.init(elTessa);
+      const mt = PORTAL_DATA.moth_tessa;
+
+      function renderTessaTab(tab) {
+        if (tab === "sfwht") {
+          cTessa.setOption({
+            backgroundColor: "transparent",
+            tooltip: { trigger: "axis" },
+            legend: { top: 6, textStyle: { color: "#d8f3ee", fontSize: 11 } },
+            grid: { left: 60, right: 64, top: 44, bottom: 48 },
+            xAxis: {
+              type: "category",
+              data: mt.tau_sweep.map(r => `τ=${r.threshold_tau_rad}`),
+              ...baseAxis,
+              name: "sfwht Walsh-Hadamard Threshold τ (rad)",
+              nameLocation: "middle",
+              nameGap: 32,
+              nameTextStyle: { color: "#bfece6", fontSize: 10.5 }
+            },
+            yAxis: [
+              {
+                type: "value",
+                ...baseAxis,
+                name: "2Q CNOT Cancellation (%)",
+                nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+              },
+              {
+                type: "value",
+                ...baseAxis,
+                name: "Continuous Payload MAE (%)",
+                nameTextStyle: { color: "#f06a3b", fontSize: 10.5 }
+              }
+            ],
+            series: [
+              {
+                name: "2Q CNOT Cancellation (%)",
+                type: "line",
+                data: mt.tau_sweep.map(r => r.cnot_reduction_pct),
+                smooth: false,
+                symbolSize: 8,
+                lineStyle: { color: "#38d6c4", width: 2.6 },
+                itemStyle: { color: "#38d6c4" }
+              },
+              {
+                name: "Continuous Payload MAE (%)",
+                type: "line",
+                yAxisIndex: 1,
+                data: mt.tau_sweep.map(r => +(r.mae_normalized * 100).toFixed(3)),
+                smooth: false,
+                symbolSize: 7,
+                lineStyle: { color: "#f06a3b", width: 2.2, type: "dashed" },
+                itemStyle: { color: "#f06a3b" }
+              }
+            ]
+          }, true);
+        } else if (tab === "pgx") {
+          cTessa.setOption({
+            backgroundColor: "transparent",
+            tooltip: { trigger: "axis", axisPointer: { type: "shadow" } },
+            grid: { left: 60, right: 28, top: 36, bottom: 54 },
+            xAxis: {
+              type: "category",
+              data: mt.pgx_bars.map(b => b.label),
+              ...baseAxis
+            },
+            yAxis: {
+              type: "value",
+              min: 0,
+              max: 105,
+              ...baseAxis,
+              name: "Exact Amino-Acid Recovery (%)",
+              nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+            },
+            series: [
+              {
+                name: "Exact AA Recovery (%)",
+                type: "bar",
+                barWidth: "46%",
+                data: mt.pgx_bars.map((b, i) => ({
+                  value: b.exact_pct,
+                  itemStyle: {
+                    color: ["#34d399", "#f06a3b", "#f4ae42", "#ef4444", "#60a5fa", "#a78bfa"][i % 6],
+                    borderRadius: [4, 4, 0, 0]
+                  }
+                })),
+                label: { show: true, position: "top", color: "#e6fbf7", fontSize: 10, formatter: "{c}%" }
+              }
+            ]
+          }, true);
+        } else {
+          cTessa.setOption({
+            backgroundColor: "transparent",
+            tooltip: { trigger: "axis", axisPointer: { type: "shadow" } },
+            legend: { top: 6, textStyle: { color: "#d8f3ee", fontSize: 11 } },
+            grid: { left: 60, right: 60, top: 44, bottom: 52 },
+            xAxis: {
+              type: "category",
+              data: mt.moth_bars.map(b => b.label),
+              ...baseAxis
+            },
+            yAxis: [
+              {
+                type: "value",
+                ...baseAxis,
+                name: "Normalized MAE on [0, 1]",
+                nameTextStyle: { color: "#38d6c4", fontSize: 10.5 }
+              },
+              {
+                type: "value",
+                min: 0.85,
+                max: 1.01,
+                ...baseAxis,
+                name: "Pearson r",
+                nameTextStyle: { color: "#f4ae42", fontSize: 10.5 }
+              }
+            ],
+            series: [
+              {
+                name: "Normalized Reconstruction MAE",
+                type: "bar",
+                barWidth: "42%",
+                data: mt.moth_bars.map((b, i) => ({
+                  value: b.mae,
+                  itemStyle: {
+                    color: ["#38d6c4", "#34d399", "#f06a3b", "#60a5fa"][i % 4],
+                    borderRadius: [4, 4, 0, 0]
+                  }
+                })),
+                label: { show: true, position: "top", color: "#e6fbf7", fontSize: 10 }
+              },
+              {
+                name: "Pearson Correlation r",
+                type: "line",
+                yAxisIndex: 1,
+                data: mt.moth_bars.map(b => b.pearson_r),
+                symbolSize: 8,
+                lineStyle: { color: "#f4ae42", width: 2.4 },
+                itemStyle: { color: "#f4ae42" }
+              }
+            ]
+          }, true);
+        }
+      }
+      renderTessaTab("moth");
+      document.querySelectorAll("[data-tessa-tab]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          document.querySelectorAll("[data-tessa-tab]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderTessaTab(btn.dataset.tessaTab);
+        });
+      });
+      charts.push(cTessa);
+    }
+
     window.addEventListener("resize", () => charts.forEach(c => c.resize()));
   }
 

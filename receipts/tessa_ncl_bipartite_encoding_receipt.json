@@ -1,0 +1,423 @@
+{
+  "experiment": "tessa_ncl_bipartite_encoding_and_live_moth_api_v1",
+  "primary_citation": {
+    "arxiv_id": "2611.18440v1",
+    "title": "Tessa: Encoding Classical Data Across an Entire Quantum Processor",
+    "author": "Daniel Bultrini (Moth Quantum)",
+    "published": "2026-11-13",
+    "url": "https://arxiv.org/abs/2611.18440v1"
+  },
+  "ncl_snapshot_sha256": "bd9503b526ba009b243c00d5a97ecda88c1b2601d68cfed63ba4c5b016c61cc3",
+  "uniprot_panel_provenance": {
+    "file": "data/uniprot_abcc8_cyp3a4_pocket_192aa.json",
+    "abcc8_q09428_full_sha256": "c07c3de04b95cf060cef059dd8de90795b952a001840927e031053fc6a7d6ee5",
+    "cyp3a4_p08684_full_sha256": "d98b2269ed529294b838f8aa92181c343c8be8aaa38704c019ad61866028ee6d",
+    "cyp3a4_cys442_verified": true
+  },
+  "guppy_hugr_9q_32pcn_artifacts": {
+    "module": "models/tessa_32pcn_9q_guppy.py",
+    "payload_z_hugr_bytes": 10747,
+    "coherence_h_hugr_bytes": 10997
+  },
+  "bipartite_lattices_and_routing": {
+    "planar_3x3_9q_32pcn": {
+      "lattice_shape": "3x3",
+      "n_qubits": 9,
+      "n_data_qubits": 4,
+      "n_address_qubits": 5,
+      "slot_capacity_z": 32,
+      "slot_capacity_pair_zx": 64,
+      "slot_capacity_pair_plus_bit_zxy": "64 floats + 32 bits",
+      "swap_gates_required": 0,
+      "konig_edge_colours": 4,
+      "tessa_z_2q_gates": 32,
+      "tessa_interior_2q_depth": 8,
+      "tessa_boundary_upper_2q_depth": 32,
+      "qpixl_single_register_2q_depth": 32,
+      "qcrank_planar_routed_2q_depth_est": 68
+    },
+    "planar_6x6_36q_200slot": {
+      "lattice_shape": "6x6",
+      "n_qubits": 36,
+      "n_data_qubits": 18,
+      "n_address_qubits": 18,
+      "slot_capacity_z": 200,
+      "slot_capacity_pair_zx": 400,
+      "slot_capacity_pair_plus_bit_zxy": "400 floats + 200 bits",
+      "swap_gates_required": 0,
+      "konig_edge_colours": 4,
+      "tessa_z_2q_gates": 200,
+      "tessa_interior_2q_depth": 16,
+      "tessa_boundary_upper_2q_depth": 80,
+      "qpixl_single_register_2q_depth": 256,
+      "qcrank_planar_routed_2q_depth_est": 300
+    }
+  },
+  "proposition1_and_eq16_statevector_verification_9q": {
+    "n_qubits": 9,
+    "statevector_dim": 512,
+    "max_proposition1_marginal_error": 1.6653345369377348e-16,
+    "proposition1_exact_verified": true,
+    "max_ka_eq16_vs_statevector_error": 3.6637359812630166e-15,
+    "ka_eq16_exact_verified": true,
+    "area_law_cut_couplers_severed": 3,
+    "area_law_cut_entropy_bits": 0.599563,
+    "area_law_bound_satisfied": true,
+    "address_coherences": [
+      {
+        "address_qubit": 0,
+        "grid_rc": [
+          0,
+          0
+        ],
+        "role": "inter_borough_corner_2way",
+        "ka_interference_statevector": 0.9178225,
+        "ka_eq16_closed_form": 0.9178225,
+        "edge_contrast_1_minus_ka": 0.082177,
+        "entanglement_entropy_sa_bits": 0.247262
+      },
+      {
+        "address_qubit": 2,
+        "grid_rc": [
+          0,
+          2
+        ],
+        "role": "inter_borough_corner_2way",
+        "ka_interference_statevector": 0.58573123,
+        "ka_eq16_closed_form": 0.58573123,
+        "edge_contrast_1_minus_ka": 0.414269,
+        "entanglement_entropy_sa_bits": 0.735969
+      },
+      {
+        "address_qubit": 4,
+        "grid_rc": [
+          1,
+          1
+        ],
+        "role": "pan_icb_hub_4way",
+        "ka_interference_statevector": 0.63480242,
+        "ka_eq16_closed_form": 0.63480242,
+        "edge_contrast_1_minus_ka": 0.365198,
+        "entanglement_entropy_sa_bits": 0.685729
+      },
+      {
+        "address_qubit": 6,
+        "grid_rc": [
+          2,
+          0
+        ],
+        "role": "inter_borough_corner_2way",
+        "ka_interference_statevector": 0.86273928,
+        "ka_eq16_closed_form": 0.86273928,
+        "edge_contrast_1_minus_ka": 0.137261,
+        "entanglement_entropy_sa_bits": 0.360792
+      },
+      {
+        "address_qubit": 8,
+        "grid_rc": [
+          2,
+          2
+        ],
+        "role": "inter_borough_corner_2way",
+        "ka_interference_statevector": 0.61236182,
+        "ka_eq16_closed_form": 0.61236182,
+        "edge_contrast_1_minus_ka": 0.387638,
+        "entanglement_entropy_sa_bits": 0.709393
+      }
+    ]
+  },
+  "local_36q_200slot_2c_plus_c_bits_benchmark": {
+    "single_z_8192shots": {
+      "n_qubits": 36,
+      "capacity": 200,
+      "pair_mode": false,
+      "primary_mae_normalized": 0.008046,
+      "primary_pearson_r": 0.999132,
+      "secondary_mae_normalized": null,
+      "binary_flag_exact_match_pct": null,
+      "analytical_bit_flip_tail_bound": 0.0,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 196,
+      "cnot_reduction_pct": 2.0,
+      "undefined_slot_count": 0,
+      "runtime_milliseconds": 1.384
+    },
+    "clamped_zxy_2c_plus_c_bits_8192shots": {
+      "n_qubits": 36,
+      "capacity": 200,
+      "pair_mode": true,
+      "primary_mae_normalized": 0.014436,
+      "primary_pearson_r": 0.997193,
+      "secondary_mae_normalized": 0.016053,
+      "binary_flag_exact_match_pct": 100.0,
+      "analytical_bit_flip_tail_bound": 0.0,
+      "cnot_count_uncompressed": 400,
+      "cnot_count_compressed": 392,
+      "cnot_reduction_pct": 2.0,
+      "undefined_slot_count": 0,
+      "runtime_milliseconds": 1.99
+    },
+    "constant_payload_canary_ka_exact": 1.0
+  },
+  "scarce_shot_ka_interference_vs_classical_table4": [
+    {
+      "shots_N": 64,
+      "ka_exact": 0.634802,
+      "interference_rms_error": 0.09324,
+      "classical_reconstruction_rms_error": 0.1661,
+      "classical_reconstruction_bias": -0.15082,
+      "classical_undefined_pct": 0.0,
+      "interference_preferred_at_N": true
+    },
+    {
+      "shots_N": 256,
+      "ka_exact": 0.634802,
+      "interference_rms_error": 0.049,
+      "classical_reconstruction_rms_error": 0.06066,
+      "classical_reconstruction_bias": -0.04498,
+      "classical_undefined_pct": 0.0,
+      "interference_preferred_at_N": true
+    },
+    {
+      "shots_N": 1024,
+      "ka_exact": 0.634802,
+      "interference_rms_error": 0.0225,
+      "classical_reconstruction_rms_error": 0.02077,
+      "classical_reconstruction_bias": -0.01333,
+      "classical_undefined_pct": 0.0,
+      "interference_preferred_at_N": false
+    },
+    {
+      "shots_N": 4096,
+      "ka_exact": 0.634802,
+      "interference_rms_error": 0.01226,
+      "classical_reconstruction_rms_error": 0.00876,
+      "classical_reconstruction_bias": -0.00326,
+      "classical_undefined_pct": 0.0,
+      "interference_preferred_at_N": false
+    },
+    {
+      "shots_N": 8192,
+      "ka_exact": 0.634802,
+      "interference_rms_error": 0.00832,
+      "classical_reconstruction_rms_error": 0.00632,
+      "classical_reconstruction_bias": -0.00199,
+      "classical_undefined_pct": 0.0,
+      "interference_preferred_at_N": false
+    }
+  ],
+  "sfwht_threshold_compression_sweep_36q": [
+    {
+      "threshold_tau_rad": 0.0,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 196,
+      "cnot_reduction_pct": 2.0,
+      "mae_normalized": 0.0,
+      "pearson_r": 1.0
+    },
+    {
+      "threshold_tau_rad": 0.01,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 196,
+      "cnot_reduction_pct": 2.0,
+      "mae_normalized": 0.000557,
+      "pearson_r": 0.99999
+    },
+    {
+      "threshold_tau_rad": 0.03,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 192,
+      "cnot_reduction_pct": 4.0,
+      "mae_normalized": 0.004926,
+      "pearson_r": 0.999639
+    },
+    {
+      "threshold_tau_rad": 0.05,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 186,
+      "cnot_reduction_pct": 7.0,
+      "mae_normalized": 0.009801,
+      "pearson_r": 0.998573
+    },
+    {
+      "threshold_tau_rad": 0.08,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 174,
+      "cnot_reduction_pct": 13.0,
+      "mae_normalized": 0.022997,
+      "pearson_r": 0.993542
+    },
+    {
+      "threshold_tau_rad": 0.12,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 160,
+      "cnot_reduction_pct": 20.0,
+      "mae_normalized": 0.036257,
+      "pearson_r": 0.981275
+    },
+    {
+      "threshold_tau_rad": 0.18,
+      "cnot_count_uncompressed": 200,
+      "cnot_count_compressed": 130,
+      "cnot_reduction_pct": 35.0,
+      "mae_normalized": 0.061872,
+      "pearson_r": 0.948199
+    }
+  ],
+  "paired_swarmworld_v0_2_leaderboard_controls": {
+    "admitted_safe_split_channel": {
+      "submission_id": "ext-tessa-sfwht-equity-v1",
+      "status": "ADMITTED",
+      "q_true_mean": 0.5685,
+      "held_out_r_true_mean": 0.4119,
+      "goodhart_share_pct_max": 0.0,
+      "scorecard_sha256": "05518c29f00429328e063a8b51a045637403e5847a019ee3dbdd65049974c0b9"
+    },
+    "rejected_overcompressed_flags_control": {
+      "submission_id": "trap-tessa-overcompressed-flags",
+      "status": "REJECTED_SAFETY_OR_GOODHART",
+      "q_true_mean": 0.117,
+      "goodhart_share_pct_max": 12.5,
+      "total_harm_flags_8seed": 32,
+      "scorecard_sha256": "f6185b68c7960cf3640cf71053209dc95e455519434e7d5118fb0983c6373a0d"
+    }
+  },
+  "pharmacogene_constellation_hltc02_safety": {
+    "panel_length_aa": 192,
+    "targets": [
+      "ABCC8_HUMAN (Q09428, SUR1 NBD2 1351-1446)",
+      "CP3A4_HUMAN (P08684, Cys442 pocket 381-476)"
+    ],
+    "constellation_20pt_min_separation_rad": 0.7306,
+    "constellation_400pt_min_separation_rad": 0.0071,
+    "noiseless_32768shots_1aa_constellation_exact_pct": 100.0,
+    "noiseless_32768shots_2aa_constellation_exact_pct": 93.75,
+    "nisq_uncorrected_1aa_angle_drr_exact_pct": 27.6,
+    "nisq_uncorrected_1aa_constellation_raw_pct": 98.44,
+    "nisq_uncorrected_1aa_constellation_drr_pct": 98.44,
+    "nisq_uncorrected_2aa_constellation_raw_pct": 8.33,
+    "nisq_uncorrected_2aa_constellation_drr_pct": 12.5,
+    "era2_832_postselected_2aa_constellation_pct": 94.79,
+    "era2_832_sampling_overhead_factor": 1.3599,
+    "clinical_1e6_miscall_max_bloch_rms_sigma_rad": 0.00075,
+    "dcb0129_hazard_id": "H-LTC-02",
+    "dcb0129_hazard_status": "OPEN",
+    "clinical_safety_verdict": "Uncorrected NISQ 2-symbol/slot (400-pt) constellation & 1D angle encodings suffer multi-percent pharmacogenomic amino-acid miscalls even at 32,768 shots + DRR; clinical sequence lookup MUST remain exact classical (`0L`) until active fault-tolerant QEC (`H-LTC-02` OPEN)."
+  },
+  "live_moth_quantum_api_telemetry": {
+    "api_base_url": "https://api.mothquantum.com/api/v1",
+    "moth_api_key_authenticated": true,
+    "execution_mode": "emu",
+    "physical_hardware_shots": 0,
+    "credits_consumed_total": 6,
+    "local_36q_prop1_single_z_mae": 0.008046,
+    "local_36q_prop1_single_z_pearson_r": 0.999132,
+    "qpixl_aer_mae_norm": 0.00959,
+    "qpixl_aer_pearson_r": 0.99891,
+    "qpixl_fake_fez_raw_mae_norm": 0.06216,
+    "qpixl_fake_fez_raw_pearson_r": 0.91808,
+    "qpixl_fake_fez_mean_std_drr_mae_norm": 0.05459,
+    "qpixl_fake_fez_mean_std_drr_pearson_r": 0.91876,
+    "qpixl_fake_fez_drr_mae_reduction_pct": 12.17,
+    "qpixl_abcc8_cyp3a4_fake_fez_exact_aa_pct": 50.0,
+    "qpixl_abcc8_cyp3a4_fake_fez_miscalls_of_192": 96,
+    "tessa_image_fake_fez_rgb_mae": 0.01008,
+    "blur_core_32x6_peak_to_mean_before": 1.43133,
+    "blur_core_32x6_peak_to_mean_after": 1.35107,
+    "blur_core_winter_mbi_gini_before": 0.08314,
+    "blur_core_winter_mbi_gini_after": 0.05359,
+    "jobs": [
+      {
+        "label": "qpixl_192ncl_aer",
+        "engine_id": "qpixl-v1",
+        "job_id": "4d22ca58-0ffe-4129-bd50-c3e284aa8ad3",
+        "submitted_at": "2026-11-16T16:38:16Z",
+        "machine": "aer",
+        "shots": 8192,
+        "mae_norm": 0.00959,
+        "pearson_r": 0.99891
+      },
+      {
+        "label": "qpixl_192ncl_fake_fez_raw",
+        "engine_id": "qpixl-v1",
+        "job_id": "5ecb0ff3-32d4-4b48-96a0-8fd115b38a03",
+        "submitted_at": "2026-11-16T16:39:00Z",
+        "machine": "fake_fez",
+        "shots": 8192,
+        "mae_norm": 0.06216,
+        "pearson_r": 0.91808
+      },
+      {
+        "label": "qpixl_192ncl_fake_fez_mean_std_drr",
+        "engine_id": "qpixl-v1",
+        "job_id": "d70a959b-6771-4224-bba1-c368b1f2666c",
+        "submitted_at": "2026-11-16T16:42:57Z",
+        "machine": "fake_fez",
+        "shots": 8192,
+        "mae_norm": 0.05459,
+        "pearson_r": 0.91876
+      },
+      {
+        "label": "qpixl_192aa_abcc8_cyp3a4_fake_fez_discretize20",
+        "engine_id": "qpixl-v1",
+        "job_id": "940fa834-474f-45da-a8d4-e577c45380a3",
+        "submitted_at": "2026-11-16T16:46:23Z",
+        "machine": "fake_fez",
+        "shots": 8192,
+        "exact_aa_pct": 50.0,
+        "miscalls_of_192": 96
+      },
+      {
+        "label": "tessa_image_16x12_ncl_pair_fake_fez",
+        "engine_id": "tessa-image-v1",
+        "job_id": "3c2ee26a-7c9b-4de2-baf9-71d9963861cd",
+        "submitted_at": "2026-11-16T16:53:42Z",
+        "input_asset_id": "cached_moth_asset_16x12_ncl",
+        "output_asset_id": "c82b97b6-21c3-47b6-bfc5-81b3f1cec32e",
+        "output_png_sha256": "368ee339e68da41a14235d2b39ea2a08f9ee4e626ac3da6b262c2a1f4e36b562",
+        "machine": "fake_fez",
+        "shots": 8192,
+        "rgb_mae": 0.01008
+      },
+      {
+        "label": "blur_core_32x6_ncl_winter_surge",
+        "engine_id": "blur-core-v1",
+        "job_id": "7d2ffc2d-8565-438b-8651-6d487a8ed103",
+        "submitted_at": "2026-11-16T16:54:00Z",
+        "peak_to_mean_before": 1.43133,
+        "peak_to_mean_after": 1.35107,
+        "winter_mbi_gini_before": 0.08314,
+        "winter_mbi_gini_after": 0.05359
+      }
+    ]
+  },
+  "figure17_path": "samskrift/figures/figure17_moth_tessa_ncl_bipartite.png",
+  "figure17_sha256": "92300cfad43fb1ff172f4ddec0ae9cd736d6f7447cc33e44a02a6a274344abf3",
+  "total_wall_clock_seconds": 6.529,
+  "classical_floor_baseline": "Exact O(sum_d 2^{m_d}) Proposition 1 Super-Pixel Floor (<3 ms at 36q/200 slots, 0L) + O(C) Linear-Time Classical K_a Smoothness Floor + Exact 0L Sequence Lookup",
+  "epistemic_demarcation": {
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "phi_present": false,
+    "autonomous_clinical_decisions": 0,
+    "closed_hazards_claimed": 0,
+    "open_clinical_hazards": [
+      "H-LTC-01",
+      "H-LTC-02",
+      "H-LTC-03",
+      "H-LTC-04",
+      "H-LTC-05",
+      "H-LTC-06"
+    ]
+  },
+  "ml_dsa_65_envelope": {
+    "algorithm": "NIST-FIPS-204-ML-DSA-65",
+    "signed_digest_sha256": "dc3a868cb991111d289f6b8b94a1a5efcd900e69f665a9f982fc7e513b4a69e4",
+    "public_key_sha256": "e8030170996b45f11a6784e6b1bdf16e1e5b50e8cb23ccdd33aa38f05d192d13",
+    "signature_bytes": 3309,
+    "signature_sha256": "0a1aae3b9c47729f1a62f165deee4bf87863ed9c65e69f7838e1f6e593a4ef4d",
+    "public_key_b64": "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",
+    "signature_b64": "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"
+  },
+  "receipt_sha256": "e1eab92b068eeea09e616be5f1e59c76fbc28e2a22eb7a93946204587f641886"
+}
